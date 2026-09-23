@@ -18,6 +18,10 @@ A personal, phone-first practice app for phrases from weekly Mandarin coaching s
 
 - Single user, a Dutch professor teaching at CUHK (Hong Kong), learning Mandarin from a Taiwanese coach.
 - **Traditional characters** throughout. **Taiwan Mandarin** pronunciation; the coach's pinyin is authoritative where it differs from mainland norms (e.g. 法國 Fàguó, 什麼 shéme as given).
+- **Traditional characters are enforced, never Simplified:**
+  - When cleaning coach notes, any Simplified form is converted to Traditional (e.g. 我是老師/师 → 老師 only).
+  - `tools/build.py` fails validation if any `zh` field contains a Simplified character: it checks the text with OpenCC simplified→Taiwan-traditional (`s2twp`, via `uvx --from opencc-python-reimplemented`) and fails on any change. An item can set `"allowChars": "<chars>"` for rare false positives.
+  - The frontend sets `lang="zh-Hant-TW"` on all Chinese text so iOS picks the Traditional/Taiwan font (PingFang TC) and its glyph shapes.
 - Primary device: phone (iPhone assumed). Must work offline.
 - Phrases are added by Claude from pasted notes, not through an in-app form.
 
@@ -149,7 +153,7 @@ Public GitHub repo, GitHub Pages from `main` branch root. The user installs via 
 
 ## Testing
 
-- Python (`unittest`): sandhi rules, syllable alignment validation, pattern expansion, id uniqueness, audio-skip-if-exists.
+- Python (`unittest`): Simplified-character rejection, sandhi rules, syllable alignment validation, pattern expansion, id uniqueness, audio-skip-if-exists.
 - JS (`node --test`, run with `/opt/homebrew/opt/node@18/bin/node` since the default Node is 16; `lib/*.js` are ES modules shared by browser and tests): card generation, unlock rule, pattern fill selection, session queue ordering, store export/import round-trip.
 - Manual: browser pane at mobile size — study a session, reveal, grade, audio plays, browse, export/import.
 

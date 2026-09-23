@@ -128,13 +128,33 @@ class Audio(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)
             jobs = audio_jobs(expand(DRINKS[:1], root=root))
-            generate_audio(jobs, root, synth)
+            made, failed = generate_audio(jobs, root, synth)
             self.assertEqual(sorted(calls), ["kafei-slow.mp3", "kafei.mp3"])
+            self.assertEqual((len(made), failed), (2, []))
             calls.clear()
             generate_audio(jobs, root, synth)
             self.assertEqual(calls, [])
             generate_audio(jobs, root, synth, force_ids={"kafei"})
             self.assertEqual(len(calls), 2)
+
+
+class AudioRetry(unittest.TestCase):
+    def test_retries_then_reports_failure(self):
+        attempts = []
+
+        def flaky(text, rate, path):
+            attempts.append(path.name)
+            if path.name == "kafei.mp3" and attempts.count("kafei.mp3") < 3:
+                raise RuntimeError("NoAudioReceived")
+            if path.name == "kafei-slow.mp3":
+                raise RuntimeError("always fails")
+            path.write_bytes(b"mp3")
+
+        with tempfile.TemporaryDirectory() as d:
+            jobs = audio_jobs(expand(DRINKS[:1], root=Path(d)))
+            made, failed = generate_audio(jobs, Path(d), flaky, sleep=lambda s: None)
+        self.assertEqual(made, ["audio/kafei.mp3"])
+        self.assertEqual(failed, ["audio/kafei-slow.mp3"])
 
 
 if __name__ == "__main__":

@@ -14,6 +14,7 @@ import hashlib
 import json
 import re
 import sys
+import time
 from pathlib import Path
 
 if __package__ in (None, ""):
@@ -173,19 +174,26 @@ def edge_synth(text, rate, path):
     asyncio.run(edge_tts.Communicate(text, VOICE, rate=rate).save(str(path)))
 
 
-def generate_audio(jobs, root, synth=edge_synth, force_ids=()):
-    made = []
+def generate_audio(jobs, root, synth=edge_synth, force_ids=(), retries=4, sleep=time.sleep):
+    """Synthesize missing files. Returns (made, failed); the TTS service fails intermittently."""
+    made, failed = [], []
     for rel, text, rate, iid in jobs:
         path = root / rel
         if path.exists() and path.stat().st_size > 0 and iid not in force_ids:
             continue
         path.parent.mkdir(parents=True, exist_ok=True)
-        try:
-            synth(text, rate, path)
-        except Exception:
-            synth(text, rate, path)  # one retry for flaky network
-        made.append(rel)
-    return made
+        for attempt in range(retries):
+            try:
+                synth(text, rate, path)
+                made.append(rel)
+                break
+            except Exception:
+                if path.exists():
+                    path.unlink()
+                sleep(2 * (attempt + 1))
+        else:
+            failed.append(rel)
+    return made, failed
 
 
 def stamp_service_worker(root):
@@ -217,10 +225,13 @@ def main(argv):
     body = json.dumps(out, ensure_ascii=False, sort_keys=True)
     doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "items": out}
     (ROOT / "phrases.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
-    made = [] if no_audio else generate_audio(audio_jobs(out), ROOT, force_ids=force)
+    made, failed = ([], []) if no_audio else generate_audio(audio_jobs(out), ROOT, force_ids=force)
     stamp_service_worker(ROOT)
     fills = sum(len(o.get("fills", [])) for o in out)
-    print(f"OK: {len(out)} items ({fills} pattern sentences), {len(made)} audio files generated")
+    print(f"{len(out)} items ({fills} pattern sentences), {len(made)} audio files generated")
+    if failed:
+        print(f"{len(failed)} audio file(s) failed (re-run to retry): {', '.join(failed)}")
+        return 1
     return 0
 
 

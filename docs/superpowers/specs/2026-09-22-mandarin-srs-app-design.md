@@ -35,7 +35,7 @@ A personal, phone-first practice app for phrases from weekly Mandarin coaching s
 | Type | Prompt | Answer | Available |
 |---|---|---|---|
 | **Say it** | English meaning (+ usage note) | characters, tone-coloured pinyin, audio auto-plays | always (for every item) |
-| **Listen** | audio only (replay button) | characters, pinyin, English | after the item's Say-it card has been graded Good/Easy ≥ 2 times |
+| **Listen** | audio only (replay button) | characters, pinyin, English | after the item's Say-it card has been graded Good/Easy on 2 different days |
 | **Read** | characters only | pinyin, English, audio | same unlock rule as Listen |
 
 Grading: **Again / Hard / Good / Easy** (FSRS ratings 1–4).

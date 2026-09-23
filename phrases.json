@@ -1,0 +1,962 @@
+{
+ "version": "74dfafef7636",
+ "items": [
+  {
+   "id": "dajia-hao",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "大家好",
+   "pinyin": "dà-jiā hǎo",
+   "en": "Hello everyone",
+   "audio": "audio/dajia-hao.mp3",
+   "audioSlow": "audio/dajia-hao-slow.mp3"
+  },
+  {
+   "id": "wo-jiao",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "我叫……",
+   "pinyin": "wǒ jiào …",
+   "en": "My name is…",
+   "audio": "audio/wo-jiao.mp3",
+   "audioSlow": "audio/wo-jiao-slow.mp3",
+   "note": "我是…… (wǒ shì…) = I am…"
+  },
+  {
+   "id": "xiexie",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "謝謝",
+   "pinyin": "xiè-xie",
+   "en": "Thank you",
+   "audio": "audio/xiexie.mp3",
+   "audioSlow": "audio/xiexie-slow.mp3"
+  },
+  {
+   "id": "hen-gaoxing-renshi-ni",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "很高興認識你",
+   "pinyin": "hěn gāo-xìng rèn-shì nǐ",
+   "en": "Nice to meet you",
+   "audio": "audio/hen-gaoxing-renshi-ni.mp3",
+   "audioSlow": "audio/hen-gaoxing-renshi-ni-slow.mp3"
+  },
+  {
+   "id": "hen-gaoxing-renshi-dajia",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "很高興認識大家",
+   "pinyin": "hěn gāo-xìng rèn-shì dà-jiā",
+   "en": "Nice to meet you all",
+   "audio": "audio/hen-gaoxing-renshi-dajia.mp3",
+   "audioSlow": "audio/hen-gaoxing-renshi-dajia-slow.mp3"
+  },
+  {
+   "id": "helan",
+   "kind": "word",
+   "week": 1,
+   "zh": "荷蘭",
+   "pinyin": "Hé-lán",
+   "en": "the Netherlands",
+   "audio": "audio/helan.mp3",
+   "audioSlow": "audio/helan-slow.mp3",
+   "cat": [
+    "country"
+   ]
+  },
+  {
+   "id": "wo-laizi-x",
+   "kind": "pattern",
+   "week": 1,
+   "zh": "我來自___",
+   "pinyin": "wǒ lái-zì ___",
+   "en": "I come from ___",
+   "fills": [
+    {
+     "fillId": "helan",
+     "zh": "我來自荷蘭",
+     "pinyin": "wǒ lái-zì Hé-lán",
+     "en": "I come from the Netherlands",
+     "audio": "audio/wo-laizi-x--helan.mp3",
+     "audioSlow": "audio/wo-laizi-x--helan-slow.mp3"
+    },
+    {
+     "fillId": "riben",
+     "zh": "我來自日本",
+     "pinyin": "wǒ lái-zì Rì-běn",
+     "en": "I come from Japan",
+     "audio": "audio/wo-laizi-x--riben.mp3",
+     "audioSlow": "audio/wo-laizi-x--riben-slow.mp3"
+    },
+    {
+     "fillId": "taiwan",
+     "zh": "我來自台灣",
+     "pinyin": "wǒ lái-zì Tái-wān",
+     "en": "I come from Taiwan",
+     "audio": "audio/wo-laizi-x--taiwan.mp3",
+     "audioSlow": "audio/wo-laizi-x--taiwan-slow.mp3"
+    },
+    {
+     "fillId": "yingguo",
+     "zh": "我來自英國",
+     "pinyin": "wǒ lái-zì Yīng-guó",
+     "en": "I come from the UK",
+     "audio": "audio/wo-laizi-x--yingguo.mp3",
+     "audioSlow": "audio/wo-laizi-x--yingguo-slow.mp3"
+    },
+    {
+     "fillId": "meiguo",
+     "zh": "我來自美國",
+     "pinyin": "wǒ lái-zì Měi-guó",
+     "en": "I come from the USA",
+     "audio": "audio/wo-laizi-x--meiguo.mp3",
+     "audioSlow": "audio/wo-laizi-x--meiguo-slow.mp3"
+    },
+    {
+     "fillId": "faguo",
+     "zh": "我來自法國",
+     "pinyin": "wǒ lái-zì Fà-guó",
+     "en": "I come from France",
+     "audio": "audio/wo-laizi-x--faguo.mp3",
+     "audioSlow": "audio/wo-laizi-x--faguo-slow.mp3"
+    },
+    {
+     "fillId": "deguo",
+     "zh": "我來自德國",
+     "pinyin": "wǒ lái-zì Dé-guó",
+     "en": "I come from Germany",
+     "audio": "audio/wo-laizi-x--deguo.mp3",
+     "audioSlow": "audio/wo-laizi-x--deguo-slow.mp3"
+    },
+    {
+     "fillId": "zhongguo",
+     "zh": "我來自中國",
+     "pinyin": "wǒ lái-zì Zhōng-guó",
+     "en": "I come from China",
+     "audio": "audio/wo-laizi-x--zhongguo.mp3",
+     "audioSlow": "audio/wo-laizi-x--zhongguo-slow.mp3"
+    },
+    {
+     "fillId": "nanfei",
+     "zh": "我來自南非",
+     "pinyin": "wǒ lái-zì Nán-fēi",
+     "en": "I come from South Africa",
+     "audio": "audio/wo-laizi-x--nanfei.mp3",
+     "audioSlow": "audio/wo-laizi-x--nanfei-slow.mp3"
+    }
+   ]
+  },
+  {
+   "id": "wo-shi-x-ren",
+   "kind": "pattern",
+   "week": 1,
+   "zh": "我是___人",
+   "pinyin": "wǒ shì ___ rén",
+   "en": "I am ___",
+   "fills": [
+    {
+     "fillId": "helan",
+     "zh": "我是荷蘭人",
+     "pinyin": "wǒ shì Hé-lán rén",
+     "en": "I am Dutch",
+     "audio": "audio/wo-shi-x-ren--helan.mp3",
+     "audioSlow": "audio/wo-shi-x-ren--helan-slow.mp3"
+    },
+    {
+     "fillId": "riben",
+     "zh": "我是日本人",
+     "pinyin": "wǒ shì Rì-běn rén",
+     "en": "I am Japanese",
+     "audio": "audio/wo-shi-x-ren--riben.mp3",
+     "audioSlow": "audio/wo-shi-x-ren--riben-slow.mp3"
+    },
+    {
+     "fillId": "taiwan",
+     "zh": "我是台灣人",
+     "pinyin": "wǒ shì Tái-wān rén",
+     "en": "I am Taiwanese",
+     "audio": "audio/wo-shi-x-ren--taiwan.mp3",
+     "audioSlow": "audio/wo-shi-x-ren--taiwan-slow.mp3"
+    },
+    {
+     "fillId": "yingguo",
+     "zh": "我是英國人",
+     "pinyin": "wǒ shì Yīng-guó rén",
+     "en": "I am British",
+     "audio": "audio/wo-shi-x-ren--yingguo.mp3",
+     "audioSlow": "audio/wo-shi-x-ren--yingguo-slow.mp3"
+    },
+    {
+     "fillId": "meiguo",
+     "zh": "我是美國人",
+     "pinyin": "wǒ shì Měi-guó rén",
+     "en": "I am American",
+     "audio": "audio/wo-shi-x-ren--meiguo.mp3",
+     "audioSlow": "audio/wo-shi-x-ren--meiguo-slow.mp3"
+    },
+    {
+     "fillId": "faguo",
+     "zh": "我是法國人",
+     "pinyin": "wǒ shì Fà-guó rén",
+     "en": "I am French",
+     "audio": "audio/wo-shi-x-ren--faguo.mp3",
+     "audioSlow": "audio/wo-shi-x-ren--faguo-slow.mp3"
+    },
+    {
+     "fillId": "deguo",
+     "zh": "我是德國人",
+     "pinyin": "wǒ shì Dé-guó rén",
+     "en": "I am German",
+     "audio": "audio/wo-shi-x-ren--deguo.mp3",
+     "audioSlow": "audio/wo-shi-x-ren--deguo-slow.mp3"
+    },
+    {
+     "fillId": "zhongguo",
+     "zh": "我是中國人",
+     "pinyin": "wǒ shì Zhōng-guó rén",
+     "en": "I am Chinese",
+     "audio": "audio/wo-shi-x-ren--zhongguo.mp3",
+     "audioSlow": "audio/wo-shi-x-ren--zhongguo-slow.mp3"
+    },
+    {
+     "fillId": "nanfei",
+     "zh": "我是南非人",
+     "pinyin": "wǒ shì Nán-fēi rén",
+     "en": "I am South African",
+     "audio": "audio/wo-shi-x-ren--nanfei.mp3",
+     "audioSlow": "audio/wo-shi-x-ren--nanfei-slow.mp3"
+    }
+   ],
+   "note": "Country + 人 (rén, person) = nationality"
+  },
+  {
+   "id": "wo-shi-laoshi",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "我是老師",
+   "pinyin": "wǒ shì lǎo-shī",
+   "en": "I am a teacher",
+   "audio": "audio/wo-shi-laoshi.mp3",
+   "audioSlow": "audio/wo-shi-laoshi-slow.mp3"
+  },
+  {
+   "id": "wo-shi-jiaoshou",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "我是教授",
+   "pinyin": "wǒ shì jiào-shòu",
+   "en": "I am a professor",
+   "audio": "audio/wo-shi-jiaoshou.mp3",
+   "audioSlow": "audio/wo-shi-jiaoshou-slow.mp3",
+   "note": "我是 [subject] 教授 = I'm a professor of [subject]"
+  },
+  {
+   "id": "wo-lai-zhongda-shouke",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "我來香港中文大學授課",
+   "pinyin": "wǒ lái Xiāng-gǎng Zhōng-wén Dà-xué shòu-kè",
+   "en": "I come to CUHK to teach",
+   "audio": "audio/wo-lai-zhongda-shouke.mp3",
+   "audioSlow": "audio/wo-lai-zhongda-shouke-slow.mp3"
+  },
+  {
+   "id": "wo-zai-zhongda-jiaoshu",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "我在中文大學教書",
+   "pinyin": "wǒ zài Zhōng-wén Dà-xué jiāo-shū",
+   "en": "I teach at the Chinese University",
+   "audio": "audio/wo-zai-zhongda-jiaoshu.mp3",
+   "audioSlow": "audio/wo-zai-zhongda-jiaoshu-slow.mp3",
+   "note": "教 (jiāo) + course/subject = teach …; note jiāo here vs jiào in 教授"
+  },
+  {
+   "id": "zuijin-hao-ma",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "最近好嗎？",
+   "pinyin": "zuì-jìn hǎo ma?",
+   "en": "How have you been lately?",
+   "audio": "audio/zuijin-hao-ma.mp3",
+   "audioSlow": "audio/zuijin-hao-ma-slow.mp3"
+  },
+  {
+   "id": "zuijin-zenmeyang",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "最近怎麼樣？",
+   "pinyin": "zuì-jìn zěn-me-yàng?",
+   "en": "How are things recently?",
+   "audio": "audio/zuijin-zenmeyang.mp3",
+   "audioSlow": "audio/zuijin-zenmeyang-slow.mp3"
+  },
+  {
+   "id": "zuijin-mang-shenme",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "最近忙什麼？",
+   "pinyin": "zuì-jìn máng shé-me?",
+   "en": "What have you been busy with lately?",
+   "audio": "audio/zuijin-mang-shenme.mp3",
+   "audioSlow": "audio/zuijin-mang-shenme-slow.mp3"
+  },
+  {
+   "id": "kafei",
+   "kind": "word",
+   "week": 1,
+   "zh": "咖啡",
+   "pinyin": "kā-fēi",
+   "en": "coffee",
+   "audio": "audio/kafei.mp3",
+   "audioSlow": "audio/kafei-slow.mp3",
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "wo-xihuan-he-x",
+   "kind": "pattern",
+   "week": 1,
+   "zh": "我喜歡喝___",
+   "pinyin": "wǒ xǐ-huān hē ___",
+   "en": "I like drinking ___",
+   "fills": [
+    {
+     "fillId": "kafei",
+     "zh": "我喜歡喝咖啡",
+     "pinyin": "wǒ xǐ-huān hē kā-fēi",
+     "en": "I like drinking coffee",
+     "audio": "audio/wo-xihuan-he-x--kafei.mp3",
+     "audioSlow": "audio/wo-xihuan-he-x--kafei-slow.mp3"
+    },
+    {
+     "fillId": "shui",
+     "zh": "我喜歡喝水",
+     "pinyin": "wǒ xǐ-huān hē shuǐ",
+     "en": "I like drinking water",
+     "audio": "audio/wo-xihuan-he-x--shui.mp3",
+     "audioSlow": "audio/wo-xihuan-he-x--shui-slow.mp3"
+    },
+    {
+     "fillId": "naicha",
+     "zh": "我喜歡喝奶茶",
+     "pinyin": "wǒ xǐ-huān hē nǎi-chá",
+     "en": "I like drinking milk tea",
+     "audio": "audio/wo-xihuan-he-x--naicha.mp3",
+     "audioSlow": "audio/wo-xihuan-he-x--naicha-slow.mp3"
+    },
+    {
+     "fillId": "putaojiu",
+     "zh": "我喜歡喝葡萄酒",
+     "pinyin": "wǒ xǐ-huān hē pú-táo-jiǔ",
+     "en": "I like drinking wine",
+     "audio": "audio/wo-xihuan-he-x--putaojiu.mp3",
+     "audioSlow": "audio/wo-xihuan-he-x--putaojiu-slow.mp3"
+    },
+    {
+     "fillId": "pijiu",
+     "zh": "我喜歡喝啤酒",
+     "pinyin": "wǒ xǐ-huān hē pí-jiǔ",
+     "en": "I like drinking beer",
+     "audio": "audio/wo-xihuan-he-x--pijiu.mp3",
+     "audioSlow": "audio/wo-xihuan-he-x--pijiu-slow.mp3"
+    }
+   ]
+  },
+  {
+   "id": "ni-xihuan-he-shenme",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "你喜歡喝什麼？",
+   "pinyin": "nǐ xǐ-huān hē shé-me?",
+   "en": "What do you like to drink?",
+   "audio": "audio/ni-xihuan-he-shenme.mp3",
+   "audioSlow": "audio/ni-xihuan-he-shenme-slow.mp3"
+  },
+  {
+   "id": "shui",
+   "kind": "word",
+   "week": 1,
+   "zh": "水",
+   "pinyin": "shuǐ",
+   "en": "water",
+   "audio": "audio/shui.mp3",
+   "audioSlow": "audio/shui-slow.mp3",
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "naicha",
+   "kind": "word",
+   "week": 1,
+   "zh": "奶茶",
+   "pinyin": "nǎi-chá",
+   "en": "milk tea",
+   "audio": "audio/naicha.mp3",
+   "audioSlow": "audio/naicha-slow.mp3",
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "putaojiu",
+   "kind": "word",
+   "week": 1,
+   "zh": "葡萄酒",
+   "pinyin": "pú-táo-jiǔ",
+   "en": "wine",
+   "audio": "audio/putaojiu.mp3",
+   "audioSlow": "audio/putaojiu-slow.mp3",
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "pijiu",
+   "kind": "word",
+   "week": 1,
+   "zh": "啤酒",
+   "pinyin": "pí-jiǔ",
+   "en": "beer",
+   "audio": "audio/pijiu.mp3",
+   "audioSlow": "audio/pijiu-slow.mp3",
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "ni-xihuan-chi-shenme",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "你喜歡吃什麼？",
+   "pinyin": "nǐ xǐ-huān chī shé-me?",
+   "en": "What do you like to eat?",
+   "audio": "audio/ni-xihuan-chi-shenme.mp3",
+   "audioSlow": "audio/ni-xihuan-chi-shenme-slow.mp3"
+  },
+  {
+   "id": "la",
+   "kind": "word",
+   "week": 1,
+   "zh": "辣",
+   "pinyin": "là",
+   "en": "spicy",
+   "audio": "audio/la.mp3",
+   "audioSlow": "audio/la-slow.mp3",
+   "cat": [
+    "food"
+   ]
+  },
+  {
+   "id": "mapo-doufu",
+   "kind": "word",
+   "week": 1,
+   "zh": "麻婆豆腐",
+   "pinyin": "má-pó-dòu-fǔ",
+   "en": "mapo tofu",
+   "audio": "audio/mapo-doufu.mp3",
+   "audioSlow": "audio/mapo-doufu-slow.mp3",
+   "cat": [
+    "food"
+   ]
+  },
+  {
+   "id": "wo-xihuan-chi-x",
+   "kind": "pattern",
+   "week": 1,
+   "zh": "我喜歡吃___",
+   "pinyin": "wǒ xǐ-huān chī ___",
+   "en": "I like eating ___",
+   "fills": [
+    {
+     "fillId": "la",
+     "zh": "我喜歡吃辣",
+     "pinyin": "wǒ xǐ-huān chī là",
+     "en": "I like eating spicy food",
+     "audio": "audio/wo-xihuan-chi-x--la.mp3",
+     "audioSlow": "audio/wo-xihuan-chi-x--la-slow.mp3"
+    },
+    {
+     "fillId": "mapo-doufu",
+     "zh": "我喜歡吃麻婆豆腐",
+     "pinyin": "wǒ xǐ-huān chī má-pó-dòu-fǔ",
+     "en": "I like eating mapo tofu",
+     "audio": "audio/wo-xihuan-chi-x--mapo-doufu.mp3",
+     "audioSlow": "audio/wo-xihuan-chi-x--mapo-doufu-slow.mp3"
+    }
+   ]
+  },
+  {
+   "id": "yao-bu-yao-la",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "要不要辣？",
+   "pinyin": "yào bú yào là?",
+   "en": "Do you want it spicy?",
+   "audio": "audio/yao-bu-yao-la.mp3",
+   "audioSlow": "audio/yao-bu-yao-la-slow.mp3"
+  },
+  {
+   "id": "yidiandian",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "一點點",
+   "pinyin": "yì diǎn-diǎn",
+   "en": "A little bit",
+   "audio": "audio/yidiandian.mp3",
+   "audioSlow": "audio/yidiandian-slow.mp3"
+  },
+  {
+   "id": "zhende",
+   "kind": "phrase",
+   "week": 1,
+   "zh": "真的",
+   "pinyin": "zhēn-de",
+   "en": "Really",
+   "audio": "audio/zhende.mp3",
+   "audioSlow": "audio/zhende-slow.mp3"
+  },
+  {
+   "id": "riben",
+   "kind": "word",
+   "week": 1,
+   "zh": "日本",
+   "pinyin": "Rì-běn",
+   "en": "Japan",
+   "audio": "audio/riben.mp3",
+   "audioSlow": "audio/riben-slow.mp3",
+   "cat": [
+    "country"
+   ]
+  },
+  {
+   "id": "ni-xihuan-x-ma",
+   "kind": "pattern",
+   "week": 1,
+   "zh": "你喜歡___嗎？",
+   "pinyin": "nǐ xǐ-huān ___ ma?",
+   "en": "Do you like ___?",
+   "fills": [
+    {
+     "fillId": "helan",
+     "zh": "你喜歡荷蘭嗎？",
+     "pinyin": "nǐ xǐ-huān Hé-lán ma?",
+     "en": "Do you like the Netherlands?",
+     "audio": "audio/ni-xihuan-x-ma--helan.mp3",
+     "audioSlow": "audio/ni-xihuan-x-ma--helan-slow.mp3"
+    },
+    {
+     "fillId": "riben",
+     "zh": "你喜歡日本嗎？",
+     "pinyin": "nǐ xǐ-huān Rì-běn ma?",
+     "en": "Do you like Japan?",
+     "audio": "audio/ni-xihuan-x-ma--riben.mp3",
+     "audioSlow": "audio/ni-xihuan-x-ma--riben-slow.mp3"
+    },
+    {
+     "fillId": "taiwan",
+     "zh": "你喜歡台灣嗎？",
+     "pinyin": "nǐ xǐ-huān Tái-wān ma?",
+     "en": "Do you like Taiwan?",
+     "audio": "audio/ni-xihuan-x-ma--taiwan.mp3",
+     "audioSlow": "audio/ni-xihuan-x-ma--taiwan-slow.mp3"
+    },
+    {
+     "fillId": "yingguo",
+     "zh": "你喜歡英國嗎？",
+     "pinyin": "nǐ xǐ-huān Yīng-guó ma?",
+     "en": "Do you like the UK?",
+     "audio": "audio/ni-xihuan-x-ma--yingguo.mp3",
+     "audioSlow": "audio/ni-xihuan-x-ma--yingguo-slow.mp3"
+    },
+    {
+     "fillId": "meiguo",
+     "zh": "你喜歡美國嗎？",
+     "pinyin": "nǐ xǐ-huān Měi-guó ma?",
+     "en": "Do you like the USA?",
+     "audio": "audio/ni-xihuan-x-ma--meiguo.mp3",
+     "audioSlow": "audio/ni-xihuan-x-ma--meiguo-slow.mp3"
+    },
+    {
+     "fillId": "faguo",
+     "zh": "你喜歡法國嗎？",
+     "pinyin": "nǐ xǐ-huān Fà-guó ma?",
+     "en": "Do you like France?",
+     "audio": "audio/ni-xihuan-x-ma--faguo.mp3",
+     "audioSlow": "audio/ni-xihuan-x-ma--faguo-slow.mp3"
+    },
+    {
+     "fillId": "deguo",
+     "zh": "你喜歡德國嗎？",
+     "pinyin": "nǐ xǐ-huān Dé-guó ma?",
+     "en": "Do you like Germany?",
+     "audio": "audio/ni-xihuan-x-ma--deguo.mp3",
+     "audioSlow": "audio/ni-xihuan-x-ma--deguo-slow.mp3"
+    },
+    {
+     "fillId": "zhongguo",
+     "zh": "你喜歡中國嗎？",
+     "pinyin": "nǐ xǐ-huān Zhōng-guó ma?",
+     "en": "Do you like China?",
+     "audio": "audio/ni-xihuan-x-ma--zhongguo.mp3",
+     "audioSlow": "audio/ni-xihuan-x-ma--zhongguo-slow.mp3"
+    },
+    {
+     "fillId": "nanfei",
+     "zh": "你喜歡南非嗎？",
+     "pinyin": "nǐ xǐ-huān Nán-fēi ma?",
+     "en": "Do you like South Africa?",
+     "audio": "audio/ni-xihuan-x-ma--nanfei.mp3",
+     "audioSlow": "audio/ni-xihuan-x-ma--nanfei-slow.mp3"
+    }
+   ]
+  },
+  {
+   "id": "wo-bu-xihuan-he-x",
+   "kind": "pattern",
+   "week": 1,
+   "zh": "我不喜歡喝___",
+   "pinyin": "wǒ bù xǐ-huān hē ___",
+   "en": "I don't like drinking ___",
+   "fills": [
+    {
+     "fillId": "kafei",
+     "zh": "我不喜歡喝咖啡",
+     "pinyin": "wǒ bù xǐ-huān hē kā-fēi",
+     "en": "I don't like drinking coffee",
+     "audio": "audio/wo-bu-xihuan-he-x--kafei.mp3",
+     "audioSlow": "audio/wo-bu-xihuan-he-x--kafei-slow.mp3"
+    },
+    {
+     "fillId": "shui",
+     "zh": "我不喜歡喝水",
+     "pinyin": "wǒ bù xǐ-huān hē shuǐ",
+     "en": "I don't like drinking water",
+     "audio": "audio/wo-bu-xihuan-he-x--shui.mp3",
+     "audioSlow": "audio/wo-bu-xihuan-he-x--shui-slow.mp3"
+    },
+    {
+     "fillId": "naicha",
+     "zh": "我不喜歡喝奶茶",
+     "pinyin": "wǒ bù xǐ-huān hē nǎi-chá",
+     "en": "I don't like drinking milk tea",
+     "audio": "audio/wo-bu-xihuan-he-x--naicha.mp3",
+     "audioSlow": "audio/wo-bu-xihuan-he-x--naicha-slow.mp3"
+    },
+    {
+     "fillId": "putaojiu",
+     "zh": "我不喜歡喝葡萄酒",
+     "pinyin": "wǒ bù xǐ-huān hē pú-táo-jiǔ",
+     "en": "I don't like drinking wine",
+     "audio": "audio/wo-bu-xihuan-he-x--putaojiu.mp3",
+     "audioSlow": "audio/wo-bu-xihuan-he-x--putaojiu-slow.mp3"
+    },
+    {
+     "fillId": "pijiu",
+     "zh": "我不喜歡喝啤酒",
+     "pinyin": "wǒ bù xǐ-huān hē pí-jiǔ",
+     "en": "I don't like drinking beer",
+     "audio": "audio/wo-bu-xihuan-he-x--pijiu.mp3",
+     "audioSlow": "audio/wo-bu-xihuan-he-x--pijiu-slow.mp3"
+    }
+   ]
+  },
+  {
+   "id": "wo-bu-xihuan-chi-x",
+   "kind": "pattern",
+   "week": 1,
+   "zh": "我不喜歡吃___",
+   "pinyin": "wǒ bù xǐ-huān chī ___",
+   "en": "I don't like eating ___",
+   "fills": [
+    {
+     "fillId": "la",
+     "zh": "我不喜歡吃辣",
+     "pinyin": "wǒ bù xǐ-huān chī là",
+     "en": "I don't like eating spicy food",
+     "audio": "audio/wo-bu-xihuan-chi-x--la.mp3",
+     "audioSlow": "audio/wo-bu-xihuan-chi-x--la-slow.mp3"
+    },
+    {
+     "fillId": "mapo-doufu",
+     "zh": "我不喜歡吃麻婆豆腐",
+     "pinyin": "wǒ bù xǐ-huān chī má-pó-dòu-fǔ",
+     "en": "I don't like eating mapo tofu",
+     "audio": "audio/wo-bu-xihuan-chi-x--mapo-doufu.mp3",
+     "audioSlow": "audio/wo-bu-xihuan-chi-x--mapo-doufu-slow.mp3"
+    }
+   ]
+  },
+  {
+   "id": "taiwan",
+   "kind": "word",
+   "week": 1,
+   "zh": "台灣",
+   "pinyin": "Tái-wān",
+   "en": "Taiwan",
+   "audio": "audio/taiwan.mp3",
+   "audioSlow": "audio/taiwan-slow.mp3",
+   "cat": [
+    "country"
+   ]
+  },
+  {
+   "id": "yingguo",
+   "kind": "word",
+   "week": 1,
+   "zh": "英國",
+   "pinyin": "Yīng-guó",
+   "en": "the UK",
+   "audio": "audio/yingguo.mp3",
+   "audioSlow": "audio/yingguo-slow.mp3",
+   "cat": [
+    "country"
+   ]
+  },
+  {
+   "id": "meiguo",
+   "kind": "word",
+   "week": 1,
+   "zh": "美國",
+   "pinyin": "Měi-guó",
+   "en": "the USA",
+   "audio": "audio/meiguo.mp3",
+   "audioSlow": "audio/meiguo-slow.mp3",
+   "cat": [
+    "country"
+   ]
+  },
+  {
+   "id": "faguo",
+   "kind": "word",
+   "week": 1,
+   "zh": "法國",
+   "pinyin": "Fà-guó",
+   "en": "France",
+   "audio": "audio/faguo.mp3",
+   "audioSlow": "audio/faguo-slow.mp3",
+   "note": "Taiwan: Fàguó; mainland: Fǎguó",
+   "cat": [
+    "country"
+   ]
+  },
+  {
+   "id": "deguo",
+   "kind": "word",
+   "week": 1,
+   "zh": "德國",
+   "pinyin": "Dé-guó",
+   "en": "Germany",
+   "audio": "audio/deguo.mp3",
+   "audioSlow": "audio/deguo-slow.mp3",
+   "cat": [
+    "country"
+   ]
+  },
+  {
+   "id": "zhongguo",
+   "kind": "word",
+   "week": 1,
+   "zh": "中國",
+   "pinyin": "Zhōng-guó",
+   "en": "China",
+   "audio": "audio/zhongguo.mp3",
+   "audioSlow": "audio/zhongguo-slow.mp3",
+   "cat": [
+    "country"
+   ]
+  },
+  {
+   "id": "nanfei",
+   "kind": "word",
+   "week": 1,
+   "zh": "南非",
+   "pinyin": "Nán-fēi",
+   "en": "South Africa",
+   "audio": "audio/nanfei.mp3",
+   "audioSlow": "audio/nanfei-slow.mp3",
+   "cat": [
+    "country"
+   ]
+  },
+  {
+   "id": "xianggang",
+   "kind": "word",
+   "week": 1,
+   "zh": "香港",
+   "pinyin": "Xiāng-gǎng",
+   "en": "Hong Kong",
+   "audio": "audio/xianggang.mp3",
+   "audioSlow": "audio/xianggang-slow.mp3"
+  },
+  {
+   "id": "wo",
+   "kind": "word",
+   "week": 1,
+   "zh": "我",
+   "pinyin": "wǒ",
+   "en": "I / me",
+   "audio": "audio/wo.mp3",
+   "audioSlow": "audio/wo-slow.mp3"
+  },
+  {
+   "id": "ni",
+   "kind": "word",
+   "week": 1,
+   "zh": "你",
+   "pinyin": "nǐ",
+   "en": "you",
+   "audio": "audio/ni.mp3",
+   "audioSlow": "audio/ni-slow.mp3"
+  },
+  {
+   "id": "ta",
+   "kind": "word",
+   "week": 1,
+   "zh": "他",
+   "pinyin": "tā",
+   "en": "he (she / it)",
+   "audio": "audio/ta.mp3",
+   "audioSlow": "audio/ta-slow.mp3",
+   "note": "Same sound for all: 他 he, 她 she, 它 it"
+  },
+  {
+   "id": "shi",
+   "kind": "word",
+   "week": 1,
+   "zh": "是",
+   "pinyin": "shì",
+   "en": "is / am / are",
+   "audio": "audio/shi.mp3",
+   "audioSlow": "audio/shi-slow.mp3"
+  },
+  {
+   "id": "chi",
+   "kind": "word",
+   "week": 1,
+   "zh": "吃",
+   "pinyin": "chī",
+   "en": "to eat",
+   "audio": "audio/chi.mp3",
+   "audioSlow": "audio/chi-slow.mp3"
+  },
+  {
+   "id": "he",
+   "kind": "word",
+   "week": 1,
+   "zh": "喝",
+   "pinyin": "hē",
+   "en": "to drink",
+   "audio": "audio/he.mp3",
+   "audioSlow": "audio/he-slow.mp3"
+  },
+  {
+   "id": "xihuan",
+   "kind": "word",
+   "week": 1,
+   "zh": "喜歡",
+   "pinyin": "xǐ-huān",
+   "en": "to like",
+   "audio": "audio/xihuan.mp3",
+   "audioSlow": "audio/xihuan-slow.mp3"
+  },
+  {
+   "id": "bu",
+   "kind": "word",
+   "week": 1,
+   "zh": "不",
+   "pinyin": "bù",
+   "en": "not",
+   "audio": "audio/bu.mp3",
+   "audioSlow": "audio/bu-slow.mp3",
+   "note": "Becomes bú before a 4th tone: 不要 bú yào, 不是 bú shì"
+  },
+  {
+   "id": "ma",
+   "kind": "word",
+   "week": 1,
+   "zh": "嗎",
+   "pinyin": "ma",
+   "en": "(question particle)",
+   "audio": "audio/ma.mp3",
+   "audioSlow": "audio/ma-slow.mp3",
+   "note": "Put at the end of a statement to make a yes/no question"
+  },
+  {
+   "id": "shenme",
+   "kind": "word",
+   "week": 1,
+   "zh": "什麼",
+   "pinyin": "shé-me",
+   "en": "what",
+   "audio": "audio/shenme.mp3",
+   "audioSlow": "audio/shenme-slow.mp3"
+  },
+  {
+   "id": "zhidao",
+   "kind": "word",
+   "week": 1,
+   "zh": "知道",
+   "pinyin": "zhī-dào",
+   "en": "to know",
+   "audio": "audio/zhidao.mp3",
+   "audioSlow": "audio/zhidao-slow.mp3"
+  },
+  {
+   "id": "guo",
+   "kind": "word",
+   "week": 1,
+   "zh": "國",
+   "pinyin": "guó",
+   "en": "country",
+   "audio": "audio/guo.mp3",
+   "audioSlow": "audio/guo-slow.mp3"
+  },
+  {
+   "id": "yi",
+   "kind": "word",
+   "week": 1,
+   "zh": "一",
+   "pinyin": "yī",
+   "en": "one",
+   "audio": "audio/yi.mp3",
+   "audioSlow": "audio/yi-slow.mp3",
+   "note": "yī when counting; yí before a 4th tone, yì before tones 1–3 (一點點 yì diǎndiǎn)"
+  },
+  {
+   "id": "er",
+   "kind": "word",
+   "week": 1,
+   "zh": "二",
+   "pinyin": "èr",
+   "en": "two (counting)",
+   "audio": "audio/er.mp3",
+   "audioSlow": "audio/er-slow.mp3",
+   "note": "二 èr for counting and numbers; 兩 liǎng for two of something"
+  },
+  {
+   "id": "liang",
+   "kind": "word",
+   "week": 1,
+   "zh": "兩",
+   "pinyin": "liǎng",
+   "en": "two (of something)",
+   "audio": "audio/liang.mp3",
+   "audioSlow": "audio/liang-slow.mp3",
+   "note": "兩 liǎng for amounts: two cups, two people; 二 èr for counting"
+  },
+  {
+   "id": "rengong-zhihui",
+   "kind": "word",
+   "week": 1,
+   "zh": "人工智慧",
+   "pinyin": "rén-gōng-zhì-huì",
+   "en": "AI (artificial intelligence)",
+   "audio": "audio/rengong-zhihui.mp3",
+   "audioSlow": "audio/rengong-zhihui-slow.mp3"
+  }
+ ]
+}

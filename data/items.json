@@ -1,0 +1,69 @@
+{
+  "items": [
+    {"id": "dajia-hao", "kind": "phrase", "week": 1, "zh": "大家好", "pinyin": "dà-jiā hǎo", "en": "Hello everyone"},
+    {"id": "wo-jiao", "kind": "phrase", "week": 1, "zh": "我叫……", "pinyin": "wǒ jiào …", "en": "My name is…", "note": "我是…… (wǒ shì…) = I am…"},
+    {"id": "xiexie", "kind": "phrase", "week": 1, "zh": "謝謝", "pinyin": "xiè-xie", "en": "Thank you"},
+    {"id": "hen-gaoxing-renshi-ni", "kind": "phrase", "week": 1, "zh": "很高興認識你", "pinyin": "hěn gāo-xìng rèn-shì nǐ", "en": "Nice to meet you"},
+    {"id": "hen-gaoxing-renshi-dajia", "kind": "phrase", "week": 1, "zh": "很高興認識大家", "pinyin": "hěn gāo-xìng rèn-shì dà-jiā", "en": "Nice to meet you all"},
+
+    {"id": "helan", "kind": "word", "week": 1, "zh": "荷蘭", "pinyin": "Hé-lán", "en": "the Netherlands", "demonym": "Dutch", "cat": ["country"]},
+    {"id": "wo-laizi-x", "kind": "pattern", "week": 1, "zh": "我來自{country}", "pinyin": "wǒ lái-zì {country}", "en": "I come from {country}"},
+    {"id": "wo-shi-x-ren", "kind": "pattern", "week": 1, "zh": "我是{country}人", "pinyin": "wǒ shì {country} rén", "en": "I am {country:demonym}", "note": "Country + 人 (rén, person) = nationality"},
+
+    {"id": "wo-shi-laoshi", "kind": "phrase", "week": 1, "zh": "我是老師", "pinyin": "wǒ shì lǎo-shī", "en": "I am a teacher"},
+    {"id": "wo-shi-jiaoshou", "kind": "phrase", "week": 1, "zh": "我是教授", "pinyin": "wǒ shì jiào-shòu", "en": "I am a professor", "note": "我是 [subject] 教授 = I'm a professor of [subject]"},
+    {"id": "wo-lai-zhongda-shouke", "kind": "phrase", "week": 1, "zh": "我來香港中文大學授課", "pinyin": "wǒ lái Xiāng-gǎng Zhōng-wén Dà-xué shòu-kè", "en": "I come to CUHK to teach"},
+    {"id": "wo-zai-zhongda-jiaoshu", "kind": "phrase", "week": 1, "zh": "我在中文大學教書", "pinyin": "wǒ zài Zhōng-wén Dà-xué jiāo-shū", "en": "I teach at the Chinese University", "note": "教 (jiāo) + course/subject = teach …; note jiāo here vs jiào in 教授"},
+
+    {"id": "zuijin-hao-ma", "kind": "phrase", "week": 1, "zh": "最近好嗎？", "pinyin": "zuì-jìn hǎo ma?", "en": "How have you been lately?"},
+    {"id": "zuijin-zenmeyang", "kind": "phrase", "week": 1, "zh": "最近怎麼樣？", "pinyin": "zuì-jìn zěn-me-yàng?", "en": "How are things recently?"},
+    {"id": "zuijin-mang-shenme", "kind": "phrase", "week": 1, "zh": "最近忙什麼？", "pinyin": "zuì-jìn máng shé-me?", "en": "What have you been busy with lately?"},
+
+    {"id": "kafei", "kind": "word", "week": 1, "zh": "咖啡", "pinyin": "kā-fēi", "en": "coffee", "cat": ["drink"]},
+    {"id": "wo-xihuan-he-x", "kind": "pattern", "week": 1, "zh": "我喜歡喝{drink}", "pinyin": "wǒ xǐ-huān hē {drink}", "en": "I like drinking {drink}"},
+    {"id": "ni-xihuan-he-shenme", "kind": "phrase", "week": 1, "zh": "你喜歡喝什麼？", "pinyin": "nǐ xǐ-huān hē shé-me?", "en": "What do you like to drink?"},
+    {"id": "shui", "kind": "word", "week": 1, "zh": "水", "pinyin": "shuǐ", "en": "water", "cat": ["drink"]},
+    {"id": "naicha", "kind": "word", "week": 1, "zh": "奶茶", "pinyin": "nǎi-chá", "en": "milk tea", "cat": ["drink"]},
+    {"id": "putaojiu", "kind": "word", "week": 1, "zh": "葡萄酒", "pinyin": "pú-táo-jiǔ", "en": "wine", "cat": ["drink"]},
+    {"id": "pijiu", "kind": "word", "week": 1, "zh": "啤酒", "pinyin": "pí-jiǔ", "en": "beer", "cat": ["drink"]},
+
+    {"id": "ni-xihuan-chi-shenme", "kind": "phrase", "week": 1, "zh": "你喜歡吃什麼？", "pinyin": "nǐ xǐ-huān chī shé-me?", "en": "What do you like to eat?"},
+    {"id": "la", "kind": "word", "week": 1, "zh": "辣", "pinyin": "là", "en": "spicy", "fillEn": "spicy food", "cat": ["food"]},
+    {"id": "mapo-doufu", "kind": "word", "week": 1, "zh": "麻婆豆腐", "pinyin": "má-pó-dòu-fǔ", "en": "mapo tofu", "cat": ["food"]},
+    {"id": "wo-xihuan-chi-x", "kind": "pattern", "week": 1, "zh": "我喜歡吃{food}", "pinyin": "wǒ xǐ-huān chī {food}", "en": "I like eating {food}"},
+    {"id": "yao-bu-yao-la", "kind": "phrase", "week": 1, "zh": "要不要辣？", "pinyin": "yào bù yào là?", "en": "Do you want it spicy?"},
+    {"id": "yidiandian", "kind": "phrase", "week": 1, "zh": "一點點", "pinyin": "yī diǎn-diǎn", "en": "A little bit"},
+    {"id": "zhende", "kind": "phrase", "week": 1, "zh": "真的", "pinyin": "zhēn-de", "en": "Really"},
+
+    {"id": "riben", "kind": "word", "week": 1, "zh": "日本", "pinyin": "Rì-běn", "en": "Japan", "demonym": "Japanese", "cat": ["country"]},
+    {"id": "ni-xihuan-x-ma", "kind": "pattern", "week": 1, "zh": "你喜歡{country}嗎？", "pinyin": "nǐ xǐ-huān {country} ma?", "en": "Do you like {country}?"},
+    {"id": "wo-bu-xihuan-he-x", "kind": "pattern", "week": 1, "zh": "我不喜歡喝{drink}", "pinyin": "wǒ bù xǐ-huān hē {drink}", "en": "I don't like drinking {drink}"},
+    {"id": "wo-bu-xihuan-chi-x", "kind": "pattern", "week": 1, "zh": "我不喜歡吃{food}", "pinyin": "wǒ bù xǐ-huān chī {food}", "en": "I don't like eating {food}"},
+
+    {"id": "taiwan", "kind": "word", "week": 1, "zh": "台灣", "pinyin": "Tái-wān", "en": "Taiwan", "demonym": "Taiwanese", "cat": ["country"]},
+    {"id": "yingguo", "kind": "word", "week": 1, "zh": "英國", "pinyin": "Yīng-guó", "en": "the UK", "demonym": "British", "cat": ["country"]},
+    {"id": "meiguo", "kind": "word", "week": 1, "zh": "美國", "pinyin": "Měi-guó", "en": "the USA", "demonym": "American", "cat": ["country"]},
+    {"id": "faguo", "kind": "word", "week": 1, "zh": "法國", "pinyin": "Fà-guó", "en": "France", "demonym": "French", "cat": ["country"], "note": "Taiwan: Fàguó; mainland: Fǎguó"},
+    {"id": "deguo", "kind": "word", "week": 1, "zh": "德國", "pinyin": "Dé-guó", "en": "Germany", "demonym": "German", "cat": ["country"]},
+    {"id": "zhongguo", "kind": "word", "week": 1, "zh": "中國", "pinyin": "Zhōng-guó", "en": "China", "demonym": "Chinese", "cat": ["country"]},
+    {"id": "nanfei", "kind": "word", "week": 1, "zh": "南非", "pinyin": "Nán-fēi", "en": "South Africa", "demonym": "South African", "cat": ["country"]},
+    {"id": "xianggang", "kind": "word", "week": 1, "zh": "香港", "pinyin": "Xiāng-gǎng", "en": "Hong Kong"},
+
+    {"id": "wo", "kind": "word", "week": 1, "zh": "我", "pinyin": "wǒ", "en": "I / me"},
+    {"id": "ni", "kind": "word", "week": 1, "zh": "你", "pinyin": "nǐ", "en": "you"},
+    {"id": "ta", "kind": "word", "week": 1, "zh": "他", "pinyin": "tā", "en": "he (she / it)", "note": "Same sound for all: 他 he, 她 she, 它 it"},
+    {"id": "shi", "kind": "word", "week": 1, "zh": "是", "pinyin": "shì", "en": "is / am / are"},
+    {"id": "chi", "kind": "word", "week": 1, "zh": "吃", "pinyin": "chī", "en": "to eat"},
+    {"id": "he", "kind": "word", "week": 1, "zh": "喝", "pinyin": "hē", "en": "to drink"},
+    {"id": "xihuan", "kind": "word", "week": 1, "zh": "喜歡", "pinyin": "xǐ-huān", "en": "to like"},
+    {"id": "bu", "kind": "word", "week": 1, "zh": "不", "pinyin": "bù", "en": "not", "note": "Becomes bú before a 4th tone: 不要 bú yào, 不是 bú shì"},
+    {"id": "ma", "kind": "word", "week": 1, "zh": "嗎", "pinyin": "ma", "en": "(question particle)", "note": "Put at the end of a statement to make a yes/no question"},
+    {"id": "shenme", "kind": "word", "week": 1, "zh": "什麼", "pinyin": "shé-me", "en": "what"},
+    {"id": "zhidao", "kind": "word", "week": 1, "zh": "知道", "pinyin": "zhī-dào", "en": "to know"},
+    {"id": "guo", "kind": "word", "week": 1, "zh": "國", "pinyin": "guó", "en": "country"},
+    {"id": "yi", "kind": "word", "week": 1, "zh": "一", "pinyin": "yī", "en": "one", "noYiSandhi": true, "note": "yī when counting; yí before a 4th tone, yì before tones 1–3 (一點點 yì diǎndiǎn)"},
+    {"id": "er", "kind": "word", "week": 1, "zh": "二", "pinyin": "èr", "en": "two (counting)", "note": "二 èr for counting and numbers; 兩 liǎng for two of something"},
+    {"id": "liang", "kind": "word", "week": 1, "zh": "兩", "pinyin": "liǎng", "en": "two (of something)", "note": "兩 liǎng for amounts: two cups, two people; 二 èr for counting"},
+    {"id": "rengong-zhihui", "kind": "word", "week": 1, "zh": "人工智慧", "pinyin": "rén-gōng-zhì-huì", "en": "AI (artificial intelligence)"}
+  ]
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>說 Mandarin</title>
+  <meta name="theme-color" content="#9e2a22">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="說">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app">
+    <section id="view-home" class="view">
+      <header class="home-head">
+        <h1><span lang="zh-Hant-TW">說</span> Mandarin</h1>
+        <p class="streak" id="streak"></p>
+      </header>
+      <div id="export-banner" class="banner" hidden>
+        It's been a while since your last backup. <button class="link" data-go="settings">Export progress</button>
+      </div>
+      <div class="due-block">
+        <p class="due-count" id="due-count">0</p>
+        <p class="due-label" id="due-label">cards today</p>
+        <button id="start" class="primary big">Start</button>
+        <button id="more" class="secondary" hidden>Learn 5 more new</button>
+      </div>
+      <p class="learned" id="learned"></p>
+    </section>
+
+    <section id="view-study" class="view" hidden>
+      <div class="study-top">
+        <button class="link" id="quit" aria-label="End session">✕</button>
+        <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+        <span class="progress-text" id="progress-text"></span>
+      </div>
+      <div class="card" id="card">
+        <p class="card-kind" id="card-kind"></p>
+        <div class="prompt" id="prompt"></div>
+        <div class="answer" id="answer" hidden>
+          <p class="zh" id="a-zh" lang="zh-Hant-TW"></p>
+          <p class="pinyin" id="a-pinyin"></p>
+          <p class="en" id="a-en"></p>
+          <p class="note" id="a-note" hidden></p>
+          <div class="audio-row">
+            <button class="audio-btn" id="play" aria-label="Play audio">🔊</button>
+            <button class="audio-btn" id="play-slow" aria-label="Play slowly">🐢</button>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="reveal" class="primary big">Show answer</button>
+        <div class="grades" id="grades" hidden>
+          <button data-rating="1" class="g-again">Again</button>
+          <button data-rating="2" class="g-hard">Hard</button>
+          <button data-rating="3" class="g-good">Good</button>
+          <button data-rating="4" class="g-easy">Easy</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-done" class="view" hidden>
+      <div class="done">
+        <p class="done-mark" lang="zh-Hant-TW">好！</p>
+        <p id="done-text">Session complete.</p>
+        <button class="primary big" data-go="home">Back home</button>
+      </div>
+    </section>
+
+    <section id="view-browse" class="view" hidden>
+      <h2>All phrases</h2>
+      <div id="browse-list"></div>
+    </section>
+
+    <section id="view-settings" class="view" hidden>
+      <h2>Settings</h2>
+      <label class="setting">
+        <span>New cards per day</span>
+        <input type="number" id="new-per-day" min="0" max="50" inputmode="numeric">
+      </label>
+      <h3>Backup</h3>
+      <p class="hint">Your progress is saved only on this device. Export a backup now and then.</p>
+      <div class="button-row">
+        <button class="secondary" id="export">Export progress</button>
+        <label class="secondary file-btn">Import progress<input type="file" id="import" accept="application/json,.json" hidden></label>
+      </div>
+      <p class="hint" id="last-export"></p>
+      <h3>Install</h3>
+      <p class="hint">On iPhone: open this page in Safari, tap Share, then <b>Add to Home Screen</b>.</p>
+      <h3>Danger zone</h3>
+      <button class="danger" id="reset">Reset all progress</button>
+      <p class="hint version" id="version"></p>
+    </section>
+  </main>
+
+  <nav class="tabs" id="tabs">
+    <button data-go="home" class="tab active">Study</button>
+    <button data-go="browse" class="tab">Browse</button>
+    <button data-go="settings" class="tab">Settings</button>
+  </nav>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

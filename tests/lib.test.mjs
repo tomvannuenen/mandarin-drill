@@ -165,6 +165,16 @@ test('applyReview records card, good count, new count and streak', () => {
   assert.equal(newToday(p, NOW), 1);
 });
 
+test('good answers count at most once per day toward unlocking', () => {
+  const p = defaults();
+  const s = grade(null, 3, NOW);
+  applyReview(p, { id: 'a', type: 'say' }, 3, s, NOW);
+  applyReview(p, { id: 'a', type: 'say' }, 3, s, later(10 * MIN));
+  assert.equal(p.goodCounts.a, 1);
+  applyReview(p, { id: 'a', type: 'say' }, 3, s, later(DAY));
+  assert.equal(p.goodCounts.a, 2);
+});
+
 test('streak continues on consecutive days and resets after a gap', () => {
   const p = defaults();
   const s = grade(null, 3, NOW);

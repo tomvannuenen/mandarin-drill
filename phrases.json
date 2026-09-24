@@ -1,5 +1,5 @@
 {
- "version": "74dfafef7636",
+ "version": "0b5ca9b80178",
  "items": [
   {
    "id": "dajia-hao",
@@ -957,6 +957,530 @@
    "en": "AI (artificial intelligence)",
    "audio": "audio/rengong-zhihui.mp3",
    "audioSlow": "audio/rengong-zhihui-slow.mp3"
+  },
+  {
+   "id": "qu",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "去",
+   "pinyin": "qù",
+   "en": "to go",
+   "audio": "audio/qu.mp3",
+   "audioSlow": "audio/qu-slow.mp3"
+  },
+  {
+   "id": "lai",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "來",
+   "pinyin": "lái",
+   "en": "to come",
+   "audio": "audio/lai.mp3",
+   "audioSlow": "audio/lai-slow.mp3"
+  },
+  {
+   "id": "hui-return",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "回",
+   "pinyin": "huí",
+   "en": "to return, go back",
+   "audio": "audio/hui-return.mp3",
+   "audioSlow": "audio/hui-return-slow.mp3",
+   "note": "回家 huí jiā = go home"
+  },
+  {
+   "id": "you",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "有",
+   "pinyin": "yǒu",
+   "en": "to have; there is",
+   "audio": "audio/you.mp3",
+   "audioSlow": "audio/you-slow.mp3",
+   "note": "Negate with 沒 (méi), not 不: 沒有 méi yǒu"
+  },
+  {
+   "id": "meiyou",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "沒有",
+   "pinyin": "méi-yǒu",
+   "en": "not have; there isn't",
+   "audio": "audio/meiyou.mp3",
+   "audioSlow": "audio/meiyou-slow.mp3"
+  },
+  {
+   "id": "zai",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "在",
+   "pinyin": "zài",
+   "en": "to be at / in",
+   "audio": "audio/zai.mp3",
+   "audioSlow": "audio/zai-slow.mp3",
+   "note": "Also marks an ongoing action: 我在學中文 = I'm learning Chinese"
+  },
+  {
+   "id": "zhu",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "住",
+   "pinyin": "zhù",
+   "en": "to live (reside)",
+   "audio": "audio/zhu.mp3",
+   "audioSlow": "audio/zhu-slow.mp3"
+  },
+  {
+   "id": "kan",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "看",
+   "pinyin": "kàn",
+   "en": "to look, watch, read",
+   "audio": "audio/kan.mp3",
+   "audioSlow": "audio/kan-slow.mp3"
+  },
+  {
+   "id": "kanjian",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "看見",
+   "pinyin": "kàn-jiàn",
+   "en": "to see",
+   "audio": "audio/kanjian.mp3",
+   "audioSlow": "audio/kanjian-slow.mp3"
+  },
+  {
+   "id": "ting",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "聽",
+   "pinyin": "tīng",
+   "en": "to listen",
+   "audio": "audio/ting.mp3",
+   "audioSlow": "audio/ting-slow.mp3"
+  },
+  {
+   "id": "shuo",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "說",
+   "pinyin": "shuō",
+   "en": "to speak, say",
+   "audio": "audio/shuo.mp3",
+   "audioSlow": "audio/shuo-slow.mp3"
+  },
+  {
+   "id": "du",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "讀",
+   "pinyin": "dú",
+   "en": "to read (aloud); to study",
+   "audio": "audio/du.mp3",
+   "audioSlow": "audio/du-slow.mp3"
+  },
+  {
+   "id": "xie",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "寫",
+   "pinyin": "xiě",
+   "en": "to write",
+   "audio": "audio/xie.mp3",
+   "audioSlow": "audio/xie-slow.mp3"
+  },
+  {
+   "id": "xue",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "學",
+   "pinyin": "xué",
+   "en": "to learn, study",
+   "audio": "audio/xue.mp3",
+   "audioSlow": "audio/xue-slow.mp3"
+  },
+  {
+   "id": "jiao-teach",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "教",
+   "pinyin": "jiāo",
+   "en": "to teach",
+   "audio": "audio/jiao-teach.mp3",
+   "audioSlow": "audio/jiao-teach-slow.mp3",
+   "note": "jiāo as a verb; jiào in 教授 (professor)"
+  },
+  {
+   "id": "jiao-call",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "叫",
+   "pinyin": "jiào",
+   "en": "to be called; to call",
+   "audio": "audio/jiao-call.mp3",
+   "audioSlow": "audio/jiao-call-slow.mp3"
+  },
+  {
+   "id": "renshi",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "認識",
+   "pinyin": "rèn-shì",
+   "en": "to know (a person), to meet",
+   "audio": "audio/renshi.mp3",
+   "audioSlow": "audio/renshi-slow.mp3",
+   "note": "知道 = know a fact; 認識 = know a person"
+  },
+  {
+   "id": "mai",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "買",
+   "pinyin": "mǎi",
+   "en": "to buy",
+   "audio": "audio/mai.mp3",
+   "audioSlow": "audio/mai-slow.mp3",
+   "note": "Don't confuse with 賣 mài (to sell)"
+  },
+  {
+   "id": "zuo-do",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "做",
+   "pinyin": "zuò",
+   "en": "to do, make",
+   "audio": "audio/zuo-do.mp3",
+   "audioSlow": "audio/zuo-do-slow.mp3"
+  },
+  {
+   "id": "zuo-sit",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "坐",
+   "pinyin": "zuò",
+   "en": "to sit; to take (bus, train)",
+   "audio": "audio/zuo-sit.mp3",
+   "audioSlow": "audio/zuo-sit-slow.mp3"
+  },
+  {
+   "id": "kai",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "開",
+   "pinyin": "kāi",
+   "en": "to open; to drive",
+   "audio": "audio/kai.mp3",
+   "audioSlow": "audio/kai-slow.mp3"
+  },
+  {
+   "id": "ai",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "愛",
+   "pinyin": "ài",
+   "en": "to love",
+   "audio": "audio/ai.mp3",
+   "audioSlow": "audio/ai-slow.mp3"
+  },
+  {
+   "id": "xiang",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "想",
+   "pinyin": "xiǎng",
+   "en": "to want to; to think; to miss",
+   "audio": "audio/xiang.mp3",
+   "audioSlow": "audio/xiang-slow.mp3",
+   "note": "想 is softer than 要: 我想喝… = I'd like to drink…"
+  },
+  {
+   "id": "yao-want",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "要",
+   "pinyin": "yào",
+   "en": "to want; will",
+   "audio": "audio/yao-want.mp3",
+   "audioSlow": "audio/yao-want-slow.mp3"
+  },
+  {
+   "id": "hui-can",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "會",
+   "pinyin": "huì",
+   "en": "can (a learned skill)",
+   "audio": "audio/hui-can.mp3",
+   "audioSlow": "audio/hui-can-slow.mp3",
+   "note": "會說中文 = can speak Chinese (have learned to)"
+  },
+  {
+   "id": "neng",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "能",
+   "pinyin": "néng",
+   "en": "can (be able / allowed)",
+   "audio": "audio/neng.mp3",
+   "audioSlow": "audio/neng-slow.mp3"
+  },
+  {
+   "id": "gongzuo",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "工作",
+   "pinyin": "gōng-zuò",
+   "en": "to work; job",
+   "audio": "audio/gongzuo.mp3",
+   "audioSlow": "audio/gongzuo-slow.mp3"
+  },
+  {
+   "id": "shuijiao",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "睡覺",
+   "pinyin": "shuì-jiào",
+   "en": "to sleep",
+   "audio": "audio/shuijiao.mp3",
+   "audioSlow": "audio/shuijiao-slow.mp3"
+  },
+  {
+   "id": "da-dianhua",
+   "kind": "word",
+   "set": "Verbs",
+   "zh": "打電話",
+   "pinyin": "dǎ diàn-huà",
+   "en": "to make a phone call",
+   "audio": "audio/da-dianhua.mp3",
+   "audioSlow": "audio/da-dianhua-slow.mp3"
+  },
+  {
+   "id": "wo-xiang-qu-x",
+   "kind": "pattern",
+   "set": "Verbs",
+   "zh": "我想去___",
+   "pinyin": "wǒ xiǎng qù ___",
+   "en": "I want to go to ___",
+   "fills": [
+    {
+     "fillId": "helan",
+     "zh": "我想去荷蘭",
+     "pinyin": "wǒ xiǎng qù Hé-lán",
+     "en": "I want to go to the Netherlands",
+     "audio": "audio/wo-xiang-qu-x--helan.mp3",
+     "audioSlow": "audio/wo-xiang-qu-x--helan-slow.mp3"
+    },
+    {
+     "fillId": "riben",
+     "zh": "我想去日本",
+     "pinyin": "wǒ xiǎng qù Rì-běn",
+     "en": "I want to go to Japan",
+     "audio": "audio/wo-xiang-qu-x--riben.mp3",
+     "audioSlow": "audio/wo-xiang-qu-x--riben-slow.mp3"
+    },
+    {
+     "fillId": "taiwan",
+     "zh": "我想去台灣",
+     "pinyin": "wǒ xiǎng qù Tái-wān",
+     "en": "I want to go to Taiwan",
+     "audio": "audio/wo-xiang-qu-x--taiwan.mp3",
+     "audioSlow": "audio/wo-xiang-qu-x--taiwan-slow.mp3"
+    },
+    {
+     "fillId": "yingguo",
+     "zh": "我想去英國",
+     "pinyin": "wǒ xiǎng qù Yīng-guó",
+     "en": "I want to go to the UK",
+     "audio": "audio/wo-xiang-qu-x--yingguo.mp3",
+     "audioSlow": "audio/wo-xiang-qu-x--yingguo-slow.mp3"
+    },
+    {
+     "fillId": "meiguo",
+     "zh": "我想去美國",
+     "pinyin": "wǒ xiǎng qù Měi-guó",
+     "en": "I want to go to the USA",
+     "audio": "audio/wo-xiang-qu-x--meiguo.mp3",
+     "audioSlow": "audio/wo-xiang-qu-x--meiguo-slow.mp3"
+    },
+    {
+     "fillId": "faguo",
+     "zh": "我想去法國",
+     "pinyin": "wǒ xiǎng qù Fà-guó",
+     "en": "I want to go to France",
+     "audio": "audio/wo-xiang-qu-x--faguo.mp3",
+     "audioSlow": "audio/wo-xiang-qu-x--faguo-slow.mp3"
+    },
+    {
+     "fillId": "deguo",
+     "zh": "我想去德國",
+     "pinyin": "wǒ xiǎng qù Dé-guó",
+     "en": "I want to go to Germany",
+     "audio": "audio/wo-xiang-qu-x--deguo.mp3",
+     "audioSlow": "audio/wo-xiang-qu-x--deguo-slow.mp3"
+    },
+    {
+     "fillId": "zhongguo",
+     "zh": "我想去中國",
+     "pinyin": "wǒ xiǎng qù Zhōng-guó",
+     "en": "I want to go to China",
+     "audio": "audio/wo-xiang-qu-x--zhongguo.mp3",
+     "audioSlow": "audio/wo-xiang-qu-x--zhongguo-slow.mp3"
+    },
+    {
+     "fillId": "nanfei",
+     "zh": "我想去南非",
+     "pinyin": "wǒ xiǎng qù Nán-fēi",
+     "en": "I want to go to South Africa",
+     "audio": "audio/wo-xiang-qu-x--nanfei.mp3",
+     "audioSlow": "audio/wo-xiang-qu-x--nanfei-slow.mp3"
+    }
+   ]
+  },
+  {
+   "id": "wo-xiang-he-x",
+   "kind": "pattern",
+   "set": "Verbs",
+   "zh": "我想喝___",
+   "pinyin": "wǒ xiǎng hē ___",
+   "en": "I'd like to drink ___",
+   "fills": [
+    {
+     "fillId": "kafei",
+     "zh": "我想喝咖啡",
+     "pinyin": "wǒ xiǎng hē kā-fēi",
+     "en": "I'd like to drink coffee",
+     "audio": "audio/wo-xiang-he-x--kafei.mp3",
+     "audioSlow": "audio/wo-xiang-he-x--kafei-slow.mp3"
+    },
+    {
+     "fillId": "shui",
+     "zh": "我想喝水",
+     "pinyin": "wǒ xiǎng hē shuǐ",
+     "en": "I'd like to drink water",
+     "audio": "audio/wo-xiang-he-x--shui.mp3",
+     "audioSlow": "audio/wo-xiang-he-x--shui-slow.mp3"
+    },
+    {
+     "fillId": "naicha",
+     "zh": "我想喝奶茶",
+     "pinyin": "wǒ xiǎng hē nǎi-chá",
+     "en": "I'd like to drink milk tea",
+     "audio": "audio/wo-xiang-he-x--naicha.mp3",
+     "audioSlow": "audio/wo-xiang-he-x--naicha-slow.mp3"
+    },
+    {
+     "fillId": "putaojiu",
+     "zh": "我想喝葡萄酒",
+     "pinyin": "wǒ xiǎng hē pú-táo-jiǔ",
+     "en": "I'd like to drink wine",
+     "audio": "audio/wo-xiang-he-x--putaojiu.mp3",
+     "audioSlow": "audio/wo-xiang-he-x--putaojiu-slow.mp3"
+    },
+    {
+     "fillId": "pijiu",
+     "zh": "我想喝啤酒",
+     "pinyin": "wǒ xiǎng hē pí-jiǔ",
+     "en": "I'd like to drink beer",
+     "audio": "audio/wo-xiang-he-x--pijiu.mp3",
+     "audioSlow": "audio/wo-xiang-he-x--pijiu-slow.mp3"
+    }
+   ],
+   "note": "Polite way to order"
+  },
+  {
+   "id": "wo-bu-zhidao",
+   "kind": "phrase",
+   "set": "Verbs",
+   "zh": "我不知道",
+   "pinyin": "wǒ bù zhī-dào",
+   "en": "I don't know",
+   "audio": "audio/wo-bu-zhidao.mp3",
+   "audioSlow": "audio/wo-bu-zhidao-slow.mp3"
+  },
+  {
+   "id": "wo-ting-bu-dong",
+   "kind": "phrase",
+   "set": "Verbs",
+   "zh": "我聽不懂",
+   "pinyin": "wǒ tīng bù dǒng",
+   "en": "I don't understand (what I hear)",
+   "audio": "audio/wo-ting-bu-dong.mp3",
+   "audioSlow": "audio/wo-ting-bu-dong-slow.mp3",
+   "note": "聽 listen + 不懂 not understand"
+  },
+  {
+   "id": "qing-zai-shuo-yici",
+   "kind": "phrase",
+   "set": "Verbs",
+   "zh": "請再說一次",
+   "pinyin": "qǐng zài shuō yí cì",
+   "en": "Please say it again",
+   "audio": "audio/qing-zai-shuo-yici.mp3",
+   "audioSlow": "audio/qing-zai-shuo-yici-slow.mp3",
+   "note": "請 qǐng = please; 再 zài = again"
+  },
+  {
+   "id": "ni-hui-shuo-yingwen-ma",
+   "kind": "phrase",
+   "set": "Verbs",
+   "zh": "你會說英文嗎？",
+   "pinyin": "nǐ huì shuō Yīng-wén ma?",
+   "en": "Do you speak English?",
+   "audio": "audio/ni-hui-shuo-yingwen-ma.mp3",
+   "audioSlow": "audio/ni-hui-shuo-yingwen-ma-slow.mp3"
+  },
+  {
+   "id": "wo-hui-shuo-yidiandian-zhongwen",
+   "kind": "phrase",
+   "set": "Verbs",
+   "zh": "我會說一點點中文",
+   "pinyin": "wǒ huì shuō yì diǎn-diǎn Zhōng-wén",
+   "en": "I can speak a little Chinese",
+   "audio": "audio/wo-hui-shuo-yidiandian-zhongwen.mp3",
+   "audioSlow": "audio/wo-hui-shuo-yidiandian-zhongwen-slow.mp3"
+  },
+  {
+   "id": "wo-zai-xue-zhongwen",
+   "kind": "phrase",
+   "set": "Verbs",
+   "zh": "我在學中文",
+   "pinyin": "wǒ zài xué Zhōng-wén",
+   "en": "I'm learning Chinese",
+   "audio": "audio/wo-zai-xue-zhongwen.mp3",
+   "audioSlow": "audio/wo-zai-xue-zhongwen-slow.mp3"
+  },
+  {
+   "id": "wo-zhu-zai-xianggang",
+   "kind": "phrase",
+   "set": "Verbs",
+   "zh": "我住在香港",
+   "pinyin": "wǒ zhù zài Xiāng-gǎng",
+   "en": "I live in Hong Kong",
+   "audio": "audio/wo-zhu-zai-xianggang.mp3",
+   "audioSlow": "audio/wo-zhu-zai-xianggang-slow.mp3"
+  },
+  {
+   "id": "ni-zai-nali-gongzuo",
+   "kind": "phrase",
+   "set": "Verbs",
+   "zh": "你在哪裡工作？",
+   "pinyin": "nǐ zài nǎ-lǐ gōng-zuò?",
+   "en": "Where do you work?",
+   "audio": "audio/ni-zai-nali-gongzuo.mp3",
+   "audioSlow": "audio/ni-zai-nali-gongzuo-slow.mp3",
+   "note": "哪裡 nǎlǐ = where"
+  },
+  {
+   "id": "wo-zai-zhongda-gongzuo",
+   "kind": "phrase",
+   "set": "Verbs",
+   "zh": "我在中文大學工作",
+   "pinyin": "wǒ zài Zhōng-wén Dà-xué gōng-zuò",
+   "en": "I work at the Chinese University",
+   "audio": "audio/wo-zai-zhongda-gongzuo.mp3",
+   "audioSlow": "audio/wo-zai-zhongda-gongzuo-slow.mp3"
   }
  ]
 }

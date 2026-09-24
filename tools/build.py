@@ -83,7 +83,9 @@ def validate(items):
         seen.add(iid)
         if it.get("kind") not in KINDS:
             errs.append(f"{iid}: kind must be one of {sorted(KINDS)}")
-        missing = [k for k in ("zh", "pinyin", "en", "week") if not it.get(k)]
+        missing = [k for k in ("zh", "pinyin", "en") if not it.get(k)]
+        if not it.get("week") and not it.get("set"):
+            missing.append("week (or set)")
         if missing:
             errs.append(f"{iid}: missing {', '.join(missing)}")
             continue
@@ -127,7 +129,10 @@ def expand(items, root=ROOT):
     out = []
     for it in items:
         no_yi = it.get("noYiSandhi", False)
-        o = {"id": it["id"], "kind": it["kind"], "week": it["week"]}
+        o = {"id": it["id"], "kind": it["kind"]}
+        for k in ("week", "set"):
+            if k in it:
+                o[k] = it[k]
         if it["kind"] == "pattern":
             blank = SLOT_RE.sub("___", it["zh"])
             o["zh"] = blank

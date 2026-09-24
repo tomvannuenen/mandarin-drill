@@ -185,16 +185,21 @@ function browseRow(entry) {
   return el('button', { class: 'row', onclick: () => play(entry.audio) }, ...rowParts(entry));
 }
 
+function groupLabel(item) {
+  return item.set || `Week ${item.week}`;
+}
+
 function renderBrowse() {
-  const weeks = [...new Set(items.map((i) => i.week))].sort((a, b) => b - a);
+  // Newest group first: groups ordered by where they first appear in the data, reversed.
+  const labels = [...new Set(items.map(groupLabel))].reverse();
   $('browse-list').replaceChildren(
-    ...weeks.map((w) =>
+    ...labels.map((label) =>
       el(
         'div',
         { class: 'week' },
-        el('h3', {}, `Week ${w}`),
+        el('h3', {}, label),
         ...items
-          .filter((i) => i.week === w)
+          .filter((i) => groupLabel(i) === label)
           .map((i) => {
             if (i.kind !== 'pattern') return browseRow(i);
             return el(

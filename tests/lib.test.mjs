@@ -92,6 +92,11 @@ test('buildQueue skips cards not yet due and items no longer present', () => {
   assert.deepEqual(q.map((c) => c.key), ['b:say', 'c:say', 'd:say']);
 });
 
+test('buildQueue introduces coach weeks before extra sets', () => {
+  const items = [{ id: 'v1', set: 'Verbs' }, { id: 'w1', week: 1 }, { id: 'v2', set: 'Verbs' }, { id: 'w2', week: 2 }];
+  assert.deepEqual(buildQueue(items, defaults(), NOW, 3).map((c) => c.id), ['w1', 'w2', 'v1']);
+});
+
 test('buildQueue counts new cards already introduced today against the limit', () => {
   const p = defaults();
   p.stats.newCount = { date: localDate(NOW), n: 2 };

@@ -56,6 +56,15 @@ class Validate(unittest.TestCase):
         errs = validate(DRINKS + [p])
         self.assertTrue(any("demonym" in e for e in errs), errs)
 
+    def test_set_instead_of_week(self):
+        item = {"id": "qu", "kind": "word", "set": "Verbs", "zh": "去", "pinyin": "qù", "en": "to go"}
+        self.assertEqual(validate([item]), [])
+        self.assertEqual(expand([item], root=Path("/nonexistent"))[0]["set"], "Verbs")
+
+    def test_needs_week_or_set(self):
+        errs = validate([{"id": "qu", "kind": "word", "zh": "去", "pinyin": "qù", "en": "to go"}])
+        self.assertTrue(any("week" in e for e in errs), errs)
+
     def test_bad_id(self):
         errs = validate([dict(DRINKS[0], id="Ka Fei")])
         self.assertTrue(any("id" in e for e in errs), errs)

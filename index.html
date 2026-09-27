@@ -51,6 +51,11 @@
           <div class="audio-row">
             <button class="audio-btn" id="play" aria-label="Play, then next voice">🔊 <span class="flag" id="voice-flag"></span></button>
             <button class="audio-btn" id="play-slow" aria-label="Play slowly">🐢</button>
+            <button class="audio-btn" id="rec" aria-label="Record yourself">🎙</button>
+          </div>
+          <div class="rec-row" id="rec-row" hidden>
+            <button class="secondary small-btn" id="rec-play">▶ Me, then native</button>
+            <button class="link small" id="rec-share">Share</button>
           </div>
         </div>
       </div>
@@ -119,6 +124,25 @@
       <div class="actions sticky"><button class="primary big" id="cv-next">Show</button></div>
     </section>
 
+    <section id="view-wish" class="view" hidden>
+      <div class="study-top">
+        <button class="link close" data-go="home" aria-label="Close">✕</button>
+        <h2>I wish I could say…</h2>
+      </div>
+      <p class="hint">Something you wanted to say today but couldn't? Write it in English. It comes back as a card with audio, usually the next morning.</p>
+      <textarea id="wish-text" rows="3" placeholder="e.g. Is this seat taken?"></textarea>
+      <input id="wish-where" class="token-input" placeholder="Where or with whom? (optional, helps get the tone right)">
+      <div class="button-row">
+        <select id="wish-deck">
+          <option value="mandarin">普通話 Mandarin</option>
+          <option value="cantonese">廣東話 Cantonese</option>
+        </select>
+        <button class="primary" id="wish-save">Save</button>
+      </div>
+      <p class="hint" id="wish-status"></p>
+      <div id="wish-list"></div>
+    </section>
+
     <section id="view-checkin" class="view" hidden>
       <div class="study-top">
         <button class="link close" data-go="home" aria-label="Close">✕</button>
@@ -131,6 +155,12 @@
         <button class="secondary" id="ci-share">Share…</button>
       </div>
       <p class="hint" id="ci-status"></p>
+      <h3>For your coach</h3>
+      <div id="ci-coach" class="coach-brief"></div>
+      <div class="button-row">
+        <button class="secondary" id="ci-coach-copy">Copy</button>
+        <button class="secondary" id="ci-coach-share">Share…</button>
+      </div>
     </section>
 
     <section id="view-browse" class="view" hidden>

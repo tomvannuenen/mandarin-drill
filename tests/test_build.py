@@ -112,6 +112,11 @@ class Expand(unittest.TestCase):
         out = {i["id"]: i for i in expand(items, root=Path("/nonexistent"))}
         self.assertEqual(out["bu-x"]["fills"][0]["roman"], "bú yào")
 
+    def test_situation_filled_per_fill(self):
+        he = dict(HE, situation="Someone asks what you like. ({drink})")
+        p = {o["id"]: o for o in expand(DRINKS + [he], root=Path("/nonexistent"))}["wo-xihuan-he-x"]
+        self.assertEqual(p["fills"][0]["situation"], "Someone asks what you like. (coffee)")
+
     def test_topic_and_mission_passed_through(self):
         p = {o["id"]: o for o in expand(DRINKS + [HE], root=Path("/nonexistent"))}["wo-xihuan-he-x"]
         self.assertEqual((p["topic"], p["mission"]), ("Food & drink", "Order a drink"))

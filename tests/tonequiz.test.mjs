@@ -43,6 +43,14 @@ test('scoreAnswer credits each syllable and adjacent pair', () => {
   assert.deepEqual(stats['3-1'], [0, 1]);
 });
 
+test('scoreAnswer records which tone was heard as which', () => {
+  const stats = {};
+  const confusions = {};
+  scoreAnswer(stats, 'xǐ-huān', 'xí-huān', confusions);
+  scoreAnswer(stats, 'mǎ', 'má', confusions);
+  assert.deepEqual(confusions, { '3>2': 2 });
+});
+
 test('candidates are single-word entries the learner has seen', () => {
   const items = [
     { id: 'kafei', kind: 'word', deck: 'mandarin', roman: 'kā-fēi', words: [{ zh: '咖啡' }], audio: {} },

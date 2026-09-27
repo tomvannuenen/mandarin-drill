@@ -1,5 +1,5 @@
 {
- "version": "1983d9f63f13",
+ "version": "4e68ccdd59d9",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -97,6 +97,7 @@
      "audio/cn-xiaoxiao/dajia-hao-slow.mp3"
     ]
    },
+   "situation": "You walk into a room of students and greet them all.",
    "topic": "Introducing yourself",
    "mission": "Open a class or meeting with 大家好"
   },
@@ -142,6 +143,7 @@
      "audio/cn-xiaoxiao/wo-jiao-slow.mp3"
     ]
    },
+   "situation": "Someone asks your name.",
    "note": "我是…… (wǒ shì…) = I am…",
    "topic": "Introducing yourself",
    "mission": "Tell someone your name in Mandarin"
@@ -183,6 +185,7 @@
      "audio/cn-xiaoxiao/xiexie-slow.mp3"
     ]
    },
+   "situation": "A colleague hands you a coffee.",
    "topic": "Small talk",
    "mission": "Thank a shop assistant or a colleague with 謝謝"
   },
@@ -238,6 +241,7 @@
      "audio/cn-xiaoxiao/hen-gaoxing-renshi-ni-slow.mp3"
     ]
    },
+   "situation": "You've just been introduced to someone new.",
    "topic": "Introducing yourself",
    "mission": "Say it to someone you meet for the first time"
   },
@@ -293,6 +297,7 @@
      "audio/cn-xiaoxiao/hen-gaoxing-renshi-dajia-slow.mp3"
     ]
    },
+   "situation": "You've just been introduced to a whole group.",
    "topic": "Introducing yourself",
    "mission": "Use it when you're introduced to a group"
   },
@@ -368,6 +373,7 @@
        "gloss": "the Netherlands"
       }
      ],
+     "situation": "Someone asks where you come from. (the Netherlands)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-laizi-x--helan.mp3",
@@ -413,6 +419,7 @@
        "gloss": "Japan"
       }
      ],
+     "situation": "Someone asks where you come from. (Japan)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-laizi-x--riben.mp3",
@@ -458,6 +465,7 @@
        "gloss": "Taiwan"
       }
      ],
+     "situation": "Someone asks where you come from. (Taiwan)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-laizi-x--taiwan.mp3",
@@ -503,6 +511,7 @@
        "gloss": "the UK"
       }
      ],
+     "situation": "Someone asks where you come from. (the UK)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-laizi-x--yingguo.mp3",
@@ -548,6 +557,7 @@
        "gloss": "the USA"
       }
      ],
+     "situation": "Someone asks where you come from. (the USA)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-laizi-x--meiguo.mp3",
@@ -593,6 +603,7 @@
        "gloss": "France"
       }
      ],
+     "situation": "Someone asks where you come from. (France)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-laizi-x--faguo.mp3",
@@ -638,6 +649,7 @@
        "gloss": "Germany"
       }
      ],
+     "situation": "Someone asks where you come from. (Germany)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-laizi-x--deguo.mp3",
@@ -683,6 +695,7 @@
        "gloss": "China"
       }
      ],
+     "situation": "Someone asks where you come from. (China)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-laizi-x--zhongguo.mp3",
@@ -728,6 +741,7 @@
        "gloss": "South Africa"
       }
      ],
+     "situation": "Someone asks where you come from. (South Africa)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-laizi-x--nanfei.mp3",
@@ -752,6 +766,7 @@
      }
     }
    ],
+   "situation": "Someone asks where you come from. (___)",
    "topic": "Introducing yourself",
    "mission": "Tell a colleague or taxi driver where you're from",
    "mine": "helan"
@@ -792,6 +807,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "Someone asks your nationality. (Dutch)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-shi-x-ren--helan.mp3",
@@ -842,6 +858,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "Someone asks your nationality. (Japanese)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-shi-x-ren--riben.mp3",
@@ -892,6 +909,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "Someone asks your nationality. (Taiwanese)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-shi-x-ren--taiwan.mp3",
@@ -942,6 +960,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "Someone asks your nationality. (British)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-shi-x-ren--yingguo.mp3",
@@ -992,6 +1011,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "Someone asks your nationality. (American)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-shi-x-ren--meiguo.mp3",
@@ -1042,6 +1062,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "Someone asks your nationality. (French)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-shi-x-ren--faguo.mp3",
@@ -1092,6 +1113,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "Someone asks your nationality. (German)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-shi-x-ren--deguo.mp3",
@@ -1142,6 +1164,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "Someone asks your nationality. (Chinese)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-shi-x-ren--zhongguo.mp3",
@@ -1192,6 +1215,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "Someone asks your nationality. (South African)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-shi-x-ren--nanfei.mp3",
@@ -1216,6 +1240,7 @@
      }
     }
    ],
+   "situation": "Someone asks your nationality. (___)",
    "note": "Country + 人 (rén, person) = nationality",
    "topic": "Introducing yourself",
    "mission": "When someone asks where you're from, answer in Mandarin",
@@ -1268,6 +1293,7 @@
      "audio/cn-xiaoxiao/wo-shi-laoshi-slow.mp3"
     ]
    },
+   "situation": "Someone asks what you do. You teach.",
    "topic": "Work & study"
   },
   {
@@ -1317,6 +1343,7 @@
      "audio/cn-xiaoxiao/wo-shi-jiaoshou-slow.mp3"
     ]
    },
+   "situation": "Someone asks what you do at the university.",
    "note": "我是 [subject] 教授 = I'm a professor of [subject]",
    "topic": "Work & study",
    "mission": "Tell someone off campus what you do"
@@ -1383,6 +1410,7 @@
      "audio/cn-xiaoxiao/wo-lai-zhongda-shouke-slow.mp3"
     ]
    },
+   "situation": "A taxi driver asks why you're in Hong Kong.",
    "topic": "Work & study",
    "mission": "Explain why you're in Hong Kong"
   },
@@ -1443,6 +1471,7 @@
      "audio/cn-xiaoxiao/wo-zai-zhongda-jiaoshu-slow.mp3"
     ]
    },
+   "situation": "Someone asks where you teach.",
    "note": "教 (jiāo) + course/subject = teach …; note jiāo here vs jiào in 教授",
    "topic": "Work & study",
    "mission": "Tell a Mandarin-speaking colleague where you teach"
@@ -1494,6 +1523,7 @@
      "audio/cn-xiaoxiao/zuijin-hao-ma-slow.mp3"
     ]
    },
+   "situation": "You bump into a colleague you haven't seen for a while.",
    "topic": "Small talk",
    "mission": "Greet a Mandarin-speaking colleague with it"
   },
@@ -1539,6 +1569,7 @@
      "audio/cn-xiaoxiao/zuijin-zenmeyang-slow.mp3"
     ]
    },
+   "situation": "You want to ask a friend how things are going.",
    "topic": "Small talk",
    "mission": "Ask a colleague how things are"
   },
@@ -1589,6 +1620,7 @@
      "audio/cn-xiaoxiao/zuijin-mang-shenme-slow.mp3"
     ]
    },
+   "situation": "You want to ask your coach what's been keeping them busy.",
    "topic": "Small talk",
    "mission": "Ask your coach what they've been busy with"
   },
@@ -1669,6 +1701,7 @@
        "gloss": "coffee"
       }
      ],
+     "situation": "Someone asks what you like to drink. (coffee)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xihuan-he-x--kafei.mp3",
@@ -1719,6 +1752,7 @@
        "gloss": "water"
       }
      ],
+     "situation": "Someone asks what you like to drink. (water)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xihuan-he-x--shui.mp3",
@@ -1769,6 +1803,7 @@
        "gloss": "milk tea"
       }
      ],
+     "situation": "Someone asks what you like to drink. (milk tea)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xihuan-he-x--naicha.mp3",
@@ -1819,6 +1854,7 @@
        "gloss": "wine"
       }
      ],
+     "situation": "Someone asks what you like to drink. (wine)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xihuan-he-x--putaojiu.mp3",
@@ -1869,6 +1905,7 @@
        "gloss": "beer"
       }
      ],
+     "situation": "Someone asks what you like to drink. (beer)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xihuan-he-x--pijiu.mp3",
@@ -1893,6 +1930,7 @@
      }
     }
    ],
+   "situation": "Someone asks what you like to drink. (___)",
    "topic": "Food & drink",
    "mission": "Tell someone what you like to drink"
   },
@@ -1948,6 +1986,7 @@
      "audio/cn-xiaoxiao/ni-xihuan-he-shenme-slow.mp3"
     ]
    },
+   "situation": "You're buying drinks and want to ask what the other person likes.",
    "topic": "Food & drink",
    "mission": "Ask someone what they like to drink"
   },
@@ -2167,6 +2206,7 @@
      "audio/cn-xiaoxiao/ni-xihuan-chi-shenme-slow.mp3"
     ]
    },
+   "situation": "You're choosing a restaurant with a colleague.",
    "topic": "Food & drink",
    "mission": "Ask a colleague at lunch what they like to eat"
   },
@@ -2288,6 +2328,7 @@
        "gloss": "spicy"
       }
      ],
+     "situation": "Someone asks what food you like. (spicy food)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xihuan-chi-x--la.mp3",
@@ -2338,6 +2379,7 @@
        "gloss": "mapo tofu"
       }
      ],
+     "situation": "Someone asks what food you like. (mapo tofu)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xihuan-chi-x--mapo-doufu.mp3",
@@ -2362,6 +2404,7 @@
      }
     }
    ],
+   "situation": "Someone asks what food you like. (___)",
    "topic": "Food & drink",
    "mission": "Tell someone at lunch what you like to eat"
   },
@@ -2417,6 +2460,7 @@
      "audio/cn-xiaoxiao/yao-bu-yao-la-slow.mp3"
     ]
    },
+   "situation": "You're ordering for a friend and want to check about chilli.",
    "topic": "Food & drink"
   },
   {
@@ -2456,6 +2500,7 @@
      "audio/cn-xiaoxiao/yidiandian-slow.mp3"
     ]
    },
+   "situation": "The waiter asks if you want it spicy. Only a little!",
    "topic": "Food & drink",
    "mission": "When asked if you want it spicy, answer 一點點"
   },
@@ -2496,6 +2541,7 @@
      "audio/cn-xiaoxiao/zhende-slow.mp3"
     ]
    },
+   "situation": "A colleague tells you something surprising.",
    "topic": "Small talk",
    "mission": "React with 真的？ when someone tells you something"
   },
@@ -2576,6 +2622,7 @@
        "gloss": "(question particle)"
       }
      ],
+     "situation": "You want to ask someone if they like the Netherlands.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/ni-xihuan-x-ma--helan.mp3",
@@ -2626,6 +2673,7 @@
        "gloss": "(question particle)"
       }
      ],
+     "situation": "You want to ask someone if they like Japan.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/ni-xihuan-x-ma--riben.mp3",
@@ -2676,6 +2724,7 @@
        "gloss": "(question particle)"
       }
      ],
+     "situation": "You want to ask someone if they like Taiwan.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/ni-xihuan-x-ma--taiwan.mp3",
@@ -2726,6 +2775,7 @@
        "gloss": "(question particle)"
       }
      ],
+     "situation": "You want to ask someone if they like the UK.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/ni-xihuan-x-ma--yingguo.mp3",
@@ -2776,6 +2826,7 @@
        "gloss": "(question particle)"
       }
      ],
+     "situation": "You want to ask someone if they like the USA.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/ni-xihuan-x-ma--meiguo.mp3",
@@ -2826,6 +2877,7 @@
        "gloss": "(question particle)"
       }
      ],
+     "situation": "You want to ask someone if they like France.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/ni-xihuan-x-ma--faguo.mp3",
@@ -2876,6 +2928,7 @@
        "gloss": "(question particle)"
       }
      ],
+     "situation": "You want to ask someone if they like Germany.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/ni-xihuan-x-ma--deguo.mp3",
@@ -2926,6 +2979,7 @@
        "gloss": "(question particle)"
       }
      ],
+     "situation": "You want to ask someone if they like China.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/ni-xihuan-x-ma--zhongguo.mp3",
@@ -2976,6 +3030,7 @@
        "gloss": "(question particle)"
       }
      ],
+     "situation": "You want to ask someone if they like South Africa.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/ni-xihuan-x-ma--nanfei.mp3",
@@ -3000,6 +3055,7 @@
      }
     }
    ],
+   "situation": "You want to ask someone if they like ___.",
    "topic": "Small talk",
    "mission": "Ask someone if they like a country they've visited"
   },
@@ -3044,6 +3100,7 @@
        "gloss": "coffee"
       }
      ],
+     "situation": "Someone offers you coffee, but you don't like it.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-bu-xihuan-he-x--kafei.mp3",
@@ -3099,6 +3156,7 @@
        "gloss": "water"
       }
      ],
+     "situation": "Someone offers you water, but you don't like it.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-bu-xihuan-he-x--shui.mp3",
@@ -3154,6 +3212,7 @@
        "gloss": "milk tea"
       }
      ],
+     "situation": "Someone offers you milk tea, but you don't like it.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-bu-xihuan-he-x--naicha.mp3",
@@ -3209,6 +3268,7 @@
        "gloss": "wine"
       }
      ],
+     "situation": "Someone offers you wine, but you don't like it.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-bu-xihuan-he-x--putaojiu.mp3",
@@ -3264,6 +3324,7 @@
        "gloss": "beer"
       }
      ],
+     "situation": "Someone offers you beer, but you don't like it.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-bu-xihuan-he-x--pijiu.mp3",
@@ -3288,6 +3349,7 @@
      }
     }
    ],
+   "situation": "Someone offers you ___, but you don't like it.",
    "topic": "Food & drink"
   },
   {
@@ -3331,6 +3393,7 @@
        "gloss": "spicy"
       }
      ],
+     "situation": "Someone offers you spicy food, but you don't like it.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-bu-xihuan-chi-x--la.mp3",
@@ -3386,6 +3449,7 @@
        "gloss": "mapo tofu"
       }
      ],
+     "situation": "Someone offers you mapo tofu, but you don't like it.",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-bu-xihuan-chi-x--mapo-doufu.mp3",
@@ -3410,6 +3474,7 @@
      }
     }
    ],
+   "situation": "Someone offers you ___, but you don't like it.",
    "topic": "Food & drink"
   },
   {
@@ -4404,6 +4469,7 @@
      "audio/cn-xiaoxiao/ni-jiao-shenme-mingzi-slow.mp3"
     ]
    },
+   "situation": "You meet a new student and want to know their name.",
    "topic": "Meeting people",
    "mission": "Ask a student their name"
   },
@@ -4459,6 +4525,7 @@
      "audio/cn-xiaoxiao/ni-shi-xuesheng-ma-slow.mp3"
     ]
    },
+   "situation": "Someone young is waiting outside your office.",
    "topic": "Meeting people",
    "mission": "Ask someone on campus if they're a student"
   },
@@ -4519,6 +4586,7 @@
      "audio/cn-xiaoxiao/ni-shi-nage-xi-de-slow.mp3"
     ]
    },
+   "situation": "You want to know a student's department.",
    "note": "系 xì = department (at a university)",
    "topic": "Meeting people",
    "mission": "Ask a student which department they're in"
@@ -4570,6 +4638,7 @@
      "audio/cn-xiaoxiao/ni-ji-nianji-slow.mp3"
     ]
    },
+   "situation": "You want to know what year a student is in.",
    "topic": "Meeting people",
    "mission": "Ask a student what year they're in"
   },
@@ -4620,6 +4689,7 @@
      "audio/cn-xiaoxiao/ni-du-shenme-slow.mp3"
     ]
    },
+   "situation": "You want to know what a student studies.",
    "note": "讀 dú = to study (a subject)",
    "topic": "Meeting people"
   },
@@ -4675,6 +4745,7 @@
      "audio/cn-xiaoxiao/ni-shi-nali-ren-slow.mp3"
     ]
    },
+   "situation": "You want to know where someone is from.",
    "topic": "Meeting people",
    "mission": "Ask someone where they're from"
   },
@@ -4735,6 +4806,7 @@
      "audio/cn-xiaoxiao/ni-de-yingwen-hen-hao-slow.mp3"
     ]
    },
+   "situation": "A student surprises you with excellent English.",
    "topic": "Meeting people",
    "mission": "Compliment a student's English"
   },
@@ -4785,6 +4857,7 @@
      "audio/cn-xiaoxiao/wo-ye-shi-slow.mp3"
     ]
    },
+   "situation": "Someone says they're new here too. Same for you!",
    "topic": "Meeting people",
    "mission": "Answer 我也是 when someone says something that's true for you too"
   },
@@ -4850,6 +4923,7 @@
      "audio/cn-xiaoxiao/wo-shi-xin-lai-de-jiaoshou-slow.mp3"
     ]
    },
+   "situation": "You introduce yourself at your first department meeting.",
    "topic": "Meeting people",
    "mission": "Introduce yourself to a new colleague"
   },
@@ -4905,6 +4979,7 @@
      "audio/cn-xiaoxiao/wo-gang-lai-xianggang-slow.mp3"
     ]
    },
+   "situation": "Someone asks how long you've been in Hong Kong. Not long!",
    "topic": "Meeting people"
   },
   {
@@ -4964,6 +5039,7 @@
      "audio/cn-xiaoxiao/ni-zai-xianggang-duojiu-le-slow.mp3"
     ]
    },
+   "situation": "You want to ask a colleague how long they've lived here.",
    "topic": "Meeting people",
    "mission": "Ask a colleague how long they've been in Hong Kong"
   },
@@ -5014,6 +5090,7 @@
      "audio/cn-xiaoxiao/wo-yanjiu-rengong-zhihui-slow.mp3"
     ]
    },
+   "situation": "Someone asks what your research is about.",
    "topic": "Work & study",
    "mission": "Tell someone what you research"
   },
@@ -5074,6 +5151,7 @@
      "audio/cn-xiaoxiao/wo-de-bangongshi-zai-zheli-slow.mp3"
     ]
    },
+   "situation": "You show a student where your office is.",
    "topic": "Work & study"
   },
   {
@@ -5138,6 +5216,7 @@
      "audio/cn-xiaoxiao/huanying-lai-shang-wo-de-ke-slow.mp3"
     ]
    },
+   "situation": "The first class of the semester starts.",
    "topic": "Work & study",
    "mission": "Welcome your students in Mandarin"
   },
@@ -5188,6 +5267,7 @@
      "audio/cn-xiaoxiao/you-wenti-ma-slow.mp3"
     ]
    },
+   "situation": "You've finished explaining and check with the class.",
    "topic": "Work & study",
    "mission": "Ask 有問題嗎？ at the end of a class"
   },
@@ -5233,6 +5313,7 @@
      "audio/cn-xiaoxiao/xiake-le-slow.mp3"
     ]
    },
+   "situation": "The lecture is over.",
    "topic": "Work & study",
    "mission": "End a class with 下課了"
   },
@@ -5273,6 +5354,7 @@
      "audio/cn-xiaoxiao/jiayou-slow.mp3"
     ]
    },
+   "situation": "A student is nervous before their presentation.",
    "topic": "Work & study",
    "mission": "Say 加油 to a student before an exam or presentation"
   },
@@ -5338,6 +5420,7 @@
      "audio/cn-xiaoxiao/wo-de-zhongwen-bu-tai-hao-slow.mp3"
     ]
    },
+   "situation": "Someone compliments your Chinese, but you're modest.",
    "topic": "Getting by",
    "mission": "Say it when someone switches to fast Mandarin"
   },
@@ -5393,6 +5476,7 @@
      "audio/cn-xiaoxiao/qing-shuo-man-yidian-slow.mp3"
     ]
    },
+   "situation": "Someone is speaking too fast for you.",
    "topic": "Getting by",
    "mission": "Ask someone to slow down in Mandarin"
   },
@@ -5448,6 +5532,7 @@
      "audio/cn-xiaoxiao/zhege-zhongwen-zenme-shuo-slow.mp3"
     ]
    },
+   "situation": "You point at an object and want its Chinese name.",
    "topic": "Getting by",
    "mission": "Point at something and ask how to say it"
   },
@@ -5508,6 +5593,7 @@
      "audio/cn-xiaoxiao/ni-keyi-jiao-wo-ma-slow.mp3"
     ]
    },
+   "situation": "You'd like a student to teach you a word.",
    "topic": "Getting by",
    "mission": "Ask a student to teach you a word"
   },
@@ -5573,6 +5659,7 @@
      "audio/cn-xiaoxiao/women-yiqi-qu-he-kafei-ba-slow.mp3"
     ]
    },
+   "situation": "You want to invite a colleague for coffee.",
    "note": "吧 ba at the end makes it a suggestion: let's…",
    "topic": "Meeting people",
    "mission": "Invite a colleague for coffee in Mandarin"
@@ -5629,6 +5716,7 @@
      "audio/cn-xiaoxiao/ni-you-kong-ma-slow.mp3"
     ]
    },
+   "situation": "You want to know if someone has time now.",
    "topic": "Meeting people"
   },
   {
@@ -5673,6 +5761,7 @@
      "audio/cn-xiaoxiao/mei-wenti-slow.mp3"
     ]
    },
+   "situation": "A student asks you for a small favour.",
    "topic": "Getting by",
    "mission": "Answer 沒問題 when someone asks for a favour"
   },
@@ -6827,6 +6916,7 @@
        "gloss": "the Netherlands"
       }
      ],
+     "situation": "Someone asks where you'd like to travel. (the Netherlands)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-qu-x--helan.mp3",
@@ -6877,6 +6967,7 @@
        "gloss": "Japan"
       }
      ],
+     "situation": "Someone asks where you'd like to travel. (Japan)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-qu-x--riben.mp3",
@@ -6927,6 +7018,7 @@
        "gloss": "Taiwan"
       }
      ],
+     "situation": "Someone asks where you'd like to travel. (Taiwan)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-qu-x--taiwan.mp3",
@@ -6977,6 +7069,7 @@
        "gloss": "the UK"
       }
      ],
+     "situation": "Someone asks where you'd like to travel. (the UK)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-qu-x--yingguo.mp3",
@@ -7027,6 +7120,7 @@
        "gloss": "the USA"
       }
      ],
+     "situation": "Someone asks where you'd like to travel. (the USA)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-qu-x--meiguo.mp3",
@@ -7077,6 +7171,7 @@
        "gloss": "France"
       }
      ],
+     "situation": "Someone asks where you'd like to travel. (France)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-qu-x--faguo.mp3",
@@ -7127,6 +7222,7 @@
        "gloss": "Germany"
       }
      ],
+     "situation": "Someone asks where you'd like to travel. (Germany)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-qu-x--deguo.mp3",
@@ -7177,6 +7273,7 @@
        "gloss": "China"
       }
      ],
+     "situation": "Someone asks where you'd like to travel. (China)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-qu-x--zhongguo.mp3",
@@ -7227,6 +7324,7 @@
        "gloss": "South Africa"
       }
      ],
+     "situation": "Someone asks where you'd like to travel. (South Africa)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-qu-x--nanfei.mp3",
@@ -7251,6 +7349,7 @@
      }
     }
    ],
+   "situation": "Someone asks where you'd like to travel. (___)",
    "topic": "Small talk",
    "mission": "Tell someone where you'd like to travel next"
   },
@@ -7290,6 +7389,7 @@
        "gloss": "coffee"
       }
      ],
+     "situation": "The waiter asks what you'd like to drink. (coffee)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-he-x--kafei.mp3",
@@ -7340,6 +7440,7 @@
        "gloss": "water"
       }
      ],
+     "situation": "The waiter asks what you'd like to drink. (water)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-he-x--shui.mp3",
@@ -7390,6 +7491,7 @@
        "gloss": "milk tea"
       }
      ],
+     "situation": "The waiter asks what you'd like to drink. (milk tea)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-he-x--naicha.mp3",
@@ -7440,6 +7542,7 @@
        "gloss": "wine"
       }
      ],
+     "situation": "The waiter asks what you'd like to drink. (wine)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-he-x--putaojiu.mp3",
@@ -7490,6 +7593,7 @@
        "gloss": "beer"
       }
      ],
+     "situation": "The waiter asks what you'd like to drink. (beer)",
      "audio": {
       "tw-yunjhe": [
        "audio/tw-yunjhe/wo-xiang-he-x--pijiu.mp3",
@@ -7514,6 +7618,7 @@
      }
     }
    ],
+   "situation": "The waiter asks what you'd like to drink. (___)",
    "note": "Polite way to order",
    "topic": "Food & drink",
    "mission": "Order a drink in Mandarin"
@@ -7565,6 +7670,7 @@
      "audio/cn-xiaoxiao/wo-bu-zhidao-slow.mp3"
     ]
    },
+   "situation": "Someone asks you something you have no idea about.",
    "topic": "Getting by"
   },
   {
@@ -7619,6 +7725,7 @@
      "audio/cn-xiaoxiao/wo-ting-bu-dong-slow.mp3"
     ]
    },
+   "situation": "Someone speaks fast Mandarin and you didn't catch it.",
    "note": "聽 listen + 不懂 not understand",
    "topic": "Getting by",
    "mission": "When you don't catch something, say it instead of switching to English"
@@ -7675,6 +7782,7 @@
      "audio/cn-xiaoxiao/qing-zai-shuo-yici-slow.mp3"
     ]
    },
+   "situation": "You almost understood, and want to hear it again.",
    "note": "請 qǐng = please; 再 zài = again",
    "topic": "Getting by",
    "mission": "Ask your coach or someone else to repeat something"
@@ -7736,6 +7844,7 @@
      "audio/cn-xiaoxiao/ni-hui-shuo-yingwen-ma-slow.mp3"
     ]
    },
+   "situation": "You're stuck and want to check if they speak English.",
    "topic": "Getting by"
   },
   {
@@ -7795,6 +7904,7 @@
      "audio/cn-xiaoxiao/wo-hui-shuo-yidiandian-zhongwen-slow.mp3"
     ]
    },
+   "situation": "Someone asks if you speak Chinese.",
    "topic": "Introducing yourself",
    "mission": "Tell a colleague you can speak a little Chinese"
   },
@@ -7850,6 +7960,7 @@
      "audio/cn-xiaoxiao/wo-zai-xue-zhongwen-slow.mp3"
     ]
    },
+   "situation": "Someone is surprised you know some Chinese.",
    "topic": "Introducing yourself",
    "mission": "Tell someone you're learning Chinese"
   },
@@ -7905,6 +8016,7 @@
      "audio/cn-xiaoxiao/wo-zhu-zai-xianggang-slow.mp3"
     ]
    },
+   "situation": "Someone asks where you live.",
    "topic": "Introducing yourself",
    "mission": "Tell someone where you live"
   },
@@ -7960,6 +8072,7 @@
      "audio/cn-xiaoxiao/ni-zai-nali-gongzuo-slow.mp3"
     ]
    },
+   "situation": "You want to know where the person you just met works.",
    "note": "哪裡 nǎlǐ = where",
    "topic": "Work & study",
    "mission": "Ask someone new where they work"
@@ -8021,6 +8134,7 @@
      "audio/cn-xiaoxiao/wo-zai-zhongda-gongzuo-slow.mp3"
     ]
    },
+   "situation": "Someone asks where you work.",
    "topic": "Work & study",
    "mission": "Tell someone where you work"
   },
@@ -8058,6 +8172,7 @@
      "audio/hk-hiugaai/yue-nei-hou-slow.mp3"
     ]
    },
+   "situation": "You greet the security guard.",
    "topic": "Small talk",
    "mission": "Greet the security guard or a shopkeeper with 你好"
   },
@@ -8090,6 +8205,7 @@
      "audio/hk-hiugaai/yue-zousan-slow.mp3"
     ]
    },
+   "situation": "It's 8 am and you see a colleague.",
    "topic": "Small talk",
    "mission": "Say 早晨 to someone before noon"
   },
@@ -8122,6 +8238,7 @@
      "audio/hk-hiugaai/yue-m-goi-slow.mp3"
     ]
    },
+   "situation": "Someone holds the lift door for you.",
    "note": "唔該 for help or service; 多謝 for gifts or compliments",
    "topic": "Getting by",
    "mission": "Say 唔該 when someone holds a door or hands you something"
@@ -8155,6 +8272,7 @@
      "audio/hk-hiugaai/yue-dozi-slow.mp3"
     ]
    },
+   "situation": "A colleague gives you a small gift.",
    "topic": "Small talk",
    "mission": "Thank someone for a gift or compliment with 多謝"
   },
@@ -8197,6 +8315,7 @@
      "audio/hk-hiugaai/yue-m-sai-haakhei-slow.mp3"
     ]
    },
+   "situation": "Someone thanks you for helping.",
    "topic": "Small talk"
   },
   {
@@ -8228,6 +8347,7 @@
      "audio/hk-hiugaai/yue-deoimzyu-slow.mp3"
     ]
    },
+   "situation": "You bump into someone.",
    "topic": "Getting by"
   },
   {
@@ -8269,6 +8389,7 @@
      "audio/hk-hiugaai/yue-m-hou-jisi-slow.mp3"
     ]
    },
+   "situation": "You need to squeeze past someone on the MTR.",
    "topic": "Getting by",
    "mission": "Say 唔好意思 to squeeze past someone on the MTR"
   },
@@ -8409,6 +8530,7 @@
      "audio/hk-hiugaai/yue-nei-hou-maa-slow.mp3"
     ]
    },
+   "situation": "You ask a friend how they are.",
    "topic": "Small talk"
   },
   {
@@ -8445,6 +8567,7 @@
      "audio/hk-hiugaai/yue-gei-hou-slow.mp3"
     ]
    },
+   "situation": "Someone asks how you are. You're fine.",
    "topic": "Small talk",
    "mission": "When someone asks how you are, answer 幾好"
   },
@@ -8477,6 +8600,7 @@
      "audio/hk-hiugaai/yue-baaibaai-slow.mp3"
     ]
    },
+   "situation": "You leave a shop.",
    "topic": "Small talk",
    "mission": "Say 拜拜 when you leave a shop"
   },
@@ -8514,6 +8638,7 @@
      "audio/hk-hiugaai/yue-tingjat-gin-slow.mp3"
     ]
    },
+   "situation": "You leave work and will see your colleague tomorrow.",
    "topic": "Small talk",
    "mission": "Say 聽日見 to a colleague when leaving"
   },
@@ -8734,6 +8859,7 @@
      "audio/hk-hiugaai/yue-ngo-giu-slow.mp3"
     ]
    },
+   "situation": "Someone asks your name.",
    "topic": "Introducing yourself"
   },
   {
@@ -8785,6 +8911,7 @@
      "audio/hk-hiugaai/yue-nei-giu-matje-meng-slow.mp3"
     ]
    },
+   "situation": "You want to know someone's name.",
    "note": "咩 me1 = what (Mandarin 什麼)",
    "topic": "Introducing yourself"
   },
@@ -9022,6 +9149,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "A taxi driver asks where you're from. (Dutch)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-hai-x-jan--yue-helan.mp3",
@@ -9064,6 +9192,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "A taxi driver asks where you're from. (Taiwanese)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-hai-x-jan--yue-toiwaan.mp3",
@@ -9106,6 +9235,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "A taxi driver asks where you're from. (Japanese)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-hai-x-jan--yue-jatbun.mp3",
@@ -9148,6 +9278,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "A taxi driver asks where you're from. (British)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-hai-x-jan--yue-jinggwok.mp3",
@@ -9190,6 +9321,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "A taxi driver asks where you're from. (American)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-hai-x-jan--yue-meigwok.mp3",
@@ -9232,6 +9364,7 @@
        "gloss": "person"
       }
      ],
+     "situation": "A taxi driver asks where you're from. (Chinese)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-hai-x-jan--yue-zunggwok.mp3",
@@ -9248,6 +9381,7 @@
      }
     }
    ],
+   "situation": "A taxi driver asks where you're from. (___)",
    "topic": "Introducing yourself",
    "mission": "Tell a taxi driver where you're from",
    "mine": "yue-helan"
@@ -9291,6 +9425,7 @@
      "audio/hk-hiugaai/yue-ngo-hai-lousi-slow.mp3"
     ]
    },
+   "situation": "Someone asks what you do. You teach.",
    "topic": "Work & study"
   },
   {
@@ -9332,6 +9467,7 @@
      "audio/hk-hiugaai/yue-ngo-hai-gaausau-slow.mp3"
     ]
    },
+   "situation": "Someone asks what you do at the university.",
    "topic": "Work & study"
   },
   {
@@ -9383,6 +9519,7 @@
      "audio/hk-hiugaai/yue-ngo-hai-zungman-daaihok-gaausyu-slow.mp3"
     ]
    },
+   "situation": "Someone asks where you teach.",
    "note": "喺 hai2 = at/in (Mandarin 在)",
    "topic": "Work & study",
    "mission": "Tell someone where you teach in Cantonese"
@@ -9431,6 +9568,7 @@
      "audio/hk-hiugaai/yue-ngo-zyu-hai-hoenggong-slow.mp3"
     ]
    },
+   "situation": "Someone asks where you live.",
    "topic": "Introducing yourself"
   },
   {
@@ -9482,6 +9620,7 @@
      "audio/hk-hiugaai/yue-ngo-m-sik-gong-slow.mp3"
     ]
    },
+   "situation": "A shopkeeper starts speaking fast Cantonese to you.",
    "note": "識 sik1 = know how to; 講 gong2 = speak",
    "topic": "Getting by",
    "mission": "Say it when someone starts speaking fast Cantonese to you"
@@ -9535,6 +9674,7 @@
      "audio/hk-hiugaai/yue-ngo-sik-gong-siusiu-slow.mp3"
     ]
    },
+   "situation": "Someone asks if you speak Cantonese.",
    "topic": "Getting by",
    "mission": "Surprise a colleague with it"
   },
@@ -9592,6 +9732,7 @@
      "audio/hk-hiugaai/yue-nei-sik-m-sik-gong-jingman-slow.mp3"
     ]
    },
+   "situation": "You're stuck and want to check if they speak English.",
    "note": "Questions often use verb + 唔 + verb: 識唔識 = can or can't?",
    "topic": "Getting by"
   },
@@ -9639,6 +9780,7 @@
      "audio/hk-hiugaai/yue-ngo-teng-m-ming-slow.mp3"
     ]
    },
+   "situation": "You didn't understand what was said.",
    "note": "聽 is teng1 in everyday speech",
    "topic": "Getting by"
   },
@@ -9686,6 +9828,7 @@
      "audio/hk-hiugaai/yue-m-goi-gong-do-ci-slow.mp3"
     ]
    },
+   "situation": "You want someone to repeat themselves.",
    "topic": "Getting by"
   },
   {
@@ -9951,6 +10094,7 @@
        "gloss": "coffee"
       }
      ],
+     "situation": "You order at a cha chaan teng. (coffee)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-jiu-x--yue-gaafe.mp3",
@@ -9988,6 +10132,7 @@
        "gloss": "milk tea"
       }
      ],
+     "situation": "You order at a cha chaan teng. (milk tea)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-jiu-x--yue-naaicaa.mp3",
@@ -10030,6 +10175,7 @@
        "gloss": "milk tea"
       }
      ],
+     "situation": "You order at a cha chaan teng. (iced milk tea)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-jiu-x--yue-dung-naaicaa.mp3",
@@ -10067,6 +10213,7 @@
        "gloss": "beer"
       }
      ],
+     "situation": "You order at a cha chaan teng. (beer)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-jiu-x--yue-bezau.mp3",
@@ -10104,6 +10251,7 @@
        "gloss": "water"
       }
      ],
+     "situation": "You order at a cha chaan teng. (water)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-jiu-x--yue-seoi.mp3",
@@ -10120,6 +10268,7 @@
      }
     }
    ],
+   "situation": "You order at a cha chaan teng. (___)",
    "note": "Ordering: 要 jiu3 = want",
    "topic": "Food & drink",
    "mission": "Order your drink in Cantonese at a café or cha chaan teng"
@@ -10160,6 +10309,7 @@
        "gloss": "coffee"
       }
      ],
+     "situation": "Someone asks what you like to drink. (coffee)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-gaafe.mp3",
@@ -10202,6 +10352,7 @@
        "gloss": "milk tea"
       }
      ],
+     "situation": "Someone asks what you like to drink. (milk tea)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-naaicaa.mp3",
@@ -10249,6 +10400,7 @@
        "gloss": "milk tea"
       }
      ],
+     "situation": "Someone asks what you like to drink. (iced milk tea)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-dung-naaicaa.mp3",
@@ -10291,6 +10443,7 @@
        "gloss": "beer"
       }
      ],
+     "situation": "Someone asks what you like to drink. (beer)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-bezau.mp3",
@@ -10333,6 +10486,7 @@
        "gloss": "water"
       }
      ],
+     "situation": "Someone asks what you like to drink. (water)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-seoi.mp3",
@@ -10349,6 +10503,7 @@
      }
     }
    ],
+   "situation": "Someone asks what you like to drink. (___)",
    "note": "鍾意 zung1ji3 = like (Mandarin 喜歡)",
    "topic": "Food & drink"
   },
@@ -10386,6 +10541,7 @@
      "audio/hk-hiugaai/yue-zau-bing-slow.mp3"
     ]
    },
+   "situation": "You want your cold drink without ice.",
    "topic": "Food & drink",
    "mission": "Order a cold drink 走冰"
   },
@@ -10423,6 +10579,7 @@
      "audio/hk-hiugaai/yue-siu-tim-slow.mp3"
     ]
    },
+   "situation": "Your milk tea is always too sweet.",
    "topic": "Food & drink",
    "mission": "Ask for your milk tea 少甜"
   },
@@ -10465,6 +10622,7 @@
      "audio/hk-hiugaai/yue-m-jiu-laat-slow.mp3"
     ]
    },
+   "situation": "You don't want chilli in your noodles.",
    "topic": "Food & drink"
   },
   {
@@ -10501,6 +10659,7 @@
      "audio/hk-hiugaai/yue-hou-sik-slow.mp3"
     ]
    },
+   "situation": "The staff ask how the food was.",
    "topic": "Food & drink",
    "mission": "Tell the staff 好食 after a meal"
   },
@@ -10538,6 +10697,7 @@
      "audio/hk-hiugaai/yue-gei-do-cin-slow.mp3"
     ]
    },
+   "situation": "You want to know the price at a market stall.",
    "topic": "Food & drink",
    "mission": "Ask 幾多錢？ at a market stall"
   },
@@ -10640,6 +10800,7 @@
      "audio/hk-hiugaai/yue-ngo-jiu-nigo-slow.mp3"
     ]
    },
+   "situation": "You point at the dish you want.",
    "topic": "Food & drink",
    "mission": "Point at something and say 我要呢個"
   },
@@ -10677,6 +10838,7 @@
      "audio/hk-hiugaai/yue-m-goi-maaidaan-slow.mp3"
     ]
    },
+   "situation": "You've finished eating and want to pay.",
    "topic": "Food & drink",
    "mission": "Ask for the bill in Cantonese"
   },
@@ -10714,6 +10876,7 @@
      "audio/hk-hiugaai/yue-hai-bindou-slow.mp3"
     ]
    },
+   "situation": "You're looking for something and ask where it is.",
    "note": "邊度 bin1dou6 = where (Mandarin 哪裡)",
    "topic": "Getting by"
   },
@@ -10756,6 +10919,7 @@
      "audio/hk-hiugaai/yue-saisaugaan-hai-bindou-slow.mp3"
     ]
    },
+   "situation": "You need the toilet.",
    "topic": "Getting by",
    "mission": "Ask where the toilet is in Cantonese"
   },
@@ -10793,6 +10957,7 @@
      "audio/hk-hiugaai/yue-jau-lok-slow.mp3"
     ]
    },
+   "situation": "Your stop is coming up on the minibus.",
    "note": "Call it out to the driver of a red or green minibus",
    "topic": "Getting by",
    "mission": "Call out 有落 on a minibus"
@@ -10894,6 +11059,7 @@
        "gloss": "the Netherlands"
       }
      ],
+     "situation": "Someone asks where you'd like to go. (the Netherlands)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-soeng-heoi-x--yue-helan.mp3",
@@ -10936,6 +11102,7 @@
        "gloss": "Taiwan"
       }
      ],
+     "situation": "Someone asks where you'd like to go. (Taiwan)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-soeng-heoi-x--yue-toiwaan.mp3",
@@ -10978,6 +11145,7 @@
        "gloss": "Japan"
       }
      ],
+     "situation": "Someone asks where you'd like to go. (Japan)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-soeng-heoi-x--yue-jatbun.mp3",
@@ -11020,6 +11188,7 @@
        "gloss": "the UK"
       }
      ],
+     "situation": "Someone asks where you'd like to go. (the UK)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-soeng-heoi-x--yue-jinggwok.mp3",
@@ -11062,6 +11231,7 @@
        "gloss": "the USA"
       }
      ],
+     "situation": "Someone asks where you'd like to go. (the USA)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-soeng-heoi-x--yue-meigwok.mp3",
@@ -11104,6 +11274,7 @@
        "gloss": "China"
       }
      ],
+     "situation": "Someone asks where you'd like to go. (China)",
      "audio": {
       "hk-wanlung": [
        "audio/hk-wanlung/yue-ngo-soeng-heoi-x--yue-zunggwok.mp3",
@@ -11120,6 +11291,7 @@
      }
     }
    ],
+   "situation": "Someone asks where you'd like to go. (___)",
    "topic": "Small talk"
   },
   {
@@ -11161,6 +11333,7 @@
      "audio/hk-hiugaai/yue-zou-me-aa-slow.mp3"
     ]
    },
+   "situation": "You greet a friend casually.",
    "topic": "Small talk"
   }
  ],

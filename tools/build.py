@@ -53,7 +53,7 @@ ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 SLOT_RE = re.compile(r"\{(\w+)(?::(\w+))?\}")
 # Characters OpenCC "corrects" that are standard everyday Traditional in Taiwan.
 ALLOWED_TRAD_VARIANTS = set("台")
-SHELL_FILES = ["index.html", "styles.css", "app.js", "ui.js", "book.js", "tonecheck.js", "convo.js", "manifest.webmanifest", "phrases.json"]
+SHELL_FILES = ["index.html", "styles.css", "app.js", "ui.js", "book.js", "tonecheck.js", "convo.js", "rec.js", "manifest.webmanifest", "phrases.json"]
 SHELL_GLOBS = ["lib/*.js", "vendor/*.js"]
 
 _cc = None
@@ -211,6 +211,7 @@ def expand(items, root=ROOT, deck="mandarin", glossary=None):
                     "roman": fill_roman,
                     "en": fill_en,
                     "words": _words(zh, fill_roman, fill_en, known, glossary, it.get("gloss", {})),
+                    **({"situation": _fill_en(it["situation"], f)} if it.get("situation") else {}),
                     "audio": _audio(f"{it['id']}--{f['id']}", deck, root),
                 })
         else:
@@ -219,7 +220,11 @@ def expand(items, root=ROOT, deck="mandarin", glossary=None):
             o["en"] = it["en"]
             o["words"] = _words(it["zh"], o["roman"], it["en"], known, glossary, it.get("gloss", {}))
             o["audio"] = _audio(it["id"], deck, root)
-        for k in ("note", "cat", "topic", "mission", "mine"):
+        if it["kind"] == "pattern" and "situation" in it:
+            o["situation"] = SLOT_RE.sub("___", it["situation"])
+        elif "situation" in it:
+            o["situation"] = it["situation"]
+        for k in ("note", "cat", "topic", "mission", "mine", "wish"):
             if k in it:
                 o[k] = it[k]
         out.append(o)

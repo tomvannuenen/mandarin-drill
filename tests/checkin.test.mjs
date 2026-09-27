@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 import { defaults, applyReview, LOG_LIMIT } from '../lib/store.js';
 import { grade } from '../lib/srs.js';
-import { weekSummary, checkinText } from '../lib/checkin.js';
+import { weekSummary, checkinText, coachBrief } from '../lib/checkin.js';
 
 const NOW = new Date(2026, 8, 26, 20);
 const DAY = 86400000;
@@ -26,6 +26,14 @@ test('applyReview keeps a capped answer log', () => {
   review(p, 'b', 3, ago(0));
   assert.equal(p.log.length, LOG_LIMIT);
   assert.deepEqual(p.log.at(-1).slice(1), ['b:say', 3]);
+});
+
+test('applyReview logs response time, voice, replays and lookups when given', () => {
+  const p = defaults();
+  applyReview(p, { id: 'a', type: 'say' }, 3, grade(null, 3, NOW), NOW, { ms: 4200, voice: 'tw-yunjhe', replays: 2, lookups: ['來自'], hint: true });
+  assert.deepEqual(p.log[0].slice(1), ['a:say', 3, 4200, 'tw-yunjhe', 2, ['來自'], 1]);
+  applyReview(p, { id: 'b', type: 'say' }, 3, grade(null, 3, NOW), NOW);
+  assert.deepEqual(p.log[1].slice(1), ['b:say', 3]);
 });
 
 test('weekSummary counts the last 7 days only', () => {
@@ -57,4 +65,20 @@ test('checkinText is a readable summary with the details Claude needs', () => {
   assert.match(text, /Coach week 2: 1\/2 solid/);
   assert.match(text, /我來自荷蘭 .*×1/);
   assert.match(text, /Trouble spots: 來自/);
+});
+
+test('coachBrief is written for the coach, in pinyin and English', () => {
+  const p = defaults();
+  review(p, 'a', 1, ago(1));
+  review(p, 'b', 3, ago(1));
+  p.weak['w/mandarin/來自'] = { score: 2, flags: 2 };
+  p.toneConfusions = { '2>3': 4, '4>1': 1 };
+  p.wishes = [{ id: 'wish-1', t: ago(2).getTime(), text: 'Is this seat taken?', where: 'lecture', deck: 'mandarin' }];
+  const glossOf = { 來自: { roman: 'lái-zì', gloss: 'to come from' } };
+  const brief = coachBrief(weekSummary(p, ITEMS, NOW), p, glossOf, NOW);
+  assert.match(brief, /practised 2 times/);
+  assert.match(brief, /láizì \(to come from\)/);
+  assert.match(brief, /2nd tone as a 3rd tone \(4×\)/);
+  assert.match(brief, /"Is this seat taken\?"/);
+  assert.doesNotMatch(brief, /4th tone as a 1st/); // single slips are noise
 });

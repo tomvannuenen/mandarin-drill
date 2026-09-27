@@ -57,7 +57,8 @@ function answer(opt) {
   if (round.q.answered) return;
   round.q.answered = true;
   const { w } = round.q;
-  const right = scoreAnswer(ctx.progress().tones, w.roman, opt);
+  const p = ctx.progress();
+  const right = scoreAnswer(p.tones, w.roman, opt, (p.toneConfusions ||= {}));
   ctx.persist();
   if (right) round.right += 1;
   for (const b of $('tq-options').children) {

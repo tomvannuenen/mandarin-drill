@@ -6,8 +6,11 @@ import { load, save, exportJSON, importJSON, applyReview, localDate } from './li
 import { initBook, renderBook } from './book.js';
 import { initTones, startTones, toneWords, toneBars } from './tonecheck.js';
 import { initConvo, startConvo, convoStatus } from './convo.js';
-import { weekSummary, checkinText } from './lib/checkin.js';
+import { weekSummary, checkinText, coachBrief } from './lib/checkin.js';
 import { applyPlan, planIsCurrent } from './lib/plan.js';
+import { level, hintText } from './lib/ladder.js';
+import { addWish, wishStatus } from './lib/wishes.js';
+import { canRecord, startRecording, stopRecording, isRecording, compare, share as shareRecording } from './rec.js';
 import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pullPlan, DEFAULT_REPO } from './lib/sync.js';
 import { drillId, flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
 import { weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from './lib/motivation.js';
@@ -168,13 +171,14 @@ function show(view) {
   applyReadingMode();
   for (const v of document.querySelectorAll('.view')) v.hidden = v.id !== `view-${view}`;
   for (const t of document.querySelectorAll('.tab')) t.classList.toggle('active', t.dataset.go === view);
-  document.body.classList.toggle('studying', ['study', 'tones', 'convo', 'checkin'].includes(view));
+  document.body.classList.toggle('studying', ['study', 'tones', 'convo', 'checkin', 'wish'].includes(view));
   renderDeckSwitch();
   if (view === 'home') renderHome();
   if (view === 'browse') renderBrowse();
   if (view === 'settings') renderSettings();
   if (view === 'book') renderBook();
   if (view === 'checkin') renderCheckin();
+  if (view === 'wish') renderWishes();
   window.scrollTo(0, 0);
 }
 
@@ -299,6 +303,17 @@ function renderDash(list, now) {
     ));
   }
 
+  // I wish I could say…
+  const wishes = wishStatus(progress, allItems);
+  const waiting = wishes.filter((w) => !w.item).length;
+  parts.push(dashCard(
+    'I wish I could say…',
+    el('p', { class: 'dash-line hint' }, wishes.length
+      ? `${wishes.length - waiting} turned into cards${waiting ? ` · ${waiting} waiting` : ''}`
+      : 'Missed a chance to say something today? Add it here and it becomes a card.'),
+    el('button', { class: 'secondary', 'data-go': 'wish' }, '＋ Add a phrase')
+  ));
+
   // Conversations
   const convos = conversations.filter((c) => c.deck === deck());
   if (convos.length) {
@@ -348,15 +363,26 @@ function contentFor(card) {
     const word = { zh: item.zh, roman: item.roman, gloss: item.gloss };
     const src = p.mode === 'gap' ? p.context : { words: [word], audio: item.audio || item.contexts[0]?.audio };
     return {
-      drill: p.mode, target: item.zh, context: p.context, zh: item.zh, en: item.gloss,
+      drill: p.mode, target: item.zh, context: p.context, zh: item.zh, en: item.gloss, roman: item.roman,
       words: src.words, audio: src.audio, voice: pickVoice(src), played: false, deck: item.deck, flagged: new Set(),
+      ...tracking(),
     };
   }
-  const src = item.kind === 'pattern' ? pickFill(item, progress) : item;
+  let src = item.kind === 'pattern' ? pickFill(item, progress) : item;
+  const lvl = card.type === 'say' ? level(progress, { id: item.id, situation: src.situation }, new Date()) : 'normal';
+  // A situation about you ("Someone asks where you're from") needs your own answer, not a random fill.
+  if (lvl === 'situation' && item.mine) src = item.fills.find((f) => f.fillId === item.mine) || src;
   return {
-    zh: src.zh, roman: src.roman, en: src.en, words: src.words, audio: src.audio,
+    zh: src.zh, roman: src.roman, en: src.en, words: src.words, audio: src.audio, situation: src.situation,
     voice: pickVoice(src), played: false, note: item.note, deck: item.deck, flagged: new Set(),
+    level: lvl,
+    ...tracking(),
   };
+}
+
+// What the app quietly notices while a card is up; logged with the grade.
+function tracking() {
+  return { shownAt: performance.now(), revealMs: null, replays: 0, lookups: new Set(), hint: false };
 }
 
 function showFlag() {
@@ -371,6 +397,7 @@ function playCurrent({ slow = false, next = false } = {}) {
   const c = session?.current?.c;
   if (!c) return;
   if (next && c.played) c.voice = nextVoice(c, c.voice);
+  if (c.played) c.replays += 1;
   c.played = true;
   showFlag();
   play(c.audio[c.voice][slow ? 1 : 0]);
@@ -396,6 +423,7 @@ function renderWords(c) {
         gloss.hidden = wasActive;
         if (wasActive) return;
         btn.classList.add('active');
+        c.lookups.add(w.zh);
         const parts = [el('b', { lang }, w.zh), ` = ${w.gloss}`];
         if (multi) {
           const miss = el('button', { class: `miss${c.flagged.has(w.zh) ? ' on' : ''}` }, c.flagged.has(w.zh) ? '✗ Missed' : 'I missed this');
@@ -415,6 +443,16 @@ function renderWords(c) {
   );
 }
 
+// A small button that reveals a hint (first letters of the pinyin by default) and records that it was used.
+function hintButton(c, label = '💡 Hint', text = () => hintText(c.roman, c.deck)) {
+  const b = el('button', { class: 'hint-btn' }, label);
+  b.addEventListener('click', () => {
+    c.hint = true;
+    b.replaceWith(el('p', { class: 'hint-line' }, text()));
+  });
+  return b;
+}
+
 function promptFor(card, c) {
   const lang = LANG_ATTR[c.deck];
   if (c.drill === 'gap') {
@@ -430,8 +468,23 @@ function promptFor(card, c) {
     }
     return parts;
   }
-  if (c.drill === 'word') return [el('p', { class: 'prompt-en' }, c.en), el('p', { class: 'hint' }, 'one word')];
-  if (card.type === 'say') return [el('p', { class: 'prompt-en' }, c.en)];
+  if (c.drill === 'word') return [el('p', { class: 'prompt-en' }, c.en), el('p', { class: 'hint' }, 'one word'), hintButton(c)];
+  if (card.type === 'say') {
+    if (c.level === 'situation') {
+      return [el('p', { class: 'prompt-situation' }, c.situation), hintButton(c, 'Show the English', () => c.en)];
+    }
+    if (c.level === 'speed') {
+      return [el('p', { class: 'prompt-en' }, c.en), el('div', { class: 'speed-bar' }, el('div', { class: 'speed-fill' }))];
+    }
+    const parts = [el('p', { class: 'prompt-en' }, c.en)];
+    if (c.level === 'hint') {
+      c.hint = true;
+      parts.push(el('p', { class: 'hint-line' }, hintText(c.roman, c.deck)));
+    } else {
+      parts.push(hintButton(c));
+    }
+    return parts;
+  }
   if (card.type === 'read') return [el('p', { class: 'prompt-zh', lang }, c.zh)];
   return [
     el('button', { class: 'prompt-audio audio-btn', 'aria-label': 'Play, then next voice', onclick: () => playCurrent({ next: true }) }, '🔊'),
@@ -455,14 +508,19 @@ function showCard() {
 
   $('card-kind').textContent = c.drill
     ? 'Trouble spot'
+    : c.level === 'situation' ? `What would you say? (${LANG_NAME[c.deck]})`
+    : c.level === 'speed' ? 'Speed round: say it before the bar runs out'
     : { say: `Say it in ${LANG_NAME[c.deck]}`, listen: 'What does this mean?', read: 'Read it aloud' }[card.type];
   $('prompt').replaceChildren(...promptFor(card, c));
   if (!c.drill && card.type === 'listen') playCurrent();
 
   renderWords(c);
   showFlag();
+  $('rec').hidden = !canRecord();
+  $('rec').textContent = '🎙';
+  $('rec-row').hidden = true;
   $('a-en').textContent = c.en;
-  $('a-en').hidden = card.type === 'say'; // already shown as the prompt (drills are say cards too)
+  $('a-en').hidden = card.type === 'say' && c.level !== 'situation'; // already shown as the prompt (drills are say cards too)
   $('a-note').textContent = c.note || '';
   $('a-note').hidden = !c.note;
   $('answer').hidden = true;
@@ -476,6 +534,7 @@ function showCard() {
 
 function reveal() {
   if (!session || !$('answer').hidden) return;
+  session.current.c.revealMs = Math.round(performance.now() - session.current.c.shownAt);
   $('answer').hidden = false;
   $('reveal').hidden = true;
   $('grades').hidden = false;
@@ -487,7 +546,9 @@ function rate(rating) {
   const { card, c } = session.current;
   const now = new Date();
   const state = grade(progress.cards[card.key] || null, rating, now);
-  applyReview(progress, card, rating, state, now);
+  applyReview(progress, card, rating, state, now, {
+    ms: c.revealMs, voice: c.voice, replays: c.replays, lookups: [...c.lookups], hint: c.hint,
+  });
   if (rating >= 3) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words.filter((w) => !c.flagged.has(w.zh)), now);
   for (const zh of c.flagged) {
     // A newly missed word gets a practice card straight away, shown again later in this session.
@@ -529,6 +590,38 @@ function renderCheckin() {
   };
   $('ci-share').hidden = !navigator.share;
   $('ci-share').onclick = () => navigator.share({ title: '說 weekly check-in', text }).catch(() => {});
+
+  const glossOf = {};
+  for (const i of allItems) for (const e of i.fills || [i]) for (const w of e.words || []) glossOf[w.zh] ||= { roman: w.roman, gloss: w.gloss };
+  const brief = (planIsCurrent(plan, now) && plan.coachNote) || coachBrief(weekSummary(progress, allItems, now), progress, glossOf, now);
+  $('ci-coach').textContent = brief;
+  $('ci-coach-copy').onclick = () => navigator.clipboard.writeText(brief).then(() => { $('ci-status').textContent = 'Coach notes copied.'; }).catch(() => {});
+  $('ci-coach-share').hidden = !navigator.share;
+  $('ci-coach-share').onclick = () => navigator.share({ title: 'Notes for my Chinese lesson', text: brief }).catch(() => {});
+}
+
+// ---------- I wish I could say…
+
+function renderWishes() {
+  $('wish-deck').value = deck();
+  $('wish-list').replaceChildren(...wishStatus(progress, allItems).map((w) =>
+    el('div', { class: `wish${w.item ? ' ready' : ''}` },
+      el('p', { class: 'wish-text' }, `"${w.text}"`, w.where ? el('span', { class: 'hint' }, ` · ${w.where}`) : ''),
+      w.item
+        ? sayLine(w.item, w.item.deck)
+        : el('p', { class: 'hint' }, 'Waiting: becomes a card in the next daily update.'))));
+}
+
+function saveWish() {
+  const w = addWish(progress, $('wish-text').value, $('wish-where').value, $('wish-deck').value, new Date());
+  if (!w) return;
+  persist();
+  syncDirty = true;
+  syncNow();
+  $('wish-text').value = '';
+  $('wish-where').value = '';
+  $('wish-status').textContent = syncCfg ? 'Saved. Claude will pick it up.' : 'Saved on this phone. Connect sync in Settings so Claude can see it.';
+  renderWishes();
 }
 
 // ---------- browse
@@ -664,6 +757,36 @@ function wire() {
   $('lesson-day').addEventListener('change', (e) => {
     progress.settings.lessonDay = e.target.value === '' ? null : Number(e.target.value);
     persist();
+  });
+  $('wish-save').addEventListener('click', saveWish);
+  $('rec').addEventListener('click', async () => {
+    const c = session?.current?.c;
+    if (!c) return;
+    try {
+      if (!isRecording()) {
+        await startRecording();
+        $('rec').textContent = '⏹';
+        $('rec').classList.add('recording');
+        return;
+      }
+      c.recording = await stopRecording();
+      $('rec').textContent = '🎙';
+      $('rec').classList.remove('recording');
+      $('rec-row').hidden = false;
+      $('rec-share').hidden = !navigator.canShare;
+      compare(c.recording, c.audio[c.voice][0]);
+    } catch {
+      $('rec').textContent = '🎙';
+      $('rec').classList.remove('recording');
+    }
+  });
+  $('rec-play').addEventListener('click', () => {
+    const c = session?.current?.c;
+    if (c?.recording) compare(c.recording, c.audio[c.voice][0]);
+  });
+  $('rec-share').addEventListener('click', () => {
+    const c = session?.current?.c;
+    if (c?.recording) shareRecording(c.recording, `me-${c.roman.replace(/[^a-z]/gi, '').slice(0, 20)}`).catch(() => {});
   });
   $('export').addEventListener('click', exportProgress);
   $('import').addEventListener('change', importProgress);

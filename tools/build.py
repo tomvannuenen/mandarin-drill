@@ -53,7 +53,7 @@ ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 SLOT_RE = re.compile(r"\{(\w+)(?::(\w+))?\}")
 # Characters OpenCC "corrects" that are standard everyday Traditional in Taiwan.
 ALLOWED_TRAD_VARIANTS = set("台")
-SHELL_FILES = ["index.html", "styles.css", "app.js", "book.js", "manifest.webmanifest", "phrases.json"]
+SHELL_FILES = ["index.html", "styles.css", "app.js", "ui.js", "book.js", "tonecheck.js", "convo.js", "manifest.webmanifest", "phrases.json"]
 SHELL_GLOBS = ["lib/*.js", "vendor/*.js"]
 
 _cc = None
@@ -124,6 +124,8 @@ def validate(items, deck="mandarin"):
             except ValueError as e:
                 errs.append(f"{iid}: {e}")
             continue
+        if it.get("mine") and it["mine"] not in {f["id"] for f in _fillers(items, _slots(it["zh"])[0][0] if _slots(it["zh"]) else "")}:
+            errs.append(f"{iid}: 'mine' must be one of the pattern's fill words")
         cats = {c for c, _ in _slots(it["zh"])}
         if len(cats) != 1:
             errs.append(f"{iid}: pattern must use exactly one slot category, found {sorted(cats)}")
@@ -217,11 +219,36 @@ def expand(items, root=ROOT, deck="mandarin", glossary=None):
             o["en"] = it["en"]
             o["words"] = _words(it["zh"], o["roman"], it["en"], known, glossary, it.get("gloss", {}))
             o["audio"] = _audio(it["id"], deck, root)
-        for k in ("note", "cat", "topic", "mission"):
+        for k in ("note", "cat", "topic", "mission", "mine"):
             if k in it:
                 o[k] = it[k]
         out.append(o)
     return out
+
+
+def validate_conversations(convos, out_items):
+    """Conversations are scripts over existing items: [{id, title, deck, turns: [{who, ref, fill?}]}]."""
+    by_key = {(o["deck"], o["id"]): o for o in out_items}
+    errs, seen = [], set()
+    for c in convos:
+        cid = c.get("id", "?")
+        if cid in seen:
+            errs.append(f"conversation {cid}: duplicate id")
+        seen.add(cid)
+        if c.get("deck") not in DECKS or not c.get("title") or not c.get("turns"):
+            errs.append(f"conversation {cid}: needs a title, a deck ({'/'.join(DECKS)}) and turns")
+            continue
+        for n, t in enumerate(c["turns"], 1):
+            where = f"conversation {cid} turn {n}"
+            if t.get("who") not in ("them", "you"):
+                errs.append(f"{where}: who must be 'them' or 'you'")
+            item = by_key.get((c["deck"], t.get("ref")))
+            if not item:
+                errs.append(f"{where}: no {c['deck']} item {t.get('ref')!r}")
+            elif item["kind"] == "pattern":
+                if t.get("fill") not in {f["fillId"] for f in item["fills"]}:
+                    errs.append(f"{where}: pattern {item['id']} needs a valid fill (got {t.get('fill')!r})")
+    return errs
 
 
 def audio_jobs(out_items):
@@ -307,13 +334,23 @@ def main(argv):
         for e in errs:
             print("  -", e)
         return 1
+    convo_file = ROOT / "data" / "conversations.json"
+    convos = json.loads(convo_file.read_text())["conversations"] if convo_file.exists() else []
+    errs = validate_conversations(convos, out)
+    if errs:
+        print(f"{len(errs)} error(s):")
+        for e in errs:
+            print("  -", e)
+        return 1
     used = {v for o in out for e in (o.get("fills") or [o]) for v in e["audio"]}
     voices = {v: {k: VOICES[v][k] for k in ("flag", "name")} for v in VOICES if v in used}
     if "coach" in used:
         voices["coach"] = COACH
     decks = {d: {"label": c["label"], "voices": c["voices"]} for d, c in DECKS.items()}
     body = json.dumps([out, voices], ensure_ascii=False, sort_keys=True)
-    doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "voices": voices, "decks": decks, "items": out}
+    body += json.dumps(convos, ensure_ascii=False, sort_keys=True)
+    doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "voices": voices, "decks": decks, "items": out,
+           "conversations": convos}
     (ROOT / "phrases.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
     made, failed = ([], []) if no_audio else generate_audio(audio_jobs(out), ROOT, force_ids=force)
     stamp_service_worker(ROOT)

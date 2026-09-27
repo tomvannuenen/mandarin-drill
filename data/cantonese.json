@@ -28,7 +28,7 @@
     {"id": "yue-jinggwok", "kind": "word", "set": "About me", "zh": "英國", "jyutping": "jing1-gwok3", "en": "the UK", "demonym": "British", "cat": ["country"]},
     {"id": "yue-meigwok", "kind": "word", "set": "About me", "zh": "美國", "jyutping": "mei5-gwok3", "en": "the USA", "demonym": "American", "cat": ["country"]},
     {"id": "yue-zunggwok", "kind": "word", "set": "About me", "zh": "中國", "jyutping": "zung1-gwok3", "en": "China", "demonym": "Chinese", "cat": ["country"]},
-    {"id": "yue-ngo-hai-x-jan", "kind": "pattern", "set": "About me", "zh": "我係{country}人", "jyutping": "ngo5 hai6 {country} jan4", "en": "I am {country:demonym}", "topic": "Introducing yourself", "mission": "Tell a taxi driver where you're from"},
+    {"id": "yue-ngo-hai-x-jan", "kind": "pattern", "set": "About me", "zh": "我係{country}人", "jyutping": "ngo5 hai6 {country} jan4", "en": "I am {country:demonym}", "topic": "Introducing yourself", "mission": "Tell a taxi driver where you're from", "mine": "yue-helan"},
     {"id": "yue-ngo-hai-lousi", "kind": "phrase", "set": "About me", "zh": "我係老師", "jyutping": "ngo5 hai6 lou5-si1", "en": "I am a teacher", "topic": "Work & study"},
     {"id": "yue-ngo-hai-gaausau", "kind": "phrase", "set": "About me", "zh": "我係教授", "jyutping": "ngo5 hai6 gaau3-sau6", "en": "I am a professor", "topic": "Work & study"},
     {"id": "yue-ngo-hai-zungman-daaihok-gaausyu", "kind": "phrase", "set": "About me", "zh": "我喺中文大學教書", "jyutping": "ngo5 hai2 Zung1-man4 Daai6-hok6 gaau3-syu1", "en": "I teach at the Chinese University", "note": "喺 hai2 = at/in (Mandarin 在)", "topic": "Work & study", "mission": "Tell someone where you teach in Cantonese"},

@@ -1,5 +1,5 @@
 {
- "version": "b7a89728c780",
+ "version": "1983d9f63f13",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -753,7 +753,8 @@
     }
    ],
    "topic": "Introducing yourself",
-   "mission": "Tell a colleague or taxi driver where you're from"
+   "mission": "Tell a colleague or taxi driver where you're from",
+   "mine": "helan"
   },
   {
    "id": "wo-shi-x-ren",
@@ -1217,7 +1218,8 @@
    ],
    "note": "Country + 人 (rén, person) = nationality",
    "topic": "Introducing yourself",
-   "mission": "When someone asks where you're from, answer in Mandarin"
+   "mission": "When someone asks where you're from, answer in Mandarin",
+   "mine": "helan"
   },
   {
    "id": "wo-shi-laoshi",
@@ -4349,6 +4351,1330 @@
      "audio/cn-xiaoxiao/rengong-zhihui-slow.mp3"
     ]
    }
+  },
+  {
+   "id": "ni-jiao-shenme-mingzi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "你叫什麼名字？",
+   "roman": "nǐ jiào shé-me míng-zì?",
+   "en": "What's your name?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "叫",
+     "roman": "jiào",
+     "gloss": "to be called; to call"
+    },
+    {
+     "zh": "什麼",
+     "roman": "shé-me",
+     "gloss": "what"
+    },
+    {
+     "zh": "名字",
+     "roman": "míng-zì",
+     "gloss": "name"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-jiao-shenme-mingzi.mp3",
+     "audio/tw-yunjhe/ni-jiao-shenme-mingzi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-jiao-shenme-mingzi.mp3",
+     "audio/tw-hsiaochen/ni-jiao-shenme-mingzi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-jiao-shenme-mingzi.mp3",
+     "audio/tw-hsiaoyu/ni-jiao-shenme-mingzi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-jiao-shenme-mingzi.mp3",
+     "audio/cn-yunyang/ni-jiao-shenme-mingzi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-jiao-shenme-mingzi.mp3",
+     "audio/cn-xiaoxiao/ni-jiao-shenme-mingzi-slow.mp3"
+    ]
+   },
+   "topic": "Meeting people",
+   "mission": "Ask a student their name"
+  },
+  {
+   "id": "ni-shi-xuesheng-ma",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "你是學生嗎？",
+   "roman": "nǐ shì xué-shēng ma?",
+   "en": "Are you a student?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "是",
+     "roman": "shì",
+     "gloss": "is / am / are"
+    },
+    {
+     "zh": "學生",
+     "roman": "xué-shēng",
+     "gloss": "student"
+    },
+    {
+     "zh": "嗎",
+     "roman": "ma",
+     "gloss": "(question particle)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-shi-xuesheng-ma.mp3",
+     "audio/tw-yunjhe/ni-shi-xuesheng-ma-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-shi-xuesheng-ma.mp3",
+     "audio/tw-hsiaochen/ni-shi-xuesheng-ma-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-shi-xuesheng-ma.mp3",
+     "audio/tw-hsiaoyu/ni-shi-xuesheng-ma-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-shi-xuesheng-ma.mp3",
+     "audio/cn-yunyang/ni-shi-xuesheng-ma-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-shi-xuesheng-ma.mp3",
+     "audio/cn-xiaoxiao/ni-shi-xuesheng-ma-slow.mp3"
+    ]
+   },
+   "topic": "Meeting people",
+   "mission": "Ask someone on campus if they're a student"
+  },
+  {
+   "id": "ni-shi-nage-xi-de",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "你是哪個系的？",
+   "roman": "nǐ shì nǎ-ge xì de?",
+   "en": "Which department are you in?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "是",
+     "roman": "shì",
+     "gloss": "is / am / are"
+    },
+    {
+     "zh": "哪個",
+     "roman": "nǎ-ge",
+     "gloss": "which"
+    },
+    {
+     "zh": "系",
+     "roman": "xì",
+     "gloss": "department"
+    },
+    {
+     "zh": "的",
+     "roman": "de",
+     "gloss": "(possessive / 'the one that…')"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-shi-nage-xi-de.mp3",
+     "audio/tw-yunjhe/ni-shi-nage-xi-de-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-shi-nage-xi-de.mp3",
+     "audio/tw-hsiaochen/ni-shi-nage-xi-de-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-shi-nage-xi-de.mp3",
+     "audio/tw-hsiaoyu/ni-shi-nage-xi-de-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-shi-nage-xi-de.mp3",
+     "audio/cn-yunyang/ni-shi-nage-xi-de-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-shi-nage-xi-de.mp3",
+     "audio/cn-xiaoxiao/ni-shi-nage-xi-de-slow.mp3"
+    ]
+   },
+   "note": "系 xì = department (at a university)",
+   "topic": "Meeting people",
+   "mission": "Ask a student which department they're in"
+  },
+  {
+   "id": "ni-ji-nianji",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "你幾年級？",
+   "roman": "nǐ jǐ nián-jí?",
+   "en": "What year are you in?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "幾",
+     "roman": "jǐ",
+     "gloss": "how many"
+    },
+    {
+     "zh": "年級",
+     "roman": "nián-jí",
+     "gloss": "year (at school)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-ji-nianji.mp3",
+     "audio/tw-yunjhe/ni-ji-nianji-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-ji-nianji.mp3",
+     "audio/tw-hsiaochen/ni-ji-nianji-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-ji-nianji.mp3",
+     "audio/tw-hsiaoyu/ni-ji-nianji-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-ji-nianji.mp3",
+     "audio/cn-yunyang/ni-ji-nianji-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-ji-nianji.mp3",
+     "audio/cn-xiaoxiao/ni-ji-nianji-slow.mp3"
+    ]
+   },
+   "topic": "Meeting people",
+   "mission": "Ask a student what year they're in"
+  },
+  {
+   "id": "ni-du-shenme",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "你讀什麼？",
+   "roman": "nǐ dú shé-me?",
+   "en": "What do you study?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "讀",
+     "roman": "dú",
+     "gloss": "to read (aloud); to study"
+    },
+    {
+     "zh": "什麼",
+     "roman": "shé-me",
+     "gloss": "what"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-du-shenme.mp3",
+     "audio/tw-yunjhe/ni-du-shenme-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-du-shenme.mp3",
+     "audio/tw-hsiaochen/ni-du-shenme-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-du-shenme.mp3",
+     "audio/tw-hsiaoyu/ni-du-shenme-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-du-shenme.mp3",
+     "audio/cn-yunyang/ni-du-shenme-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-du-shenme.mp3",
+     "audio/cn-xiaoxiao/ni-du-shenme-slow.mp3"
+    ]
+   },
+   "note": "讀 dú = to study (a subject)",
+   "topic": "Meeting people"
+  },
+  {
+   "id": "ni-shi-nali-ren",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "你是哪裡人？",
+   "roman": "nǐ shì nǎ-lǐ rén?",
+   "en": "Where are you from?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "是",
+     "roman": "shì",
+     "gloss": "is / am / are"
+    },
+    {
+     "zh": "哪裡",
+     "roman": "nǎ-lǐ",
+     "gloss": "where"
+    },
+    {
+     "zh": "人",
+     "roman": "rén",
+     "gloss": "person"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-shi-nali-ren.mp3",
+     "audio/tw-yunjhe/ni-shi-nali-ren-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-shi-nali-ren.mp3",
+     "audio/tw-hsiaochen/ni-shi-nali-ren-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-shi-nali-ren.mp3",
+     "audio/tw-hsiaoyu/ni-shi-nali-ren-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-shi-nali-ren.mp3",
+     "audio/cn-yunyang/ni-shi-nali-ren-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-shi-nali-ren.mp3",
+     "audio/cn-xiaoxiao/ni-shi-nali-ren-slow.mp3"
+    ]
+   },
+   "topic": "Meeting people",
+   "mission": "Ask someone where they're from"
+  },
+  {
+   "id": "ni-de-yingwen-hen-hao",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "你的英文很好",
+   "roman": "nǐ de Yīng-wén hěn hǎo",
+   "en": "Your English is very good",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "的",
+     "roman": "de",
+     "gloss": "(possessive / 'the one that…')"
+    },
+    {
+     "zh": "英文",
+     "roman": "Yīng-wén",
+     "gloss": "English (language)"
+    },
+    {
+     "zh": "很",
+     "roman": "hěn",
+     "gloss": "very"
+    },
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-de-yingwen-hen-hao.mp3",
+     "audio/tw-yunjhe/ni-de-yingwen-hen-hao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-de-yingwen-hen-hao.mp3",
+     "audio/tw-hsiaochen/ni-de-yingwen-hen-hao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-de-yingwen-hen-hao.mp3",
+     "audio/tw-hsiaoyu/ni-de-yingwen-hen-hao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-de-yingwen-hen-hao.mp3",
+     "audio/cn-yunyang/ni-de-yingwen-hen-hao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-de-yingwen-hen-hao.mp3",
+     "audio/cn-xiaoxiao/ni-de-yingwen-hen-hao-slow.mp3"
+    ]
+   },
+   "topic": "Meeting people",
+   "mission": "Compliment a student's English"
+  },
+  {
+   "id": "wo-ye-shi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "我也是",
+   "roman": "wǒ yě shì",
+   "en": "Me too",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "也",
+     "roman": "yě",
+     "gloss": "also, too"
+    },
+    {
+     "zh": "是",
+     "roman": "shì",
+     "gloss": "is / am / are"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-ye-shi.mp3",
+     "audio/tw-yunjhe/wo-ye-shi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-ye-shi.mp3",
+     "audio/tw-hsiaochen/wo-ye-shi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-ye-shi.mp3",
+     "audio/tw-hsiaoyu/wo-ye-shi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-ye-shi.mp3",
+     "audio/cn-yunyang/wo-ye-shi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-ye-shi.mp3",
+     "audio/cn-xiaoxiao/wo-ye-shi-slow.mp3"
+    ]
+   },
+   "topic": "Meeting people",
+   "mission": "Answer 我也是 when someone says something that's true for you too"
+  },
+  {
+   "id": "wo-shi-xin-lai-de-jiaoshou",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "我是新來的教授",
+   "roman": "wǒ shì xīn lái de jiào-shòu",
+   "en": "I'm a new professor here",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "是",
+     "roman": "shì",
+     "gloss": "is / am / are"
+    },
+    {
+     "zh": "新",
+     "roman": "xīn",
+     "gloss": "new"
+    },
+    {
+     "zh": "來",
+     "roman": "lái",
+     "gloss": "to come"
+    },
+    {
+     "zh": "的",
+     "roman": "de",
+     "gloss": "(possessive / 'the one that…')"
+    },
+    {
+     "zh": "教授",
+     "roman": "jiào-shòu",
+     "gloss": "professor"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-shi-xin-lai-de-jiaoshou.mp3",
+     "audio/tw-yunjhe/wo-shi-xin-lai-de-jiaoshou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-shi-xin-lai-de-jiaoshou.mp3",
+     "audio/tw-hsiaochen/wo-shi-xin-lai-de-jiaoshou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-shi-xin-lai-de-jiaoshou.mp3",
+     "audio/tw-hsiaoyu/wo-shi-xin-lai-de-jiaoshou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-shi-xin-lai-de-jiaoshou.mp3",
+     "audio/cn-yunyang/wo-shi-xin-lai-de-jiaoshou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-shi-xin-lai-de-jiaoshou.mp3",
+     "audio/cn-xiaoxiao/wo-shi-xin-lai-de-jiaoshou-slow.mp3"
+    ]
+   },
+   "topic": "Meeting people",
+   "mission": "Introduce yourself to a new colleague"
+  },
+  {
+   "id": "wo-gang-lai-xianggang",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "我剛來香港",
+   "roman": "wǒ gāng lái Xiāng-gǎng",
+   "en": "I've just come to Hong Kong",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "剛",
+     "roman": "gāng",
+     "gloss": "just (now)"
+    },
+    {
+     "zh": "來",
+     "roman": "lái",
+     "gloss": "to come"
+    },
+    {
+     "zh": "香港",
+     "roman": "Xiāng-gǎng",
+     "gloss": "Hong Kong"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-gang-lai-xianggang.mp3",
+     "audio/tw-yunjhe/wo-gang-lai-xianggang-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-gang-lai-xianggang.mp3",
+     "audio/tw-hsiaochen/wo-gang-lai-xianggang-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-gang-lai-xianggang.mp3",
+     "audio/tw-hsiaoyu/wo-gang-lai-xianggang-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-gang-lai-xianggang.mp3",
+     "audio/cn-yunyang/wo-gang-lai-xianggang-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-gang-lai-xianggang.mp3",
+     "audio/cn-xiaoxiao/wo-gang-lai-xianggang-slow.mp3"
+    ]
+   },
+   "topic": "Meeting people"
+  },
+  {
+   "id": "ni-zai-xianggang-duojiu-le",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "你在香港多久了？",
+   "roman": "nǐ zài Xiāng-gǎng duō-jiǔ le?",
+   "en": "How long have you been in Hong Kong?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "在",
+     "roman": "zài",
+     "gloss": "to be at / in"
+    },
+    {
+     "zh": "香港",
+     "roman": "Xiāng-gǎng",
+     "gloss": "Hong Kong"
+    },
+    {
+     "zh": "多久",
+     "roman": "duō-jiǔ",
+     "gloss": "how long"
+    },
+    {
+     "zh": "了",
+     "roman": "le",
+     "gloss": "(marks a change / completion)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-zai-xianggang-duojiu-le.mp3",
+     "audio/tw-yunjhe/ni-zai-xianggang-duojiu-le-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-zai-xianggang-duojiu-le.mp3",
+     "audio/tw-hsiaochen/ni-zai-xianggang-duojiu-le-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-zai-xianggang-duojiu-le.mp3",
+     "audio/tw-hsiaoyu/ni-zai-xianggang-duojiu-le-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-zai-xianggang-duojiu-le.mp3",
+     "audio/cn-yunyang/ni-zai-xianggang-duojiu-le-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-zai-xianggang-duojiu-le.mp3",
+     "audio/cn-xiaoxiao/ni-zai-xianggang-duojiu-le-slow.mp3"
+    ]
+   },
+   "topic": "Meeting people",
+   "mission": "Ask a colleague how long they've been in Hong Kong"
+  },
+  {
+   "id": "wo-yanjiu-rengong-zhihui",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "我研究人工智慧",
+   "roman": "wǒ yán-jiù rén-gōng-zhì-huì",
+   "en": "I do research on AI",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "研究",
+     "roman": "yán-jiù",
+     "gloss": "to research"
+    },
+    {
+     "zh": "人工智慧",
+     "roman": "rén-gōng-zhì-huì",
+     "gloss": "AI (artificial intelligence)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-yanjiu-rengong-zhihui.mp3",
+     "audio/tw-yunjhe/wo-yanjiu-rengong-zhihui-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-yanjiu-rengong-zhihui.mp3",
+     "audio/tw-hsiaochen/wo-yanjiu-rengong-zhihui-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-yanjiu-rengong-zhihui.mp3",
+     "audio/tw-hsiaoyu/wo-yanjiu-rengong-zhihui-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-yanjiu-rengong-zhihui.mp3",
+     "audio/cn-yunyang/wo-yanjiu-rengong-zhihui-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-yanjiu-rengong-zhihui.mp3",
+     "audio/cn-xiaoxiao/wo-yanjiu-rengong-zhihui-slow.mp3"
+    ]
+   },
+   "topic": "Work & study",
+   "mission": "Tell someone what you research"
+  },
+  {
+   "id": "wo-de-bangongshi-zai-zheli",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "我的辦公室在這裡",
+   "roman": "wǒ de bàn-gōng-shì zài zhè-lǐ",
+   "en": "My office is here",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "的",
+     "roman": "de",
+     "gloss": "(possessive / 'the one that…')"
+    },
+    {
+     "zh": "辦公室",
+     "roman": "bàn-gōng-shì",
+     "gloss": "office"
+    },
+    {
+     "zh": "在",
+     "roman": "zài",
+     "gloss": "to be at / in"
+    },
+    {
+     "zh": "這裡",
+     "roman": "zhè-lǐ",
+     "gloss": "here"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-de-bangongshi-zai-zheli.mp3",
+     "audio/tw-yunjhe/wo-de-bangongshi-zai-zheli-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-de-bangongshi-zai-zheli.mp3",
+     "audio/tw-hsiaochen/wo-de-bangongshi-zai-zheli-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-de-bangongshi-zai-zheli.mp3",
+     "audio/tw-hsiaoyu/wo-de-bangongshi-zai-zheli-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-de-bangongshi-zai-zheli.mp3",
+     "audio/cn-yunyang/wo-de-bangongshi-zai-zheli-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-de-bangongshi-zai-zheli.mp3",
+     "audio/cn-xiaoxiao/wo-de-bangongshi-zai-zheli-slow.mp3"
+    ]
+   },
+   "topic": "Work & study"
+  },
+  {
+   "id": "huanying-lai-shang-wo-de-ke",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "歡迎來上我的課",
+   "roman": "huān-yíng lái shàng wǒ de kè",
+   "en": "Welcome to my class",
+   "words": [
+    {
+     "zh": "歡迎",
+     "roman": "huān-yíng",
+     "gloss": "welcome"
+    },
+    {
+     "zh": "來",
+     "roman": "lái",
+     "gloss": "to come"
+    },
+    {
+     "zh": "上",
+     "roman": "shàng",
+     "gloss": "to attend (a class)"
+    },
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "的",
+     "roman": "de",
+     "gloss": "(possessive / 'the one that…')"
+    },
+    {
+     "zh": "課",
+     "roman": "kè",
+     "gloss": "class, lesson"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/huanying-lai-shang-wo-de-ke.mp3",
+     "audio/tw-yunjhe/huanying-lai-shang-wo-de-ke-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/huanying-lai-shang-wo-de-ke.mp3",
+     "audio/tw-hsiaochen/huanying-lai-shang-wo-de-ke-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/huanying-lai-shang-wo-de-ke.mp3",
+     "audio/tw-hsiaoyu/huanying-lai-shang-wo-de-ke-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/huanying-lai-shang-wo-de-ke.mp3",
+     "audio/cn-yunyang/huanying-lai-shang-wo-de-ke-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/huanying-lai-shang-wo-de-ke.mp3",
+     "audio/cn-xiaoxiao/huanying-lai-shang-wo-de-ke-slow.mp3"
+    ]
+   },
+   "topic": "Work & study",
+   "mission": "Welcome your students in Mandarin"
+  },
+  {
+   "id": "you-wenti-ma",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "有問題嗎？",
+   "roman": "yǒu wèn-tí ma?",
+   "en": "Any questions?",
+   "words": [
+    {
+     "zh": "有",
+     "roman": "yǒu",
+     "gloss": "to have; there is"
+    },
+    {
+     "zh": "問題",
+     "roman": "wèn-tí",
+     "gloss": "question; problem"
+    },
+    {
+     "zh": "嗎",
+     "roman": "ma",
+     "gloss": "(question particle)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/you-wenti-ma.mp3",
+     "audio/tw-yunjhe/you-wenti-ma-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/you-wenti-ma.mp3",
+     "audio/tw-hsiaochen/you-wenti-ma-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/you-wenti-ma.mp3",
+     "audio/tw-hsiaoyu/you-wenti-ma-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/you-wenti-ma.mp3",
+     "audio/cn-yunyang/you-wenti-ma-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/you-wenti-ma.mp3",
+     "audio/cn-xiaoxiao/you-wenti-ma-slow.mp3"
+    ]
+   },
+   "topic": "Work & study",
+   "mission": "Ask 有問題嗎？ at the end of a class"
+  },
+  {
+   "id": "xiake-le",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "下課了",
+   "roman": "xià-kè le",
+   "en": "Class is over",
+   "words": [
+    {
+     "zh": "下課",
+     "roman": "xià-kè",
+     "gloss": "class ends"
+    },
+    {
+     "zh": "了",
+     "roman": "le",
+     "gloss": "(marks a change / completion)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/xiake-le.mp3",
+     "audio/tw-yunjhe/xiake-le-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/xiake-le.mp3",
+     "audio/tw-hsiaochen/xiake-le-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/xiake-le.mp3",
+     "audio/tw-hsiaoyu/xiake-le-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/xiake-le.mp3",
+     "audio/cn-yunyang/xiake-le-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/xiake-le.mp3",
+     "audio/cn-xiaoxiao/xiake-le-slow.mp3"
+    ]
+   },
+   "topic": "Work & study",
+   "mission": "End a class with 下課了"
+  },
+  {
+   "id": "jiayou",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "加油！",
+   "roman": "jiā-yóu!",
+   "en": "Good luck! You can do it!",
+   "words": [
+    {
+     "zh": "加油",
+     "roman": "jiā-yóu",
+     "gloss": "Good luck! You can do it!"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/jiayou.mp3",
+     "audio/tw-yunjhe/jiayou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/jiayou.mp3",
+     "audio/tw-hsiaochen/jiayou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/jiayou.mp3",
+     "audio/tw-hsiaoyu/jiayou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/jiayou.mp3",
+     "audio/cn-yunyang/jiayou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/jiayou.mp3",
+     "audio/cn-xiaoxiao/jiayou-slow.mp3"
+    ]
+   },
+   "topic": "Work & study",
+   "mission": "Say 加油 to a student before an exam or presentation"
+  },
+  {
+   "id": "wo-de-zhongwen-bu-tai-hao",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "我的中文不太好",
+   "roman": "wǒ de Zhōng-wén bú tài hǎo",
+   "en": "My Chinese isn't very good",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "的",
+     "roman": "de",
+     "gloss": "(possessive / 'the one that…')"
+    },
+    {
+     "zh": "中文",
+     "roman": "Zhōng-wén",
+     "gloss": "Chinese (language)"
+    },
+    {
+     "zh": "不",
+     "roman": "bú",
+     "gloss": "not"
+    },
+    {
+     "zh": "太",
+     "roman": "tài",
+     "gloss": "too; very (不太 = not very)"
+    },
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-de-zhongwen-bu-tai-hao.mp3",
+     "audio/tw-yunjhe/wo-de-zhongwen-bu-tai-hao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-de-zhongwen-bu-tai-hao.mp3",
+     "audio/tw-hsiaochen/wo-de-zhongwen-bu-tai-hao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-de-zhongwen-bu-tai-hao.mp3",
+     "audio/tw-hsiaoyu/wo-de-zhongwen-bu-tai-hao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-de-zhongwen-bu-tai-hao.mp3",
+     "audio/cn-yunyang/wo-de-zhongwen-bu-tai-hao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-de-zhongwen-bu-tai-hao.mp3",
+     "audio/cn-xiaoxiao/wo-de-zhongwen-bu-tai-hao-slow.mp3"
+    ]
+   },
+   "topic": "Getting by",
+   "mission": "Say it when someone switches to fast Mandarin"
+  },
+  {
+   "id": "qing-shuo-man-yidian",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "請說慢一點",
+   "roman": "qǐng shuō màn yì-diǎn",
+   "en": "Please speak a bit more slowly",
+   "words": [
+    {
+     "zh": "請",
+     "roman": "qǐng",
+     "gloss": "please"
+    },
+    {
+     "zh": "說",
+     "roman": "shuō",
+     "gloss": "to speak, say"
+    },
+    {
+     "zh": "慢",
+     "roman": "màn",
+     "gloss": "slow(ly)"
+    },
+    {
+     "zh": "一點",
+     "roman": "yì-diǎn",
+     "gloss": "a little"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/qing-shuo-man-yidian.mp3",
+     "audio/tw-yunjhe/qing-shuo-man-yidian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/qing-shuo-man-yidian.mp3",
+     "audio/tw-hsiaochen/qing-shuo-man-yidian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/qing-shuo-man-yidian.mp3",
+     "audio/tw-hsiaoyu/qing-shuo-man-yidian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/qing-shuo-man-yidian.mp3",
+     "audio/cn-yunyang/qing-shuo-man-yidian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/qing-shuo-man-yidian.mp3",
+     "audio/cn-xiaoxiao/qing-shuo-man-yidian-slow.mp3"
+    ]
+   },
+   "topic": "Getting by",
+   "mission": "Ask someone to slow down in Mandarin"
+  },
+  {
+   "id": "zhege-zhongwen-zenme-shuo",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "這個中文怎麼說？",
+   "roman": "zhè-ge Zhōng-wén zěn-me shuō?",
+   "en": "How do you say this in Chinese?",
+   "words": [
+    {
+     "zh": "這個",
+     "roman": "zhè-ge",
+     "gloss": "this"
+    },
+    {
+     "zh": "中文",
+     "roman": "Zhōng-wén",
+     "gloss": "Chinese (language)"
+    },
+    {
+     "zh": "怎麼",
+     "roman": "zěn-me",
+     "gloss": "how"
+    },
+    {
+     "zh": "說",
+     "roman": "shuō",
+     "gloss": "to speak, say"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhege-zhongwen-zenme-shuo.mp3",
+     "audio/tw-yunjhe/zhege-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhege-zhongwen-zenme-shuo.mp3",
+     "audio/tw-hsiaochen/zhege-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhege-zhongwen-zenme-shuo.mp3",
+     "audio/tw-hsiaoyu/zhege-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhege-zhongwen-zenme-shuo.mp3",
+     "audio/cn-yunyang/zhege-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhege-zhongwen-zenme-shuo.mp3",
+     "audio/cn-xiaoxiao/zhege-zhongwen-zenme-shuo-slow.mp3"
+    ]
+   },
+   "topic": "Getting by",
+   "mission": "Point at something and ask how to say it"
+  },
+  {
+   "id": "ni-keyi-jiao-wo-ma",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "你可以教我嗎？",
+   "roman": "nǐ kě-yǐ jiāo wǒ ma?",
+   "en": "Can you teach me?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "可以",
+     "roman": "kě-yǐ",
+     "gloss": "can, may"
+    },
+    {
+     "zh": "教",
+     "roman": "jiāo",
+     "gloss": "to teach"
+    },
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "嗎",
+     "roman": "ma",
+     "gloss": "(question particle)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-keyi-jiao-wo-ma.mp3",
+     "audio/tw-yunjhe/ni-keyi-jiao-wo-ma-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-keyi-jiao-wo-ma.mp3",
+     "audio/tw-hsiaochen/ni-keyi-jiao-wo-ma-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-keyi-jiao-wo-ma.mp3",
+     "audio/tw-hsiaoyu/ni-keyi-jiao-wo-ma-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-keyi-jiao-wo-ma.mp3",
+     "audio/cn-yunyang/ni-keyi-jiao-wo-ma-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-keyi-jiao-wo-ma.mp3",
+     "audio/cn-xiaoxiao/ni-keyi-jiao-wo-ma-slow.mp3"
+    ]
+   },
+   "topic": "Getting by",
+   "mission": "Ask a student to teach you a word"
+  },
+  {
+   "id": "women-yiqi-qu-he-kafei-ba",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "我們一起去喝咖啡吧",
+   "roman": "wǒ-men yì-qǐ qù hē kā-fēi ba",
+   "en": "Let's go for a coffee together",
+   "words": [
+    {
+     "zh": "我們",
+     "roman": "wǒ-men",
+     "gloss": "we, us"
+    },
+    {
+     "zh": "一起",
+     "roman": "yì-qǐ",
+     "gloss": "together"
+    },
+    {
+     "zh": "去",
+     "roman": "qù",
+     "gloss": "to go"
+    },
+    {
+     "zh": "喝",
+     "roman": "hē",
+     "gloss": "to drink"
+    },
+    {
+     "zh": "咖啡",
+     "roman": "kā-fēi",
+     "gloss": "coffee"
+    },
+    {
+     "zh": "吧",
+     "roman": "ba",
+     "gloss": "(suggestion: let's…)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/women-yiqi-qu-he-kafei-ba.mp3",
+     "audio/tw-yunjhe/women-yiqi-qu-he-kafei-ba-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/women-yiqi-qu-he-kafei-ba.mp3",
+     "audio/tw-hsiaochen/women-yiqi-qu-he-kafei-ba-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/women-yiqi-qu-he-kafei-ba.mp3",
+     "audio/tw-hsiaoyu/women-yiqi-qu-he-kafei-ba-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/women-yiqi-qu-he-kafei-ba.mp3",
+     "audio/cn-yunyang/women-yiqi-qu-he-kafei-ba-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/women-yiqi-qu-he-kafei-ba.mp3",
+     "audio/cn-xiaoxiao/women-yiqi-qu-he-kafei-ba-slow.mp3"
+    ]
+   },
+   "note": "吧 ba at the end makes it a suggestion: let's…",
+   "topic": "Meeting people",
+   "mission": "Invite a colleague for coffee in Mandarin"
+  },
+  {
+   "id": "ni-you-kong-ma",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "你有空嗎？",
+   "roman": "nǐ yǒu kòng ma?",
+   "en": "Are you free?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "有",
+     "roman": "yǒu",
+     "gloss": "to have; there is"
+    },
+    {
+     "zh": "空",
+     "roman": "kòng",
+     "gloss": "free time"
+    },
+    {
+     "zh": "嗎",
+     "roman": "ma",
+     "gloss": "(question particle)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-you-kong-ma.mp3",
+     "audio/tw-yunjhe/ni-you-kong-ma-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-you-kong-ma.mp3",
+     "audio/tw-hsiaochen/ni-you-kong-ma-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-you-kong-ma.mp3",
+     "audio/tw-hsiaoyu/ni-you-kong-ma-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-you-kong-ma.mp3",
+     "audio/cn-yunyang/ni-you-kong-ma-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-you-kong-ma.mp3",
+     "audio/cn-xiaoxiao/ni-you-kong-ma-slow.mp3"
+    ]
+   },
+   "topic": "Meeting people"
+  },
+  {
+   "id": "mei-wenti",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Meeting people at CUHK",
+   "zh": "沒問題",
+   "roman": "méi wèn-tí",
+   "en": "No problem",
+   "words": [
+    {
+     "zh": "沒",
+     "roman": "méi",
+     "gloss": "not (沒問題 = no problem)"
+    },
+    {
+     "zh": "問題",
+     "roman": "wèn-tí",
+     "gloss": "question; problem"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/mei-wenti.mp3",
+     "audio/tw-yunjhe/mei-wenti-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/mei-wenti.mp3",
+     "audio/tw-hsiaochen/mei-wenti-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/mei-wenti.mp3",
+     "audio/tw-hsiaoyu/mei-wenti-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/mei-wenti.mp3",
+     "audio/cn-yunyang/mei-wenti-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/mei-wenti.mp3",
+     "audio/cn-xiaoxiao/mei-wenti-slow.mp3"
+    ]
+   },
+   "topic": "Getting by",
+   "mission": "Answer 沒問題 when someone asks for a favour"
   },
   {
    "id": "qu",
@@ -7923,7 +9249,8 @@
     }
    ],
    "topic": "Introducing yourself",
-   "mission": "Tell a taxi driver where you're from"
+   "mission": "Tell a taxi driver where you're from",
+   "mine": "yue-helan"
   },
   {
    "id": "yue-ngo-hai-lousi",
@@ -9835,6 +11162,378 @@
     ]
    },
    "topic": "Small talk"
+  }
+ ],
+ "conversations": [
+  {
+   "id": "meet-student",
+   "title": "Meeting a student",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "you",
+     "ref": "ni-jiao-shenme-mingzi"
+    },
+    {
+     "who": "them",
+     "ref": "wo-jiao"
+    },
+    {
+     "who": "you",
+     "ref": "ni-shi-xuesheng-ma"
+    },
+    {
+     "who": "you",
+     "ref": "ni-shi-nage-xi-de"
+    },
+    {
+     "who": "them",
+     "ref": "ni-shi-nali-ren"
+    },
+    {
+     "who": "you",
+     "ref": "wo-shi-x-ren",
+     "fill": "helan"
+    },
+    {
+     "who": "them",
+     "ref": "zhende"
+    },
+    {
+     "who": "you",
+     "ref": "wo-gang-lai-xianggang"
+    },
+    {
+     "who": "them",
+     "ref": "hen-gaoxing-renshi-ni"
+    },
+    {
+     "who": "you",
+     "ref": "wo-ye-shi"
+    }
+   ]
+  },
+  {
+   "id": "new-colleague",
+   "title": "A new colleague",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "ni-jiao-shenme-mingzi"
+    },
+    {
+     "who": "you",
+     "ref": "wo-jiao"
+    },
+    {
+     "who": "you",
+     "ref": "wo-shi-xin-lai-de-jiaoshou"
+    },
+    {
+     "who": "them",
+     "ref": "ni-shi-nali-ren"
+    },
+    {
+     "who": "you",
+     "ref": "wo-laizi-x",
+     "fill": "helan"
+    },
+    {
+     "who": "them",
+     "ref": "ni-zai-xianggang-duojiu-le"
+    },
+    {
+     "who": "you",
+     "ref": "wo-gang-lai-xianggang"
+    },
+    {
+     "who": "you",
+     "ref": "wo-yanjiu-rengong-zhihui"
+    },
+    {
+     "who": "them",
+     "ref": "zhende"
+    },
+    {
+     "who": "you",
+     "ref": "women-yiqi-qu-he-kafei-ba"
+    },
+    {
+     "who": "them",
+     "ref": "mei-wenti"
+    }
+   ]
+  },
+  {
+   "id": "coffee-break",
+   "title": "Coffee break",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "zuijin-mang-shenme"
+    },
+    {
+     "who": "you",
+     "ref": "wo-zai-xue-zhongwen"
+    },
+    {
+     "who": "them",
+     "ref": "zhende"
+    },
+    {
+     "who": "you",
+     "ref": "wo-hui-shuo-yidiandian-zhongwen"
+    },
+    {
+     "who": "them",
+     "ref": "ni-xihuan-he-shenme"
+    },
+    {
+     "who": "you",
+     "ref": "wo-xihuan-he-x",
+     "fill": "kafei"
+    },
+    {
+     "who": "them",
+     "ref": "women-yiqi-qu-he-kafei-ba"
+    },
+    {
+     "who": "you",
+     "ref": "mei-wenti"
+    }
+   ]
+  },
+  {
+   "id": "first-class",
+   "title": "Your first class",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "you",
+     "ref": "dajia-hao"
+    },
+    {
+     "who": "you",
+     "ref": "wo-jiao"
+    },
+    {
+     "who": "you",
+     "ref": "wo-shi-xin-lai-de-jiaoshou"
+    },
+    {
+     "who": "you",
+     "ref": "huanying-lai-shang-wo-de-ke"
+    },
+    {
+     "who": "you",
+     "ref": "you-wenti-ma"
+    },
+    {
+     "who": "them",
+     "ref": "qing-zai-shuo-yici"
+    },
+    {
+     "who": "you",
+     "ref": "mei-wenti"
+    },
+    {
+     "who": "you",
+     "ref": "xiake-le"
+    },
+    {
+     "who": "you",
+     "ref": "jiayou"
+    }
+   ]
+  },
+  {
+   "id": "not-understanding",
+   "title": "When you don't understand",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "zuijin-zenmeyang"
+    },
+    {
+     "who": "you",
+     "ref": "wo-ting-bu-dong"
+    },
+    {
+     "who": "you",
+     "ref": "qing-shuo-man-yidian"
+    },
+    {
+     "who": "them",
+     "ref": "zuijin-zenmeyang"
+    },
+    {
+     "who": "you",
+     "ref": "wo-de-zhongwen-bu-tai-hao"
+    },
+    {
+     "who": "you",
+     "ref": "ni-hui-shuo-yingwen-ma"
+    },
+    {
+     "who": "them",
+     "ref": "yidiandian"
+    },
+    {
+     "who": "you",
+     "ref": "xiexie"
+    }
+   ]
+  },
+  {
+   "id": "canteen-lunch",
+   "title": "Lunch at the canteen",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "ni-xihuan-chi-shenme"
+    },
+    {
+     "who": "you",
+     "ref": "wo-xihuan-chi-x",
+     "fill": "la"
+    },
+    {
+     "who": "them",
+     "ref": "yao-bu-yao-la"
+    },
+    {
+     "who": "you",
+     "ref": "yidiandian"
+    },
+    {
+     "who": "them",
+     "ref": "ni-xihuan-he-shenme"
+    },
+    {
+     "who": "you",
+     "ref": "wo-xiang-he-x",
+     "fill": "naicha"
+    },
+    {
+     "who": "you",
+     "ref": "xiexie"
+    }
+   ]
+  },
+  {
+   "id": "yue-cafe",
+   "title": "Ordering at a cha chaan teng",
+   "deck": "cantonese",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "yue-zousan"
+    },
+    {
+     "who": "you",
+     "ref": "yue-zousan"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-jiu-x",
+     "fill": "yue-dung-naaicaa"
+    },
+    {
+     "who": "you",
+     "ref": "yue-siu-tim"
+    },
+    {
+     "who": "you",
+     "ref": "yue-gei-do-cin"
+    },
+    {
+     "who": "you",
+     "ref": "yue-m-goi"
+    },
+    {
+     "who": "you",
+     "ref": "yue-baaibaai"
+    }
+   ]
+  },
+  {
+   "id": "yue-meet",
+   "title": "Meeting someone",
+   "deck": "cantonese",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "yue-nei-hou"
+    },
+    {
+     "who": "you",
+     "ref": "yue-nei-hou"
+    },
+    {
+     "who": "them",
+     "ref": "yue-nei-giu-matje-meng"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-giu"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-hai-x-jan",
+     "fill": "yue-helan"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-hai-zungman-daaihok-gaausyu"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-sik-gong-siusiu"
+    },
+    {
+     "who": "you",
+     "ref": "yue-tingjat-gin"
+    }
+   ]
+  },
+  {
+   "id": "yue-lost",
+   "title": "Getting by in Cantonese",
+   "deck": "cantonese",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "yue-zou-me-aa"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-teng-m-ming"
+    },
+    {
+     "who": "you",
+     "ref": "yue-m-goi-gong-do-ci"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-m-sik-gong"
+    },
+    {
+     "who": "you",
+     "ref": "yue-nei-sik-m-sik-gong-jingman"
+    },
+    {
+     "who": "them",
+     "ref": "yue-hai"
+    },
+    {
+     "who": "you",
+     "ref": "yue-dozi"
+    }
+   ]
   }
  ]
 }

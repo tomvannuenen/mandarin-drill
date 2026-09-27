@@ -1,0 +1,375 @@
+{
+ "_comment": "Mini-conversations: scripts over existing items. who = them (you listen) or you (you say it). Patterns need a fill id.",
+ "conversations": [
+  {
+   "id": "meet-student",
+   "title": "Meeting a student",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "you",
+     "ref": "ni-jiao-shenme-mingzi"
+    },
+    {
+     "who": "them",
+     "ref": "wo-jiao"
+    },
+    {
+     "who": "you",
+     "ref": "ni-shi-xuesheng-ma"
+    },
+    {
+     "who": "you",
+     "ref": "ni-shi-nage-xi-de"
+    },
+    {
+     "who": "them",
+     "ref": "ni-shi-nali-ren"
+    },
+    {
+     "who": "you",
+     "ref": "wo-shi-x-ren",
+     "fill": "helan"
+    },
+    {
+     "who": "them",
+     "ref": "zhende"
+    },
+    {
+     "who": "you",
+     "ref": "wo-gang-lai-xianggang"
+    },
+    {
+     "who": "them",
+     "ref": "hen-gaoxing-renshi-ni"
+    },
+    {
+     "who": "you",
+     "ref": "wo-ye-shi"
+    }
+   ]
+  },
+  {
+   "id": "new-colleague",
+   "title": "A new colleague",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "ni-jiao-shenme-mingzi"
+    },
+    {
+     "who": "you",
+     "ref": "wo-jiao"
+    },
+    {
+     "who": "you",
+     "ref": "wo-shi-xin-lai-de-jiaoshou"
+    },
+    {
+     "who": "them",
+     "ref": "ni-shi-nali-ren"
+    },
+    {
+     "who": "you",
+     "ref": "wo-laizi-x",
+     "fill": "helan"
+    },
+    {
+     "who": "them",
+     "ref": "ni-zai-xianggang-duojiu-le"
+    },
+    {
+     "who": "you",
+     "ref": "wo-gang-lai-xianggang"
+    },
+    {
+     "who": "you",
+     "ref": "wo-yanjiu-rengong-zhihui"
+    },
+    {
+     "who": "them",
+     "ref": "zhende"
+    },
+    {
+     "who": "you",
+     "ref": "women-yiqi-qu-he-kafei-ba"
+    },
+    {
+     "who": "them",
+     "ref": "mei-wenti"
+    }
+   ]
+  },
+  {
+   "id": "coffee-break",
+   "title": "Coffee break",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "zuijin-mang-shenme"
+    },
+    {
+     "who": "you",
+     "ref": "wo-zai-xue-zhongwen"
+    },
+    {
+     "who": "them",
+     "ref": "zhende"
+    },
+    {
+     "who": "you",
+     "ref": "wo-hui-shuo-yidiandian-zhongwen"
+    },
+    {
+     "who": "them",
+     "ref": "ni-xihuan-he-shenme"
+    },
+    {
+     "who": "you",
+     "ref": "wo-xihuan-he-x",
+     "fill": "kafei"
+    },
+    {
+     "who": "them",
+     "ref": "women-yiqi-qu-he-kafei-ba"
+    },
+    {
+     "who": "you",
+     "ref": "mei-wenti"
+    }
+   ]
+  },
+  {
+   "id": "first-class",
+   "title": "Your first class",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "you",
+     "ref": "dajia-hao"
+    },
+    {
+     "who": "you",
+     "ref": "wo-jiao"
+    },
+    {
+     "who": "you",
+     "ref": "wo-shi-xin-lai-de-jiaoshou"
+    },
+    {
+     "who": "you",
+     "ref": "huanying-lai-shang-wo-de-ke"
+    },
+    {
+     "who": "you",
+     "ref": "you-wenti-ma"
+    },
+    {
+     "who": "them",
+     "ref": "qing-zai-shuo-yici"
+    },
+    {
+     "who": "you",
+     "ref": "mei-wenti"
+    },
+    {
+     "who": "you",
+     "ref": "xiake-le"
+    },
+    {
+     "who": "you",
+     "ref": "jiayou"
+    }
+   ]
+  },
+  {
+   "id": "not-understanding",
+   "title": "When you don't understand",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "zuijin-zenmeyang"
+    },
+    {
+     "who": "you",
+     "ref": "wo-ting-bu-dong"
+    },
+    {
+     "who": "you",
+     "ref": "qing-shuo-man-yidian"
+    },
+    {
+     "who": "them",
+     "ref": "zuijin-zenmeyang"
+    },
+    {
+     "who": "you",
+     "ref": "wo-de-zhongwen-bu-tai-hao"
+    },
+    {
+     "who": "you",
+     "ref": "ni-hui-shuo-yingwen-ma"
+    },
+    {
+     "who": "them",
+     "ref": "yidiandian"
+    },
+    {
+     "who": "you",
+     "ref": "xiexie"
+    }
+   ]
+  },
+  {
+   "id": "canteen-lunch",
+   "title": "Lunch at the canteen",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "ni-xihuan-chi-shenme"
+    },
+    {
+     "who": "you",
+     "ref": "wo-xihuan-chi-x",
+     "fill": "la"
+    },
+    {
+     "who": "them",
+     "ref": "yao-bu-yao-la"
+    },
+    {
+     "who": "you",
+     "ref": "yidiandian"
+    },
+    {
+     "who": "them",
+     "ref": "ni-xihuan-he-shenme"
+    },
+    {
+     "who": "you",
+     "ref": "wo-xiang-he-x",
+     "fill": "naicha"
+    },
+    {
+     "who": "you",
+     "ref": "xiexie"
+    }
+   ]
+  },
+  {
+   "id": "yue-cafe",
+   "title": "Ordering at a cha chaan teng",
+   "deck": "cantonese",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "yue-zousan"
+    },
+    {
+     "who": "you",
+     "ref": "yue-zousan"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-jiu-x",
+     "fill": "yue-dung-naaicaa"
+    },
+    {
+     "who": "you",
+     "ref": "yue-siu-tim"
+    },
+    {
+     "who": "you",
+     "ref": "yue-gei-do-cin"
+    },
+    {
+     "who": "you",
+     "ref": "yue-m-goi"
+    },
+    {
+     "who": "you",
+     "ref": "yue-baaibaai"
+    }
+   ]
+  },
+  {
+   "id": "yue-meet",
+   "title": "Meeting someone",
+   "deck": "cantonese",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "yue-nei-hou"
+    },
+    {
+     "who": "you",
+     "ref": "yue-nei-hou"
+    },
+    {
+     "who": "them",
+     "ref": "yue-nei-giu-matje-meng"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-giu"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-hai-x-jan",
+     "fill": "yue-helan"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-hai-zungman-daaihok-gaausyu"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-sik-gong-siusiu"
+    },
+    {
+     "who": "you",
+     "ref": "yue-tingjat-gin"
+    }
+   ]
+  },
+  {
+   "id": "yue-lost",
+   "title": "Getting by in Cantonese",
+   "deck": "cantonese",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "yue-zou-me-aa"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-teng-m-ming"
+    },
+    {
+     "who": "you",
+     "ref": "yue-m-goi-gong-do-ci"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-m-sik-gong"
+    },
+    {
+     "who": "you",
+     "ref": "yue-nei-sik-m-sik-gong-jingman"
+    },
+    {
+     "who": "them",
+     "ref": "yue-hai"
+    },
+    {
+     "who": "you",
+     "ref": "yue-dozi"
+    }
+   ]
+  }
+ ]
+}

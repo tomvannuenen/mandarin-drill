@@ -6,9 +6,9 @@ a word joined by '-', one syllable per Han character, e.g. "wǒ xǐ-huān hē k�
 import re
 import unicodedata
 
-_TONE_MARKS = {"̄": 1, "́": 2, "̌": 3, "̀": 4}
+_TONE_MARKS = {"\u0304": 1, "\u0301": 2, "\u030c": 3, "\u0300": 4}
 _SEP = re.compile(r"([ \-]+)")
-_WORD = re.compile(r"^([^A-Za-zÀ-ɏ]*)([A-Za-zÀ-ɏ̀-ͯ]+)(.*)$")
+_WORD = re.compile(r"^([^A-Za-zÀ-ɏ]*)([A-Za-zÀ-ɏ\u0300-\u036f]+)(.*)$")
 
 
 def tone_of(syl: str) -> int:

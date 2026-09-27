@@ -1,5 +1,5 @@
 // Offline support. VERSION is stamped by tools/build.py whenever app files change.
-const VERSION = '19e4443dd94c';
+const VERSION = '6be906502d38';
 const SHELL_CACHE = `shell-${VERSION}`;
 const AUDIO_CACHE = 'audio-v1';
 const SHELL = [
@@ -7,13 +7,20 @@ const SHELL = [
   'index.html',
   'styles.css',
   'app.js',
+  'ui.js',
   'book.js',
+  'tonecheck.js',
+  'convo.js',
   'lib/bundle.js',
   'lib/tones.js',
   'lib/srs.js',
   'lib/cards.js',
   'lib/session.js',
   'lib/store.js',
+  'lib/weak.js',
+  'lib/motivation.js',
+  'lib/checkin.js',
+  'lib/tonequiz.js',
   'vendor/ts-fsrs.js',
   'manifest.webmanifest',
   'phrases.json',

@@ -73,6 +73,66 @@
       </div>
     </section>
 
+    <section id="view-tones" class="view" hidden>
+      <div class="study-top">
+        <button class="link close" data-go="home" aria-label="Close">✕</button>
+        <div class="progress"><div class="progress-bar" id="tq-bar"></div></div>
+        <span class="progress-text" id="tq-count"></span>
+      </div>
+      <div class="card">
+        <div id="tq-question">
+          <p class="card-kind">Which tones do you hear?</p>
+          <button class="prompt-audio audio-btn" id="tq-play" aria-label="Play again">🔊</button>
+          <div class="tq-options" id="tq-options"></div>
+        </div>
+        <div id="tq-feedback" hidden>
+          <p class="tq-zh" id="tq-zh"></p>
+          <p class="pinyin" id="tq-roman"></p>
+          <p class="en" id="tq-en"></p>
+        </div>
+        <div id="tq-result" hidden>
+          <p class="done-mark" lang="zh-Hant-TW">聲調</p>
+          <p class="tq-score" id="tq-score"></p>
+          <div id="tq-bars"></div>
+          <div class="button-row center">
+            <button class="primary" id="tq-again">Another round</button>
+            <button class="secondary" data-go="home">Done</button>
+          </div>
+        </div>
+      </div>
+      <div class="actions"><button class="primary big" id="tq-next" hidden>Next</button></div>
+    </section>
+
+    <section id="view-convo" class="view" hidden>
+      <div class="study-top">
+        <button class="link close" data-go="home" aria-label="Close">✕</button>
+        <h2 class="cv-title" id="cv-title"></h2>
+      </div>
+      <div class="cv-log" id="cv-log"></div>
+      <div class="cv-end" id="cv-end" hidden>
+        <p id="cv-end-text"></p>
+        <div class="button-row center">
+          <button class="primary" id="cv-again">Again</button>
+          <button class="secondary" data-go="home">Done</button>
+        </div>
+      </div>
+      <div class="actions sticky"><button class="primary big" id="cv-next">Show</button></div>
+    </section>
+
+    <section id="view-checkin" class="view" hidden>
+      <div class="study-top">
+        <button class="link close" data-go="home" aria-label="Close">✕</button>
+        <h2>Weekly check-in</h2>
+      </div>
+      <div id="ci-body"></div>
+      <p class="hint">Paste this into a Claude session together with your coach's notes. I'll use it to write your next cards and suggest what to ask your coach.</p>
+      <div class="button-row">
+        <button class="primary" id="ci-copy">Copy for Claude</button>
+        <button class="secondary" id="ci-share">Share…</button>
+      </div>
+      <p class="hint" id="ci-status"></p>
+    </section>
+
     <section id="view-browse" class="view" hidden>
       <header class="browse-head">
         <h2>All phrases</h2>

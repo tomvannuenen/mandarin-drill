@@ -22,6 +22,10 @@ Open the site on your phone in Safari → Share → **Add to Home Screen**. It w
 - The home screen shows how ready you are for this week's coach lesson (set the lesson day in Settings),
   a daily **real-life mission** for a phrase you know well, your trouble spots, and **What I can say** by situation.
   A phrase counts as *solid* once you've said it right on two different days.
+- **Tones** (Mandarin): a 10-question tone check that quizzes your weakest tones and tone pairs more.
+- **Conversations**: short dialogues from `data/conversations.json`. You hear their lines, then say yours.
+- **Weekly check-in** (on the coach card): a summary of the week to paste into Claude with the coach's notes.
+  Claude uses it to write the next cards around what keeps slipping.
 - Progress lives only on this device: **Settings → Export progress** now and then.
 
 ## Adding a week of material
@@ -53,6 +57,7 @@ Cantonese phrases go in `data/cantonese.json` in the same format, with `jyutping
   Pinyin word boundaries (spaces) decide how a phrase is split into words.
 - Phrases and patterns need a `topic` (the situation: Introducing yourself, Small talk, Food & drink,
   Getting by, Work & study) and can have a `mission`: a concrete thing to do with the phrase in real life.
+- Patterns about the learner can set `mine` to their own answer (e.g. `"mine": "helan"`), used in missions.
 - Optional: `note` (shown after reveal), `fillEn`, `allowChars` (to skip the Simplified check for specific characters).
 
 ### Audio

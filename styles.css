@@ -279,15 +279,23 @@ body.studying #app { padding-bottom: calc(env(safe-area-inset-bottom) + 16px); }
 .meter { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
 .meter-fill { height: 100%; background: var(--good); }
 .mission { margin: 0; font-weight: 600; }
-.mission-zh { margin: 6px 0 12px; font-size: 1.4rem; }
+.say-line { display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 1px; padding: 4px 0; width: 100%; }
+.say-top { display: flex; align-items: center; gap: 8px; }
+.say-roman { font-size: 1.1rem; font-weight: 600; }
+.say-play { font-size: .85rem; opacity: .6; }
+.say-en { font-size: .9rem; color: var(--ink); }
+.say-zh { font-size: .8rem; color: var(--muted); }
+.mission-say { margin: 8px 0 12px; padding: 8px 12px; background: var(--bg); border-radius: 12px; }
+.mission-say .say-roman { font-size: 1.3rem; }
 .spots { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 .spot { background: var(--bg); border-radius: 10px; padding: 6px 10px; font-size: 1.05rem; }
 .spot .hint { font-size: .8rem; }
 .can > summary { display: flex; justify-content: space-between; padding: 8px 0; cursor: pointer; list-style: none; border-top: 1px solid var(--line); }
 .can > summary::-webkit-details-marker { display: none; }
 .can ul { list-style: none; padding: 0 0 8px; margin: 0; }
-.can li { padding: 3px 0; color: var(--muted); }
-.can li.solid { color: var(--ink); }
+.can li { display: flex; gap: 8px; align-items: flex-start; padding: 2px 0; opacity: .55; }
+.can li.solid { opacity: 1; }
+.can-mark { padding-top: 6px; width: 1em; color: var(--good); font-weight: 700; }
 
 /* Trouble spots in study */
 .wg.missed .wg-zh, .wg.missed .wg-roman span { color: var(--again) !important; text-decoration: line-through; }
@@ -296,3 +304,39 @@ body.studying #app { padding-bottom: calc(env(safe-area-inset-bottom) + 16px); }
 .miss.on { border-color: var(--again); color: var(--again); font-weight: 600; }
 .prompt-gap { font-size: 2rem; margin: 12px 0 0; }
 .gap { color: var(--accent); }
+
+/* Tone check */
+.close { font-size: 1.3rem; text-decoration: none; color: var(--muted); padding: 4px 8px; }
+.tq-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+.tq-opt { padding: 16px 8px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--bg); font-size: 1.3rem; font-weight: 600; }
+.tq-opt.right { border-color: var(--good); background: color-mix(in srgb, var(--good) 15%, var(--surface)); }
+.tq-opt.wrong { border-color: var(--again); background: color-mix(in srgb, var(--again) 15%, var(--surface)); }
+.tq-zh { font-size: 2.2rem; margin: 16px 0 0; }
+.tq-score { font-size: 1.3rem; font-weight: 600; }
+.tone-bars { display: flex; flex-direction: column; gap: 6px; margin: 8px 0 12px; text-align: left; }
+.tone-row { display: grid; grid-template-columns: 7.5em 1fr 3em; align-items: center; gap: 8px; font-size: .9rem; }
+.tone-name { font-weight: 600; }
+.tone-pct { text-align: right; color: var(--muted); }
+.meter-fill.weak { background: var(--hard); }
+.button-row.center { justify-content: center; margin-top: 12px; }
+
+/* Conversations */
+.cv-title { margin: 0; font-size: 1.1rem; }
+.cv-log { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; flex: 1; }
+.cv-bubble { max-width: 85%; padding: 10px 14px; border-radius: 18px; background: var(--surface); border: 1.5px solid var(--line); }
+.cv-bubble.them { align-self: flex-start; border-bottom-left-radius: 6px; }
+.cv-bubble.you { align-self: flex-end; border-bottom-right-radius: 6px; background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+.cv-who { display: block; font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 4px; }
+.cv-cue { margin: 0; font-weight: 600; }
+.cv-roman { margin: 0; font-size: 1.2rem; font-weight: 600; }
+.cv-zh { margin: 2px 0; font-size: 1.3rem; }
+.cv-en { margin: 0; font-size: .9rem; color: var(--muted); }
+.small-audio { font-size: 1rem; padding: 4px 10px; margin-top: 6px; }
+.cv-end { text-align: center; }
+.actions.sticky { position: sticky; bottom: calc(env(safe-area-inset-bottom) + 12px); }
+.convo-row { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 10px 0; border-top: 1px solid var(--line); text-align: left; }
+.convo-row .hint { font-size: .85rem; }
+
+/* Check-in */
+#ci-body { background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--radius); padding: 12px 16px; margin: 16px 0 8px; }
+#ci-body p { margin: 6px 0; font-size: .95rem; }

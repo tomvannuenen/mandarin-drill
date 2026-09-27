@@ -2,7 +2,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.build import DECKS, audio_jobs, expand, generate_audio, missing_glosses, simplified_chars, validate
+from tools.build import (DECKS, audio_jobs, expand, generate_audio, missing_glosses, simplified_chars, validate,
+                         validate_conversations)
 
 DRINKS = [
     {"id": "kafei", "kind": "word", "week": 1, "zh": "咖啡", "pinyin": "kā-fēi", "en": "coffee", "cat": ["drink"]},
@@ -157,6 +158,31 @@ class Glosses(unittest.TestCase):
         missing = missing_glosses(out)
         self.assertIn(("hen-hao", "很", "hěn"), missing)
         self.assertNotIn(("wo-xihuan-he-x", "咖啡", "kā-fēi"), missing)
+
+
+class Conversations(unittest.TestCase):
+    OUT = expand(DRINKS + [HE], root=Path("/nonexistent"))
+
+    def convo(self, turns, deck="mandarin"):
+        return [{"id": "c1", "title": "Coffee", "deck": deck, "turns": turns}]
+
+    def test_valid(self):
+        turns = [{"who": "them", "ref": "kafei"}, {"who": "you", "ref": "wo-xihuan-he-x", "fill": "shui"}]
+        self.assertEqual(validate_conversations(self.convo(turns), self.OUT), [])
+
+    def test_unknown_ref_and_fill(self):
+        turns = [{"who": "them", "ref": "nope"}, {"who": "you", "ref": "wo-xihuan-he-x", "fill": "beer"}]
+        errs = validate_conversations(self.convo(turns), self.OUT)
+        self.assertTrue(any("nope" in e for e in errs) and any("beer" in e for e in errs), errs)
+
+    def test_pattern_needs_fill_and_who_checked(self):
+        turns = [{"who": "me", "ref": "kafei"}, {"who": "you", "ref": "wo-xihuan-he-x"}]
+        errs = validate_conversations(self.convo(turns), self.OUT)
+        self.assertTrue(any("who" in e for e in errs) and any("fill" in e for e in errs), errs)
+
+    def test_ref_must_be_in_same_deck(self):
+        errs = validate_conversations(self.convo([{"who": "you", "ref": "kafei"}], deck="cantonese"), self.OUT)
+        self.assertTrue(any("kafei" in e for e in errs), errs)
 
 
 class Cantonese(unittest.TestCase):

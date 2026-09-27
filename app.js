@@ -1,17 +1,18 @@
-import { romanWords } from './lib/tones.js';
+import { $, el, play, renderRoman, LANG_ATTR } from './ui.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
 import { buildQueue, shouldRequeue } from './lib/session.js';
 import { load, save, exportJSON, importJSON, applyReview, localDate } from './lib/store.js';
 import { initBook, renderBook } from './book.js';
+import { initTones, startTones, toneWords, toneBars } from './tonecheck.js';
+import { initConvo, startConvo, convoStatus } from './convo.js';
+import { weekSummary, checkinText } from './lib/checkin.js';
 import { drillId, flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
 import { weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from './lib/motivation.js';
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 const LANG_NAME = { mandarin: 'Mandarin', cantonese: 'Cantonese' };
-const LANG_ATTR = { mandarin: 'zh-Hant-TW', cantonese: 'zh-Hant-HK' };
 
-const $ = (id) => document.getElementById(id);
 const storage = (() => { try { return window.localStorage; } catch { return null; } })();
 const nullStorage = { getItem: () => null, setItem() {} };
 
@@ -19,6 +20,7 @@ let allItems = [];
 let byId = {};
 let voices = {}; // {voiceId: {flag, name}}
 let decks = {}; // {deck: {label, voices}}
+let conversations = [];
 let version = '';
 let progress = load(storage || nullStorage);
 let extraNew = 0;
@@ -36,43 +38,8 @@ function studyItems() {
   return [...items(), ...drills];
 }
 
-const audio = new Audio();
-function play(src) {
-  if (!src) return;
-  audio.src = src;
-  audio.currentTime = 0;
-  audio.play().catch(() => {});
-}
-
 function persist() {
   save(storage || nullStorage, progress);
-}
-
-// ---------- rendering helpers
-
-function el(tag, attrs = {}, ...children) {
-  const node = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs)) {
-    if (k === 'class') node.className = v;
-    else if (k.startsWith('on')) node.addEventListener(k.slice(2), v);
-    else node.setAttribute(k, v);
-  }
-  for (const c of children) node.append(c);
-  return node;
-}
-
-function renderRoman(target, text, d) {
-  const prefix = d === 'cantonese' ? 'jtone' : 'tone';
-  // Pinyin joins a word's syllables (xǐhuān); Jyutping conventionally spaces them (zung1 ji3).
-  const joiner = d === 'cantonese' ? ' ' : '';
-  const words = romanWords(text, d).map((word) =>
-    el('span', { class: 'w' }, ...word.flatMap((s, i) => {
-      const syl = el('span', { class: `${prefix}${s.tone}` }, s.text);
-      return i && joiner ? [joiner, syl] : [syl];
-    }))
-  );
-  target.replaceChildren(...words.flatMap((w, i) => (i ? [' ', w] : [w])));
-  return target;
 }
 
 function voiceFlag(id) {
@@ -105,12 +72,13 @@ function renderDeckSwitch() {
 function show(view) {
   for (const v of document.querySelectorAll('.view')) v.hidden = v.id !== `view-${view}`;
   for (const t of document.querySelectorAll('.tab')) t.classList.toggle('active', t.dataset.go === view);
-  document.body.classList.toggle('studying', view === 'study');
+  document.body.classList.toggle('studying', ['study', 'tones', 'convo', 'checkin'].includes(view));
   renderDeckSwitch();
   if (view === 'home') renderHome();
   if (view === 'browse') renderBrowse();
   if (view === 'settings') renderSettings();
   if (view === 'book') renderBook();
+  if (view === 'checkin') renderCheckin();
   window.scrollTo(0, 0);
 }
 
@@ -148,6 +116,23 @@ function renderHome() {
   renderDash(list, now);
 }
 
+// A concrete sentence for display: patterns use your own answer ('mine') or one of their known fills.
+function sample(item) {
+  if (item.kind !== 'pattern') return item;
+  return item.fills.find((f) => f.fillId === item.mine) || pickFill(item, progress);
+}
+
+// Pinyin first (coloured), then English and small characters; tapping plays it in a rotating voice.
+function sayLine(entry, d, extraClass = '') {
+  return el(
+    'button',
+    { class: `say-line ${extraClass}`, onclick: () => play(entry.audio[pickVoice(entry)][0]) },
+    el('span', { class: 'say-top' }, renderRoman(el('span', { class: 'say-roman' }), entry.roman, d), el('span', { class: 'say-play' }, '🔊')),
+    el('span', { class: 'say-en' }, entry.en),
+    el('span', { class: 'say-zh', lang: LANG_ATTR[d] }, entry.zh)
+  );
+}
+
 function dashCard(title, ...children) {
   return el('section', { class: 'dash-card' }, el('h3', {}, title), ...children);
 }
@@ -166,7 +151,8 @@ function renderDash(list, now) {
     parts.push(dashCard(
       `Ready for the coach · Week ${r.week}`,
       el('div', { class: 'meter' }, el('div', { class: 'meter-fill', style: `width:${(100 * r.solid) / r.total}%` })),
-      el('p', { class: 'dash-line' }, `${r.solid} of ${r.total} cards solid · `, when)
+      el('p', { class: 'dash-line' }, `${r.solid} of ${r.total} cards solid · `, when),
+      el('button', { class: 'secondary checkin-btn', 'data-go': 'checkin' }, 'Weekly check-in')
     ));
   }
 
@@ -179,7 +165,7 @@ function renderDash(list, now) {
     parts.push(dashCard(
       'Today\'s mission',
       el('p', { class: 'mission' }, m.mission),
-      el('p', { class: 'mission-zh', lang }, m.zh.replace('___', '…')),
+      sayLine(sample(m), deck(), 'mission-say'),
       el('div', { class: 'button-row' },
         el('button', { class: 'primary', onclick: () => { markMissionDone(progress, m.id, new Date()); persist(); renderHome(); } }, 'I did it'),
         el('button', { class: 'secondary', onclick: () => { missionSkip += 1; renderHome(); } }, 'Another one'))
@@ -202,6 +188,31 @@ function renderDash(list, now) {
     ));
   }
 
+  // Conversations
+  const convos = conversations.filter((c) => c.deck === deck());
+  if (convos.length) {
+    parts.push(dashCard(
+      'Conversations',
+      ...convos.map((c) => {
+        const st = convoStatus(c, progress);
+        const status = st.done ? `done ${st.done}×` : st.ready ? 'ready' : `${st.learned}/${st.total} of your lines met`;
+        return el('button', { class: 'convo-row', onclick: () => startConvo(c) }, el('span', {}, c.title), el('span', { class: 'hint' }, status));
+      })
+    ));
+  }
+
+  // Tone check (Mandarin)
+  if (deck() === 'mandarin') {
+    const words = toneWords(allItems, progress);
+    parts.push(dashCard(
+      'Tones',
+      toneBars(progress.tones),
+      words.length
+        ? el('button', { class: 'secondary', onclick: startTones }, 'Tone check (10 questions)')
+        : el('p', { class: 'dash-line hint' }, 'Unlocks once you have met a few single words.')
+    ));
+  }
+
   // What I can say
   const groups = canSay(list, progress);
   if (groups.length) {
@@ -211,7 +222,7 @@ function renderDash(list, now) {
       ...groups.map((g) => el('details', { class: 'can' },
         el('summary', {}, el('span', {}, g.topic), el('span', { class: 'hint' }, ` ${g.solid}/${g.total}`)),
         el('ul', {}, ...g.items.map((i) => el('li', { class: i.solid ? 'solid' : '' },
-          i.solid ? '✓ ' : '· ', el('span', { lang }, i.zh.replace('___', '…')), el('span', { class: 'hint' }, ` ${i.en.replace('___', '…')}`))))))
+          el('span', { class: 'can-mark' }, i.solid ? '✓' : '·'), sayLine(sample(byId[i.id]), deck()))))))
     ));
   }
   $('dash').replaceChildren(...parts);
@@ -382,6 +393,25 @@ function finishSession() {
   show('done');
 }
 
+// ---------- weekly check-in
+
+function renderCheckin() {
+  const now = new Date();
+  const text = checkinText(weekSummary(progress, allItems, now), weekReadiness(allItems.filter((i) => i.deck === 'mandarin'), progress));
+  $('ci-body').replaceChildren(...text.split('\n').map((line, i) => el('p', i ? {} : { class: 'dash-line' }, i ? line : el('b', {}, line))));
+  $('ci-status').textContent = '';
+  $('ci-copy').onclick = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      $('ci-status').textContent = 'Copied. Paste it into Claude with your coach notes.';
+    } catch {
+      $('ci-status').textContent = 'Could not copy. Use Share instead.';
+    }
+  };
+  $('ci-share').hidden = !navigator.share;
+  $('ci-share').onclick = () => navigator.share({ title: '說 weekly check-in', text }).catch(() => {});
+}
+
 // ---------- browse
 
 function rowParts(entry, d, badge) {
@@ -517,11 +547,16 @@ function wire() {
 async function init() {
   wire();
   initBook();
+  const ctx = { allItems: () => allItems, progress: () => progress, persist, show, byId: () => byId, decks: () => decks };
+  initTones(ctx);
+  initConvo(ctx);
+  $('tq-again').addEventListener('click', startTones);
   const res = await fetch('phrases.json');
   const data = await res.json();
   allItems = data.items;
   voices = data.voices;
   decks = data.decks;
+  conversations = data.conversations || [];
   version = data.version;
   byId = Object.fromEntries(allItems.map((i) => [i.id, i]));
   show('home');

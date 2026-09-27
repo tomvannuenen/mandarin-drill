@@ -1,4 +1,5 @@
 import { $, el, play, renderRoman, LANG_ATTR } from './ui.js';
+import { icon, hydrateIcons } from './icons.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
 import { buildQueue, shouldRequeue } from './lib/session.js';
@@ -12,18 +13,22 @@ import { level, hintText } from './lib/ladder.js';
 import { addWish, wishStatus } from './lib/wishes.js';
 import { canRecord, startRecording, stopRecording, isRecording, compare, share as shareRecording } from './rec.js';
 import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pullPlan, DEFAULT_REPO } from './lib/sync.js';
-import { drillId, flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
+import { flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
 import { weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from './lib/motivation.js';
+import { composeToday, snapshot, outcome, dueSoon, estimateMinutes } from './lib/today.js';
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 const LANG_NAME = { mandarin: 'Mandarin', cantonese: 'Cantonese' };
+const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+// Which tab each screen belongs to; screens without a tab are full-screen.
+const TAB_OF = { home: 'home', done: 'home', explore: 'explore', browse: 'explore', book: 'explore', wish: 'explore', me: 'me', checkin: 'me', settings: 'me' };
+const ACCENT = { tw: 'TW', cn: 'CN', hk: 'HK', coach: 'Coach' };
 
 const storage = (() => { try { return window.localStorage; } catch { return null; } })();
 const nullStorage = { getItem: () => null, setItem() {} };
 
 let allItems = [];
 let byId = {};
-let voices = {}; // {voiceId: {flag, name}}
 let decks = {}; // {deck: {label, voices}}
 let conversations = [];
 let plan = null; // Claude's daily focus note
@@ -35,18 +40,21 @@ let version = '';
 let progress = load(storage || nullStorage);
 let extraNew = 0;
 let missionSkip = 0;
-let session = null; // { queue, pos, total, done, current: {card, c} }
+let session = null; // { queue, pos, total, done, right, graded, startedAt, before, convo, current: {card, c} }
+let pendingEnd = null; // session results waiting for a chained conversation to finish
 
 const deck = () => (decks[progress.settings.deck] ? progress.settings.deck : 'mandarin');
 const items = () => allItems.filter((i) => i.deck === deck());
-const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 // Deck items plus practice items for the current trouble spots (kept in byId so queued drills still resolve).
-function studyItems() {
-  const drills = drillItems(allItems, progress, deck());
-  for (const d of drills) byId[d.id] = d;
-  return [...items(), ...drills];
+function drills() {
+  const d = drillItems(allItems, progress, deck());
+  for (const x of d) byId[x.id] = x;
+  return d;
 }
+const studyItems = () => [...items(), ...drills()];
+
+// ---------- persistence and sync
 
 function persist() {
   save(storage || nullStorage, progress);
@@ -95,10 +103,10 @@ function renderSync() {
   if (syncCfg) {
     const when = syncCfg.lastSync ? new Date(syncCfg.lastSync).toLocaleString() : 'not yet';
     box.replaceChildren(
-      el('p', { class: 'hint' }, `Connected to ${syncCfg.repo} (private). Last synced: ${when}. Claude reads this to follow your progress and writes your daily focus here.`),
-      ...(syncError ? [el('p', { class: 'hint error' }, `Last problem: ${syncError}`)] : []),
+      el('p', { class: 'muted' }, `Connected to ${syncCfg.repo} (private). Last synced ${when}. Claude reads this to follow your progress and writes your daily note here.`),
+      ...(syncError ? [el('p', { class: 'muted error' }, `Last problem: ${syncError}`)] : []),
       el('div', { class: 'button-row' },
-        el('button', { class: 'secondary', onclick: () => { syncDirty = true; syncNow(); } }, 'Sync now'),
+        el('button', { class: 'btn', onclick: () => { syncDirty = true; syncNow(); } }, 'Sync now'),
         el('button', { class: 'link small', onclick: () => {
           if (!confirm('Stop syncing? Your progress stays on this phone.')) return;
           syncCfg = null; saveConfig(null); renderSync();
@@ -107,16 +115,16 @@ function renderSync() {
     return;
   }
   const input = el('input', { type: 'password', class: 'token-input', placeholder: 'github_pat_…', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false' });
-  const status = el('p', { class: 'hint' });
+  const status = el('p', { class: 'muted' });
   box.replaceChildren(
-    el('p', { class: 'hint' }, 'Lets Claude follow your progress and write a daily focus note. Also backs up your progress. One-time setup on GitHub:'),
-    el('ol', { class: 'hint steps' },
+    el('p', { class: 'muted' }, 'Lets Claude follow your progress and write a daily note. Also backs up your progress. One-time setup on GitHub:'),
+    el('ol', { class: 'muted steps' },
       el('li', {}, 'Open ', el('a', { href: 'https://github.com/settings/personal-access-tokens/new', target: '_blank', rel: 'noopener' }, 'GitHub → new fine-grained token'), '.'),
       el('li', {}, 'Repository access: Only select repositories → mandarin-progress.'),
       el('li', {}, 'Permissions → Contents: Read and write. Expiration: 1 year.'),
       el('li', {}, 'Generate, copy the key, paste it below.')),
     input,
-    el('button', { class: 'primary', onclick: async () => {
+    el('button', { class: 'btn primary', onclick: async () => {
       const cfg = { repo: DEFAULT_REPO, token: input.value.trim() };
       if (!cfg.token) return;
       status.textContent = 'Checking…';
@@ -136,84 +144,49 @@ function renderSync() {
   );
 }
 
-function voiceFlag(id) {
-  return voices[id]?.flag || '';
-}
-
-function renderDeckSwitch() {
-  for (const box of document.querySelectorAll('.deck-switch')) {
-    box.replaceChildren(
-      ...Object.entries(decks).map(([d, cfg]) =>
-        el(
-          'button',
-          {
-            class: `deck-btn${d === deck() ? ' active' : ''}`,
-            lang: LANG_ATTR[d],
-            onclick: () => {
-              progress.settings.deck = d;
-              extraNew = 0;
-              persist();
-              show(document.querySelector('.tab.active')?.dataset.go || 'home');
-            },
-          },
-          cfg.label
-        )
-      )
-    );
-  }
-}
+// ---------- navigation
 
 function applyReadingMode() {
   document.body.classList.toggle('pinyin-first', !progress.settings.reading);
 }
 
+function renderDeckPills() {
+  const other = Object.keys(decks).find((d) => d !== deck());
+  for (const pill of document.querySelectorAll('.deck-pill')) {
+    pill.textContent = decks[deck()]?.label || '';
+    pill.setAttribute('lang', LANG_ATTR[deck()]);
+    pill.setAttribute('aria-label', `Switch to ${LANG_NAME[other] || 'other language'}`);
+  }
+}
+
+function switchDeck() {
+  const keys = Object.keys(decks);
+  progress.settings.deck = keys[(keys.indexOf(deck()) + 1) % keys.length];
+  extraNew = 0;
+  missionSkip = 0;
+  persist();
+  show(currentView);
+}
+
+let currentView = 'home';
 function show(view) {
+  currentView = view;
   applyReadingMode();
   for (const v of document.querySelectorAll('.view')) v.hidden = v.id !== `view-${view}`;
-  for (const t of document.querySelectorAll('.tab')) t.classList.toggle('active', t.dataset.go === view);
-  document.body.classList.toggle('studying', ['study', 'tones', 'convo', 'checkin', 'wish'].includes(view));
-  renderDeckSwitch();
-  if (view === 'home') renderHome();
-  if (view === 'browse') renderBrowse();
-  if (view === 'settings') renderSettings();
-  if (view === 'book') renderBook();
-  if (view === 'checkin') renderCheckin();
-  if (view === 'wish') renderWishes();
+  const tab = TAB_OF[view];
+  for (const t of document.querySelectorAll('.tab')) t.classList.toggle('active', t.dataset.go === tab);
+  document.body.classList.toggle('fullscreen', !tab);
+  $('which').hidden = true;
+  renderDeckPills();
+  ({ home: renderHome, explore: renderExplore, browse: renderBrowse, me: renderMe, settings: renderSettings,
+    book: renderBook, checkin: renderCheckin, wish: renderWishes })[view]?.();
   window.scrollTo(0, 0);
 }
 
-// ---------- home
+// ---------- shared bits
 
-function newLimit() {
-  return progress.settings.newPerDay + extraNew;
-}
-
-function renderHome() {
-  const now = new Date();
-  const list = items();
-  const queue = buildQueue(studyItems(), progress, now, newLimit(), deck());
-  const fresh = queue.filter((c) => !progress.cards[c.key]).length;
-  $('due-count').textContent = queue.length;
-  $('due-label').textContent = queue.length
-    ? `${LANG_NAME[deck()]} cards today · ${queue.length - fresh} review, ${fresh} new`
-    : `All ${LANG_NAME[deck()]} done for today`;
-  $('start').hidden = queue.length === 0;
-  const unseen = list.some((i) => !progress.cards[`${i.id}:say`]);
-  $('more').hidden = queue.length > 0 || !unseen;
-
-  const s = progress.stats;
-  const yesterday = localDate(new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1));
-  const alive = s.lastStudyDate === localDate(now) || s.lastStudyDate === yesterday;
-  $('streak').textContent = alive && s.streak ? `🔥 ${s.streak} day${s.streak === 1 ? '' : 's'}` : '';
-
-  const learned = list.filter((i) => progress.cards[`${i.id}:say`]?.state === 2).length;
-  const seen = list.filter((i) => progress.cards[`${i.id}:say`]).length;
-  $('learned').textContent = `${learned} learned · ${seen} seen · ${list.length} total`;
-
-  const totalSeen = allItems.filter((i) => progress.cards[`${i.id}:say`]).length;
-  const stale = !progress.lastExport || now - new Date(progress.lastExport) > WEEK_MS;
-  $('export-banner').hidden = !(stale && totalSeen >= 10);
-  renderDash(list, now);
+function voiceTag(id) {
+  return ACCENT[id.split('-')[0]] || '';
 }
 
 // A concrete sentence for display: patterns use your own answer ('mine') or one of their known fills.
@@ -223,138 +196,112 @@ function sample(item) {
 }
 
 // Pinyin first (coloured), then English and small characters; tapping plays it in a rotating voice.
-function sayLine(entry, d, extraClass = '') {
+function sayLine(entry, d) {
   return el(
     'button',
-    { class: `say-line ${extraClass}`, onclick: () => play(entry.audio[pickVoice(entry)][0]) },
-    el('span', { class: 'say-top' }, renderRoman(el('span', { class: 'say-roman' }), entry.roman, d), el('span', { class: 'say-play' }, '🔊')),
+    { class: 'say-line', onclick: () => play(entry.audio[pickVoice(entry)][0]) },
+    el('span', { class: 'say-top' }, renderRoman(el('span', { class: 'say-roman' }), entry.roman, d), icon('play', 'say-play')),
     el('span', { class: 'say-en' }, entry.en),
     el('span', { class: 'say-zh', lang: LANG_ATTR[d] }, entry.zh)
   );
 }
 
-function dashCard(title, ...children) {
-  return el('section', { class: 'dash-card' }, el('h3', {}, title), ...children);
+// Pinyin and meaning of a word as it appears inside any phrase.
+function wordInfo(zh) {
+  for (const i of allItems) for (const e of i.fills || [i]) for (const w of e.words || []) if (w.zh === zh) return w;
+  return null;
 }
 
-function renderDash(list, now) {
-  const lang = LANG_ATTR[deck()];
-  const parts = [];
+function minutes(n) {
+  return n <= 1 ? 'about a minute' : `about ${n} minutes`;
+}
 
-  // Claude's daily note
-  if (planIsCurrent(plan, now) && plan.message) {
-    const ids = (plan.items || []).filter((id) => byId[id] && byId[id].deck === deck());
-    const drills = studyItems().filter((i) => i.kind === 'drill' && (plan.words || []).some((w) => w.zh === i.zh && w.deck === i.deck));
-    const queue = [
-      ...drills.map((d) => ({ key: `${d.id}:say`, id: d.id, type: 'say', deck: d.deck })),
-      ...ids.map((id) => ({ key: `${id}:say`, id, type: 'say', deck: deck() })),
-    ];
-    parts.push(dashCard(
-      "Today's focus",
-      el('p', { class: 'plan-msg' }, plan.message),
-      ...(queue.length ? [el('button', { class: 'primary', onclick: () => startSession(queue) }, `Practise focus (${queue.length})`)] : [])
-    ));
-  }
+function card(...children) {
+  return el('section', { class: 'paper-card' }, ...children);
+}
 
-  // Coach readiness (Mandarin weeks only)
-  const r = deck() === 'mandarin' ? weekReadiness(list, progress) : null;
-  if (r) {
-    const day = progress.settings.lessonDay;
-    const n = day == null ? null : daysUntil(day, now);
-    const when = n == null ? el('button', { class: 'link', 'data-go': 'settings' }, 'Set your lesson day')
-      : n === 0 ? 'Lesson today' : `Lesson in ${n} day${n === 1 ? '' : 's'} (${WEEKDAYS[day]})`;
-    parts.push(dashCard(
-      `Ready for the coach · Week ${r.week}`,
-      el('div', { class: 'meter' }, el('div', { class: 'meter-fill', style: `width:${(100 * r.solid) / r.total}%` })),
-      el('p', { class: 'dash-line' }, `${r.solid} of ${r.total} cards solid · `, when),
-      el('button', { class: 'secondary checkin-btn', 'data-go': 'checkin' }, 'Weekly check-in')
-    ));
-  }
+function newLimit() {
+  return progress.settings.newPerDay + extraNew;
+}
 
-  // Real-life mission
-  const done = missionDoneToday(progress, now);
-  const m = done ? null : pickMission(list, progress, now, missionSkip);
-  if (done) {
-    parts.push(dashCard('Today\'s mission', el('p', { class: 'dash-line' }, `✓ Done. ${progress.missions.length} mission${progress.missions.length === 1 ? '' : 's'} so far.`)));
-  } else if (m) {
-    parts.push(dashCard(
-      'Today\'s mission',
-      el('p', { class: 'mission' }, m.mission),
-      sayLine(sample(m), deck(), 'mission-say'),
-      el('div', { class: 'button-row' },
-        el('button', { class: 'primary', onclick: () => { markMissionDone(progress, m.id, new Date()); persist(); renderHome(); } }, 'I did it'),
-        el('button', { class: 'secondary', onclick: () => { missionSkip += 1; renderHome(); } }, 'Another one'))
-    ));
+function todayPlan(now = new Date()) {
+  return composeToday({ items: items(), drills: drills(), progress, plan, now, newLimit: newLimit(), deck: deck() });
+}
+
+function readyConversation() {
+  const today = localDate(new Date());
+  return conversations
+    .filter((c) => c.deck === deck())
+    .map((c) => ({ c, st: convoStatus(c, progress) }))
+    .filter(({ c, st }) => st.ready && progress.convos[c.id]?.last !== today)
+    .sort((a, b) => a.st.done - b.st.done)[0]?.c || null;
+}
+
+// ---------- today
+
+function renderHome() {
+  const now = new Date();
+  const s = progress.stats;
+  const yesterday = localDate(new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1));
+  const alive = s.lastStudyDate === localDate(now) || s.lastStudyDate === yesterday;
+  $('today-eyebrow').textContent = [WEEKDAYS[now.getDay()], alive && s.streak ? `${s.streak}-day streak` : ''].filter(Boolean).join(' · ');
+  const h = now.getHours();
+  $('greeting').textContent = `${h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'}, Tom.`;
+
+  const note = planIsCurrent(plan, now) && plan.message
+    ? plan.message
+    : 'Say each answer out loud before you check it. Speaking is what makes it stick.';
+  $('today-note').textContent = note;
+
+  const { queue, counts } = todayPlan(now);
+  const convo = readyConversation();
+  $('start-block').hidden = !queue.length;
+  $('rest-block').hidden = !!queue.length;
+  if (queue.length) {
+    const parts = [
+      counts.focus && `${counts.focus} focus`,
+      counts.reviews && `${counts.reviews} review${counts.reviews === 1 ? '' : 's'}`,
+      counts.fresh && `${counts.fresh} new`,
+      convo && '1 conversation',
+    ].filter(Boolean);
+    const m = minutes(estimateMinutes(queue.length) + (convo ? 2 : 0));
+    $('start-sub').textContent = `${m[0].toUpperCase()}${m.slice(1)} · ${parts.join(', ')}`;
   } else {
-    parts.push(dashCard('Today\'s mission', el('p', { class: 'dash-line hint' }, 'Missions appear once phrases are solid (said right on two different days).')));
+    const soon = dueSoon(progress, items(), now);
+    $('rest-sub').textContent = soon ? `Next: ${soon} review${soon === 1 ? '' : 's'} by tomorrow.` : 'Come back tomorrow.';
+    $('more').hidden = !items().some((i) => !progress.cards[`${i.id}:say`]);
   }
 
-  // Trouble spots
-  const spots = troubleSpots(progress, deck());
-  if (spots.length) {
-    const drills = studyItems().filter((i) => i.kind === 'drill');
-    const info = Object.fromEntries(drills.map((d) => [d.zh, d]));
-    parts.push(dashCard(
-      'Trouble spots',
-      el('div', { class: 'spots' }, ...spots.slice(0, 8).map((t) =>
-        el('span', { class: 'spot' }, el('span', { lang }, t.zh), ' ', el('span', { class: 'hint' }, info[t.zh]?.gloss || '')))),
-      el('button', { class: 'secondary', onclick: () => startSession(drills.map((d) => ({ key: `${d.id}:say`, id: d.id, type: 'say', deck: d.deck }))) },
-        `Practise ${drills.length} now`)
-    ));
-  }
+  const totalSeen = allItems.filter((i) => progress.cards[`${i.id}:say`]).length;
+  const stale = !syncCfg && (!progress.lastExport || now - new Date(progress.lastExport) > WEEK_MS);
+  $('export-banner').hidden = !(stale && totalSeen >= 10);
 
-  // I wish I could say…
-  const wishes = wishStatus(progress, allItems);
-  const waiting = wishes.filter((w) => !w.item).length;
-  parts.push(dashCard(
-    'I wish I could say…',
-    el('p', { class: 'dash-line hint' }, wishes.length
-      ? `${wishes.length - waiting} turned into cards${waiting ? ` · ${waiting} waiting` : ''}`
-      : 'Missed a chance to say something today? Add it here and it becomes a card.'),
-    el('button', { class: 'secondary', 'data-go': 'wish' }, '＋ Add a phrase')
-  ));
-
-  // Conversations
-  const convos = conversations.filter((c) => c.deck === deck());
-  if (convos.length) {
-    parts.push(dashCard(
-      'Conversations',
-      ...convos.map((c) => {
-        const st = convoStatus(c, progress);
-        const status = st.done ? `done ${st.done}×` : st.ready ? 'ready' : `${st.learned}/${st.total} of your lines met`;
-        return el('button', { class: 'convo-row', onclick: () => startConvo(c) }, el('span', {}, c.title), el('span', { class: 'hint' }, status));
-      })
-    ));
-  }
-
-  // Tone check (Mandarin)
-  if (deck() === 'mandarin') {
-    const words = toneWords(allItems, progress);
-    parts.push(dashCard(
-      'Tones',
-      toneBars(progress.tones),
-      words.length
-        ? el('button', { class: 'secondary', onclick: startTones }, 'Tone check (10 questions)')
-        : el('p', { class: 'dash-line hint' }, 'Unlocks once you have met a few single words.')
-    ));
-  }
-
-  // What I can say
-  const groups = canSay(list, progress);
-  if (groups.length) {
-    const total = groups.reduce((n, g) => n + g.solid, 0);
-    parts.push(dashCard(
-      `What I can say · ${total}`,
-      ...groups.map((g) => el('details', { class: 'can' },
-        el('summary', {}, el('span', {}, g.topic), el('span', { class: 'hint' }, ` ${g.solid}/${g.total}`)),
-        el('ul', {}, ...g.items.map((i) => el('li', { class: i.solid ? 'solid' : '' },
-          el('span', { class: 'can-mark' }, i.solid ? '✓' : '·'), sayLine(sample(byId[i.id]), deck()))))))
-    ));
-  }
-  $('dash').replaceChildren(...parts);
+  renderMission(now);
 }
 
-// ---------- study
+function renderMission(now) {
+  const slot = $('mission-slot');
+  if (missionDoneToday(progress, now)) {
+    const n = progress.missions.length;
+    slot.replaceChildren(card(el('p', { class: 'eyebrow' }, "Today's mission"), el('p', { class: 'mission-what' }, `Done. ${n} real-life mission${n === 1 ? '' : 's'} so far.`)));
+    return;
+  }
+  const m = pickMission(items(), progress, now, missionSkip);
+  if (!m) {
+    slot.replaceChildren();
+    return;
+  }
+  slot.replaceChildren(card(
+    el('p', { class: 'eyebrow' }, "Today's mission"),
+    el('p', { class: 'mission-what' }, m.mission),
+    sayLine(sample(m), deck()),
+    el('div', { class: 'mission-foot' },
+      el('button', { class: 'link small', onclick: () => { missionSkip += 1; renderMission(new Date()); } }, 'Another one'),
+      el('button', { class: 'btn primary small', onclick: () => { markMissionDone(progress, m.id, new Date()); persist(); renderMission(new Date()); } }, 'I did it'))
+  ));
+}
+
+// ---------- practice
 
 function contentFor(card) {
   const item = byId[card.id];
@@ -374,8 +321,7 @@ function contentFor(card) {
   if (lvl === 'situation' && item.mine) src = item.fills.find((f) => f.fillId === item.mine) || src;
   return {
     zh: src.zh, roman: src.roman, en: src.en, words: src.words, audio: src.audio, situation: src.situation,
-    voice: pickVoice(src), played: false, note: item.note, deck: item.deck, flagged: new Set(),
-    level: lvl,
+    voice: pickVoice(src), played: false, note: item.note, deck: item.deck, flagged: new Set(), level: lvl,
     ...tracking(),
   };
 }
@@ -385,35 +331,34 @@ function tracking() {
   return { shownAt: performance.now(), revealMs: null, replays: 0, lookups: new Set(), hint: false };
 }
 
-function showFlag() {
-  const flag = voiceFlag(session.current.c.voice);
-  $('voice-flag').textContent = flag;
+function showAccent() {
+  const tag = voiceTag(session.current.c.voice);
+  $('voice-flag').textContent = tag;
   const speaker = document.querySelector('#prompt .speaker');
-  if (speaker) speaker.textContent = flag;
+  if (speaker) speaker.textContent = tag;
 }
 
-// First play uses the card's voice; each further tap on 🔊 moves to the next speaker.
+// First play uses the card's voice; each further tap on play moves to the next speaker.
 function playCurrent({ slow = false, next = false } = {}) {
   const c = session?.current?.c;
   if (!c) return;
   if (next && c.played) c.voice = nextVoice(c, c.voice);
   if (c.played) c.replays += 1;
   c.played = true;
-  showFlag();
+  showAccent();
   play(c.audio[c.voice][slow ? 1 : 0]);
 }
 
-// Answer shown word by word. Tap a word for its meaning; mark it as missed to practise it later.
+// Answer shown word by word; tap a word for its meaning.
 function renderWords(c) {
   const lang = LANG_ATTR[c.deck];
   const gloss = $('a-gloss');
   gloss.hidden = true;
-  const multi = c.words.length > 1 || c.drill;
   $('a-words').replaceChildren(
     ...c.words.map((w) => {
       const btn = el(
         'button',
-        { class: `wg${w.zh === c.target && c.drill === 'gap' ? ' target' : ''}`, 'aria-label': `${w.zh}: ${w.gloss}` },
+        { class: `wg${w.zh === c.target && c.drill === 'gap' ? ' target' : ''}`, 'data-zh': w.zh, 'aria-label': `${w.zh}: ${w.gloss}` },
         el('span', { class: 'wg-zh', lang }, w.zh),
         renderRoman(el('span', { class: 'wg-roman' }), w.roman, c.deck)
       );
@@ -424,19 +369,7 @@ function renderWords(c) {
         if (wasActive) return;
         btn.classList.add('active');
         c.lookups.add(w.zh);
-        const parts = [el('b', { lang }, w.zh), ` = ${w.gloss}`];
-        if (multi) {
-          const miss = el('button', { class: `miss${c.flagged.has(w.zh) ? ' on' : ''}` }, c.flagged.has(w.zh) ? '✗ Missed' : 'I missed this');
-          miss.addEventListener('click', () => {
-            if (c.flagged.has(w.zh)) c.flagged.delete(w.zh);
-            else c.flagged.add(w.zh);
-            btn.classList.toggle('missed', c.flagged.has(w.zh));
-            miss.classList.toggle('on', c.flagged.has(w.zh));
-            miss.textContent = c.flagged.has(w.zh) ? '✗ Missed' : 'I missed this';
-          });
-          parts.push(miss);
-        }
-        gloss.replaceChildren(...parts);
+        gloss.replaceChildren(renderRoman(el('b'), w.roman, c.deck), ` = ${w.gloss}`);
       });
       return btn;
     })
@@ -444,8 +377,8 @@ function renderWords(c) {
 }
 
 // A small button that reveals a hint (first letters of the pinyin by default) and records that it was used.
-function hintButton(c, label = '💡 Hint', text = () => hintText(c.roman, c.deck)) {
-  const b = el('button', { class: 'hint-btn' }, label);
+function hintButton(c, label = 'Hint', text = () => hintText(c.roman, c.deck)) {
+  const b = el('button', { class: 'hint-btn' }, icon('bulb'), label);
   b.addEventListener('click', () => {
     c.hint = true;
     b.replaceWith(el('p', { class: 'hint-line' }, text()));
@@ -468,36 +401,35 @@ function promptFor(card, c) {
     }
     return parts;
   }
-  if (c.drill === 'word') return [el('p', { class: 'prompt-en' }, c.en), el('p', { class: 'hint' }, 'one word'), hintButton(c)];
+  if (c.drill === 'word') return [el('p', { class: 'prompt-en' }, c.en), el('p', { class: 'muted' }, 'one word'), hintButton(c)];
   if (card.type === 'say') {
-    if (c.level === 'situation') {
-      return [el('p', { class: 'prompt-situation' }, c.situation), hintButton(c, 'Show the English', () => c.en)];
-    }
-    if (c.level === 'speed') {
-      return [el('p', { class: 'prompt-en' }, c.en), el('div', { class: 'speed-bar' }, el('div', { class: 'speed-fill' }))];
-    }
-    const parts = [el('p', { class: 'prompt-en' }, c.en)];
+    if (c.level === 'situation') return [el('p', { class: 'prompt-situation' }, c.situation), hintButton(c, 'Show the English', () => c.en)];
+    if (c.level === 'speed') return [el('p', { class: 'prompt-en' }, c.en), el('div', { class: 'speed-bar' }, el('div', { class: 'speed-fill' }))];
     if (c.level === 'hint') {
       c.hint = true;
-      parts.push(el('p', { class: 'hint-line' }, hintText(c.roman, c.deck)));
-    } else {
-      parts.push(hintButton(c));
+      return [el('p', { class: 'prompt-en' }, c.en), el('p', { class: 'hint-line' }, hintText(c.roman, c.deck))];
     }
-    return parts;
+    return [el('p', { class: 'prompt-en' }, c.en), hintButton(c)];
   }
   if (card.type === 'read') return [el('p', { class: 'prompt-zh', lang }, c.zh)];
   return [
-    el('button', { class: 'prompt-audio audio-btn', 'aria-label': 'Play, then next voice', onclick: () => playCurrent({ next: true }) }, '🔊'),
+    el('button', { class: 'icon-btn huge', 'aria-label': 'Play, then next voice', onclick: () => playCurrent({ next: true }) }, icon('play')),
     el('p', { class: 'speaker' }),
   ];
 }
 
-function startSession(queueOverride) {
-  const queue = queueOverride || buildQueue(studyItems(), progress, new Date(), newLimit(), deck());
+function startSession(queue, { convo = null } = {}) {
   if (!queue.length) return;
-  session = { queue, pos: 0, total: queue.length, done: 0 };
+  session = {
+    queue, pos: 0, total: queue.length, done: 0, right: 0, graded: 0,
+    startedAt: Date.now(), before: snapshot(progress), convo,
+  };
   show('study');
   showCard();
+}
+
+function startToday() {
+  startSession(todayPlan().queue, { convo: readyConversation() });
 }
 
 function showCard() {
@@ -508,28 +440,30 @@ function showCard() {
 
   $('card-kind').textContent = c.drill
     ? 'Trouble spot'
-    : c.level === 'situation' ? `What would you say? (${LANG_NAME[c.deck]})`
+    : c.level === 'situation' ? 'What would you say?'
     : c.level === 'speed' ? 'Speed round: say it before the bar runs out'
     : { say: `Say it in ${LANG_NAME[c.deck]}`, listen: 'What does this mean?', read: 'Read it aloud' }[card.type];
   $('prompt').replaceChildren(...promptFor(card, c));
   if (!c.drill && card.type === 'listen') playCurrent();
 
   renderWords(c);
-  showFlag();
+  showAccent();
   $('rec').hidden = !canRecord();
-  $('rec').textContent = '🎙';
+  $('rec').replaceChildren(icon('mic'));
+  $('rec').classList.remove('recording');
   $('rec-row').hidden = true;
   $('a-en').textContent = c.en;
-  $('a-en').hidden = card.type === 'say' && c.level !== 'situation'; // already shown as the prompt (drills are say cards too)
+  $('a-en').hidden = card.type === 'say' && c.level !== 'situation' && !c.drill;
   $('a-note').textContent = c.note || '';
   $('a-note').hidden = !c.note;
   $('answer').hidden = true;
   $('reveal').hidden = false;
   $('grades').hidden = true;
+  $('which').hidden = true;
+  for (const g of document.querySelectorAll('#grades .grade')) g.classList.remove('picked');
 
-  const pct = (session.done / Math.max(session.total, session.done + 1)) * 100;
-  $('progress-bar').style.width = `${pct}%`;
-  $('progress-text').textContent = `${session.queue.length - session.pos} left`;
+  $('progress-bar').style.width = `${(session.done / Math.max(session.total, session.done + 1)) * 100}%`;
+  $('progress-text').textContent = `${Math.min(session.done + 1, session.total)} of ${session.total}`;
 }
 
 function reveal() {
@@ -541,24 +475,48 @@ function reveal() {
   if (session.current.card.type !== 'listen') playCurrent();
 }
 
+// Grading: after "Didn't know" or "Almost" on a multi-word answer, ask which part tripped you up.
 function rate(rating) {
-  if (!session || $('grades').hidden) return;
+  if (!session || $('grades').hidden || !$('which').hidden) return;
+  const { c } = session.current;
+  if (rating < 3 && c.words.length > 1) {
+    document.querySelector(`#grades [data-rating="${rating}"]`).classList.add('picked');
+    session.current.pending = rating;
+    $('which-chips').replaceChildren(...c.words.map((w) => {
+      const chip = el('button', { class: 'chip' }, renderRoman(el('span'), w.roman, c.deck), el('small', {}, w.gloss));
+      chip.addEventListener('click', () => {
+        if (c.flagged.has(w.zh)) c.flagged.delete(w.zh);
+        else c.flagged.add(w.zh);
+        chip.classList.toggle('on', c.flagged.has(w.zh));
+        document.querySelector(`#a-words [data-zh="${CSS.escape(w.zh)}"]`)?.classList.toggle('missed', c.flagged.has(w.zh));
+      });
+      return chip;
+    }));
+    $('which').hidden = false;
+    return;
+  }
+  commit(rating);
+}
+
+function commit(rating) {
   const { card, c } = session.current;
   const now = new Date();
   const state = grade(progress.cards[card.key] || null, rating, now);
   applyReview(progress, card, rating, state, now, {
     ms: c.revealMs, voice: c.voice, replays: c.replays, lookups: [...c.lookups], hint: c.hint,
   });
-  if (rating >= 3) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words.filter((w) => !c.flagged.has(w.zh)), now);
+  if (rating >= 3) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words, now);
   for (const zh of c.flagged) {
     // A newly missed word gets a practice card straight away, shown again later in this session.
     const id = flagWord(progress, c.deck, zh, now);
     const key = `${id}:say`;
     if (!progress.cards[key]) progress.cards[key] = grade(null, 1, now);
-    studyItems();
+    drills();
     if (!session.queue.slice(session.pos + 1).some((q) => q.key === key)) session.queue.push({ key, id, type: 'say', deck: c.deck });
   }
   persist();
+  session.graded += 1;
+  if (rating >= 3) session.right += 1;
   session.pos += 1;
   if (shouldRequeue(state, now)) session.queue.push(card);
   else session.done += 1;
@@ -566,11 +524,134 @@ function rate(rating) {
 }
 
 function finishSession() {
-  const n = session.done;
+  const s = session;
   session = null;
+  const results = {
+    cards: s.graded,
+    minutes: Math.max(1, Math.round((Date.now() - s.startedAt) / 60000)),
+    pct: s.graded ? Math.round((100 * s.right) / s.graded) : 0,
+    ...outcome(s.before, progress, allItems, deck()),
+  };
   syncNow();
-  $('done-text').textContent = `${n} card${n === 1 ? '' : 's'} done. See you tomorrow!`;
+  if (s.convo) {
+    pendingEnd = results;
+    startConvo(s.convo);
+    return;
+  }
+  renderDone(results);
+}
+
+function renderDone(r) {
+  pendingEnd = null;
   show('done');
+  $('done-title').textContent = r.pct >= 80 ? 'Nicely done.' : r.pct >= 50 ? 'Good work.' : 'That was a hard one. Well done for showing up.';
+  $('done-stats').replaceChildren(
+    ...[[r.cards, 'cards'], [r.minutes, 'minutes'], [`${r.pct}%`, 'got it']].map(([n, l]) => el('div', { class: 'stat' }, el('b', {}, String(n)), el('span', {}, l)))
+  );
+  $('done-solid').replaceChildren(...(r.solid.length ? [
+    el('p', { class: 'section' }, 'Now solid'),
+    ...r.solid.map((item, i) => {
+      const seal = el('span', { class: 'seal seal-small stamp-in', style: `animation-delay:${0.3 + i * 0.25}s` }, el('span', { lang: 'zh-Hant-TW' }, '成'));
+      return el('div', { class: 'stamp-row' }, sayLine(sample(item), item.deck), seal);
+    }),
+  ] : []));
+  const changes = [];
+  for (const zh of r.cleared) {
+    changes.push(el('div', { class: 'change' }, icon('check'), el('span', {}, el('b', {}, (wordInfo(zh)?.roman || zh).replace(/-/g, '')), ' is off your trouble list')));
+  }
+  const soon = dueSoon(progress, items(), new Date());
+  changes.push(el('div', { class: 'change info' }, icon('calendar'), el('span', {}, soon ? `Tomorrow: ${soon} review${soon === 1 ? '' : 's'}, ${minutes(estimateMinutes(soon))}` : 'Nothing due tomorrow. Enjoy the day off.')));
+  $('done-changes').replaceChildren(el('p', { class: 'section' }, 'What changed'), ...changes);
+}
+
+// ---------- explore
+
+function renderExplore() {
+  $('explore-convos').replaceChildren(...conversations.filter((c) => c.deck === deck()).map((c) => {
+    const st = convoStatus(c, progress);
+    const status = st.done ? `done ${st.done}×` : st.ready ? 'ready' : `${st.learned} of ${st.total} lines met`;
+    return el('button', { class: `convo-row${st.ready ? ' ready' : ''}`, onclick: () => startConvo(c) }, icon('chat'), el('span', {}, c.title), el('span', { class: 'muted' }, status));
+  }));
+  const words = deck() === 'mandarin' ? toneWords(allItems, progress) : [];
+  $('tones-row').hidden = deck() !== 'mandarin';
+  $('tones-sub').textContent = words.length ? '10 questions' : 'after a few words';
+  $('browse-sub').textContent = `${items().length}`;
+  const wishes = wishStatus(progress, allItems);
+  const waiting = wishes.filter((w) => !w.item).length;
+  $('wish-sub').textContent = wishes.length ? `${wishes.length - waiting} ready${waiting ? `, ${waiting} waiting` : ''}` : '';
+}
+
+function groupLabel(item) {
+  return item.set || `Week ${item.week}`;
+}
+
+function rowParts(entry, d, badge) {
+  return [
+    el('span', { class: 'zh-s', lang: LANG_ATTR[d] }, entry.zh, ...(badge ? [el('span', { class: 'badge' }, badge)] : [])),
+    el('span', { class: 'en-s' }, entry.en),
+    renderRoman(el('span', { class: 'pinyin-s' }), entry.roman, d),
+  ];
+}
+
+function browseRow(entry, d) {
+  return el('button', { class: 'row', onclick: () => play(entry.audio[pickVoice(entry)][0]) }, ...rowParts(entry, d));
+}
+
+function renderBrowse() {
+  const list = items();
+  const d = deck();
+  // Newest group first: groups ordered by where they first appear in the data, reversed.
+  const labels = [...new Set(list.map(groupLabel))].reverse();
+  $('browse-list').replaceChildren(...labels.map((label) => el('div', { class: 'week' },
+    el('h3', {}, label),
+    ...list.filter((i) => groupLabel(i) === label).map((i) => (i.kind !== 'pattern'
+      ? browseRow(i, d)
+      : el('details', { class: 'pattern' },
+        el('summary', { class: 'row' }, ...rowParts(i, d, 'pattern')),
+        el('div', { class: 'fills' }, ...i.fills.map((f) => browseRow(f, d)))))))));
+}
+
+// ---------- me
+
+function renderMe() {
+  const now = new Date();
+  const list = items();
+  const d = deck();
+
+  $('me-cansay').replaceChildren(...canSay(list, progress).map((g) => el('details', { class: 'sit' },
+    el('summary', {},
+      el('span', { class: 'sit-name' }, g.topic),
+      el('span', { class: 'dots', 'aria-hidden': 'true' }, ...g.items.map((i) => el('i', { class: i.solid ? 'on' : '' }))),
+      el('span', { class: 'muted' }, `${g.solid}/${g.total}`)),
+    el('ul', {}, ...g.items.map((i) => el('li', { class: i.solid ? 'solid' : '' }, el('span', { class: 'mark' }, i.solid ? '✓' : '·'), sayLine(sample(byId[i.id]), d)))))));
+
+  const r = d === 'mandarin' ? weekReadiness(list, progress) : null;
+  if (r) {
+    const day = progress.settings.lessonDay;
+    const n = day == null ? null : daysUntil(day, now);
+    const when = n == null ? el('button', { class: 'link small', 'data-go': 'settings' }, 'Set lesson day')
+      : el('span', { class: 'muted' }, n === 0 ? 'today' : `in ${n} day${n === 1 ? '' : 's'}`);
+    $('me-lesson').replaceChildren(el('p', { class: 'section' }, 'Your lessons'), card(
+      el('div', { class: 'top' }, el('span', { class: 'eyebrow' }, day == null ? `Week ${r.week}` : `Lesson ${WEEKDAYS[day]}`), when),
+      el('p', { class: 'lesson-num' }, `${r.solid} of ${r.total} ready`),
+      el('div', { class: 'meter' }, el('div', { class: 'meter-fill', style: `width:${(100 * r.solid) / r.total}%` })),
+      el('div', { class: 'button-row' }, el('button', { class: 'btn small', 'data-go': 'checkin' }, 'Notes for coach'), el('button', { class: 'btn small', 'data-go': 'checkin' }, 'This week'))
+    ));
+  } else {
+    $('me-lesson').replaceChildren();
+  }
+
+  const spots = troubleSpots(progress, d);
+  const info = Object.fromEntries(drills().map((x) => [x.zh, x]));
+  $('me-spots').replaceChildren(...(spots.length ? [
+    el('p', { class: 'section' }, 'Trouble spots'),
+    el('div', { class: 'spots' }, ...spots.slice(0, 10).map((t) => el('span', { class: 'spot' }, renderRoman(el('span'), info[t.zh]?.roman || t.zh, d), el('small', {}, info[t.zh]?.gloss || '')))),
+    el('button', { class: 'btn small', onclick: () => startSession(drills().map((x) => ({ key: `${x.id}:say`, id: x.id, type: 'say', deck: x.deck }))) }, `Practise ${spots.length} now`),
+  ] : []));
+
+  $('me-tones').replaceChildren(...(d === 'mandarin' ? [el('p', { class: 'section' }, 'Tones'), toneBars(progress.tones)] : []));
+  const n = progress.missions.length;
+  $('me-missions').textContent = n ? `${n} real-life mission${n === 1 ? '' : 's'} done.` : '';
 }
 
 // ---------- weekly check-in
@@ -578,16 +659,9 @@ function finishSession() {
 function renderCheckin() {
   const now = new Date();
   const text = checkinText(weekSummary(progress, allItems, now), weekReadiness(allItems.filter((i) => i.deck === 'mandarin'), progress));
-  $('ci-body').replaceChildren(...text.split('\n').map((line, i) => el('p', i ? {} : { class: 'dash-line' }, i ? line : el('b', {}, line))));
+  $('ci-body').textContent = text;
   $('ci-status').textContent = '';
-  $('ci-copy').onclick = async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      $('ci-status').textContent = 'Copied. Paste it into Claude with your coach notes.';
-    } catch {
-      $('ci-status').textContent = 'Could not copy. Use Share instead.';
-    }
-  };
+  $('ci-copy').onclick = () => navigator.clipboard.writeText(text).then(() => { $('ci-status').textContent = 'Copied.'; }).catch(() => { $('ci-status').textContent = 'Could not copy. Use Share instead.'; });
   $('ci-share').hidden = !navigator.share;
   $('ci-share').onclick = () => navigator.share({ title: '說 weekly check-in', text }).catch(() => {});
 
@@ -606,10 +680,8 @@ function renderWishes() {
   $('wish-deck').value = deck();
   $('wish-list').replaceChildren(...wishStatus(progress, allItems).map((w) =>
     el('div', { class: `wish${w.item ? ' ready' : ''}` },
-      el('p', { class: 'wish-text' }, `"${w.text}"`, w.where ? el('span', { class: 'hint' }, ` · ${w.where}`) : ''),
-      w.item
-        ? sayLine(w.item, w.item.deck)
-        : el('p', { class: 'hint' }, 'Waiting: becomes a card in the next daily update.'))));
+      el('p', { class: 'wish-text' }, `"${w.text}"`, w.where ? el('span', { class: 'muted' }, ` · ${w.where}`) : ''),
+      w.item ? sayLine(w.item, w.item.deck) : el('p', { class: 'muted' }, 'On its way: it becomes a card soon.'))));
 }
 
 function saveWish() {
@@ -620,53 +692,8 @@ function saveWish() {
   syncNow();
   $('wish-text').value = '';
   $('wish-where').value = '';
-  $('wish-status').textContent = syncCfg ? 'Saved. Claude will pick it up.' : 'Saved on this phone. Connect sync in Settings so Claude can see it.';
+  $('wish-status').textContent = syncCfg ? 'Saved. Claude will turn it into a card.' : 'Saved on this phone. Connect sync in Settings so Claude can see it.';
   renderWishes();
-}
-
-// ---------- browse
-
-function rowParts(entry, d, badge) {
-  return [
-    el('span', { class: 'zh-s', lang: LANG_ATTR[d] }, entry.zh, ...(badge ? [el('span', { class: 'badge' }, badge)] : [])),
-    el('span', { class: 'en-s' }, entry.en),
-    renderRoman(el('span', { class: 'pinyin-s' }), entry.roman, d),
-  ];
-}
-
-function browseRow(entry, d) {
-  return el('button', { class: 'row', onclick: () => play(entry.audio[pickVoice(entry)][0]) }, ...rowParts(entry, d));
-}
-
-function groupLabel(item) {
-  return item.set || `Week ${item.week}`;
-}
-
-function renderBrowse() {
-  const list = items();
-  const d = deck();
-  // Newest group first: groups ordered by where they first appear in the data, reversed.
-  const labels = [...new Set(list.map(groupLabel))].reverse();
-  $('browse-list').replaceChildren(
-    ...labels.map((label) =>
-      el(
-        'div',
-        { class: 'week' },
-        el('h3', {}, label),
-        ...list
-          .filter((i) => groupLabel(i) === label)
-          .map((i) => {
-            if (i.kind !== 'pattern') return browseRow(i, d);
-            return el(
-              'details',
-              { class: 'pattern' },
-              el('summary', { class: 'row' }, ...rowParts(i, d, 'pattern')),
-              el('div', { class: 'fills' }, ...i.fills.map((f) => browseRow(f, d)))
-            );
-          })
-      )
-    )
-  );
 }
 
 // ---------- settings
@@ -676,9 +703,7 @@ function renderSettings() {
   $('lesson-day').value = progress.settings.lessonDay ?? '';
   $('reading').checked = !!progress.settings.reading;
   renderSync();
-  $('last-export').textContent = progress.lastExport
-    ? `Last export: ${new Date(progress.lastExport).toLocaleDateString()}`
-    : 'Not exported yet.';
+  $('last-export').textContent = progress.lastExport ? `Last export: ${new Date(progress.lastExport).toLocaleDateString()}` : 'Not exported yet.';
   const counts = Object.keys(decks).map((d) => `${allItems.filter((i) => i.deck === d).length} ${LANG_NAME[d]}`);
   $('version').textContent = `Content version ${version} · ${counts.join(' · ')}`;
 }
@@ -727,25 +752,37 @@ function resetProgress() {
 function wire() {
   document.addEventListener('click', (e) => {
     const go = e.target.closest('[data-go]');
-    if (go) show(go.dataset.go);
+    // Closing a conversation that ended a session still shows what the session achieved.
+    if (go && currentView === 'convo' && pendingEnd) renderDone(pendingEnd);
+    else if (go) show(go.dataset.go);
+    if (e.target.closest('.deck-pill')) switchDeck();
   });
-  $('start').addEventListener('click', () => startSession());
-  $('more').addEventListener('click', () => { extraNew += 5; startSession(); });
+  $('start').addEventListener('click', startToday);
+  $('more').addEventListener('click', () => { extraNew += 5; startToday(); });
   $('quit').addEventListener('click', () => { session = null; show('home'); });
   $('reveal').addEventListener('click', reveal);
   $('play').addEventListener('click', () => playCurrent({ next: true }));
   $('play-slow').addEventListener('click', () => playCurrent({ slow: true }));
-  for (const b of document.querySelectorAll('#grades button')) {
-    b.addEventListener('click', () => rate(Number(b.dataset.rating)));
-  }
+  for (const b of document.querySelectorAll('#grades .grade')) b.addEventListener('click', () => rate(Number(b.dataset.rating)));
+  $('which-next').addEventListener('click', () => { $('which').hidden = true; commit(session.current.pending); });
+  $('which-skip').addEventListener('click', () => {
+    session.current.c.flagged.clear();
+    $('which').hidden = true;
+    commit(session.current.pending);
+  });
+  $('tones-row').addEventListener('click', startTones);
+  $('cv-done').addEventListener('click', () => (pendingEnd ? renderDone(pendingEnd) : show('explore')));
   document.addEventListener('keydown', (e) => {
-    if (!session || e.target.tagName === 'INPUT') return;
-    if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); reveal(); }
-    if (['1', '2', '3', '4'].includes(e.key)) rate(Number(e.key));
+    if (!session || ['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      if (!$('which').hidden) $('which-next').click();
+      else reveal();
+    }
+    if (['1', '2', '3'].includes(e.key)) rate(Number(e.key));
   });
   $('new-per-day').addEventListener('change', (e) => {
-    const n = Math.max(0, Math.min(50, parseInt(e.target.value, 10) || 0));
-    progress.settings.newPerDay = n;
+    progress.settings.newPerDay = Math.max(0, Math.min(50, parseInt(e.target.value, 10) || 0));
     persist();
     renderSettings();
   });
@@ -762,22 +799,21 @@ function wire() {
   $('rec').addEventListener('click', async () => {
     const c = session?.current?.c;
     if (!c) return;
+    const idle = () => { $('rec').replaceChildren(icon('mic')); $('rec').classList.remove('recording'); };
     try {
       if (!isRecording()) {
         await startRecording();
-        $('rec').textContent = '⏹';
+        $('rec').replaceChildren(icon('stop'));
         $('rec').classList.add('recording');
         return;
       }
       c.recording = await stopRecording();
-      $('rec').textContent = '🎙';
-      $('rec').classList.remove('recording');
+      idle();
       $('rec-row').hidden = false;
       $('rec-share').hidden = !navigator.canShare;
       compare(c.recording, c.audio[c.voice][0]);
     } catch {
-      $('rec').textContent = '🎙';
-      $('rec').classList.remove('recording');
+      idle();
     }
   });
   $('rec-play').addEventListener('click', () => {
@@ -794,6 +830,7 @@ function wire() {
 }
 
 async function init() {
+  hydrateIcons();
   wire();
   initBook();
   const ctx = { allItems: () => allItems, progress: () => progress, persist, show, byId: () => byId, decks: () => decks };
@@ -803,13 +840,12 @@ async function init() {
   const res = await fetch('phrases.json');
   const data = await res.json();
   allItems = data.items;
-  voices = data.voices;
   decks = data.decks;
   conversations = data.conversations || [];
-  document.addEventListener('visibilitychange', () => { if (document.hidden) syncNow(); });
-  syncOnOpen();
   version = data.version;
   byId = Object.fromEntries(allItems.map((i) => [i.id, i]));
+  document.addEventListener('visibilitychange', () => { if (document.hidden) syncNow(); });
+  syncOnOpen();
   show('home');
 
   if ('serviceWorker' in navigator) {

@@ -4,39 +4,54 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>說 Chinese</title>
-  <meta name="theme-color" content="#9e2a22">
+  <meta name="theme-color" content="#f6f1e7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1916" media="(prefers-color-scheme: dark)">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="說">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <link rel="icon" href="icons/icon-192.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main id="app">
+
+    <!-- ============ TODAY ============ -->
     <section id="view-home" class="view">
-      <header class="home-head">
-        <h1 lang="zh-Hant-TW">說</h1>
-        <div class="deck-switch"></div>
-        <p class="streak" id="streak"></p>
+      <header class="top">
+        <span class="eyebrow" id="today-eyebrow"></span>
+        <button class="deck-pill" aria-label="Switch language"></button>
       </header>
       <div id="export-banner" class="banner" hidden>
-        It's been a while since your last backup. <button class="link" data-go="settings">Export progress</button>
+        It's been a week since your last backup. <button class="link" data-go="settings">Back up now</button>
       </div>
-      <div class="due-block">
-        <p class="due-count" id="due-count">0</p>
-        <p class="due-label" id="due-label">cards today</p>
-        <button id="start" class="primary big">Start</button>
-        <button id="more" class="secondary" hidden>Learn 5 more new</button>
+      <h1 class="greeting" id="greeting"></h1>
+      <p class="note" id="today-note"></p>
+
+      <div class="start" id="start-block">
+        <button class="seal seal-big" id="start" aria-describedby="start-sub"><span lang="zh-Hant-TW">說</span></button>
+        <span class="start-cta">Start today's practice</span>
+        <span class="start-sub" id="start-sub"></span>
       </div>
-      <p class="learned" id="learned"></p>
-      <div class="dash" id="dash"></div>
+      <div class="start" id="rest-block" hidden>
+        <span class="seal seal-mid" aria-hidden="true"><span lang="zh-Hant-TW">成</span></span>
+        <span class="start-cta">All done for today</span>
+        <span class="start-sub" id="rest-sub"></span>
+        <div class="button-row center">
+          <button class="btn" id="more">Learn 5 more</button>
+          <button class="btn" data-go="explore">Explore</button>
+        </div>
+      </div>
+
+      <div id="mission-slot"></div>
     </section>
 
+    <!-- ============ PRACTICE ============ -->
     <section id="view-study" class="view" hidden>
       <div class="study-top">
-        <button class="link" id="quit" aria-label="End session">✕</button>
+        <button class="icon-btn quiet" id="quit" aria-label="End session"><i data-icon="x"></i></button>
         <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
         <span class="progress-text" id="progress-text"></span>
       </div>
@@ -47,146 +62,93 @@
           <div class="words" id="a-words"></div>
           <p class="gloss" id="a-gloss" hidden></p>
           <p class="en" id="a-en"></p>
-          <p class="note" id="a-note" hidden></p>
-          <div class="audio-row">
-            <button class="audio-btn" id="play" aria-label="Play, then next voice">🔊 <span class="flag" id="voice-flag"></span></button>
-            <button class="audio-btn" id="play-slow" aria-label="Play slowly">🐢</button>
-            <button class="audio-btn" id="rec" aria-label="Record yourself">🎙</button>
+          <p class="note-box" id="a-note" hidden></p>
+          <div class="tools">
+            <button class="icon-btn" id="play" aria-label="Play, then next voice"><i data-icon="play"></i><span class="accent-tag" id="voice-flag"></span></button>
+            <button class="icon-btn" id="play-slow" aria-label="Play slowly"><i data-icon="slow"></i></button>
+            <button class="icon-btn" id="rec" aria-label="Record yourself"><i data-icon="mic"></i></button>
           </div>
           <div class="rec-row" id="rec-row" hidden>
-            <button class="secondary small-btn" id="rec-play">▶ Me, then native</button>
+            <button class="btn small" id="rec-play">Me, then native</button>
             <button class="link small" id="rec-share">Share</button>
           </div>
         </div>
       </div>
       <div class="actions">
-        <button id="reveal" class="primary big">Show answer</button>
+        <button id="reveal" class="btn primary big">Show answer</button>
         <div class="grades" id="grades" hidden>
-          <button data-rating="1" class="g-again">Again</button>
-          <button data-rating="2" class="g-hard">Hard</button>
-          <button data-rating="3" class="g-good">Good</button>
-          <button data-rating="4" class="g-easy">Easy</button>
+          <button data-rating="1" class="grade">Didn't know</button>
+          <button data-rating="2" class="grade">Almost</button>
+          <button data-rating="3" class="grade grade-good">Got it</button>
+        </div>
+      </div>
+      <div class="sheet" id="which" hidden>
+        <p class="sheet-q">Which part tripped you up?</p>
+        <div class="chips" id="which-chips"></div>
+        <div class="grades two">
+          <button class="grade" id="which-skip">Skip</button>
+          <button class="grade grade-good" id="which-next">Next</button>
         </div>
       </div>
     </section>
 
+    <!-- ============ END OF SESSION ============ -->
     <section id="view-done" class="view" hidden>
-      <div class="done">
-        <p class="done-mark" lang="zh-Hant-TW">好！</p>
-        <p id="done-text">Session complete.</p>
-        <button class="primary big" data-go="home">Back home</button>
+      <h1 class="greeting" id="done-title">Nicely done.</h1>
+      <p class="muted">Here's what changed today</p>
+      <div class="stats" id="done-stats"></div>
+      <div id="done-solid"></div>
+      <div id="done-changes"></div>
+      <div class="button-row stretch">
+        <button class="btn primary" data-go="home">Done</button>
+        <button class="btn" data-go="wish">Add a wish</button>
       </div>
     </section>
 
-    <section id="view-tones" class="view" hidden>
-      <div class="study-top">
-        <button class="link close" data-go="home" aria-label="Close">✕</button>
-        <div class="progress"><div class="progress-bar" id="tq-bar"></div></div>
-        <span class="progress-text" id="tq-count"></span>
-      </div>
-      <div class="card">
-        <div id="tq-question">
-          <p class="card-kind">Which tones do you hear?</p>
-          <button class="prompt-audio audio-btn" id="tq-play" aria-label="Play again">🔊</button>
-          <div class="tq-options" id="tq-options"></div>
-        </div>
-        <div id="tq-feedback" hidden>
-          <p class="tq-zh" id="tq-zh"></p>
-          <p class="pinyin" id="tq-roman"></p>
-          <p class="en" id="tq-en"></p>
-        </div>
-        <div id="tq-result" hidden>
-          <p class="done-mark" lang="zh-Hant-TW">聲調</p>
-          <p class="tq-score" id="tq-score"></p>
-          <div id="tq-bars"></div>
-          <div class="button-row center">
-            <button class="primary" id="tq-again">Another round</button>
-            <button class="secondary" data-go="home">Done</button>
-          </div>
-        </div>
-      </div>
-      <div class="actions"><button class="primary big" id="tq-next" hidden>Next</button></div>
-    </section>
-
-    <section id="view-convo" class="view" hidden>
-      <div class="study-top">
-        <button class="link close" data-go="home" aria-label="Close">✕</button>
-        <h2 class="cv-title" id="cv-title"></h2>
-      </div>
-      <div class="cv-log" id="cv-log"></div>
-      <div class="cv-end" id="cv-end" hidden>
-        <p id="cv-end-text"></p>
-        <div class="button-row center">
-          <button class="primary" id="cv-again">Again</button>
-          <button class="secondary" data-go="home">Done</button>
-        </div>
-      </div>
-      <div class="actions sticky"><button class="primary big" id="cv-next">Show</button></div>
-    </section>
-
-    <section id="view-wish" class="view" hidden>
-      <div class="study-top">
-        <button class="link close" data-go="home" aria-label="Close">✕</button>
-        <h2>I wish I could say…</h2>
-      </div>
-      <p class="hint">Something you wanted to say today but couldn't? Write it in English. It comes back as a card with audio, usually the next morning.</p>
-      <textarea id="wish-text" rows="3" placeholder="e.g. Is this seat taken?"></textarea>
-      <input id="wish-where" class="token-input" placeholder="Where or with whom? (optional, helps get the tone right)">
-      <div class="button-row">
-        <select id="wish-deck">
-          <option value="mandarin">普通話 Mandarin</option>
-          <option value="cantonese">廣東話 Cantonese</option>
-        </select>
-        <button class="primary" id="wish-save">Save</button>
-      </div>
-      <p class="hint" id="wish-status"></p>
-      <div id="wish-list"></div>
-    </section>
-
-    <section id="view-checkin" class="view" hidden>
-      <div class="study-top">
-        <button class="link close" data-go="home" aria-label="Close">✕</button>
-        <h2>Weekly check-in</h2>
-      </div>
-      <div id="ci-body"></div>
-      <p class="hint">Paste this into a Claude session together with your coach's notes. I'll use it to write your next cards and suggest what to ask your coach.</p>
-      <div class="button-row">
-        <button class="primary" id="ci-copy">Copy for Claude</button>
-        <button class="secondary" id="ci-share">Share…</button>
-      </div>
-      <p class="hint" id="ci-status"></p>
-      <h3>For your coach</h3>
-      <div id="ci-coach" class="coach-brief"></div>
-      <div class="button-row">
-        <button class="secondary" id="ci-coach-copy">Copy</button>
-        <button class="secondary" id="ci-coach-share">Share…</button>
-      </div>
+    <!-- ============ EXPLORE ============ -->
+    <section id="view-explore" class="view" hidden>
+      <header class="top">
+        <h1 class="title">Explore</h1>
+        <button class="deck-pill" aria-label="Switch language"></button>
+      </header>
+      <h2 class="section">Practise</h2>
+      <div id="explore-convos"></div>
+      <button class="row-link" id="tones-row" hidden><i data-icon="wave"></i><span>Tone check</span><span class="muted" id="tones-sub"></span><i data-icon="chevron" class="chev"></i></button>
+      <h2 class="section">Look things up</h2>
+      <button class="row-link" data-go="browse"><i data-icon="list"></i><span>All phrases</span><span class="muted" id="browse-sub"></span><i data-icon="chevron" class="chev"></i></button>
+      <button class="row-link" data-go="book"><i data-icon="book"></i><span>Book audio</span><span class="muted">HSK 1</span><i data-icon="chevron" class="chev"></i></button>
+      <h2 class="section">Your own phrases</h2>
+      <button class="row-link" data-go="wish"><i data-icon="plus"></i><span>I wish I could say…</span><span class="muted" id="wish-sub"></span><i data-icon="chevron" class="chev"></i></button>
     </section>
 
     <section id="view-browse" class="view" hidden>
-      <header class="browse-head">
-        <h2>All phrases</h2>
-        <div class="deck-switch"></div>
+      <header class="top sub">
+        <button class="icon-btn quiet" data-go="explore" aria-label="Back"><i data-icon="back"></i></button>
+        <h1 class="title">All phrases</h1>
+        <button class="deck-pill" aria-label="Switch language"></button>
       </header>
       <div id="browse-list"></div>
     </section>
 
     <section id="view-book" class="view" hidden>
-      <header class="browse-head"><h2>Book</h2></header>
+      <header class="top sub">
+        <button class="icon-btn quiet" data-go="explore" aria-label="Back"><i data-icon="back"></i></button>
+        <h1 class="title">Book audio</h1>
+      </header>
       <div id="book-empty">
-        <p class="hint">Play your textbook's audio here. Load it once; it stays on this device only.</p>
-        <ol class="hint steps">
+        <p class="muted">Play your textbook's audio here. Load it once; it stays on this device only.</p>
+        <ol class="muted steps">
           <li>On the Mac, AirDrop <b>hsk1.chinesepack</b> to this phone (save it to Files).</li>
-          <li>Tap the button below and choose that file.</li>
+          <li>Choose that file below.</li>
         </ol>
-        <label class="primary big file-btn">Load book audio<input type="file" id="book-file" hidden></label>
+        <label class="btn primary file-btn">Load book audio<input type="file" id="book-file" hidden></label>
       </div>
       <div id="book-loaded" hidden>
-        <p class="book-title" id="book-title" lang="zh-Hans"></p>
+        <p class="muted" id="book-title" lang="zh-Hans"></p>
         <div id="book-list"></div>
         <button class="link small" id="book-remove">Remove book audio from this device</button>
       </div>
-      <p class="hint" id="book-status"></p>
+      <p class="muted" id="book-status"></p>
       <div class="player" id="player" hidden>
         <div class="player-head">
           <span class="player-title" id="player-title"></span>
@@ -199,52 +161,154 @@
           <button id="pl-play" class="pl-main" aria-label="Play or pause">▶</button>
           <button id="pl-next" aria-label="Next track">⏭</button>
           <button id="pl-speed" aria-label="Playback speed">1×</button>
-          <button id="pl-repeat" aria-label="Repeat track">🔁</button>
+          <button id="pl-repeat" aria-label="Repeat track">⟳</button>
         </div>
       </div>
     </section>
 
+    <section id="view-wish" class="view" hidden>
+      <header class="top sub">
+        <button class="icon-btn quiet" data-go="explore" aria-label="Back"><i data-icon="back"></i></button>
+        <h1 class="title">I wish I could say…</h1>
+      </header>
+      <p class="muted">Something you wanted to say but couldn't? Write it in English. It comes back as a card with audio.</p>
+      <textarea id="wish-text" rows="3" placeholder="Is this seat taken?"></textarea>
+      <input id="wish-where" class="field" placeholder="Where or with whom? (optional)">
+      <div class="button-row">
+        <select id="wish-deck" class="field">
+          <option value="mandarin">普通話 Mandarin</option>
+          <option value="cantonese">廣東話 Cantonese</option>
+        </select>
+        <button class="btn primary" id="wish-save">Save</button>
+      </div>
+      <p class="muted" id="wish-status"></p>
+      <div id="wish-list"></div>
+    </section>
+
+    <section id="view-tones" class="view" hidden>
+      <div class="study-top">
+        <button class="icon-btn quiet" data-go="explore" aria-label="Close"><i data-icon="x"></i></button>
+        <div class="progress"><div class="progress-bar" id="tq-bar"></div></div>
+        <span class="progress-text" id="tq-count"></span>
+      </div>
+      <div class="card">
+        <div id="tq-question">
+          <p class="card-kind">Which tones do you hear?</p>
+          <button class="icon-btn huge" id="tq-play" aria-label="Play again"><i data-icon="play"></i></button>
+          <div class="tq-options" id="tq-options"></div>
+        </div>
+        <div id="tq-feedback" hidden>
+          <p class="pinyin big-roman" id="tq-roman"></p>
+          <p class="tq-zh" id="tq-zh"></p>
+          <p class="en" id="tq-en"></p>
+        </div>
+        <div id="tq-result" hidden>
+          <span class="seal seal-mid" aria-hidden="true"><span lang="zh-Hant-TW">成</span></span>
+          <p class="tq-score" id="tq-score"></p>
+          <div id="tq-bars"></div>
+          <div class="button-row center">
+            <button class="btn primary" id="tq-again">Another round</button>
+            <button class="btn" data-go="explore">Done</button>
+          </div>
+        </div>
+      </div>
+      <div class="actions"><button class="btn primary big" id="tq-next" hidden>Next</button></div>
+    </section>
+
+    <section id="view-convo" class="view" hidden>
+      <div class="study-top">
+        <button class="icon-btn quiet" data-go="explore" aria-label="Close"><i data-icon="x"></i></button>
+        <h2 class="cv-title" id="cv-title"></h2>
+      </div>
+      <div class="cv-log" id="cv-log"></div>
+      <div class="cv-end" id="cv-end" hidden>
+        <p id="cv-end-text"></p>
+        <div class="button-row center">
+          <button class="btn" id="cv-again">Again</button>
+          <button class="btn primary" id="cv-done">Done</button>
+        </div>
+      </div>
+      <div class="actions sticky"><button class="btn primary big" id="cv-next">Show</button></div>
+    </section>
+
+    <!-- ============ ME ============ -->
+    <section id="view-me" class="view" hidden>
+      <header class="top">
+        <h1 class="title">What you can say</h1>
+        <button class="deck-pill" aria-label="Switch language"></button>
+      </header>
+      <div id="me-cansay"></div>
+      <div id="me-lesson"></div>
+      <div id="me-spots"></div>
+      <div id="me-tones"></div>
+      <p class="muted" id="me-missions"></p>
+      <button class="row-link" data-go="settings"><i data-icon="settings"></i><span>Settings</span><span class="muted"></span><i data-icon="chevron" class="chev"></i></button>
+    </section>
+
+    <section id="view-checkin" class="view" hidden>
+      <header class="top sub">
+        <button class="icon-btn quiet" data-go="me" aria-label="Back"><i data-icon="back"></i></button>
+        <h1 class="title">This week</h1>
+      </header>
+      <h2 class="section">For your coach</h2>
+      <div id="ci-coach" class="paper-box"></div>
+      <div class="button-row">
+        <button class="btn" id="ci-coach-copy">Copy</button>
+        <button class="btn" id="ci-coach-share">Share…</button>
+      </div>
+      <h2 class="section">For Claude</h2>
+      <p class="muted">With sync on, Claude reads this automatically. Otherwise, paste it into a Claude session with your coach's notes.</p>
+      <div id="ci-body" class="paper-box"></div>
+      <div class="button-row">
+        <button class="btn" id="ci-copy">Copy</button>
+        <button class="btn" id="ci-share">Share…</button>
+      </div>
+      <p class="muted" id="ci-status"></p>
+    </section>
+
     <section id="view-settings" class="view" hidden>
-      <h2>Settings</h2>
+      <header class="top sub">
+        <button class="icon-btn quiet" data-go="me" aria-label="Back"><i data-icon="back"></i></button>
+        <h1 class="title">Settings</h1>
+      </header>
       <label class="setting">
-        <span>New cards per day (per language)</span>
-        <input type="number" id="new-per-day" min="0" max="50" inputmode="numeric">
+        <span>New cards per day <small class="muted">(per language)</small></span>
+        <input type="number" id="new-per-day" min="0" max="50" inputmode="numeric" class="field narrow">
       </label>
       <label class="setting">
-        <span>Practise reading characters<br><small class="hint">Adds "Read it aloud" cards and shows characters large. Leave off while you focus on speaking.</small></span>
+        <span>Practise reading characters<br><small class="muted">Adds "read it aloud" cards and shows characters large.</small></span>
         <input type="checkbox" id="reading">
       </label>
       <label class="setting">
         <span>Coach lesson day</span>
-        <select id="lesson-day">
+        <select id="lesson-day" class="field">
           <option value="">Not set</option>
           <option value="1">Monday</option><option value="2">Tuesday</option><option value="3">Wednesday</option>
           <option value="4">Thursday</option><option value="5">Friday</option><option value="6">Saturday</option>
           <option value="0">Sunday</option>
         </select>
       </label>
-      <h3>Sync with Claude</h3>
+      <h2 class="section">Sync with Claude</h2>
       <div id="sync-box"></div>
-      <h3>Backup</h3>
-      <p class="hint">Your progress is saved only on this device. Export a backup now and then.</p>
+      <h2 class="section">Backup</h2>
+      <p class="muted">Your progress lives on this phone (and in sync, if connected).</p>
       <div class="button-row">
-        <button class="secondary" id="export">Export progress</button>
-        <label class="secondary file-btn">Import progress<input type="file" id="import" accept="application/json,.json" hidden></label>
+        <button class="btn" id="export">Export progress</button>
+        <label class="btn file-btn">Import progress<input type="file" id="import" accept="application/json,.json" hidden></label>
       </div>
-      <p class="hint" id="last-export"></p>
-      <h3>Install</h3>
-      <p class="hint">On iPhone: open this page in Safari, tap Share, then <b>Add to Home Screen</b>.</p>
-      <h3>Danger zone</h3>
-      <button class="danger" id="reset">Reset all progress</button>
-      <p class="hint version" id="version"></p>
+      <p class="muted" id="last-export"></p>
+      <h2 class="section">Install</h2>
+      <p class="muted">On iPhone: open this page in Safari, tap Share, then <b>Add to Home Screen</b>.</p>
+      <h2 class="section">Danger zone</h2>
+      <button class="btn danger" id="reset">Reset all progress</button>
+      <p class="muted small" id="version"></p>
     </section>
   </main>
 
   <nav class="tabs" id="tabs">
-    <button data-go="home" class="tab active">Study</button>
-    <button data-go="browse" class="tab">Browse</button>
-    <button data-go="book" class="tab">Book</button>
-    <button data-go="settings" class="tab">Settings</button>
+    <button data-go="home" class="tab"><i data-icon="sun"></i><span>Today</span></button>
+    <button data-go="explore" class="tab"><i data-icon="compass"></i><span>Explore</span></button>
+    <button data-go="me" class="tab"><i data-icon="user"></i><span>Me</span></button>
   </nav>
 
   <script type="module" src="app.js"></script>

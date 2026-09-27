@@ -2,6 +2,7 @@
 // your lines show the English, you say it, then check.
 import { $, el, play, renderRoman, LANG_ATTR } from './ui.js';
 import { localDate } from './lib/store.js';
+import { icon } from './icons.js';
 
 let ctx = null;
 let state = null; // {convo, i, revealed, voices: {them, you}, bubbles: []}
@@ -49,7 +50,7 @@ function showTurn() {
     el('span', { class: 'cv-who' }, turn.who === 'them' ? 'They say' : 'You say'),
     body);
   if (turn.who === 'them') {
-    body.append(el('button', { class: 'audio-btn', onclick: () => speak(entry, 'them') }, '🔊'), el('span', { class: 'hint' }, ' listen, then tap Show'));
+    body.append(el('button', { class: 'icon-btn', 'aria-label': 'Play', onclick: () => speak(entry, 'them') }, icon('play')), el('span', { class: 'muted' }, ' listen, then tap Show'));
     speak(entry, 'them');
   } else {
     body.append(el('p', { class: 'cv-cue' }, entry.en));
@@ -67,7 +68,7 @@ function reveal() {
     renderRoman(el('p', { class: 'cv-roman' }), entry.roman, d),
     el('p', { class: 'cv-zh', lang: LANG_ATTR[d] }, entry.zh),
     el('p', { class: 'cv-en' }, entry.en),
-    el('button', { class: 'audio-btn small-audio', onclick: () => speak(entry, turn.who) }, '🔊'));
+    el('button', { class: 'icon-btn', 'aria-label': 'Play', onclick: () => speak(entry, turn.who) }, icon('play')));
   if (turn.who === 'you') speak(entry, 'you');
   state.revealed = true;
   $('cv-next').textContent = state.i + 1 < state.convo.turns.length ? 'Next' : 'Finish';

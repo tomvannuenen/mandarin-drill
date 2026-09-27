@@ -1,5 +1,5 @@
 // Offline support. VERSION is stamped by tools/build.py whenever app files change.
-const VERSION = '20e2280574b0';
+const VERSION = '871dc6af6e75';
 const SHELL_CACHE = `shell-${VERSION}`;
 const AUDIO_CACHE = 'audio-v1';
 const SHELL = [
@@ -8,6 +8,15 @@ const SHELL = [
   'styles.css',
   'app.js',
   'ui.js',
+  'icons.js',
+  'fonts/fonts.css',
+  'fonts/Newsreader-normal-latin.woff2',
+  'fonts/Newsreader-normal-latin-ext.woff2',
+  'fonts/Newsreader-italic-latin.woff2',
+  'fonts/Newsreader-italic-latin-ext.woff2',
+  'fonts/AlbertSans-normal-latin.woff2',
+  'fonts/AlbertSans-normal-latin-ext.woff2',
+  'fonts/NotoSerifTC-normal-seal.woff2',
   'book.js',
   'tonecheck.js',
   'convo.js',
@@ -26,6 +35,7 @@ const SHELL = [
   'lib/sync.js',
   'lib/ladder.js',
   'lib/wishes.js',
+  'lib/today.js',
   'vendor/ts-fsrs.js',
   'manifest.webmanifest',
   'phrases.json',

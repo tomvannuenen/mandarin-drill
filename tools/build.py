@@ -53,7 +53,7 @@ ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 SLOT_RE = re.compile(r"\{(\w+)(?::(\w+))?\}")
 # Characters OpenCC "corrects" that are standard everyday Traditional in Taiwan.
 ALLOWED_TRAD_VARIANTS = set("台")
-SHELL_FILES = ["index.html", "styles.css", "app.js", "ui.js", "book.js", "tonecheck.js", "convo.js", "rec.js", "manifest.webmanifest", "phrases.json"]
+SHELL_FILES = ["index.html", "styles.css", "app.js", "ui.js", "icons.js", "fonts/fonts.css", "book.js", "tonecheck.js", "convo.js", "rec.js", "manifest.webmanifest", "phrases.json"]
 SHELL_GLOBS = ["lib/*.js", "vendor/*.js"]
 
 _cc = None

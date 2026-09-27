@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>說 redesign mockups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Albert+Sans:wght@400;500;600&family=Noto+Serif+TC:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+:root {
+  --paper: #f6f1e7; --paper-2: #fbf8f2; --ink: #1d1a17; --ink-2: #5b544c; --ink-3: #9a9187;
+  --rule: #e4dccd; --seal: #b8321f; --seal-ink: #fff6ee;
+  --t1: #c0392b; --t2: #d68910; --t3: #2e8b57; --t4: #2d5fb3; --t5: #9a9187;
+  --serif: 'Newsreader', Georgia, serif; --sans: 'Albert Sans', system-ui, sans-serif; --han: 'Noto Serif TC', 'PingFang TC', serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #d9d2c4; font-family: var(--sans); color: var(--ink); padding: 28px 20px 60px; }
+h1.page { font-family: var(--serif); font-weight: 500; font-size: 28px; margin: 0 0 4px 8px; }
+p.page { margin: 0 0 24px 8px; color: #4a443d; }
+.row { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start; }
+.label { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #4a443d; margin: 0 0 10px 6px; font-weight: 600; }
+.phone { width: 360px; height: 760px; background: var(--paper); border-radius: 44px; border: 10px solid #1d1a17; overflow: hidden; position: relative; display: flex; flex-direction: column; }
+.status { height: 40px; display: flex; justify-content: space-between; align-items: center; padding: 0 26px; font-size: 14px; font-weight: 600; }
+.screen { flex: 1; padding: 8px 22px 0; overflow: hidden; position: relative; }
+.tabs { height: 74px; border-top: 1px solid var(--rule); display: flex; justify-content: space-around; align-items: flex-start; padding-top: 10px; background: var(--paper-2); }
+.tab { display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 12px; color: var(--ink-3); font-weight: 500; }
+.tab i { font-size: 24px; }
+.tab.on { color: var(--seal); }
+.seal { background: var(--seal); color: var(--seal-ink); font-family: var(--han); font-weight: 700; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; box-shadow: inset 0 0 0 2px var(--seal), inset 0 0 0 4px var(--seal-ink); }
+.eyebrow { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+.hello { font-family: var(--serif); font-size: 34px; line-height: 1.1; margin: 6px 0 14px; font-weight: 500; }
+.note { font-family: var(--serif); font-style: italic; font-size: 17px; line-height: 1.45; color: var(--ink-2); border-left: 2px solid var(--seal); padding: 2px 0 2px 12px; margin: 0 0 22px; }
+.note b { font-style: normal; font-weight: 600; color: var(--ink); }
+.start { display: flex; flex-direction: column; align-items: center; margin: 4px 0 20px; }
+.start .seal { width: 150px; height: 150px; font-size: 64px; border-radius: 28px; transform: rotate(-3deg); box-shadow: inset 0 0 0 4px var(--seal), inset 0 0 0 7px var(--seal-ink), 0 10px 24px rgba(184,50,31,.25); }
+.start .cta { margin-top: 14px; font-family: var(--serif); font-size: 22px; font-weight: 500; }
+.start .sub { font-size: 13px; color: var(--ink-3); margin-top: 3px; }
+.card { background: var(--paper-2); border: 1px solid var(--rule); border-radius: 16px; padding: 14px 16px; }
+.mission .k { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+.mission .what { font-weight: 500; margin: 6px 0 8px; }
+.say { display: flex; align-items: center; gap: 10px; }
+.roman { font-family: var(--serif); font-size: 22px; font-weight: 500; }
+.t1 { color: var(--t1); } .t2 { color: var(--t2); } .t3 { color: var(--t3); } .t4 { color: var(--t4); } .t5 { color: var(--t5); }
+.iconbtn { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--rule); display: inline-flex; align-items: center; justify-content: center; color: var(--ink-2); background: var(--paper); font-size: 19px; }
+.muted { color: var(--ink-3); font-size: 13px; }
+.done-row { display: flex; justify-content: space-between; margin-top: 10px; }
+.pill { font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--rule); background: var(--paper); font-weight: 500; }
+.pill.solid { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+/* study */
+.bar { height: 3px; background: var(--rule); border-radius: 2px; margin: 6px 0 4px; }
+.bar i { display: block; height: 100%; width: 38%; background: var(--seal); border-radius: 2px; }
+.topline { display: flex; justify-content: space-between; align-items: center; color: var(--ink-3); font-size: 13px; }
+.situation { font-family: var(--serif); font-size: 26px; line-height: 1.25; margin: 34px 0 6px; }
+.kind { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--seal); font-weight: 600; margin-top: 22px; }
+.rule { height: 1px; background: var(--rule); margin: 22px 0; }
+.words { display: flex; justify-content: center; gap: 16px; }
+.w { display: flex; flex-direction: column; align-items: center; padding: 6px 8px; border-radius: 12px; }
+.w .r { font-family: var(--serif); font-size: 30px; font-weight: 500; }
+.w .h { font-family: var(--han); font-size: 16px; color: var(--ink-3); margin-top: 2px; }
+.w.miss { background: #f3ddd6; box-shadow: inset 0 0 0 1.5px var(--seal); }
+.w.miss .r, .w.miss .r span { color: var(--seal) !important; }
+.en { text-align: center; color: var(--ink-2); margin-top: 8px; font-size: 15px; }
+.tools { display: flex; justify-content: center; gap: 14px; margin-top: 18px; }
+.tools .iconbtn { width: 46px; height: 46px; font-size: 21px; }
+.flag { font-size: 11px; font-weight: 600; margin-left: -8px; margin-top: 26px; color: var(--ink-3); }
+.sheet { position: absolute; left: 0; right: 0; bottom: 0; background: var(--paper-2); border-top: 1px solid var(--rule); border-radius: 22px 22px 0 0; padding: 16px 20px 18px; box-shadow: 0 -10px 30px rgba(0,0,0,.08); }
+.sheet .q { font-family: var(--serif); font-size: 19px; font-weight: 500; margin-bottom: 12px; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.chip { font-family: var(--serif); font-size: 18px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--rule); background: var(--paper); }
+.chip.on { border-color: var(--seal); background: #f3ddd6; color: var(--seal); }
+.grades { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+.g { text-align: center; padding: 13px 0; border-radius: 14px; font-weight: 600; font-size: 15px; border: 1px solid var(--rule); background: var(--paper); }
+.g.picked { background: #f7ead0; border-color: var(--t2); color: #8a5a07; }
+.g.good { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+/* end */
+.end-title { font-family: var(--serif); font-size: 30px; font-weight: 500; margin: 26px 0 2px; }
+.stats { display: flex; gap: 18px; margin: 12px 0 18px; }
+.stat b { font-family: var(--serif); font-size: 28px; font-weight: 500; display: block; }
+.stat span { font-size: 12px; color: var(--ink-3); }
+.stamps { display: grid; grid-template-columns: 1fr; gap: 8px; }
+.stamp { position: relative; padding: 10px 56px 10px 14px; }
+.stamp .roman { font-size: 18px; }
+.stamp .muted { font-size: 12px; }
+.stamp .seal { position: absolute; right: 8px; top: 8px; width: 34px; height: 34px; font-size: 17px; transform: rotate(8deg); }
+.change { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; margin: 10px 0; }
+.change i { color: var(--t3); font-size: 18px; margin-top: 1px; }
+/* me */
+.sit { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+.sit .name { flex: 1; font-weight: 500; }
+.dots { display: flex; gap: 3px; }
+.dots i { width: 9px; height: 9px; border-radius: 2px; background: var(--rule); display: block; }
+.dots i.on { background: var(--seal); }
+.tone-row { display: grid; grid-template-columns: 70px 1fr 36px; gap: 8px; align-items: center; font-size: 13px; margin: 6px 0; }
+.meter { height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; } .meter i { display: block; height: 100%; border-radius: 3px; }
+.list-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-weight: 500; }
+.list-row i.lead { font-size: 20px; color: var(--ink-2); }
+.list-row .muted { margin-left: auto; }
+</style>
+</head>
+<body>
+<h1 class="page">說 · redesign mockups</h1>
+<p class="page">Paper and ink, one vermilion seal. One tap to practise; everything else is optional.</p>
+<div class="row">
+
+  <!-- TODAY -->
+  <div>
+    <p class="label">1 · Today</p>
+    <div class="phone">
+      <div class="status"><span>7:42</span><span><i class="ti ti-wifi"></i> <i class="ti ti-battery-3"></i></span></div>
+      <div class="screen">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="eyebrow">Saturday · 5-day streak</span>
+          <span class="pill">普通話 <i class="ti ti-chevron-down" style="font-size:13px"></i></span>
+        </div>
+        <p class="hello">Good morning, Tom.</p>
+        <p class="note"><b>láizì</b> and <b>shéme</b> keep slipping, so they're in today's session. Your first class is Monday: we'll warm up <b>huānyíng</b>.</p>
+        <div class="start">
+          <span class="seal">說</span>
+          <span class="cta">Start today's practice</span>
+          <span class="sub">About 10 minutes · 14 reviews, 5 new, 1 conversation</span>
+        </div>
+        <div class="card mission">
+          <div class="k">Today's mission</div>
+          <div class="what">Order your milk tea less sweet</div>
+          <div class="say">
+            <span class="roman"><span class="t2">siu2</span> <span class="t4">tim4</span></span>
+            <span class="iconbtn"><i class="ti ti-volume"></i></span>
+          </div>
+          <div class="done-row"><span class="muted">少甜 · Less sweet</span><span class="pill solid">I did it</span></div>
+        </div>
+      </div>
+      <div class="tabs">
+        <div class="tab on"><i class="ti ti-sun"></i>Today</div>
+        <div class="tab"><i class="ti ti-compass"></i>Explore</div>
+        <div class="tab"><i class="ti ti-user-circle"></i>Me</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANSWER -->
+  <div>
+    <p class="label">2 · Practice, after "Almost"</p>
+    <div class="phone">
+      <div class="status"><span>7:48</span><span><i class="ti ti-wifi"></i> <i class="ti ti-battery-3"></i></span></div>
+      <div class="screen">
+        <div class="topline"><i class="ti ti-x" style="font-size:20px"></i><span>7 of 19</span></div>
+        <div class="bar"><i></i></div>
+        <div class="kind">What would you say?</div>
+        <p class="situation">Someone asks where you come from.</p>
+        <div class="rule"></div>
+        <div class="words">
+          <div class="w"><span class="r t3">wǒ</span><span class="h">我</span></div>
+          <div class="w miss"><span class="r"><span>lái</span><span>zì</span></span><span class="h">來自</span></div>
+          <div class="w"><span class="r"><span class="t2">Hé</span><span class="t2">lán</span></span><span class="h">荷蘭</span></div>
+        </div>
+        <p class="en">I come from the Netherlands</p>
+        <div class="tools">
+          <span class="iconbtn"><i class="ti ti-volume"></i></span><span class="flag">TW</span>
+          <span class="iconbtn"><i class="ti ti-gauge"></i></span>
+          <span class="iconbtn"><i class="ti ti-microphone"></i></span>
+        </div>
+        <div class="sheet">
+          <div class="q">Which part tripped you up?</div>
+          <div class="chips"><span class="chip">wǒ</span><span class="chip on">láizì · come from</span><span class="chip">Hélán</span></div>
+          <div class="grades"><span class="g">Didn't know</span><span class="g picked">Almost</span><span class="g good">Next</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- END -->
+  <div>
+    <p class="label">3 · End of session</p>
+    <div class="phone">
+      <div class="status"><span>7:53</span><span><i class="ti ti-wifi"></i> <i class="ti ti-battery-3"></i></span></div>
+      <div class="screen">
+        <p class="end-title">Nicely done.</p>
+        <span class="muted">Here's what changed today</span>
+        <div class="stats">
+          <div class="stat"><b>19</b><span>cards</span></div>
+          <div class="stat"><b>11</b><span>minutes</span></div>
+          <div class="stat"><b>84%</b><span>got it</span></div>
+        </div>
+        <div class="eyebrow" style="margin-bottom:8px">Now solid</div>
+        <div class="stamps">
+          <div class="card stamp"><span class="seal">成</span><div class="roman"><span class="t4">zuì</span><span class="t4">jìn</span> <span class="t3">hǎo</span> <span class="t5">ma</span></div><div class="muted">How have you been?</div></div>
+          <div class="card stamp"><span class="seal">成</span><div class="roman"><span class="t4">xiè</span><span class="t5">xie</span></div><div class="muted">Thank you</div></div>
+        </div>
+        <div class="rule" style="margin:16px 0 6px"></div>
+        <div class="change"><i class="ti ti-circle-check"></i><span><b>shéme</b> is off your trouble list</span></div>
+        <div class="change"><i class="ti ti-trending-up" style="color:var(--t4)"></i><span>Your 3rd tones: 58% → 71%</span></div>
+        <div class="change"><i class="ti ti-calendar" style="color:var(--ink-3)"></i><span>Tomorrow: 9 reviews, about 6 minutes</span></div>
+        <div style="margin-top:18px;display:flex;gap:8px"><span class="g good" style="flex:1">Done</span><span class="g" style="flex:1">Add a wish</span></div>
+      </div>
+      <div class="tabs">
+        <div class="tab on"><i class="ti ti-sun"></i>Today</div>
+        <div class="tab"><i class="ti ti-compass"></i>Explore</div>
+        <div class="tab"><i class="ti ti-user-circle"></i>Me</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ME -->
+  <div>
+    <p class="label">4 · Me</p>
+    <div class="phone">
+      <div class="status"><span>8:01</span><span><i class="ti ti-wifi"></i> <i class="ti ti-battery-3"></i></span></div>
+      <div class="screen">
+        <p class="hello" style="font-size:28px;margin-top:10px">What you can say</p>
+        <div class="sit"><span class="name">Introducing yourself</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span class="muted">6/9</span></div>
+        <div class="sit"><span class="name">Meeting people</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span><span class="muted">3/13</span></div>
+        <div class="sit"><span class="name">Food and drink</span><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="muted">2/9</span></div>
+        <div class="card" style="margin:16px 0 12px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="eyebrow">Lesson Friday</span><span class="muted">in 3 days</span></div>
+          <div style="font-family:var(--serif);font-size:20px;margin:6px 0 8px">18 of 25 ready</div>
+          <div class="meter"><i style="width:72%;background:var(--t3)"></i></div>
+          <div class="done-row"><span class="pill">Notes for coach</span><span class="pill">Weekly check-in</span></div>
+        </div>
+        <div class="eyebrow" style="margin:8px 0 4px">Tones</div>
+        <div class="tone-row"><span class="t1">1st</span><span class="meter"><i style="width:88%;background:var(--t3)"></i></span><span class="muted">88%</span></div>
+        <div class="tone-row"><span class="t3">3rd</span><span class="meter"><i style="width:58%;background:var(--t2)"></i></span><span class="muted">58%</span></div>
+        <div class="list-row"><i class="ti ti-settings lead"></i>Settings<span class="muted"><i class="ti ti-chevron-right"></i></span></div>
+      </div>
+      <div class="tabs">
+        <div class="tab"><i class="ti ti-sun"></i>Today</div>
+        <div class="tab"><i class="ti ti-compass"></i>Explore</div>
+        <div class="tab on"><i class="ti ti-user-circle"></i>Me</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

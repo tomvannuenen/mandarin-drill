@@ -11,7 +11,15 @@ Switch languages at the top of the Study and Browse screens. Each language has i
 
 Open the site on your phone in Safari → Share → **Add to Home Screen**. It works offline once loaded.
 
-- **Say it**: English is shown → say the Mandarin out loud → reveal → grade yourself honestly.
+Three tabs:
+- **Today**: Claude's note for the day, one seal button that runs the whole day's practice (trouble spots and
+  focus first, then reviews mixed with new cards, then a conversation), and a real-life mission.
+- **Explore**: conversations, tone check, all phrases, the HSK book audio, and "I wish I could say…".
+- **Me**: what you can say by situation, lesson readiness and notes for the coach, trouble spots, tones, settings.
+
+Practice:
+- **Say it**: English is shown → say it out loud → reveal → *Didn't know / Almost / Got it*. After a miss on a
+  multi-word phrase, pick the part that tripped you up; it becomes a trouble spot.
 - **Listen** cards unlock for a phrase once you've said it correctly on two different days. **Read** cards (characters → sound) only appear when *Practise reading characters* is on in Settings; with it off, pinyin is shown large and characters small.
 - **Pattern** cards (我喜歡喝___) fill in a different word each time, preferring words you've already seen.
 - Every card rotates between voices (🇹🇼 Taiwan / 🇨🇳 Beijing for Mandarin, 🇭🇰 for Cantonese).

@@ -1,5 +1,5 @@
 {
- "version": "391865244163",
+ "version": "b7a89728c780",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -96,7 +96,9 @@
      "audio/cn-xiaoxiao/dajia-hao.mp3",
      "audio/cn-xiaoxiao/dajia-hao-slow.mp3"
     ]
-   }
+   },
+   "topic": "Introducing yourself",
+   "mission": "Open a class or meeting with 大家好"
   },
   {
    "id": "wo-jiao",
@@ -140,7 +142,9 @@
      "audio/cn-xiaoxiao/wo-jiao-slow.mp3"
     ]
    },
-   "note": "我是…… (wǒ shì…) = I am…"
+   "note": "我是…… (wǒ shì…) = I am…",
+   "topic": "Introducing yourself",
+   "mission": "Tell someone your name in Mandarin"
   },
   {
    "id": "xiexie",
@@ -178,7 +182,9 @@
      "audio/cn-xiaoxiao/xiexie.mp3",
      "audio/cn-xiaoxiao/xiexie-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk",
+   "mission": "Thank a shop assistant or a colleague with 謝謝"
   },
   {
    "id": "hen-gaoxing-renshi-ni",
@@ -231,7 +237,9 @@
      "audio/cn-xiaoxiao/hen-gaoxing-renshi-ni.mp3",
      "audio/cn-xiaoxiao/hen-gaoxing-renshi-ni-slow.mp3"
     ]
-   }
+   },
+   "topic": "Introducing yourself",
+   "mission": "Say it to someone you meet for the first time"
   },
   {
    "id": "hen-gaoxing-renshi-dajia",
@@ -284,7 +292,9 @@
      "audio/cn-xiaoxiao/hen-gaoxing-renshi-dajia.mp3",
      "audio/cn-xiaoxiao/hen-gaoxing-renshi-dajia-slow.mp3"
     ]
-   }
+   },
+   "topic": "Introducing yourself",
+   "mission": "Use it when you're introduced to a group"
   },
   {
    "id": "helan",
@@ -741,7 +751,9 @@
       ]
      }
     }
-   ]
+   ],
+   "topic": "Introducing yourself",
+   "mission": "Tell a colleague or taxi driver where you're from"
   },
   {
    "id": "wo-shi-x-ren",
@@ -1203,7 +1215,9 @@
      }
     }
    ],
-   "note": "Country + 人 (rén, person) = nationality"
+   "note": "Country + 人 (rén, person) = nationality",
+   "topic": "Introducing yourself",
+   "mission": "When someone asks where you're from, answer in Mandarin"
   },
   {
    "id": "wo-shi-laoshi",
@@ -1251,7 +1265,8 @@
      "audio/cn-xiaoxiao/wo-shi-laoshi.mp3",
      "audio/cn-xiaoxiao/wo-shi-laoshi-slow.mp3"
     ]
-   }
+   },
+   "topic": "Work & study"
   },
   {
    "id": "wo-shi-jiaoshou",
@@ -1300,7 +1315,9 @@
      "audio/cn-xiaoxiao/wo-shi-jiaoshou-slow.mp3"
     ]
    },
-   "note": "我是 [subject] 教授 = I'm a professor of [subject]"
+   "note": "我是 [subject] 教授 = I'm a professor of [subject]",
+   "topic": "Work & study",
+   "mission": "Tell someone off campus what you do"
   },
   {
    "id": "wo-lai-zhongda-shouke",
@@ -1363,7 +1380,9 @@
      "audio/cn-xiaoxiao/wo-lai-zhongda-shouke.mp3",
      "audio/cn-xiaoxiao/wo-lai-zhongda-shouke-slow.mp3"
     ]
-   }
+   },
+   "topic": "Work & study",
+   "mission": "Explain why you're in Hong Kong"
   },
   {
    "id": "wo-zai-zhongda-jiaoshu",
@@ -1422,7 +1441,9 @@
      "audio/cn-xiaoxiao/wo-zai-zhongda-jiaoshu-slow.mp3"
     ]
    },
-   "note": "教 (jiāo) + course/subject = teach …; note jiāo here vs jiào in 教授"
+   "note": "教 (jiāo) + course/subject = teach …; note jiāo here vs jiào in 教授",
+   "topic": "Work & study",
+   "mission": "Tell a Mandarin-speaking colleague where you teach"
   },
   {
    "id": "zuijin-hao-ma",
@@ -1470,7 +1491,9 @@
      "audio/cn-xiaoxiao/zuijin-hao-ma.mp3",
      "audio/cn-xiaoxiao/zuijin-hao-ma-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk",
+   "mission": "Greet a Mandarin-speaking colleague with it"
   },
   {
    "id": "zuijin-zenmeyang",
@@ -1513,7 +1536,9 @@
      "audio/cn-xiaoxiao/zuijin-zenmeyang.mp3",
      "audio/cn-xiaoxiao/zuijin-zenmeyang-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk",
+   "mission": "Ask a colleague how things are"
   },
   {
    "id": "zuijin-mang-shenme",
@@ -1561,7 +1586,9 @@
      "audio/cn-xiaoxiao/zuijin-mang-shenme.mp3",
      "audio/cn-xiaoxiao/zuijin-mang-shenme-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk",
+   "mission": "Ask your coach what they've been busy with"
   },
   {
    "id": "kafei",
@@ -1863,7 +1890,9 @@
       ]
      }
     }
-   ]
+   ],
+   "topic": "Food & drink",
+   "mission": "Tell someone what you like to drink"
   },
   {
    "id": "ni-xihuan-he-shenme",
@@ -1916,7 +1945,9 @@
      "audio/cn-xiaoxiao/ni-xihuan-he-shenme.mp3",
      "audio/cn-xiaoxiao/ni-xihuan-he-shenme-slow.mp3"
     ]
-   }
+   },
+   "topic": "Food & drink",
+   "mission": "Ask someone what they like to drink"
   },
   {
    "id": "shui",
@@ -2133,7 +2164,9 @@
      "audio/cn-xiaoxiao/ni-xihuan-chi-shenme.mp3",
      "audio/cn-xiaoxiao/ni-xihuan-chi-shenme-slow.mp3"
     ]
-   }
+   },
+   "topic": "Food & drink",
+   "mission": "Ask a colleague at lunch what they like to eat"
   },
   {
    "id": "la",
@@ -2326,7 +2359,9 @@
       ]
      }
     }
-   ]
+   ],
+   "topic": "Food & drink",
+   "mission": "Tell someone at lunch what you like to eat"
   },
   {
    "id": "yao-bu-yao-la",
@@ -2379,7 +2414,8 @@
      "audio/cn-xiaoxiao/yao-bu-yao-la.mp3",
      "audio/cn-xiaoxiao/yao-bu-yao-la-slow.mp3"
     ]
-   }
+   },
+   "topic": "Food & drink"
   },
   {
    "id": "yidiandian",
@@ -2417,7 +2453,9 @@
      "audio/cn-xiaoxiao/yidiandian.mp3",
      "audio/cn-xiaoxiao/yidiandian-slow.mp3"
     ]
-   }
+   },
+   "topic": "Food & drink",
+   "mission": "When asked if you want it spicy, answer 一點點"
   },
   {
    "id": "zhende",
@@ -2455,7 +2493,9 @@
      "audio/cn-xiaoxiao/zhende.mp3",
      "audio/cn-xiaoxiao/zhende-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk",
+   "mission": "React with 真的？ when someone tells you something"
   },
   {
    "id": "riben",
@@ -2957,7 +2997,9 @@
       ]
      }
     }
-   ]
+   ],
+   "topic": "Small talk",
+   "mission": "Ask someone if they like a country they've visited"
   },
   {
    "id": "wo-bu-xihuan-he-x",
@@ -3243,7 +3285,8 @@
       ]
      }
     }
-   ]
+   ],
+   "topic": "Food & drink"
   },
   {
    "id": "wo-bu-xihuan-chi-x",
@@ -3364,7 +3407,8 @@
       ]
      }
     }
-   ]
+   ],
+   "topic": "Food & drink"
   },
   {
    "id": "taiwan",
@@ -5880,7 +5924,9 @@
       ]
      }
     }
-   ]
+   ],
+   "topic": "Small talk",
+   "mission": "Tell someone where you'd like to travel next"
   },
   {
    "id": "wo-xiang-he-x",
@@ -6142,7 +6188,9 @@
      }
     }
    ],
-   "note": "Polite way to order"
+   "note": "Polite way to order",
+   "topic": "Food & drink",
+   "mission": "Order a drink in Mandarin"
   },
   {
    "id": "wo-bu-zhidao",
@@ -6190,7 +6238,8 @@
      "audio/cn-xiaoxiao/wo-bu-zhidao.mp3",
      "audio/cn-xiaoxiao/wo-bu-zhidao-slow.mp3"
     ]
-   }
+   },
+   "topic": "Getting by"
   },
   {
    "id": "wo-ting-bu-dong",
@@ -6244,7 +6293,9 @@
      "audio/cn-xiaoxiao/wo-ting-bu-dong-slow.mp3"
     ]
    },
-   "note": "聽 listen + 不懂 not understand"
+   "note": "聽 listen + 不懂 not understand",
+   "topic": "Getting by",
+   "mission": "When you don't catch something, say it instead of switching to English"
   },
   {
    "id": "qing-zai-shuo-yici",
@@ -6298,7 +6349,9 @@
      "audio/cn-xiaoxiao/qing-zai-shuo-yici-slow.mp3"
     ]
    },
-   "note": "請 qǐng = please; 再 zài = again"
+   "note": "請 qǐng = please; 再 zài = again",
+   "topic": "Getting by",
+   "mission": "Ask your coach or someone else to repeat something"
   },
   {
    "id": "ni-hui-shuo-yingwen-ma",
@@ -6356,7 +6409,8 @@
      "audio/cn-xiaoxiao/ni-hui-shuo-yingwen-ma.mp3",
      "audio/cn-xiaoxiao/ni-hui-shuo-yingwen-ma-slow.mp3"
     ]
-   }
+   },
+   "topic": "Getting by"
   },
   {
    "id": "wo-hui-shuo-yidiandian-zhongwen",
@@ -6414,7 +6468,9 @@
      "audio/cn-xiaoxiao/wo-hui-shuo-yidiandian-zhongwen.mp3",
      "audio/cn-xiaoxiao/wo-hui-shuo-yidiandian-zhongwen-slow.mp3"
     ]
-   }
+   },
+   "topic": "Introducing yourself",
+   "mission": "Tell a colleague you can speak a little Chinese"
   },
   {
    "id": "wo-zai-xue-zhongwen",
@@ -6467,7 +6523,9 @@
      "audio/cn-xiaoxiao/wo-zai-xue-zhongwen.mp3",
      "audio/cn-xiaoxiao/wo-zai-xue-zhongwen-slow.mp3"
     ]
-   }
+   },
+   "topic": "Introducing yourself",
+   "mission": "Tell someone you're learning Chinese"
   },
   {
    "id": "wo-zhu-zai-xianggang",
@@ -6520,7 +6578,9 @@
      "audio/cn-xiaoxiao/wo-zhu-zai-xianggang.mp3",
      "audio/cn-xiaoxiao/wo-zhu-zai-xianggang-slow.mp3"
     ]
-   }
+   },
+   "topic": "Introducing yourself",
+   "mission": "Tell someone where you live"
   },
   {
    "id": "ni-zai-nali-gongzuo",
@@ -6574,7 +6634,9 @@
      "audio/cn-xiaoxiao/ni-zai-nali-gongzuo-slow.mp3"
     ]
    },
-   "note": "哪裡 nǎlǐ = where"
+   "note": "哪裡 nǎlǐ = where",
+   "topic": "Work & study",
+   "mission": "Ask someone new where they work"
   },
   {
    "id": "wo-zai-zhongda-gongzuo",
@@ -6632,7 +6694,9 @@
      "audio/cn-xiaoxiao/wo-zai-zhongda-gongzuo.mp3",
      "audio/cn-xiaoxiao/wo-zai-zhongda-gongzuo-slow.mp3"
     ]
-   }
+   },
+   "topic": "Work & study",
+   "mission": "Tell someone where you work"
   },
   {
    "id": "yue-nei-hou",
@@ -6667,7 +6731,9 @@
      "audio/hk-hiugaai/yue-nei-hou.mp3",
      "audio/hk-hiugaai/yue-nei-hou-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk",
+   "mission": "Greet the security guard or a shopkeeper with 你好"
   },
   {
    "id": "yue-zousan",
@@ -6697,7 +6763,9 @@
      "audio/hk-hiugaai/yue-zousan.mp3",
      "audio/hk-hiugaai/yue-zousan-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk",
+   "mission": "Say 早晨 to someone before noon"
   },
   {
    "id": "yue-m-goi",
@@ -6728,7 +6796,9 @@
      "audio/hk-hiugaai/yue-m-goi-slow.mp3"
     ]
    },
-   "note": "唔該 for help or service; 多謝 for gifts or compliments"
+   "note": "唔該 for help or service; 多謝 for gifts or compliments",
+   "topic": "Getting by",
+   "mission": "Say 唔該 when someone holds a door or hands you something"
   },
   {
    "id": "yue-dozi",
@@ -6758,7 +6828,9 @@
      "audio/hk-hiugaai/yue-dozi.mp3",
      "audio/hk-hiugaai/yue-dozi-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk",
+   "mission": "Thank someone for a gift or compliment with 多謝"
   },
   {
    "id": "yue-m-sai-haakhei",
@@ -6798,7 +6870,8 @@
      "audio/hk-hiugaai/yue-m-sai-haakhei.mp3",
      "audio/hk-hiugaai/yue-m-sai-haakhei-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk"
   },
   {
    "id": "yue-deoimzyu",
@@ -6828,7 +6901,8 @@
      "audio/hk-hiugaai/yue-deoimzyu.mp3",
      "audio/hk-hiugaai/yue-deoimzyu-slow.mp3"
     ]
-   }
+   },
+   "topic": "Getting by"
   },
   {
    "id": "yue-m-hou-jisi",
@@ -6868,7 +6942,9 @@
      "audio/hk-hiugaai/yue-m-hou-jisi.mp3",
      "audio/hk-hiugaai/yue-m-hou-jisi-slow.mp3"
     ]
-   }
+   },
+   "topic": "Getting by",
+   "mission": "Say 唔好意思 to squeeze past someone on the MTR"
   },
   {
    "id": "yue-hai",
@@ -6935,7 +7011,8 @@
      "audio/hk-hiugaai/yue-m-hai-slow.mp3"
     ]
    },
-   "note": "唔 m4 = not (Mandarin 不)"
+   "note": "唔 m4 = not (Mandarin 不)",
+   "topic": "Getting by"
   },
   {
    "id": "yue-hou",
@@ -7005,7 +7082,8 @@
      "audio/hk-hiugaai/yue-nei-hou-maa.mp3",
      "audio/hk-hiugaai/yue-nei-hou-maa-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk"
   },
   {
    "id": "yue-gei-hou",
@@ -7040,7 +7118,9 @@
      "audio/hk-hiugaai/yue-gei-hou.mp3",
      "audio/hk-hiugaai/yue-gei-hou-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk",
+   "mission": "When someone asks how you are, answer 幾好"
   },
   {
    "id": "yue-baaibaai",
@@ -7070,7 +7150,9 @@
      "audio/hk-hiugaai/yue-baaibaai.mp3",
      "audio/hk-hiugaai/yue-baaibaai-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk",
+   "mission": "Say 拜拜 when you leave a shop"
   },
   {
    "id": "yue-tingjat-gin",
@@ -7105,7 +7187,9 @@
      "audio/hk-hiugaai/yue-tingjat-gin.mp3",
      "audio/hk-hiugaai/yue-tingjat-gin-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk",
+   "mission": "Say 聽日見 to a colleague when leaving"
   },
   {
    "id": "yue-ngo",
@@ -7323,7 +7407,8 @@
      "audio/hk-hiugaai/yue-ngo-giu.mp3",
      "audio/hk-hiugaai/yue-ngo-giu-slow.mp3"
     ]
-   }
+   },
+   "topic": "Introducing yourself"
   },
   {
    "id": "yue-nei-giu-matje-meng",
@@ -7374,7 +7459,8 @@
      "audio/hk-hiugaai/yue-nei-giu-matje-meng-slow.mp3"
     ]
    },
-   "note": "咩 me1 = what (Mandarin 什麼)"
+   "note": "咩 me1 = what (Mandarin 什麼)",
+   "topic": "Introducing yourself"
   },
   {
    "id": "yue-helan",
@@ -7835,7 +7921,9 @@
       ]
      }
     }
-   ]
+   ],
+   "topic": "Introducing yourself",
+   "mission": "Tell a taxi driver where you're from"
   },
   {
    "id": "yue-ngo-hai-lousi",
@@ -7875,7 +7963,8 @@
      "audio/hk-hiugaai/yue-ngo-hai-lousi.mp3",
      "audio/hk-hiugaai/yue-ngo-hai-lousi-slow.mp3"
     ]
-   }
+   },
+   "topic": "Work & study"
   },
   {
    "id": "yue-ngo-hai-gaausau",
@@ -7915,7 +8004,8 @@
      "audio/hk-hiugaai/yue-ngo-hai-gaausau.mp3",
      "audio/hk-hiugaai/yue-ngo-hai-gaausau-slow.mp3"
     ]
-   }
+   },
+   "topic": "Work & study"
   },
   {
    "id": "yue-ngo-hai-zungman-daaihok-gaausyu",
@@ -7966,7 +8056,9 @@
      "audio/hk-hiugaai/yue-ngo-hai-zungman-daaihok-gaausyu-slow.mp3"
     ]
    },
-   "note": "喺 hai2 = at/in (Mandarin 在)"
+   "note": "喺 hai2 = at/in (Mandarin 在)",
+   "topic": "Work & study",
+   "mission": "Tell someone where you teach in Cantonese"
   },
   {
    "id": "yue-ngo-zyu-hai-hoenggong",
@@ -8011,7 +8103,8 @@
      "audio/hk-hiugaai/yue-ngo-zyu-hai-hoenggong.mp3",
      "audio/hk-hiugaai/yue-ngo-zyu-hai-hoenggong-slow.mp3"
     ]
-   }
+   },
+   "topic": "Introducing yourself"
   },
   {
    "id": "yue-ngo-m-sik-gong",
@@ -8062,7 +8155,9 @@
      "audio/hk-hiugaai/yue-ngo-m-sik-gong-slow.mp3"
     ]
    },
-   "note": "識 sik1 = know how to; 講 gong2 = speak"
+   "note": "識 sik1 = know how to; 講 gong2 = speak",
+   "topic": "Getting by",
+   "mission": "Say it when someone starts speaking fast Cantonese to you"
   },
   {
    "id": "yue-ngo-sik-gong-siusiu",
@@ -8112,7 +8207,9 @@
      "audio/hk-hiugaai/yue-ngo-sik-gong-siusiu.mp3",
      "audio/hk-hiugaai/yue-ngo-sik-gong-siusiu-slow.mp3"
     ]
-   }
+   },
+   "topic": "Getting by",
+   "mission": "Surprise a colleague with it"
   },
   {
    "id": "yue-nei-sik-m-sik-gong-jingman",
@@ -8168,7 +8265,8 @@
      "audio/hk-hiugaai/yue-nei-sik-m-sik-gong-jingman-slow.mp3"
     ]
    },
-   "note": "Questions often use verb + 唔 + verb: 識唔識 = can or can't?"
+   "note": "Questions often use verb + 唔 + verb: 識唔識 = can or can't?",
+   "topic": "Getting by"
   },
   {
    "id": "yue-ngo-teng-m-ming",
@@ -8214,7 +8312,8 @@
      "audio/hk-hiugaai/yue-ngo-teng-m-ming-slow.mp3"
     ]
    },
-   "note": "聽 is teng1 in everyday speech"
+   "note": "聽 is teng1 in everyday speech",
+   "topic": "Getting by"
   },
   {
    "id": "yue-m-goi-gong-do-ci",
@@ -8259,7 +8358,8 @@
      "audio/hk-hiugaai/yue-m-goi-gong-do-ci.mp3",
      "audio/hk-hiugaai/yue-m-goi-gong-do-ci-slow.mp3"
     ]
-   }
+   },
+   "topic": "Getting by"
   },
   {
    "id": "yue-sik",
@@ -8693,7 +8793,9 @@
      }
     }
    ],
-   "note": "Ordering: 要 jiu3 = want"
+   "note": "Ordering: 要 jiu3 = want",
+   "topic": "Food & drink",
+   "mission": "Order your drink in Cantonese at a café or cha chaan teng"
   },
   {
    "id": "yue-ngo-zungji-jam-x",
@@ -8920,7 +9022,8 @@
      }
     }
    ],
-   "note": "鍾意 zung1ji3 = like (Mandarin 喜歡)"
+   "note": "鍾意 zung1ji3 = like (Mandarin 喜歡)",
+   "topic": "Food & drink"
   },
   {
    "id": "yue-zau-bing",
@@ -8955,7 +9058,9 @@
      "audio/hk-hiugaai/yue-zau-bing.mp3",
      "audio/hk-hiugaai/yue-zau-bing-slow.mp3"
     ]
-   }
+   },
+   "topic": "Food & drink",
+   "mission": "Order a cold drink 走冰"
   },
   {
    "id": "yue-siu-tim",
@@ -8990,7 +9095,9 @@
      "audio/hk-hiugaai/yue-siu-tim.mp3",
      "audio/hk-hiugaai/yue-siu-tim-slow.mp3"
     ]
-   }
+   },
+   "topic": "Food & drink",
+   "mission": "Ask for your milk tea 少甜"
   },
   {
    "id": "yue-m-jiu-laat",
@@ -9030,7 +9137,8 @@
      "audio/hk-hiugaai/yue-m-jiu-laat.mp3",
      "audio/hk-hiugaai/yue-m-jiu-laat-slow.mp3"
     ]
-   }
+   },
+   "topic": "Food & drink"
   },
   {
    "id": "yue-hou-sik",
@@ -9065,7 +9173,9 @@
      "audio/hk-hiugaai/yue-hou-sik.mp3",
      "audio/hk-hiugaai/yue-hou-sik-slow.mp3"
     ]
-   }
+   },
+   "topic": "Food & drink",
+   "mission": "Tell the staff 好食 after a meal"
   },
   {
    "id": "yue-gei-do-cin",
@@ -9100,7 +9210,9 @@
      "audio/hk-hiugaai/yue-gei-do-cin.mp3",
      "audio/hk-hiugaai/yue-gei-do-cin-slow.mp3"
     ]
-   }
+   },
+   "topic": "Food & drink",
+   "mission": "Ask 幾多錢？ at a market stall"
   },
   {
    "id": "yue-nigo",
@@ -9200,7 +9312,9 @@
      "audio/hk-hiugaai/yue-ngo-jiu-nigo.mp3",
      "audio/hk-hiugaai/yue-ngo-jiu-nigo-slow.mp3"
     ]
-   }
+   },
+   "topic": "Food & drink",
+   "mission": "Point at something and say 我要呢個"
   },
   {
    "id": "yue-m-goi-maaidaan",
@@ -9235,7 +9349,9 @@
      "audio/hk-hiugaai/yue-m-goi-maaidaan.mp3",
      "audio/hk-hiugaai/yue-m-goi-maaidaan-slow.mp3"
     ]
-   }
+   },
+   "topic": "Food & drink",
+   "mission": "Ask for the bill in Cantonese"
   },
   {
    "id": "yue-hai-bindou",
@@ -9271,7 +9387,8 @@
      "audio/hk-hiugaai/yue-hai-bindou-slow.mp3"
     ]
    },
-   "note": "邊度 bin1dou6 = where (Mandarin 哪裡)"
+   "note": "邊度 bin1dou6 = where (Mandarin 哪裡)",
+   "topic": "Getting by"
   },
   {
    "id": "yue-saisaugaan-hai-bindou",
@@ -9311,7 +9428,9 @@
      "audio/hk-hiugaai/yue-saisaugaan-hai-bindou.mp3",
      "audio/hk-hiugaai/yue-saisaugaan-hai-bindou-slow.mp3"
     ]
-   }
+   },
+   "topic": "Getting by",
+   "mission": "Ask where the toilet is in Cantonese"
   },
   {
    "id": "yue-jau-lok",
@@ -9347,7 +9466,9 @@
      "audio/hk-hiugaai/yue-jau-lok-slow.mp3"
     ]
    },
-   "note": "Call it out to the driver of a red or green minibus"
+   "note": "Call it out to the driver of a red or green minibus",
+   "topic": "Getting by",
+   "mission": "Call out 有落 on a minibus"
   },
   {
    "id": "yue-heoi",
@@ -9671,7 +9792,8 @@
       ]
      }
     }
-   ]
+   ],
+   "topic": "Small talk"
   },
   {
    "id": "yue-zou-me-aa",
@@ -9711,7 +9833,8 @@
      "audio/hk-hiugaai/yue-zou-me-aa.mp3",
      "audio/hk-hiugaai/yue-zou-me-aa-slow.mp3"
     ]
-   }
+   },
+   "topic": "Small talk"
   }
  ]
 }

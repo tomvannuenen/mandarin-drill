@@ -108,7 +108,7 @@ button {
 .deck-btn { padding: 6px 12px; border-radius: 9px; color: var(--muted); font-weight: 600; }
 .deck-btn.active { background: var(--accent); color: var(--accent-ink); }
 .streak { color: var(--muted); margin: 0; }
-.due-block { margin: auto 0; text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.due-block { margin: 40px 0 8px; text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center; }
 .due-count { font-size: 5rem; font-weight: 700; margin: 0; line-height: 1; }
 .due-label { color: var(--muted); margin: 0 0 16px; }
 .learned { text-align: center; color: var(--muted); }
@@ -212,6 +212,7 @@ details.pattern .fills { padding-left: 14px; border-left: 3px solid var(--line);
 
 /* Settings */
 .setting { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.setting select { font: inherit; padding: 6px 8px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); }
 .setting input { width: 5em; font: inherit; padding: 6px 8px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); text-align: center; }
 .button-row { display: flex; gap: 10px; flex-wrap: wrap; }
 .file-btn { cursor: pointer; }
@@ -269,3 +270,29 @@ body.studying #app { padding-bottom: calc(env(safe-area-inset-bottom) + 16px); }
 #pl-speed { font-size: .95rem; font-weight: 600; }
 #pl-repeat { opacity: .4; }
 #pl-repeat.on { opacity: 1; background: var(--bg); }
+
+/* Dashboard */
+.dash { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.dash-card { background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+.dash-card h3 { margin: 0 0 8px; font-size: .8rem; }
+.dash-line { margin: 6px 0 0; font-size: .95rem; }
+.meter { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.meter-fill { height: 100%; background: var(--good); }
+.mission { margin: 0; font-weight: 600; }
+.mission-zh { margin: 6px 0 12px; font-size: 1.4rem; }
+.spots { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.spot { background: var(--bg); border-radius: 10px; padding: 6px 10px; font-size: 1.05rem; }
+.spot .hint { font-size: .8rem; }
+.can > summary { display: flex; justify-content: space-between; padding: 8px 0; cursor: pointer; list-style: none; border-top: 1px solid var(--line); }
+.can > summary::-webkit-details-marker { display: none; }
+.can ul { list-style: none; padding: 0 0 8px; margin: 0; }
+.can li { padding: 3px 0; color: var(--muted); }
+.can li.solid { color: var(--ink); }
+
+/* Trouble spots in study */
+.wg.missed .wg-zh, .wg.missed .wg-roman span { color: var(--again) !important; text-decoration: line-through; }
+.wg.target { background: var(--bg); box-shadow: inset 0 0 0 1.5px var(--good); }
+.miss { margin-left: 10px; font-size: .85rem; padding: 3px 10px; border-radius: 999px; border: 1.5px solid var(--line); color: var(--muted); }
+.miss.on { border-color: var(--again); color: var(--again); font-weight: 600; }
+.prompt-gap { font-size: 2rem; margin: 12px 0 0; }
+.gap { color: var(--accent); }

@@ -31,6 +31,7 @@
         <button id="more" class="secondary" hidden>Learn 5 more new</button>
       </div>
       <p class="learned" id="learned"></p>
+      <div class="dash" id="dash"></div>
     </section>
 
     <section id="view-study" class="view" hidden>
@@ -118,6 +119,15 @@
       <label class="setting">
         <span>New cards per day (per language)</span>
         <input type="number" id="new-per-day" min="0" max="50" inputmode="numeric">
+      </label>
+      <label class="setting">
+        <span>Coach lesson day</span>
+        <select id="lesson-day">
+          <option value="">Not set</option>
+          <option value="1">Monday</option><option value="2">Tuesday</option><option value="3">Wednesday</option>
+          <option value="4">Thursday</option><option value="5">Friday</option><option value="6">Saturday</option>
+          <option value="0">Sunday</option>
+        </select>
       </label>
       <h3>Backup</h3>
       <p class="hint">Your progress is saved only on this device. Export a backup now and then.</p>

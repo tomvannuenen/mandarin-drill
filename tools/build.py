@@ -109,6 +109,8 @@ def validate(items, deck="mandarin"):
         missing = [k for k in ("zh", roman, "en") if not it.get(k)]
         if not it.get("week") and not it.get("set"):
             missing.append("week (or set)")
+        if it.get("kind") in ("phrase", "pattern") and not it.get("topic"):
+            missing.append("topic (the situation, e.g. 'Food & drink')")
         if missing:
             errs.append(f"{iid}: missing {', '.join(missing)}")
             continue
@@ -215,7 +217,7 @@ def expand(items, root=ROOT, deck="mandarin", glossary=None):
             o["en"] = it["en"]
             o["words"] = _words(it["zh"], o["roman"], it["en"], known, glossary, it.get("gloss", {}))
             o["audio"] = _audio(it["id"], deck, root)
-        for k in ("note", "cat"):
+        for k in ("note", "cat", "topic", "mission"):
             if k in it:
                 o[k] = it[k]
         out.append(o)

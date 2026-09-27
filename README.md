@@ -16,7 +16,12 @@ Open the site on your phone in Safari → Share → **Add to Home Screen**. It w
 - **Pattern** cards (我喜歡喝___) fill in a different word each time, preferring words you've already seen.
 - Every card rotates between voices (🇹🇼 Taiwan / 🇨🇳 Beijing for Mandarin, 🇭🇰 for Cantonese).
   Each tap on 🔊 plays the next speaker; the flag shows where they're from. 🐢 plays the last speaker slowly.
-- The answer is shown word by word: tap a word to see what it means.
+- The answer is shown word by word: tap a word to see what it means. If you got that word wrong, tap
+  **I missed this** before grading. Missed words become **trouble spots**: practised on their own
+  ("come from" → 來自) and as a gap in other sentences (我＿＿荷蘭), until you get them right on two later days.
+- The home screen shows how ready you are for this week's coach lesson (set the lesson day in Settings),
+  a daily **real-life mission** for a phrase you know well, your trouble spots, and **What I can say** by situation.
+  A phrase counts as *solid* once you've said it right on two different days.
 - Progress lives only on this device: **Settings → Export progress** now and then.
 
 ## Adding a week of material
@@ -46,6 +51,8 @@ Cantonese phrases go in `data/cantonese.json` in the same format, with `jyutping
 - Every word inside a phrase needs a meaning: either it has its own `word` card, or it is listed in
   `data/glossary.json`, or the item has a `gloss` override (`{"好": "well"}`). The build fails otherwise.
   Pinyin word boundaries (spaces) decide how a phrase is split into words.
+- Phrases and patterns need a `topic` (the situation: Introducing yourself, Small talk, Food & drink,
+  Getting by, Work & study) and can have a `mission`: a concrete thing to do with the phrase in real life.
 - Optional: `note` (shown after reveal), `fillEn`, `allowChars` (to skip the Simplified check for specific characters).
 
 ### Audio

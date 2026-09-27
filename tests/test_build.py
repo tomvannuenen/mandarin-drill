@@ -9,7 +9,8 @@ DRINKS = [
     {"id": "shui", "kind": "word", "week": 1, "zh": "水", "pinyin": "shuǐ", "en": "water", "cat": ["drink"]},
 ]
 HE = {"id": "wo-xihuan-he-x", "kind": "pattern", "week": 1, "zh": "我喜歡喝{drink}",
-      "pinyin": "wǒ xǐ-huān hē {drink}", "en": "I like drinking {drink}"}
+      "pinyin": "wǒ xǐ-huān hē {drink}", "en": "I like drinking {drink}", "topic": "Food & drink",
+      "mission": "Order a drink"}
 
 
 class Traditional(unittest.TestCase):
@@ -35,11 +36,11 @@ class Validate(unittest.TestCase):
         self.assertTrue(any("duplicate" in e for e in errs), errs)
 
     def test_simplified(self):
-        errs = validate([{"id": "a", "kind": "phrase", "week": 1, "zh": "老师", "pinyin": "lǎo-shī", "en": "teacher"}])
+        errs = validate([{"id": "a", "kind": "word", "week": 1, "zh": "老师", "pinyin": "lǎo-shī", "en": "teacher"}])
         self.assertTrue(any("Simplified" in e for e in errs), errs)
 
     def test_alignment(self):
-        errs = validate([{"id": "a", "kind": "phrase", "week": 1, "zh": "老師", "pinyin": "lǎo", "en": "teacher"}])
+        errs = validate([{"id": "a", "kind": "word", "week": 1, "zh": "老師", "pinyin": "lǎo", "en": "teacher"}])
         self.assertTrue(any("syllables" in e for e in errs), errs)
 
     def test_alignment_checked_inside_fills(self):
@@ -64,6 +65,10 @@ class Validate(unittest.TestCase):
     def test_needs_week_or_set(self):
         errs = validate([{"id": "qu", "kind": "word", "zh": "去", "pinyin": "qù", "en": "to go"}])
         self.assertTrue(any("week" in e for e in errs), errs)
+
+    def test_phrase_needs_topic(self):
+        errs = validate([{"id": "a", "kind": "phrase", "week": 1, "zh": "謝謝", "pinyin": "xiè-xie", "en": "thanks"}])
+        self.assertTrue(any("topic" in e for e in errs), errs)
 
     def test_bad_id(self):
         errs = validate([dict(DRINKS[0], id="Ka Fei")])
@@ -90,9 +95,9 @@ class Expand(unittest.TestCase):
             {"id": "la", "kind": "word", "week": 1, "zh": "辣", "pinyin": "là", "en": "spicy", "fillEn": "spicy food",
              "cat": ["food"]},
             {"id": "ren", "kind": "pattern", "week": 1, "zh": "我是{country}人", "pinyin": "wǒ shì {country} rén",
-             "en": "I am {country:demonym}"},
+             "en": "I am {country:demonym}", "topic": "Intro"},
             {"id": "chi", "kind": "pattern", "week": 1, "zh": "我喜歡吃{food}", "pinyin": "wǒ xǐ-huān chī {food}",
-             "en": "I like eating {food}"},
+             "en": "I like eating {food}", "topic": "Food"},
         ]
         out = {i["id"]: i for i in expand(items, root=Path("/nonexistent"))}
         self.assertEqual(out["ren"]["fills"][0]["en"], "I am Dutch")
@@ -101,10 +106,14 @@ class Expand(unittest.TestCase):
     def test_sandhi_in_fills(self):
         items = [
             {"id": "yao", "kind": "word", "week": 1, "zh": "要", "pinyin": "yào", "en": "want", "cat": ["v"]},
-            {"id": "bu-x", "kind": "pattern", "week": 1, "zh": "不{v}", "pinyin": "bù {v}", "en": "not {v}"},
+            {"id": "bu-x", "kind": "pattern", "week": 1, "zh": "不{v}", "pinyin": "bù {v}", "en": "not {v}", "topic": "T"},
         ]
         out = {i["id"]: i for i in expand(items, root=Path("/nonexistent"))}
         self.assertEqual(out["bu-x"]["fills"][0]["roman"], "bú yào")
+
+    def test_topic_and_mission_passed_through(self):
+        p = {o["id"]: o for o in expand(DRINKS + [HE], root=Path("/nonexistent"))}["wo-xihuan-he-x"]
+        self.assertEqual((p["topic"], p["mission"]), ("Food & drink", "Order a drink"))
 
     def test_word_fields(self):
         out = expand(DRINKS, root=Path("/nonexistent"))[0]
@@ -124,7 +133,7 @@ class Glosses(unittest.TestCase):
     ITEMS = DRINKS + [
         HE,
         {"id": "hen-hao", "kind": "phrase", "week": 1, "zh": "很好嗎？", "pinyin": "hěn hǎo ma?", "en": "Very good?",
-         "gloss": {"好": "good (here: well)"}},
+         "topic": "Small talk", "gloss": {"好": "good (here: well)"}},
     ]
     GLOSSARY = {"很": "very", "喜歡": "to like", "我": "I", "喝": "to drink", "嗎": "(question)"}
 
@@ -155,7 +164,7 @@ class Cantonese(unittest.TestCase):
         {"id": "yue-naicha", "kind": "word", "set": "Drinks", "zh": "奶茶", "jyutping": "naai5-caa4", "en": "milk tea",
          "cat": ["drink"]},
         {"id": "yue-ngo-jiu-x", "kind": "pattern", "set": "Drinks", "zh": "我要{drink}", "jyutping": "ngo5 jiu3 {drink}",
-         "en": "I'd like {drink}"},
+         "en": "I'd like {drink}", "topic": "Food & drink"},
     ]
 
     def test_validates_with_jyutping(self):

@@ -64,7 +64,7 @@ test('checkinText is a readable summary with the details Claude needs', () => {
   assert.match(text, /Reviews: 1 \(0% right\)/);
   assert.match(text, /Coach week 2: 1\/2 solid/);
   assert.match(text, /我來自荷蘭 .*×1/);
-  assert.match(text, /Trouble spots: 來自/);
+  assert.match(text, /Hard to say \(trouble spots\): 來自/);
 });
 
 test('coachBrief is written for the coach, in pinyin and English', () => {
@@ -81,4 +81,7 @@ test('coachBrief is written for the coach, in pinyin and English', () => {
   assert.match(brief, /2nd tone as a 3rd tone \(4×\)/);
   assert.match(brief, /"Is this seat taken\?"/);
   assert.doesNotMatch(brief, /4th tone as a 1st/); // single slips are noise
+  p.weakChars = { 'mandarin/喝': { score: 2, flags: 1 } };
+  const brief2 = coachBrief(weekSummary(p, ITEMS, NOW), p, { 喝: { roman: 'hē', gloss: 'drink' } }, NOW);
+  assert.match(brief2, /Characters I find hard to read: 喝 \(hē\)/);
 });

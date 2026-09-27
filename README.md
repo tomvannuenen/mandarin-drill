@@ -24,6 +24,10 @@ Practice:
   *Read it* cards show a word from phrases you've met (most frequent first): say it, then check. Once you can
   say a phrase, *Build the sentence* asks you to tap word tiles into order (with two decoys). Tiles show pinyin
   under words you can't read yet; it disappears once you've recognised a word on two different days.
+- Tap any word (in answers, on tiles, in "Which part?") to hear just that word.
+- Missing a *Read it* card marks a **reading** problem (Me → "Hard to read"), kept apart from speaking trouble
+  spots ("Hard to say"): the word's pinyin returns on tiles and its Read it card comes first in the next sessions,
+  until you read it right on two later days.
 - **Listen** cards unlock for a phrase once you've said it correctly on two different days. **Read** cards (characters → sound) only appear when *Practise reading characters* is on in Settings; with it off, pinyin is shown large and characters small.
 - **Pattern** cards (我喜歡喝___) fill in a different word each time, preferring words you've already seen.
 - Every card rotates between voices (🇹🇼 Taiwan / 🇨🇳 Beijing for Mandarin, 🇭🇰 for Cantonese).

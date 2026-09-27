@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 import { defaults, applyReview, localDate, newToday } from '../lib/store.js';
 import { grade } from '../lib/srs.js';
-import { charId, charItems, newCharCards, newBuildCards, knowsWord, tiles, isBuilt } from '../lib/chars.js';
+import { charId, charItems, newCharCards, newBuildCards, knowsWord, tiles, isBuilt, markReading, readingTrouble } from '../lib/chars.js';
 import { buildQueue } from '../lib/session.js';
 
 const NOW = new Date(2026, 8, 28, 9);
@@ -84,4 +84,28 @@ test('tiles are the sentence words plus decoys, shuffled; isBuilt checks the ord
   for (const d of t.filter((x) => x.decoy)) assert.ok(!entry.words.some((ww) => ww.zh === d.zh));
   assert.equal(isBuilt(entry, ['你', '喜歡', '喝', '什麼']), true);
   assert.equal(isBuilt(entry, ['喜歡', '你', '喝', '什麼']), false);
+});
+
+test('missing a Read it card marks a reading problem, separate from speaking trouble spots', () => {
+  const p = defaults();
+  markReading(p, 'mandarin', '喝', false, NOW);
+  assert.deepEqual(readingTrouble(p, 'mandarin').map((t) => [t.zh, t.score]), [['喝', 2]]);
+  assert.deepEqual(p.weak, {}, 'no speaking trouble spot');
+  const later = (d) => new Date(NOW.getTime() + d * 86400000);
+  markReading(p, 'mandarin', '喝', true, NOW); // same day: no credit
+  markReading(p, 'mandarin', '喝', true, later(1));
+  markReading(p, 'mandarin', '喝', true, later(1));
+  assert.equal(readingTrouble(p, 'mandarin')[0].score, 1);
+  markReading(p, 'mandarin', '喝', true, later(2));
+  assert.deepEqual(readingTrouble(p, 'mandarin'), []);
+});
+
+test('a word with a reading problem gets its pinyin support back', () => {
+  const p = defaults();
+  const cid = charId('mandarin', '喝');
+  p.cards[`${cid}:char`] = grade(null, 3, NOW);
+  p.goodCounts[cid] = 3;
+  assert.equal(knowsWord(p, 'mandarin', '喝'), true);
+  markReading(p, 'mandarin', '喝', false, NOW);
+  assert.equal(knowsWord(p, 'mandarin', '喝'), false);
 });

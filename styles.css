@@ -294,6 +294,9 @@ details.pattern .fills { padding-left: 14px; border-left: 2px solid var(--rule);
 .spots { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 10px; }
 .spot { background: var(--seal-soft); color: var(--ink); border-radius: 999px; padding: 5px 12px; font-family: var(--serif); font-size: 17px; }
 .spot small { font-family: var(--sans); color: var(--ink-3); font-size: 12px; margin-left: 4px; }
+.read-spot { background: var(--paper-3); }
+.spot-zh { font-size: 20px; }
+.wg { cursor: pointer; }
 .tone-bars { display: flex; flex-direction: column; gap: 7px; margin: 6px 0 10px; text-align: left; }
 .tone-row { display: grid; grid-template-columns: 7.5em 1fr 3em; align-items: center; gap: 8px; font-size: 14px; }
 .tone-name { font-weight: 600; }

@@ -16,7 +16,7 @@ import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pul
 import { flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
 import { weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from './lib/motivation.js';
 import { composeToday, snapshot, outcome, dueSoon, estimateMinutes } from './lib/today.js';
-import { charItems, knowsWord, tiles, isBuilt } from './lib/chars.js';
+import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId } from './lib/chars.js';
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 const LANG_NAME = { mandarin: 'Mandarin', cantonese: 'Cantonese' };
@@ -32,6 +32,7 @@ let allItems = [];
 let byId = {};
 let decks = {}; // {deck: {label, voices}}
 let conversations = [];
+let wordAudio = {}; // '<deck>/<word>' -> audio of the word's own card
 let plan = null; // Claude's daily focus note
 let syncCfg = loadConfig();
 let syncDirty = false;
@@ -212,6 +213,14 @@ function sayLine(entry, d) {
     el('span', { class: 'say-en' }, entry.en),
     el('span', { class: 'say-zh', lang: LANG_ATTR[d] }, entry.zh)
   );
+}
+
+// Say a single word: its own recording if it has a card, otherwise the phone's voice.
+function speakWord(zh, d, preferVoice = null) {
+  const audio = wordAudio[`${d}/${zh}`];
+  if (!audio) return speakText(zh, d);
+  const v = audio[preferVoice] ? preferVoice : pickVoice({ audio });
+  play(audio[v][0]);
 }
 
 // Pinyin and meaning of a word as it appears inside any phrase.
@@ -396,9 +405,10 @@ function renderWords(c) {
         const wasActive = btn.classList.contains('active');
         for (const b of $('a-words').children) b.classList.remove('active');
         gloss.hidden = wasActive;
-        if (wasActive) return;
+        if (wasActive) return speakWord(w.zh, c.deck, c.voice);
         btn.classList.add('active');
         c.lookups.add(w.zh);
+        speakWord(w.zh, c.deck, c.voice);
         gloss.replaceChildren(renderRoman(el('b'), w.roman, c.deck), ` = ${w.gloss}`);
       });
       return btn;
@@ -437,6 +447,7 @@ function renderBuild(c) {
       b.classList.toggle('used', used);
       b.addEventListener('click', () => {
         if (used || c.result) return;
+        speakWord(t.zh, c.deck);
         c.picked.push(t);
         draw();
         if (c.picked.length === c.words.length) checkBuild(c, line);
@@ -583,6 +594,7 @@ function rate(rating) {
     $('which-chips').replaceChildren(...c.words.map((w) => {
       const chip = el('button', { class: 'chip' }, renderRoman(el('span'), w.roman, c.deck), el('small', {}, w.gloss));
       chip.addEventListener('click', () => {
+        speakWord(w.zh, c.deck, c.voice);
         if (c.flagged.has(w.zh)) c.flagged.delete(w.zh);
         else c.flagged.add(w.zh);
         chip.classList.toggle('on', c.flagged.has(w.zh));
@@ -603,7 +615,8 @@ function commit(rating) {
   applyReview(progress, card, rating, state, now, {
     ms: c.revealMs, voice: c.voice, replays: c.replays, lookups: [...c.lookups], hint: c.hint,
   });
-  if (rating >= 3 && !c.char) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words, now);
+  if (c.char) markReading(progress, c.deck, c.zh, rating >= 3, now); // reading, not speaking
+  else if (rating >= 3) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words, now);
   for (const zh of c.flagged) {
     // A newly missed word gets a practice card straight away, shown again later in this session.
     const id = flagWord(progress, c.deck, zh, now);
@@ -741,11 +754,23 @@ function renderMe() {
 
   const spots = troubleSpots(progress, d);
   const info = Object.fromEntries(drills().map((x) => [x.zh, x]));
-  $('me-spots').replaceChildren(...(spots.length ? [
-    el('p', { class: 'section' }, 'Trouble spots'),
-    el('div', { class: 'spots' }, ...spots.slice(0, 10).map((t) => el('span', { class: 'spot' }, renderRoman(el('span'), info[t.zh]?.roman || t.zh, d), el('small', {}, info[t.zh]?.gloss || '')))),
-    el('button', { class: 'btn small', onclick: () => startSession(drills().map((x) => ({ key: `${x.id}:say`, id: x.id, type: 'say', deck: x.deck }))) }, `Practise ${spots.length} now`),
-  ] : []));
+  const reading = readingTrouble(progress, d).filter((t) => progress.cards[`${charId(d, t.zh)}:char`]);
+  chars();
+  $('me-spots').replaceChildren(
+    ...(spots.length ? [
+      el('p', { class: 'section' }, 'Hard to say'),
+      el('div', { class: 'spots' }, ...spots.slice(0, 10).map((t) => el('button', { class: 'spot', onclick: () => speakWord(t.zh, d) }, renderRoman(el('span'), info[t.zh]?.roman || t.zh, d), el('small', {}, info[t.zh]?.gloss || '')))),
+      el('button', { class: 'btn small', onclick: () => startSession(drills().map((x) => ({ key: `${x.id}:say`, id: x.id, type: 'say', deck: x.deck }))) }, `Practise saying ${spots.length}`),
+    ] : []),
+    ...(reading.length ? [
+      el('p', { class: 'section' }, 'Hard to read'),
+      el('div', { class: 'spots' }, ...reading.slice(0, 10).map((t) => {
+        const info2 = byId[charId(d, t.zh)];
+        return el('button', { class: 'spot read-spot', onclick: () => speakWord(t.zh, d) }, el('span', { class: 'spot-zh', lang: LANG_ATTR[d] }, t.zh), el('small', {}, info2 ? `${info2.roman.replace(/-/g, '')} · ${info2.gloss}` : ''));
+      })),
+      el('button', { class: 'btn small', onclick: () => startSession(reading.map((t) => ({ key: `${charId(d, t.zh)}:char`, id: charId(d, t.zh), type: 'char', deck: d }))) }, `Practise reading ${reading.length}`),
+    ] : [])
+  );
 
   $('me-tones').replaceChildren(...(d === 'mandarin' ? [el('p', { class: 'section' }, 'Tones'), toneBars(progress.tones)] : []));
   const n = progress.missions.length;
@@ -944,6 +969,7 @@ async function init() {
   conversations = data.conversations || [];
   version = data.version;
   byId = Object.fromEntries(allItems.map((i) => [i.id, i]));
+  for (const i of allItems) if (i.kind !== 'pattern' && i.words?.length === 1 && i.audio) wordAudio[`${i.deck}/${i.words[0].zh}`] = i.audio;
   document.addEventListener('visibilitychange', () => { if (document.hidden) syncNow(); });
   syncOnOpen();
   show('home');

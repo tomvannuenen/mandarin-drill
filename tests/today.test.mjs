@@ -39,6 +39,17 @@ test('composeToday mixes in a few new word cards and sentence builds', () => {
   assert.deepEqual([counts.chars, counts.builds], [3, 1]);
 });
 
+test('composeToday puts words that are hard to read up front, as Read it cards', () => {
+  const p = defaults();
+  const items = [{ id: 'a', kind: 'phrase', deck: 'mandarin', week: 1, words: [{ zh: '我' }, { zh: '喝' }] }];
+  p.cards['a:say'] = future(9);
+  p.cards['c/mandarin/喝:char'] = future(5);
+  p.weakChars = { 'mandarin/喝': { score: 2, flags: 1 } };
+  const chars = [{ id: 'c/mandarin/喝', kind: 'char', deck: 'mandarin', zh: '喝' }];
+  const { queue } = composeToday({ items, drills: [], chars, progress: p, plan: null, now: NOW, newLimit: 0, deck: 'mandarin', charLimit: 0, buildLimit: 0 });
+  assert.equal(queue[0].key, 'c/mandarin/喝:char');
+});
+
 test('composeToday ignores stale plans and caps long days', () => {
   const p = defaults();
   const many = Array.from({ length: 60 }, (_, i) => ({ id: `x${i}`, deck: 'mandarin', week: 1 }));

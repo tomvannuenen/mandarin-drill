@@ -351,3 +351,8 @@ body.pinyin-first .tq-zh { font-size: 1.2rem; color: var(--muted); }
 .prompt-gap-roman { font-size: 1.5rem; font-weight: 600; margin: 12px 0 0; }
 .setting small { font-weight: 400; }
 .setting input[type=checkbox] { width: 24px; height: 24px; accent-color: var(--accent); flex: none; }
+
+/* Sync + daily focus */
+.token-input { width: 100%; font: inherit; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); margin: 4px 0 10px; }
+.hint.error { color: var(--again); }
+.plan-msg { margin: 0 0 12px; white-space: pre-line; }

@@ -7,6 +7,8 @@ import { initBook, renderBook } from './book.js';
 import { initTones, startTones, toneWords, toneBars } from './tonecheck.js';
 import { initConvo, startConvo, convoStatus } from './convo.js';
 import { weekSummary, checkinText } from './lib/checkin.js';
+import { applyPlan, planIsCurrent } from './lib/plan.js';
+import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pullPlan, DEFAULT_REPO } from './lib/sync.js';
 import { drillId, flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
 import { weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from './lib/motivation.js';
 
@@ -21,6 +23,11 @@ let byId = {};
 let voices = {}; // {voiceId: {flag, name}}
 let decks = {}; // {deck: {label, voices}}
 let conversations = [];
+let plan = null; // Claude's daily focus note
+let syncCfg = loadConfig();
+let syncDirty = false;
+let syncTimer = null;
+let syncError = '';
 let version = '';
 let progress = load(storage || nullStorage);
 let extraNew = 0;
@@ -40,6 +47,90 @@ function studyItems() {
 
 function persist() {
   save(storage || nullStorage, progress);
+  if (syncCfg) {
+    syncDirty = true;
+    clearTimeout(syncTimer);
+    syncTimer = setTimeout(syncNow, 20000);
+  }
+}
+
+// Upload progress to the private repo (debounced; also on leaving the app and after a session).
+async function syncNow() {
+  clearTimeout(syncTimer);
+  if (!syncCfg || !syncDirty || !navigator.onLine) return;
+  syncDirty = false;
+  try {
+    await pushProgress(syncCfg, exportJSON(progress));
+    syncError = '';
+  } catch (err) {
+    syncDirty = true;
+    syncError = err.message;
+  }
+  if (!$('view-settings').hidden) renderSync();
+}
+
+async function syncOnOpen() {
+  if (!syncCfg || !navigator.onLine) return;
+  try {
+    if (!Object.keys(progress.cards).length) {
+      const remote = await pullProgress(syncCfg);
+      if (remote && Object.keys(importJSON(remote).cards).length && confirm('Restore your progress from sync?')) {
+        progress = importJSON(remote);
+        save(storage || nullStorage, progress);
+      }
+    }
+    plan = await pullPlan(syncCfg);
+    if (applyPlan(progress, plan, new Date())) persist();
+    if (!$('view-home').hidden) renderHome();
+  } catch (err) {
+    syncError = err.message;
+  }
+}
+
+function renderSync() {
+  const box = $('sync-box');
+  if (syncCfg) {
+    const when = syncCfg.lastSync ? new Date(syncCfg.lastSync).toLocaleString() : 'not yet';
+    box.replaceChildren(
+      el('p', { class: 'hint' }, `Connected to ${syncCfg.repo} (private). Last synced: ${when}. Claude reads this to follow your progress and writes your daily focus here.`),
+      ...(syncError ? [el('p', { class: 'hint error' }, `Last problem: ${syncError}`)] : []),
+      el('div', { class: 'button-row' },
+        el('button', { class: 'secondary', onclick: () => { syncDirty = true; syncNow(); } }, 'Sync now'),
+        el('button', { class: 'link small', onclick: () => {
+          if (!confirm('Stop syncing? Your progress stays on this phone.')) return;
+          syncCfg = null; saveConfig(null); renderSync();
+        } }, 'Disconnect'))
+    );
+    return;
+  }
+  const input = el('input', { type: 'password', class: 'token-input', placeholder: 'github_pat_…', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false' });
+  const status = el('p', { class: 'hint' });
+  box.replaceChildren(
+    el('p', { class: 'hint' }, 'Lets Claude follow your progress and write a daily focus note. Also backs up your progress. One-time setup on GitHub:'),
+    el('ol', { class: 'hint steps' },
+      el('li', {}, 'Open ', el('a', { href: 'https://github.com/settings/personal-access-tokens/new', target: '_blank', rel: 'noopener' }, 'GitHub → new fine-grained token'), '.'),
+      el('li', {}, 'Repository access: Only select repositories → mandarin-progress.'),
+      el('li', {}, 'Permissions → Contents: Read and write. Expiration: 1 year.'),
+      el('li', {}, 'Generate, copy the key, paste it below.')),
+    input,
+    el('button', { class: 'primary', onclick: async () => {
+      const cfg = { repo: DEFAULT_REPO, token: input.value.trim() };
+      if (!cfg.token) return;
+      status.textContent = 'Checking…';
+      try {
+        await testConnection(cfg);
+        syncCfg = cfg;
+        saveConfig(cfg);
+        syncDirty = true;
+        await syncNow();
+        await syncOnOpen();
+        renderSync();
+      } catch (err) {
+        status.textContent = `Could not connect: ${err.message}`;
+      }
+    } }, 'Connect'),
+    status
+  );
 }
 
 function voiceFlag(id) {
@@ -145,6 +236,21 @@ function dashCard(title, ...children) {
 function renderDash(list, now) {
   const lang = LANG_ATTR[deck()];
   const parts = [];
+
+  // Claude's daily note
+  if (planIsCurrent(plan, now) && plan.message) {
+    const ids = (plan.items || []).filter((id) => byId[id] && byId[id].deck === deck());
+    const drills = studyItems().filter((i) => i.kind === 'drill' && (plan.words || []).some((w) => w.zh === i.zh && w.deck === i.deck));
+    const queue = [
+      ...drills.map((d) => ({ key: `${d.id}:say`, id: d.id, type: 'say', deck: d.deck })),
+      ...ids.map((id) => ({ key: `${id}:say`, id, type: 'say', deck: deck() })),
+    ];
+    parts.push(dashCard(
+      "Today's focus",
+      el('p', { class: 'plan-msg' }, plan.message),
+      ...(queue.length ? [el('button', { class: 'primary', onclick: () => startSession(queue) }, `Practise focus (${queue.length})`)] : [])
+    ));
+  }
 
   // Coach readiness (Mandarin weeks only)
   const r = deck() === 'mandarin' ? weekReadiness(list, progress) : null;
@@ -401,6 +507,7 @@ function rate(rating) {
 function finishSession() {
   const n = session.done;
   session = null;
+  syncNow();
   $('done-text').textContent = `${n} card${n === 1 ? '' : 's'} done. See you tomorrow!`;
   show('done');
 }
@@ -475,6 +582,7 @@ function renderSettings() {
   $('new-per-day').value = progress.settings.newPerDay;
   $('lesson-day').value = progress.settings.lessonDay ?? '';
   $('reading').checked = !!progress.settings.reading;
+  renderSync();
   $('last-export').textContent = progress.lastExport
     ? `Last export: ${new Date(progress.lastExport).toLocaleDateString()}`
     : 'Not exported yet.';
@@ -575,6 +683,8 @@ async function init() {
   voices = data.voices;
   decks = data.decks;
   conversations = data.conversations || [];
+  document.addEventListener('visibilitychange', () => { if (document.hidden) syncNow(); });
+  syncOnOpen();
   version = data.version;
   byId = Object.fromEntries(allItems.map((i) => [i.id, i]));
   show('home');

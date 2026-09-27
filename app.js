@@ -3,6 +3,7 @@ import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
 import { buildQueue, shouldRequeue } from './lib/session.js';
 import { load, save, exportJSON, importJSON, applyReview, localDate } from './lib/store.js';
+import { initBook, renderBook } from './book.js';
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 const LANG_NAME = { mandarin: 'Mandarin', cantonese: 'Cantonese' };
@@ -98,6 +99,7 @@ function show(view) {
   if (view === 'home') renderHome();
   if (view === 'browse') renderBrowse();
   if (view === 'settings') renderSettings();
+  if (view === 'book') renderBook();
   window.scrollTo(0, 0);
 }
 
@@ -392,6 +394,7 @@ function wire() {
 
 async function init() {
   wire();
+  initBook();
   const res = await fetch('phrases.json');
   const data = await res.json();
   allItems = data.items;

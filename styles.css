@@ -235,3 +235,37 @@ details.pattern .fills { padding-left: 14px; border-left: 3px solid var(--line);
 .tab.active { color: var(--accent); background: var(--surface); }
 body.studying .tabs { display: none; }
 body.studying #app { padding-bottom: calc(env(safe-area-inset-bottom) + 16px); }
+
+/* Book */
+.steps { padding-left: 1.2em; }
+.book-title { color: var(--muted); margin: 0 0 8px; }
+.lesson { border-bottom: 1px solid var(--line); }
+.lesson > summary { padding: 14px 4px; cursor: pointer; list-style: none; }
+.lesson > summary::-webkit-details-marker { display: none; }
+.lesson > summary span { color: var(--muted); margin-left: 6px; }
+.tracks { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 8px; padding: 0 4px 14px; }
+.track { padding: 10px 0; border-radius: 12px; background: var(--surface); border: 1.5px solid var(--line); font-weight: 600; }
+.track.active { border-color: var(--accent); color: var(--accent); }
+.small { font-size: .85rem; margin-top: 20px; color: var(--muted); }
+#view-book { padding-bottom: 170px; }
+.player {
+  position: fixed;
+  left: 0; right: 0;
+  bottom: calc(env(safe-area-inset-bottom) + 58px);
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, .08);
+  padding: 10px 16px 8px;
+}
+.player-head { display: flex; justify-content: space-between; gap: 8px; font-size: .95rem; }
+.player-title { font-weight: 600; }
+.player-sub { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#pl-seek { width: 100%; accent-color: var(--accent); margin: 6px 0; }
+.player-controls { display: flex; justify-content: space-between; align-items: center; }
+.player-controls button { font-size: 1.2rem; padding: 6px 10px; border-radius: 10px; min-width: 44px; }
+.player-controls .pl-main { font-size: 1.5rem; background: var(--accent); color: var(--accent-ink); width: 56px; height: 56px; border-radius: 50%; }
+#pl-speed { font-size: .95rem; font-weight: 600; }
+#pl-repeat { opacity: .4; }
+#pl-repeat.on { opacity: 1; background: var(--bg); }

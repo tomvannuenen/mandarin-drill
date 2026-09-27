@@ -80,6 +80,39 @@
       <div id="browse-list"></div>
     </section>
 
+    <section id="view-book" class="view" hidden>
+      <header class="browse-head"><h2>Book</h2></header>
+      <div id="book-empty">
+        <p class="hint">Play your textbook's audio here. Load it once; it stays on this device only.</p>
+        <ol class="hint steps">
+          <li>On the Mac, AirDrop <b>hsk1.chinesepack</b> to this phone (save it to Files).</li>
+          <li>Tap the button below and choose that file.</li>
+        </ol>
+        <label class="primary big file-btn">Load book audio<input type="file" id="book-file" hidden></label>
+      </div>
+      <div id="book-loaded" hidden>
+        <p class="book-title" id="book-title" lang="zh-Hans"></p>
+        <div id="book-list"></div>
+        <button class="link small" id="book-remove">Remove book audio from this device</button>
+      </div>
+      <p class="hint" id="book-status"></p>
+      <div class="player" id="player" hidden>
+        <div class="player-head">
+          <span class="player-title" id="player-title"></span>
+          <span class="player-sub" id="player-sub" lang="zh-Hans"></span>
+        </div>
+        <input type="range" id="pl-seek" min="0" max="1000" value="0" aria-label="Position">
+        <div class="player-controls">
+          <button id="pl-prev" aria-label="Previous track">⏮</button>
+          <button id="pl-back" aria-label="Back 5 seconds">↺5</button>
+          <button id="pl-play" class="pl-main" aria-label="Play or pause">▶</button>
+          <button id="pl-next" aria-label="Next track">⏭</button>
+          <button id="pl-speed" aria-label="Playback speed">1×</button>
+          <button id="pl-repeat" aria-label="Repeat track">🔁</button>
+        </div>
+      </div>
+    </section>
+
     <section id="view-settings" class="view" hidden>
       <h2>Settings</h2>
       <label class="setting">
@@ -104,6 +137,7 @@
   <nav class="tabs" id="tabs">
     <button data-go="home" class="tab active">Study</button>
     <button data-go="browse" class="tab">Browse</button>
+    <button data-go="book" class="tab">Book</button>
     <button data-go="settings" class="tab">Settings</button>
   </nav>
 

@@ -36,3 +36,16 @@ export function renderRoman(target, text, d) {
   target.replaceChildren(...words.flatMap((w, i) => (i ? [' ', w] : [w])));
   return target;
 }
+
+// Fallback for words without a recording: the phone's own voice (iPhone has Taiwan and Hong Kong voices).
+const TTS_LANG = { mandarin: 'zh-TW', cantonese: 'zh-HK' };
+export function speakText(text, deck = 'mandarin', rate = 0.85) {
+  if (!('speechSynthesis' in window)) return;
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = TTS_LANG[deck] || 'zh-TW';
+  u.rate = rate;
+  const voice = speechSynthesis.getVoices().find((v) => v.lang.replace('_', '-') === u.lang);
+  if (voice) u.voice = voice;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}

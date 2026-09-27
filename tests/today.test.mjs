@@ -21,7 +21,22 @@ test('composeToday puts trouble spots and focus first, then reviews mixed with n
   const plan = { date: '2026-09-27', items: ['c'] };
   const { queue, counts } = composeToday({ items: ITEMS, drills, progress: p, plan, now: NOW, newLimit: 2, deck: 'mandarin' });
   assert.deepEqual(queue.map((q) => q.key), ['w/mandarin/來自:say', 'c:say', 'b:say', 'd:say', 'a:say', 'e:say']);
-  assert.deepEqual(counts, { focus: 2, reviews: 2, fresh: 2 });
+  assert.deepEqual(counts, { focus: 2, reviews: 2, fresh: 2, chars: 0, builds: 0 });
+});
+
+test('composeToday mixes in a few new word cards and sentence builds', () => {
+  const p = defaults();
+  const items = [
+    { id: 'a', kind: 'phrase', deck: 'mandarin', week: 1, words: [{ zh: '我' }, { zh: '喝' }] },
+    { id: 'b', kind: 'phrase', deck: 'mandarin', week: 1, words: [{ zh: '你' }, { zh: '好' }] },
+  ];
+  p.cards['a:say'] = future(9);
+  p.cards['b:say'] = past(1);
+  p.goodCounts.a = 2;
+  const chars = ['我', '喝', '你', '好'].map((zh) => ({ id: `c/mandarin/${zh}`, kind: 'char', deck: 'mandarin', zh }));
+  const { queue, counts } = composeToday({ items, drills: [], chars, progress: p, plan: null, now: NOW, newLimit: 0, deck: 'mandarin', charLimit: 3, buildLimit: 2 });
+  assert.deepEqual(queue.map((q) => q.type).sort(), ['build', 'char', 'char', 'char', 'listen', 'say'].sort());
+  assert.deepEqual([counts.chars, counts.builds], [3, 1]);
 });
 
 test('composeToday ignores stale plans and caps long days', () => {

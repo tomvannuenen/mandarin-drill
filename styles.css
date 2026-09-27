@@ -374,3 +374,25 @@ details.pattern .fills { padding-left: 14px; border-left: 2px solid var(--rule);
 .tab.active { color: var(--seal); }
 body.fullscreen .tabs { display: none; }
 body.fullscreen #app { padding-bottom: calc(env(safe-area-inset-bottom) + 16px); }
+
+/* ---------- characters ---------- */
+.prompt-char { font-family: var(--han); font-size: 64px; line-height: 1.15; margin: 0 0 8px; letter-spacing: .04em; }
+body.pinyin-first .prompt-char { font-size: 64px; }
+.example { margin-top: 18px; text-align: left; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 14px; padding: 10px 14px; }
+.example .section { margin: 0 0 4px; }
+.build-line {
+  min-height: 74px; margin: 22px 0 14px; padding: 8px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center;
+  border-bottom: 1.5px solid var(--rule);
+}
+.build-line.wrong { animation: shake .4s ease; border-color: var(--seal); }
+@keyframes shake { 25% { transform: translateX(-6px); } 50% { transform: translateX(6px); } 75% { transform: translateX(-3px); } }
+.build-empty { color: var(--ink-3); font-size: 14px; }
+.build-pool { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.tile {
+  display: inline-flex; flex-direction: column; align-items: center; gap: 1px; min-width: 52px; padding: 8px 12px;
+  border-radius: 12px; border: 1px solid var(--rule); background: var(--paper-2); box-shadow: 0 2px 0 var(--rule);
+}
+.tile:active { transform: translateY(1px); box-shadow: none; }
+.tile.used { visibility: hidden; }
+.tile-zh { font-size: 26px; line-height: 1.2; }
+.tile-roman { font-family: var(--serif); font-size: 13px; }

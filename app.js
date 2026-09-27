@@ -1,4 +1,4 @@
-import { $, el, play, renderRoman, LANG_ATTR } from './ui.js';
+import { $, el, play, renderRoman, speakText, LANG_ATTR } from './ui.js';
 import { icon, hydrateIcons } from './icons.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
@@ -16,6 +16,7 @@ import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pul
 import { flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
 import { weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from './lib/motivation.js';
 import { composeToday, snapshot, outcome, dueSoon, estimateMinutes } from './lib/today.js';
+import { charItems, knowsWord, tiles, isBuilt } from './lib/chars.js';
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 const LANG_NAME = { mandarin: 'Mandarin', cantonese: 'Cantonese' };
@@ -53,6 +54,13 @@ function drills() {
   return d;
 }
 const studyItems = () => [...items(), ...drills()];
+
+// Words from phrases you've met, as virtual word-card items (kept in byId so queued cards resolve).
+function chars() {
+  const c = charItems(allItems, progress, deck());
+  for (const x of c) byId[x.id] = x;
+  return c;
+}
 
 // ---------- persistence and sync
 
@@ -225,7 +233,7 @@ function newLimit() {
 }
 
 function todayPlan(now = new Date()) {
-  return composeToday({ items: items(), drills: drills(), progress, plan, now, newLimit: newLimit(), deck: deck() });
+  return composeToday({ items: items(), drills: drills(), chars: chars(), progress, plan, now, newLimit: newLimit(), deck: deck() });
 }
 
 function readyConversation() {
@@ -262,6 +270,8 @@ function renderHome() {
       counts.focus && `${counts.focus} focus`,
       counts.reviews && `${counts.reviews} review${counts.reviews === 1 ? '' : 's'}`,
       counts.fresh && `${counts.fresh} new`,
+      counts.chars && `${counts.chars} characters`,
+      counts.builds && `${counts.builds} to build`,
       convo && '1 conversation',
     ].filter(Boolean);
     const m = minutes(estimateMinutes(queue.length) + (convo ? 2 : 0));
@@ -305,6 +315,25 @@ function renderMission(now) {
 
 function contentFor(card) {
   const item = byId[card.id];
+  if (card.type === 'char') {
+    const word = { zh: item.zh, roman: item.roman, gloss: item.gloss };
+    return {
+      char: true, zh: item.zh, roman: item.roman, en: item.gloss, words: [word], example: item.example,
+      audio: item.audio, voice: item.audio ? pickVoice(item) : null, played: false, deck: item.deck, flagged: new Set(),
+      ...tracking(),
+    };
+  }
+  if (card.type === 'build') {
+    const entry = item.kind === 'pattern'
+      ? (item.fills.find((f) => f.fillId === item.mine) || pickFill(item, progress))
+      : item;
+    return {
+      build: true, entry, zh: entry.zh, roman: entry.roman, en: entry.en, words: entry.words, audio: entry.audio,
+      voice: pickVoice(entry), played: false, deck: item.deck, flagged: new Set(),
+      tiles: tiles(entry, chars()), picked: [], tries: 0, result: null,
+      ...tracking(),
+    };
+  }
   if (item.kind === 'drill') {
     const p = drillPrompt(item);
     const word = { zh: item.zh, roman: item.roman, gloss: item.gloss };
@@ -332,7 +361,7 @@ function tracking() {
 }
 
 function showAccent() {
-  const tag = voiceTag(session.current.c.voice);
+  const tag = session.current.c.voice ? voiceTag(session.current.c.voice) : '';
   $('voice-flag').textContent = tag;
   const speaker = document.querySelector('#prompt .speaker');
   if (speaker) speaker.textContent = tag;
@@ -342,10 +371,11 @@ function showAccent() {
 function playCurrent({ slow = false, next = false } = {}) {
   const c = session?.current?.c;
   if (!c) return;
-  if (next && c.played) c.voice = nextVoice(c, c.voice);
+  if (next && c.played && c.audio) c.voice = nextVoice(c, c.voice);
   if (c.played) c.replays += 1;
   c.played = true;
   showAccent();
+  if (!c.audio) return speakText(c.zh, c.deck, slow ? 0.55 : 0.85);
   play(c.audio[c.voice][slow ? 1 : 0]);
 }
 
@@ -386,8 +416,68 @@ function hintButton(c, label = 'Hint', text = () => hintText(c.roman, c.deck)) {
   return b;
 }
 
+// Sentence building: tap word tiles into order. Pinyin shows under words you can't read yet.
+function renderBuild(c) {
+  const line = el('div', { class: 'build-line' });
+  const pool = el('div', { class: 'build-pool' });
+  const tileEl = (t) => {
+    const b = el('button', { class: 'tile' }, el('span', { class: 'tile-zh', lang: LANG_ATTR[c.deck] }, t.zh));
+    if (!knowsWord(progress, c.deck, t.zh)) b.append(renderRoman(el('span', { class: 'tile-roman' }), t.roman, c.deck));
+    return b;
+  };
+  const draw = () => {
+    line.replaceChildren(...(c.picked.length ? c.picked.map((t) => {
+      const b = tileEl(t);
+      b.addEventListener('click', () => { if (c.result) return; c.picked = c.picked.filter((x) => x !== t); draw(); });
+      return b;
+    }) : [el('span', { class: 'build-empty' }, 'Tap the words in order')]));
+    pool.replaceChildren(...c.tiles.map((t) => {
+      const b = tileEl(t);
+      const used = c.picked.includes(t);
+      b.classList.toggle('used', used);
+      b.addEventListener('click', () => {
+        if (used || c.result) return;
+        c.picked.push(t);
+        draw();
+        if (c.picked.length === c.words.length) checkBuild(c, line);
+      });
+      return b;
+    }));
+  };
+  draw();
+  c.redraw = draw;
+  return [el('p', { class: 'prompt-en' }, c.en), line, pool];
+}
+
+function checkBuild(c, line) {
+  if (isBuilt(c.entry, c.picked.map((t) => t.zh))) return finishBuild(c.tries === 0 ? 3 : 2);
+  c.tries += 1;
+  line.classList.add('wrong');
+  setTimeout(() => {
+    line.classList.remove('wrong');
+    if (c.tries >= 2) return finishBuild(1);
+    c.picked = [];
+    c.redraw();
+  }, 700);
+}
+
+// Show the right sentence, play it, and grade automatically: first try = Got it, second = Almost, else Didn't know.
+function finishBuild(rating) {
+  const { c } = session.current;
+  if (c.result) return;
+  c.result = rating;
+  c.revealMs = Math.round(performance.now() - c.shownAt);
+  $('card-kind').textContent = rating === 3 ? 'Well built' : rating === 2 ? 'Got there' : "Here's how it goes";
+  $('answer').hidden = false;
+  $('reveal').hidden = true;
+  $('continue').hidden = false;
+  playCurrent();
+}
+
 function promptFor(card, c) {
   const lang = LANG_ATTR[c.deck];
+  if (c.build) return renderBuild(c);
+  if (c.char) return [el('p', { class: 'prompt-char', lang }, c.zh), el('p', { class: 'muted' }, 'Say it out loud'), hintButton(c)];
   if (c.drill === 'gap') {
     // The sentence in pinyin with the missing word blanked; characters only when practising reading.
     const words = c.context.words;
@@ -438,7 +528,9 @@ function showCard() {
   const c = contentFor(card);
   session.current = { card, c };
 
-  $('card-kind').textContent = c.drill
+  $('card-kind').textContent = c.build ? 'Build the sentence'
+    : c.char ? 'Read it'
+    : c.drill
     ? 'Trouble spot'
     : c.level === 'situation' ? 'What would you say?'
     : c.level === 'speed' ? 'Speed round: say it before the bar runs out'
@@ -453,7 +545,11 @@ function showCard() {
   $('rec').classList.remove('recording');
   $('rec-row').hidden = true;
   $('a-en').textContent = c.en;
-  $('a-en').hidden = card.type === 'say' && c.level !== 'situation' && !c.drill;
+  $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || c.build;
+  $('a-example').hidden = !c.example;
+  $('a-example').replaceChildren(...(c.example ? [el('p', { class: 'section' }, 'In a phrase you know'), sayLine(c.example, c.deck)] : []));
+  $('continue').hidden = true;
+  $('reveal').textContent = c.build ? "I'm stuck, show me" : 'Show answer';
   $('a-note').textContent = c.note || '';
   $('a-note').hidden = !c.note;
   $('answer').hidden = true;
@@ -468,10 +564,12 @@ function showCard() {
 
 function reveal() {
   if (!session || !$('answer').hidden) return;
+  if (session.current.c.build) return finishBuild(1);
   session.current.c.revealMs = Math.round(performance.now() - session.current.c.shownAt);
   $('answer').hidden = false;
   $('reveal').hidden = true;
   $('grades').hidden = false;
+  document.querySelector('#prompt .hint-btn')?.remove();
   if (session.current.card.type !== 'listen') playCurrent();
 }
 
@@ -479,7 +577,7 @@ function reveal() {
 function rate(rating) {
   if (!session || $('grades').hidden || !$('which').hidden) return;
   const { c } = session.current;
-  if (rating < 3 && c.words.length > 1) {
+  if (rating < 3 && c.words.length > 1 && !c.build && !c.char) {
     document.querySelector(`#grades [data-rating="${rating}"]`).classList.add('picked');
     session.current.pending = rating;
     $('which-chips').replaceChildren(...c.words.map((w) => {
@@ -505,7 +603,7 @@ function commit(rating) {
   applyReview(progress, card, rating, state, now, {
     ms: c.revealMs, voice: c.voice, replays: c.replays, lookups: [...c.lookups], hint: c.hint,
   });
-  if (rating >= 3) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words, now);
+  if (rating >= 3 && !c.char) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words, now);
   for (const zh of c.flagged) {
     // A newly missed word gets a practice card straight away, shown again later in this session.
     const id = flagWord(progress, c.deck, zh, now);
@@ -651,7 +749,8 @@ function renderMe() {
 
   $('me-tones').replaceChildren(...(d === 'mandarin' ? [el('p', { class: 'section' }, 'Tones'), toneBars(progress.tones)] : []));
   const n = progress.missions.length;
-  $('me-missions').textContent = n ? `${n} real-life mission${n === 1 ? '' : 's'} done.` : '';
+  const known = chars().filter((x) => knowsWord(progress, d, x.zh)).length;
+  $('me-missions').textContent = [known && `You can read ${known} word${known === 1 ? '' : 's'}.`, n && `${n} real-life mission${n === 1 ? '' : 's'} done.`].filter(Boolean).join(' ');
 }
 
 // ---------- weekly check-in
@@ -761,6 +860,7 @@ function wire() {
   $('more').addEventListener('click', () => { extraNew += 5; startToday(); });
   $('quit').addEventListener('click', () => { session = null; show('home'); });
   $('reveal').addEventListener('click', reveal);
+  $('continue').addEventListener('click', () => { if (session?.current?.c.result) commit(session.current.c.result); });
   $('play').addEventListener('click', () => playCurrent({ next: true }));
   $('play-slow').addEventListener('click', () => playCurrent({ slow: true }));
   for (const b of document.querySelectorAll('#grades .grade')) b.addEventListener('click', () => rate(Number(b.dataset.rating)));

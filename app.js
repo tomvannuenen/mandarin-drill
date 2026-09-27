@@ -69,7 +69,12 @@ function renderDeckSwitch() {
   }
 }
 
+function applyReadingMode() {
+  document.body.classList.toggle('pinyin-first', !progress.settings.reading);
+}
+
 function show(view) {
+  applyReadingMode();
   for (const v of document.querySelectorAll('.view')) v.hidden = v.id !== `view-${view}`;
   for (const t of document.querySelectorAll('.tab')) t.classList.toggle('active', t.dataset.go === view);
   document.body.classList.toggle('studying', ['study', 'tones', 'convo', 'checkin'].includes(view));
@@ -307,10 +312,17 @@ function renderWords(c) {
 function promptFor(card, c) {
   const lang = LANG_ATTR[c.deck];
   if (c.drill === 'gap') {
-    return [
-      el('p', { class: 'prompt-en' }, c.context.en),
-      el('p', { class: 'prompt-gap', lang }, ...c.context.words.map((w) => (w.zh === c.target ? el('span', { class: 'gap' }, '＿＿') : w.zh))),
-    ];
+    // The sentence in pinyin with the missing word blanked; characters only when practising reading.
+    const words = c.context.words;
+    const romanGap = el('p', { class: 'prompt-gap-roman' }, ...words.flatMap((w, i) => [
+      ...(i ? [' '] : []),
+      w.zh === c.target ? el('span', { class: 'gap' }, '＿＿') : renderRoman(el('span'), w.roman, c.deck),
+    ]));
+    const parts = [el('p', { class: 'prompt-en' }, c.context.en), romanGap];
+    if (progress.settings.reading) {
+      parts.push(el('p', { class: 'prompt-gap', lang }, ...words.map((w) => (w.zh === c.target ? el('span', { class: 'gap' }, '＿＿') : w.zh))));
+    }
+    return parts;
   }
   if (c.drill === 'word') return [el('p', { class: 'prompt-en' }, c.en), el('p', { class: 'hint' }, 'one word')];
   if (card.type === 'say') return [el('p', { class: 'prompt-en' }, c.en)];
@@ -462,6 +474,7 @@ function renderBrowse() {
 function renderSettings() {
   $('new-per-day').value = progress.settings.newPerDay;
   $('lesson-day').value = progress.settings.lessonDay ?? '';
+  $('reading').checked = !!progress.settings.reading;
   $('last-export').textContent = progress.lastExport
     ? `Last export: ${new Date(progress.lastExport).toLocaleDateString()}`
     : 'Not exported yet.';
@@ -534,6 +547,11 @@ function wire() {
     progress.settings.newPerDay = n;
     persist();
     renderSettings();
+  });
+  $('reading').addEventListener('change', (e) => {
+    progress.settings.reading = e.target.checked;
+    persist();
+    applyReadingMode();
   });
   $('lesson-day').addEventListener('change', (e) => {
     progress.settings.lessonDay = e.target.value === '' ? null : Number(e.target.value);

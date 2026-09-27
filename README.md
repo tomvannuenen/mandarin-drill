@@ -12,7 +12,7 @@ Switch languages at the top of the Study and Browse screens. Each language has i
 Open the site on your phone in Safari → Share → **Add to Home Screen**. It works offline once loaded.
 
 - **Say it**: English is shown → say the Mandarin out loud → reveal → grade yourself honestly.
-- **Listen** / **Read** cards unlock for a phrase once you've said it correctly on two different days.
+- **Listen** cards unlock for a phrase once you've said it correctly on two different days. **Read** cards (characters → sound) only appear when *Practise reading characters* is on in Settings; with it off, pinyin is shown large and characters small.
 - **Pattern** cards (我喜歡喝___) fill in a different word each time, preferring words you've already seen.
 - Every card rotates between voices (🇹🇼 Taiwan / 🇨🇳 Beijing for Mandarin, 🇭🇰 for Cantonese).
   Each tap on 🔊 plays the next speaker; the flag shows where they're from. 🐢 plays the last speaker slowly.

@@ -340,3 +340,14 @@ body.studying #app { padding-bottom: calc(env(safe-area-inset-bottom) + 16px); }
 /* Check-in */
 #ci-body { background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--radius); padding: 12px 16px; margin: 16px 0 8px; }
 #ci-body p { margin: 6px 0; font-size: .95rem; }
+
+/* Pinyin-first mode (reading practice off): pinyin large, characters small underneath */
+body.pinyin-first .wg { flex-direction: column-reverse; }
+body.pinyin-first .wg-roman { font-size: 1.6rem; font-weight: 600; }
+body.pinyin-first .wg-zh { font-size: 1.05rem; color: var(--muted); }
+body.pinyin-first .row .pinyin-s { grid-row: 1; font-size: 1.15rem; font-weight: 600; }
+body.pinyin-first .row .zh-s { grid-row: 2; font-size: .95rem; color: var(--muted); }
+body.pinyin-first .tq-zh { font-size: 1.2rem; color: var(--muted); }
+.prompt-gap-roman { font-size: 1.5rem; font-weight: 600; margin: 12px 0 0; }
+.setting small { font-weight: 400; }
+.setting input[type=checkbox] { width: 24px; height: 24px; accent-color: var(--accent); flex: none; }

@@ -152,8 +152,19 @@ test('buildQueue adds unlocked listen/read cards without using the new limit', (
   const p = defaults();
   p.cards['a:say'] = { ...grade(null, 3, NOW), due: later(DAY).toISOString() };
   p.goodCounts.a = UNLOCK_GOOD;
+  p.settings.reading = true;
   const q = buildQueue(ITEMS, p, NOW, 0);
   assert.deepEqual(q.map((c) => c.key), ['a:listen', 'a:read']);
+});
+
+test('buildQueue leaves out reading cards unless reading practice is on', () => {
+  const p = defaults();
+  p.cards['a:say'] = { ...grade(null, 3, NOW), due: later(DAY).toISOString() };
+  p.cards['b:read'] = { ...grade(null, 3, NOW), due: later(-DAY).toISOString() };
+  p.goodCounts.a = UNLOCK_GOOD;
+  assert.deepEqual(buildQueue(ITEMS, p, NOW, 0).map((c) => c.key), ['a:listen']);
+  p.settings.reading = true;
+  assert.deepEqual(buildQueue(ITEMS, p, NOW, 0).map((c) => c.key), ['b:read', 'a:listen', 'a:read']);
 });
 
 test('shouldRequeue for cards due within 20 minutes', () => {

@@ -2,7 +2,7 @@
 # requires-python = ">=3.9"
 # dependencies = ["edge-tts", "opencc-python-reimplemented"]
 # ///
-"""Build phrases.json and audio from data/items.json.
+"""Build phrases.json and audio from data/items.json (Mandarin) and data/cantonese.json.
 
 Usage:
     uv run tools/build.py                # validate, generate missing audio, write phrases.json
@@ -10,6 +10,7 @@ Usage:
     uv run tools/build.py --force ID     # regenerate audio for item ID (repeatable)
 """
 import asyncio
+from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import json
 import re
@@ -20,10 +21,31 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from tools.pinyin import apply_sandhi
+from tools.pinyin import apply_sandhi, word_groups
 
 ROOT = Path(__file__).resolve().parent.parent
-VOICE = "zh-TW-YunJheNeural"
+# Every phrase is recorded by every voice of its deck; the app rotates between them.
+VOICES = {
+    "tw-yunjhe": {"tts": "zh-TW-YunJheNeural", "flag": "🇹🇼", "name": "YunJhe"},
+    "tw-hsiaochen": {"tts": "zh-TW-HsiaoChenNeural", "flag": "🇹🇼", "name": "HsiaoChen"},
+    "tw-hsiaoyu": {"tts": "zh-TW-HsiaoYuNeural", "flag": "🇹🇼", "name": "HsiaoYu"},
+    "cn-yunyang": {"tts": "zh-CN-YunyangNeural", "flag": "🇨🇳", "name": "Yunyang"},
+    "cn-xiaoxiao": {"tts": "zh-CN-XiaoxiaoNeural", "flag": "🇨🇳", "name": "Xiaoxiao"},
+    "hk-wanlung": {"tts": "zh-HK-WanLungNeural", "flag": "🇭🇰", "name": "WanLung"},
+    "hk-hiumaan": {"tts": "zh-HK-HiuMaanNeural", "flag": "🇭🇰", "name": "HiuMaan"},
+    "hk-hiugaai": {"tts": "zh-HK-HiuGaaiNeural", "flag": "🇭🇰", "name": "HiuGaai"},
+}
+COACH = {"flag": "🎓", "name": "Coach"}
+DECKS = {
+    "mandarin": {
+        "label": "普通話", "file": "items.json", "roman": "pinyin",
+        "voices": ["tw-yunjhe", "tw-hsiaochen", "tw-hsiaoyu", "cn-yunyang", "cn-xiaoxiao"],
+    },
+    "cantonese": {
+        "label": "廣東話", "file": "cantonese.json", "roman": "jyutping",
+        "voices": ["hk-wanlung", "hk-hiumaan", "hk-hiugaai"],
+    },
+}
 SLOW_RATE = "-30%"
 NORMAL_RATE = "+0%"
 KINDS = {"word", "phrase", "pattern"}
@@ -71,7 +93,8 @@ def _fill_en(template, filler):
     return SLOT_RE.sub(sub, template)
 
 
-def validate(items):
+def validate(items, deck="mandarin"):
+    roman = DECKS[deck]["roman"]
     errs = []
     seen = set()
     for it in items:
@@ -83,7 +106,7 @@ def validate(items):
         seen.add(iid)
         if it.get("kind") not in KINDS:
             errs.append(f"{iid}: kind must be one of {sorted(KINDS)}")
-        missing = [k for k in ("zh", "pinyin", "en") if not it.get(k)]
+        missing = [k for k in ("zh", roman, "en") if not it.get(k)]
         if not it.get("week") and not it.get("set"):
             missing.append("week (or set)")
         if missing:
@@ -95,7 +118,7 @@ def validate(items):
         no_yi = it.get("noYiSandhi", False)
         if it["kind"] != "pattern":
             try:
-                apply_sandhi(it["zh"], it["pinyin"], no_yi)
+                _romanize(deck, it["zh"], it[roman], no_yi)
             except ValueError as e:
                 errs.append(f"{iid}: {e}")
             continue
@@ -113,49 +136,85 @@ def validate(items):
                 if field and field not in f:
                     errs.append(f"{iid}: filler {f.get('id')} has no field {field!r}")
             try:
-                apply_sandhi(_fill_text(it["zh"], f, "zh"), _fill_text(it["pinyin"], f, "pinyin"), no_yi)
+                _romanize(deck, _fill_text(it["zh"], f, "zh"), _fill_text(it[roman], f, roman), no_yi)
             except ValueError as e:
                 errs.append(f"{iid} + {f.get('id')}: {e}")
     return errs
 
 
-def _audio_paths(key, root):
-    coach = Path("audio/coach") / f"{key}.mp3"
-    normal = coach if (root / coach).exists() else Path("audio") / f"{key}.mp3"
-    return normal.as_posix(), f"audio/{key}-slow.mp3"
+def _romanize(deck, zh, roman, no_yi=False):
+    """Checks syllable/character alignment; Mandarin also gets 不/一 tone sandhi."""
+    return apply_sandhi(zh, roman, no_yi or deck != "mandarin")
 
 
-def expand(items, root=ROOT):
+def _audio(key, deck, root):
+    """{voice_id: [normal_path, slow_path]}; a coach recording is added as an extra voice."""
+    voices = DECKS[deck]["voices"]
+    audio = {v: [f"audio/{v}/{key}.mp3", f"audio/{v}/{key}-slow.mp3"] for v in voices}
+    coach = f"audio/coach/{key}.mp3"
+    if (root / coach).exists():
+        audio["coach"] = [coach, audio[voices[0]][1]]
+    return audio
+
+
+def _words(zh, roman, en, known, glossary, overrides):
+    """Word-by-word breakdown [{zh, roman, gloss}] for tap-to-translate; gloss is None when unknown."""
+    groups = word_groups(zh, roman)
+    if len(groups) == 1:
+        return [{"zh": groups[0][0], "roman": groups[0][1].rstrip("?!.,…"), "gloss": en}]
+    return [
+        {"zh": z, "roman": r.rstrip("?!.,…"), "gloss": overrides.get(z) or known.get(z) or glossary.get(z)}
+        for z, r in groups
+    ]
+
+
+def missing_glosses(out_items):
+    """[(item_id, characters, roman)] for words with no meaning, one per distinct word."""
+    seen, missing = set(), []
+    for o in out_items:
+        for entry in o["fills"] if o["kind"] == "pattern" else [o]:
+            for w in entry["words"]:
+                if w["gloss"] is None and w["zh"] not in seen:
+                    seen.add(w["zh"])
+                    missing.append((o["id"], w["zh"], w["roman"]))
+    return missing
+
+
+def expand(items, root=ROOT, deck="mandarin", glossary=None):
+    roman = DECKS[deck]["roman"]
+    glossary = glossary or {}
+    known = {i["zh"]: i["en"] for i in items if i["kind"] == "word"}
     out = []
     for it in items:
         no_yi = it.get("noYiSandhi", False)
-        o = {"id": it["id"], "kind": it["kind"]}
+        o = {"id": it["id"], "kind": it["kind"], "deck": deck}
         for k in ("week", "set"):
             if k in it:
                 o[k] = it[k]
         if it["kind"] == "pattern":
-            blank = SLOT_RE.sub("___", it["zh"])
-            o["zh"] = blank
-            o["pinyin"] = SLOT_RE.sub("___", it["pinyin"])
+            o["zh"] = SLOT_RE.sub("___", it["zh"])
+            o["roman"] = SLOT_RE.sub("___", it[roman])
             o["en"] = SLOT_RE.sub("___", it["en"])
             cat = _slots(it["zh"])[0][0]
             o["fills"] = []
             for f in _fillers(items, cat):
                 zh = _fill_text(it["zh"], f, "zh")
-                a, s = _audio_paths(f"{it['id']}--{f['id']}", root)
+                fill_roman = _romanize(deck, zh, _fill_text(it[roman], f, roman), no_yi)
+                fill_en = _fill_en(it["en"], f)
                 o["fills"].append({
                     "fillId": f["id"],
                     "zh": zh,
-                    "pinyin": apply_sandhi(zh, _fill_text(it["pinyin"], f, "pinyin"), no_yi),
-                    "en": _fill_en(it["en"], f),
-                    "audio": a,
-                    "audioSlow": s,
+                    "roman": fill_roman,
+                    "en": fill_en,
+                    "words": _words(zh, fill_roman, fill_en, known, glossary, it.get("gloss", {})),
+                    "audio": _audio(f"{it['id']}--{f['id']}", deck, root),
                 })
         else:
             o["zh"] = it["zh"]
-            o["pinyin"] = apply_sandhi(it["zh"], it["pinyin"], no_yi)
+            o["roman"] = _romanize(deck, it["zh"], it[roman], no_yi)
             o["en"] = it["en"]
-            o["audio"], o["audioSlow"] = _audio_paths(it["id"], root)
+            o["words"] = _words(it["zh"], o["roman"], it["en"], known, glossary, it.get("gloss", {}))
+            o["audio"] = _audio(it["id"], deck, root)
         for k in ("note", "cat"):
             if k in it:
                 o[k] = it[k]
@@ -164,40 +223,46 @@ def expand(items, root=ROOT):
 
 
 def audio_jobs(out_items):
-    """(path, text, rate, item_id) for every TTS file the output references."""
+    """(path, text, rate, item_id, tts_voice) for every TTS file the output references."""
     jobs = []
     for o in out_items:
-        for entry in o.get("fills", [o]) if o["kind"] == "pattern" else [o]:
-            if not entry["audio"].startswith("audio/coach/"):
-                jobs.append((entry["audio"], entry["zh"], NORMAL_RATE, o["id"]))
-            jobs.append((entry["audioSlow"], entry["zh"], SLOW_RATE, o["id"]))
+        for entry in o["fills"] if o["kind"] == "pattern" else [o]:
+            for vid, (normal, slow) in entry["audio"].items():
+                if vid == "coach":
+                    continue
+                tts = VOICES[vid]["tts"]
+                jobs.append((normal, entry["zh"], NORMAL_RATE, o["id"], tts))
+                jobs.append((slow, entry["zh"], SLOW_RATE, o["id"], tts))
     return jobs
 
 
-def edge_synth(text, rate, path):
+def edge_synth(text, rate, path, voice):
     import edge_tts
-    asyncio.run(edge_tts.Communicate(text, VOICE, rate=rate).save(str(path)))
+    asyncio.run(edge_tts.Communicate(text, voice, rate=rate).save(str(path)))
 
 
-def generate_audio(jobs, root, synth=edge_synth, force_ids=(), retries=4, sleep=time.sleep):
+def _synth_one(job, root, synth, retries, sleep):
+    rel, text, rate, _, voice = job
+    path = root / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    for attempt in range(retries):
+        try:
+            synth(text, rate, path, voice)
+            return True
+        except Exception:
+            if path.exists():
+                path.unlink()
+            sleep(2 * (attempt + 1))
+    return False
+
+
+def generate_audio(jobs, root, synth=edge_synth, force_ids=(), retries=4, sleep=time.sleep, workers=4):
     """Synthesize missing files. Returns (made, failed); the TTS service fails intermittently."""
-    made, failed = [], []
-    for rel, text, rate, iid in jobs:
-        path = root / rel
-        if path.exists() and path.stat().st_size > 0 and iid not in force_ids:
-            continue
-        path.parent.mkdir(parents=True, exist_ok=True)
-        for attempt in range(retries):
-            try:
-                synth(text, rate, path)
-                made.append(rel)
-                break
-            except Exception:
-                if path.exists():
-                    path.unlink()
-                sleep(2 * (attempt + 1))
-        else:
-            failed.append(rel)
+    todo = [j for j in jobs if j[3] in force_ids or not ((root / j[0]).exists() and (root / j[0]).stat().st_size > 0)]
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        ok = list(pool.map(lambda j: _synth_one(j, root, synth, retries, sleep), todo))
+    made = [j[0] for j, good in zip(todo, ok) if good]
+    failed = [j[0] for j, good in zip(todo, ok) if not good]
     return made, failed
 
 
@@ -219,23 +284,44 @@ def stamp_service_worker(root):
 def main(argv):
     no_audio = "--no-audio" in argv
     force = {argv[i + 1] for i, a in enumerate(argv) if a == "--force" and i + 1 < len(argv)}
-    items = json.loads((ROOT / "data" / "items.json").read_text())["items"]
-    errs = validate(items)
+    out, errs = [], []
+    glossary_file = ROOT / "data" / "glossary.json"
+    glossary = json.loads(glossary_file.read_text()) if glossary_file.exists() else {}
+    for deck, cfg in DECKS.items():
+        src = ROOT / "data" / cfg["file"]
+        if not src.exists():
+            continue
+        items = json.loads(src.read_text())["items"]
+        errs += [f"[{deck}] {e}" for e in validate(items, deck)]
+        if not errs:
+            expanded = expand(items, deck=deck, glossary=glossary.get(deck, {}))
+            errs += [f"[{deck}] {iid}: no meaning for {zh} ({r}); add it to data/glossary.json"
+                     for iid, zh, r in missing_glosses(expanded)]
+            out += expanded
+    ids = [o["id"] for o in out]
+    errs += [f"id {i!r} used in more than one deck" for i in sorted({i for i in ids if ids.count(i) > 1})]
     if errs:
         print(f"{len(errs)} error(s):")
         for e in errs:
             print("  -", e)
         return 1
-    out = expand(items)
-    body = json.dumps(out, ensure_ascii=False, sort_keys=True)
-    doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "items": out}
+    used = {v for o in out for e in (o.get("fills") or [o]) for v in e["audio"]}
+    voices = {v: {k: VOICES[v][k] for k in ("flag", "name")} for v in VOICES if v in used}
+    if "coach" in used:
+        voices["coach"] = COACH
+    decks = {d: {"label": c["label"], "voices": c["voices"]} for d, c in DECKS.items()}
+    body = json.dumps([out, voices], ensure_ascii=False, sort_keys=True)
+    doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "voices": voices, "decks": decks, "items": out}
     (ROOT / "phrases.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
     made, failed = ([], []) if no_audio else generate_audio(audio_jobs(out), ROOT, force_ids=force)
     stamp_service_worker(ROOT)
-    fills = sum(len(o.get("fills", [])) for o in out)
-    print(f"{len(out)} items ({fills} pattern sentences), {len(made)} audio files generated")
+    for deck in DECKS:
+        mine = [o for o in out if o["deck"] == deck]
+        fills = sum(len(o.get("fills", [])) for o in mine)
+        print(f"{deck}: {len(mine)} items ({fills} pattern sentences)")
+    print(f"{len(made)} audio files generated")
     if failed:
-        print(f"{len(failed)} audio file(s) failed (re-run to retry): {', '.join(failed)}")
+        print(f"{len(failed)} audio file(s) failed (re-run to retry): {', '.join(failed[:10])}")
         return 1
     return 0
 

@@ -1,6 +1,6 @@
 import unittest
 
-from tools.pinyin import apply_sandhi, han_chars, syllables, tone_of
+from tools.pinyin import apply_sandhi, han_chars, syllables, tone_of, word_groups
 
 
 class ToneOf(unittest.TestCase):
@@ -58,6 +58,22 @@ class Sandhi(unittest.TestCase):
     def test_alignment_mismatch_raises(self):
         with self.assertRaises(ValueError):
             apply_sandhi("你好", "nǐ hǎo hǎo")
+
+
+class WordGroups(unittest.TestCase):
+    def test_groups_follow_pinyin_words(self):
+        self.assertEqual(word_groups("你喜歡喝什麼？", "nǐ xǐ-huān hē shé-me?"),
+                         [("你", "nǐ"), ("喜歡", "xǐ-huān"), ("喝", "hē"), ("什麼", "shé-me?")])
+
+    def test_punctuation_only_tokens_skipped(self):
+        self.assertEqual(word_groups("我叫……", "wǒ jiào …"), [("我", "wǒ"), ("叫", "jiào")])
+
+    def test_jyutping(self):
+        self.assertEqual(word_groups("唔該埋單", "m4-goi1 maai4-daan1"), [("唔該", "m4-goi1"), ("埋單", "maai4-daan1")])
+
+    def test_mismatch_raises(self):
+        with self.assertRaises(ValueError):
+            word_groups("你好", "nǐ-hǎo-ma")
 
 
 if __name__ == "__main__":

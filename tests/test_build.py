@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.build import audio_jobs, expand, generate_audio, simplified_chars, validate
+from tools.build import DECKS, audio_jobs, expand, generate_audio, missing_glosses, simplified_chars, validate
 
 DRINKS = [
     {"id": "kafei", "kind": "word", "week": 1, "zh": "咖啡", "pinyin": "kā-fēi", "en": "coffee", "cat": ["drink"]},
@@ -75,12 +75,13 @@ class Expand(unittest.TestCase):
         out = {i["id"]: i for i in expand(DRINKS + [HE], root=Path("/nonexistent"))}
         p = out["wo-xihuan-he-x"]
         self.assertEqual(p["zh"], "我喜歡喝___")
-        self.assertEqual(p["pinyin"], "wǒ xǐ-huān hē ___")
+        self.assertEqual(p["roman"], "wǒ xǐ-huān hē ___")
+        self.assertEqual(p["deck"], "mandarin")
         self.assertEqual([f["fillId"] for f in p["fills"]], ["kafei", "shui"])
         f = p["fills"][0]
-        self.assertEqual((f["zh"], f["pinyin"], f["en"]), ("我喜歡喝咖啡", "wǒ xǐ-huān hē kā-fēi", "I like drinking coffee"))
-        self.assertEqual(f["audio"], "audio/wo-xihuan-he-x--kafei.mp3")
-        self.assertEqual(f["audioSlow"], "audio/wo-xihuan-he-x--kafei-slow.mp3")
+        self.assertEqual((f["zh"], f["roman"], f["en"]), ("我喜歡喝咖啡", "wǒ xǐ-huān hē kā-fēi", "I like drinking coffee"))
+        self.assertEqual(f["audio"]["tw-yunjhe"],
+                         ["audio/tw-yunjhe/wo-xihuan-he-x--kafei.mp3", "audio/tw-yunjhe/wo-xihuan-he-x--kafei-slow.mp3"])
 
     def test_field_and_fill_en(self):
         items = [
@@ -103,11 +104,12 @@ class Expand(unittest.TestCase):
             {"id": "bu-x", "kind": "pattern", "week": 1, "zh": "不{v}", "pinyin": "bù {v}", "en": "not {v}"},
         ]
         out = {i["id"]: i for i in expand(items, root=Path("/nonexistent"))}
-        self.assertEqual(out["bu-x"]["fills"][0]["pinyin"], "bú yào")
+        self.assertEqual(out["bu-x"]["fills"][0]["roman"], "bú yào")
 
     def test_word_fields(self):
         out = expand(DRINKS, root=Path("/nonexistent"))[0]
-        self.assertEqual(out["audio"], "audio/kafei.mp3")
+        self.assertEqual(sorted(out["audio"]), sorted(DECKS["mandarin"]["voices"]))
+        self.assertEqual(out["audio"]["cn-yunyang"], ["audio/cn-yunyang/kafei.mp3", "audio/cn-yunyang/kafei-slow.mp3"])
         self.assertEqual(out["cat"], ["drink"])
 
     def test_coach_override(self):
@@ -115,28 +117,93 @@ class Expand(unittest.TestCase):
             (Path(d) / "audio" / "coach").mkdir(parents=True)
             (Path(d) / "audio" / "coach" / "kafei.mp3").write_bytes(b"x")
             out = expand(DRINKS, root=Path(d))[0]
-        self.assertEqual(out["audio"], "audio/coach/kafei.mp3")
-        self.assertEqual(out["audioSlow"], "audio/kafei-slow.mp3")
+        self.assertEqual(out["audio"]["coach"], ["audio/coach/kafei.mp3", "audio/tw-yunjhe/kafei-slow.mp3"])
+
+
+class Glosses(unittest.TestCase):
+    ITEMS = DRINKS + [
+        HE,
+        {"id": "hen-hao", "kind": "phrase", "week": 1, "zh": "很好嗎？", "pinyin": "hěn hǎo ma?", "en": "Very good?",
+         "gloss": {"好": "good (here: well)"}},
+    ]
+    GLOSSARY = {"很": "very", "喜歡": "to like", "我": "I", "喝": "to drink", "嗎": "(question)"}
+
+    def words(self, iid, fill=None):
+        out = {o["id"]: o for o in expand(self.ITEMS, root=Path("/nonexistent"), glossary=self.GLOSSARY)}
+        entry = out[iid]["fills"][fill] if fill is not None else out[iid]
+        return [(w["zh"], w["roman"], w["gloss"]) for w in entry["words"]]
+
+    def test_word_items_then_glossary(self):
+        self.assertEqual(self.words("wo-xihuan-he-x", 0),
+                         [("我", "wǒ", "I"), ("喜歡", "xǐ-huān", "to like"), ("喝", "hē", "to drink"), ("咖啡", "kā-fēi", "coffee")])
+
+    def test_item_override_and_punctuation_stripped(self):
+        self.assertEqual(self.words("hen-hao"), [("很", "hěn", "very"), ("好", "hǎo", "good (here: well)"), ("嗎", "ma", "(question)")])
+
+    def test_single_word_entry_uses_its_own_meaning(self):
+        self.assertEqual(self.words("kafei"), [("咖啡", "kā-fēi", "coffee")])
+
+    def test_missing_glosses_reported(self):
+        out = expand(self.ITEMS, root=Path("/nonexistent"), glossary={})
+        missing = missing_glosses(out)
+        self.assertIn(("hen-hao", "很", "hěn"), missing)
+        self.assertNotIn(("wo-xihuan-he-x", "咖啡", "kā-fēi"), missing)
+
+
+class Cantonese(unittest.TestCase):
+    ITEMS = [
+        {"id": "yue-naicha", "kind": "word", "set": "Drinks", "zh": "奶茶", "jyutping": "naai5-caa4", "en": "milk tea",
+         "cat": ["drink"]},
+        {"id": "yue-ngo-jiu-x", "kind": "pattern", "set": "Drinks", "zh": "我要{drink}", "jyutping": "ngo5 jiu3 {drink}",
+         "en": "I'd like {drink}"},
+    ]
+
+    def test_validates_with_jyutping(self):
+        self.assertEqual(validate(self.ITEMS, "cantonese"), [])
+
+    def test_alignment_uses_jyutping(self):
+        bad = [dict(self.ITEMS[0], jyutping="naai5")]
+        self.assertTrue(any("syllables" in e for e in validate(bad, "cantonese")))
+
+    def test_expand_uses_hk_voices(self):
+        out = {o["id"]: o for o in expand(self.ITEMS, root=Path("/nonexistent"), deck="cantonese")}
+        fill = out["yue-ngo-jiu-x"]["fills"][0]
+        self.assertEqual((fill["zh"], fill["roman"], fill["en"]), ("我要奶茶", "ngo5 jiu3 naai5-caa4", "I'd like milk tea"))
+        self.assertEqual(sorted(fill["audio"]), sorted(DECKS["cantonese"]["voices"]))
+        self.assertEqual(out["yue-naicha"]["deck"], "cantonese")
+
+
+def one_voice(items, root):
+    """Expanded items trimmed to the first voice, to keep audio tests small."""
+    out = expand(items, root=root)
+    for o in out:
+        o["audio"] = {k: v for k, v in o["audio"].items() if k in ("tw-yunjhe", "coach")}
+    return out
 
 
 class Audio(unittest.TestCase):
-    def test_jobs_skip_coach_normal(self):
+    def test_jobs_cover_every_voice_normal_and_slow(self):
+        jobs = audio_jobs(expand(DRINKS[:1], root=Path("/nonexistent")))
+        self.assertEqual(len(jobs), 2 * len(DECKS["mandarin"]["voices"]))
+        self.assertIn(("audio/tw-hsiaoyu/kafei-slow.mp3", "咖啡", "-30%", "kafei", "zh-TW-HsiaoYuNeural"), jobs)
+
+    def test_jobs_skip_coach(self):
         with tempfile.TemporaryDirectory() as d:
             (Path(d) / "audio" / "coach").mkdir(parents=True)
             (Path(d) / "audio" / "coach" / "kafei.mp3").write_bytes(b"x")
-            jobs = audio_jobs(expand(DRINKS[:1], root=Path(d)))
-        self.assertEqual(jobs, [("audio/kafei-slow.mp3", "咖啡", "-30%", "kafei")])
+            jobs = audio_jobs(one_voice(DRINKS[:1], Path(d)))
+        self.assertEqual([j[0] for j in jobs], ["audio/tw-yunjhe/kafei.mp3", "audio/tw-yunjhe/kafei-slow.mp3"])
 
     def test_generates_only_missing(self):
         calls = []
 
-        def synth(text, rate, path):
+        def synth(text, rate, path, voice):
             calls.append(path.name)
             path.write_bytes(b"mp3")
 
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)
-            jobs = audio_jobs(expand(DRINKS[:1], root=root))
+            jobs = audio_jobs(one_voice(DRINKS[:1], root))
             made, failed = generate_audio(jobs, root, synth)
             self.assertEqual(sorted(calls), ["kafei-slow.mp3", "kafei.mp3"])
             self.assertEqual((len(made), failed), (2, []))
@@ -151,7 +218,7 @@ class AudioRetry(unittest.TestCase):
     def test_retries_then_reports_failure(self):
         attempts = []
 
-        def flaky(text, rate, path):
+        def flaky(text, rate, path, voice):
             attempts.append(path.name)
             if path.name == "kafei.mp3" and attempts.count("kafei.mp3") < 3:
                 raise RuntimeError("NoAudioReceived")
@@ -160,10 +227,10 @@ class AudioRetry(unittest.TestCase):
             path.write_bytes(b"mp3")
 
         with tempfile.TemporaryDirectory() as d:
-            jobs = audio_jobs(expand(DRINKS[:1], root=Path(d)))
-            made, failed = generate_audio(jobs, Path(d), flaky, sleep=lambda s: None)
-        self.assertEqual(made, ["audio/kafei.mp3"])
-        self.assertEqual(failed, ["audio/kafei-slow.mp3"])
+            jobs = audio_jobs(one_voice(DRINKS[:1], Path(d)))
+            made, failed = generate_audio(jobs, Path(d), flaky, sleep=lambda s: None, workers=1)
+        self.assertEqual(made, ["audio/tw-yunjhe/kafei.mp3"])
+        self.assertEqual(failed, ["audio/tw-yunjhe/kafei-slow.mp3"])
 
 
 if __name__ == "__main__":

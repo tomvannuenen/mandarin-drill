@@ -58,3 +58,23 @@ def apply_sandhi(zh: str, pinyin: str, no_yi: bool = False) -> str:
             letters = "yí" if nxt in (4, 5) else "yì"
         parts[i] = pre + letters + suf
     return "".join(parts)
+
+
+def word_groups(zh: str, pinyin: str) -> list:
+    """[(characters, pinyin_word)] following the pinyin's word boundaries (spaces).
+
+    Punctuation-only pinyin tokens are skipped; the characters exclude punctuation.
+    """
+    chars = han_chars(zh)
+    groups, pos = [], 0
+    for word in pinyin.split():
+        n = len(syllables(word))
+        if n == 0:
+            continue
+        if pos + n > len(chars):
+            raise ValueError(f"{zh!r}: pinyin {pinyin!r} has more syllables than characters")
+        groups.append(("".join(chars[pos:pos + n]), word))
+        pos += n
+    if pos != len(chars):
+        raise ValueError(f"{zh!r}: {len(chars)} characters but {pos} pinyin syllables in {pinyin!r}")
+    return groups

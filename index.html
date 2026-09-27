@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>說 Mandarin</title>
+  <title>說 Chinese</title>
   <meta name="theme-color" content="#9e2a22">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -17,7 +17,8 @@
   <main id="app">
     <section id="view-home" class="view">
       <header class="home-head">
-        <h1><span lang="zh-Hant-TW">說</span> Mandarin</h1>
+        <h1 lang="zh-Hant-TW">說</h1>
+        <div class="deck-switch"></div>
         <p class="streak" id="streak"></p>
       </header>
       <div id="export-banner" class="banner" hidden>
@@ -42,12 +43,12 @@
         <p class="card-kind" id="card-kind"></p>
         <div class="prompt" id="prompt"></div>
         <div class="answer" id="answer" hidden>
-          <p class="zh" id="a-zh" lang="zh-Hant-TW"></p>
-          <p class="pinyin" id="a-pinyin"></p>
+          <div class="words" id="a-words"></div>
+          <p class="gloss" id="a-gloss" hidden></p>
           <p class="en" id="a-en"></p>
           <p class="note" id="a-note" hidden></p>
           <div class="audio-row">
-            <button class="audio-btn" id="play" aria-label="Play audio">🔊</button>
+            <button class="audio-btn" id="play" aria-label="Play, then next voice">🔊 <span class="flag" id="voice-flag"></span></button>
             <button class="audio-btn" id="play-slow" aria-label="Play slowly">🐢</button>
           </div>
         </div>
@@ -72,14 +73,17 @@
     </section>
 
     <section id="view-browse" class="view" hidden>
-      <h2>All phrases</h2>
+      <header class="browse-head">
+        <h2>All phrases</h2>
+        <div class="deck-switch"></div>
+      </header>
       <div id="browse-list"></div>
     </section>
 
     <section id="view-settings" class="view" hidden>
       <h2>Settings</h2>
       <label class="setting">
-        <span>New cards per day</span>
+        <span>New cards per day (per language)</span>
         <input type="number" id="new-per-day" min="0" max="50" inputmode="numeric">
       </label>
       <h3>Backup</h3>

@@ -1,7 +1,11 @@
-# 說 Mandarin
+# 說 Chinese
 
-A personal spaced-repetition app for Mandarin phrases from weekly coaching sessions:
-Traditional characters, Taiwan Mandarin audio, tuned for learning to *say* things.
+A personal spaced-repetition app for learning to *say* things, in Traditional characters:
+
+- **普通話 Mandarin**: weekly coaching material plus a verbs set, with Taiwan and Beijing voices.
+- **廣東話 Cantonese**: a Hong Kong starter deck with Jyutping and Hong Kong voices.
+
+Switch languages at the top of the Study and Browse screens. Each language has its own daily new-card limit.
 
 ## Using it
 
@@ -10,7 +14,9 @@ Open the site on your phone in Safari → Share → **Add to Home Screen**. It w
 - **Say it**: English is shown → say the Mandarin out loud → reveal → grade yourself honestly.
 - **Listen** / **Read** cards unlock for a phrase once you've said it correctly on two different days.
 - **Pattern** cards (我喜歡喝___) fill in a different word each time, preferring words you've already seen.
-- 🐢 plays the slow version.
+- Every card rotates between voices (🇹🇼 Taiwan / 🇨🇳 Beijing for Mandarin, 🇭🇰 for Cantonese).
+  Each tap on 🔊 plays the next speaker; the flag shows where they're from. 🐢 plays the last speaker slowly.
+- The answer is shown word by word: tap a word to see what it means.
 - Progress lives only on this device: **Settings → Export progress** now and then.
 
 ## Adding a week of material
@@ -19,6 +25,9 @@ Open the site on your phone in Safari → Share → **Add to Home Screen**. It w
 2. Claude adds entries to `data/items.json` (source of truth; see format below).
 3. `uv run tools/build.py` checks the data, generates missing audio, and writes `phrases.json`.
 4. Run the tests, then commit and push. The phone picks up the new cards next time the app opens.
+
+Cantonese phrases go in `data/cantonese.json` in the same format, with `jyutping` instead of `pinyin`
+(tone digits, e.g. `m4-goi1`), ids starting with `yue-`, and `set` instead of `week`.
 
 ### `data/items.json` format
 
@@ -34,15 +43,20 @@ Open the site on your phone in Safari → Share → **Add to Home Screen**. It w
 - Traditional characters only. The build rejects Simplified characters (台 is allowed).
 - Pattern slots: `{cat}` is filled by every word tagged with that `cat`. In `en`, `{cat}` uses the word's
   `fillEn` or `en`, and `{cat:field}` uses another field (e.g. `{country:demonym}` → "Dutch").
+- Every word inside a phrase needs a meaning: either it has its own `word` card, or it is listed in
+  `data/glossary.json`, or the item has a `gloss` override (`{"好": "well"}`). The build fails otherwise.
+  Pinyin word boundaries (spaces) decide how a phrase is split into words.
 - Optional: `note` (shown after reveal), `fillEn`, `allowChars` (to skip the Simplified check for specific characters).
 
 ### Audio
 
-- Voice: `zh-TW-YunJheNeural` through [edge-tts](https://github.com/rany2/edge-tts), normal and 30% slower.
+- Voices are listed in `VOICES` / `DECKS` in `tools/build.py` and generated through
+  [edge-tts](https://github.com/rany2/edge-tts), normal and 30% slower, into `audio/<voice>/`.
+  Mandarin: YunJhe, HsiaoChen, HsiaoYu (Taiwan), Yunyang, Xiaoxiao (Beijing). Cantonese: WanLung, HiuMaan, HiuGaai.
 - Existing files are never regenerated. Use `uv run tools/build.py --force <id>` to redo one.
 - If the TTS service fails, re-run the build: it only fills in missing files.
 - **Coach recordings**: put `audio/coach/<id>.mp3` (or `<pattern-id>--<word-id>.mp3` for a pattern sentence)
-  in place and rebuild. It replaces the generated normal-speed audio.
+  in place and rebuild. It appears as an extra 🎓 Coach voice.
 
 ## Development
 

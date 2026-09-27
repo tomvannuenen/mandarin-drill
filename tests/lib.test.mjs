@@ -1,9 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { toneOf, pinyinWords } from '../lib/tones.js';
+import { toneOf, romanWords } from '../lib/tones.js';
 import { grade, isDue } from '../lib/srs.js';
-import { cardKey, unlocked, pickFill, UNLOCK_GOOD } from '../lib/cards.js';
+import { cardKey, unlocked, pickFill, pickVoice, nextVoice, UNLOCK_GOOD } from '../lib/cards.js';
 import { buildQueue, shouldRequeue } from '../lib/session.js';
 import { defaults, load, save, exportJSON, importJSON, applyReview, localDate, newToday } from '../lib/store.js';
 
@@ -12,17 +12,31 @@ const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
 const later = (ms) => new Date(NOW.getTime() + ms);
 
+function memStorage() {
+  const m = {};
+  return { getItem: (k) => (k in m ? m[k] : null), setItem: (k, v) => { m[k] = String(v); } };
+}
+
 // ---- tones
 test('toneOf reads tone marks, neutral is 5', () => {
   assert.deepEqual(['mā', 'má', 'mǎ', 'mà', 'ma', 'Xiāng', 'ma?'].map(toneOf), [1, 2, 3, 4, 5, 1, 5]);
 });
 
-test('pinyinWords splits words on spaces and syllables on hyphens', () => {
-  assert.deepEqual(pinyinWords('wǒ xǐ-huān ma?'), [
+test('romanWords splits words on spaces and syllables on hyphens', () => {
+  assert.deepEqual(romanWords('wǒ xǐ-huān ma?'), [
     [{ text: 'wǒ', tone: 3 }],
     [{ text: 'xǐ', tone: 3 }, { text: 'huān', tone: 1 }],
     [{ text: 'ma?', tone: 5 }],
   ]);
+});
+
+test('romanWords reads Jyutping tone digits for Cantonese', () => {
+  assert.deepEqual(romanWords('m4-goi1 maa3?', 'cantonese'), [
+    [{ text: 'm4', tone: 4 }, { text: 'goi1', tone: 1 }],
+    [{ text: 'maa3?', tone: 3 }],
+  ]);
+  assert.equal(romanWords('ngo5', 'cantonese')[0][0].tone, 5);
+  assert.equal(romanWords('…', 'cantonese')[0][0].tone, 0);
 });
 
 // ---- srs
@@ -73,6 +87,18 @@ test('pickFill falls back to any fill', () => {
   assert.equal(pickFill(PATTERN, defaults(), () => 0.99).fillId, 'pijiu');
 });
 
+test('pickVoice picks one of the entry voices', () => {
+  const entry = { audio: { a: ['a.mp3', 'a-s.mp3'], b: ['b.mp3', 'b-s.mp3'], c: ['c.mp3', 'c-s.mp3'] } };
+  assert.equal(pickVoice(entry, () => 0), 'a');
+  assert.equal(pickVoice(entry, () => 0.99), 'c');
+});
+
+test('nextVoice cycles through the entry voices', () => {
+  const entry = { audio: { a: [], b: [], c: [] } };
+  assert.deepEqual(['a', 'b', 'c'].map((v) => nextVoice(entry, v)), ['b', 'c', 'a']);
+  assert.equal(nextVoice(entry, 'unknown'), 'a');
+});
+
 // ---- session
 const ITEMS = [{ id: 'a' }, { id: 'b' }, { id: 'c' }, { id: 'd' }];
 
@@ -99,8 +125,27 @@ test('buildQueue introduces coach weeks before extra sets', () => {
 
 test('buildQueue counts new cards already introduced today against the limit', () => {
   const p = defaults();
-  p.stats.newCount = { date: localDate(NOW), n: 2 };
+  p.stats.newCounts.mandarin = { date: localDate(NOW), n: 2 };
   assert.equal(buildQueue(ITEMS, p, NOW, 3).length, 1);
+});
+
+test('new-card limits are counted per deck', () => {
+  const p = defaults();
+  p.stats.newCounts.mandarin = { date: localDate(NOW), n: 3 };
+  assert.equal(buildQueue(ITEMS, p, NOW, 3, 'mandarin').length, 0);
+  assert.equal(buildQueue(ITEMS, p, NOW, 3, 'cantonese').length, 3);
+  const s = grade(null, 3, NOW);
+  applyReview(p, { id: 'y', type: 'say', deck: 'cantonese' }, 3, s, NOW);
+  assert.equal(newToday(p, NOW, 'cantonese'), 1);
+  assert.equal(newToday(p, NOW, 'mandarin'), 3);
+});
+
+test('old single new-count is migrated to the Mandarin deck', () => {
+  const st = memStorage();
+  st.setItem('mandarin.progress.v1', JSON.stringify({ cards: {}, stats: { streak: 2, newCount: { date: localDate(NOW), n: 4 } } }));
+  const p = load(st);
+  assert.equal(newToday(p, NOW, 'mandarin'), 4);
+  assert.equal(p.stats.streak, 2);
 });
 
 test('buildQueue adds unlocked listen/read cards without using the new limit', () => {
@@ -117,10 +162,6 @@ test('shouldRequeue for cards due within 20 minutes', () => {
 });
 
 // ---- store
-function memStorage() {
-  const m = {};
-  return { getItem: (k) => (k in m ? m[k] : null), setItem: (k, v) => { m[k] = String(v); } };
-}
 
 test('load returns defaults for empty or broken storage', () => {
   assert.deepEqual(load(memStorage()), defaults());

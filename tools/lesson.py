@@ -110,7 +110,8 @@ def find_candidates(transcript, items):
                 # Pad, but stop halfway into a neighbouring word so the clip doesn't pick it up.
                 start = max(first[1] - PAD_BEFORE, first[1] - gap_before / 2 if pos > 0 else 0)
                 end = min(last[2] + PAD_AFTER, last[2] + gap_after / 2)
-                found.append((score, {"start": round(start, 2), "end": round(end, 2), "seg": seg, "text": transcript["segments"][seg]["text"]}))
+                found.append((score, {"start": round(start, 2), "end": round(end, 2), "t0": first[1], "t1": last[2],
+                                     "alone": alone, "seg": seg, "text": transcript["segments"][seg]["text"]}))
             pos = text.find(target, pos + 1)
         if found:
             out[key] = [c for _, c in sorted(found, key=lambda x: x[0], reverse=True)]
@@ -122,28 +123,82 @@ def find_clips(transcript, items):
     return {k: v[0] for k, v in find_candidates(transcript, items).items()}
 
 
-def _realign(s16, transcript, clip, target, cc):
-    """Re-transcribe just the sentence around a candidate for precise timings; return a new clip or None."""
-    import mlx_whisper
-    seg = transcript["segments"][clip["seg"]]
-    w0 = max(0.0, min(seg["start"], clip["start"]) - 0.4)
-    w1 = max(seg["end"], clip["end"]) + 0.4
-    r = mlx_whisper.transcribe(s16[int(w0 * 16000):int(w1 * 16000)], path_or_hf_repo=MODEL, language="zh",
-                               word_timestamps=True, condition_on_previous_text=False)
-    local = {"segments": [{"text": cc.convert(x["text"]), "start": x["start"] + w0, "end": x["end"] + w0,
-                           "words": [{"w": cc.convert(w["word"]), "start": w["start"] + w0, "end": w["end"] + w0} for w in x.get("words", [])]}
-                          for x in r["segments"]]}
-    c = find_clips(local, [{"id": "t", "kind": "word", "deck": "mandarin", "zh": target}]).get("t")
-    if c:
-        c["text"] = seg["text"]
-    return c
+FRAME = 0.01        # loudness is measured in 10 ms frames
+MIN_PAUSE = 0.12    # a gap this long is a real pause, not a consonant closure inside a word
+
+
+def loudness(samples16k):
+    """Loudness in dB for every 10 ms frame."""
+    import numpy as np
+    n = int(16000 * FRAME)
+    f = samples16k[: len(samples16k) // n * n].reshape(-1, n)
+    return 10 * np.log10((f.astype("float64") ** 2).mean(1) + 1e-10)
+
+
+def pauses(db, threshold=None):
+    """[(start, end)] in seconds of every stretch of silence at least MIN_PAUSE long."""
+    import numpy as np
+    if threshold is None:
+        threshold = np.percentile(db, 90) - 30   # well below the coach's speaking level
+    quiet = np.concatenate([[False], db < threshold, [False]])
+    edges = np.flatnonzero(quiet[1:] != quiet[:-1])
+    return [(a * FRAME, b * FRAME) for a, b in zip(edges[::2], edges[1::2]) if (b - a) * FRAME >= MIN_PAUSE]
+
+
+def snaps(clip, gaps, n_chars):
+    """Cuts that run from one pause to another around where Whisper placed the phrase, closest first. Whisper's
+    timings drift by a syllable or so, so every run of speech stretches near it is a candidate; the listening check
+    picks the right one. Empty if the phrase was said mid-sentence with no pauses around it."""
+    t0, t1 = clip["t0"], clip["t1"]
+    near = [i for i in range(len(gaps) - 1) if gaps[i][1] < t1 + 0.4 and gaps[i + 1][0] > t0 - 0.4]
+    out = []
+    for i in near:
+        for j in near:
+            if j < i:
+                continue
+            b, a = gaps[i], gaps[j + 1]       # the pauses before and after this run of speech
+            spoken = a[0] - b[1]
+            if not 0.15 * n_chars <= spoken <= 0.7 * n_chars + 0.6:
+                continue
+            drift = abs(b[1] - t0) + abs(a[0] - t1)
+            out.append((drift, {**clip, "start": round(max(b[0], b[1] - 0.1), 2), "end": round(min(a[1], a[0] + 0.15), 2),
+                                "quiet": round(min(b[1] - b[0], 0.5) + min(a[1] - a[0], 0.5), 2)}))
+    return [c for _, c in sorted(out, key=lambda x: x[0])]
 
 
 def _heard(samples16k, cc):
-    """What Whisper hears in a short clip, as Han characters (Traditional)."""
+    """What Whisper hears in a short clip: (Han characters in Traditional, confidence)."""
     import mlx_whisper
     r = mlx_whisper.transcribe(samples16k, path_or_hf_repo=MODEL, language="zh", condition_on_previous_text=False)
-    return "".join(c for c in cc.convert(r["text"]) if HAN(c))
+    conf = min((s["avg_logprob"] for s in r["segments"]), default=-9.0)
+    return "".join(c for c in cc.convert(r["text"]) if HAN(c)), conf
+
+
+def score(clip, conf):
+    """Higher is better: clear pauses around it, said on its own, Whisper sure of what it heard."""
+    return clip["quiet"] + (0.5 if clip.get("alone") else 0) + conf
+
+
+def best_clip(target, options, s16, gaps, cc):
+    """Try the places the coach said a phrase and keep the cleanest cut; (clip, why-not) if none passes."""
+    passed, tried, why = [], set(), "never set off by pauses"
+    for option in options[:6]:
+        for c in snaps(option, gaps, len(target))[:4]:
+            if (c["start"], c["end"]) in tried:
+                continue
+            tried.add((c["start"], c["end"]))
+            heard, conf = _heard(s16[int(c["start"] * 16000):int(c["end"] * 16000)], cc)
+            if heard != target:   # anything more is a neighbouring word, anything less is cut off
+                why = f"heard {heard!r}"
+                continue
+            passed.append((score(c, conf), c))
+            break
+        if len(passed) >= 2:
+            break
+    if not passed:
+        return None, why
+    s, c = max(passed, key=lambda x: x[0])
+    return {**c, "score": round(s, 2)}, None
 
 
 def clips(src: Path):
@@ -157,6 +212,9 @@ def clips(src: Path):
     candidates = find_candidates(transcript, items)
     found = {}
     out = src.with_suffix(".clips")
+    if out.exists():
+        for old in out.glob("*.m4a"):
+            old.unlink()
     out.mkdir(exist_ok=True)
     rejected = []
     with tempfile.TemporaryDirectory() as d:
@@ -167,25 +225,14 @@ def clips(src: Path):
             rate, frames = w.getframerate(), w.readframes(w.getnframes())
         with wave.open(str(wav16)) as w:
             s16 = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32) / 32768.0
+        gaps = pauses(loudness(s16))
         bps = 2  # 16-bit mono
         for key, options in candidates.items():
-            # Keep a clip only if Whisper, listening to just that clip, hears the phrase in it. If the first cut
-            # misses, re-time it from its own sentence; try up to four places the coach said it.
-            c, heard = None, ""
-            for option in options[:4]:
-                for attempt in (option, _realign(s16, transcript, option, want[key], cc)):
-                    if attempt is None:
-                        continue
-                    heard = _heard(s16[int(attempt["start"] * 16000):int(attempt["end"] * 16000)], cc)
-                    if want[key] in heard:
-                        c = attempt
-                        break
-                if c:
-                    break
+            c, why = best_clip(want[key], options, s16, gaps, cc)
             if not c:
-                rejected.append((key, heard))
+                rejected.append((key, why))
                 continue
-            found[key] = c
+            found[key] = {k: c[k] for k in ("start", "end", "seg", "text", "score")}
             a, b = int(c["start"] * rate) * bps, int(c["end"] * rate) * bps
             piece = Path(d) / f"{key}.wav"
             with wave.open(str(piece), "wb") as o:
@@ -194,11 +241,11 @@ def clips(src: Path):
                 o.setframerate(rate)
                 o.writeframes(frames[a:b])
             subprocess.run(["afconvert", "-f", "m4af", "-d", "aac", "-b", "96000", str(piece), str(out / f"{key}.m4a")], check=True)
-            c["file"] = f"{key}.m4a"
+            found[key]["file"] = f"{key}.m4a"
     (out / "manifest.json").write_text(json.dumps({"lesson": src.stem, "clips": found}, ensure_ascii=False, indent=1))
     print(f"{len(found)} clips kept, {len(rejected)} rejected -> {out}")
-    for key, heard in rejected:
-        print(f"  rejected {key}: heard {heard!r}")
+    for key, why in rejected:
+        print(f"  rejected {key}: {why}")
 
 
 PRIVATE_REPO = "tomvannuenen/mandarin-progress"
@@ -220,24 +267,52 @@ def _put(path, data: bytes, message):
         raise RuntimeError(f"upload failed for {path}: {out}")
 
 
+def _delete(path, message):
+    code, sha = _gh(f"repos/{PRIVATE_REPO}/contents/{path}", "--jq", ".sha")
+    if code == 0 and sha.strip():
+        _gh("-X", "DELETE", f"repos/{PRIVATE_REPO}/contents/{path}", "-f", f"message={message}", "-f", f"sha={sha.strip()}")
+
+
+def merge(remote, local):
+    """New manifest plus (uploads, removals). This lesson's clips replace its earlier cut; a clip from another
+    lesson is replaced only by a better-scoring one; this lesson's clips that no longer pass are removed."""
+    lesson, clips = local["lesson"], dict(remote.get("clips", {}))
+    removals = [k for k, c in clips.items() if c["lesson"] == lesson and k not in local["clips"]]
+    for k in removals:
+        del clips[k]
+    uploads = []
+    for key, c in local["clips"].items():
+        old = clips.get(key)
+        if old and old["lesson"] != lesson and old.get("score", -99) >= c["score"]:
+            continue
+        entry = {"file": c["file"], "lesson": lesson, "text": c["text"], "score": c["score"], "v": c["v"]}
+        if old != entry:
+            clips[key] = entry
+            uploads.append(key)
+    return {"clips": clips}, uploads, removals
+
+
 def publish(src: Path):
-    """Upload clips to the private sync repo (never the public app). Earlier lessons' clips are kept."""
+    """Upload clips to the private sync repo (never the public app)."""
     import base64
+    import hashlib
     code, out = _gh(f"repos/{PRIVATE_REPO}", "--jq", ".private")
     if out.strip() != "true":
         raise SystemExit(f"{PRIVATE_REPO} is not private; refusing to upload coach audio.")
-    local = json.loads((src.with_suffix(".clips") / "manifest.json").read_text())
+    folder = src.with_suffix(".clips")
+    local = json.loads((folder / "manifest.json").read_text())
+    for c in local["clips"].values():
+        c["v"] = hashlib.sha1((folder / c["file"]).read_bytes()).hexdigest()[:10]
     code, out = _gh(f"repos/{PRIVATE_REPO}/contents/coach/manifest.json", "--jq", ".content")
-    merged = json.loads(base64.b64decode(out)) if code == 0 and out.strip() else {"clips": {}}
-    added = 0
-    for key, c in local["clips"].items():
-        if key in merged["clips"]:
-            continue  # keep the clip from the earlier lesson
-        _put(f"coach/{c['file']}", (src.with_suffix(".clips") / c["file"]).read_bytes(), f"Coach clip {key}")
-        merged["clips"][key] = {"file": c["file"], "lesson": local["lesson"], "text": c["text"]}
-        added += 1
+    remote = json.loads(base64.b64decode(out)) if code == 0 and out.strip() else {"clips": {}}
+    merged, uploads, removals = merge(remote, local)
+    for key in uploads:
+        c = local["clips"][key]
+        _put(f"coach/{c['file']}", (folder / c["file"]).read_bytes(), f"Coach clip {key}")
+    for key in removals:
+        _delete(f"coach/{remote['clips'][key]['file']}", f"Drop coach clip {key}")
     _put("coach/manifest.json", json.dumps(merged, ensure_ascii=False, indent=1).encode(), f"Coach clips from {local['lesson']}")
-    print(f"{added} new clips uploaded ({len(merged['clips'])} total)")
+    print(f"{len(uploads)} uploaded, {len(removals)} removed ({len(merged['clips'])} total)")
 
 
 if __name__ == "__main__":

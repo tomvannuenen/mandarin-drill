@@ -90,12 +90,16 @@ async function syncNow() {
   if (!$('view-settings').hidden) renderSync();
 }
 
-// Add the coach's recorded clips as an extra voice on the cards she said.
+// Add the coach's recorded clips as an extra voice on the cards the coach said (and drop ones that were removed).
 async function attachCoach() {
   const urls = await coachUrls().catch(() => ({}));
   for (const item of allItems) {
     const entries = item.kind === 'pattern' ? item.fills.map((f) => [`${item.id}--${f.fillId}`, f]) : [[item.id, item]];
-    for (const [key, entry] of entries) if (urls[key] && entry.audio) entry.audio.coach = [urls[key], urls[key]];
+    for (const [key, entry] of entries) {
+      if (!entry.audio) continue;
+      if (urls[key]) entry.audio.coach = [urls[key], urls[key]];
+      else delete entry.audio.coach;
+    }
   }
   for (const [k, a] of Object.entries(wordAudio)) {
     const item = allItems.find((i) => `${i.deck}/${i.words?.[0]?.zh}` === k && i.words?.length === 1);

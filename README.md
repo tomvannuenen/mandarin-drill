@@ -103,13 +103,16 @@ uv run tools/lesson.py clips "../chinese-italki/<lesson>.mp4"        # cut + sel
 uv run tools/lesson.py publish "../chinese-italki/<lesson>.mp4"      # upload to the PRIVATE sync repo only
 ```
 
-Each clip is kept only if Whisper, listening to the clip alone, hears the phrase in it. The app downloads new clips
+A clip is kept only if the phrase has a real pause on both sides (its edges are cut inside those pauses, so no
+word is clipped) and Whisper, listening to the clip alone, hears exactly the phrase: nothing cut off and nothing
+extra. When the coach said a phrase several times, the cleanest take wins. Re-running `clips` + `publish` replaces
+that lesson's clips; a later lesson only replaces a clip with a better-scoring one. The app downloads changes
 when it syncs and adds them as a **Coach** voice on those cards (slow playback slows the clip down).
 
 ## Development
 
 ```bash
-uv run --no-project --with opencc-python-reimplemented --with edge-tts python -m unittest discover -s tests -t .
+uv run --no-project --with opencc-python-reimplemented --with edge-tts --with numpy python -m unittest discover -s tests -t .
 /opt/homebrew/opt/node@18/bin/node --test tests/
 python3 -m http.server 8765
 ```

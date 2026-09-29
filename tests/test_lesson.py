@@ -1,6 +1,8 @@
 import unittest
 
-from tools.lesson import char_timeline, find_clips, targets
+import numpy as np
+
+from tools.lesson import char_timeline, find_clips, loudness, merge, pauses, snaps, targets
 
 
 def seg(text, start, end, words):
@@ -58,6 +60,40 @@ class Lesson(unittest.TestCase):
         ]}
         items = [{"id": "xg", "kind": "word", "deck": "mandarin", "zh": "香港"}, {"id": "zh", "kind": "word", "deck": "mandarin", "zh": "之後"}]
         self.assertEqual(find_clips(t, items), {})
+
+    def test_pauses_are_long_quiet_stretches(self):
+        tone = np.sin(np.arange(16000) / 16000 * 2 * np.pi * 200).astype(np.float32) * 0.3
+        silence = np.zeros(1600 * 3, dtype=np.float32)          # 0.3 s: a real pause
+        blip = np.zeros(800, dtype=np.float32)                    # 0.05 s: a consonant, not a pause
+        audio = np.concatenate([silence, tone, blip, tone, silence])
+        gaps = pauses(loudness(audio))
+        self.assertEqual(len(gaps), 2)
+        self.assertAlmostEqual(gaps[0][1], 0.3, places=2)
+
+    def test_cuts_run_from_pause_to_pause_closest_to_whisper_first(self):
+        gaps = [(0.0, 1.0), (1.6, 1.75), (2.2, 2.8)]
+        cuts = snaps({"t0": 1.2, "t1": 2.0}, gaps, 3)
+        self.assertEqual((cuts[0]["start"], cuts[0]["end"]), (0.9, 2.35))
+        self.assertIn((0.9, 1.75), [(c["start"], c["end"]) for c in cuts])   # in case Whisper ran long
+
+    def test_no_cuts_for_a_phrase_said_mid_sentence(self):
+        self.assertEqual(snaps({"t0": 1.2, "t1": 2.0}, [(0.0, 1.0)], 3), [])
+
+    def test_merge_recuts_this_lesson_and_keeps_better_clips_from_others(self):
+        remote = {"clips": {
+            "a": {"file": "a.m4a", "lesson": "L1", "text": "", "score": 0.1, "v": "x"},
+            "b": {"file": "b.m4a", "lesson": "L0", "text": "", "score": 1.5, "v": "y"},
+            "gone": {"file": "gone.m4a", "lesson": "L1", "text": ""},
+        }}
+        local = {"lesson": "L1", "clips": {
+            "a": {"file": "a.m4a", "text": "", "score": 0.9, "v": "z"},
+            "b": {"file": "b.m4a", "text": "", "score": 0.4, "v": "w"},
+        }}
+        merged, uploads, removals = merge(remote, local)
+        self.assertEqual(uploads, ["a"])
+        self.assertEqual(removals, ["gone"])
+        self.assertEqual(merged["clips"]["b"]["lesson"], "L0")
+        self.assertNotIn("gone", merged["clips"])
 
 
 if __name__ == "__main__":

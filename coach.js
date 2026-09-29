@@ -25,20 +25,28 @@ async function tx(mode, fn) {
 
 const bytesOf = (b64) => Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
 
-// Fetch clips that are new or changed since last time. Returns how many were downloaded.
+// Fetch clips that are new or re-cut since last time and forget ones that were dropped. Returns how many changed.
 export async function syncCoach(cfg) {
   const m = await getBase64(cfg, 'coach/manifest.json');
   if (!m) return 0;
   const manifest = JSON.parse(new TextDecoder().decode(bytesOf(m.base64)));
+  const clips = manifest.clips || {};
   const have = (await tx('readonly', (s) => s.get('_index'))) || {};
   let n = 0;
-  for (const [key, clip] of Object.entries(manifest.clips || {})) {
-    if (have[key] === clip.file + clip.lesson) continue;
+  for (const key of Object.keys(have)) {
+    if (clips[key]) continue;
+    await tx('readwrite', (s) => s.delete(key));
+    delete have[key];
+    n += 1;
+  }
+  for (const [key, clip] of Object.entries(clips)) {
+    const version = clip.file + clip.lesson + (clip.v || '');
+    if (have[key] === version) continue;
     const f = await getBase64(cfg, `coach/${clip.file}`);
     if (!f) continue;
     const blob = new Blob([bytesOf(f.base64)], { type: 'audio/mp4' });
     await tx('readwrite', (s) => s.put(blob, key));
-    have[key] = clip.file + clip.lesson;
+    have[key] = version;
     n += 1;
   }
   await tx('readwrite', (s) => s.put(have, '_index'));

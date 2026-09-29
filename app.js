@@ -1025,7 +1025,11 @@ async function init() {
       if (hadController && !session) location.reload();
     });
     // Once a service worker controls the page, ask it to cache all audio for offline use.
-    await navigator.serviceWorker.register('sw.js').catch(() => null);
+    const reg = await navigator.serviceWorker.register('sw.js').catch(() => null);
+    // Phones resume the app from the background without reloading, so look for a new version each time it's shown.
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') reg?.update().catch(() => {});
+    });
     const urls = allItems.flatMap((i) => (i.fills || [i]).flatMap((x) => Object.values(x.audio).flat()));
     const send = () => navigator.serviceWorker.controller?.postMessage({ type: 'cache-audio', urls: [...new Set(urls)] });
     if (navigator.serviceWorker.controller) send();

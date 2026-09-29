@@ -3,3 +3,4 @@ __pycache__/
 voice-samples/
 .claude/
 book-audio/
+.local/

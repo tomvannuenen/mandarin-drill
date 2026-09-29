@@ -50,6 +50,16 @@ test('composeToday puts words that are hard to read up front, as Read it cards',
   assert.equal(queue[0].key, 'c/mandarin/喝:char');
 });
 
+test('a word that is hard to read gets a Read it card even before it had one', () => {
+  const p = defaults();
+  const items = [{ id: 'a', kind: 'phrase', deck: 'mandarin', week: 1, words: [{ zh: '高興' }] }];
+  p.cards['a:say'] = future(9);
+  p.weakChars = { 'mandarin/高興': { score: 2, flags: 1 }, 'mandarin/不在': { score: 2, flags: 1 } };
+  const chars = [{ id: 'c/mandarin/高興', kind: 'char', deck: 'mandarin', zh: '高興' }];
+  const { queue } = composeToday({ items, drills: [], chars, progress: p, plan: null, now: NOW, newLimit: 0, deck: 'mandarin', charLimit: 0, buildLimit: 0 });
+  assert.deepEqual(queue.map((q) => q.key), ['c/mandarin/高興:char']);
+});
+
 test('composeToday ignores stale plans and caps long days', () => {
   const p = defaults();
   const many = Array.from({ length: 60 }, (_, i) => ({ id: `x${i}`, deck: 'mandarin', week: 1 }));

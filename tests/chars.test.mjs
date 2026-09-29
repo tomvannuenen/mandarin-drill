@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 import { defaults, applyReview, localDate, newToday } from '../lib/store.js';
 import { grade } from '../lib/srs.js';
-import { charId, charItems, newCharCards, newBuildCards, knowsWord, tiles, isBuilt, markReading, readingTrouble } from '../lib/chars.js';
+import { charId, charItems, newCharCards, newBuildCards, knowsWord, tiles, isBuilt, markReading, readingTrouble, reclassifyReadingFlags } from '../lib/chars.js';
 import { buildQueue } from '../lib/session.js';
 
 const NOW = new Date(2026, 8, 28, 9);
@@ -108,4 +108,22 @@ test('a word with a reading problem gets its pinyin support back', () => {
   assert.equal(knowsWord(p, 'mandarin', '喝'), true);
   markReading(p, 'mandarin', '喝', false, NOW);
   assert.equal(knowsWord(p, 'mandarin', '喝'), false);
+});
+
+test('speaking flags that really came from failed reading are moved to reading', () => {
+  const p = defaults();
+  const t = NOW.getTime();
+  // 喜歡: phrase read aloud failed, but saying it goes fine now -> reading problem.
+  // 你: drill for saying it still fails -> stays a speaking problem.
+  p.weak = { 'w/mandarin/喜歡': { score: 6, flags: 3 }, 'w/mandarin/你': { score: 4, flags: 2 } };
+  p.log = [
+    [t - 5000, 'b:read', 1],
+    [t - 4000, 'w/mandarin/喜歡:say', 3],
+    [t - 3000, 'w/mandarin/你:say', 1],
+  ];
+  const moved = reclassifyReadingFlags(p, ITEMS, 'mandarin', NOW);
+  assert.deepEqual(moved, ['喜歡']);
+  assert.equal(p.weak['w/mandarin/喜歡'].score, 0);
+  assert.equal(p.weakChars['mandarin/喜歡'].score, 2);
+  assert.equal(p.weak['w/mandarin/你'].score, 4);
 });

@@ -16,7 +16,7 @@ import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pul
 import { flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
 import { weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from './lib/motivation.js';
 import { composeToday, snapshot, outcome, dueSoon, estimateMinutes } from './lib/today.js';
-import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId } from './lib/chars.js';
+import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId, reclassifyReadingFlags } from './lib/chars.js';
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 const LANG_NAME = { mandarin: 'Mandarin', cantonese: 'Cantonese' };
@@ -265,10 +265,9 @@ function renderHome() {
   const h = now.getHours();
   $('greeting').textContent = `${h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'}, Tom.`;
 
-  const note = planIsCurrent(plan, now) && plan.message
-    ? plan.message
-    : 'Say each answer out loud before you check it. Speaking is what makes it stick.';
+  const note = planIsCurrent(plan, now) ? plan.message || '' : '';
   $('today-note').textContent = note;
+  $('today-note').hidden = !note;
 
   const { queue, counts } = todayPlan(now);
   const convo = readyConversation();
@@ -602,6 +601,7 @@ function rate(rating) {
       });
       return chip;
     }));
+    document.querySelector('#which .sheet-q').textContent = session.current.card.type === 'read' ? "Which word couldn't you read?" : 'Which part tripped you up?';
     $('which').hidden = false;
     return;
   }
@@ -618,6 +618,11 @@ function commit(rating) {
   if (c.char) markReading(progress, c.deck, c.zh, rating >= 3, now); // reading, not speaking
   else if (rating >= 3) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words, now);
   for (const zh of c.flagged) {
+    // On a read-aloud card the problem is reading the characters, not saying the word.
+    if (card.type === 'read') {
+      markReading(progress, c.deck, zh, false, now);
+      continue;
+    }
     // A newly missed word gets a practice card straight away, shown again later in this session.
     const id = flagWord(progress, c.deck, zh, now);
     const key = `${id}:say`;
@@ -754,8 +759,8 @@ function renderMe() {
 
   const spots = troubleSpots(progress, d);
   const info = Object.fromEntries(drills().map((x) => [x.zh, x]));
-  const reading = readingTrouble(progress, d).filter((t) => progress.cards[`${charId(d, t.zh)}:char`]);
-  chars();
+  const readable = new Set(chars().map((x) => x.zh));
+  const reading = readingTrouble(progress, d).filter((t) => readable.has(t.zh));
   $('me-spots').replaceChildren(
     ...(spots.length ? [
       el('p', { class: 'section' }, 'Hard to say'),
@@ -970,6 +975,12 @@ async function init() {
   version = data.version;
   byId = Object.fromEntries(allItems.map((i) => [i.id, i]));
   for (const i of allItems) if (i.kind !== 'pattern' && i.words?.length === 1 && i.audio) wordAudio[`${i.deck}/${i.words[0].zh}`] = i.audio;
+  // One-time cleanup: speaking flags that really came from failed read-aloud cards become reading problems.
+  if (!(progress.migrations || []).includes('reading-flags-v1')) {
+    for (const d of Object.keys(decks)) reclassifyReadingFlags(progress, allItems, d, new Date());
+    progress.migrations = [...(progress.migrations || []), 'reading-flags-v1'];
+    persist();
+  }
   document.addEventListener('visibilitychange', () => { if (document.hidden) syncNow(); });
   syncOnOpen();
   show('home');

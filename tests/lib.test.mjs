@@ -167,6 +167,18 @@ test('buildQueue leaves out reading cards unless reading practice is on', () => 
   assert.deepEqual(buildQueue(ITEMS, p, NOW, 0).map((c) => c.key), ['b:read', 'a:listen', 'a:read']);
 });
 
+test('drill and word-card ids never grow listen or read cards', () => {
+  const p = defaults();
+  p.settings.reading = true;
+  const items = [{ id: 'w/mandarin/高興', kind: 'drill' }, { id: 'c/mandarin/高興', kind: 'char' }, { id: 'a' }];
+  p.cards['w/mandarin/高興:say'] = { ...grade(null, 3, NOW), due: later(DAY).toISOString() };
+  p.cards['w/mandarin/高興:read'] = { ...grade(null, 3, NOW), due: later(-DAY).toISOString() }; // left over from the old bug
+  p.cards['a:say'] = { ...grade(null, 3, NOW), due: later(DAY).toISOString() };
+  p.goodCounts['w/mandarin/高興'] = 5;
+  p.goodCounts['c/mandarin/高興'] = 5;
+  assert.deepEqual(buildQueue(items, p, NOW, 0).map((c) => c.key), []);
+});
+
 test('shouldRequeue for cards due within 20 minutes', () => {
   assert.equal(shouldRequeue({ due: later(10 * MIN).toISOString() }, NOW), true);
   assert.equal(shouldRequeue({ due: later(DAY).toISOString() }, NOW), false);

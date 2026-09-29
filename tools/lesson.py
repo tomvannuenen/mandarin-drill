@@ -197,6 +197,30 @@ def only_the_phrase(samples16k, target, cc):
     return "".join(c for c in cc.convert(text) if HAN(c)) == target
 
 
+EDGE = 0.7   # seconds at each end of a clip that must sound like Chinese
+
+
+def edges_are_chinese(samples16k):
+    """Whisper's language detector, run on just the first and last EDGE seconds of speech, says Chinese both times.
+    This catches English next to the phrase ("yeah, we did" before 最近怎麼樣) that transcription swallows."""
+    import mlx.core as mx
+    import numpy as np
+    from mlx_whisper.audio import N_SAMPLES, log_mel_spectrogram
+    from mlx_whisper.decoding import detect_language
+    from mlx_whisper.transcribe import ModelHolder
+
+    model = ModelHolder.get_model(MODEL, mx.float16)
+    db = loudness(samples16k)
+    loud = np.flatnonzero(db > np.percentile(db, 95) - 30)
+    a, b, n = loud[0] * 160, (loud[-1] + 1) * 160, int(EDGE * 16000)
+    for piece in (samples16k[a:a + n], samples16k[max(a, b - n):b]):
+        mel = log_mel_spectrogram(piece, n_mels=model.dims.n_mels, padding=N_SAMPLES)[:3000]
+        _, probs = detect_language(model, mel.astype(mx.float16))
+        if probs.get("zh", 0) < 0.5:
+            return False
+    return True
+
+
 def score(clip, conf):
     """Higher is better: clear pauses around it, said on its own, Whisper sure of what it heard."""
     return clip["quiet"] + (0.5 if clip.get("alone") else 0) + conf
@@ -215,7 +239,7 @@ def best_clip(target, options, s16, gaps, cc):
             if heard != target:   # anything more is a neighbouring word, anything less is cut off
                 why = f"heard {heard!r}"
                 continue
-            if unheard(x, words) > MAX_UNHEARD or not only_the_phrase(x, target, cc):
+            if unheard(x, words) > MAX_UNHEARD or not only_the_phrase(x, target, cc) or not edges_are_chinese(x):
                 why = "other speech in the clip"
                 continue
             passed.append((score(c, conf), c))

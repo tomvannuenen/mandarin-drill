@@ -105,7 +105,8 @@ uv run tools/lesson.py publish "../chinese-italki/<lesson>.mp4"      # upload to
 
 A clip is kept only if the phrase has a real pause on both sides (its edges are cut inside those pauses, so no
 word is clipped) and Whisper, listening to the clip alone, hears exactly the phrase: nothing cut off and nothing
-extra. When the coach said a phrase several times, the cleanest take wins. Re-running `clips` + `publish` replaces
+extra. Whisper's language detector must also hear Chinese at both ends, which catches English it would otherwise
+swallow ("yeah, we did" before 最近怎麼樣). When the coach said a phrase several times, the cleanest take wins. Re-running `clips` + `publish` replaces
 that lesson's clips; a later lesson only replaces a clip with a better-scoring one. The app downloads changes
 when it syncs and adds them as a **Coach** voice on those cards (slow playback slows the clip down).
 

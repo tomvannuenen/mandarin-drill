@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from tools.lesson import char_timeline, find_clips, loudness, merge, pauses, snaps, targets
+from tools.lesson import char_timeline, find_clips, loudness, merge, pauses, snaps, targets, unheard
 
 
 def seg(text, start, end, words):
@@ -78,6 +78,13 @@ class Lesson(unittest.TestCase):
 
     def test_no_cuts_for_a_phrase_said_mid_sentence(self):
         self.assertEqual(snaps({"t0": 1.2, "t1": 2.0}, [(0.0, 1.0)], 3), [])
+
+    def test_speech_outside_the_recognised_words_is_measured(self):
+        tone = np.sin(np.arange(8000) / 16000 * 2 * np.pi * 200).astype(np.float32) * 0.3   # 0.5 s of speech
+        gap = np.zeros(8000, dtype=np.float32)
+        clip = np.concatenate([tone, gap, tone])            # a word, a pause, then "means like"
+        self.assertAlmostEqual(unheard(clip, [(0.0, 0.5)]), 0.5, places=2)
+        self.assertEqual(unheard(clip, [(0.0, 0.5), (1.0, 1.5)]), 0)
 
     def test_merge_recuts_this_lesson_and_keeps_better_clips_from_others(self):
         remote = {"clips": {

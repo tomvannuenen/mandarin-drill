@@ -167,11 +167,34 @@ def snaps(clip, gaps, n_chars):
 
 
 def _heard(samples16k, cc):
-    """What Whisper hears in a short clip: (Han characters in Traditional, confidence)."""
+    """What Whisper hears in a short clip when told it's Chinese: (Han characters in Traditional, confidence,
+    word times)."""
     import mlx_whisper
-    r = mlx_whisper.transcribe(samples16k, path_or_hf_repo=MODEL, language="zh", condition_on_previous_text=False)
+    r = mlx_whisper.transcribe(samples16k, path_or_hf_repo=MODEL, language="zh", word_timestamps=True,
+                               condition_on_previous_text=False)
     conf = min((s["avg_logprob"] for s in r["segments"]), default=-9.0)
-    return "".join(c for c in cc.convert(r["text"]) if HAN(c)), conf
+    words = [(w["start"], w["end"]) for s in r["segments"] for w in s.get("words", [])]
+    return "".join(c for c in cc.convert(r["text"]) if HAN(c)), conf, words
+
+
+MAX_UNHEARD = 0.4   # seconds of speech in a clip that no recognised word accounts for
+
+
+def unheard(samples16k, words):
+    """Seconds of loud audio in a clip that lie outside every recognised word (e.g. English Whisper left out)."""
+    import numpy as np
+    db = loudness(samples16k)
+    loud = np.flatnonzero(db > np.percentile(db, 95) - 30) * FRAME
+    return sum(FRAME for t in loud if not any(a - 0.15 <= t <= b + 0.15 for a, b in words))
+
+
+def only_the_phrase(samples16k, target, cc):
+    """Told to pick the language itself, Whisper still hears just the phrase: no English around it, no doubt."""
+    import mlx_whisper
+    text = mlx_whisper.transcribe(samples16k, path_or_hf_repo=MODEL, condition_on_previous_text=False)["text"]
+    if any(c.isalpha() and not HAN(c) for c in text):
+        return False
+    return "".join(c for c in cc.convert(text) if HAN(c)) == target
 
 
 def score(clip, conf):
@@ -187,9 +210,13 @@ def best_clip(target, options, s16, gaps, cc):
             if (c["start"], c["end"]) in tried:
                 continue
             tried.add((c["start"], c["end"]))
-            heard, conf = _heard(s16[int(c["start"] * 16000):int(c["end"] * 16000)], cc)
+            x = s16[int(c["start"] * 16000):int(c["end"] * 16000)]
+            heard, conf, words = _heard(x, cc)
             if heard != target:   # anything more is a neighbouring word, anything less is cut off
                 why = f"heard {heard!r}"
+                continue
+            if unheard(x, words) > MAX_UNHEARD or not only_the_phrase(x, target, cc):
+                why = "other speech in the clip"
                 continue
             passed.append((score(c, conf), c))
             break

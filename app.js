@@ -282,7 +282,7 @@ function renderHome() {
       counts.focus && `${counts.focus} focus`,
       counts.reviews && `${counts.reviews} review${counts.reviews === 1 ? '' : 's'}`,
       counts.fresh && `${counts.fresh} new`,
-      counts.chars && `${counts.chars} characters`,
+      counts.chars && `${counts.chars} character${counts.chars === 1 ? '' : 's'}`,
       counts.builds && `${counts.builds} to build`,
       convo && '1 conversation',
     ].filter(Boolean);

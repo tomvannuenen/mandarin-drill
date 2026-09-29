@@ -254,3 +254,15 @@ test('streak continues on consecutive days and resets after a gap', () => {
   applyReview(p, { id: 'c', type: 'say' }, 3, s, later(4 * DAY));
   assert.equal(p.stats.streak, 1);
 });
+
+test('week practice: only that week, weakest first, capped', async () => {
+  const { weekQueue, lessonWeeks } = await import('../lib/session.js');
+  const items = [
+    { id: 'a', week: 1, deck: 'mandarin' }, { id: 'b', week: 2, deck: 'mandarin' }, { id: 'c', week: 2, deck: 'mandarin' },
+    { id: 'd', week: 2, deck: 'mandarin' }, { id: 'w/mandarin/好', week: 2, deck: 'mandarin' }, { id: 'e', set: 'Verbs', deck: 'mandarin' },
+  ];
+  const progress = { cards: { 'b:say': { stability: 20 }, 'c:say': { stability: 2 } } };
+  assert.deepEqual(weekQueue(items, progress, 2).map((c) => c.key), ['d:say', 'c:say', 'b:say']);
+  assert.equal(weekQueue(items, progress, 2, 2).length, 2);
+  assert.deepEqual(lessonWeeks(items), [2, 1]);
+});

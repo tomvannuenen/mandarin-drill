@@ -2,7 +2,7 @@ import { $, el, play, renderRoman, speakText, LANG_ATTR } from './ui.js';
 import { icon, hydrateIcons } from './icons.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
-import { buildQueue, shouldRequeue } from './lib/session.js';
+import { buildQueue, shouldRequeue, weekQueue, lessonWeeks } from './lib/session.js';
 import { load, save, exportJSON, importJSON, applyReview, localDate } from './lib/store.js';
 import { initBook, renderBook } from './book.js';
 import { syncCoach, coachUrls } from './coach.js';
@@ -707,6 +707,13 @@ function renderDone(r) {
 // ---------- explore
 
 function renderExplore() {
+  const weekly = deck() === 'mandarin' ? items() : [];
+  $('explore-weeks').replaceChildren(...lessonWeeks(weekly).map((w) => {
+    const list = weekly.filter((i) => i.week === w && !i.id.startsWith('w/') && !i.id.startsWith('c/'));
+    const solid = list.filter((i) => (progress.cards[`${i.id}:say`]?.stability || 0) >= 7).length;
+    return el('button', { class: 'convo-row', onclick: () => startSession(weekQueue(weekly, progress, w)) },
+      icon('list'), el('span', {}, `Week ${w} lesson`), el('span', { class: 'muted' }, `${solid} of ${list.length} solid`));
+  }));
   $('explore-convos').replaceChildren(...conversations.filter((c) => c.deck === deck()).map((c) => {
     const st = convoStatus(c, progress);
     const status = st.done ? `done ${st.done}×` : st.ready ? 'ready' : `${st.learned} of ${st.total} lines met`;

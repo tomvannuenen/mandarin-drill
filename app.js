@@ -265,7 +265,11 @@ function renderHome() {
   const h = now.getHours();
   $('greeting').textContent = `${h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'}, Tom.`;
 
-  const note = planIsCurrent(plan, now) ? plan.message || '' : '';
+  // One line, straight from what the app tracks: what's hard to say and what's hard to read.
+  const roman = (zh) => (wordInfo(zh)?.roman || zh).replace(/-/g, '');
+  const say = troubleSpots(progress, deck()).slice(0, 3).map((t) => roman(t.zh));
+  const read = readingTrouble(progress, deck()).slice(0, 3).map((t) => roman(t.zh));
+  const note = [say.length && `Say: ${say.join(', ')}`, read.length && `Read: ${read.join(', ')}`].filter(Boolean).join('  ·  ');
   $('today-note').textContent = note;
   $('today-note').hidden = !note;
 

@@ -1,5 +1,5 @@
 {
- "version": "4e68ccdd59d9",
+ "version": "2f51a0f61cdc",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -4418,6 +4418,3080 @@
    }
   },
   {
+   "id": "nimen-hao",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "你們好",
+   "roman": "nǐ-men hǎo",
+   "en": "Hi everyone (you all)",
+   "words": [
+    {
+     "zh": "你們",
+     "roman": "nǐ-men",
+     "gloss": "you (plural)"
+    },
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/nimen-hao.mp3",
+     "audio/tw-yunjhe/nimen-hao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/nimen-hao.mp3",
+     "audio/tw-hsiaochen/nimen-hao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/nimen-hao.mp3",
+     "audio/tw-hsiaoyu/nimen-hao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/nimen-hao.mp3",
+     "audio/cn-yunyang/nimen-hao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/nimen-hao.mp3",
+     "audio/cn-xiaoxiao/nimen-hao-slow.mp3"
+    ]
+   },
+   "situation": "You greet a group of students.",
+   "note": "們 men makes a plural: 你們 = you (all), 我們 = we",
+   "topic": "Small talk",
+   "mission": "Greet a group with 你們好"
+  },
+  {
+   "id": "wo-hen-hao",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "我很好",
+   "roman": "wǒ hěn hǎo",
+   "en": "I'm fine",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "很",
+     "roman": "hěn",
+     "gloss": "very"
+    },
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-hen-hao.mp3",
+     "audio/tw-yunjhe/wo-hen-hao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-hen-hao.mp3",
+     "audio/tw-hsiaochen/wo-hen-hao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-hen-hao.mp3",
+     "audio/tw-hsiaoyu/wo-hen-hao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-hen-hao.mp3",
+     "audio/cn-yunyang/wo-hen-hao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-hen-hao.mp3",
+     "audio/cn-xiaoxiao/wo-hen-hao-slow.mp3"
+    ]
+   },
+   "situation": "Someone asks how you are.",
+   "topic": "Small talk"
+  },
+  {
+   "id": "ni-ne",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "你呢？",
+   "roman": "nǐ ne?",
+   "en": "How about you?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "呢",
+     "roman": "ne",
+     "gloss": "(and you? / what about…?)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-ne.mp3",
+     "audio/tw-yunjhe/ni-ne-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-ne.mp3",
+     "audio/tw-hsiaochen/ni-ne-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-ne.mp3",
+     "audio/tw-hsiaoyu/ni-ne-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-ne.mp3",
+     "audio/cn-yunyang/ni-ne-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-ne.mp3",
+     "audio/cn-xiaoxiao/ni-ne-slow.mp3"
+    ]
+   },
+   "situation": "Someone asks how you are; ask back.",
+   "topic": "Small talk",
+   "mission": "Ask back 你呢？ after answering a question"
+  },
+  {
+   "id": "wo-ye-hen-hao",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "我也很好",
+   "roman": "wǒ yě hěn hǎo",
+   "en": "I'm fine too",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "也",
+     "roman": "yě",
+     "gloss": "also, too"
+    },
+    {
+     "zh": "很",
+     "roman": "hěn",
+     "gloss": "very"
+    },
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-ye-hen-hao.mp3",
+     "audio/tw-yunjhe/wo-ye-hen-hao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-ye-hen-hao.mp3",
+     "audio/tw-hsiaochen/wo-ye-hen-hao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-ye-hen-hao.mp3",
+     "audio/tw-hsiaoyu/wo-ye-hen-hao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-ye-hen-hao.mp3",
+     "audio/cn-yunyang/wo-ye-hen-hao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-ye-hen-hao.mp3",
+     "audio/cn-xiaoxiao/wo-ye-hen-hao-slow.mp3"
+    ]
+   },
+   "situation": "A friend says they're fine and asks about you.",
+   "topic": "Small talk"
+  },
+  {
+   "id": "you-mei-you-wenti",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "有沒有問題？",
+   "roman": "yǒu méi-yǒu wèn-tí?",
+   "en": "Any questions?",
+   "words": [
+    {
+     "zh": "有",
+     "roman": "yǒu",
+     "gloss": "to have; there is"
+    },
+    {
+     "zh": "沒有",
+     "roman": "méi-yǒu",
+     "gloss": "not have; there isn't"
+    },
+    {
+     "zh": "問題",
+     "roman": "wèn-tí",
+     "gloss": "question; problem"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/you-mei-you-wenti.mp3",
+     "audio/tw-yunjhe/you-mei-you-wenti-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/you-mei-you-wenti.mp3",
+     "audio/tw-hsiaochen/you-mei-you-wenti-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/you-mei-you-wenti.mp3",
+     "audio/tw-hsiaoyu/you-mei-you-wenti-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/you-mei-you-wenti.mp3",
+     "audio/cn-yunyang/you-mei-you-wenti-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/you-mei-you-wenti.mp3",
+     "audio/cn-xiaoxiao/you-mei-you-wenti-slow.mp3"
+    ]
+   },
+   "situation": "You've finished explaining and check with the class.",
+   "note": "有沒有 = have or not have: a yes/no question without 嗎",
+   "topic": "Work & study",
+   "mission": "Ask your class 有沒有問題？"
+  },
+  {
+   "id": "wo-bu-chi-la",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "我不吃辣",
+   "roman": "wǒ bù chī là",
+   "en": "I don't eat spicy food (in general)",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "不",
+     "roman": "bù",
+     "gloss": "not"
+    },
+    {
+     "zh": "吃",
+     "roman": "chī",
+     "gloss": "to eat"
+    },
+    {
+     "zh": "辣",
+     "roman": "là",
+     "gloss": "spicy"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-bu-chi-la.mp3",
+     "audio/tw-yunjhe/wo-bu-chi-la-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-bu-chi-la.mp3",
+     "audio/tw-hsiaochen/wo-bu-chi-la-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-bu-chi-la.mp3",
+     "audio/tw-hsiaoyu/wo-bu-chi-la-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-bu-chi-la.mp3",
+     "audio/cn-yunyang/wo-bu-chi-la-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-bu-chi-la.mp3",
+     "audio/cn-xiaoxiao/wo-bu-chi-la-slow.mp3"
+    ]
+   },
+   "situation": "The waiter asks if you want chilli; you never eat it.",
+   "note": "不 = don't (in general, habits). 沒 = didn't / haven't (it didn't happen)",
+   "topic": "Food & drink"
+  },
+  {
+   "id": "wo-mei-chi-la",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "我沒吃辣",
+   "roman": "wǒ méi chī là",
+   "en": "I haven't had spicy food",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "沒",
+     "roman": "méi",
+     "gloss": "not (沒問題 = no problem)"
+    },
+    {
+     "zh": "吃",
+     "roman": "chī",
+     "gloss": "to eat"
+    },
+    {
+     "zh": "辣",
+     "roman": "là",
+     "gloss": "spicy"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-mei-chi-la.mp3",
+     "audio/tw-yunjhe/wo-mei-chi-la-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-mei-chi-la.mp3",
+     "audio/tw-hsiaochen/wo-mei-chi-la-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-mei-chi-la.mp3",
+     "audio/tw-hsiaoyu/wo-mei-chi-la-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-mei-chi-la.mp3",
+     "audio/cn-yunyang/wo-mei-chi-la-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-mei-chi-la.mp3",
+     "audio/cn-xiaoxiao/wo-mei-chi-la-slow.mp3"
+    ]
+   },
+   "situation": "Someone asks if your lunch was spicy. It wasn't.",
+   "note": "沒 = didn't / haven't. Compare 我不吃辣: I don't eat spicy food",
+   "topic": "Food & drink"
+  },
+  {
+   "id": "zuotian-wucan-de-shihou",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "昨天午餐的時候",
+   "roman": "zuó-tiān wǔ-cān de shí-hòu",
+   "en": "At lunch yesterday…",
+   "words": [
+    {
+     "zh": "昨天",
+     "roman": "zuó-tiān",
+     "gloss": "yesterday"
+    },
+    {
+     "zh": "午餐",
+     "roman": "wǔ-cān",
+     "gloss": "lunch"
+    },
+    {
+     "zh": "的",
+     "roman": "de",
+     "gloss": "(possessive / 'the one that…')"
+    },
+    {
+     "zh": "時候",
+     "roman": "shí-hòu",
+     "gloss": "time, moment"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zuotian-wucan-de-shihou.mp3",
+     "audio/tw-yunjhe/zuotian-wucan-de-shihou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zuotian-wucan-de-shihou.mp3",
+     "audio/tw-hsiaochen/zuotian-wucan-de-shihou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zuotian-wucan-de-shihou.mp3",
+     "audio/tw-hsiaoyu/zuotian-wucan-de-shihou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zuotian-wucan-de-shihou.mp3",
+     "audio/cn-yunyang/zuotian-wucan-de-shihou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zuotian-wucan-de-shihou.mp3",
+     "audio/cn-xiaoxiao/zuotian-wucan-de-shihou-slow.mp3"
+    ]
+   },
+   "situation": "You start telling a colleague what happened at lunch yesterday.",
+   "note": "… 的時候 = at the time of …, when …",
+   "topic": "Small talk"
+  },
+  {
+   "id": "ni-juede-zenmeyang",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "你覺得怎麼樣？",
+   "roman": "nǐ jué-de zěn-me-yàng?",
+   "en": "What do you think?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "覺得",
+     "roman": "jué-de",
+     "gloss": "to feel, think (an opinion)"
+    },
+    {
+     "zh": "怎麼樣",
+     "roman": "zěn-me-yàng",
+     "gloss": "how is it?"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-juede-zenmeyang.mp3",
+     "audio/tw-yunjhe/ni-juede-zenmeyang-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-juede-zenmeyang.mp3",
+     "audio/tw-hsiaochen/ni-juede-zenmeyang-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-juede-zenmeyang.mp3",
+     "audio/tw-hsiaoyu/ni-juede-zenmeyang-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-juede-zenmeyang.mp3",
+     "audio/cn-yunyang/ni-juede-zenmeyang-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-juede-zenmeyang.mp3",
+     "audio/cn-xiaoxiao/ni-juede-zenmeyang-slow.mp3"
+    ]
+   },
+   "situation": "You want a colleague's opinion.",
+   "note": "覺得 = to feel / think (your own opinion)",
+   "topic": "Small talk",
+   "mission": "Ask someone's opinion with 你覺得怎麼樣？"
+  },
+  {
+   "id": "wo-he-le",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "我喝了",
+   "roman": "wǒ hē le",
+   "en": "I drank (it)",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "喝",
+     "roman": "hē",
+     "gloss": "to drink"
+    },
+    {
+     "zh": "了",
+     "roman": "le",
+     "gloss": "(marks a change / completion)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-he-le.mp3",
+     "audio/tw-yunjhe/wo-he-le-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-he-le.mp3",
+     "audio/tw-hsiaochen/wo-he-le-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-he-le.mp3",
+     "audio/tw-hsiaoyu/wo-he-le-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-he-le.mp3",
+     "audio/cn-yunyang/wo-he-le-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-he-le.mp3",
+     "audio/cn-xiaoxiao/wo-he-le-slow.mp3"
+    ]
+   },
+   "situation": "Someone asks if you had your coffee. You did.",
+   "note": "了 le after a verb: the action happened",
+   "topic": "Food & drink"
+  },
+  {
+   "id": "ni-zhi-bu-zhidao",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "你知不知道？",
+   "roman": "nǐ zhī bù zhī-dào?",
+   "en": "Do you know (or not)?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "知",
+     "roman": "zhī",
+     "gloss": "to know (知不知道 = know or not?)"
+    },
+    {
+     "zh": "不",
+     "roman": "bù",
+     "gloss": "not"
+    },
+    {
+     "zh": "知道",
+     "roman": "zhī-dào",
+     "gloss": "to know"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-zhi-bu-zhidao.mp3",
+     "audio/tw-yunjhe/ni-zhi-bu-zhidao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-zhi-bu-zhidao.mp3",
+     "audio/tw-hsiaochen/ni-zhi-bu-zhidao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-zhi-bu-zhidao.mp3",
+     "audio/tw-hsiaoyu/ni-zhi-bu-zhidao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-zhi-bu-zhidao.mp3",
+     "audio/cn-yunyang/ni-zhi-bu-zhidao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-zhi-bu-zhidao.mp3",
+     "audio/cn-xiaoxiao/ni-zhi-bu-zhidao-slow.mp3"
+    ]
+   },
+   "situation": "You want to check if someone knows something.",
+   "note": "Verb 不 verb makes a yes/no question: 知不知道, 可不可以, 有沒有",
+   "topic": "Small talk"
+  },
+  {
+   "id": "keyi-bu-keyi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "可不可以？",
+   "roman": "kě bù kě-yǐ?",
+   "en": "Is that OK? / Can I?",
+   "words": [
+    {
+     "zh": "可",
+     "roman": "kě",
+     "gloss": "can (可不可以 = can or not?)"
+    },
+    {
+     "zh": "不",
+     "roman": "bù",
+     "gloss": "not"
+    },
+    {
+     "zh": "可以",
+     "roman": "kě-yǐ",
+     "gloss": "can, may (allowed)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/keyi-bu-keyi.mp3",
+     "audio/tw-yunjhe/keyi-bu-keyi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/keyi-bu-keyi.mp3",
+     "audio/tw-hsiaochen/keyi-bu-keyi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/keyi-bu-keyi.mp3",
+     "audio/tw-hsiaoyu/keyi-bu-keyi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/keyi-bu-keyi.mp3",
+     "audio/cn-yunyang/keyi-bu-keyi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/keyi-bu-keyi.mp3",
+     "audio/cn-xiaoxiao/keyi-bu-keyi-slow.mp3"
+    ]
+   },
+   "situation": "You want to ask if something is allowed.",
+   "topic": "Getting by",
+   "mission": "Ask 可不可以？ before taking a free seat"
+  },
+  {
+   "id": "zhege-ren-shi-wo-de-nupengyou",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "這個人是我的女朋友",
+   "roman": "zhè-ge rén shì wǒ de nǚ-péng-yǒu",
+   "en": "This is my girlfriend",
+   "words": [
+    {
+     "zh": "這個",
+     "roman": "zhè-ge",
+     "gloss": "this"
+    },
+    {
+     "zh": "人",
+     "roman": "rén",
+     "gloss": "person"
+    },
+    {
+     "zh": "是",
+     "roman": "shì",
+     "gloss": "is / am / are"
+    },
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "的",
+     "roman": "de",
+     "gloss": "(possessive / 'the one that…')"
+    },
+    {
+     "zh": "女朋友",
+     "roman": "nǚ-péng-yǒu",
+     "gloss": "girlfriend"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhege-ren-shi-wo-de-nupengyou.mp3",
+     "audio/tw-yunjhe/zhege-ren-shi-wo-de-nupengyou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhege-ren-shi-wo-de-nupengyou.mp3",
+     "audio/tw-hsiaochen/zhege-ren-shi-wo-de-nupengyou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhege-ren-shi-wo-de-nupengyou.mp3",
+     "audio/tw-hsiaoyu/zhege-ren-shi-wo-de-nupengyou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhege-ren-shi-wo-de-nupengyou.mp3",
+     "audio/cn-yunyang/zhege-ren-shi-wo-de-nupengyou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhege-ren-shi-wo-de-nupengyou.mp3",
+     "audio/cn-xiaoxiao/zhege-ren-shi-wo-de-nupengyou-slow.mp3"
+    ]
+   },
+   "situation": "You introduce your girlfriend to someone.",
+   "note": "我的 = my: 的 marks possession",
+   "topic": "Meeting people"
+  },
+  {
+   "id": "you-mei-you-qita-wenti",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "有沒有其他問題？",
+   "roman": "yǒu méi-yǒu qí-tā wèn-tí?",
+   "en": "Any other questions?",
+   "words": [
+    {
+     "zh": "有",
+     "roman": "yǒu",
+     "gloss": "to have; there is"
+    },
+    {
+     "zh": "沒有",
+     "roman": "méi-yǒu",
+     "gloss": "not have; there isn't"
+    },
+    {
+     "zh": "其他",
+     "roman": "qí-tā",
+     "gloss": "other"
+    },
+    {
+     "zh": "問題",
+     "roman": "wèn-tí",
+     "gloss": "question; problem"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/you-mei-you-qita-wenti.mp3",
+     "audio/tw-yunjhe/you-mei-you-qita-wenti-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/you-mei-you-qita-wenti.mp3",
+     "audio/tw-hsiaochen/you-mei-you-qita-wenti-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/you-mei-you-qita-wenti.mp3",
+     "audio/tw-hsiaoyu/you-mei-you-qita-wenti-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/you-mei-you-qita-wenti.mp3",
+     "audio/cn-yunyang/you-mei-you-qita-wenti-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/you-mei-you-qita-wenti.mp3",
+     "audio/cn-xiaoxiao/you-mei-you-qita-wenti-slow.mp3"
+    ]
+   },
+   "situation": "You've answered one question and check for more.",
+   "topic": "Work & study",
+   "mission": "End a class or meeting with 有沒有其他問題？"
+  },
+  {
+   "id": "you-mei-you-qita-shijian-shangke",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "有沒有其他時間上課？",
+   "roman": "yǒu méi-yǒu qí-tā shí-jiān shàng kè?",
+   "en": "Do you have any other times for class?",
+   "words": [
+    {
+     "zh": "有",
+     "roman": "yǒu",
+     "gloss": "to have; there is"
+    },
+    {
+     "zh": "沒有",
+     "roman": "méi-yǒu",
+     "gloss": "not have; there isn't"
+    },
+    {
+     "zh": "其他",
+     "roman": "qí-tā",
+     "gloss": "other"
+    },
+    {
+     "zh": "時間",
+     "roman": "shí-jiān",
+     "gloss": "time (in general, a slot)"
+    },
+    {
+     "zh": "上",
+     "roman": "shàng",
+     "gloss": "to attend (a class)"
+    },
+    {
+     "zh": "課",
+     "roman": "kè",
+     "gloss": "class, lesson"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/you-mei-you-qita-shijian-shangke.mp3",
+     "audio/tw-yunjhe/you-mei-you-qita-shijian-shangke-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/you-mei-you-qita-shijian-shangke.mp3",
+     "audio/tw-hsiaochen/you-mei-you-qita-shijian-shangke-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/you-mei-you-qita-shijian-shangke.mp3",
+     "audio/tw-hsiaoyu/you-mei-you-qita-shijian-shangke-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/you-mei-you-qita-shijian-shangke.mp3",
+     "audio/cn-yunyang/you-mei-you-qita-shijian-shangke-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/you-mei-you-qita-shijian-shangke.mp3",
+     "audio/cn-xiaoxiao/you-mei-you-qita-shijian-shangke-slow.mp3"
+    ]
+   },
+   "situation": "You need to move your Chinese lesson.",
+   "note": "時間 = time (in general, a slot). 時候 = a moment (… 的時候 = when …)",
+   "topic": "Work & study",
+   "mission": "Ask your coach about another lesson time in Mandarin"
+  },
+  {
+   "id": "xia-xingqi-jian",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "下星期見！",
+   "roman": "xià xīng-qí jiàn!",
+   "en": "See you next week!",
+   "words": [
+    {
+     "zh": "下",
+     "roman": "xià",
+     "gloss": "next; below (下星期 = next week)"
+    },
+    {
+     "zh": "星期",
+     "roman": "xīng-qí",
+     "gloss": "week"
+    },
+    {
+     "zh": "見",
+     "roman": "jiàn",
+     "gloss": "to see, meet (…見 = see you …)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/xia-xingqi-jian.mp3",
+     "audio/tw-yunjhe/xia-xingqi-jian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/xia-xingqi-jian.mp3",
+     "audio/tw-hsiaochen/xia-xingqi-jian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/xia-xingqi-jian.mp3",
+     "audio/tw-hsiaoyu/xia-xingqi-jian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/xia-xingqi-jian.mp3",
+     "audio/cn-yunyang/xia-xingqi-jian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/xia-xingqi-jian.mp3",
+     "audio/cn-xiaoxiao/xia-xingqi-jian-slow.mp3"
+    ]
+   },
+   "situation": "Your weekly lesson is ending.",
+   "topic": "Small talk",
+   "mission": "Say 下星期見！ at the end of your lesson"
+  },
+  {
+   "id": "di-yi-ci",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "第一次",
+   "roman": "dì-yī cì",
+   "en": "The first time",
+   "words": [
+    {
+     "zh": "第一",
+     "roman": "dì-yī",
+     "gloss": "first"
+    },
+    {
+     "zh": "次",
+     "roman": "cì",
+     "gloss": "time(s), occurrence(s)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/di-yi-ci.mp3",
+     "audio/tw-yunjhe/di-yi-ci-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/di-yi-ci.mp3",
+     "audio/tw-hsiaochen/di-yi-ci-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/di-yi-ci.mp3",
+     "audio/tw-hsiaoyu/di-yi-ci-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/di-yi-ci.mp3",
+     "audio/cn-yunyang/di-yi-ci-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/di-yi-ci.mp3",
+     "audio/cn-xiaoxiao/di-yi-ci-slow.mp3"
+    ]
+   },
+   "situation": "You say it's your first time doing something.",
+   "note": "第一 = first (the usual word). 首 = first in formal contexts (首次)",
+   "topic": "Small talk"
+  },
+  {
+   "id": "wo-yao-yibei-x",
+   "kind": "pattern",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "我要一杯___",
+   "roman": "wǒ yào yī bēi ___",
+   "en": "I'd like a cup of ___",
+   "fills": [
+    {
+     "fillId": "kafei",
+     "zh": "我要一杯咖啡",
+     "roman": "wǒ yào yì bēi kā-fēi",
+     "en": "I'd like a cup of coffee",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "一",
+       "roman": "yì",
+       "gloss": "one"
+      },
+      {
+       "zh": "杯",
+       "roman": "bēi",
+       "gloss": "cup (measure word)"
+      },
+      {
+       "zh": "咖啡",
+       "roman": "kā-fēi",
+       "gloss": "coffee"
+      }
+     ],
+     "situation": "The waiter asks what you'd like. (coffee)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-yibei-x--kafei.mp3",
+       "audio/tw-yunjhe/wo-yao-yibei-x--kafei-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-yibei-x--kafei.mp3",
+       "audio/tw-hsiaochen/wo-yao-yibei-x--kafei-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--kafei.mp3",
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--kafei-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-yibei-x--kafei.mp3",
+       "audio/cn-yunyang/wo-yao-yibei-x--kafei-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--kafei.mp3",
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--kafei-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "shui",
+     "zh": "我要一杯水",
+     "roman": "wǒ yào yì bēi shuǐ",
+     "en": "I'd like a cup of water",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "一",
+       "roman": "yì",
+       "gloss": "one"
+      },
+      {
+       "zh": "杯",
+       "roman": "bēi",
+       "gloss": "cup (measure word)"
+      },
+      {
+       "zh": "水",
+       "roman": "shuǐ",
+       "gloss": "water"
+      }
+     ],
+     "situation": "The waiter asks what you'd like. (water)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-yibei-x--shui.mp3",
+       "audio/tw-yunjhe/wo-yao-yibei-x--shui-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-yibei-x--shui.mp3",
+       "audio/tw-hsiaochen/wo-yao-yibei-x--shui-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--shui.mp3",
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--shui-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-yibei-x--shui.mp3",
+       "audio/cn-yunyang/wo-yao-yibei-x--shui-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--shui.mp3",
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--shui-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "naicha",
+     "zh": "我要一杯奶茶",
+     "roman": "wǒ yào yì bēi nǎi-chá",
+     "en": "I'd like a cup of milk tea",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "一",
+       "roman": "yì",
+       "gloss": "one"
+      },
+      {
+       "zh": "杯",
+       "roman": "bēi",
+       "gloss": "cup (measure word)"
+      },
+      {
+       "zh": "奶茶",
+       "roman": "nǎi-chá",
+       "gloss": "milk tea"
+      }
+     ],
+     "situation": "The waiter asks what you'd like. (milk tea)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-yibei-x--naicha.mp3",
+       "audio/tw-yunjhe/wo-yao-yibei-x--naicha-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-yibei-x--naicha.mp3",
+       "audio/tw-hsiaochen/wo-yao-yibei-x--naicha-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--naicha.mp3",
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--naicha-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-yibei-x--naicha.mp3",
+       "audio/cn-yunyang/wo-yao-yibei-x--naicha-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--naicha.mp3",
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--naicha-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "putaojiu",
+     "zh": "我要一杯葡萄酒",
+     "roman": "wǒ yào yì bēi pú-táo-jiǔ",
+     "en": "I'd like a cup of wine",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "一",
+       "roman": "yì",
+       "gloss": "one"
+      },
+      {
+       "zh": "杯",
+       "roman": "bēi",
+       "gloss": "cup (measure word)"
+      },
+      {
+       "zh": "葡萄酒",
+       "roman": "pú-táo-jiǔ",
+       "gloss": "wine"
+      }
+     ],
+     "situation": "The waiter asks what you'd like. (wine)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-yibei-x--putaojiu.mp3",
+       "audio/tw-yunjhe/wo-yao-yibei-x--putaojiu-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-yibei-x--putaojiu.mp3",
+       "audio/tw-hsiaochen/wo-yao-yibei-x--putaojiu-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--putaojiu.mp3",
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--putaojiu-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-yibei-x--putaojiu.mp3",
+       "audio/cn-yunyang/wo-yao-yibei-x--putaojiu-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--putaojiu.mp3",
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--putaojiu-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "pijiu",
+     "zh": "我要一杯啤酒",
+     "roman": "wǒ yào yì bēi pí-jiǔ",
+     "en": "I'd like a cup of beer",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "一",
+       "roman": "yì",
+       "gloss": "one"
+      },
+      {
+       "zh": "杯",
+       "roman": "bēi",
+       "gloss": "cup (measure word)"
+      },
+      {
+       "zh": "啤酒",
+       "roman": "pí-jiǔ",
+       "gloss": "beer"
+      }
+     ],
+     "situation": "The waiter asks what you'd like. (beer)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-yibei-x--pijiu.mp3",
+       "audio/tw-yunjhe/wo-yao-yibei-x--pijiu-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-yibei-x--pijiu.mp3",
+       "audio/tw-hsiaochen/wo-yao-yibei-x--pijiu-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--pijiu.mp3",
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--pijiu-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-yibei-x--pijiu.mp3",
+       "audio/cn-yunyang/wo-yao-yibei-x--pijiu-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--pijiu.mp3",
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--pijiu-slow.mp3"
+      ]
+     }
+    }
+   ],
+   "situation": "The waiter asks what you'd like. (___)",
+   "note": "杯 bēi is the measure word for cups: 一杯咖啡",
+   "topic": "Food & drink",
+   "mission": "Order a drink with 一杯"
+  },
+  {
+   "id": "wo-quguo-x",
+   "kind": "pattern",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "我去過___",
+   "roman": "wǒ qù-guò ___",
+   "en": "I've been to ___",
+   "fills": [
+    {
+     "fillId": "helan",
+     "zh": "我去過荷蘭",
+     "roman": "wǒ qù-guò Hé-lán",
+     "en": "I've been to the Netherlands",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "去過",
+       "roman": "qù-guò",
+       "gloss": "to have been (somewhere)"
+      },
+      {
+       "zh": "荷蘭",
+       "roman": "Hé-lán",
+       "gloss": "the Netherlands"
+      }
+     ],
+     "situation": "Someone asks if you've been to the Netherlands.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-quguo-x--helan.mp3",
+       "audio/tw-yunjhe/wo-quguo-x--helan-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-quguo-x--helan.mp3",
+       "audio/tw-hsiaochen/wo-quguo-x--helan-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-quguo-x--helan.mp3",
+       "audio/tw-hsiaoyu/wo-quguo-x--helan-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-quguo-x--helan.mp3",
+       "audio/cn-yunyang/wo-quguo-x--helan-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-quguo-x--helan.mp3",
+       "audio/cn-xiaoxiao/wo-quguo-x--helan-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "riben",
+     "zh": "我去過日本",
+     "roman": "wǒ qù-guò Rì-běn",
+     "en": "I've been to Japan",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "去過",
+       "roman": "qù-guò",
+       "gloss": "to have been (somewhere)"
+      },
+      {
+       "zh": "日本",
+       "roman": "Rì-běn",
+       "gloss": "Japan"
+      }
+     ],
+     "situation": "Someone asks if you've been to Japan.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-quguo-x--riben.mp3",
+       "audio/tw-yunjhe/wo-quguo-x--riben-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-quguo-x--riben.mp3",
+       "audio/tw-hsiaochen/wo-quguo-x--riben-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-quguo-x--riben.mp3",
+       "audio/tw-hsiaoyu/wo-quguo-x--riben-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-quguo-x--riben.mp3",
+       "audio/cn-yunyang/wo-quguo-x--riben-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-quguo-x--riben.mp3",
+       "audio/cn-xiaoxiao/wo-quguo-x--riben-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "taiwan",
+     "zh": "我去過台灣",
+     "roman": "wǒ qù-guò Tái-wān",
+     "en": "I've been to Taiwan",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "去過",
+       "roman": "qù-guò",
+       "gloss": "to have been (somewhere)"
+      },
+      {
+       "zh": "台灣",
+       "roman": "Tái-wān",
+       "gloss": "Taiwan"
+      }
+     ],
+     "situation": "Someone asks if you've been to Taiwan.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-quguo-x--taiwan.mp3",
+       "audio/tw-yunjhe/wo-quguo-x--taiwan-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-quguo-x--taiwan.mp3",
+       "audio/tw-hsiaochen/wo-quguo-x--taiwan-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-quguo-x--taiwan.mp3",
+       "audio/tw-hsiaoyu/wo-quguo-x--taiwan-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-quguo-x--taiwan.mp3",
+       "audio/cn-yunyang/wo-quguo-x--taiwan-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-quguo-x--taiwan.mp3",
+       "audio/cn-xiaoxiao/wo-quguo-x--taiwan-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yingguo",
+     "zh": "我去過英國",
+     "roman": "wǒ qù-guò Yīng-guó",
+     "en": "I've been to the UK",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "去過",
+       "roman": "qù-guò",
+       "gloss": "to have been (somewhere)"
+      },
+      {
+       "zh": "英國",
+       "roman": "Yīng-guó",
+       "gloss": "the UK"
+      }
+     ],
+     "situation": "Someone asks if you've been to the UK.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-quguo-x--yingguo.mp3",
+       "audio/tw-yunjhe/wo-quguo-x--yingguo-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-quguo-x--yingguo.mp3",
+       "audio/tw-hsiaochen/wo-quguo-x--yingguo-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-quguo-x--yingguo.mp3",
+       "audio/tw-hsiaoyu/wo-quguo-x--yingguo-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-quguo-x--yingguo.mp3",
+       "audio/cn-yunyang/wo-quguo-x--yingguo-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-quguo-x--yingguo.mp3",
+       "audio/cn-xiaoxiao/wo-quguo-x--yingguo-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "meiguo",
+     "zh": "我去過美國",
+     "roman": "wǒ qù-guò Měi-guó",
+     "en": "I've been to the USA",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "去過",
+       "roman": "qù-guò",
+       "gloss": "to have been (somewhere)"
+      },
+      {
+       "zh": "美國",
+       "roman": "Měi-guó",
+       "gloss": "the USA"
+      }
+     ],
+     "situation": "Someone asks if you've been to the USA.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-quguo-x--meiguo.mp3",
+       "audio/tw-yunjhe/wo-quguo-x--meiguo-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-quguo-x--meiguo.mp3",
+       "audio/tw-hsiaochen/wo-quguo-x--meiguo-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-quguo-x--meiguo.mp3",
+       "audio/tw-hsiaoyu/wo-quguo-x--meiguo-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-quguo-x--meiguo.mp3",
+       "audio/cn-yunyang/wo-quguo-x--meiguo-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-quguo-x--meiguo.mp3",
+       "audio/cn-xiaoxiao/wo-quguo-x--meiguo-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "faguo",
+     "zh": "我去過法國",
+     "roman": "wǒ qù-guò Fà-guó",
+     "en": "I've been to France",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "去過",
+       "roman": "qù-guò",
+       "gloss": "to have been (somewhere)"
+      },
+      {
+       "zh": "法國",
+       "roman": "Fà-guó",
+       "gloss": "France"
+      }
+     ],
+     "situation": "Someone asks if you've been to France.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-quguo-x--faguo.mp3",
+       "audio/tw-yunjhe/wo-quguo-x--faguo-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-quguo-x--faguo.mp3",
+       "audio/tw-hsiaochen/wo-quguo-x--faguo-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-quguo-x--faguo.mp3",
+       "audio/tw-hsiaoyu/wo-quguo-x--faguo-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-quguo-x--faguo.mp3",
+       "audio/cn-yunyang/wo-quguo-x--faguo-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-quguo-x--faguo.mp3",
+       "audio/cn-xiaoxiao/wo-quguo-x--faguo-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "deguo",
+     "zh": "我去過德國",
+     "roman": "wǒ qù-guò Dé-guó",
+     "en": "I've been to Germany",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "去過",
+       "roman": "qù-guò",
+       "gloss": "to have been (somewhere)"
+      },
+      {
+       "zh": "德國",
+       "roman": "Dé-guó",
+       "gloss": "Germany"
+      }
+     ],
+     "situation": "Someone asks if you've been to Germany.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-quguo-x--deguo.mp3",
+       "audio/tw-yunjhe/wo-quguo-x--deguo-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-quguo-x--deguo.mp3",
+       "audio/tw-hsiaochen/wo-quguo-x--deguo-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-quguo-x--deguo.mp3",
+       "audio/tw-hsiaoyu/wo-quguo-x--deguo-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-quguo-x--deguo.mp3",
+       "audio/cn-yunyang/wo-quguo-x--deguo-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-quguo-x--deguo.mp3",
+       "audio/cn-xiaoxiao/wo-quguo-x--deguo-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "zhongguo",
+     "zh": "我去過中國",
+     "roman": "wǒ qù-guò Zhōng-guó",
+     "en": "I've been to China",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "去過",
+       "roman": "qù-guò",
+       "gloss": "to have been (somewhere)"
+      },
+      {
+       "zh": "中國",
+       "roman": "Zhōng-guó",
+       "gloss": "China"
+      }
+     ],
+     "situation": "Someone asks if you've been to China.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-quguo-x--zhongguo.mp3",
+       "audio/tw-yunjhe/wo-quguo-x--zhongguo-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-quguo-x--zhongguo.mp3",
+       "audio/tw-hsiaochen/wo-quguo-x--zhongguo-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-quguo-x--zhongguo.mp3",
+       "audio/tw-hsiaoyu/wo-quguo-x--zhongguo-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-quguo-x--zhongguo.mp3",
+       "audio/cn-yunyang/wo-quguo-x--zhongguo-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-quguo-x--zhongguo.mp3",
+       "audio/cn-xiaoxiao/wo-quguo-x--zhongguo-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "nanfei",
+     "zh": "我去過南非",
+     "roman": "wǒ qù-guò Nán-fēi",
+     "en": "I've been to South Africa",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "去過",
+       "roman": "qù-guò",
+       "gloss": "to have been (somewhere)"
+      },
+      {
+       "zh": "南非",
+       "roman": "Nán-fēi",
+       "gloss": "South Africa"
+      }
+     ],
+     "situation": "Someone asks if you've been to South Africa.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-quguo-x--nanfei.mp3",
+       "audio/tw-yunjhe/wo-quguo-x--nanfei-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-quguo-x--nanfei.mp3",
+       "audio/tw-hsiaochen/wo-quguo-x--nanfei-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-quguo-x--nanfei.mp3",
+       "audio/tw-hsiaoyu/wo-quguo-x--nanfei-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-quguo-x--nanfei.mp3",
+       "audio/cn-yunyang/wo-quguo-x--nanfei-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-quguo-x--nanfei.mp3",
+       "audio/cn-xiaoxiao/wo-quguo-x--nanfei-slow.mp3"
+      ]
+     }
+    }
+   ],
+   "situation": "Someone asks if you've been to ___.",
+   "note": "過 guò after a verb: you have done it (at some point)",
+   "topic": "Small talk"
+  },
+  {
+   "id": "x-jian",
+   "kind": "pattern",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "___見",
+   "roman": "___ jiàn",
+   "en": "See you ___",
+   "fills": [
+    {
+     "fillId": "mingtian",
+     "zh": "明天見",
+     "roman": "míng-tiān jiàn",
+     "en": "See you tomorrow",
+     "words": [
+      {
+       "zh": "明天",
+       "roman": "míng-tiān",
+       "gloss": "tomorrow"
+      },
+      {
+       "zh": "見",
+       "roman": "jiàn",
+       "gloss": "to see, meet (…見 = see you …)"
+      }
+     ],
+     "situation": "You leave and will see them tomorrow.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/x-jian--mingtian.mp3",
+       "audio/tw-yunjhe/x-jian--mingtian-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/x-jian--mingtian.mp3",
+       "audio/tw-hsiaochen/x-jian--mingtian-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/x-jian--mingtian.mp3",
+       "audio/tw-hsiaoyu/x-jian--mingtian-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/x-jian--mingtian.mp3",
+       "audio/cn-yunyang/x-jian--mingtian-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/x-jian--mingtian.mp3",
+       "audio/cn-xiaoxiao/x-jian--mingtian-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "houtian",
+     "zh": "後天見",
+     "roman": "hòu-tiān jiàn",
+     "en": "See you the day after tomorrow",
+     "words": [
+      {
+       "zh": "後天",
+       "roman": "hòu-tiān",
+       "gloss": "the day after tomorrow"
+      },
+      {
+       "zh": "見",
+       "roman": "jiàn",
+       "gloss": "to see, meet (…見 = see you …)"
+      }
+     ],
+     "situation": "You leave and will see them the day after tomorrow.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/x-jian--houtian.mp3",
+       "audio/tw-yunjhe/x-jian--houtian-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/x-jian--houtian.mp3",
+       "audio/tw-hsiaochen/x-jian--houtian-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/x-jian--houtian.mp3",
+       "audio/tw-hsiaoyu/x-jian--houtian-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/x-jian--houtian.mp3",
+       "audio/cn-yunyang/x-jian--houtian-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/x-jian--houtian.mp3",
+       "audio/cn-xiaoxiao/x-jian--houtian-slow.mp3"
+      ]
+     }
+    }
+   ],
+   "situation": "You leave and will see them ___.",
+   "topic": "Small talk"
+  },
+  {
+   "id": "jieshao",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "介紹",
+   "roman": "jiè-shào",
+   "en": "to introduce",
+   "words": [
+    {
+     "zh": "介紹",
+     "roman": "jiè-shào",
+     "gloss": "to introduce"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/jieshao.mp3",
+     "audio/tw-yunjhe/jieshao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/jieshao.mp3",
+     "audio/tw-hsiaochen/jieshao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/jieshao.mp3",
+     "audio/tw-hsiaoyu/jieshao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/jieshao.mp3",
+     "audio/cn-yunyang/jieshao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/jieshao.mp3",
+     "audio/cn-xiaoxiao/jieshao-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "nimen",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "你們",
+   "roman": "nǐ-men",
+   "en": "you (plural)",
+   "words": [
+    {
+     "zh": "你們",
+     "roman": "nǐ-men",
+     "gloss": "you (plural)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/nimen.mp3",
+     "audio/tw-yunjhe/nimen-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/nimen.mp3",
+     "audio/tw-hsiaochen/nimen-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/nimen.mp3",
+     "audio/tw-hsiaoyu/nimen-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/nimen.mp3",
+     "audio/cn-yunyang/nimen-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/nimen.mp3",
+     "audio/cn-xiaoxiao/nimen-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "keyi",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "可以",
+   "roman": "kě-yǐ",
+   "en": "can, may (allowed)",
+   "words": [
+    {
+     "zh": "可以",
+     "roman": "kě-yǐ",
+     "gloss": "can, may (allowed)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/keyi.mp3",
+     "audio/tw-yunjhe/keyi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/keyi.mp3",
+     "audio/tw-hsiaochen/keyi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/keyi.mp3",
+     "audio/tw-hsiaoyu/keyi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/keyi.mp3",
+     "audio/cn-yunyang/keyi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/keyi.mp3",
+     "audio/cn-xiaoxiao/keyi-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "kaiche",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "開車",
+   "roman": "kāi-chē",
+   "en": "to drive (a car)",
+   "words": [
+    {
+     "zh": "開車",
+     "roman": "kāi-chē",
+     "gloss": "to drive (a car)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/kaiche.mp3",
+     "audio/tw-yunjhe/kaiche-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/kaiche.mp3",
+     "audio/tw-hsiaochen/kaiche-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/kaiche.mp3",
+     "audio/tw-hsiaoyu/kaiche-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/kaiche.mp3",
+     "audio/cn-yunyang/kaiche-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/kaiche.mp3",
+     "audio/cn-xiaoxiao/kaiche-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "zuofan",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "做飯",
+   "roman": "zuò-fàn",
+   "en": "to make food, cook",
+   "words": [
+    {
+     "zh": "做飯",
+     "roman": "zuò-fàn",
+     "gloss": "to make food, cook"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zuofan.mp3",
+     "audio/tw-yunjhe/zuofan-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zuofan.mp3",
+     "audio/tw-hsiaochen/zuofan-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zuofan.mp3",
+     "audio/tw-hsiaoyu/zuofan-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zuofan.mp3",
+     "audio/cn-yunyang/zuofan-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zuofan.mp3",
+     "audio/cn-xiaoxiao/zuofan-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "zhufan",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "煮飯",
+   "roman": "zhǔ-fàn",
+   "en": "to cook (rice / a meal)",
+   "words": [
+    {
+     "zh": "煮飯",
+     "roman": "zhǔ-fàn",
+     "gloss": "to cook (rice / a meal)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhufan.mp3",
+     "audio/tw-yunjhe/zhufan-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhufan.mp3",
+     "audio/tw-hsiaochen/zhufan-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhufan.mp3",
+     "audio/tw-hsiaoyu/zhufan-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhufan.mp3",
+     "audio/cn-yunyang/zhufan-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhufan.mp3",
+     "audio/cn-xiaoxiao/zhufan-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "xin",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "心",
+   "roman": "xīn",
+   "en": "heart",
+   "words": [
+    {
+     "zh": "心",
+     "roman": "xīn",
+     "gloss": "heart"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/xin.mp3",
+     "audio/tw-yunjhe/xin-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/xin.mp3",
+     "audio/tw-hsiaochen/xin-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/xin.mp3",
+     "audio/tw-hsiaoyu/xin-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/xin.mp3",
+     "audio/cn-yunyang/xin-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/xin.mp3",
+     "audio/cn-xiaoxiao/xin-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "zhe",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "這",
+   "roman": "zhè",
+   "en": "this",
+   "words": [
+    {
+     "zh": "這",
+     "roman": "zhè",
+     "gloss": "this"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhe.mp3",
+     "audio/tw-yunjhe/zhe-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhe.mp3",
+     "audio/tw-hsiaochen/zhe-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhe.mp3",
+     "audio/tw-hsiaoyu/zhe-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhe.mp3",
+     "audio/cn-yunyang/zhe-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhe.mp3",
+     "audio/cn-xiaoxiao/zhe-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "na-that",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "那",
+   "roman": "nà",
+   "en": "that",
+   "words": [
+    {
+     "zh": "那",
+     "roman": "nà",
+     "gloss": "that"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/na-that.mp3",
+     "audio/tw-yunjhe/na-that-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/na-that.mp3",
+     "audio/tw-hsiaochen/na-that-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/na-that.mp3",
+     "audio/tw-hsiaoyu/na-that-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/na-that.mp3",
+     "audio/cn-yunyang/na-that-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/na-that.mp3",
+     "audio/cn-xiaoxiao/na-that-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "qita",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "其他",
+   "roman": "qí-tā",
+   "en": "other",
+   "words": [
+    {
+     "zh": "其他",
+     "roman": "qí-tā",
+     "gloss": "other"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/qita.mp3",
+     "audio/tw-yunjhe/qita-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/qita.mp3",
+     "audio/tw-hsiaochen/qita-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/qita.mp3",
+     "audio/tw-hsiaoyu/qita-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/qita.mp3",
+     "audio/cn-yunyang/qita-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/qita.mp3",
+     "audio/cn-xiaoxiao/qita-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "shijian",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "時間",
+   "roman": "shí-jiān",
+   "en": "time (in general, a slot)",
+   "words": [
+    {
+     "zh": "時間",
+     "roman": "shí-jiān",
+     "gloss": "time (in general, a slot)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/shijian.mp3",
+     "audio/tw-yunjhe/shijian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/shijian.mp3",
+     "audio/tw-hsiaochen/shijian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/shijian.mp3",
+     "audio/tw-hsiaoyu/shijian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/shijian.mp3",
+     "audio/cn-yunyang/shijian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/shijian.mp3",
+     "audio/cn-xiaoxiao/shijian-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "jian-space",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "間",
+   "roman": "jiān",
+   "en": "space; interval",
+   "words": [
+    {
+     "zh": "間",
+     "roman": "jiān",
+     "gloss": "space; interval"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/jian-space.mp3",
+     "audio/tw-yunjhe/jian-space-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/jian-space.mp3",
+     "audio/tw-hsiaochen/jian-space-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/jian-space.mp3",
+     "audio/tw-hsiaoyu/jian-space-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/jian-space.mp3",
+     "audio/cn-yunyang/jian-space-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/jian-space.mp3",
+     "audio/cn-xiaoxiao/jian-space-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "men-door",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "門",
+   "roman": "mén",
+   "en": "door",
+   "words": [
+    {
+     "zh": "門",
+     "roman": "mén",
+     "gloss": "door"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/men-door.mp3",
+     "audio/tw-yunjhe/men-door-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/men-door.mp3",
+     "audio/tw-hsiaochen/men-door-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/men-door.mp3",
+     "audio/tw-hsiaoyu/men-door-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/men-door.mp3",
+     "audio/cn-yunyang/men-door-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/men-door.mp3",
+     "audio/cn-xiaoxiao/men-door-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "shou",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "首",
+   "roman": "shǒu",
+   "en": "first (formal)",
+   "words": [
+    {
+     "zh": "首",
+     "roman": "shǒu",
+     "gloss": "first (formal)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/shou.mp3",
+     "audio/tw-yunjhe/shou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/shou.mp3",
+     "audio/tw-hsiaochen/shou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/shou.mp3",
+     "audio/tw-hsiaoyu/shou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/shou.mp3",
+     "audio/cn-yunyang/shou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/shou.mp3",
+     "audio/cn-xiaoxiao/shou-slow.mp3"
+    ]
+   },
+   "note": "首 in formal contexts (首次 = the first time); everyday: 第一"
+  },
+  {
+   "id": "diyi",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "第一",
+   "roman": "dì-yī",
+   "en": "first",
+   "words": [
+    {
+     "zh": "第一",
+     "roman": "dì-yī",
+     "gloss": "first"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/diyi.mp3",
+     "audio/tw-yunjhe/diyi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/diyi.mp3",
+     "audio/tw-hsiaochen/diyi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/diyi.mp3",
+     "audio/tw-hsiaoyu/diyi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/diyi.mp3",
+     "audio/cn-yunyang/diyi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/diyi.mp3",
+     "audio/cn-xiaoxiao/diyi-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "ci",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "次",
+   "roman": "cì",
+   "en": "time(s), occurrence(s)",
+   "words": [
+    {
+     "zh": "次",
+     "roman": "cì",
+     "gloss": "time(s), occurrence(s)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ci.mp3",
+     "audio/tw-yunjhe/ci-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ci.mp3",
+     "audio/tw-hsiaochen/ci-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ci.mp3",
+     "audio/tw-hsiaoyu/ci-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ci.mp3",
+     "audio/cn-yunyang/ci-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ci.mp3",
+     "audio/cn-xiaoxiao/ci-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "juede",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "覺得",
+   "roman": "jué-de",
+   "en": "to feel, think (an opinion)",
+   "words": [
+    {
+     "zh": "覺得",
+     "roman": "jué-de",
+     "gloss": "to feel, think (an opinion)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/juede.mp3",
+     "audio/tw-yunjhe/juede-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/juede.mp3",
+     "audio/tw-hsiaochen/juede-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/juede.mp3",
+     "audio/tw-hsiaoyu/juede-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/juede.mp3",
+     "audio/cn-yunyang/juede-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/juede.mp3",
+     "audio/cn-xiaoxiao/juede-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "zenme",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "怎麼",
+   "roman": "zěn-me",
+   "en": "how",
+   "words": [
+    {
+     "zh": "怎麼",
+     "roman": "zěn-me",
+     "gloss": "how"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zenme.mp3",
+     "audio/tw-yunjhe/zenme-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zenme.mp3",
+     "audio/tw-hsiaochen/zenme-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zenme.mp3",
+     "audio/tw-hsiaoyu/zenme-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zenme.mp3",
+     "audio/cn-yunyang/zenme-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zenme.mp3",
+     "audio/cn-xiaoxiao/zenme-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "qiantian",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "前天",
+   "roman": "qián-tiān",
+   "en": "the day before yesterday",
+   "words": [
+    {
+     "zh": "前天",
+     "roman": "qián-tiān",
+     "gloss": "the day before yesterday"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/qiantian.mp3",
+     "audio/tw-yunjhe/qiantian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/qiantian.mp3",
+     "audio/tw-hsiaochen/qiantian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/qiantian.mp3",
+     "audio/tw-hsiaoyu/qiantian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/qiantian.mp3",
+     "audio/cn-yunyang/qiantian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/qiantian.mp3",
+     "audio/cn-xiaoxiao/qiantian-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "zuotian",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "昨天",
+   "roman": "zuó-tiān",
+   "en": "yesterday",
+   "words": [
+    {
+     "zh": "昨天",
+     "roman": "zuó-tiān",
+     "gloss": "yesterday"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zuotian.mp3",
+     "audio/tw-yunjhe/zuotian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zuotian.mp3",
+     "audio/tw-hsiaochen/zuotian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zuotian.mp3",
+     "audio/tw-hsiaoyu/zuotian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zuotian.mp3",
+     "audio/cn-yunyang/zuotian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zuotian.mp3",
+     "audio/cn-xiaoxiao/zuotian-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "jintian",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "今天",
+   "roman": "jīn-tiān",
+   "en": "today",
+   "words": [
+    {
+     "zh": "今天",
+     "roman": "jīn-tiān",
+     "gloss": "today"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/jintian.mp3",
+     "audio/tw-yunjhe/jintian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/jintian.mp3",
+     "audio/tw-hsiaochen/jintian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/jintian.mp3",
+     "audio/tw-hsiaoyu/jintian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/jintian.mp3",
+     "audio/cn-yunyang/jintian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/jintian.mp3",
+     "audio/cn-xiaoxiao/jintian-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "mingtian",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "明天",
+   "roman": "míng-tiān",
+   "en": "tomorrow",
+   "words": [
+    {
+     "zh": "明天",
+     "roman": "míng-tiān",
+     "gloss": "tomorrow"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/mingtian.mp3",
+     "audio/tw-yunjhe/mingtian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/mingtian.mp3",
+     "audio/tw-hsiaochen/mingtian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/mingtian.mp3",
+     "audio/tw-hsiaoyu/mingtian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/mingtian.mp3",
+     "audio/cn-yunyang/mingtian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/mingtian.mp3",
+     "audio/cn-xiaoxiao/mingtian-slow.mp3"
+    ]
+   },
+   "cat": [
+    "day"
+   ]
+  },
+  {
+   "id": "houtian",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "後天",
+   "roman": "hòu-tiān",
+   "en": "the day after tomorrow",
+   "words": [
+    {
+     "zh": "後天",
+     "roman": "hòu-tiān",
+     "gloss": "the day after tomorrow"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/houtian.mp3",
+     "audio/tw-yunjhe/houtian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/houtian.mp3",
+     "audio/tw-hsiaochen/houtian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/houtian.mp3",
+     "audio/tw-hsiaoyu/houtian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/houtian.mp3",
+     "audio/cn-yunyang/houtian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/houtian.mp3",
+     "audio/cn-xiaoxiao/houtian-slow.mp3"
+    ]
+   },
+   "cat": [
+    "day"
+   ]
+  },
+  {
+   "id": "yiqian",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "以前",
+   "roman": "yǐ-qián",
+   "en": "before, in the past",
+   "words": [
+    {
+     "zh": "以前",
+     "roman": "yǐ-qián",
+     "gloss": "before, in the past"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/yiqian.mp3",
+     "audio/tw-yunjhe/yiqian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/yiqian.mp3",
+     "audio/tw-hsiaochen/yiqian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/yiqian.mp3",
+     "audio/tw-hsiaoyu/yiqian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/yiqian.mp3",
+     "audio/cn-yunyang/yiqian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/yiqian.mp3",
+     "audio/cn-xiaoxiao/yiqian-slow.mp3"
+    ]
+   },
+   "note": "以前 = in the past (general). 之前 = before (a specific moment)"
+  },
+  {
+   "id": "zhiqian",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "之前",
+   "roman": "zhī-qián",
+   "en": "before (a specific moment)",
+   "words": [
+    {
+     "zh": "之前",
+     "roman": "zhī-qián",
+     "gloss": "before (a specific moment)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhiqian.mp3",
+     "audio/tw-yunjhe/zhiqian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhiqian.mp3",
+     "audio/tw-hsiaochen/zhiqian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhiqian.mp3",
+     "audio/tw-hsiaoyu/zhiqian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhiqian.mp3",
+     "audio/cn-yunyang/zhiqian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhiqian.mp3",
+     "audio/cn-xiaoxiao/zhiqian-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "yihou",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "以後",
+   "roman": "yǐ-hòu",
+   "en": "after, in the future",
+   "words": [
+    {
+     "zh": "以後",
+     "roman": "yǐ-hòu",
+     "gloss": "after, in the future"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/yihou.mp3",
+     "audio/tw-yunjhe/yihou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/yihou.mp3",
+     "audio/tw-hsiaochen/yihou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/yihou.mp3",
+     "audio/tw-hsiaoyu/yihou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/yihou.mp3",
+     "audio/cn-yunyang/yihou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/yihou.mp3",
+     "audio/cn-xiaoxiao/yihou-slow.mp3"
+    ]
+   },
+   "note": "以後 = in the future (general). 之後 = after (a specific moment)"
+  },
+  {
+   "id": "zhihou",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "之後",
+   "roman": "zhī-hòu",
+   "en": "after (a specific moment)",
+   "words": [
+    {
+     "zh": "之後",
+     "roman": "zhī-hòu",
+     "gloss": "after (a specific moment)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhihou.mp3",
+     "audio/tw-yunjhe/zhihou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhihou.mp3",
+     "audio/tw-hsiaochen/zhihou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhihou.mp3",
+     "audio/tw-hsiaoyu/zhihou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhihou.mp3",
+     "audio/cn-yunyang/zhihou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhihou.mp3",
+     "audio/cn-xiaoxiao/zhihou-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "shihou",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "時候",
+   "roman": "shí-hòu",
+   "en": "time, moment",
+   "words": [
+    {
+     "zh": "時候",
+     "roman": "shí-hòu",
+     "gloss": "time, moment"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/shihou.mp3",
+     "audio/tw-yunjhe/shihou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/shihou.mp3",
+     "audio/tw-hsiaochen/shihou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/shihou.mp3",
+     "audio/tw-hsiaoyu/shihou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/shihou.mp3",
+     "audio/cn-yunyang/shihou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/shihou.mp3",
+     "audio/cn-xiaoxiao/shihou-slow.mp3"
+    ]
+   },
+   "note": "… 的時候 = when … / at the time of …"
+  },
+  {
+   "id": "wucan",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "午餐",
+   "roman": "wǔ-cān",
+   "en": "lunch",
+   "words": [
+    {
+     "zh": "午餐",
+     "roman": "wǔ-cān",
+     "gloss": "lunch"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wucan.mp3",
+     "audio/tw-yunjhe/wucan-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wucan.mp3",
+     "audio/tw-hsiaochen/wucan-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wucan.mp3",
+     "audio/tw-hsiaoyu/wucan-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wucan.mp3",
+     "audio/cn-yunyang/wucan-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wucan.mp3",
+     "audio/cn-xiaoxiao/wucan-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "pengyou",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "朋友",
+   "roman": "péng-yǒu",
+   "en": "friend",
+   "words": [
+    {
+     "zh": "朋友",
+     "roman": "péng-yǒu",
+     "gloss": "friend"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/pengyou.mp3",
+     "audio/tw-yunjhe/pengyou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/pengyou.mp3",
+     "audio/tw-hsiaochen/pengyou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/pengyou.mp3",
+     "audio/tw-hsiaoyu/pengyou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/pengyou.mp3",
+     "audio/cn-yunyang/pengyou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/pengyou.mp3",
+     "audio/cn-xiaoxiao/pengyou-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "nupengyou",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "女朋友",
+   "roman": "nǚ-péng-yǒu",
+   "en": "girlfriend",
+   "words": [
+    {
+     "zh": "女朋友",
+     "roman": "nǚ-péng-yǒu",
+     "gloss": "girlfriend"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/nupengyou.mp3",
+     "audio/tw-yunjhe/nupengyou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/nupengyou.mp3",
+     "audio/tw-hsiaochen/nupengyou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/nupengyou.mp3",
+     "audio/tw-hsiaoyu/nupengyou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/nupengyou.mp3",
+     "audio/cn-yunyang/nupengyou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/nupengyou.mp3",
+     "audio/cn-xiaoxiao/nupengyou-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "xingqi",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "星期",
+   "roman": "xīng-qí",
+   "en": "week",
+   "words": [
+    {
+     "zh": "星期",
+     "roman": "xīng-qí",
+     "gloss": "week"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/xingqi.mp3",
+     "audio/tw-yunjhe/xingqi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/xingqi.mp3",
+     "audio/tw-hsiaochen/xingqi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/xingqi.mp3",
+     "audio/tw-hsiaoyu/xingqi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/xingqi.mp3",
+     "audio/cn-yunyang/xingqi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/xingqi.mp3",
+     "audio/cn-xiaoxiao/xingqi-slow.mp3"
+    ]
+   },
+   "note": "Taiwan: xīngqí; mainland: xīngqī"
+  },
+  {
+   "id": "ge-mw",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "個",
+   "roman": "gè",
+   "en": "(measure word: people, most things)",
+   "words": [
+    {
+     "zh": "個",
+     "roman": "gè",
+     "gloss": "(measure word: people, most things)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ge-mw.mp3",
+     "audio/tw-yunjhe/ge-mw-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ge-mw.mp3",
+     "audio/tw-hsiaochen/ge-mw-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ge-mw.mp3",
+     "audio/tw-hsiaoyu/ge-mw-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ge-mw.mp3",
+     "audio/cn-yunyang/ge-mw-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ge-mw.mp3",
+     "audio/cn-xiaoxiao/ge-mw-slow.mp3"
+    ]
+   },
+   "note": "The most common measure word: 一個人, 這個"
+  },
+  {
+   "id": "bei",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "杯",
+   "roman": "bēi",
+   "en": "cup (measure word)",
+   "words": [
+    {
+     "zh": "杯",
+     "roman": "bēi",
+     "gloss": "cup (measure word)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/bei.mp3",
+     "audio/tw-yunjhe/bei-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/bei.mp3",
+     "audio/tw-hsiaochen/bei-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/bei.mp3",
+     "audio/tw-hsiaoyu/bei-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/bei.mp3",
+     "audio/cn-yunyang/bei-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/bei.mp3",
+     "audio/cn-xiaoxiao/bei-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "quguo",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "去過",
+   "roman": "qù-guò",
+   "en": "to have been (somewhere)",
+   "words": [
+    {
+     "zh": "去過",
+     "roman": "qù-guò",
+     "gloss": "to have been (somewhere)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/quguo.mp3",
+     "audio/tw-yunjhe/quguo-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/quguo.mp3",
+     "audio/tw-hsiaochen/quguo-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/quguo.mp3",
+     "audio/tw-hsiaoyu/quguo-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/quguo.mp3",
+     "audio/cn-yunyang/quguo-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/quguo.mp3",
+     "audio/cn-xiaoxiao/quguo-slow.mp3"
+    ]
+   }
+  },
+  {
    "id": "ni-jiao-shenme-mingzi",
    "kind": "phrase",
    "deck": "mandarin",
@@ -5553,7 +8627,7 @@
     {
      "zh": "可以",
      "roman": "kě-yǐ",
-     "gloss": "can, may"
+     "gloss": "can, may (allowed)"
     },
     {
      "zh": "教",
@@ -11705,6 +14779,65 @@
     {
      "who": "you",
      "ref": "yue-dozi"
+    }
+   ]
+  },
+  {
+   "id": "ending-class",
+   "title": "Ending your class",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "you",
+     "ref": "you-mei-you-wenti"
+    },
+    {
+     "who": "them",
+     "ref": "ni-juede-zenmeyang"
+    },
+    {
+     "who": "you",
+     "ref": "you-mei-you-qita-wenti"
+    },
+    {
+     "who": "them",
+     "ref": "meiyou"
+    },
+    {
+     "who": "you",
+     "ref": "xiake-le"
+    },
+    {
+     "who": "you",
+     "ref": "xia-xingqi-jian"
+    }
+   ]
+  },
+  {
+   "id": "how-are-you",
+   "title": "How are you?",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "zuijin-hao-ma"
+    },
+    {
+     "who": "you",
+     "ref": "wo-hen-hao"
+    },
+    {
+     "who": "you",
+     "ref": "ni-ne"
+    },
+    {
+     "who": "them",
+     "ref": "wo-ye-hen-hao"
+    },
+    {
+     "who": "you",
+     "ref": "x-jian",
+     "fill": "mingtian"
     }
    ]
   }

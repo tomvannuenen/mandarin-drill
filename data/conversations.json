@@ -370,6 +370,65 @@
      "ref": "yue-dozi"
     }
    ]
+  },
+  {
+   "id": "ending-class",
+   "title": "Ending your class",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "you",
+     "ref": "you-mei-you-wenti"
+    },
+    {
+     "who": "them",
+     "ref": "ni-juede-zenmeyang"
+    },
+    {
+     "who": "you",
+     "ref": "you-mei-you-qita-wenti"
+    },
+    {
+     "who": "them",
+     "ref": "meiyou"
+    },
+    {
+     "who": "you",
+     "ref": "xiake-le"
+    },
+    {
+     "who": "you",
+     "ref": "xia-xingqi-jian"
+    }
+   ]
+  },
+  {
+   "id": "how-are-you",
+   "title": "How are you?",
+   "deck": "mandarin",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "zuijin-hao-ma"
+    },
+    {
+     "who": "you",
+     "ref": "wo-hen-hao"
+    },
+    {
+     "who": "you",
+     "ref": "ni-ne"
+    },
+    {
+     "who": "them",
+     "ref": "wo-ye-hen-hao"
+    },
+    {
+     "who": "you",
+     "ref": "x-jian",
+     "fill": "mingtian"
+    }
+   ]
   }
  ]
 }

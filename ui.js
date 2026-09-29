@@ -5,10 +5,11 @@ export const LANG_ATTR = { mandarin: 'zh-Hant-TW', cantonese: 'zh-Hant-HK' };
 export const $ = (id) => document.getElementById(id);
 
 const audio = new Audio();
-export function play(src) {
+export function play(src, rate = 1) {
   if (!src) return;
   audio.src = src;
   audio.currentTime = 0;
+  audio.playbackRate = rate;
   audio.play().catch(() => {});
 }
 

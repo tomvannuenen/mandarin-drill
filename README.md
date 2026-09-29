@@ -92,6 +92,20 @@ Cantonese phrases go in `data/cantonese.json` in the same format, with `jyutping
 - **Coach recordings**: put `audio/coach/<id>.mp3` (or `<pattern-id>--<word-id>.mp3` for a pattern sentence)
   in place and rebuild. It appears as an extra 🎓 Coach voice.
 
+## Lesson recordings → coach audio
+
+Recordings live in a private folder next to this repo (`../chinese-italki/`), never in it. For a lesson that only
+has the coach's voice:
+
+```bash
+uv run tools/lesson.py transcribe "../chinese-italki/<lesson>.mp4"   # Whisper (large-v3-turbo) on this Mac
+uv run tools/lesson.py clips "../chinese-italki/<lesson>.mp4"        # cut + self-verify clips for your cards
+uv run tools/lesson.py publish "../chinese-italki/<lesson>.mp4"      # upload to the PRIVATE sync repo only
+```
+
+Each clip is kept only if Whisper, listening to the clip alone, hears the phrase in it. The app downloads new clips
+when it syncs and adds them as a **Coach** voice on those cards (slow playback slows the clip down).
+
 ## Development
 
 ```bash

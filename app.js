@@ -5,6 +5,7 @@ import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
 import { buildQueue, shouldRequeue } from './lib/session.js';
 import { load, save, exportJSON, importJSON, applyReview, localDate } from './lib/store.js';
 import { initBook, renderBook } from './book.js';
+import { syncCoach, coachUrls } from './coach.js';
 import { initTones, startTones, toneWords, toneBars } from './tonecheck.js';
 import { initConvo, startConvo, convoStatus } from './convo.js';
 import { weekSummary, checkinText, coachBrief } from './lib/checkin.js';
@@ -89,8 +90,22 @@ async function syncNow() {
   if (!$('view-settings').hidden) renderSync();
 }
 
+// Add the coach's recorded clips as an extra voice on the cards she said.
+async function attachCoach() {
+  const urls = await coachUrls().catch(() => ({}));
+  for (const item of allItems) {
+    const entries = item.kind === 'pattern' ? item.fills.map((f) => [`${item.id}--${f.fillId}`, f]) : [[item.id, item]];
+    for (const [key, entry] of entries) if (urls[key] && entry.audio) entry.audio.coach = [urls[key], urls[key]];
+  }
+  for (const [k, a] of Object.entries(wordAudio)) {
+    const item = allItems.find((i) => `${i.deck}/${i.words?.[0]?.zh}` === k && i.words?.length === 1);
+    if (item?.audio) wordAudio[k] = item.audio;
+  }
+}
+
 async function syncOnOpen() {
   if (!syncCfg || !navigator.onLine) return;
+  syncCoach(syncCfg).then((n) => (n ? attachCoach() : null)).catch(() => {});
   try {
     if (!Object.keys(progress.cards).length) {
       const remote = await pullProgress(syncCfg);
@@ -388,6 +403,7 @@ function playCurrent({ slow = false, next = false } = {}) {
   c.played = true;
   showAccent();
   if (!c.audio) return speakText(c.zh, c.deck, slow ? 0.55 : 0.85);
+  if (c.voice === 'coach') return play(c.audio.coach[0], slow ? 0.7 : 1); // one recording, slowed down
   play(c.audio[c.voice][slow ? 1 : 0]);
 }
 
@@ -985,6 +1001,7 @@ async function init() {
     progress.migrations = [...(progress.migrations || []), 'reading-flags-v1'];
     persist();
   }
+  await attachCoach();
   document.addEventListener('visibilitychange', () => { if (document.hidden) syncNow(); });
   syncOnOpen();
   show('home');

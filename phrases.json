@@ -1,5 +1,5 @@
 {
- "version": "2f51a0f61cdc",
+ "version": "23f285fd4b82",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -51,7 +51,11 @@
     "hk-wanlung",
     "hk-hiumaan",
     "hk-hiugaai"
-   ]
+   ],
+   "newPerDay": 3,
+   "maxShaky": 5,
+   "maxDrills": 3,
+   "characters": false
   }
  },
  "items": [
@@ -11216,7 +11220,7 @@
    "id": "yue-nei-hou",
    "kind": "phrase",
    "deck": "cantonese",
-   "set": "Basics",
+   "set": "Start here",
    "zh": "你好",
    "roman": "nei5 hou2",
    "en": "Hello",
@@ -11251,43 +11255,10 @@
    "mission": "Greet the security guard or a shopkeeper with 你好"
   },
   {
-   "id": "yue-zousan",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "Basics",
-   "zh": "早晨",
-   "roman": "zou2-san4",
-   "en": "Good morning",
-   "words": [
-    {
-     "zh": "早晨",
-     "roman": "zou2-san4",
-     "gloss": "Good morning"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-zousan.mp3",
-     "audio/hk-wanlung/yue-zousan-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-zousan.mp3",
-     "audio/hk-hiumaan/yue-zousan-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-zousan.mp3",
-     "audio/hk-hiugaai/yue-zousan-slow.mp3"
-    ]
-   },
-   "situation": "It's 8 am and you see a colleague.",
-   "topic": "Small talk",
-   "mission": "Say 早晨 to someone before noon"
-  },
-  {
    "id": "yue-m-goi",
    "kind": "phrase",
    "deck": "cantonese",
-   "set": "Basics",
+   "set": "Start here",
    "zh": "唔該",
    "roman": "m4-goi1",
    "en": "Thank you (for a service); excuse me",
@@ -11321,7 +11292,7 @@
    "id": "yue-dozi",
    "kind": "phrase",
    "deck": "cantonese",
-   "set": "Basics",
+   "set": "Start here",
    "zh": "多謝",
    "roman": "do1-ze6",
    "en": "Thank you (for a gift)",
@@ -11351,127 +11322,10 @@
    "mission": "Thank someone for a gift or compliment with 多謝"
   },
   {
-   "id": "yue-m-sai-haakhei",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "Basics",
-   "zh": "唔使客氣",
-   "roman": "m4 sai2 haak3-hei3",
-   "en": "You're welcome",
-   "words": [
-    {
-     "zh": "唔",
-     "roman": "m4",
-     "gloss": "not"
-    },
-    {
-     "zh": "使",
-     "roman": "sai2",
-     "gloss": "to need to (唔使 = no need)"
-    },
-    {
-     "zh": "客氣",
-     "roman": "haak3-hei3",
-     "gloss": "polite, formal"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-m-sai-haakhei.mp3",
-     "audio/hk-wanlung/yue-m-sai-haakhei-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-m-sai-haakhei.mp3",
-     "audio/hk-hiumaan/yue-m-sai-haakhei-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-m-sai-haakhei.mp3",
-     "audio/hk-hiugaai/yue-m-sai-haakhei-slow.mp3"
-    ]
-   },
-   "situation": "Someone thanks you for helping.",
-   "topic": "Small talk"
-  },
-  {
-   "id": "yue-deoimzyu",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "Basics",
-   "zh": "對唔住",
-   "roman": "deoi3-m4-zyu6",
-   "en": "Sorry",
-   "words": [
-    {
-     "zh": "對唔住",
-     "roman": "deoi3-m4-zyu6",
-     "gloss": "Sorry"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-deoimzyu.mp3",
-     "audio/hk-wanlung/yue-deoimzyu-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-deoimzyu.mp3",
-     "audio/hk-hiumaan/yue-deoimzyu-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-deoimzyu.mp3",
-     "audio/hk-hiugaai/yue-deoimzyu-slow.mp3"
-    ]
-   },
-   "situation": "You bump into someone.",
-   "topic": "Getting by"
-  },
-  {
-   "id": "yue-m-hou-jisi",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "Basics",
-   "zh": "唔好意思",
-   "roman": "m4 hou2 ji3-si1",
-   "en": "Excuse me; sorry (small things)",
-   "words": [
-    {
-     "zh": "唔",
-     "roman": "m4",
-     "gloss": "not"
-    },
-    {
-     "zh": "好",
-     "roman": "hou2",
-     "gloss": "good; very; OK"
-    },
-    {
-     "zh": "意思",
-     "roman": "ji3-si1",
-     "gloss": "meaning (唔好意思 = excuse me)"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-m-hou-jisi.mp3",
-     "audio/hk-wanlung/yue-m-hou-jisi-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-m-hou-jisi.mp3",
-     "audio/hk-hiumaan/yue-m-hou-jisi-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-m-hou-jisi.mp3",
-     "audio/hk-hiugaai/yue-m-hou-jisi-slow.mp3"
-    ]
-   },
-   "situation": "You need to squeeze past someone on the MTR.",
-   "topic": "Getting by",
-   "mission": "Say 唔好意思 to squeeze past someone on the MTR"
-  },
-  {
    "id": "yue-hai",
    "kind": "word",
    "deck": "cantonese",
-   "set": "Basics",
+   "set": "Start here",
    "zh": "係",
    "roman": "hai6",
    "en": "yes; to be",
@@ -11502,7 +11356,7 @@
    "id": "yue-m-hai",
    "kind": "phrase",
    "deck": "cantonese",
-   "set": "Basics",
+   "set": "Start here",
    "zh": "唔係",
    "roman": "m4 hai6",
    "en": "no; isn't",
@@ -11539,7 +11393,7 @@
    "id": "yue-hou",
    "kind": "word",
    "deck": "cantonese",
-   "set": "Basics",
+   "set": "Start here",
    "zh": "好",
    "roman": "hou2",
    "en": "good; very; OK",
@@ -11564,6 +11418,132 @@
      "audio/hk-hiugaai/yue-hou-slow.mp3"
     ]
    }
+  },
+  {
+   "id": "yue-baaibaai",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "Start here",
+   "zh": "拜拜",
+   "roman": "baai1-baai3",
+   "en": "Bye",
+   "words": [
+    {
+     "zh": "拜拜",
+     "roman": "baai1-baai3",
+     "gloss": "Bye"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-baaibaai.mp3",
+     "audio/hk-wanlung/yue-baaibaai-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-baaibaai.mp3",
+     "audio/hk-hiumaan/yue-baaibaai-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-baaibaai.mp3",
+     "audio/hk-hiugaai/yue-baaibaai-slow.mp3"
+    ]
+   },
+   "situation": "You leave a shop.",
+   "topic": "Small talk",
+   "mission": "Say 拜拜 when you leave a shop"
+  },
+  {
+   "id": "yue-ngo",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "Basics",
+   "zh": "我",
+   "roman": "ngo5",
+   "en": "I / me",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "ngo5",
+     "gloss": "I / me"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-ngo.mp3",
+     "audio/hk-wanlung/yue-ngo-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-ngo.mp3",
+     "audio/hk-hiumaan/yue-ngo-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-ngo.mp3",
+     "audio/hk-hiugaai/yue-ngo-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "yue-nei",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "Basics",
+   "zh": "你",
+   "roman": "nei5",
+   "en": "you",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nei5",
+     "gloss": "you"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-nei.mp3",
+     "audio/hk-wanlung/yue-nei-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-nei.mp3",
+     "audio/hk-hiumaan/yue-nei-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-nei.mp3",
+     "audio/hk-hiugaai/yue-nei-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "yue-zousan",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "Basics",
+   "zh": "早晨",
+   "roman": "zou2-san4",
+   "en": "Good morning",
+   "words": [
+    {
+     "zh": "早晨",
+     "roman": "zou2-san4",
+     "gloss": "Good morning"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-zousan.mp3",
+     "audio/hk-wanlung/yue-zousan-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-zousan.mp3",
+     "audio/hk-hiumaan/yue-zousan-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-zousan.mp3",
+     "audio/hk-hiugaai/yue-zousan-slow.mp3"
+    ]
+   },
+   "situation": "It's 8 am and you see a colleague.",
+   "topic": "Small talk",
+   "mission": "Say 早晨 to someone before noon"
   },
   {
    "id": "yue-nei-hou-maa",
@@ -11646,37 +11626,121 @@
    "mission": "When someone asks how you are, answer 幾好"
   },
   {
-   "id": "yue-baaibaai",
+   "id": "yue-deoimzyu",
    "kind": "phrase",
    "deck": "cantonese",
    "set": "Basics",
-   "zh": "拜拜",
-   "roman": "baai1-baai3",
-   "en": "Bye",
+   "zh": "對唔住",
+   "roman": "deoi3-m4-zyu6",
+   "en": "Sorry",
    "words": [
     {
-     "zh": "拜拜",
-     "roman": "baai1-baai3",
-     "gloss": "Bye"
+     "zh": "對唔住",
+     "roman": "deoi3-m4-zyu6",
+     "gloss": "Sorry"
     }
    ],
    "audio": {
     "hk-wanlung": [
-     "audio/hk-wanlung/yue-baaibaai.mp3",
-     "audio/hk-wanlung/yue-baaibaai-slow.mp3"
+     "audio/hk-wanlung/yue-deoimzyu.mp3",
+     "audio/hk-wanlung/yue-deoimzyu-slow.mp3"
     ],
     "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-baaibaai.mp3",
-     "audio/hk-hiumaan/yue-baaibaai-slow.mp3"
+     "audio/hk-hiumaan/yue-deoimzyu.mp3",
+     "audio/hk-hiumaan/yue-deoimzyu-slow.mp3"
     ],
     "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-baaibaai.mp3",
-     "audio/hk-hiugaai/yue-baaibaai-slow.mp3"
+     "audio/hk-hiugaai/yue-deoimzyu.mp3",
+     "audio/hk-hiugaai/yue-deoimzyu-slow.mp3"
     ]
    },
-   "situation": "You leave a shop.",
-   "topic": "Small talk",
-   "mission": "Say 拜拜 when you leave a shop"
+   "situation": "You bump into someone.",
+   "topic": "Getting by"
+  },
+  {
+   "id": "yue-m-hou-jisi",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "Basics",
+   "zh": "唔好意思",
+   "roman": "m4 hou2 ji3-si1",
+   "en": "Excuse me; sorry (small things)",
+   "words": [
+    {
+     "zh": "唔",
+     "roman": "m4",
+     "gloss": "not"
+    },
+    {
+     "zh": "好",
+     "roman": "hou2",
+     "gloss": "good; very; OK"
+    },
+    {
+     "zh": "意思",
+     "roman": "ji3-si1",
+     "gloss": "meaning (唔好意思 = excuse me)"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-m-hou-jisi.mp3",
+     "audio/hk-wanlung/yue-m-hou-jisi-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-m-hou-jisi.mp3",
+     "audio/hk-hiumaan/yue-m-hou-jisi-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-m-hou-jisi.mp3",
+     "audio/hk-hiugaai/yue-m-hou-jisi-slow.mp3"
+    ]
+   },
+   "situation": "You need to squeeze past someone on the MTR.",
+   "topic": "Getting by",
+   "mission": "Say 唔好意思 to squeeze past someone on the MTR"
+  },
+  {
+   "id": "yue-m-sai-haakhei",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "Basics",
+   "zh": "唔使客氣",
+   "roman": "m4 sai2 haak3-hei3",
+   "en": "You're welcome",
+   "words": [
+    {
+     "zh": "唔",
+     "roman": "m4",
+     "gloss": "not"
+    },
+    {
+     "zh": "使",
+     "roman": "sai2",
+     "gloss": "to need to (唔使 = no need)"
+    },
+    {
+     "zh": "客氣",
+     "roman": "haak3-hei3",
+     "gloss": "polite, formal"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-m-sai-haakhei.mp3",
+     "audio/hk-wanlung/yue-m-sai-haakhei-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-m-sai-haakhei.mp3",
+     "audio/hk-hiumaan/yue-m-sai-haakhei-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-m-sai-haakhei.mp3",
+     "audio/hk-hiugaai/yue-m-sai-haakhei-slow.mp3"
+    ]
+   },
+   "situation": "Someone thanks you for helping.",
+   "topic": "Small talk"
   },
   {
    "id": "yue-tingjat-gin",
@@ -11715,66 +11779,6 @@
    "situation": "You leave work and will see your colleague tomorrow.",
    "topic": "Small talk",
    "mission": "Say 聽日見 to a colleague when leaving"
-  },
-  {
-   "id": "yue-ngo",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "Basics",
-   "zh": "我",
-   "roman": "ngo5",
-   "en": "I / me",
-   "words": [
-    {
-     "zh": "我",
-     "roman": "ngo5",
-     "gloss": "I / me"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-ngo.mp3",
-     "audio/hk-wanlung/yue-ngo-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-ngo.mp3",
-     "audio/hk-hiumaan/yue-ngo-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-ngo.mp3",
-     "audio/hk-hiugaai/yue-ngo-slow.mp3"
-    ]
-   }
-  },
-  {
-   "id": "yue-nei",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "Basics",
-   "zh": "你",
-   "roman": "nei5",
-   "en": "you",
-   "words": [
-    {
-     "zh": "你",
-     "roman": "nei5",
-     "gloss": "you"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-nei.mp3",
-     "audio/hk-wanlung/yue-nei-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-nei.mp3",
-     "audio/hk-hiumaan/yue-nei-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-nei.mp3",
-     "audio/hk-hiugaai/yue-nei-slow.mp3"
-    ]
-   }
   },
   {
    "id": "yue-keoi",
@@ -11898,6 +11902,101 @@
     ]
    },
    "note": "Mandarin 沒有"
+  },
+  {
+   "id": "yue-ngo-teng-m-ming",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "About me",
+   "zh": "我聽唔明",
+   "roman": "ngo5 teng1 m4 ming4",
+   "en": "I don't understand (what I hear)",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "ngo5",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "聽",
+     "roman": "teng1",
+     "gloss": "to listen, hear"
+    },
+    {
+     "zh": "唔",
+     "roman": "m4",
+     "gloss": "not"
+    },
+    {
+     "zh": "明",
+     "roman": "ming4",
+     "gloss": "to understand"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-ngo-teng-m-ming.mp3",
+     "audio/hk-wanlung/yue-ngo-teng-m-ming-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-ngo-teng-m-ming.mp3",
+     "audio/hk-hiumaan/yue-ngo-teng-m-ming-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-ngo-teng-m-ming.mp3",
+     "audio/hk-hiugaai/yue-ngo-teng-m-ming-slow.mp3"
+    ]
+   },
+   "situation": "You didn't understand what was said.",
+   "note": "聽 is teng1 in everyday speech",
+   "topic": "Getting by"
+  },
+  {
+   "id": "yue-m-goi-gong-do-ci",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "About me",
+   "zh": "唔該講多次",
+   "roman": "m4-goi1 gong2 do1 ci3",
+   "en": "Please say it again",
+   "words": [
+    {
+     "zh": "唔該",
+     "roman": "m4-goi1",
+     "gloss": "please; thanks"
+    },
+    {
+     "zh": "講",
+     "roman": "gong2",
+     "gloss": "to speak"
+    },
+    {
+     "zh": "多",
+     "roman": "do1",
+     "gloss": "more (講多次 = say it once more)"
+    },
+    {
+     "zh": "次",
+     "roman": "ci3",
+     "gloss": "time(s)"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-m-goi-gong-do-ci.mp3",
+     "audio/hk-wanlung/yue-m-goi-gong-do-ci-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-m-goi-gong-do-ci.mp3",
+     "audio/hk-hiumaan/yue-m-goi-gong-do-ci-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-m-goi-gong-do-ci.mp3",
+     "audio/hk-hiugaai/yue-m-goi-gong-do-ci-slow.mp3"
+    ]
+   },
+   "situation": "You want someone to repeat themselves.",
+   "topic": "Getting by"
   },
   {
    "id": "yue-ngo-giu",
@@ -12545,13 +12644,13 @@
    "topic": "Work & study"
   },
   {
-   "id": "yue-ngo-hai-zungman-daaihok-gaausyu",
+   "id": "yue-ngo-sik-gong-siusiu",
    "kind": "phrase",
    "deck": "cantonese",
    "set": "About me",
-   "zh": "我喺中文大學教書",
-   "roman": "ngo5 hai2 Zung1-man4 Daai6-hok6 gaau3-syu1",
-   "en": "I teach at the Chinese University",
+   "zh": "我識講少少廣東話",
+   "roman": "ngo5 sik1 gong2 siu2-siu2 Gwong2-dung1-waa2",
+   "en": "I speak a little Cantonese",
    "words": [
     {
      "zh": "我",
@@ -12559,91 +12658,43 @@
      "gloss": "I / me"
     },
     {
-     "zh": "喺",
-     "roman": "hai2",
-     "gloss": "at, in"
+     "zh": "識",
+     "roman": "sik1",
+     "gloss": "to know how to"
     },
     {
-     "zh": "中文",
-     "roman": "Zung1-man4",
-     "gloss": "Chinese (language)"
+     "zh": "講",
+     "roman": "gong2",
+     "gloss": "to speak"
     },
     {
-     "zh": "大學",
-     "roman": "Daai6-hok6",
-     "gloss": "university"
+     "zh": "少少",
+     "roman": "siu2-siu2",
+     "gloss": "a little"
     },
     {
-     "zh": "教書",
-     "roman": "gaau3-syu1",
-     "gloss": "to teach (as a job)"
+     "zh": "廣東話",
+     "roman": "Gwong2-dung1-waa2",
+     "gloss": "Cantonese"
     }
    ],
    "audio": {
     "hk-wanlung": [
-     "audio/hk-wanlung/yue-ngo-hai-zungman-daaihok-gaausyu.mp3",
-     "audio/hk-wanlung/yue-ngo-hai-zungman-daaihok-gaausyu-slow.mp3"
+     "audio/hk-wanlung/yue-ngo-sik-gong-siusiu.mp3",
+     "audio/hk-wanlung/yue-ngo-sik-gong-siusiu-slow.mp3"
     ],
     "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-ngo-hai-zungman-daaihok-gaausyu.mp3",
-     "audio/hk-hiumaan/yue-ngo-hai-zungman-daaihok-gaausyu-slow.mp3"
+     "audio/hk-hiumaan/yue-ngo-sik-gong-siusiu.mp3",
+     "audio/hk-hiumaan/yue-ngo-sik-gong-siusiu-slow.mp3"
     ],
     "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-ngo-hai-zungman-daaihok-gaausyu.mp3",
-     "audio/hk-hiugaai/yue-ngo-hai-zungman-daaihok-gaausyu-slow.mp3"
+     "audio/hk-hiugaai/yue-ngo-sik-gong-siusiu.mp3",
+     "audio/hk-hiugaai/yue-ngo-sik-gong-siusiu-slow.mp3"
     ]
    },
-   "situation": "Someone asks where you teach.",
-   "note": "喺 hai2 = at/in (Mandarin 在)",
-   "topic": "Work & study",
-   "mission": "Tell someone where you teach in Cantonese"
-  },
-  {
-   "id": "yue-ngo-zyu-hai-hoenggong",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "About me",
-   "zh": "我住喺香港",
-   "roman": "ngo5 zyu6 hai2 Hoeng1-gong2",
-   "en": "I live in Hong Kong",
-   "words": [
-    {
-     "zh": "我",
-     "roman": "ngo5",
-     "gloss": "I / me"
-    },
-    {
-     "zh": "住",
-     "roman": "zyu6",
-     "gloss": "to live"
-    },
-    {
-     "zh": "喺",
-     "roman": "hai2",
-     "gloss": "at, in"
-    },
-    {
-     "zh": "香港",
-     "roman": "Hoeng1-gong2",
-     "gloss": "Hong Kong"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-ngo-zyu-hai-hoenggong.mp3",
-     "audio/hk-wanlung/yue-ngo-zyu-hai-hoenggong-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-ngo-zyu-hai-hoenggong.mp3",
-     "audio/hk-hiumaan/yue-ngo-zyu-hai-hoenggong-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-ngo-zyu-hai-hoenggong.mp3",
-     "audio/hk-hiugaai/yue-ngo-zyu-hai-hoenggong-slow.mp3"
-    ]
-   },
-   "situation": "Someone asks where you live.",
-   "topic": "Introducing yourself"
+   "situation": "Someone asks if you speak Cantonese.",
+   "topic": "Getting by",
+   "mission": "Surprise a colleague with it"
   },
   {
    "id": "yue-ngo-m-sik-gong",
@@ -12698,59 +12749,6 @@
    "note": "識 sik1 = know how to; 講 gong2 = speak",
    "topic": "Getting by",
    "mission": "Say it when someone starts speaking fast Cantonese to you"
-  },
-  {
-   "id": "yue-ngo-sik-gong-siusiu",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "About me",
-   "zh": "我識講少少廣東話",
-   "roman": "ngo5 sik1 gong2 siu2-siu2 Gwong2-dung1-waa2",
-   "en": "I speak a little Cantonese",
-   "words": [
-    {
-     "zh": "我",
-     "roman": "ngo5",
-     "gloss": "I / me"
-    },
-    {
-     "zh": "識",
-     "roman": "sik1",
-     "gloss": "to know how to"
-    },
-    {
-     "zh": "講",
-     "roman": "gong2",
-     "gloss": "to speak"
-    },
-    {
-     "zh": "少少",
-     "roman": "siu2-siu2",
-     "gloss": "a little"
-    },
-    {
-     "zh": "廣東話",
-     "roman": "Gwong2-dung1-waa2",
-     "gloss": "Cantonese"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-ngo-sik-gong-siusiu.mp3",
-     "audio/hk-wanlung/yue-ngo-sik-gong-siusiu-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-ngo-sik-gong-siusiu.mp3",
-     "audio/hk-hiumaan/yue-ngo-sik-gong-siusiu-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-ngo-sik-gong-siusiu.mp3",
-     "audio/hk-hiugaai/yue-ngo-sik-gong-siusiu-slow.mp3"
-    ]
-   },
-   "situation": "Someone asks if you speak Cantonese.",
-   "topic": "Getting by",
-   "mission": "Surprise a colleague with it"
   },
   {
    "id": "yue-nei-sik-m-sik-gong-jingman",
@@ -12811,13 +12809,13 @@
    "topic": "Getting by"
   },
   {
-   "id": "yue-ngo-teng-m-ming",
+   "id": "yue-ngo-zyu-hai-hoenggong",
    "kind": "phrase",
    "deck": "cantonese",
    "set": "About me",
-   "zh": "我聽唔明",
-   "roman": "ngo5 teng1 m4 ming4",
-   "en": "I don't understand (what I hear)",
+   "zh": "我住喺香港",
+   "roman": "ngo5 zyu6 hai2 Hoeng1-gong2",
+   "en": "I live in Hong Kong",
    "words": [
     {
      "zh": "我",
@@ -12825,85 +12823,91 @@
      "gloss": "I / me"
     },
     {
-     "zh": "聽",
-     "roman": "teng1",
-     "gloss": "to listen, hear"
+     "zh": "住",
+     "roman": "zyu6",
+     "gloss": "to live"
     },
     {
-     "zh": "唔",
-     "roman": "m4",
-     "gloss": "not"
+     "zh": "喺",
+     "roman": "hai2",
+     "gloss": "at, in"
     },
     {
-     "zh": "明",
-     "roman": "ming4",
-     "gloss": "to understand"
+     "zh": "香港",
+     "roman": "Hoeng1-gong2",
+     "gloss": "Hong Kong"
     }
    ],
    "audio": {
     "hk-wanlung": [
-     "audio/hk-wanlung/yue-ngo-teng-m-ming.mp3",
-     "audio/hk-wanlung/yue-ngo-teng-m-ming-slow.mp3"
+     "audio/hk-wanlung/yue-ngo-zyu-hai-hoenggong.mp3",
+     "audio/hk-wanlung/yue-ngo-zyu-hai-hoenggong-slow.mp3"
     ],
     "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-ngo-teng-m-ming.mp3",
-     "audio/hk-hiumaan/yue-ngo-teng-m-ming-slow.mp3"
+     "audio/hk-hiumaan/yue-ngo-zyu-hai-hoenggong.mp3",
+     "audio/hk-hiumaan/yue-ngo-zyu-hai-hoenggong-slow.mp3"
     ],
     "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-ngo-teng-m-ming.mp3",
-     "audio/hk-hiugaai/yue-ngo-teng-m-ming-slow.mp3"
+     "audio/hk-hiugaai/yue-ngo-zyu-hai-hoenggong.mp3",
+     "audio/hk-hiugaai/yue-ngo-zyu-hai-hoenggong-slow.mp3"
     ]
    },
-   "situation": "You didn't understand what was said.",
-   "note": "聽 is teng1 in everyday speech",
-   "topic": "Getting by"
+   "situation": "Someone asks where you live.",
+   "topic": "Introducing yourself"
   },
   {
-   "id": "yue-m-goi-gong-do-ci",
+   "id": "yue-ngo-hai-zungman-daaihok-gaausyu",
    "kind": "phrase",
    "deck": "cantonese",
    "set": "About me",
-   "zh": "唔該講多次",
-   "roman": "m4-goi1 gong2 do1 ci3",
-   "en": "Please say it again",
+   "zh": "我喺中文大學教書",
+   "roman": "ngo5 hai2 Zung1-man4 Daai6-hok6 gaau3-syu1",
+   "en": "I teach at the Chinese University",
    "words": [
     {
-     "zh": "唔該",
-     "roman": "m4-goi1",
-     "gloss": "please; thanks"
+     "zh": "我",
+     "roman": "ngo5",
+     "gloss": "I / me"
     },
     {
-     "zh": "講",
-     "roman": "gong2",
-     "gloss": "to speak"
+     "zh": "喺",
+     "roman": "hai2",
+     "gloss": "at, in"
     },
     {
-     "zh": "多",
-     "roman": "do1",
-     "gloss": "more (講多次 = say it once more)"
+     "zh": "中文",
+     "roman": "Zung1-man4",
+     "gloss": "Chinese (language)"
     },
     {
-     "zh": "次",
-     "roman": "ci3",
-     "gloss": "time(s)"
+     "zh": "大學",
+     "roman": "Daai6-hok6",
+     "gloss": "university"
+    },
+    {
+     "zh": "教書",
+     "roman": "gaau3-syu1",
+     "gloss": "to teach (as a job)"
     }
    ],
    "audio": {
     "hk-wanlung": [
-     "audio/hk-wanlung/yue-m-goi-gong-do-ci.mp3",
-     "audio/hk-wanlung/yue-m-goi-gong-do-ci-slow.mp3"
+     "audio/hk-wanlung/yue-ngo-hai-zungman-daaihok-gaausyu.mp3",
+     "audio/hk-wanlung/yue-ngo-hai-zungman-daaihok-gaausyu-slow.mp3"
     ],
     "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-m-goi-gong-do-ci.mp3",
-     "audio/hk-hiumaan/yue-m-goi-gong-do-ci-slow.mp3"
+     "audio/hk-hiumaan/yue-ngo-hai-zungman-daaihok-gaausyu.mp3",
+     "audio/hk-hiumaan/yue-ngo-hai-zungman-daaihok-gaausyu-slow.mp3"
     ],
     "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-m-goi-gong-do-ci.mp3",
-     "audio/hk-hiugaai/yue-m-goi-gong-do-ci-slow.mp3"
+     "audio/hk-hiugaai/yue-ngo-hai-zungman-daaihok-gaausyu.mp3",
+     "audio/hk-hiugaai/yue-ngo-hai-zungman-daaihok-gaausyu-slow.mp3"
     ]
    },
-   "situation": "You want someone to repeat themselves.",
-   "topic": "Getting by"
+   "situation": "Someone asks where you teach.",
+   "note": "喺 hai2 = at/in (Mandarin 在)",
+   "topic": "Work & study",
+   "mission": "Tell someone where you teach in Cantonese"
   },
   {
    "id": "yue-sik",

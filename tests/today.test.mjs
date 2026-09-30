@@ -93,3 +93,15 @@ test('estimateMinutes rounds about 30 seconds per card', () => {
   assert.equal(estimateMinutes(19), 10);
   assert.equal(estimateMinutes(1), 1);
 });
+
+test('a deck without character work gets no read, word or build cards', () => {
+  const p = defaults();
+  p.settings.reading = true;
+  p.cards['a:say'] = past(1);
+  p.cards['a:read'] = past(1);
+  p.cards['a:build'] = past(1);
+  p.cards['c/mandarin/好:char'] = past(1);
+  const chars = [{ id: 'c/mandarin/好', kind: 'char', deck: 'mandarin', zh: '好' }];
+  const { queue } = composeToday({ items: ITEMS, drills: [], chars, progress: p, plan: null, now: NOW, newLimit: 0, deck: 'mandarin', characters: false });
+  assert.deepEqual(queue.map((q) => q.key), ['a:say']);
+});

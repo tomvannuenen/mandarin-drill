@@ -2,7 +2,7 @@ import { $, el, play, renderRoman, speakText, LANG_ATTR } from './ui.js';
 import { icon, hydrateIcons } from './icons.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
-import { buildQueue, shouldRequeue, weekQueue, lessonWeeks } from './lib/session.js';
+import { buildQueue, shouldRequeue, weekQueue, lessonWeeks, shakyCount } from './lib/session.js';
 import { load, save, exportJSON, importJSON, applyReview, localDate } from './lib/store.js';
 import { initBook, renderBook } from './book.js';
 import { syncCoach, coachUrls } from './coach.js';
@@ -243,8 +243,8 @@ function speakWord(zh, d, preferVoice = null) {
 }
 
 // Pinyin and meaning of a word as it appears inside any phrase.
-function wordInfo(zh) {
-  for (const i of allItems) for (const e of i.fills || [i]) for (const w of e.words || []) if (w.zh === zh) return w;
+function wordInfo(zh, d = deck()) {
+  for (const i of allItems) if (i.deck === d) for (const e of i.fills || [i]) for (const w of e.words || []) if (w.zh === zh) return w;
   return null;
 }
 
@@ -257,11 +257,18 @@ function card(...children) {
 }
 
 function newLimit() {
-  return progress.settings.newPerDay + extraNew;
+  const cfg = decks[deck()] || {};
+  if (cfg.maxShaky && shakyCount(items(), progress) >= cfg.maxShaky) return extraNew;
+  return (cfg.newPerDay ?? progress.settings.newPerDay) + extraNew;
 }
 
 function todayPlan(now = new Date()) {
-  return composeToday({ items: items(), drills: drills(), chars: chars(), progress, plan, now, newLimit: newLimit(), deck: deck() });
+  const cfg = decks[deck()] || {};
+  // A beginner deck skips character work and warms up on only its weakest few words.
+  const weakest = (x) => -(progress.weak[x.id]?.score || 0);
+  const d = cfg.maxDrills ? drills().sort((a, b) => weakest(a) - weakest(b)).slice(0, cfg.maxDrills) : drills();
+  const characters = cfg.characters !== false;
+  return composeToday({ items: items(), drills: d, chars: characters ? chars() : [], progress, plan, now, newLimit: newLimit(), deck: deck(), characters });
 }
 
 function readyConversation() {
@@ -287,7 +294,7 @@ function renderHome() {
   // One line, straight from what the app tracks: what's hard to say and what's hard to read.
   const roman = (zh) => (wordInfo(zh)?.roman || zh).replace(/-/g, '');
   const say = troubleSpots(progress, deck()).slice(0, 3).map((t) => roman(t.zh));
-  const read = readingTrouble(progress, deck()).slice(0, 3).map((t) => roman(t.zh));
+  const read = decks[deck()]?.characters === false ? [] : readingTrouble(progress, deck()).slice(0, 3).map((t) => roman(t.zh));
   const note = [say.length && `Say: ${say.join(', ')}`, read.length && `Read: ${read.join(', ')}`].filter(Boolean).join('  ·  ');
   $('today-note').textContent = note;
   $('today-note').hidden = !note;
@@ -311,6 +318,7 @@ function renderHome() {
     const soon = dueSoon(progress, items(), now);
     $('rest-sub').textContent = soon ? `Next: ${soon} review${soon === 1 ? '' : 's'} by tomorrow.` : 'Come back tomorrow.';
     $('more').hidden = !items().some((i) => !progress.cards[`${i.id}:say`]);
+    $('more').textContent = `Learn ${decks[deck()]?.newPerDay || 5} more`;
   }
 
   const totalSeen = allItems.filter((i) => progress.cards[`${i.id}:say`]).length;
@@ -592,8 +600,9 @@ function showCard() {
   $('which').hidden = true;
   for (const g of document.querySelectorAll('#grades .grade')) g.classList.remove('picked');
 
-  $('progress-bar').style.width = `${(session.done / Math.max(session.total, session.done + 1)) * 100}%`;
-  $('progress-text').textContent = `${Math.min(session.done + 1, session.total)} of ${session.total}`;
+  // Every card moves the counter on; a card that comes back later adds one to the total.
+  $('progress-bar').style.width = `${(session.pos / session.queue.length) * 100}%`;
+  $('progress-text').textContent = `${session.pos + 1} of ${session.queue.length}`;
 }
 
 function reveal() {
@@ -918,7 +927,7 @@ function wire() {
     if (e.target.closest('.deck-pill')) switchDeck();
   });
   $('start').addEventListener('click', startToday);
-  $('more').addEventListener('click', () => { extraNew += 5; startToday(); });
+  $('more').addEventListener('click', () => { extraNew += decks[deck()]?.newPerDay || 5; startToday(); });
   $('quit').addEventListener('click', () => { session = null; show('home'); });
   $('reveal').addEventListener('click', reveal);
   $('continue').addEventListener('click', () => { if (session?.current?.c.result) commit(session.current.c.result); });

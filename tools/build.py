@@ -44,6 +44,9 @@ DECKS = {
     "cantonese": {
         "label": "廣東話", "file": "cantonese.json", "roman": "jyutping",
         "voices": ["hk-wanlung", "hk-hiumaan", "hk-hiugaai"],
+        # Starting from zero: a few new phrases a day and none while earlier ones are still shaky, only the
+        # three weakest flagged words as warm-up, and no character cards yet.
+        "newPerDay": 3, "maxShaky": 5, "maxDrills": 3, "characters": False,
     },
 }
 SLOW_RATE = "-30%"
@@ -351,7 +354,7 @@ def main(argv):
     voices = {v: {k: VOICES[v][k] for k in ("flag", "name")} for v in VOICES if v in used}
     if "coach" in used:
         voices["coach"] = COACH
-    decks = {d: {"label": c["label"], "voices": c["voices"]} for d, c in DECKS.items()}
+    decks = {d: {k: c[k] for k in ("label", "voices", "newPerDay", "maxShaky", "maxDrills", "characters") if k in c} for d, c in DECKS.items()}
     body = json.dumps([out, voices], ensure_ascii=False, sort_keys=True)
     body += json.dumps(convos, ensure_ascii=False, sort_keys=True)
     doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "voices": voices, "decks": decks, "items": out,

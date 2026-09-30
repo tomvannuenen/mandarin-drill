@@ -266,3 +266,10 @@ test('week practice: only that week, weakest first, capped', async () => {
   assert.equal(weekQueue(items, progress, 2, 2).length, 2);
   assert.deepEqual(lessonWeeks(items), [2, 1]);
 });
+
+test('shaky cards: seen but still in learning or relearning', async () => {
+  const { shakyCount } = await import('../lib/session.js');
+  const items = [{ id: 'a' }, { id: 'b' }, { id: 'c' }, { id: 'd' }];
+  const progress = { cards: { 'a:say': { state: 1 }, 'b:say': { state: 2 }, 'c:say': { state: 3 } } };
+  assert.equal(shakyCount(items, progress), 2);
+});

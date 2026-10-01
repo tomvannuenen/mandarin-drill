@@ -1,5 +1,5 @@
 {
- "version": "23f285fd4b82",
+ "version": "4c17d6e69eba",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -11217,6 +11217,69 @@
    "mission": "Tell someone where you work"
   },
   {
+   "id": "keyi-gei-wo-zhege-ma",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "可以給我這個嗎？",
+   "roman": "kě-yǐ gěi wǒ zhè-ge ma?",
+   "en": "Can I have this one? (in a restaurant)",
+   "words": [
+    {
+     "zh": "可以",
+     "roman": "kě-yǐ",
+     "gloss": "can, may (allowed)"
+    },
+    {
+     "zh": "給",
+     "roman": "gěi",
+     "gloss": "to give"
+    },
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "這個",
+     "roman": "zhè-ge",
+     "gloss": "this"
+    },
+    {
+     "zh": "嗎",
+     "roman": "ma",
+     "gloss": "(question particle)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/keyi-gei-wo-zhege-ma.mp3",
+     "audio/tw-yunjhe/keyi-gei-wo-zhege-ma-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/keyi-gei-wo-zhege-ma.mp3",
+     "audio/tw-hsiaochen/keyi-gei-wo-zhege-ma-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/keyi-gei-wo-zhege-ma.mp3",
+     "audio/tw-hsiaoyu/keyi-gei-wo-zhege-ma-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/keyi-gei-wo-zhege-ma.mp3",
+     "audio/cn-yunyang/keyi-gei-wo-zhege-ma-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/keyi-gei-wo-zhege-ma.mp3",
+     "audio/cn-xiaoxiao/keyi-gei-wo-zhege-ma-slow.mp3"
+    ]
+   },
+   "situation": "You point at something on the menu and ask the waiter for it.",
+   "note": "可以給我…嗎？ = Can I have…? Swap 這個 for anything: 菜單 (cài-dān, menu), 一杯水 (a glass of water)",
+   "topic": "Food & drink",
+   "mission": "Point at a dish on the menu in a CUHK canteen and ask 可以給我這個嗎？",
+   "wish": "wish-1790803302621"
+  },
+  {
    "id": "yue-nei-hou",
    "kind": "phrase",
    "deck": "cantonese",
@@ -14413,6 +14476,61 @@
    },
    "situation": "You greet a friend casually.",
    "topic": "Small talk"
+  },
+  {
+   "id": "yue-m-goi-ngo-soeng-jiu-nigo",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "My phrases",
+   "zh": "唔該，我想要呢個",
+   "roman": "m4-goi1, ngo5 soeng2 jiu3 ni1-go3",
+   "en": "Can I have this one, please? (in a restaurant)",
+   "words": [
+    {
+     "zh": "唔該",
+     "roman": "m4-goi1",
+     "gloss": "please; thanks"
+    },
+    {
+     "zh": "我",
+     "roman": "ngo5",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "想",
+     "roman": "soeng2",
+     "gloss": "to want to"
+    },
+    {
+     "zh": "要",
+     "roman": "jiu3",
+     "gloss": "to want"
+    },
+    {
+     "zh": "呢個",
+     "roman": "ni1-go3",
+     "gloss": "this one"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-m-goi-ngo-soeng-jiu-nigo.mp3",
+     "audio/hk-wanlung/yue-m-goi-ngo-soeng-jiu-nigo-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-m-goi-ngo-soeng-jiu-nigo.mp3",
+     "audio/hk-hiumaan/yue-m-goi-ngo-soeng-jiu-nigo-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-m-goi-ngo-soeng-jiu-nigo.mp3",
+     "audio/hk-hiugaai/yue-m-goi-ngo-soeng-jiu-nigo-slow.mp3"
+    ]
+   },
+   "situation": "You call the waiter over and point at what you want on the menu.",
+   "note": "想要 soeng2 jiu3 = would like: softer than 我要呢個. Swap 呢個 for any dish or drink",
+   "topic": "Food & drink",
+   "mission": "Catch the waiter in a cha chaan teng with 唔該, point at the menu and say 我想要呢個",
+   "wish": "wish-1790803319538"
   }
  ],
  "conversations": [

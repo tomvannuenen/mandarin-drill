@@ -62,6 +62,7 @@
     {"id": "yue-heoi", "kind": "word", "set": "Getting around", "zh": "去", "jyutping": "heoi3", "en": "to go"},
     {"id": "yue-lai", "kind": "word", "set": "Getting around", "zh": "嚟", "jyutping": "lai4", "en": "to come", "note": "Mandarin 來"},
     {"id": "yue-ngo-soeng-heoi-x", "kind": "pattern", "set": "Getting around", "zh": "我想去{country}", "jyutping": "ngo5 soeng2 heoi3 {country}", "en": "I want to go to {country}", "topic": "Small talk", "situation": "Someone asks where you'd like to go. ({country})"},
-    {"id": "yue-zou-me-aa", "kind": "phrase", "set": "Getting around", "zh": "做咩呀？", "jyutping": "zou6 me1 aa3?", "en": "What's up? / What are you doing?", "topic": "Small talk", "situation": "You greet a friend casually."}
+    {"id": "yue-zou-me-aa", "kind": "phrase", "set": "Getting around", "zh": "做咩呀？", "jyutping": "zou6 me1 aa3?", "en": "What's up? / What are you doing?", "topic": "Small talk", "situation": "You greet a friend casually."},
+    {"id": "yue-m-goi-ngo-soeng-jiu-nigo", "kind": "phrase", "set": "My phrases", "wish": "wish-1790803319538", "zh": "唔該，我想要呢個", "jyutping": "m4-goi1, ngo5 soeng2 jiu3 ni1-go3", "en": "Can I have this one, please? (in a restaurant)", "note": "想要 soeng2 jiu3 = would like: softer than 我要呢個. Swap 呢個 for any dish or drink", "topic": "Food & drink", "mission": "Catch the waiter in a cha chaan teng with 唔該, point at the menu and say 我想要呢個", "situation": "You call the waiter over and point at what you want on the menu."}
   ]
 }

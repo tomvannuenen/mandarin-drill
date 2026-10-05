@@ -62,7 +62,10 @@
     "下": "next; below (下星期 = next week)",
     "見": "to see, meet (…見 = see you …)",
     "知": "to know (知不知道 = know or not?)",
-    "可": "can (可不可以 = can or not?)"
+    "可": "can (可不可以 = can or not?)",
+    "用": "to use; with, in (a language)",
+    "解釋": "to explain",
+    "一下": "a bit (softens a request)"
   },
   "cantonese": {
     "唔": "not",
@@ -111,6 +114,7 @@
     "洗手間": "toilet",
     "落": "to get off",
     "想": "to want to",
-    "做": "to do"
+    "做": "to do",
+    "杯": "a cup of (measure word)"
   }
 }

@@ -1,5 +1,5 @@
 {
- "version": "4c17d6e69eba",
+ "version": "929d346e29be",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -11280,6 +11280,190 @@
    "wish": "wish-1790803302621"
   },
   {
+   "id": "keyi-gei-wo-yibei-kafei-ma",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "可以給我一杯咖啡嗎？",
+   "roman": "kě-yǐ gěi wǒ yì bēi kā-fēi ma?",
+   "en": "Can I have a coffee, please?",
+   "words": [
+    {
+     "zh": "可以",
+     "roman": "kě-yǐ",
+     "gloss": "can, may (allowed)"
+    },
+    {
+     "zh": "給",
+     "roman": "gěi",
+     "gloss": "to give"
+    },
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "一",
+     "roman": "yì",
+     "gloss": "one"
+    },
+    {
+     "zh": "杯",
+     "roman": "bēi",
+     "gloss": "cup (measure word)"
+    },
+    {
+     "zh": "咖啡",
+     "roman": "kā-fēi",
+     "gloss": "coffee"
+    },
+    {
+     "zh": "嗎",
+     "roman": "ma",
+     "gloss": "(question particle)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/keyi-gei-wo-yibei-kafei-ma.mp3",
+     "audio/tw-yunjhe/keyi-gei-wo-yibei-kafei-ma-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/keyi-gei-wo-yibei-kafei-ma.mp3",
+     "audio/tw-hsiaochen/keyi-gei-wo-yibei-kafei-ma-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/keyi-gei-wo-yibei-kafei-ma.mp3",
+     "audio/tw-hsiaoyu/keyi-gei-wo-yibei-kafei-ma-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/keyi-gei-wo-yibei-kafei-ma.mp3",
+     "audio/cn-yunyang/keyi-gei-wo-yibei-kafei-ma-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/keyi-gei-wo-yibei-kafei-ma.mp3",
+     "audio/cn-xiaoxiao/keyi-gei-wo-yibei-kafei-ma-slow.mp3"
+    ]
+   },
+   "situation": "You're at the counter of a café and want a coffee.",
+   "note": "Same frame as 可以給我這個嗎？ with 一杯咖啡 (a cup of coffee). The 可以…嗎？ already makes it polite; add 謝謝 once you get it",
+   "topic": "Food & drink",
+   "mission": "Order your next coffee on campus with 可以給我一杯咖啡嗎？",
+   "wish": "wish-1791059610386"
+  },
+  {
+   "id": "keyi-yong-yingwen-jieshi-yixia-ma",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "可以用英文解釋一下嗎？",
+   "roman": "kě-yǐ yòng Yīng-wén jiě-shì yí-xià ma?",
+   "en": "Can you explain this in English?",
+   "words": [
+    {
+     "zh": "可以",
+     "roman": "kě-yǐ",
+     "gloss": "can, may (allowed)"
+    },
+    {
+     "zh": "用",
+     "roman": "yòng",
+     "gloss": "to use; with, in (a language)"
+    },
+    {
+     "zh": "英文",
+     "roman": "Yīng-wén",
+     "gloss": "English (language)"
+    },
+    {
+     "zh": "解釋",
+     "roman": "jiě-shì",
+     "gloss": "to explain"
+    },
+    {
+     "zh": "一下",
+     "roman": "yí-xià",
+     "gloss": "a bit (softens a request)"
+    },
+    {
+     "zh": "嗎",
+     "roman": "ma",
+     "gloss": "(question particle)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/keyi-yong-yingwen-jieshi-yixia-ma.mp3",
+     "audio/tw-yunjhe/keyi-yong-yingwen-jieshi-yixia-ma-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/keyi-yong-yingwen-jieshi-yixia-ma.mp3",
+     "audio/tw-hsiaochen/keyi-yong-yingwen-jieshi-yixia-ma-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/keyi-yong-yingwen-jieshi-yixia-ma.mp3",
+     "audio/tw-hsiaoyu/keyi-yong-yingwen-jieshi-yixia-ma-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/keyi-yong-yingwen-jieshi-yixia-ma.mp3",
+     "audio/cn-yunyang/keyi-yong-yingwen-jieshi-yixia-ma-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/keyi-yong-yingwen-jieshi-yixia-ma.mp3",
+     "audio/cn-xiaoxiao/keyi-yong-yingwen-jieshi-yixia-ma-slow.mp3"
+    ]
+   },
+   "situation": "Someone explains something in Chinese and you're lost.",
+   "note": "用英文 = using English, and it goes before the verb. 解釋 jiěshì = to explain; 一下 softens the request (\"explain it a bit\")",
+   "topic": "Getting by",
+   "mission": "When a colleague or your coach says something you can't follow, ask 可以用英文解釋一下嗎？",
+   "wish": "wish-1791068534984"
+  },
+  {
+   "id": "chuanda",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "穿搭",
+   "roman": "chuān-dā",
+   "en": "outfit",
+   "words": [
+    {
+     "zh": "穿搭",
+     "roman": "chuān-dā",
+     "gloss": "outfit"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/chuanda.mp3",
+     "audio/tw-yunjhe/chuanda-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/chuanda.mp3",
+     "audio/tw-hsiaochen/chuanda-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/chuanda.mp3",
+     "audio/tw-hsiaoyu/chuanda-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/chuanda.mp3",
+     "audio/cn-yunyang/chuanda-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/chuanda.mp3",
+     "audio/cn-xiaoxiao/chuanda-slow.mp3"
+    ]
+   },
+   "situation": "You want to name what someone is wearing today, as a whole look.",
+   "note": "穿 wear + 搭 match: the everyday Taiwan word for an outfit (how the clothes go together). 我喜歡你的穿搭 = I like your outfit",
+   "topic": "Small talk",
+   "mission": "Compliment a friend's outfit: 我喜歡你的穿搭",
+   "wish": "wish-1791068540254"
+  },
+  {
    "id": "yue-nei-hou",
    "kind": "phrase",
    "deck": "cantonese",
@@ -14531,6 +14715,66 @@
    "topic": "Food & drink",
    "mission": "Catch the waiter in a cha chaan teng with 唔該, point at the menu and say 我想要呢個",
    "wish": "wish-1790803319538"
+  },
+  {
+   "id": "yue-m-goi-ngo-soeng-jiu-bui-gaafe",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "My phrases",
+   "zh": "唔該，我想要杯咖啡",
+   "roman": "m4-goi1, ngo5 soeng2 jiu3 bui1 gaa3-fe1",
+   "en": "Can I have a coffee, please?",
+   "words": [
+    {
+     "zh": "唔該",
+     "roman": "m4-goi1",
+     "gloss": "please; thanks"
+    },
+    {
+     "zh": "我",
+     "roman": "ngo5",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "想",
+     "roman": "soeng2",
+     "gloss": "to want to"
+    },
+    {
+     "zh": "要",
+     "roman": "jiu3",
+     "gloss": "to want"
+    },
+    {
+     "zh": "杯",
+     "roman": "bui1",
+     "gloss": "a cup of (measure word)"
+    },
+    {
+     "zh": "咖啡",
+     "roman": "gaa3-fe1",
+     "gloss": "coffee"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-m-goi-ngo-soeng-jiu-bui-gaafe.mp3",
+     "audio/hk-wanlung/yue-m-goi-ngo-soeng-jiu-bui-gaafe-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-m-goi-ngo-soeng-jiu-bui-gaafe.mp3",
+     "audio/hk-hiumaan/yue-m-goi-ngo-soeng-jiu-bui-gaafe-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-m-goi-ngo-soeng-jiu-bui-gaafe.mp3",
+     "audio/hk-hiugaai/yue-m-goi-ngo-soeng-jiu-bui-gaafe-slow.mp3"
+    ]
+   },
+   "situation": "You're at the counter and want a coffee.",
+   "note": "杯 bui1 = a cup of: Cantonese drops the 一. Same frame as 我想要呢個",
+   "topic": "Food & drink",
+   "mission": "Order a coffee in a cha chaan teng or the CUHK canteen with 唔該，我想要杯咖啡",
+   "wish": "wish-1791059623536"
   }
  ],
  "conversations": [

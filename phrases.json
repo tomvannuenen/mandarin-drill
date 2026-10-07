@@ -1,5 +1,5 @@
 {
- "version": "929d346e29be",
+ "version": "55724e9005dc",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -2073,7 +2073,8 @@
     ]
    },
    "cat": [
-    "drink"
+    "drink",
+    "dish"
    ]
   },
   {
@@ -2293,7 +2294,8 @@
     ]
    },
    "cat": [
-    "food"
+    "food",
+    "dish"
    ]
   },
   {
@@ -2404,6 +2406,312 @@
       "cn-xiaoxiao": [
        "audio/cn-xiaoxiao/wo-xihuan-chi-x--mapo-doufu.mp3",
        "audio/cn-xiaoxiao/wo-xihuan-chi-x--mapo-doufu-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "sanmingzhi",
+     "zh": "我喜歡吃三明治",
+     "roman": "wǒ xǐ-huān chī sān-míng-zhì",
+     "en": "I like eating sandwiches",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "三明治",
+       "roman": "sān-míng-zhì",
+       "gloss": "sandwich"
+      }
+     ],
+     "situation": "Someone asks what food you like. (sandwiches)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xihuan-chi-x--sanmingzhi.mp3",
+       "audio/tw-yunjhe/wo-xihuan-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--sanmingzhi.mp3",
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--sanmingzhi.mp3",
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xihuan-chi-x--sanmingzhi.mp3",
+       "audio/cn-yunyang/wo-xihuan-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--sanmingzhi.mp3",
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--sanmingzhi-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "jirou",
+     "zh": "我喜歡吃雞肉",
+     "roman": "wǒ xǐ-huān chī jī-ròu",
+     "en": "I like eating chicken",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "雞肉",
+       "roman": "jī-ròu",
+       "gloss": "chicken"
+      }
+     ],
+     "situation": "Someone asks what food you like. (chicken)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xihuan-chi-x--jirou.mp3",
+       "audio/tw-yunjhe/wo-xihuan-chi-x--jirou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--jirou.mp3",
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--jirou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--jirou.mp3",
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--jirou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xihuan-chi-x--jirou.mp3",
+       "audio/cn-yunyang/wo-xihuan-chi-x--jirou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--jirou.mp3",
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--jirou-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "rou",
+     "zh": "我喜歡吃肉",
+     "roman": "wǒ xǐ-huān chī ròu",
+     "en": "I like eating meat",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "肉",
+       "roman": "ròu",
+       "gloss": "meat"
+      }
+     ],
+     "situation": "Someone asks what food you like. (meat)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xihuan-chi-x--rou.mp3",
+       "audio/tw-yunjhe/wo-xihuan-chi-x--rou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--rou.mp3",
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--rou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--rou.mp3",
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--rou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xihuan-chi-x--rou.mp3",
+       "audio/cn-yunyang/wo-xihuan-chi-x--rou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--rou.mp3",
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--rou-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "boluobao",
+     "zh": "我喜歡吃菠蘿包",
+     "roman": "wǒ xǐ-huān chī bō-luó-bāo",
+     "en": "I like eating pineapple buns",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "菠蘿包",
+       "roman": "bō-luó-bāo",
+       "gloss": "pineapple bun"
+      }
+     ],
+     "situation": "Someone asks what food you like. (pineapple buns)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xihuan-chi-x--boluobao.mp3",
+       "audio/tw-yunjhe/wo-xihuan-chi-x--boluobao-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--boluobao.mp3",
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--boluobao-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--boluobao.mp3",
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--boluobao-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xihuan-chi-x--boluobao.mp3",
+       "audio/cn-yunyang/wo-xihuan-chi-x--boluobao-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--boluobao.mp3",
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--boluobao-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "danta",
+     "zh": "我喜歡吃蛋塔",
+     "roman": "wǒ xǐ-huān chī dàn-tǎ",
+     "en": "I like eating egg tarts",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "蛋塔",
+       "roman": "dàn-tǎ",
+       "gloss": "egg tart"
+      }
+     ],
+     "situation": "Someone asks what food you like. (egg tarts)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xihuan-chi-x--danta.mp3",
+       "audio/tw-yunjhe/wo-xihuan-chi-x--danta-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--danta.mp3",
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--danta-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--danta.mp3",
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--danta-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xihuan-chi-x--danta.mp3",
+       "audio/cn-yunyang/wo-xihuan-chi-x--danta-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--danta.mp3",
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--danta-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "zhou",
+     "zh": "我喜歡吃粥",
+     "roman": "wǒ xǐ-huān chī zhōu",
+     "en": "I like eating congee",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "粥",
+       "roman": "zhōu",
+       "gloss": "congee"
+      }
+     ],
+     "situation": "Someone asks what food you like. (congee)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xihuan-chi-x--zhou.mp3",
+       "audio/tw-yunjhe/wo-xihuan-chi-x--zhou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--zhou.mp3",
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--zhou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--zhou.mp3",
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--zhou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xihuan-chi-x--zhou.mp3",
+       "audio/cn-yunyang/wo-xihuan-chi-x--zhou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--zhou.mp3",
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--zhou-slow.mp3"
       ]
      }
     }
@@ -3474,6 +3782,342 @@
       "cn-xiaoxiao": [
        "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--mapo-doufu.mp3",
        "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--mapo-doufu-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "sanmingzhi",
+     "zh": "我不喜歡吃三明治",
+     "roman": "wǒ bù xǐ-huān chī sān-míng-zhì",
+     "en": "I don't like eating sandwiches",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "不",
+       "roman": "bù",
+       "gloss": "not"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "三明治",
+       "roman": "sān-míng-zhì",
+       "gloss": "sandwich"
+      }
+     ],
+     "situation": "Someone offers you sandwiches, but you don't like it.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--sanmingzhi.mp3",
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--sanmingzhi.mp3",
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--sanmingzhi.mp3",
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--sanmingzhi.mp3",
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--sanmingzhi.mp3",
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--sanmingzhi-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "jirou",
+     "zh": "我不喜歡吃雞肉",
+     "roman": "wǒ bù xǐ-huān chī jī-ròu",
+     "en": "I don't like eating chicken",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "不",
+       "roman": "bù",
+       "gloss": "not"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "雞肉",
+       "roman": "jī-ròu",
+       "gloss": "chicken"
+      }
+     ],
+     "situation": "Someone offers you chicken, but you don't like it.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--jirou.mp3",
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--jirou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--jirou.mp3",
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--jirou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--jirou.mp3",
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--jirou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--jirou.mp3",
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--jirou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--jirou.mp3",
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--jirou-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "rou",
+     "zh": "我不喜歡吃肉",
+     "roman": "wǒ bù xǐ-huān chī ròu",
+     "en": "I don't like eating meat",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "不",
+       "roman": "bù",
+       "gloss": "not"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "肉",
+       "roman": "ròu",
+       "gloss": "meat"
+      }
+     ],
+     "situation": "Someone offers you meat, but you don't like it.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--rou.mp3",
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--rou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--rou.mp3",
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--rou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--rou.mp3",
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--rou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--rou.mp3",
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--rou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--rou.mp3",
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--rou-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "boluobao",
+     "zh": "我不喜歡吃菠蘿包",
+     "roman": "wǒ bù xǐ-huān chī bō-luó-bāo",
+     "en": "I don't like eating pineapple buns",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "不",
+       "roman": "bù",
+       "gloss": "not"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "菠蘿包",
+       "roman": "bō-luó-bāo",
+       "gloss": "pineapple bun"
+      }
+     ],
+     "situation": "Someone offers you pineapple buns, but you don't like it.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--boluobao.mp3",
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--boluobao-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--boluobao.mp3",
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--boluobao-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--boluobao.mp3",
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--boluobao-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--boluobao.mp3",
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--boluobao-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--boluobao.mp3",
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--boluobao-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "danta",
+     "zh": "我不喜歡吃蛋塔",
+     "roman": "wǒ bù xǐ-huān chī dàn-tǎ",
+     "en": "I don't like eating egg tarts",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "不",
+       "roman": "bù",
+       "gloss": "not"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "蛋塔",
+       "roman": "dàn-tǎ",
+       "gloss": "egg tart"
+      }
+     ],
+     "situation": "Someone offers you egg tarts, but you don't like it.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--danta.mp3",
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--danta-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--danta.mp3",
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--danta-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--danta.mp3",
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--danta-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--danta.mp3",
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--danta-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--danta.mp3",
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--danta-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "zhou",
+     "zh": "我不喜歡吃粥",
+     "roman": "wǒ bù xǐ-huān chī zhōu",
+     "en": "I don't like eating congee",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "不",
+       "roman": "bù",
+       "gloss": "not"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "粥",
+       "roman": "zhōu",
+       "gloss": "congee"
+      }
+     ],
+     "situation": "Someone offers you congee, but you don't like it.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--zhou.mp3",
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--zhou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--zhou.mp3",
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--zhou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--zhou.mp3",
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--zhou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--zhou.mp3",
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--zhou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--zhou.mp3",
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--zhou-slow.mp3"
       ]
      }
     }
@@ -7496,6 +8140,1687 @@
    }
   },
   {
+   "id": "wo-hai-mei-chi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "我還沒吃",
+   "roman": "wǒ hái-méi chī",
+   "en": "I haven't eaten yet",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me"
+    },
+    {
+     "zh": "還沒",
+     "roman": "hái-méi",
+     "gloss": "not yet"
+    },
+    {
+     "zh": "吃",
+     "roman": "chī",
+     "gloss": "to eat"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-hai-mei-chi.mp3",
+     "audio/tw-yunjhe/wo-hai-mei-chi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-hai-mei-chi.mp3",
+     "audio/tw-hsiaochen/wo-hai-mei-chi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-hai-mei-chi.mp3",
+     "audio/tw-hsiaoyu/wo-hai-mei-chi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-hai-mei-chi.mp3",
+     "audio/cn-yunyang/wo-hai-mei-chi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-hai-mei-chi.mp3",
+     "audio/cn-xiaoxiao/wo-hai-mei-chi-slow.mp3"
+    ]
+   },
+   "situation": "It's lunchtime and someone asks if you've eaten.",
+   "topic": "Food & drink",
+   "mission": "When a colleague asks around noon if you've had lunch, answer 我還沒吃"
+  },
+  {
+   "id": "ni-xiang-chi-shenme",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "你想吃什麼？",
+   "roman": "nǐ xiǎng chī shé-me?",
+   "en": "What do you want to eat?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you"
+    },
+    {
+     "zh": "想",
+     "roman": "xiǎng",
+     "gloss": "to want to; to think; to miss"
+    },
+    {
+     "zh": "吃",
+     "roman": "chī",
+     "gloss": "to eat"
+    },
+    {
+     "zh": "什麼",
+     "roman": "shé-me",
+     "gloss": "what"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-xiang-chi-shenme.mp3",
+     "audio/tw-yunjhe/ni-xiang-chi-shenme-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-xiang-chi-shenme.mp3",
+     "audio/tw-hsiaochen/ni-xiang-chi-shenme-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-xiang-chi-shenme.mp3",
+     "audio/tw-hsiaoyu/ni-xiang-chi-shenme-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-xiang-chi-shenme.mp3",
+     "audio/cn-yunyang/ni-xiang-chi-shenme-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-xiang-chi-shenme.mp3",
+     "audio/cn-xiaoxiao/ni-xiang-chi-shenme-slow.mp3"
+    ]
+   },
+   "situation": "You and a friend are choosing where to have lunch.",
+   "topic": "Food & drink",
+   "mission": "Ask a colleague 你想吃什麼？ when you pick a place for lunch at CUHK"
+  },
+  {
+   "id": "wo-xiang-chi-x",
+   "kind": "pattern",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "我想吃___",
+   "roman": "wǒ xiǎng chī ___",
+   "en": "I want to eat ___",
+   "fills": [
+    {
+     "fillId": "la",
+     "zh": "我想吃辣",
+     "roman": "wǒ xiǎng chī là",
+     "en": "I want to eat spicy food",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "想",
+       "roman": "xiǎng",
+       "gloss": "to want to; to think; to miss"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "辣",
+       "roman": "là",
+       "gloss": "spicy"
+      }
+     ],
+     "situation": "A friend asks what you feel like eating. (spicy food)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xiang-chi-x--la.mp3",
+       "audio/tw-yunjhe/wo-xiang-chi-x--la-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xiang-chi-x--la.mp3",
+       "audio/tw-hsiaochen/wo-xiang-chi-x--la-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--la.mp3",
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--la-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xiang-chi-x--la.mp3",
+       "audio/cn-yunyang/wo-xiang-chi-x--la-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--la.mp3",
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--la-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "mapo-doufu",
+     "zh": "我想吃麻婆豆腐",
+     "roman": "wǒ xiǎng chī má-pó-dòu-fǔ",
+     "en": "I want to eat mapo tofu",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "想",
+       "roman": "xiǎng",
+       "gloss": "to want to; to think; to miss"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "麻婆豆腐",
+       "roman": "má-pó-dòu-fǔ",
+       "gloss": "mapo tofu"
+      }
+     ],
+     "situation": "A friend asks what you feel like eating. (mapo tofu)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xiang-chi-x--mapo-doufu.mp3",
+       "audio/tw-yunjhe/wo-xiang-chi-x--mapo-doufu-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xiang-chi-x--mapo-doufu.mp3",
+       "audio/tw-hsiaochen/wo-xiang-chi-x--mapo-doufu-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--mapo-doufu.mp3",
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--mapo-doufu-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xiang-chi-x--mapo-doufu.mp3",
+       "audio/cn-yunyang/wo-xiang-chi-x--mapo-doufu-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--mapo-doufu.mp3",
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--mapo-doufu-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "sanmingzhi",
+     "zh": "我想吃三明治",
+     "roman": "wǒ xiǎng chī sān-míng-zhì",
+     "en": "I want to eat sandwiches",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "想",
+       "roman": "xiǎng",
+       "gloss": "to want to; to think; to miss"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "三明治",
+       "roman": "sān-míng-zhì",
+       "gloss": "sandwich"
+      }
+     ],
+     "situation": "A friend asks what you feel like eating. (sandwiches)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xiang-chi-x--sanmingzhi.mp3",
+       "audio/tw-yunjhe/wo-xiang-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xiang-chi-x--sanmingzhi.mp3",
+       "audio/tw-hsiaochen/wo-xiang-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--sanmingzhi.mp3",
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xiang-chi-x--sanmingzhi.mp3",
+       "audio/cn-yunyang/wo-xiang-chi-x--sanmingzhi-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--sanmingzhi.mp3",
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--sanmingzhi-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "jirou",
+     "zh": "我想吃雞肉",
+     "roman": "wǒ xiǎng chī jī-ròu",
+     "en": "I want to eat chicken",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "想",
+       "roman": "xiǎng",
+       "gloss": "to want to; to think; to miss"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "雞肉",
+       "roman": "jī-ròu",
+       "gloss": "chicken"
+      }
+     ],
+     "situation": "A friend asks what you feel like eating. (chicken)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xiang-chi-x--jirou.mp3",
+       "audio/tw-yunjhe/wo-xiang-chi-x--jirou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xiang-chi-x--jirou.mp3",
+       "audio/tw-hsiaochen/wo-xiang-chi-x--jirou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--jirou.mp3",
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--jirou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xiang-chi-x--jirou.mp3",
+       "audio/cn-yunyang/wo-xiang-chi-x--jirou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--jirou.mp3",
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--jirou-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "rou",
+     "zh": "我想吃肉",
+     "roman": "wǒ xiǎng chī ròu",
+     "en": "I want to eat meat",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "想",
+       "roman": "xiǎng",
+       "gloss": "to want to; to think; to miss"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "肉",
+       "roman": "ròu",
+       "gloss": "meat"
+      }
+     ],
+     "situation": "A friend asks what you feel like eating. (meat)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xiang-chi-x--rou.mp3",
+       "audio/tw-yunjhe/wo-xiang-chi-x--rou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xiang-chi-x--rou.mp3",
+       "audio/tw-hsiaochen/wo-xiang-chi-x--rou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--rou.mp3",
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--rou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xiang-chi-x--rou.mp3",
+       "audio/cn-yunyang/wo-xiang-chi-x--rou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--rou.mp3",
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--rou-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "boluobao",
+     "zh": "我想吃菠蘿包",
+     "roman": "wǒ xiǎng chī bō-luó-bāo",
+     "en": "I want to eat pineapple buns",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "想",
+       "roman": "xiǎng",
+       "gloss": "to want to; to think; to miss"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "菠蘿包",
+       "roman": "bō-luó-bāo",
+       "gloss": "pineapple bun"
+      }
+     ],
+     "situation": "A friend asks what you feel like eating. (pineapple buns)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xiang-chi-x--boluobao.mp3",
+       "audio/tw-yunjhe/wo-xiang-chi-x--boluobao-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xiang-chi-x--boluobao.mp3",
+       "audio/tw-hsiaochen/wo-xiang-chi-x--boluobao-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--boluobao.mp3",
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--boluobao-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xiang-chi-x--boluobao.mp3",
+       "audio/cn-yunyang/wo-xiang-chi-x--boluobao-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--boluobao.mp3",
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--boluobao-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "danta",
+     "zh": "我想吃蛋塔",
+     "roman": "wǒ xiǎng chī dàn-tǎ",
+     "en": "I want to eat egg tarts",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "想",
+       "roman": "xiǎng",
+       "gloss": "to want to; to think; to miss"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "蛋塔",
+       "roman": "dàn-tǎ",
+       "gloss": "egg tart"
+      }
+     ],
+     "situation": "A friend asks what you feel like eating. (egg tarts)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xiang-chi-x--danta.mp3",
+       "audio/tw-yunjhe/wo-xiang-chi-x--danta-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xiang-chi-x--danta.mp3",
+       "audio/tw-hsiaochen/wo-xiang-chi-x--danta-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--danta.mp3",
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--danta-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xiang-chi-x--danta.mp3",
+       "audio/cn-yunyang/wo-xiang-chi-x--danta-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--danta.mp3",
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--danta-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "zhou",
+     "zh": "我想吃粥",
+     "roman": "wǒ xiǎng chī zhōu",
+     "en": "I want to eat congee",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "想",
+       "roman": "xiǎng",
+       "gloss": "to want to; to think; to miss"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat"
+      },
+      {
+       "zh": "粥",
+       "roman": "zhōu",
+       "gloss": "congee"
+      }
+     ],
+     "situation": "A friend asks what you feel like eating. (congee)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xiang-chi-x--zhou.mp3",
+       "audio/tw-yunjhe/wo-xiang-chi-x--zhou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xiang-chi-x--zhou.mp3",
+       "audio/tw-hsiaochen/wo-xiang-chi-x--zhou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--zhou.mp3",
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--zhou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xiang-chi-x--zhou.mp3",
+       "audio/cn-yunyang/wo-xiang-chi-x--zhou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--zhou.mp3",
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--zhou-slow.mp3"
+      ]
+     }
+    }
+   ],
+   "situation": "A friend asks what you feel like eating. (___)",
+   "topic": "Food & drink",
+   "mission": "Tell a friend what you feel like eating today"
+  },
+  {
+   "id": "wo-yao-x",
+   "kind": "pattern",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "我要___",
+   "roman": "wǒ yào ___",
+   "en": "I want the ___",
+   "fills": [
+    {
+     "fillId": "naicha",
+     "zh": "我要奶茶",
+     "roman": "wǒ yào nǎi-chá",
+     "en": "I want the milk tea",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "奶茶",
+       "roman": "nǎi-chá",
+       "gloss": "milk tea"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (milk tea)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-x--naicha.mp3",
+       "audio/tw-yunjhe/wo-yao-x--naicha-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-x--naicha.mp3",
+       "audio/tw-hsiaochen/wo-yao-x--naicha-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-x--naicha.mp3",
+       "audio/tw-hsiaoyu/wo-yao-x--naicha-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-x--naicha.mp3",
+       "audio/cn-yunyang/wo-yao-x--naicha-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-x--naicha.mp3",
+       "audio/cn-xiaoxiao/wo-yao-x--naicha-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "mapo-doufu",
+     "zh": "我要麻婆豆腐",
+     "roman": "wǒ yào má-pó-dòu-fǔ",
+     "en": "I want the mapo tofu",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "麻婆豆腐",
+       "roman": "má-pó-dòu-fǔ",
+       "gloss": "mapo tofu"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (mapo tofu)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-x--mapo-doufu.mp3",
+       "audio/tw-yunjhe/wo-yao-x--mapo-doufu-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-x--mapo-doufu.mp3",
+       "audio/tw-hsiaochen/wo-yao-x--mapo-doufu-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-x--mapo-doufu.mp3",
+       "audio/tw-hsiaoyu/wo-yao-x--mapo-doufu-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-x--mapo-doufu.mp3",
+       "audio/cn-yunyang/wo-yao-x--mapo-doufu-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-x--mapo-doufu.mp3",
+       "audio/cn-xiaoxiao/wo-yao-x--mapo-doufu-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "sanmingzhi",
+     "zh": "我要三明治",
+     "roman": "wǒ yào sān-míng-zhì",
+     "en": "I want the sandwich",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "三明治",
+       "roman": "sān-míng-zhì",
+       "gloss": "sandwich"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (sandwich)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-x--sanmingzhi.mp3",
+       "audio/tw-yunjhe/wo-yao-x--sanmingzhi-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-x--sanmingzhi.mp3",
+       "audio/tw-hsiaochen/wo-yao-x--sanmingzhi-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-x--sanmingzhi.mp3",
+       "audio/tw-hsiaoyu/wo-yao-x--sanmingzhi-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-x--sanmingzhi.mp3",
+       "audio/cn-yunyang/wo-yao-x--sanmingzhi-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-x--sanmingzhi.mp3",
+       "audio/cn-xiaoxiao/wo-yao-x--sanmingzhi-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "jirou",
+     "zh": "我要雞肉",
+     "roman": "wǒ yào jī-ròu",
+     "en": "I want the chicken",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "雞肉",
+       "roman": "jī-ròu",
+       "gloss": "chicken"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (chicken)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-x--jirou.mp3",
+       "audio/tw-yunjhe/wo-yao-x--jirou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-x--jirou.mp3",
+       "audio/tw-hsiaochen/wo-yao-x--jirou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-x--jirou.mp3",
+       "audio/tw-hsiaoyu/wo-yao-x--jirou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-x--jirou.mp3",
+       "audio/cn-yunyang/wo-yao-x--jirou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-x--jirou.mp3",
+       "audio/cn-xiaoxiao/wo-yao-x--jirou-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "boluobao",
+     "zh": "我要菠蘿包",
+     "roman": "wǒ yào bō-luó-bāo",
+     "en": "I want the pineapple bun",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "菠蘿包",
+       "roman": "bō-luó-bāo",
+       "gloss": "pineapple bun"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (pineapple bun)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-x--boluobao.mp3",
+       "audio/tw-yunjhe/wo-yao-x--boluobao-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-x--boluobao.mp3",
+       "audio/tw-hsiaochen/wo-yao-x--boluobao-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-x--boluobao.mp3",
+       "audio/tw-hsiaoyu/wo-yao-x--boluobao-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-x--boluobao.mp3",
+       "audio/cn-yunyang/wo-yao-x--boluobao-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-x--boluobao.mp3",
+       "audio/cn-xiaoxiao/wo-yao-x--boluobao-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "danta",
+     "zh": "我要蛋塔",
+     "roman": "wǒ yào dàn-tǎ",
+     "en": "I want the egg tart",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "蛋塔",
+       "roman": "dàn-tǎ",
+       "gloss": "egg tart"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (egg tart)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-x--danta.mp3",
+       "audio/tw-yunjhe/wo-yao-x--danta-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-x--danta.mp3",
+       "audio/tw-hsiaochen/wo-yao-x--danta-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-x--danta.mp3",
+       "audio/tw-hsiaoyu/wo-yao-x--danta-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-x--danta.mp3",
+       "audio/cn-yunyang/wo-yao-x--danta-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-x--danta.mp3",
+       "audio/cn-xiaoxiao/wo-yao-x--danta-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "zhou",
+     "zh": "我要粥",
+     "roman": "wǒ yào zhōu",
+     "en": "I want the congee",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will"
+      },
+      {
+       "zh": "粥",
+       "roman": "zhōu",
+       "gloss": "congee"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (congee)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-x--zhou.mp3",
+       "audio/tw-yunjhe/wo-yao-x--zhou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-x--zhou.mp3",
+       "audio/tw-hsiaochen/wo-yao-x--zhou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-x--zhou.mp3",
+       "audio/tw-hsiaoyu/wo-yao-x--zhou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-x--zhou.mp3",
+       "audio/cn-yunyang/wo-yao-x--zhou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-x--zhou.mp3",
+       "audio/cn-xiaoxiao/wo-yao-x--zhou-slow.mp3"
+      ]
+     }
+    }
+   ],
+   "situation": "The waiter is ready to take your order. (___)",
+   "note": "我要… is how you order: direct, and normal at a counter",
+   "topic": "Food & drink",
+   "mission": "Order at a cha chaan teng counter with 我要…"
+  },
+  {
+   "id": "qing-gei-wo-x",
+   "kind": "pattern",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "請給我___",
+   "roman": "qǐng gěi wǒ ___",
+   "en": "Please give me the ___",
+   "fills": [
+    {
+     "fillId": "naicha",
+     "zh": "請給我奶茶",
+     "roman": "qǐng gěi wǒ nǎi-chá",
+     "en": "Please give me the milk tea",
+     "words": [
+      {
+       "zh": "請",
+       "roman": "qǐng",
+       "gloss": "please"
+      },
+      {
+       "zh": "給",
+       "roman": "gěi",
+       "gloss": "to give"
+      },
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "奶茶",
+       "roman": "nǎi-chá",
+       "gloss": "milk tea"
+      }
+     ],
+     "situation": "You order politely. (milk tea)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/qing-gei-wo-x--naicha.mp3",
+       "audio/tw-yunjhe/qing-gei-wo-x--naicha-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/qing-gei-wo-x--naicha.mp3",
+       "audio/tw-hsiaochen/qing-gei-wo-x--naicha-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/qing-gei-wo-x--naicha.mp3",
+       "audio/tw-hsiaoyu/qing-gei-wo-x--naicha-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/qing-gei-wo-x--naicha.mp3",
+       "audio/cn-yunyang/qing-gei-wo-x--naicha-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/qing-gei-wo-x--naicha.mp3",
+       "audio/cn-xiaoxiao/qing-gei-wo-x--naicha-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "mapo-doufu",
+     "zh": "請給我麻婆豆腐",
+     "roman": "qǐng gěi wǒ má-pó-dòu-fǔ",
+     "en": "Please give me the mapo tofu",
+     "words": [
+      {
+       "zh": "請",
+       "roman": "qǐng",
+       "gloss": "please"
+      },
+      {
+       "zh": "給",
+       "roman": "gěi",
+       "gloss": "to give"
+      },
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "麻婆豆腐",
+       "roman": "má-pó-dòu-fǔ",
+       "gloss": "mapo tofu"
+      }
+     ],
+     "situation": "You order politely. (mapo tofu)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/qing-gei-wo-x--mapo-doufu.mp3",
+       "audio/tw-yunjhe/qing-gei-wo-x--mapo-doufu-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/qing-gei-wo-x--mapo-doufu.mp3",
+       "audio/tw-hsiaochen/qing-gei-wo-x--mapo-doufu-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/qing-gei-wo-x--mapo-doufu.mp3",
+       "audio/tw-hsiaoyu/qing-gei-wo-x--mapo-doufu-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/qing-gei-wo-x--mapo-doufu.mp3",
+       "audio/cn-yunyang/qing-gei-wo-x--mapo-doufu-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/qing-gei-wo-x--mapo-doufu.mp3",
+       "audio/cn-xiaoxiao/qing-gei-wo-x--mapo-doufu-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "sanmingzhi",
+     "zh": "請給我三明治",
+     "roman": "qǐng gěi wǒ sān-míng-zhì",
+     "en": "Please give me the sandwich",
+     "words": [
+      {
+       "zh": "請",
+       "roman": "qǐng",
+       "gloss": "please"
+      },
+      {
+       "zh": "給",
+       "roman": "gěi",
+       "gloss": "to give"
+      },
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "三明治",
+       "roman": "sān-míng-zhì",
+       "gloss": "sandwich"
+      }
+     ],
+     "situation": "You order politely. (sandwich)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/qing-gei-wo-x--sanmingzhi.mp3",
+       "audio/tw-yunjhe/qing-gei-wo-x--sanmingzhi-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/qing-gei-wo-x--sanmingzhi.mp3",
+       "audio/tw-hsiaochen/qing-gei-wo-x--sanmingzhi-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/qing-gei-wo-x--sanmingzhi.mp3",
+       "audio/tw-hsiaoyu/qing-gei-wo-x--sanmingzhi-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/qing-gei-wo-x--sanmingzhi.mp3",
+       "audio/cn-yunyang/qing-gei-wo-x--sanmingzhi-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/qing-gei-wo-x--sanmingzhi.mp3",
+       "audio/cn-xiaoxiao/qing-gei-wo-x--sanmingzhi-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "jirou",
+     "zh": "請給我雞肉",
+     "roman": "qǐng gěi wǒ jī-ròu",
+     "en": "Please give me the chicken",
+     "words": [
+      {
+       "zh": "請",
+       "roman": "qǐng",
+       "gloss": "please"
+      },
+      {
+       "zh": "給",
+       "roman": "gěi",
+       "gloss": "to give"
+      },
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "雞肉",
+       "roman": "jī-ròu",
+       "gloss": "chicken"
+      }
+     ],
+     "situation": "You order politely. (chicken)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/qing-gei-wo-x--jirou.mp3",
+       "audio/tw-yunjhe/qing-gei-wo-x--jirou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/qing-gei-wo-x--jirou.mp3",
+       "audio/tw-hsiaochen/qing-gei-wo-x--jirou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/qing-gei-wo-x--jirou.mp3",
+       "audio/tw-hsiaoyu/qing-gei-wo-x--jirou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/qing-gei-wo-x--jirou.mp3",
+       "audio/cn-yunyang/qing-gei-wo-x--jirou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/qing-gei-wo-x--jirou.mp3",
+       "audio/cn-xiaoxiao/qing-gei-wo-x--jirou-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "boluobao",
+     "zh": "請給我菠蘿包",
+     "roman": "qǐng gěi wǒ bō-luó-bāo",
+     "en": "Please give me the pineapple bun",
+     "words": [
+      {
+       "zh": "請",
+       "roman": "qǐng",
+       "gloss": "please"
+      },
+      {
+       "zh": "給",
+       "roman": "gěi",
+       "gloss": "to give"
+      },
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "菠蘿包",
+       "roman": "bō-luó-bāo",
+       "gloss": "pineapple bun"
+      }
+     ],
+     "situation": "You order politely. (pineapple bun)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/qing-gei-wo-x--boluobao.mp3",
+       "audio/tw-yunjhe/qing-gei-wo-x--boluobao-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/qing-gei-wo-x--boluobao.mp3",
+       "audio/tw-hsiaochen/qing-gei-wo-x--boluobao-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/qing-gei-wo-x--boluobao.mp3",
+       "audio/tw-hsiaoyu/qing-gei-wo-x--boluobao-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/qing-gei-wo-x--boluobao.mp3",
+       "audio/cn-yunyang/qing-gei-wo-x--boluobao-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/qing-gei-wo-x--boluobao.mp3",
+       "audio/cn-xiaoxiao/qing-gei-wo-x--boluobao-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "danta",
+     "zh": "請給我蛋塔",
+     "roman": "qǐng gěi wǒ dàn-tǎ",
+     "en": "Please give me the egg tart",
+     "words": [
+      {
+       "zh": "請",
+       "roman": "qǐng",
+       "gloss": "please"
+      },
+      {
+       "zh": "給",
+       "roman": "gěi",
+       "gloss": "to give"
+      },
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "蛋塔",
+       "roman": "dàn-tǎ",
+       "gloss": "egg tart"
+      }
+     ],
+     "situation": "You order politely. (egg tart)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/qing-gei-wo-x--danta.mp3",
+       "audio/tw-yunjhe/qing-gei-wo-x--danta-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/qing-gei-wo-x--danta.mp3",
+       "audio/tw-hsiaochen/qing-gei-wo-x--danta-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/qing-gei-wo-x--danta.mp3",
+       "audio/tw-hsiaoyu/qing-gei-wo-x--danta-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/qing-gei-wo-x--danta.mp3",
+       "audio/cn-yunyang/qing-gei-wo-x--danta-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/qing-gei-wo-x--danta.mp3",
+       "audio/cn-xiaoxiao/qing-gei-wo-x--danta-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "zhou",
+     "zh": "請給我粥",
+     "roman": "qǐng gěi wǒ zhōu",
+     "en": "Please give me the congee",
+     "words": [
+      {
+       "zh": "請",
+       "roman": "qǐng",
+       "gloss": "please"
+      },
+      {
+       "zh": "給",
+       "roman": "gěi",
+       "gloss": "to give"
+      },
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me"
+      },
+      {
+       "zh": "粥",
+       "roman": "zhōu",
+       "gloss": "congee"
+      }
+     ],
+     "situation": "You order politely. (congee)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/qing-gei-wo-x--zhou.mp3",
+       "audio/tw-yunjhe/qing-gei-wo-x--zhou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/qing-gei-wo-x--zhou.mp3",
+       "audio/tw-hsiaochen/qing-gei-wo-x--zhou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/qing-gei-wo-x--zhou.mp3",
+       "audio/tw-hsiaoyu/qing-gei-wo-x--zhou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/qing-gei-wo-x--zhou.mp3",
+       "audio/cn-yunyang/qing-gei-wo-x--zhou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/qing-gei-wo-x--zhou.mp3",
+       "audio/cn-xiaoxiao/qing-gei-wo-x--zhou-slow.mp3"
+      ]
+     }
+    }
+   ],
+   "situation": "You order politely. (___)",
+   "topic": "Food & drink",
+   "mission": "Order one thing today with 請給我…"
+  },
+  {
+   "id": "hai-mei",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "還沒",
+   "roman": "hái-méi",
+   "en": "not yet",
+   "words": [
+    {
+     "zh": "還沒",
+     "roman": "hái-méi",
+     "gloss": "not yet"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/hai-mei.mp3",
+     "audio/tw-yunjhe/hai-mei-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/hai-mei.mp3",
+     "audio/tw-hsiaochen/hai-mei-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/hai-mei.mp3",
+     "audio/tw-hsiaoyu/hai-mei-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/hai-mei.mp3",
+     "audio/cn-yunyang/hai-mei-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/hai-mei.mp3",
+     "audio/cn-xiaoxiao/hai-mei-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "qing",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "請",
+   "roman": "qǐng",
+   "en": "please",
+   "words": [
+    {
+     "zh": "請",
+     "roman": "qǐng",
+     "gloss": "please"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/qing.mp3",
+     "audio/tw-yunjhe/qing-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/qing.mp3",
+     "audio/tw-hsiaochen/qing-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/qing.mp3",
+     "audio/tw-hsiaoyu/qing-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/qing.mp3",
+     "audio/cn-yunyang/qing-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/qing.mp3",
+     "audio/cn-xiaoxiao/qing-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "sanmingzhi",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "三明治",
+   "roman": "sān-míng-zhì",
+   "en": "sandwich",
+   "words": [
+    {
+     "zh": "三明治",
+     "roman": "sān-míng-zhì",
+     "gloss": "sandwich"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/sanmingzhi.mp3",
+     "audio/tw-yunjhe/sanmingzhi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/sanmingzhi.mp3",
+     "audio/tw-hsiaochen/sanmingzhi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/sanmingzhi.mp3",
+     "audio/tw-hsiaoyu/sanmingzhi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/sanmingzhi.mp3",
+     "audio/cn-yunyang/sanmingzhi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/sanmingzhi.mp3",
+     "audio/cn-xiaoxiao/sanmingzhi-slow.mp3"
+    ]
+   },
+   "cat": [
+    "food",
+    "dish"
+   ]
+  },
+  {
+   "id": "jirou",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "雞肉",
+   "roman": "jī-ròu",
+   "en": "chicken",
+   "words": [
+    {
+     "zh": "雞肉",
+     "roman": "jī-ròu",
+     "gloss": "chicken"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/jirou.mp3",
+     "audio/tw-yunjhe/jirou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/jirou.mp3",
+     "audio/tw-hsiaochen/jirou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/jirou.mp3",
+     "audio/tw-hsiaoyu/jirou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/jirou.mp3",
+     "audio/cn-yunyang/jirou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/jirou.mp3",
+     "audio/cn-xiaoxiao/jirou-slow.mp3"
+    ]
+   },
+   "cat": [
+    "food",
+    "dish"
+   ]
+  },
+  {
+   "id": "rou",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "肉",
+   "roman": "ròu",
+   "en": "meat",
+   "words": [
+    {
+     "zh": "肉",
+     "roman": "ròu",
+     "gloss": "meat"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/rou.mp3",
+     "audio/tw-yunjhe/rou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/rou.mp3",
+     "audio/tw-hsiaochen/rou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/rou.mp3",
+     "audio/tw-hsiaoyu/rou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/rou.mp3",
+     "audio/cn-yunyang/rou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/rou.mp3",
+     "audio/cn-xiaoxiao/rou-slow.mp3"
+    ]
+   },
+   "cat": [
+    "food"
+   ]
+  },
+  {
+   "id": "ting-stop",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "停",
+   "roman": "tíng",
+   "en": "to stop",
+   "words": [
+    {
+     "zh": "停",
+     "roman": "tíng",
+     "gloss": "to stop"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ting-stop.mp3",
+     "audio/tw-yunjhe/ting-stop-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ting-stop.mp3",
+     "audio/tw-hsiaochen/ting-stop-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ting-stop.mp3",
+     "audio/tw-hsiaoyu/ting-stop-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ting-stop.mp3",
+     "audio/cn-yunyang/ting-stop-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ting-stop.mp3",
+     "audio/cn-xiaoxiao/ting-stop-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "chacanting",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "茶餐廳",
+   "roman": "chá-cān-tīng",
+   "en": "Hong Kong-style café (cha chaan teng)",
+   "words": [
+    {
+     "zh": "茶餐廳",
+     "roman": "chá-cān-tīng",
+     "gloss": "Hong Kong-style café (cha chaan teng)"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/chacanting.mp3",
+     "audio/tw-yunjhe/chacanting-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/chacanting.mp3",
+     "audio/tw-hsiaochen/chacanting-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/chacanting.mp3",
+     "audio/tw-hsiaoyu/chacanting-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/chacanting.mp3",
+     "audio/cn-yunyang/chacanting-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/chacanting.mp3",
+     "audio/cn-xiaoxiao/chacanting-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "boluobao",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "菠蘿包",
+   "roman": "bō-luó-bāo",
+   "en": "pineapple bun",
+   "words": [
+    {
+     "zh": "菠蘿包",
+     "roman": "bō-luó-bāo",
+     "gloss": "pineapple bun"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/boluobao.mp3",
+     "audio/tw-yunjhe/boluobao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/boluobao.mp3",
+     "audio/tw-hsiaochen/boluobao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/boluobao.mp3",
+     "audio/tw-hsiaoyu/boluobao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/boluobao.mp3",
+     "audio/cn-yunyang/boluobao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/boluobao.mp3",
+     "audio/cn-xiaoxiao/boluobao-slow.mp3"
+    ]
+   },
+   "note": "With a slab of butter inside it is a 菠蘿油 (bō-luó-yóu)",
+   "cat": [
+    "food",
+    "dish"
+   ]
+  },
+  {
+   "id": "you-oil",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "油",
+   "roman": "yóu",
+   "en": "oil",
+   "words": [
+    {
+     "zh": "油",
+     "roman": "yóu",
+     "gloss": "oil"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/you-oil.mp3",
+     "audio/tw-yunjhe/you-oil-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/you-oil.mp3",
+     "audio/tw-hsiaochen/you-oil-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/you-oil.mp3",
+     "audio/tw-hsiaoyu/you-oil-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/you-oil.mp3",
+     "audio/cn-yunyang/you-oil-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/you-oil.mp3",
+     "audio/cn-xiaoxiao/you-oil-slow.mp3"
+    ]
+   },
+   "note": "菠蘿油 = pineapple bun with butter"
+  },
+  {
+   "id": "danta",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "蛋塔",
+   "roman": "dàn-tǎ",
+   "en": "egg tart",
+   "words": [
+    {
+     "zh": "蛋塔",
+     "roman": "dàn-tǎ",
+     "gloss": "egg tart"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/danta.mp3",
+     "audio/tw-yunjhe/danta-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/danta.mp3",
+     "audio/tw-hsiaochen/danta-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/danta.mp3",
+     "audio/tw-hsiaoyu/danta-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/danta.mp3",
+     "audio/cn-yunyang/danta-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/danta.mp3",
+     "audio/cn-xiaoxiao/danta-slow.mp3"
+    ]
+   },
+   "cat": [
+    "food",
+    "dish"
+   ]
+  },
+  {
+   "id": "zhou",
+   "kind": "word",
+   "deck": "mandarin",
+   "week": 3,
+   "zh": "粥",
+   "roman": "zhōu",
+   "en": "congee",
+   "words": [
+    {
+     "zh": "粥",
+     "roman": "zhōu",
+     "gloss": "congee"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhou.mp3",
+     "audio/tw-yunjhe/zhou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhou.mp3",
+     "audio/tw-hsiaochen/zhou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhou.mp3",
+     "audio/tw-hsiaoyu/zhou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhou.mp3",
+     "audio/cn-yunyang/zhou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhou.mp3",
+     "audio/cn-xiaoxiao/zhou-slow.mp3"
+    ]
+   },
+   "note": "Rice porridge",
+   "cat": [
+    "food",
+    "dish"
+   ]
+  },
+  {
    "id": "ni-jiao-shenme-mingzi",
    "kind": "phrase",
    "deck": "mandarin",
@@ -9689,7 +12014,7 @@
    "id": "xiang",
    "kind": "word",
    "deck": "mandarin",
-   "set": "Verbs",
+   "week": 3,
    "zh": "想",
    "roman": "xiǎng",
    "en": "to want to; to think; to miss",
@@ -9728,7 +12053,7 @@
    "id": "yao-want",
    "kind": "word",
    "deck": "mandarin",
-   "set": "Verbs",
+   "week": 3,
    "zh": "要",
    "roman": "yào",
    "en": "to want; will",

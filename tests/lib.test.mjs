@@ -120,7 +120,7 @@ test('buildQueue skips cards not yet due and items no longer present', () => {
 
 test('buildQueue introduces coach weeks before extra sets', () => {
   const items = [{ id: 'v1', set: 'Verbs' }, { id: 'w1', week: 1 }, { id: 'v2', set: 'Verbs' }, { id: 'w2', week: 2 }];
-  assert.deepEqual(buildQueue(items, defaults(), NOW, 3).map((c) => c.id), ['w1', 'w2', 'v1']);
+  assert.deepEqual(buildQueue(items, defaults(), NOW, 3).map((c) => c.id), ['w2', 'w1', 'v1']);
 });
 
 test('buildQueue counts new cards already introduced today against the limit', () => {
@@ -272,4 +272,23 @@ test('shaky cards: seen but still in learning or relearning', async () => {
   const items = [{ id: 'a' }, { id: 'b' }, { id: 'c' }, { id: 'd' }];
   const progress = { cards: { 'a:say': { state: 1 }, 'b:say': { state: 2 }, 'c:say': { state: 3 } } };
   assert.equal(shakyCount(items, progress), 2);
+});
+
+test('buildQueue introduces the newest lesson week first', () => {
+  const items = [{ id: 'a1', week: 1 }, { id: 'b1', week: 2 }, { id: 'c1', week: 3 }, { id: 'c2', week: 3 }, { id: 'v1', set: 'Verbs' }, { id: 'my', set: 'My phrases', wish: 'wish-1' }];
+  assert.deepEqual(buildQueue(items, defaults(), NOW, 10).map((c) => c.id), ['my', 'c1', 'c2', 'b1', 'a1', 'v1']);
+});
+
+test('buildQueue leaves words you already say inside a solid phrase until last', () => {
+  const w = (zh) => ({ zh });
+  const items = [
+    { id: 'like', kind: 'word', week: 1, zh: '喜歡' },
+    { id: 'tea', kind: 'word', week: 1, zh: '茶' },
+    { id: 'p', kind: 'pattern', week: 1, fills: [{ words: [w('我'), w('喜歡'), w('茶')] }, { words: [w('我'), w('喜歡'), w('水')] }] },
+    { id: 'v1', kind: 'word', set: 'Verbs', zh: '去' },
+  ];
+  const p = defaults();
+  p.cards['p:say'] = grade(null, 3, NOW);
+  p.goodCounts.p = 2;
+  assert.deepEqual(buildQueue(items, p, NOW, 10).filter((c) => c.type === 'say').map((c) => c.id), ['tea', 'v1', 'like']);
 });

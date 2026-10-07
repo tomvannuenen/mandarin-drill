@@ -24,6 +24,21 @@ test('composeToday puts trouble spots and focus first, then reviews mixed with n
   assert.deepEqual(counts, { focus: 2, reviews: 2, fresh: 2, chars: 0, builds: 0 });
 });
 
+test('composeToday always leaves room for the new speaking cards', () => {
+  const p = defaults();
+  const ids = Array.from({ length: 60 }, (_, i) => `i${i}`);
+  const items = ids.map((id) => ({ id, kind: 'phrase', deck: 'mandarin', week: 1 }));
+  // 30 phrases are due and have unlocked listen cards that were never shown; 30 are unseen.
+  for (const id of ids.slice(0, 30)) {
+    p.cards[`${id}:say`] = past(1);
+    p.goodCounts[id] = 2;
+  }
+  const { queue, counts } = composeToday({ items, drills: [], progress: p, plan: null, now: NOW, newLimit: 10, deck: 'mandarin' });
+  assert.equal(queue.length, 40);
+  assert.deepEqual(queue.filter((q) => !p.cards[q.key] && q.type === 'say').map((q) => q.id), ids.slice(30, 40));
+  assert.equal(counts.reviews, 30);
+});
+
 test('composeToday mixes in a few new word cards and sentence builds', () => {
   const p = defaults();
   const items = [

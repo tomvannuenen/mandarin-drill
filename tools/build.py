@@ -56,6 +56,22 @@ ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 SLOT_RE = re.compile(r"\{(\w+)(?::(\w+))?\}")
 # Characters OpenCC "corrects" that are standard everyday Traditional in Taiwan.
 ALLOWED_TRAD_VARIANTS = set("台")
+
+# Words shown in Traditional for the :char recognition drill because Tom will actually see them
+# written around Hong Kong (menus, signage, campus, his own bio). Everything else in the Mandarin
+# deck defaults to Simplified for that drill, so reading practice doesn't spend effort on glyphs he
+# won't encounter printed here. This is a judgement call, not a fixed rule -- edit the set freely.
+HK_SCRIPT_WORDS = {
+    # food & drink (menus, cha chaan teng signage)
+    "咖啡", "水", "奶茶", "葡萄酒", "啤酒", "辣", "麻婆豆腐", "三明治", "雞肉", "肉",
+    "茶餐廳", "菠蘿包", "油", "蛋塔", "粥",
+    # places & campus
+    "香港", "中文大學", "大學", "教授", "老師", "學生", "辦公室", "荷蘭",
+    # everyday courtesy / signage
+    "謝謝", "請", "可以", "問題", "沒問題",
+    # numbers & measure words (menus, receipts, signs)
+    "一", "二", "兩", "杯", "個",
+}
 SHELL_FILES = ["index.html", "styles.css", "app.js", "ui.js", "icons.js", "fonts/fonts.css", "book.js", "tonecheck.js", "convo.js", "rec.js", "coach.js", "manifest.webmanifest", "phrases.json"]
 SHELL_GLOBS = ["lib/*.js", "vendor/*.js"]
 
@@ -72,6 +88,23 @@ def simplified_chars(zh, allow=""):
     if len(converted) != len(zh):
         return [c for c in zh if c not in converted and c not in ok]
     return [a for a, b in zip(zh, converted) if a != b and a not in ok]
+
+
+_cc_t2s = None
+
+
+def to_simplified(zh):
+    global _cc_t2s
+    if _cc_t2s is None:
+        from opencc import OpenCC
+        _cc_t2s = OpenCC("t2s")
+    return _cc_t2s.convert(zh)
+
+
+def word_script(zh, deck):
+    """'hk' (Traditional) or 'cn' (Simplified) for the :char recognition drill. Only the Mandarin
+    deck splits by script; Cantonese is inherently Hong Kong Traditional."""
+    return "hk" if deck != "mandarin" or zh in HK_SCRIPT_WORDS else "cn"
 
 
 def _slots(text):
@@ -164,13 +197,22 @@ def _audio(key, deck, root):
     return audio
 
 
-def _words(zh, roman, en, known, glossary, overrides):
-    """Word-by-word breakdown [{zh, roman, gloss}] for tap-to-translate; gloss is None when unknown."""
+def _word(z, r, gloss, deck):
+    """A single word entry, tagged with the script its :char recognition card should show."""
+    w = {"zh": z, "roman": r.rstrip("?!.,…"), "gloss": gloss, "script": word_script(z, deck)}
+    if w["script"] == "cn":
+        w["zhDisp"] = to_simplified(z)
+    return w
+
+
+def _words(zh, roman, en, known, glossary, overrides, deck="mandarin"):
+    """Word-by-word breakdown [{zh, roman, gloss, script, zhDisp?}] for tap-to-translate and the
+    :char drill; gloss is None when unknown."""
     groups = word_groups(zh, roman)
     if len(groups) == 1:
-        return [{"zh": groups[0][0], "roman": groups[0][1].rstrip("?!.,…"), "gloss": en}]
+        return [_word(groups[0][0], groups[0][1], en, deck)]
     return [
-        {"zh": z, "roman": r.rstrip("?!.,…"), "gloss": overrides.get(z) or known.get(z) or glossary.get(z)}
+        _word(z, r, overrides.get(z) or known.get(z) or glossary.get(z), deck)
         for z, r in groups
     ]
 
@@ -213,7 +255,7 @@ def expand(items, root=ROOT, deck="mandarin", glossary=None):
                     "zh": zh,
                     "roman": fill_roman,
                     "en": fill_en,
-                    "words": _words(zh, fill_roman, fill_en, known, glossary, it.get("gloss", {})),
+                    "words": _words(zh, fill_roman, fill_en, known, glossary, it.get("gloss", {}), deck),
                     **({"situation": _fill_en(it["situation"], f)} if it.get("situation") else {}),
                     "audio": _audio(f"{it['id']}--{f['id']}", deck, root),
                 })
@@ -221,7 +263,7 @@ def expand(items, root=ROOT, deck="mandarin", glossary=None):
             o["zh"] = it["zh"]
             o["roman"] = _romanize(deck, it["zh"], it[roman], no_yi)
             o["en"] = it["en"]
-            o["words"] = _words(it["zh"], o["roman"], it["en"], known, glossary, it.get("gloss", {}))
+            o["words"] = _words(it["zh"], o["roman"], it["en"], known, glossary, it.get("gloss", {}), deck)
             o["audio"] = _audio(it["id"], deck, root)
         if it["kind"] == "pattern" and "situation" in it:
             o["situation"] = SLOT_RE.sub("___", it["situation"])

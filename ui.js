@@ -2,6 +2,9 @@
 import { romanWords } from './lib/tones.js';
 
 export const LANG_ATTR = { mandarin: 'zh-Hant-TW', cantonese: 'zh-Hant-HK' };
+// Which script a :char recognition card is shown in, and how to label that for the learner.
+export const SCRIPT_LANG = { hk: 'zh-Hant-HK', cn: 'zh-Hans' };
+export const SCRIPT_LABEL = { hk: 'Traditional · HK', cn: 'Simplified' };
 export const $ = (id) => document.getElementById(id);
 
 const audio = new Audio();

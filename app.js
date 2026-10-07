@@ -1,4 +1,4 @@
-import { $, el, play, renderRoman, speakText, LANG_ATTR } from './ui.js';
+import { $, el, play, renderRoman, speakText, LANG_ATTR, SCRIPT_LANG, SCRIPT_LABEL } from './ui.js';
 import { icon, hydrateIcons } from './icons.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
@@ -355,9 +355,11 @@ function renderMission(now) {
 function contentFor(card) {
   const item = byId[card.id];
   if (card.type === 'char') {
-    const word = { zh: item.zh, roman: item.roman, gloss: item.gloss };
+    const script = item.script || 'hk';
+    const zhDisp = item.zhDisp || item.zh;
+    const word = { zh: item.zh, roman: item.roman, gloss: item.gloss, script, zhDisp };
     return {
-      char: true, zh: item.zh, roman: item.roman, en: item.gloss, words: [word], example: item.example,
+      char: true, zh: item.zh, zhDisp, script, roman: item.roman, en: item.gloss, words: [word], example: item.example,
       audio: item.audio, voice: item.audio ? pickVoice(item) : null, played: false, deck: item.deck, flagged: new Set(),
       ...tracking(),
     };
@@ -419,17 +421,19 @@ function playCurrent({ slow = false, next = false } = {}) {
   play(c.audio[c.voice][slow ? 1 : 0]);
 }
 
-// Answer shown word by word; tap a word for its meaning.
+// Answer shown word by word; tap a word for its meaning. A :char card shows the same script as its prompt.
 function renderWords(c) {
   const lang = LANG_ATTR[c.deck];
   const gloss = $('a-gloss');
   gloss.hidden = true;
   $('a-words').replaceChildren(
     ...c.words.map((w) => {
+      const disp = c.char ? (w.zhDisp || w.zh) : w.zh;
+      const wLang = c.char ? (SCRIPT_LANG[w.script] || lang) : lang;
       const btn = el(
         'button',
-        { class: `wg${w.zh === c.target && c.drill === 'gap' ? ' target' : ''}`, 'data-zh': w.zh, 'aria-label': `${w.zh}: ${w.gloss}` },
-        el('span', { class: 'wg-zh', lang }, w.zh),
+        { class: `wg${w.zh === c.target && c.drill === 'gap' ? ' target' : ''}`, 'data-zh': w.zh, 'aria-label': `${disp}: ${w.gloss}` },
+        el('span', { class: 'wg-zh', lang: wLang }, disp),
         renderRoman(el('span', { class: 'wg-roman' }), w.roman, c.deck)
       );
       btn.addEventListener('click', () => {
@@ -519,7 +523,14 @@ function finishBuild(rating) {
 function promptFor(card, c) {
   const lang = LANG_ATTR[c.deck];
   if (c.build) return renderBuild(c);
-  if (c.char) return [el('p', { class: 'prompt-char', lang }, c.zh), el('p', { class: 'muted' }, 'Say it out loud'), hintButton(c)];
+  if (c.char) {
+    return [
+      el('p', { class: 'prompt-char', lang: SCRIPT_LANG[c.script] || lang }, c.zhDisp),
+      el('span', { class: `script-badge script-${c.script}` }, SCRIPT_LABEL[c.script] || ''),
+      el('p', { class: 'muted' }, 'Say it out loud'),
+      hintButton(c),
+    ];
+  }
   if (c.drill === 'gap') {
     // The sentence in pinyin with the missing word blanked; characters only when practising reading.
     const words = c.context.words;
@@ -811,7 +822,12 @@ function renderMe() {
       el('p', { class: 'section' }, 'Hard to read'),
       el('div', { class: 'spots' }, ...reading.slice(0, 10).map((t) => {
         const info2 = byId[charId(d, t.zh)];
-        return el('button', { class: 'spot read-spot', onclick: () => speakWord(t.zh, d) }, el('span', { class: 'spot-zh', lang: LANG_ATTR[d] }, t.zh), el('small', {}, info2 ? `${info2.roman.replace(/-/g, '')} · ${info2.gloss}` : ''));
+        const disp = info2?.zhDisp || t.zh;
+        const spotLang = SCRIPT_LANG[info2?.script] || LANG_ATTR[d];
+        return el('button', { class: 'spot read-spot', onclick: () => speakWord(t.zh, d) },
+          el('span', { class: 'spot-zh', lang: spotLang }, disp),
+          ...(info2?.script === 'cn' ? [el('span', { class: 'script-badge script-cn small' }, '简')] : []),
+          el('small', {}, info2 ? `${info2.roman.replace(/-/g, '')} · ${info2.gloss}` : ''));
       })),
       el('button', { class: 'btn small', onclick: () => startSession(reading.map((t) => ({ key: `${charId(d, t.zh)}:char`, id: charId(d, t.zh), type: 'char', deck: d }))) }, `Practise reading ${reading.length}`),
     ] : [])

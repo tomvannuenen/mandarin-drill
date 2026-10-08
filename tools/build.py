@@ -202,6 +202,9 @@ def _word(z, r, gloss, deck):
     w = {"zh": z, "roman": r.rstrip("?!.,…"), "gloss": gloss, "script": word_script(z, deck)}
     if w["script"] == "cn":
         w["zhDisp"] = to_simplified(z)
+    # The Simplified form, when it differs, so the learner can switch script on any word.
+    if deck == "mandarin" and to_simplified(z) != z:
+        w["zhS"] = to_simplified(z)
     return w
 
 
@@ -355,6 +358,9 @@ def stamp_service_worker(root):
         if p.exists():
             h.update(p.read_bytes())
     text = sw.read_text()
+    # A service worker that doesn't parse never installs, and phones then stay on the old app for good.
+    if re.search(r"^(<{7}|={7}|>{7})( |$)", text, re.M):
+        raise SystemExit("sw.js contains merge conflict markers; resolve them before building")
     new = re.sub(r"const VERSION = '[^']*';", f"const VERSION = '{h.hexdigest()[:12]}';", text, count=1)
     if new != text:
         sw.write_text(new)

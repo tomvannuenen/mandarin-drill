@@ -1,5 +1,5 @@
 {
- "version": "54abdd80f2dd",
+ "version": "47fff205b5cf",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -173,7 +173,8 @@
      "zh": "謝謝",
      "roman": "xiè-xie",
      "gloss": "Thank you",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "谢谢"
     }
    ],
    "audio": {
@@ -223,14 +224,16 @@
      "roman": "gāo-xìng",
      "gloss": "happy, glad",
      "script": "cn",
-     "zhDisp": "高兴"
+     "zhDisp": "高兴",
+     "zhS": "高兴"
     },
     {
      "zh": "認識",
      "roman": "rèn-shì",
      "gloss": "to know (a person), to meet",
      "script": "cn",
-     "zhDisp": "认识"
+     "zhDisp": "认识",
+     "zhS": "认识"
     },
     {
      "zh": "你",
@@ -287,14 +290,16 @@
      "roman": "gāo-xìng",
      "gloss": "happy, glad",
      "script": "cn",
-     "zhDisp": "高兴"
+     "zhDisp": "高兴",
+     "zhS": "高兴"
     },
     {
      "zh": "認識",
      "roman": "rèn-shì",
      "gloss": "to know (a person), to meet",
      "script": "cn",
-     "zhDisp": "认识"
+     "zhDisp": "认识",
+     "zhS": "认识"
     },
     {
      "zh": "大家",
@@ -343,7 +348,8 @@
      "zh": "荷蘭",
      "roman": "Hé-lán",
      "gloss": "the Netherlands",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "荷兰"
     }
    ],
    "audio": {
@@ -399,13 +405,15 @@
        "roman": "lái-zì",
        "gloss": "to come from",
        "script": "cn",
-       "zhDisp": "来自"
+       "zhDisp": "来自",
+       "zhS": "来自"
       },
       {
        "zh": "荷蘭",
        "roman": "Hé-lán",
        "gloss": "the Netherlands",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "荷兰"
       }
      ],
      "situation": "Someone asks where you come from. (the Netherlands)",
@@ -471,7 +479,8 @@
        "zh": "荷蘭",
        "roman": "Hé-lán",
        "gloss": "the Netherlands",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "荷兰"
       },
       {
        "zh": "人",
@@ -539,7 +548,8 @@
      "zh": "老師",
      "roman": "lǎo-shī",
      "gloss": "teacher",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "老师"
     }
    ],
    "audio": {
@@ -645,7 +655,8 @@
      "roman": "lái",
      "gloss": "to come",
      "script": "cn",
-     "zhDisp": "来"
+     "zhDisp": "来",
+     "zhS": "来"
     },
     {
      "zh": "香港",
@@ -664,14 +675,16 @@
      "zh": "大學",
      "roman": "Dà-xué",
      "gloss": "university",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "大学"
     },
     {
      "zh": "授課",
      "roman": "shòu-kè",
      "gloss": "to teach a class",
      "script": "cn",
-     "zhDisp": "授课"
+     "zhDisp": "授课",
+     "zhS": "授课"
     }
    ],
    "audio": {
@@ -734,14 +747,16 @@
      "zh": "大學",
      "roman": "Dà-xué",
      "gloss": "university",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "大学"
     },
     {
      "zh": "教書",
      "roman": "jiāo-shū",
      "gloss": "to teach (as a job)",
      "script": "cn",
-     "zhDisp": "教书"
+     "zhDisp": "教书",
+     "zhS": "教书"
     }
    ],
    "audio": {
@@ -799,7 +814,8 @@
      "roman": "ma",
      "gloss": "(question particle)",
      "script": "cn",
-     "zhDisp": "吗"
+     "zhDisp": "吗",
+     "zhS": "吗"
     }
    ],
    "audio": {
@@ -849,7 +865,8 @@
      "roman": "zěn-me-yàng",
      "gloss": "how is it?",
      "script": "cn",
-     "zhDisp": "怎么样"
+     "zhDisp": "怎么样",
+     "zhS": "怎么样"
     }
    ],
    "audio": {
@@ -906,7 +923,8 @@
      "roman": "shé-me",
      "gloss": "what",
      "script": "cn",
-     "zhDisp": "什么"
+     "zhDisp": "什么",
+     "zhS": "什么"
     }
    ],
    "audio": {
@@ -1004,7 +1022,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "喝",
@@ -1062,7 +1081,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "喝",
@@ -1120,7 +1140,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "喝",
@@ -1178,7 +1199,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "喝",
@@ -1236,7 +1258,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "喝",
@@ -1302,7 +1325,8 @@
      "roman": "xǐ-huān",
      "gloss": "to like",
      "script": "cn",
-     "zhDisp": "喜欢"
+     "zhDisp": "喜欢",
+     "zhS": "喜欢"
     },
     {
      "zh": "喝",
@@ -1316,7 +1340,8 @@
      "roman": "shé-me",
      "gloss": "what",
      "script": "cn",
-     "zhDisp": "什么"
+     "zhDisp": "什么",
+     "zhS": "什么"
     }
    ],
    "audio": {
@@ -1535,7 +1560,8 @@
      "roman": "xǐ-huān",
      "gloss": "to like",
      "script": "cn",
-     "zhDisp": "喜欢"
+     "zhDisp": "喜欢",
+     "zhS": "喜欢"
     },
     {
      "zh": "吃",
@@ -1549,7 +1575,8 @@
      "roman": "shé-me",
      "gloss": "what",
      "script": "cn",
-     "zhDisp": "什么"
+     "zhDisp": "什么",
+     "zhS": "什么"
     }
    ],
    "audio": {
@@ -1690,7 +1717,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -1748,7 +1776,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -1806,7 +1835,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -1864,7 +1894,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -1877,7 +1908,8 @@
        "zh": "雞肉",
        "roman": "jī-ròu",
        "gloss": "chicken",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "鸡肉"
       }
      ],
      "situation": "Someone asks what food you like. (chicken)",
@@ -1922,7 +1954,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -1980,7 +2013,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -1993,7 +2027,8 @@
        "zh": "菠蘿包",
        "roman": "bō-luó-bāo",
        "gloss": "pineapple bun",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "菠萝包"
       }
      ],
      "situation": "Someone asks what food you like. (pineapple buns)",
@@ -2038,7 +2073,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -2096,7 +2132,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -2217,7 +2254,8 @@
      "roman": "yì-diǎn-diǎn",
      "gloss": "A little bit",
      "script": "cn",
-     "zhDisp": "一点点"
+     "zhDisp": "一点点",
+     "zhS": "一点点"
     }
    ],
    "audio": {
@@ -2316,20 +2354,23 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "荷蘭",
        "roman": "Hé-lán",
        "gloss": "the Netherlands",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "荷兰"
       },
       {
        "zh": "嗎",
        "roman": "ma",
        "gloss": "(question particle)",
        "script": "cn",
-       "zhDisp": "吗"
+       "zhDisp": "吗",
+       "zhS": "吗"
       }
      ],
      "situation": "You want to ask someone if they like the Netherlands.",
@@ -2395,7 +2436,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "喝",
@@ -2460,7 +2502,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "喝",
@@ -2525,7 +2568,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "喝",
@@ -2590,7 +2634,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "喝",
@@ -2655,7 +2700,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "喝",
@@ -2733,7 +2779,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -2798,7 +2845,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -2863,7 +2911,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -2928,7 +2977,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -2941,7 +2991,8 @@
        "zh": "雞肉",
        "roman": "jī-ròu",
        "gloss": "chicken",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "鸡肉"
       }
      ],
      "situation": "Someone offers you chicken, but you don't like it.",
@@ -2993,7 +3044,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -3058,7 +3110,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -3071,7 +3124,8 @@
        "zh": "菠蘿包",
        "roman": "bō-luó-bāo",
        "gloss": "pineapple bun",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "菠萝包"
       }
      ],
      "situation": "Someone offers you pineapple buns, but you don't like it.",
@@ -3123,7 +3177,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -3188,7 +3243,8 @@
        "roman": "xǐ-huān",
        "gloss": "to like",
        "script": "cn",
-       "zhDisp": "喜欢"
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
       },
       {
        "zh": "吃",
@@ -3540,7 +3596,8 @@
      "roman": "shé-me",
      "gloss": "what",
      "script": "cn",
-     "zhDisp": "什么"
+     "zhDisp": "什么",
+     "zhS": "什么"
     },
     {
      "zh": "名字",
@@ -3603,14 +3660,16 @@
      "zh": "學生",
      "roman": "xué-shēng",
      "gloss": "student",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "学生"
     },
     {
      "zh": "嗎",
      "roman": "ma",
      "gloss": "(question particle)",
      "script": "cn",
-     "zhDisp": "吗"
+     "zhDisp": "吗",
+     "zhS": "吗"
     }
    ],
    "audio": {
@@ -3667,7 +3726,8 @@
      "roman": "nǎ-ge",
      "gloss": "which",
      "script": "cn",
-     "zhDisp": "哪个"
+     "zhDisp": "哪个",
+     "zhS": "哪个"
     },
     {
      "zh": "系",
@@ -3732,14 +3792,16 @@
      "roman": "jǐ",
      "gloss": "how many",
      "script": "cn",
-     "zhDisp": "几"
+     "zhDisp": "几",
+     "zhS": "几"
     },
     {
      "zh": "年級",
      "roman": "nián-jí",
      "gloss": "year (at school)",
      "script": "cn",
-     "zhDisp": "年级"
+     "zhDisp": "年级",
+     "zhS": "年级"
     }
    ],
    "audio": {
@@ -3789,14 +3851,16 @@
      "roman": "dú",
      "gloss": "to read (aloud); to study",
      "script": "cn",
-     "zhDisp": "读"
+     "zhDisp": "读",
+     "zhS": "读"
     },
     {
      "zh": "什麼",
      "roman": "shé-me",
      "gloss": "what",
      "script": "cn",
-     "zhDisp": "什么"
+     "zhDisp": "什么",
+     "zhS": "什么"
     }
    ],
    "audio": {
@@ -3853,7 +3917,8 @@
      "roman": "nǎ-lǐ",
      "gloss": "where",
      "script": "cn",
-     "zhDisp": "哪里"
+     "zhDisp": "哪里",
+     "zhS": "哪里"
     },
     {
      "zh": "人",
@@ -4052,7 +4117,8 @@
      "roman": "lái",
      "gloss": "to come",
      "script": "cn",
-     "zhDisp": "来"
+     "zhDisp": "来",
+     "zhS": "来"
     },
     {
      "zh": "的",
@@ -4115,14 +4181,16 @@
      "roman": "gāng",
      "gloss": "just (now)",
      "script": "cn",
-     "zhDisp": "刚"
+     "zhDisp": "刚",
+     "zhS": "刚"
     },
     {
      "zh": "來",
      "roman": "lái",
      "gloss": "to come",
      "script": "cn",
-     "zhDisp": "来"
+     "zhDisp": "来",
+     "zhS": "来"
     },
     {
      "zh": "香港",
@@ -4310,7 +4378,8 @@
      "zh": "辦公室",
      "roman": "bàn-gōng-shì",
      "gloss": "office",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "办公室"
     },
     {
      "zh": "在",
@@ -4324,7 +4393,8 @@
      "roman": "zhè-lǐ",
      "gloss": "here",
      "script": "cn",
-     "zhDisp": "这里"
+     "zhDisp": "这里",
+     "zhS": "这里"
     }
    ],
    "audio": {
@@ -4366,14 +4436,16 @@
      "roman": "huān-yíng",
      "gloss": "welcome",
      "script": "cn",
-     "zhDisp": "欢迎"
+     "zhDisp": "欢迎",
+     "zhS": "欢迎"
     },
     {
      "zh": "來",
      "roman": "lái",
      "gloss": "to come",
      "script": "cn",
-     "zhDisp": "来"
+     "zhDisp": "来",
+     "zhS": "来"
     },
     {
      "zh": "上",
@@ -4401,7 +4473,8 @@
      "roman": "kè",
      "gloss": "class, lesson",
      "script": "cn",
-     "zhDisp": "课"
+     "zhDisp": "课",
+     "zhS": "课"
     }
    ],
    "audio": {
@@ -4450,14 +4523,16 @@
      "zh": "問題",
      "roman": "wèn-tí",
      "gloss": "question; problem",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "问题"
     },
     {
      "zh": "嗎",
      "roman": "ma",
      "gloss": "(question particle)",
      "script": "cn",
-     "zhDisp": "吗"
+     "zhDisp": "吗",
+     "zhS": "吗"
     }
    ],
    "audio": {
@@ -4500,7 +4575,8 @@
      "roman": "xià-kè",
      "gloss": "class ends",
      "script": "cn",
-     "zhDisp": "下课"
+     "zhDisp": "下课",
+     "zhS": "下课"
     },
     {
      "zh": "了",
@@ -4670,14 +4746,16 @@
      "zh": "請",
      "roman": "qǐng",
      "gloss": "please",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "请"
     },
     {
      "zh": "說",
      "roman": "shuō",
      "gloss": "to speak, say",
      "script": "cn",
-     "zhDisp": "说"
+     "zhDisp": "说",
+     "zhS": "说"
     },
     {
      "zh": "慢",
@@ -4691,7 +4769,8 @@
      "roman": "yì-diǎn",
      "gloss": "a little",
      "script": "cn",
-     "zhDisp": "一点"
+     "zhDisp": "一点",
+     "zhS": "一点"
     }
    ],
    "audio": {
@@ -4734,7 +4813,8 @@
      "roman": "zhè-ge",
      "gloss": "this",
      "script": "cn",
-     "zhDisp": "这个"
+     "zhDisp": "这个",
+     "zhS": "这个"
     },
     {
      "zh": "中文",
@@ -4748,14 +4828,16 @@
      "roman": "zěn-me",
      "gloss": "how",
      "script": "cn",
-     "zhDisp": "怎么"
+     "zhDisp": "怎么",
+     "zhS": "怎么"
     },
     {
      "zh": "說",
      "roman": "shuō",
      "gloss": "to speak, say",
      "script": "cn",
-     "zhDisp": "说"
+     "zhDisp": "说",
+     "zhS": "说"
     }
    ],
    "audio": {
@@ -4825,7 +4907,8 @@
      "roman": "ma",
      "gloss": "(question particle)",
      "script": "cn",
-     "zhDisp": "吗"
+     "zhDisp": "吗",
+     "zhS": "吗"
     }
    ],
    "audio": {
@@ -4868,7 +4951,8 @@
      "roman": "wǒ-men",
      "gloss": "we, us",
      "script": "cn",
-     "zhDisp": "我们"
+     "zhDisp": "我们",
+     "zhS": "我们"
     },
     {
      "zh": "一起",
@@ -4967,7 +5051,8 @@
      "roman": "ma",
      "gloss": "(question particle)",
      "script": "cn",
-     "zhDisp": "吗"
+     "zhDisp": "吗",
+     "zhS": "吗"
     }
    ],
    "audio": {
@@ -5009,13 +5094,15 @@
      "roman": "méi",
      "gloss": "not (沒問題 = no problem)",
      "script": "cn",
-     "zhDisp": "没"
+     "zhDisp": "没",
+     "zhS": "没"
     },
     {
      "zh": "問題",
      "roman": "wèn-tí",
      "gloss": "question; problem",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "问题"
     }
    ],
    "audio": {
@@ -5064,7 +5151,8 @@
      "roman": "gěi",
      "gloss": "to give",
      "script": "cn",
-     "zhDisp": "给"
+     "zhDisp": "给",
+     "zhS": "给"
     },
     {
      "zh": "我",
@@ -5078,14 +5166,16 @@
      "roman": "zhè-ge",
      "gloss": "this",
      "script": "cn",
-     "zhDisp": "这个"
+     "zhDisp": "这个",
+     "zhS": "这个"
     },
     {
      "zh": "嗎",
      "roman": "ma",
      "gloss": "(question particle)",
      "script": "cn",
-     "zhDisp": "吗"
+     "zhDisp": "吗",
+     "zhS": "吗"
     }
    ],
    "audio": {
@@ -5136,7 +5226,8 @@
      "roman": "gěi",
      "gloss": "to give",
      "script": "cn",
-     "zhDisp": "给"
+     "zhDisp": "给",
+     "zhS": "给"
     },
     {
      "zh": "我",
@@ -5168,7 +5259,8 @@
      "roman": "ma",
      "gloss": "(question particle)",
      "script": "cn",
-     "zhDisp": "吗"
+     "zhDisp": "吗",
+     "zhS": "吗"
     }
    ],
    "audio": {
@@ -5233,7 +5325,8 @@
      "roman": "jiě-shì",
      "gloss": "to explain",
      "script": "cn",
-     "zhDisp": "解释"
+     "zhDisp": "解释",
+     "zhS": "解释"
     },
     {
      "zh": "一下",
@@ -5247,7 +5340,8 @@
      "roman": "ma",
      "gloss": "(question particle)",
      "script": "cn",
-     "zhDisp": "吗"
+     "zhDisp": "吗",
+     "zhS": "吗"
     }
    ],
    "audio": {
@@ -5292,7 +5386,8 @@
      "roman": "xǐ-huān",
      "gloss": "to like",
      "script": "cn",
-     "zhDisp": "喜欢"
+     "zhDisp": "喜欢",
+     "zhS": "喜欢"
     }
    ],
    "audio": {
@@ -5373,7 +5468,8 @@
      "roman": "ma",
      "gloss": "(question particle)",
      "script": "cn",
-     "zhDisp": "吗"
+     "zhDisp": "吗",
+     "zhS": "吗"
     }
    ],
    "audio": {
@@ -5414,7 +5510,8 @@
      "roman": "shé-me",
      "gloss": "what",
      "script": "cn",
-     "zhDisp": "什么"
+     "zhDisp": "什么",
+     "zhS": "什么"
     }
    ],
    "audio": {
@@ -5494,7 +5591,8 @@
      "roman": "guó",
      "gloss": "country",
      "script": "cn",
-     "zhDisp": "国"
+     "zhDisp": "国",
+     "zhS": "国"
     }
    ],
    "audio": {
@@ -5613,7 +5711,8 @@
      "zh": "兩",
      "roman": "liǎng",
      "gloss": "two (of something)",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "两"
     }
    ],
    "audio": {
@@ -5734,7 +5833,8 @@
      "roman": "lái",
      "gloss": "to come",
      "script": "cn",
-     "zhDisp": "来"
+     "zhDisp": "来",
+     "zhS": "来"
     }
    ],
    "audio": {
@@ -5856,7 +5956,8 @@
      "roman": "méi-yǒu",
      "gloss": "not have; there isn't",
      "script": "cn",
-     "zhDisp": "没有"
+     "zhDisp": "没有",
+     "zhS": "没有"
     }
    ],
    "audio": {
@@ -6017,7 +6118,8 @@
      "roman": "kàn-jiàn",
      "gloss": "to see",
      "script": "cn",
-     "zhDisp": "看见"
+     "zhDisp": "看见",
+     "zhS": "看见"
     }
    ],
    "audio": {
@@ -6057,7 +6159,8 @@
      "roman": "tīng",
      "gloss": "to listen",
      "script": "cn",
-     "zhDisp": "听"
+     "zhDisp": "听",
+     "zhS": "听"
     }
    ],
    "audio": {
@@ -6097,7 +6200,8 @@
      "roman": "shuō",
      "gloss": "to speak, say",
      "script": "cn",
-     "zhDisp": "说"
+     "zhDisp": "说",
+     "zhS": "说"
     }
    ],
    "audio": {
@@ -6137,7 +6241,8 @@
      "roman": "dú",
      "gloss": "to read (aloud); to study",
      "script": "cn",
-     "zhDisp": "读"
+     "zhDisp": "读",
+     "zhS": "读"
     }
    ],
    "audio": {
@@ -6177,7 +6282,8 @@
      "roman": "xiě",
      "gloss": "to write",
      "script": "cn",
-     "zhDisp": "写"
+     "zhDisp": "写",
+     "zhS": "写"
     }
    ],
    "audio": {
@@ -6217,7 +6323,8 @@
      "roman": "xué",
      "gloss": "to learn, study",
      "script": "cn",
-     "zhDisp": "学"
+     "zhDisp": "学",
+     "zhS": "学"
     }
    ],
    "audio": {
@@ -6338,7 +6445,8 @@
      "roman": "rèn-shì",
      "gloss": "to know (a person), to meet",
      "script": "cn",
-     "zhDisp": "认识"
+     "zhDisp": "认识",
+     "zhS": "认识"
     }
    ],
    "audio": {
@@ -6379,7 +6487,8 @@
      "roman": "mǎi",
      "gloss": "to buy",
      "script": "cn",
-     "zhDisp": "买"
+     "zhDisp": "买",
+     "zhS": "买"
     }
    ],
    "audio": {
@@ -6500,7 +6609,8 @@
      "roman": "kāi",
      "gloss": "to open; to drive",
      "script": "cn",
-     "zhDisp": "开"
+     "zhDisp": "开",
+     "zhS": "开"
     }
    ],
    "audio": {
@@ -6540,7 +6650,8 @@
      "roman": "ài",
      "gloss": "to love",
      "script": "cn",
-     "zhDisp": "爱"
+     "zhDisp": "爱",
+     "zhS": "爱"
     }
    ],
    "audio": {
@@ -6661,7 +6772,8 @@
      "roman": "huì",
      "gloss": "can (a learned skill)",
      "script": "cn",
-     "zhDisp": "会"
+     "zhDisp": "会",
+     "zhS": "会"
     }
    ],
    "audio": {
@@ -6782,7 +6894,8 @@
      "roman": "shuì-jiào",
      "gloss": "to sleep",
      "script": "cn",
-     "zhDisp": "睡觉"
+     "zhDisp": "睡觉",
+     "zhS": "睡觉"
     }
    ],
    "audio": {
@@ -6829,7 +6942,8 @@
      "roman": "diàn-huà",
      "gloss": "telephone",
      "script": "cn",
-     "zhDisp": "电话"
+     "zhDisp": "电话",
+     "zhS": "电话"
     }
    ],
    "audio": {
@@ -6895,7 +7009,8 @@
        "zh": "荷蘭",
        "roman": "Hé-lán",
        "gloss": "the Netherlands",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "荷兰"
       }
      ],
      "situation": "Someone asks where you'd like to travel. (the Netherlands)",
@@ -7309,7 +7424,8 @@
      "roman": "tīng",
      "gloss": "to listen",
      "script": "cn",
-     "zhDisp": "听"
+     "zhDisp": "听",
+     "zhS": "听"
     },
     {
      "zh": "不",
@@ -7366,7 +7482,8 @@
      "zh": "請",
      "roman": "qǐng",
      "gloss": "please",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "请"
     },
     {
      "zh": "再",
@@ -7380,7 +7497,8 @@
      "roman": "shuō",
      "gloss": "to speak, say",
      "script": "cn",
-     "zhDisp": "说"
+     "zhDisp": "说",
+     "zhS": "说"
     },
     {
      "zh": "一次",
@@ -7438,14 +7556,16 @@
      "roman": "huì",
      "gloss": "can (a learned skill)",
      "script": "cn",
-     "zhDisp": "会"
+     "zhDisp": "会",
+     "zhS": "会"
     },
     {
      "zh": "說",
      "roman": "shuō",
      "gloss": "to speak, say",
      "script": "cn",
-     "zhDisp": "说"
+     "zhDisp": "说",
+     "zhS": "说"
     },
     {
      "zh": "英文",
@@ -7459,7 +7579,8 @@
      "roman": "ma",
      "gloss": "(question particle)",
      "script": "cn",
-     "zhDisp": "吗"
+     "zhDisp": "吗",
+     "zhS": "吗"
     }
    ],
    "audio": {
@@ -7508,21 +7629,24 @@
      "roman": "huì",
      "gloss": "can (a learned skill)",
      "script": "cn",
-     "zhDisp": "会"
+     "zhDisp": "会",
+     "zhS": "会"
     },
     {
      "zh": "說",
      "roman": "shuō",
      "gloss": "to speak, say",
      "script": "cn",
-     "zhDisp": "说"
+     "zhDisp": "说",
+     "zhS": "说"
     },
     {
      "zh": "一點點",
      "roman": "yì-diǎn-diǎn",
      "gloss": "a little bit",
      "script": "cn",
-     "zhDisp": "一点点"
+     "zhDisp": "一点点",
+     "zhS": "一点点"
     },
     {
      "zh": "中文",
@@ -7586,7 +7710,8 @@
      "roman": "xué",
      "gloss": "to learn, study",
      "script": "cn",
-     "zhDisp": "学"
+     "zhDisp": "学",
+     "zhS": "学"
     },
     {
      "zh": "中文",
@@ -7713,7 +7838,8 @@
      "roman": "nǎ-lǐ",
      "gloss": "where",
      "script": "cn",
-     "zhDisp": "哪里"
+     "zhDisp": "哪里",
+     "zhS": "哪里"
     },
     {
      "zh": "工作",
@@ -7784,7 +7910,8 @@
      "zh": "大學",
      "roman": "Dà-xué",
      "gloss": "university",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "大学"
     },
     {
      "zh": "工作",
@@ -7841,7 +7968,8 @@
      "roman": "hái-méi",
      "gloss": "not yet",
      "script": "cn",
-     "zhDisp": "还没"
+     "zhDisp": "还没",
+     "zhS": "还没"
     },
     {
      "zh": "吃",
@@ -7912,7 +8040,8 @@
      "roman": "shé-me",
      "gloss": "what",
      "script": "cn",
-     "zhDisp": "什么"
+     "zhDisp": "什么",
+     "zhS": "什么"
     }
    ],
    "audio": {
@@ -8155,7 +8284,8 @@
        "zh": "雞肉",
        "roman": "jī-ròu",
        "gloss": "chicken",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "鸡肉"
       }
      ],
      "situation": "A friend asks what you feel like eating. (chicken)",
@@ -8271,7 +8401,8 @@
        "zh": "菠蘿包",
        "roman": "bō-luó-bāo",
        "gloss": "pineapple bun",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "菠萝包"
       }
      ],
      "situation": "A friend asks what you feel like eating. (pineapple buns)",
@@ -8605,7 +8736,8 @@
        "zh": "雞肉",
        "roman": "jī-ròu",
        "gloss": "chicken",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "鸡肉"
       }
      ],
      "situation": "The waiter is ready to take your order. (chicken)",
@@ -8656,7 +8788,8 @@
        "zh": "菠蘿包",
        "roman": "bō-luó-bāo",
        "gloss": "pineapple bun",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "菠萝包"
       }
      ],
      "situation": "The waiter is ready to take your order. (pineapple bun)",
@@ -8810,14 +8943,16 @@
        "zh": "請",
        "roman": "qǐng",
        "gloss": "please",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "请"
       },
       {
        "zh": "給",
        "roman": "gěi",
        "gloss": "to give",
        "script": "cn",
-       "zhDisp": "给"
+       "zhDisp": "给",
+       "zhS": "给"
       },
       {
        "zh": "我",
@@ -8867,14 +9002,16 @@
        "zh": "請",
        "roman": "qǐng",
        "gloss": "please",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "请"
       },
       {
        "zh": "給",
        "roman": "gěi",
        "gloss": "to give",
        "script": "cn",
-       "zhDisp": "给"
+       "zhDisp": "给",
+       "zhS": "给"
       },
       {
        "zh": "我",
@@ -8924,14 +9061,16 @@
        "zh": "請",
        "roman": "qǐng",
        "gloss": "please",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "请"
       },
       {
        "zh": "給",
        "roman": "gěi",
        "gloss": "to give",
        "script": "cn",
-       "zhDisp": "给"
+       "zhDisp": "给",
+       "zhS": "给"
       },
       {
        "zh": "我",
@@ -8981,14 +9120,16 @@
        "zh": "請",
        "roman": "qǐng",
        "gloss": "please",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "请"
       },
       {
        "zh": "給",
        "roman": "gěi",
        "gloss": "to give",
        "script": "cn",
-       "zhDisp": "给"
+       "zhDisp": "给",
+       "zhS": "给"
       },
       {
        "zh": "我",
@@ -9001,7 +9142,8 @@
        "zh": "雞肉",
        "roman": "jī-ròu",
        "gloss": "chicken",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "鸡肉"
       }
      ],
      "situation": "You order politely. (chicken)",
@@ -9038,14 +9180,16 @@
        "zh": "請",
        "roman": "qǐng",
        "gloss": "please",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "请"
       },
       {
        "zh": "給",
        "roman": "gěi",
        "gloss": "to give",
        "script": "cn",
-       "zhDisp": "给"
+       "zhDisp": "给",
+       "zhS": "给"
       },
       {
        "zh": "我",
@@ -9058,7 +9202,8 @@
        "zh": "菠蘿包",
        "roman": "bō-luó-bāo",
        "gloss": "pineapple bun",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "菠萝包"
       }
      ],
      "situation": "You order politely. (pineapple bun)",
@@ -9095,14 +9240,16 @@
        "zh": "請",
        "roman": "qǐng",
        "gloss": "please",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "请"
       },
       {
        "zh": "給",
        "roman": "gěi",
        "gloss": "to give",
        "script": "cn",
-       "zhDisp": "给"
+       "zhDisp": "给",
+       "zhS": "给"
       },
       {
        "zh": "我",
@@ -9152,14 +9299,16 @@
        "zh": "請",
        "roman": "qǐng",
        "gloss": "please",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "请"
       },
       {
        "zh": "給",
        "roman": "gěi",
        "gloss": "to give",
        "script": "cn",
-       "zhDisp": "给"
+       "zhDisp": "给",
+       "zhS": "给"
       },
       {
        "zh": "我",
@@ -9218,7 +9367,8 @@
      "roman": "hái-méi",
      "gloss": "not yet",
      "script": "cn",
-     "zhDisp": "还没"
+     "zhDisp": "还没",
+     "zhS": "还没"
     }
    ],
    "audio": {
@@ -9257,7 +9407,8 @@
      "zh": "請",
      "roman": "qǐng",
      "gloss": "please",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "请"
     }
    ],
    "audio": {
@@ -9339,7 +9490,8 @@
      "zh": "雞肉",
      "roman": "jī-ròu",
      "gloss": "chicken",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "鸡肉"
     }
    ],
    "audio": {
@@ -9464,7 +9616,8 @@
      "zh": "茶餐廳",
      "roman": "chá-cān-tīng",
      "gloss": "Hong Kong-style café (cha chaan teng)",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "茶餐厅"
     }
    ],
    "audio": {
@@ -9503,7 +9656,8 @@
      "zh": "菠蘿包",
      "roman": "bō-luó-bāo",
      "gloss": "pineapple bun",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "菠萝包"
     }
    ],
    "audio": {
@@ -9675,7 +9829,8 @@
      "roman": "nǐ-men",
      "gloss": "you (plural)",
      "script": "cn",
-     "zhDisp": "你们"
+     "zhDisp": "你们",
+     "zhS": "你们"
     },
     {
      "zh": "好",
@@ -9902,13 +10057,15 @@
      "roman": "méi-yǒu",
      "gloss": "not have; there isn't",
      "script": "cn",
-     "zhDisp": "没有"
+     "zhDisp": "没有",
+     "zhS": "没有"
     },
     {
      "zh": "問題",
      "roman": "wèn-tí",
      "gloss": "question; problem",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "问题"
     }
    ],
    "audio": {
@@ -10022,7 +10179,8 @@
      "roman": "méi",
      "gloss": "not (沒問題 = no problem)",
      "script": "cn",
-     "zhDisp": "没"
+     "zhDisp": "没",
+     "zhS": "没"
     },
     {
      "zh": "吃",
@@ -10099,7 +10257,8 @@
      "roman": "shí-hòu",
      "gloss": "time, moment",
      "script": "cn",
-     "zhDisp": "时候"
+     "zhDisp": "时候",
+     "zhS": "时候"
     }
    ],
    "audio": {
@@ -10149,14 +10308,16 @@
      "roman": "jué-de",
      "gloss": "to feel, think (an opinion)",
      "script": "cn",
-     "zhDisp": "觉得"
+     "zhDisp": "觉得",
+     "zhS": "觉得"
     },
     {
      "zh": "怎麼樣",
      "roman": "zěn-me-yàng",
      "gloss": "how is it?",
      "script": "cn",
-     "zhDisp": "怎么样"
+     "zhDisp": "怎么样",
+     "zhS": "怎么样"
     }
    ],
    "audio": {
@@ -10377,7 +10538,8 @@
      "roman": "zhè-ge",
      "gloss": "this",
      "script": "cn",
-     "zhDisp": "这个"
+     "zhDisp": "这个",
+     "zhS": "这个"
     },
     {
      "zh": "人",
@@ -10462,7 +10624,8 @@
      "roman": "méi-yǒu",
      "gloss": "not have; there isn't",
      "script": "cn",
-     "zhDisp": "没有"
+     "zhDisp": "没有",
+     "zhS": "没有"
     },
     {
      "zh": "其他",
@@ -10475,7 +10638,8 @@
      "zh": "問題",
      "roman": "wèn-tí",
      "gloss": "question; problem",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "问题"
     }
    ],
    "audio": {
@@ -10525,7 +10689,8 @@
      "roman": "méi-yǒu",
      "gloss": "not have; there isn't",
      "script": "cn",
-     "zhDisp": "没有"
+     "zhDisp": "没有",
+     "zhS": "没有"
     },
     {
      "zh": "其他",
@@ -10539,7 +10704,8 @@
      "roman": "shí-jiān",
      "gloss": "time (in general, a slot)",
      "script": "cn",
-     "zhDisp": "时间"
+     "zhDisp": "时间",
+     "zhS": "时间"
     },
     {
      "zh": "上",
@@ -10553,7 +10719,8 @@
      "roman": "kè",
      "gloss": "class, lesson",
      "script": "cn",
-     "zhDisp": "课"
+     "zhDisp": "课",
+     "zhS": "课"
     }
    ],
    "audio": {
@@ -10611,7 +10778,8 @@
      "roman": "jiàn",
      "gloss": "to see, meet (…見 = see you …)",
      "script": "cn",
-     "zhDisp": "见"
+     "zhDisp": "见",
+     "zhS": "见"
     }
    ],
    "audio": {
@@ -11047,13 +11215,15 @@
        "roman": "qù-guò",
        "gloss": "to have been (somewhere)",
        "script": "cn",
-       "zhDisp": "去过"
+       "zhDisp": "去过",
+       "zhS": "去过"
       },
       {
        "zh": "荷蘭",
        "roman": "Hé-lán",
        "gloss": "the Netherlands",
-       "script": "hk"
+       "script": "hk",
+       "zhS": "荷兰"
       }
      ],
      "situation": "Someone asks if you've been to the Netherlands.",
@@ -11112,7 +11282,8 @@
        "roman": "jiàn",
        "gloss": "to see, meet (…見 = see you …)",
        "script": "cn",
-       "zhDisp": "见"
+       "zhDisp": "见",
+       "zhS": "见"
       }
      ],
      "situation": "You leave and will see them tomorrow.",
@@ -11150,14 +11321,16 @@
        "roman": "hòu-tiān",
        "gloss": "the day after tomorrow",
        "script": "cn",
-       "zhDisp": "后天"
+       "zhDisp": "后天",
+       "zhS": "后天"
       },
       {
        "zh": "見",
        "roman": "jiàn",
        "gloss": "to see, meet (…見 = see you …)",
        "script": "cn",
-       "zhDisp": "见"
+       "zhDisp": "见",
+       "zhS": "见"
       }
      ],
      "situation": "You leave and will see them the day after tomorrow.",
@@ -11202,7 +11375,8 @@
      "roman": "jiè-shào",
      "gloss": "to introduce",
      "script": "cn",
-     "zhDisp": "介绍"
+     "zhDisp": "介绍",
+     "zhS": "介绍"
     }
    ],
    "audio": {
@@ -11242,7 +11416,8 @@
      "roman": "nǐ-men",
      "gloss": "you (plural)",
      "script": "cn",
-     "zhDisp": "你们"
+     "zhDisp": "你们",
+     "zhS": "你们"
     }
    ],
    "audio": {
@@ -11321,7 +11496,8 @@
      "roman": "kāi-chē",
      "gloss": "to drive (a car)",
      "script": "cn",
-     "zhDisp": "开车"
+     "zhDisp": "开车",
+     "zhS": "开车"
     }
    ],
    "audio": {
@@ -11361,7 +11537,8 @@
      "roman": "zuò-fàn",
      "gloss": "to make food, cook",
      "script": "cn",
-     "zhDisp": "做饭"
+     "zhDisp": "做饭",
+     "zhS": "做饭"
     }
    ],
    "audio": {
@@ -11401,7 +11578,8 @@
      "roman": "zhǔ-fàn",
      "gloss": "to cook (rice / a meal)",
      "script": "cn",
-     "zhDisp": "煮饭"
+     "zhDisp": "煮饭",
+     "zhS": "煮饭"
     }
    ],
    "audio": {
@@ -11481,7 +11659,8 @@
      "roman": "zhè",
      "gloss": "this",
      "script": "cn",
-     "zhDisp": "这"
+     "zhDisp": "这",
+     "zhS": "这"
     }
    ],
    "audio": {
@@ -11601,7 +11780,8 @@
      "roman": "shí-jiān",
      "gloss": "time (in general, a slot)",
      "script": "cn",
-     "zhDisp": "时间"
+     "zhDisp": "时间",
+     "zhS": "时间"
     }
    ],
    "audio": {
@@ -11641,7 +11821,8 @@
      "roman": "jiān",
      "gloss": "space; interval",
      "script": "cn",
-     "zhDisp": "间"
+     "zhDisp": "间",
+     "zhS": "间"
     }
    ],
    "audio": {
@@ -11681,7 +11862,8 @@
      "roman": "mén",
      "gloss": "door",
      "script": "cn",
-     "zhDisp": "门"
+     "zhDisp": "门",
+     "zhS": "门"
     }
    ],
    "audio": {
@@ -11842,7 +12024,8 @@
      "roman": "jué-de",
      "gloss": "to feel, think (an opinion)",
      "script": "cn",
-     "zhDisp": "觉得"
+     "zhDisp": "觉得",
+     "zhS": "觉得"
     }
    ],
    "audio": {
@@ -11882,7 +12065,8 @@
      "roman": "zěn-me",
      "gloss": "how",
      "script": "cn",
-     "zhDisp": "怎么"
+     "zhDisp": "怎么",
+     "zhS": "怎么"
     }
    ],
    "audio": {
@@ -12085,7 +12269,8 @@
      "roman": "hòu-tiān",
      "gloss": "the day after tomorrow",
      "script": "cn",
-     "zhDisp": "后天"
+     "zhDisp": "后天",
+     "zhS": "后天"
     }
    ],
    "audio": {
@@ -12209,7 +12394,8 @@
      "roman": "yǐ-hòu",
      "gloss": "after, in the future",
      "script": "cn",
-     "zhDisp": "以后"
+     "zhDisp": "以后",
+     "zhS": "以后"
     }
    ],
    "audio": {
@@ -12250,7 +12436,8 @@
      "roman": "zhī-hòu",
      "gloss": "after (a specific moment)",
      "script": "cn",
-     "zhDisp": "之后"
+     "zhDisp": "之后",
+     "zhS": "之后"
     }
    ],
    "audio": {
@@ -12290,7 +12477,8 @@
      "roman": "shí-hòu",
      "gloss": "time, moment",
      "script": "cn",
-     "zhDisp": "时候"
+     "zhDisp": "时候",
+     "zhS": "时候"
     }
    ],
    "audio": {
@@ -12491,7 +12679,8 @@
      "zh": "個",
      "roman": "gè",
      "gloss": "(measure word: people, most things)",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "个"
     }
    ],
    "audio": {
@@ -12571,7 +12760,8 @@
      "roman": "qù-guò",
      "gloss": "to have been (somewhere)",
      "script": "cn",
-     "zhDisp": "去过"
+     "zhDisp": "去过",
+     "zhS": "去过"
     }
    ],
    "audio": {
@@ -12743,14 +12933,16 @@
      "roman": "xué",
      "gloss": "to learn, study",
      "script": "cn",
-     "zhDisp": "学"
+     "zhDisp": "学",
+     "zhS": "学"
     },
     {
      "zh": "普通話",
      "roman": "pǔ-tōng-huà",
      "gloss": "Mandarin (as it is called in Hong Kong and mainland China)",
      "script": "cn",
-     "zhDisp": "普通话"
+     "zhDisp": "普通话",
+     "zhS": "普通话"
     }
    ],
    "audio": {
@@ -12795,7 +12987,8 @@
      "roman": "zhè",
      "gloss": "this",
      "script": "cn",
-     "zhDisp": "这"
+     "zhDisp": "这",
+     "zhS": "这"
     },
     {
      "zh": "句",
@@ -12809,7 +13002,8 @@
      "roman": "huà",
      "gloss": "speech, words",
      "script": "cn",
-     "zhDisp": "话"
+     "zhDisp": "话",
+     "zhS": "话"
     },
     {
      "zh": "中文",
@@ -12823,14 +13017,16 @@
      "roman": "zěn-me",
      "gloss": "how",
      "script": "cn",
-     "zhDisp": "怎么"
+     "zhDisp": "怎么",
+     "zhS": "怎么"
     },
     {
      "zh": "說",
      "roman": "shuō",
      "gloss": "to speak, say",
      "script": "cn",
-     "zhDisp": "说"
+     "zhDisp": "说",
+     "zhS": "说"
     }
    ],
    "audio": {
@@ -12889,20 +13085,23 @@
      "roman": "cóng",
      "gloss": "from",
      "script": "cn",
-     "zhDisp": "从"
+     "zhDisp": "从",
+     "zhS": "从"
     },
     {
      "zh": "荷蘭",
      "roman": "Hé-lán",
      "gloss": "the Netherlands",
-     "script": "hk"
+     "script": "hk",
+     "zhS": "荷兰"
     },
     {
      "zh": "來",
      "roman": "lái",
      "gloss": "to come",
      "script": "cn",
-     "zhDisp": "来"
+     "zhDisp": "来",
+     "zhS": "来"
     },
     {
      "zh": "的",
@@ -12954,7 +13153,8 @@
      "roman": "bú-huì",
      "gloss": "No problem! (when someone thanks you)",
      "script": "cn",
-     "zhDisp": "不会"
+     "zhDisp": "不会",
+     "zhS": "不会"
     }
    ],
    "audio": {

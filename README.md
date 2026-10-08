@@ -24,10 +24,15 @@ Practice:
   *Read it* cards show a word from phrases you've met (most frequent first): say it, then check. Once you can
   say a phrase, *Build the sentence* asks you to tap word tiles into order (with two decoys). Tiles show pinyin
   under words you can't read yet; it disappears once you've recognised a word on two different days.
+- The daily session has a fixed shape (40 cards at most): a short warm-up (the 5 weakest trouble spots, the 3
+  hardest-to-read words, today's focus), then reviews with the day's new material mixed in. The new speaking
+  cards, 3 new word cards and 2 sentence builds always get their place; reviews give way when the day is full.
+- *Read it* cards show Hong Kong-visible words in Traditional and the rest in Simplified. Tap the script label
+  on the card to switch between Traditional and Simplified, or pick one in Settings (*Characters on word cards*).
 - Tap any word (in answers, on tiles, in "Which part?") to hear just that word.
 - Missing a *Read it* card marks a **reading** problem (Me → "Hard to read"), kept apart from speaking trouble
   spots ("Hard to say"): the word's pinyin returns on tiles and its Read it card comes first in the next sessions,
-  until you read it right on two later days.
+  until you read it right on later days (four at most, however often it was missed). "Almost" changes nothing.
 - **Listen** cards unlock for a phrase once you've said it correctly on two different days. **Read** cards (characters → sound) only appear when *Practise reading characters* is on in Settings; with it off, pinyin is shown large and characters small.
 - **Pattern** cards (我喜歡喝___) fill in a different word each time, preferring words you've already seen.
 - Every card rotates between voices (🇹🇼 Taiwan / 🇨🇳 Beijing for Mandarin, 🇭🇰 for Cantonese).

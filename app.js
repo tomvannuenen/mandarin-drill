@@ -17,7 +17,7 @@ import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pul
 import { flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
 import { weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from './lib/motivation.js';
 import { composeToday, snapshot, outcome, dueSoon, estimateMinutes } from './lib/today.js';
-import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId, reclassifyReadingFlags } from './lib/chars.js';
+import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId, reclassifyReadingFlags, displayFor } from './lib/chars.js';
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 const LANG_NAME = { mandarin: 'Mandarin', cantonese: 'Cantonese' };
@@ -355,11 +355,10 @@ function renderMission(now) {
 function contentFor(card) {
   const item = byId[card.id];
   if (card.type === 'char') {
-    const script = item.script || 'hk';
-    const zhDisp = item.zhDisp || item.zh;
-    const word = { zh: item.zh, roman: item.roman, gloss: item.gloss, script, zhDisp };
+    const { script, zhDisp } = displayFor(item, progress.settings.script);
+    const word = { zh: item.zh, roman: item.roman, gloss: item.gloss, script, zhDisp, zhS: item.zhS };
     return {
-      char: true, zh: item.zh, zhDisp, script, roman: item.roman, en: item.gloss, words: [word], example: item.example,
+      char: true, zh: item.zh, zhDisp, zhS: item.zhS, script, roman: item.roman, en: item.gloss, words: [word], example: item.example,
       audio: item.audio, voice: item.audio ? pickVoice(item) : null, played: false, deck: item.deck, flagged: new Set(),
       ...tracking(),
     };
@@ -520,13 +519,26 @@ function finishBuild(rating) {
   playCurrent();
 }
 
+function switchScript(card, c) {
+  progress.settings.script = c.script === 'cn' ? 'hk' : 'cn';
+  persist();
+  Object.assign(c, displayFor(c, progress.settings.script));
+  Object.assign(c.words[0], displayFor(c.words[0], progress.settings.script));
+  $('prompt').replaceChildren(...promptFor(card, c));
+  if (!$('answer').hidden) document.querySelector('#prompt .hint-btn')?.remove();
+  renderWords(c);
+}
+
 function promptFor(card, c) {
   const lang = LANG_ATTR[c.deck];
   if (c.build) return renderBuild(c);
   if (c.char) {
     return [
       el('p', { class: 'prompt-char', lang: SCRIPT_LANG[c.script] || lang }, c.zhDisp),
-      el('span', { class: `script-badge script-${c.script}` }, SCRIPT_LABEL[c.script] || ''),
+      // Tapping the badge switches between Traditional and Simplified, for this card and the ones after it.
+      c.deck === 'mandarin'
+        ? el('button', { class: `script-badge script-${c.script}`, 'aria-label': 'Switch between Traditional and Simplified', onclick: () => switchScript(card, c) }, `${SCRIPT_LABEL[c.script] || ''} ⇄`)
+        : el('span', { class: `script-badge script-${c.script}` }, SCRIPT_LABEL[c.script] || ''),
       el('p', { class: 'muted' }, 'Say it out loud'),
       hintButton(c),
     ];
@@ -659,7 +671,8 @@ function commit(rating) {
   applyReview(progress, card, rating, state, now, {
     ms: c.revealMs, voice: c.voice, replays: c.replays, lookups: [...c.lookups], hint: c.hint,
   });
-  if (c.char) markReading(progress, c.deck, c.zh, rating >= 3, now); // reading, not speaking
+  // Reading, not speaking. "Almost" neither flags the word nor counts toward its recovery.
+  if (c.char) { if (rating !== 2) markReading(progress, c.deck, c.zh, rating >= 3, now); }
   else if (rating >= 3) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words, now);
   for (const zh of c.flagged) {
     // On a read-aloud card the problem is reading the characters, not saying the word.
@@ -822,11 +835,12 @@ function renderMe() {
       el('p', { class: 'section' }, 'Hard to read'),
       el('div', { class: 'spots' }, ...reading.slice(0, 10).map((t) => {
         const info2 = byId[charId(d, t.zh)];
-        const disp = info2?.zhDisp || t.zh;
-        const spotLang = SCRIPT_LANG[info2?.script] || LANG_ATTR[d];
+        const shown = info2 ? displayFor(info2, progress.settings.script) : { script: 'hk', zhDisp: t.zh };
+        const disp = shown.zhDisp;
+        const spotLang = SCRIPT_LANG[shown.script] || LANG_ATTR[d];
         return el('button', { class: 'spot read-spot', onclick: () => speakWord(t.zh, d) },
           el('span', { class: 'spot-zh', lang: spotLang }, disp),
-          ...(info2?.script === 'cn' ? [el('span', { class: 'script-badge script-cn small' }, '简')] : []),
+          ...(shown.script === 'cn' ? [el('span', { class: 'script-badge script-cn small' }, '简')] : []),
           el('small', {}, info2 ? `${info2.roman.replace(/-/g, '')} · ${info2.gloss}` : ''));
       })),
       el('button', { class: 'btn small', onclick: () => startSession(reading.map((t) => ({ key: `${charId(d, t.zh)}:char`, id: charId(d, t.zh), type: 'char', deck: d }))) }, `Practise reading ${reading.length}`),
@@ -887,6 +901,7 @@ function renderSettings() {
   $('new-per-day').value = progress.settings.newPerDay;
   $('lesson-day').value = progress.settings.lessonDay ?? '';
   $('reading').checked = !!progress.settings.reading;
+  $('script').value = progress.settings.script || 'auto';
   renderSync();
   $('last-export').textContent = progress.lastExport ? `Last export: ${new Date(progress.lastExport).toLocaleDateString()}` : 'Not exported yet.';
   const counts = Object.keys(decks).map((d) => `${allItems.filter((i) => i.deck === d).length} ${LANG_NAME[d]}`);
@@ -971,6 +986,10 @@ function wire() {
     progress.settings.newPerDay = Math.max(0, Math.min(50, parseInt(e.target.value, 10) || 0));
     persist();
     renderSettings();
+  });
+  $('script').addEventListener('change', (e) => {
+    progress.settings.script = e.target.value;
+    persist();
   });
   $('reading').addEventListener('change', (e) => {
     progress.settings.reading = e.target.checked;

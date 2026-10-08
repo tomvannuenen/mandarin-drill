@@ -120,3 +120,39 @@ test('a deck without character work gets no read, word or build cards', () => {
   const { queue } = composeToday({ items: ITEMS, drills: [], chars, progress: p, plan: null, now: NOW, newLimit: 0, deck: 'mandarin', characters: false });
   assert.deepEqual(queue.map((q) => q.key), ['a:say']);
 });
+
+test('composeToday keeps the warm-up short and always fits the new words and builds', () => {
+  const p = defaults();
+  const words = '一二三四五六七八九十百千'.split('');
+  const items = Array.from({ length: 45 }, (_, n) => ({ id: `i${n}`, kind: 'phrase', deck: 'mandarin', week: 1, words: [{ zh: '我' }, { zh: '喝' }] }));
+  for (const { id } of items) {
+    p.cards[`${id}:say`] = past(1);
+    p.cards[`${id}:listen`] = past(1);
+    p.goodCounts[id] = 2;
+  }
+  const drills = words.map((zh) => ({ id: `w/mandarin/${zh}`, kind: 'drill', deck: 'mandarin', zh }));
+  const chars = [...words, '我', '喝', '你'].map((zh) => ({ id: `c/mandarin/${zh}`, kind: 'char', deck: 'mandarin', zh }));
+  words.forEach((zh, n) => {
+    p.weak[`w/mandarin/${zh}`] = { score: n + 1, flags: 1 };
+    p.cards[`w/mandarin/${zh}:say`] = past(1);
+    p.weakChars[`mandarin/${zh}`] = { score: n + 1, flags: 1, lastDay: '2026-09-20' };
+    p.cards[`c/mandarin/${zh}:char`] = future(5);
+  });
+  const { queue, counts } = composeToday({ items, drills, chars, progress: p, plan: null, now: NOW, newLimit: 0, deck: 'mandarin' });
+  assert.equal(queue.length, 40);
+  assert.deepEqual(queue.slice(0, 5).map((q) => q.id), ['千', '百', '十', '九', '八'].map((zh) => `w/mandarin/${zh}`), 'the five weakest drills');
+  assert.deepEqual(queue.slice(5, 8).map((q) => q.key), ['千', '百', '十'].map((zh) => `c/mandarin/${zh}:char`), 'the three hardest to read');
+  assert.equal(counts.focus, 8);
+  assert.deepEqual([counts.chars, counts.builds], [3, 2], 'new word cards and builds are never squeezed out');
+});
+
+test('a hard-to-read word already handled today does not open the next session again', () => {
+  const p = defaults();
+  const items = [{ id: 'a', kind: 'phrase', deck: 'mandarin', week: 1, words: [{ zh: '我' }, { zh: '喝' }] }];
+  p.cards['a:say'] = future(9);
+  p.cards['c/mandarin/喝:char'] = future(5);
+  p.weakChars = { 'mandarin/喝': { score: 2, flags: 1, lastDay: '2026-09-27' } };
+  const chars = [{ id: 'c/mandarin/喝', kind: 'char', deck: 'mandarin', zh: '喝' }];
+  const { queue } = composeToday({ items, drills: [], chars, progress: p, plan: null, now: NOW, newLimit: 0, deck: 'mandarin', charLimit: 0, buildLimit: 0 });
+  assert.deepEqual(queue, []);
+});

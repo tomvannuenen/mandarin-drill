@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 import { defaults, applyReview, localDate, newToday } from '../lib/store.js';
 import { grade } from '../lib/srs.js';
-import { charId, charItems, newCharCards, newBuildCards, knowsWord, tiles, isBuilt, markReading, readingTrouble, reclassifyReadingFlags } from '../lib/chars.js';
+import { charId, charItems, newCharCards, newBuildCards, knowsWord, tiles, isBuilt, markReading, readingTrouble, reclassifyReadingFlags, displayFor } from '../lib/chars.js';
 import { buildQueue } from '../lib/session.js';
 
 const NOW = new Date(2026, 8, 28, 9);
@@ -126,4 +126,35 @@ test('speaking flags that really came from failed reading are moved to reading',
   assert.equal(p.weak['w/mandarin/喜歡'].score, 0);
   assert.equal(p.weakChars['mandarin/喜歡'].score, 2);
   assert.equal(p.weak['w/mandarin/你'].score, 4);
+});
+
+test('a reading problem clears after four good days however often the word was missed', () => {
+  const p = defaults();
+  const later = (d) => new Date(NOW.getTime() + d * 86400000);
+  for (let i = 0; i < 6; i++) markReading(p, 'mandarin', '很', false, NOW);
+  assert.equal(readingTrouble(p, 'mandarin')[0].score, 4);
+  p.weakChars['mandarin/很'].score = 13; // from before the cap
+  for (let d = 1; d <= 4; d++) markReading(p, 'mandarin', '很', true, later(d));
+  assert.deepEqual(readingTrouble(p, 'mandarin'), []);
+});
+
+test('recognising a word on two days makes it known', () => {
+  const p = defaults();
+  const card = { id: charId('mandarin', '喝'), type: 'char', deck: 'mandarin' };
+  applyReview(p, card, 3, grade(null, 3, NOW), NOW);
+  assert.equal(knowsWord(p, 'mandarin', '喝'), false);
+  const next = new Date(NOW.getTime() + 86400000);
+  applyReview(p, card, 3, grade(null, 3, next), next);
+  assert.equal(knowsWord(p, 'mandarin', '喝'), true);
+  assert.equal(p.stats.newCounts.mandarin, undefined, 'word cards do not use up the new speaking cards');
+});
+
+test('displayFor follows the script setting', () => {
+  const hk = { zh: '謝謝', script: 'hk', zhS: '谢谢' };
+  const cn = { zh: '認識', script: 'cn', zhDisp: '认识', zhS: '认识' };
+  assert.deepEqual(displayFor(hk, 'auto'), { script: 'hk', zhDisp: '謝謝' });
+  assert.deepEqual(displayFor(cn, 'auto'), { script: 'cn', zhDisp: '认识' });
+  assert.deepEqual(displayFor(hk, 'cn'), { script: 'cn', zhDisp: '谢谢' });
+  assert.deepEqual(displayFor(cn, 'hk'), { script: 'hk', zhDisp: '認識' });
+  assert.deepEqual(displayFor({ zh: '我', script: 'cn' }, 'cn'), { script: 'cn', zhDisp: '我' });
 });

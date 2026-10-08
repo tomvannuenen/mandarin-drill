@@ -1,6 +1,6 @@
 // Offline support. VERSION is stamped by tools/build.py whenever app files change.
 <<<<<<< HEAD
-const VERSION = '4b0802b7fcda';
+const VERSION = '1bc3f3af3c72';
 =======
 const VERSION = '0e520a35435c';
 >>>>>>> 301899ba3e4bee4044243b5fcf1767a39ed0be41

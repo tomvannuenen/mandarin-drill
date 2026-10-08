@@ -1,5 +1,5 @@
 {
- "version": "0d3c0db9bac5",
+ "version": "54abdd80f2dd",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -12641,6 +12641,349 @@
    "topic": "Small talk",
    "mission": "Compliment a friend's outfit: 我喜歡你的穿搭",
    "wish": "wish-1791068540254"
+  },
+  {
+   "id": "wo-hen-hao-ni-ne",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "我很好，你呢？",
+   "roman": "wǒ hěn hǎo, nǐ ne?",
+   "en": "I'm good, and you?",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me",
+     "script": "cn",
+     "zhDisp": "我"
+    },
+    {
+     "zh": "很",
+     "roman": "hěn",
+     "gloss": "very",
+     "script": "cn",
+     "zhDisp": "很"
+    },
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well",
+     "script": "cn",
+     "zhDisp": "好"
+    },
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you",
+     "script": "cn",
+     "zhDisp": "你"
+    },
+    {
+     "zh": "呢",
+     "roman": "ne",
+     "gloss": "(and you? / what about…?)",
+     "script": "cn",
+     "zhDisp": "呢"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-hen-hao-ni-ne.mp3",
+     "audio/tw-yunjhe/wo-hen-hao-ni-ne-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-hen-hao-ni-ne.mp3",
+     "audio/tw-hsiaochen/wo-hen-hao-ni-ne-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-hen-hao-ni-ne.mp3",
+     "audio/tw-hsiaoyu/wo-hen-hao-ni-ne-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-hen-hao-ni-ne.mp3",
+     "audio/cn-yunyang/wo-hen-hao-ni-ne-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-hen-hao-ni-ne.mp3",
+     "audio/cn-xiaoxiao/wo-hen-hao-ni-ne-slow.mp3"
+    ]
+   },
+   "situation": "Someone asks how you are and you want to return the question.",
+   "note": "我很好 + 你呢？ said in one breath. 呢 bounces the same question back, so you don't have to repeat 你好嗎",
+   "topic": "Small talk",
+   "mission": "Next time a colleague at CUHK asks 你好嗎？ or 最近怎麼樣？, answer 我很好，你呢？",
+   "wish": "wish-1791245389497"
+  },
+  {
+   "id": "wo-zai-xue-putonghua",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "我在學普通話",
+   "roman": "wǒ zài xué pǔ-tōng-huà",
+   "en": "I'm learning Mandarin",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me",
+     "script": "cn",
+     "zhDisp": "我"
+    },
+    {
+     "zh": "在",
+     "roman": "zài",
+     "gloss": "to be at / in",
+     "script": "cn",
+     "zhDisp": "在"
+    },
+    {
+     "zh": "學",
+     "roman": "xué",
+     "gloss": "to learn, study",
+     "script": "cn",
+     "zhDisp": "学"
+    },
+    {
+     "zh": "普通話",
+     "roman": "pǔ-tōng-huà",
+     "gloss": "Mandarin (as it is called in Hong Kong and mainland China)",
+     "script": "cn",
+     "zhDisp": "普通话"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-zai-xue-putonghua.mp3",
+     "audio/tw-yunjhe/wo-zai-xue-putonghua-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-zai-xue-putonghua.mp3",
+     "audio/tw-hsiaochen/wo-zai-xue-putonghua-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-zai-xue-putonghua.mp3",
+     "audio/tw-hsiaoyu/wo-zai-xue-putonghua-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-zai-xue-putonghua.mp3",
+     "audio/cn-yunyang/wo-zai-xue-putonghua-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-zai-xue-putonghua.mp3",
+     "audio/cn-xiaoxiao/wo-zai-xue-putonghua-slow.mp3"
+    ]
+   },
+   "situation": "Someone in Hong Kong asks whether you're learning Cantonese or Mandarin.",
+   "note": "普通話 is what Mandarin is called in Hong Kong, where 中文 usually means Cantonese. In Taiwan people say 中文 or 國語 (guóyǔ), so with your coach 我在學中文 is enough",
+   "topic": "Introducing yourself",
+   "mission": "Tell someone in Hong Kong that it's Mandarin you're learning: 我在學普通話",
+   "wish": "wish-1791247386488"
+  },
+  {
+   "id": "zhe-ju-hua-zhongwen-zenme-shuo",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "這句話中文怎麼說？",
+   "roman": "zhè jù huà Zhōng-wén zěn-me shuō?",
+   "en": "How do I say this (sentence) in Chinese?",
+   "words": [
+    {
+     "zh": "這",
+     "roman": "zhè",
+     "gloss": "this",
+     "script": "cn",
+     "zhDisp": "这"
+    },
+    {
+     "zh": "句",
+     "roman": "jù",
+     "gloss": "counter for sentences",
+     "script": "cn",
+     "zhDisp": "句"
+    },
+    {
+     "zh": "話",
+     "roman": "huà",
+     "gloss": "speech, words",
+     "script": "cn",
+     "zhDisp": "话"
+    },
+    {
+     "zh": "中文",
+     "roman": "Zhōng-wén",
+     "gloss": "Chinese (language)",
+     "script": "cn",
+     "zhDisp": "中文"
+    },
+    {
+     "zh": "怎麼",
+     "roman": "zěn-me",
+     "gloss": "how",
+     "script": "cn",
+     "zhDisp": "怎么"
+    },
+    {
+     "zh": "說",
+     "roman": "shuō",
+     "gloss": "to speak, say",
+     "script": "cn",
+     "zhDisp": "说"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhe-ju-hua-zhongwen-zenme-shuo.mp3",
+     "audio/tw-yunjhe/zhe-ju-hua-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhe-ju-hua-zhongwen-zenme-shuo.mp3",
+     "audio/tw-hsiaochen/zhe-ju-hua-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhe-ju-hua-zhongwen-zenme-shuo.mp3",
+     "audio/tw-hsiaoyu/zhe-ju-hua-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhe-ju-hua-zhongwen-zenme-shuo.mp3",
+     "audio/cn-yunyang/zhe-ju-hua-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhe-ju-hua-zhongwen-zenme-shuo.mp3",
+     "audio/cn-xiaoxiao/zhe-ju-hua-zhongwen-zenme-shuo-slow.mp3"
+    ]
+   },
+   "situation": "You know what you want to say in English but not in Chinese.",
+   "note": "這句話 = this sentence (句 is the counter for sentences). For one word, say it in English and add 的中文怎麼說: \"outfit\" 的中文怎麼說？",
+   "topic": "Getting by",
+   "mission": "In your next lesson, say something in English and ask your coach 這句話中文怎麼說？",
+   "wish": "wish-1791247432973"
+  },
+  {
+   "id": "wo-shi-cong-helan-lai-de",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "我是從荷蘭來的",
+   "roman": "wǒ shì cóng Hé-lán lái de",
+   "en": "I am from the Netherlands",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me",
+     "script": "cn",
+     "zhDisp": "我"
+    },
+    {
+     "zh": "是",
+     "roman": "shì",
+     "gloss": "is / am / are",
+     "script": "cn",
+     "zhDisp": "是"
+    },
+    {
+     "zh": "從",
+     "roman": "cóng",
+     "gloss": "from",
+     "script": "cn",
+     "zhDisp": "从"
+    },
+    {
+     "zh": "荷蘭",
+     "roman": "Hé-lán",
+     "gloss": "the Netherlands",
+     "script": "hk"
+    },
+    {
+     "zh": "來",
+     "roman": "lái",
+     "gloss": "to come",
+     "script": "cn",
+     "zhDisp": "来"
+    },
+    {
+     "zh": "的",
+     "roman": "de",
+     "gloss": "(possessive / 'the one that…')",
+     "script": "cn",
+     "zhDisp": "的"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-shi-cong-helan-lai-de.mp3",
+     "audio/tw-yunjhe/wo-shi-cong-helan-lai-de-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-shi-cong-helan-lai-de.mp3",
+     "audio/tw-hsiaochen/wo-shi-cong-helan-lai-de-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-shi-cong-helan-lai-de.mp3",
+     "audio/tw-hsiaoyu/wo-shi-cong-helan-lai-de-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-shi-cong-helan-lai-de.mp3",
+     "audio/cn-yunyang/wo-shi-cong-helan-lai-de-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-shi-cong-helan-lai-de.mp3",
+     "audio/cn-xiaoxiao/wo-shi-cong-helan-lai-de-slow.mp3"
+    ]
+   },
+   "situation": "Someone asks where you're from.",
+   "note": "是…的 wraps the detail you're stressing (where from). 從 cóng = from, 來 = come. More conversational than 我來自荷蘭; 我是荷蘭人 says the same in fewer words",
+   "topic": "Introducing yourself",
+   "mission": "When a student or taxi driver asks 你是哪裡人？, answer 我是從荷蘭來的",
+   "wish": "wish-1791302600145"
+  },
+  {
+   "id": "bu-hui",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "不會！",
+   "roman": "bú-huì!",
+   "en": "No problem! (when someone thanks you)",
+   "words": [
+    {
+     "zh": "不會",
+     "roman": "bú-huì",
+     "gloss": "No problem! (when someone thanks you)",
+     "script": "cn",
+     "zhDisp": "不会"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/bu-hui.mp3",
+     "audio/tw-yunjhe/bu-hui-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/bu-hui.mp3",
+     "audio/tw-hsiaochen/bu-hui-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/bu-hui.mp3",
+     "audio/tw-hsiaoyu/bu-hui-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/bu-hui.mp3",
+     "audio/cn-yunyang/bu-hui-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/bu-hui.mp3",
+     "audio/cn-xiaoxiao/bu-hui-slow.mp3"
+    ]
+   },
+   "situation": "Someone thanks you for a small favour.",
+   "note": "The everyday Taiwan reply to 謝謝, lighter than 不客氣. When someone asks a favour, the answer is 沒問題",
+   "topic": "Small talk",
+   "mission": "When a student thanks you after class, answer 不會！",
+   "wish": "wish-1791303319597"
   },
   {
    "id": "yue-nei-hou",

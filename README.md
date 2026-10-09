@@ -26,12 +26,16 @@ Practice:
   under words you can't read yet; it disappears once you've recognised a word on two different days.
 - The daily session has a fixed shape (40 cards at most): a short warm-up (the 5 weakest trouble spots, the 3
   hardest-to-read words, today's focus), then reviews with the day's new material mixed in. The new speaking
-  cards, 3 new word cards and 2 sentence builds always get their place; reviews give way when the day is full.
+  cards, 3 new word cards and 3 sentence builds always get their place; reviews give way when the day is full.
 - **繁 / 简** at the top of every Mandarin card switches all characters (answers, tiles, notes) between
   Traditional and Simplified, from that card on. Settings → *Characters* also offers *Mixed*: Traditional,
   except *Read it* cards for words you won't see written in Hong Kong.
 - A card can show how the phrase sounds (*Everyday*, *Casual*, *Polite*, *Formal*), and which part can be
   swapped: that word is underlined, with a few things to put in its place.
+- **Word order** (Explore): ten sentence builds from phrases you've met, never-built ones first. After a build
+  the card shows the English words in Chinese order (you · like · drink · what) and, where there is one, the
+  rule behind it (items with `"order": "Place before the verb: 在 + place + verb"`). Patterns are built with a
+  different word each time. The daily session mixes in 3 new builds.
 - Simple before complex: within a lesson week or a set, single words come first, then phrases from short to
   long. When a short phrase does the job (這個中文怎麼說？), the longer one gets `"tier": 2`.
 - Useful before polite: essentials come first, then your wishes and the lesson weeks; the politer, more formal

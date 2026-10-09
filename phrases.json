@@ -1,5 +1,5 @@
 {
- "version": "df47ed440a35",
+ "version": "a0bb41e010dc",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -797,7 +797,8 @@
    "note": "教 (jiāo) + course/subject = teach …; note jiāo here vs jiào in 教授",
    "topic": "Work & study",
    "mission": "Tell a Mandarin-speaking colleague where you teach",
-   "register": "everyday"
+   "register": "everyday",
+   "order": "Place before the verb: 在 + place + verb"
   },
   {
    "id": "zuijin-hao-ma",
@@ -856,7 +857,8 @@
    "situation": "You bump into a colleague you haven't seen for a while.",
    "topic": "Small talk",
    "mission": "Greet a Mandarin-speaking colleague with it",
-   "register": "everyday"
+   "register": "everyday",
+   "order": "Statement + 嗎 = yes/no question"
   },
   {
    "id": "zuijin-zenmeyang",
@@ -967,7 +969,8 @@
    "situation": "You want to ask your coach what's been keeping them busy.",
    "topic": "Small talk",
    "mission": "Ask your coach what they've been busy with",
-   "register": "casual"
+   "register": "casual",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "kafei",
@@ -1384,7 +1387,8 @@
    },
    "situation": "You're buying drinks and want to ask what the other person likes.",
    "topic": "Food & drink",
-   "mission": "Ask someone what they like to drink"
+   "mission": "Ask someone what they like to drink",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "shui",
@@ -1619,7 +1623,8 @@
    },
    "situation": "You're choosing a restaurant with a colleague.",
    "topic": "Food & drink",
-   "mission": "Ask a colleague at lunch what they like to eat"
+   "mission": "Ask a colleague at lunch what they like to eat",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "la",
@@ -2254,7 +2259,8 @@
     ]
    },
    "situation": "You're ordering for a friend and want to check about chilli.",
-   "topic": "Food & drink"
+   "topic": "Food & drink",
+   "order": "Verb + 不 + verb = yes/no question, no 嗎"
   },
   {
    "id": "yidiandian",
@@ -2416,7 +2422,8 @@
    ],
    "situation": "You want to ask someone if they like ___.",
    "topic": "Small talk",
-   "mission": "Ask someone if they like a country they've visited"
+   "mission": "Ask someone if they like a country they've visited",
+   "order": "Statement + 嗎 = yes/no question"
   },
   {
    "id": "wo-bu-xihuan-he-x",
@@ -2759,7 +2766,8 @@
     }
    ],
    "situation": "Someone offers you ___, but you don't like it.",
-   "topic": "Food & drink"
+   "topic": "Food & drink",
+   "order": "不 goes right before the verb"
   },
   {
    "id": "wo-bu-xihuan-chi-x",
@@ -3302,7 +3310,8 @@
     }
    ],
    "situation": "Someone offers you ___, but you don't like it.",
-   "topic": "Food & drink"
+   "topic": "Food & drink",
+   "order": "不 goes right before the verb"
   },
   {
    "id": "xianggang",
@@ -3649,7 +3658,8 @@
    "note": "Fine with students and peers. To someone senior, ask 請問怎麼稱呼？ (qǐngwèn zěnme chēnghū)",
    "topic": "Meeting people",
    "mission": "Ask a student their name",
-   "register": "everyday"
+   "register": "everyday",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "ni-shi-xuesheng-ma",
@@ -3714,7 +3724,8 @@
    },
    "situation": "Someone young is waiting outside your office.",
    "topic": "Meeting people",
-   "mission": "Ask someone on campus if they're a student"
+   "mission": "Ask someone on campus if they're a student",
+   "order": "Statement + 嗎 = yes/no question"
   },
   {
    "id": "ni-shi-nage-xi-de",
@@ -3787,7 +3798,8 @@
    "situation": "You want to know a student's department.",
    "note": "系 xì = department (at a university)",
    "topic": "Meeting people",
-   "mission": "Ask a student which department they're in"
+   "mission": "Ask a student which department they're in",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "ni-ji-nianji",
@@ -3905,7 +3917,8 @@
    },
    "situation": "You want to know what a student studies.",
    "note": "讀 dú = to study (a subject)",
-   "topic": "Meeting people"
+   "topic": "Meeting people",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "ni-shi-nali-ren",
@@ -3970,7 +3983,8 @@
    },
    "situation": "You want to know where someone is from.",
    "topic": "Meeting people",
-   "mission": "Ask someone where they're from"
+   "mission": "Ask someone where they're from",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "ni-de-yingwen-hen-hao",
@@ -4041,7 +4055,8 @@
    },
    "situation": "A student surprises you with excellent English.",
    "topic": "Meeting people",
-   "mission": "Compliment a student's English"
+   "mission": "Compliment a student's English",
+   "order": "No 是 before an adjective: 很 links them"
   },
   {
    "id": "wo-ye-shi",
@@ -4098,7 +4113,8 @@
    },
    "situation": "Someone says they're new here too. Same for you!",
    "topic": "Meeting people",
-   "mission": "Answer 我也是 when someone says something that's true for you too"
+   "mission": "Answer 我也是 when someone says something that's true for you too",
+   "order": "也 (also) goes before the verb, never at the end"
   },
   {
    "id": "wo-shi-xin-lai-de-jiaoshou",
@@ -4176,7 +4192,8 @@
    },
    "situation": "You introduce yourself at your first department meeting.",
    "topic": "Meeting people",
-   "mission": "Introduce yourself to a new colleague"
+   "mission": "Introduce yourself to a new colleague",
+   "order": "The description + 的 comes before the noun"
   },
   {
    "id": "wo-gang-lai-xianggang",
@@ -4240,7 +4257,8 @@
     ]
    },
    "situation": "Someone asks how long you've been in Hong Kong. Not long!",
-   "topic": "Meeting people"
+   "topic": "Meeting people",
+   "order": "剛 (just) goes before the verb"
   },
   {
    "id": "ni-zai-xianggang-duojiu-le",
@@ -4310,7 +4328,8 @@
    },
    "situation": "You want to ask a colleague how long they've lived here.",
    "topic": "Meeting people",
-   "mission": "Ask a colleague how long they've been in Hong Kong"
+   "mission": "Ask a colleague how long they've been in Hong Kong",
+   "order": "Place before 多久 (how long); 了 comes last"
   },
   {
    "id": "wo-yanjiu-rengong-zhihui",
@@ -4439,7 +4458,8 @@
     ]
    },
    "situation": "You show a student where your office is.",
-   "topic": "Work & study"
+   "topic": "Work & study",
+   "order": "Owner + 的 + thing"
   },
   {
    "id": "huanying-lai-shang-wo-de-ke",
@@ -4578,7 +4598,8 @@
    },
    "situation": "You've finished explaining and check with the class.",
    "topic": "Work & study",
-   "mission": "Ask 有問題嗎？ at the end of a class"
+   "mission": "Ask 有問題嗎？ at the end of a class",
+   "order": "Statement + 嗎 = yes/no question"
   },
   {
    "id": "xiake-le",
@@ -4751,7 +4772,8 @@
    },
    "situation": "Someone compliments your Chinese, but you're modest.",
    "topic": "Getting by",
-   "mission": "Say it when someone switches to fast Mandarin"
+   "mission": "Say it when someone switches to fast Mandarin",
+   "order": "不太 (not very) goes before the adjective"
   },
   {
    "id": "qing-shuo-man-yidian",
@@ -4818,7 +4840,8 @@
    "situation": "Someone is speaking too fast for you.",
    "topic": "Getting by",
    "mission": "Ask someone to slow down in Mandarin",
-   "register": "polite"
+   "register": "polite",
+   "order": "Verb first, then how: 說 + 慢一點"
   },
   {
    "id": "zhege-zhongwen-zenme-shuo",
@@ -4888,7 +4911,8 @@
    "topic": "Getting by",
    "mission": "Point at something and ask how to say it",
    "wish": "wish-1791247432973",
-   "register": "everyday"
+   "register": "everyday",
+   "order": "The topic first, then 怎麼 + verb"
   },
   {
    "id": "ni-keyi-jiao-wo-ma",
@@ -4959,7 +4983,8 @@
    },
    "situation": "You'd like a student to teach you a word.",
    "topic": "Getting by",
-   "mission": "Ask a student to teach you a word"
+   "mission": "Ask a student to teach you a word",
+   "order": "Statement + 嗎 = yes/no question"
   },
   {
    "id": "women-yiqi-qu-he-kafei-ba",
@@ -5038,7 +5063,8 @@
    "situation": "You want to invite a colleague for coffee.",
    "note": "吧 ba at the end makes it a suggestion: let's…",
    "topic": "Meeting people",
-   "mission": "Invite a colleague for coffee in Mandarin"
+   "mission": "Invite a colleague for coffee in Mandarin",
+   "order": "Who + together + go + do what; 吧 comes last"
   },
   {
    "id": "ni-you-kong-ma",
@@ -5102,7 +5128,8 @@
     ]
    },
    "situation": "You want to know if someone has time now.",
-   "topic": "Meeting people"
+   "topic": "Meeting people",
+   "order": "Statement + 嗎 = yes/no question"
   },
   {
    "id": "mei-wenti",
@@ -5232,6 +5259,7 @@
    "wish": "wish-1790803302621",
    "register": "polite",
    "tier": 2,
+   "order": "Statement + 嗎 = yes/no question",
    "swap": {
     "word": "這個",
     "with": [
@@ -5339,6 +5367,7 @@
    "wish": "wish-1791059610386",
    "register": "polite",
    "tier": 2,
+   "order": "Number + measure word + thing",
    "swap": {
     "word": "咖啡",
     "with": [
@@ -5440,7 +5469,8 @@
    "topic": "Getting by",
    "mission": "When a colleague or your coach says something you can't follow, ask 可以用英文解釋一下嗎？",
    "register": "polite",
-   "tier": 2
+   "tier": 2,
+   "order": "用 + language comes before the verb"
   },
   {
    "id": "xihuan",
@@ -7473,7 +7503,8 @@
    },
    "situation": "Someone asks you something you have no idea about.",
    "topic": "Getting by",
-   "register": "everyday"
+   "register": "everyday",
+   "order": "不 goes right before the verb"
   },
   {
    "id": "wo-ting-bu-dong",
@@ -7607,7 +7638,8 @@
    "note": "請 qǐng = please; 再 zài = again",
    "topic": "Getting by",
    "mission": "Ask your coach or someone else to repeat something",
-   "register": "polite"
+   "register": "polite",
+   "order": "再 (again) before the verb; how many times after it"
   },
   {
    "id": "ni-hui-shuo-yingwen-ma",
@@ -7680,7 +7712,8 @@
     ]
    },
    "situation": "You're stuck and want to check if they speak English.",
-   "topic": "Getting by"
+   "topic": "Getting by",
+   "order": "Statement + 嗎 = yes/no question"
   },
   {
    "id": "wo-hui-shuo-yidiandian-zhongwen",
@@ -7756,7 +7789,8 @@
    "topic": "Introducing yourself",
    "mission": "Tell a colleague you can speak a little Chinese",
    "wish": "wish-1791518241214",
-   "register": "everyday"
+   "register": "everyday",
+   "order": "The amount comes before the thing: 一點點 + 中文"
   },
   {
    "id": "wo-zai-xue-zhongwen",
@@ -7821,7 +7855,8 @@
    },
    "situation": "Someone is surprised you know some Chinese.",
    "topic": "Introducing yourself",
-   "mission": "Tell someone you're learning Chinese"
+   "mission": "Tell someone you're learning Chinese",
+   "order": "在 before a verb = doing it now"
   },
   {
    "id": "wo-zhu-zai-xianggang",
@@ -7950,7 +7985,8 @@
    "situation": "You want to know where the person you just met works.",
    "note": "哪裡 nǎlǐ = where",
    "topic": "Work & study",
-   "mission": "Ask someone new where they work"
+   "mission": "Ask someone new where they work",
+   "order": "Place before the verb: 在 + place + verb"
   },
   {
    "id": "wo-zai-zhongda-gongzuo",
@@ -8021,7 +8057,8 @@
    },
    "situation": "Someone asks where you work.",
    "topic": "Work & study",
-   "mission": "Tell someone where you work"
+   "mission": "Tell someone where you work",
+   "order": "Place before the verb: 在 + place + verb"
   },
   {
    "id": "wo-hai-mei-chi",
@@ -8079,7 +8116,8 @@
    },
    "situation": "It's lunchtime and someone asks if you've eaten.",
    "topic": "Food & drink",
-   "mission": "When a colleague asks around noon if you've had lunch, answer 我還沒吃"
+   "mission": "When a colleague asks around noon if you've had lunch, answer 我還沒吃",
+   "order": "還沒 (not yet) goes before the verb"
   },
   {
    "id": "ni-xiang-chi-shenme",
@@ -8144,7 +8182,8 @@
    },
    "situation": "You and a friend are choosing where to have lunch.",
    "topic": "Food & drink",
-   "mission": "Ask a colleague 你想吃什麼？ when you pick a place for lunch at CUHK"
+   "mission": "Ask a colleague 你想吃什麼？ when you pick a place for lunch at CUHK",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "wo-xiang-chi-x",
@@ -10002,7 +10041,8 @@
     ]
    },
    "situation": "Someone asks how you are.",
-   "topic": "Small talk"
+   "topic": "Small talk",
+   "order": "No 是 before an adjective: 很 links them"
   },
   {
    "id": "ni-ne",
@@ -10115,7 +10155,8 @@
     ]
    },
    "situation": "A friend says they're fine and asks about you.",
-   "topic": "Small talk"
+   "topic": "Small talk",
+   "order": "也 (also) goes before the verb, never at the end"
   },
   {
    "id": "you-mei-you-wenti",
@@ -10174,7 +10215,8 @@
    "situation": "You've finished explaining and check with the class.",
    "note": "有沒有 = have or not have: a yes/no question without 嗎",
    "topic": "Work & study",
-   "mission": "Ask your class 有沒有問題？"
+   "mission": "Ask your class 有沒有問題？",
+   "order": "Verb + 不 + verb = yes/no question, no 嗎"
   },
   {
    "id": "wo-bu-chi-la",
@@ -10237,7 +10279,8 @@
    },
    "situation": "The waiter asks if you want chilli; you never eat it.",
    "note": "不 = don't (in general, habits). 沒 = didn't / haven't (it didn't happen)",
-   "topic": "Food & drink"
+   "topic": "Food & drink",
+   "order": "不 goes right before the verb"
   },
   {
    "id": "wo-mei-chi-la",
@@ -10367,7 +10410,8 @@
    },
    "situation": "You start telling a colleague what happened at lunch yesterday.",
    "note": "… 的時候 = at the time of …, when …",
-   "topic": "Small talk"
+   "topic": "Small talk",
+   "order": "The time comes first"
   },
   {
    "id": "ni-juede-zenmeyang",
@@ -10484,7 +10528,8 @@
    },
    "situation": "Someone asks if you had your coffee. You did.",
    "note": "了 le after a verb: the action happened",
-   "topic": "Food & drink"
+   "topic": "Food & drink",
+   "order": "了 after the verb = it happened"
   },
   {
    "id": "ni-zhi-bu-zhidao",
@@ -10548,7 +10593,8 @@
    },
    "situation": "You want to check if someone knows something.",
    "note": "Verb 不 verb makes a yes/no question: 知不知道, 可不可以, 有沒有",
-   "topic": "Small talk"
+   "topic": "Small talk",
+   "order": "Verb + 不 + verb = yes/no question, no 嗎"
   },
   {
    "id": "keyi-bu-keyi",
@@ -10750,7 +10796,8 @@
    },
    "situation": "You've answered one question and check for more.",
    "topic": "Work & study",
-   "mission": "End a class or meeting with 有沒有其他問題？"
+   "mission": "End a class or meeting with 有沒有其他問題？",
+   "order": "Verb + 不 + verb = yes/no question, no 嗎"
   },
   {
    "id": "you-mei-you-qita-shijian-shangke",
@@ -11271,7 +11318,8 @@
    "note": "杯 bēi is the measure word for cups: 一杯咖啡",
    "topic": "Food & drink",
    "mission": "Order a drink with 一杯",
-   "register": "everyday"
+   "register": "everyday",
+   "order": "Number + measure word + thing"
   },
   {
    "id": "wo-quguo-x",
@@ -11338,7 +11386,8 @@
    ],
    "situation": "Someone asks if you've been to ___.",
    "note": "過 guò after a verb: you have done it (at some point)",
-   "topic": "Small talk"
+   "topic": "Small talk",
+   "order": "過 right after the verb = have done it before"
   },
   {
    "id": "x-jian",
@@ -13058,7 +13107,8 @@
    "note": "普通話 is what Mandarin is called in Hong Kong, where 中文 usually means Cantonese. In Taiwan people say 中文 or 國語 (guóyǔ), so with your coach 我在學中文 is enough",
    "topic": "Introducing yourself",
    "mission": "Tell someone in Hong Kong that it's Mandarin you're learning: 我在學普通話",
-   "wish": "wish-1791247386488"
+   "wish": "wish-1791247386488",
+   "order": "在 before a verb = doing it now"
   },
   {
    "id": "zhe-ju-hua-zhongwen-zenme-shuo",
@@ -13142,7 +13192,8 @@
    "note": "這句話 = this sentence (句 counts sentences). The short version does the same job: 這個中文怎麼說？",
    "topic": "Getting by",
    "mission": "In your next lesson, say something in English and ask your coach 這句話中文怎麼說？",
-   "tier": 2
+   "tier": 2,
+   "order": "The topic first, then 怎麼 + verb"
   },
   {
    "id": "wo-shi-cong-helan-lai-de",
@@ -13226,7 +13277,8 @@
    "mission": "When a student or taxi driver asks 你是哪裡人？, answer 我是從荷蘭來的",
    "wish": "wish-1791302600145",
    "register": "everyday",
-   "tier": 2
+   "tier": 2,
+   "order": "是 … 的 wraps the detail: from where"
   },
   {
    "id": "bu-hui",
@@ -14072,7 +14124,8 @@
    "topic": "Small talk",
    "mission": "Ask a colleague who is packing up after a meeting: 好了嗎？",
    "wish": "wish-1791506198624",
-   "register": "everyday"
+   "register": "everyday",
+   "order": "Statement + 嗎 = yes/no question"
   },
   {
    "id": "hai-mei-ne",
@@ -14362,7 +14415,8 @@
    "topic": "Getting by",
    "mission": "When you can't follow your coach or a colleague, ask 可以說英文嗎？",
    "wish": "wish-1791068534984",
-   "register": "everyday"
+   "register": "everyday",
+   "order": "Statement + 嗎 = yes/no question"
   },
   {
    "id": "yue-nei-hou",

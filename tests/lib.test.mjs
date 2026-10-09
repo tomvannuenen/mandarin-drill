@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { toneOf, romanWords } from '../lib/tones.js';
 import { grade, isDue } from '../lib/srs.js';
 import { cardKey, unlocked, pickFill, pickVoice, nextVoice, UNLOCK_GOOD } from '../lib/cards.js';
-import { buildQueue, shouldRequeue } from '../lib/session.js';
+import { buildQueue, shouldRequeue, orderQueue } from '../lib/session.js';
 import { defaults, load, save, exportJSON, importJSON, applyReview, localDate, newToday } from '../lib/store.js';
 
 const NOW = new Date(2026, 8, 23, 10, 0, 0);
@@ -317,4 +317,20 @@ test('buildQueue puts simple before complex within a week or set', () => {
   ];
   assert.deepEqual(buildQueue(items, defaults(), NOW, 10).map((c) => c.id),
     ['newer-long', 'word', 'short', 'long', 'verbs-word', 'verbs-long', 'extra-word']);
+});
+
+test('orderQueue: builds for met phrases of three words or more, never-built and rule-carrying first', () => {
+  const w = (n) => Array.from({ length: n }, () => ({ zh: 'x' }));
+  const items = [
+    { id: 'short', kind: 'phrase', deck: 'mandarin', words: w(2) },
+    { id: 'plain', kind: 'phrase', deck: 'mandarin', words: w(3) },
+    { id: 'ruled', kind: 'phrase', deck: 'mandarin', words: w(4), order: 'Place before the verb' },
+    { id: 'built', kind: 'phrase', deck: 'mandarin', words: w(4), order: 'x' },
+    { id: 'unmet', kind: 'phrase', deck: 'mandarin', words: w(5) },
+    { id: 'pat', kind: 'pattern', deck: 'mandarin', fills: [{ words: w(3) }] },
+  ];
+  const p = defaults();
+  for (const id of ['short', 'plain', 'ruled', 'built', 'pat']) p.cards[`${id}:say`] = grade(null, 3, NOW);
+  p.cards['built:build'] = grade(null, 3, NOW);
+  assert.deepEqual(orderQueue(items, p, 'mandarin').map((c) => c.key), ['ruled:build', 'plain:build', 'pat:build', 'built:build']);
 });

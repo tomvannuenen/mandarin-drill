@@ -2,7 +2,7 @@ import { $, el, play, renderRoman, speakText, LANG_ATTR, SCRIPT_LANG, SCRIPT_LAB
 import { icon, hydrateIcons } from './icons.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
-import { buildQueue, shouldRequeue, weekQueue, lessonWeeks, shakyCount } from './lib/session.js';
+import { buildQueue, shouldRequeue, weekQueue, orderQueue, lessonWeeks, shakyCount } from './lib/session.js';
 import { load, save, exportJSON, importJSON, applyReview, localDate } from './lib/store.js';
 import { initBook, renderBook } from './book.js';
 import { syncCoach, coachUrls } from './coach.js';
@@ -365,6 +365,12 @@ function renderMission(now) {
 
 // ---------- practice
 
+// A word's meaning as a single plain word or two, for the word-for-word line ("to be at / in" -> "at").
+function plainGloss(gloss) {
+  const first = gloss.split(/[;,/(]/)[0].trim() || gloss;
+  return first.replace(/^to be /, '').replace(/^to /, '');
+}
+
 const REGISTER_LABEL = { everyday: 'Everyday', casual: 'Casual, with friends', polite: 'Polite', formal: 'Formal' };
 
 function contentFor(card) {
@@ -379,11 +385,10 @@ function contentFor(card) {
     };
   }
   if (card.type === 'build') {
-    const entry = item.kind === 'pattern'
-      ? (item.fills.find((f) => f.fillId === item.mine) || pickFill(item, progress))
-      : item;
+    // A pattern is built with a different word each time: the order has to be worked out, not remembered.
+    const entry = item.kind === 'pattern' ? pickFill(item, progress) : item;
     return {
-      build: true, entry, zh: entry.zh, roman: entry.roman, en: entry.en, words: entry.words, audio: entry.audio,
+      build: true, order: item.order, entry, zh: entry.zh, roman: entry.roman, en: entry.en, words: entry.words, audio: entry.audio,
       voice: pickVoice(entry), played: false, deck: item.deck, flagged: new Set(),
       tiles: tiles(entry, chars()), picked: [], tries: 0, result: null,
       ...tracking(),
@@ -405,7 +410,7 @@ function contentFor(card) {
   if (lvl === 'situation' && item.mine) src = item.fills.find((f) => f.fillId === item.mine) || src;
   return {
     zh: src.zh, roman: src.roman, en: src.en, words: src.words, audio: src.audio, situation: src.situation,
-    voice: pickVoice(src), played: false, note: item.note, register: item.register, swap: item.swap,
+    voice: pickVoice(src), played: false, note: item.note, register: item.register, swap: item.swap, order: item.order,
     deck: item.deck, flagged: new Set(), level: lvl,
     ...tracking(),
   };
@@ -689,6 +694,12 @@ function drawCard(card, c) {
   $('a-note').hidden = !c.note;
   $('a-example').hidden = !c.example;
   $('a-example').replaceChildren(...(c.example ? [el('p', { class: 'section' }, 'In a phrase you know'), sayLine(c.example, c.deck)] : []));
+  // Word order: the rule behind the sentence, and after a build the English words in Chinese order.
+  $('a-order').replaceChildren(...(c.order ? mixedText(c.order, c.deck) : []));
+  $('a-order').hidden = !c.order;
+  const literal = c.build && c.words.every((w) => w.gloss) ? c.words.map((w) => plainGloss(w.gloss)) : [];
+  $('a-literal').replaceChildren(...literal.flatMap((g, i) => [...(i ? [el('i', {}, '·')] : []), el('span', {}, g)]));
+  $('a-literal').hidden = !literal.length;
   $('card-register').textContent = REGISTER_LABEL[c.register] || '';
   $('card-register').hidden = !c.register;
   const now = scriptNow(c);
@@ -918,6 +929,9 @@ function renderExplore() {
     const status = st.done ? `done ${st.done}×` : st.ready ? 'ready' : `${st.learned} of ${st.total} lines met`;
     return el('button', { class: `convo-row${st.ready ? ' ready' : ''}`, onclick: () => startConvo(c) }, icon('chat'), el('span', {}, c.title), el('span', { class: 'muted' }, status));
   }));
+  const orderQ = decks[deck()]?.characters === false ? [] : orderQueue(items(), progress, deck());
+  $('order-row').hidden = decks[deck()]?.characters === false;
+  $('order-sub').textContent = orderQ.length ? `${orderQ.length} sentences` : 'after a few phrases';
   const words = deck() === 'mandarin' ? toneWords(allItems, progress) : [];
   $('tones-row').hidden = deck() !== 'mandarin';
   $('tones-sub').textContent = words.length ? '10 questions' : 'after a few words';
@@ -1141,6 +1155,7 @@ function wire() {
     commit(session.current.pending);
   });
   $('tones-row').addEventListener('click', startTones);
+  $('order-row').addEventListener('click', () => startSession(orderQueue(items(), progress, deck())));
   $('cv-done').addEventListener('click', () => (pendingEnd ? renderDone(pendingEnd) : show('explore')));
   document.addEventListener('keydown', (e) => {
     if (!session || ['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;

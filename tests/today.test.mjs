@@ -143,7 +143,7 @@ test('composeToday keeps the warm-up short and always fits the new words and bui
   assert.deepEqual(queue.slice(0, 5).map((q) => q.id), ['千', '百', '十', '九', '八'].map((zh) => `w/mandarin/${zh}`), 'the five weakest drills');
   assert.deepEqual(queue.slice(5, 8).map((q) => q.key), ['千', '百', '十'].map((zh) => `c/mandarin/${zh}:char`), 'the three hardest to read');
   assert.equal(counts.focus, 8);
-  assert.deepEqual([counts.chars, counts.builds], [3, 2], 'new word cards and builds are never squeezed out');
+  assert.deepEqual([counts.chars, counts.builds], [3, 3], 'new word cards and builds are never squeezed out');
 });
 
 test('a hard-to-read word already handled today does not open the next session again', () => {

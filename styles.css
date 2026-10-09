@@ -292,6 +292,10 @@ button.note-zh.on { text-decoration-color: var(--seal); text-decoration-style: s
 .note-gloss[hidden] { display: none; }
 .note-gloss b { font-weight: 600; }
 .wg.swappable .wg-zh { text-decoration: underline dashed var(--seal); text-underline-offset: 6px; text-decoration-thickness: 1.5px; }
+.literal { margin: 8px 0 0; font-size: 14px; color: var(--ink-2); display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 7px; }
+.literal[hidden], .order-rule[hidden] { display: none; }
+.literal i { font-style: normal; color: var(--ink-3); }
+.order-rule { margin: 8px auto 0; font-size: 13px; color: var(--ink-3); max-width: 34ch; }
 .hz { margin: 10px auto 0; max-width: 36ch; }
 .hz[hidden] { display: none; }
 .hz-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 8px; }

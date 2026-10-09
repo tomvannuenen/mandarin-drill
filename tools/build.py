@@ -224,7 +224,7 @@ def simplified_map(out_items):
     for o in out_items:
         if o["deck"] != "mandarin":
             continue
-        text.append(o.get("note", ""))
+        text.append(o.get("note", "") + o.get("order", ""))
         for alt in o.get("swap", {}).get("with", []):
             text.append(alt["zh"])
         for entry in o.get("fills") or [o]:
@@ -427,7 +427,7 @@ def expand(items, root=ROOT, deck="mandarin", glossary=None):
             o["situation"] = SLOT_RE.sub("___", it["situation"])
         elif "situation" in it:
             o["situation"] = it["situation"]
-        for k in ("note", "cat", "topic", "mission", "mine", "wish", "register", "tier"):
+        for k in ("note", "cat", "topic", "mission", "mine", "wish", "register", "tier", "order"):
             if k in it:
                 o[k] = it[k]
         if "swap" in it:

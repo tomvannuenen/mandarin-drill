@@ -637,7 +637,10 @@ function switchScript() {
     Object.assign(c, displayFor(c, progress.settings.script));
     Object.assign(c.words[0], displayFor(c.words[0], progress.settings.script));
   }
+  // Keep the word you had open, now in the other script.
+  const open = [...$('a-words').children].findIndex((b) => b.classList.contains('active'));
   drawCard(card, c);
+  if (open >= 0) $('a-words').children[open]?.click();
 }
 
 // Everything on the card that shows characters; safe to call again mid-card.
@@ -653,10 +656,17 @@ function drawCard(card, c) {
   $('a-example').replaceChildren(...(c.example ? [el('p', { class: 'section' }, 'In a phrase you know'), sayLine(c.example, c.deck)] : []));
   $('card-register').textContent = REGISTER_LABEL[c.register] || '';
   $('card-register').hidden = !c.register;
+  const now = scriptNow(c);
+  const label = now === 'cn' ? 'Simplified characters. Switch to Traditional' : 'Traditional characters. Switch to Simplified';
   const sw = $('script-switch');
   sw.hidden = c.deck !== 'mandarin';
-  sw.textContent = scriptNow(c) === 'cn' ? '简' : '繁';
-  sw.setAttribute('aria-label', scriptNow(c) === 'cn' ? 'Simplified characters. Switch to Traditional' : 'Traditional characters. Switch to Simplified');
+  sw.textContent = now === 'cn' ? '简' : '繁';
+  sw.setAttribute('aria-label', label);
+  // The same switch sits with the answer's buttons, in reach once the answer is showing.
+  const tool = $('script-tool');
+  tool.hidden = c.deck !== 'mandarin';
+  tool.replaceChildren(el('span', { class: now === 'cn' ? '' : 'on' }, '繁'), el('span', { class: now === 'cn' ? 'on' : '' }, '简'));
+  tool.setAttribute('aria-label', label);
 }
 
 function promptFor(card, c) {
@@ -1083,6 +1093,7 @@ function wire() {
   $('quit').addEventListener('click', () => { session = null; show('home'); });
   $('reveal').addEventListener('click', reveal);
   $('script-switch').addEventListener('click', switchScript);
+  $('script-tool').addEventListener('click', switchScript);
   for (const b of document.querySelectorAll('[data-script-view]')) b.addEventListener('click', switchScriptView);
   $('continue').addEventListener('click', () => { if (session?.current?.c.result) commit(session.current.c.result); });
   $('play').addEventListener('click', () => playCurrent({ next: true }));

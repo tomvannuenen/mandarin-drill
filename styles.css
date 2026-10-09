@@ -279,6 +279,10 @@ details.pattern .fills { padding-left: 14px; border-left: 2px solid var(--rule);
 /* Which script a :char card is shown in -- Traditional (things seen around Hong Kong) vs Simplified. */
 .script-badge { display: inline-block; font-family: var(--sans); font-size: 11px; font-weight: 600; border: 1px solid currentColor; border-radius: 999px; padding: 2px 9px; margin: 0 0 8px; vertical-align: middle; }
 .script-switch { font-family: var(--han); font-size: 15px; font-weight: 600; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--rule); background: var(--paper-2); color: var(--ink); cursor: pointer; flex: none; }
+.script-tool { font-family: var(--han); font-size: 15px; gap: 3px; }
+.script-tool span { opacity: .4; }
+.script-tool span.on { opacity: 1; font-weight: 700; }
+.study-top { position: sticky; top: 0; z-index: 5; background: var(--paper); }
 .register { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--ink-3); border: 1px solid var(--rule); border-radius: 999px; display: block; width: fit-content; align-self: center; padding: 2px 10px; margin: -6px auto 12px; }
 .card-kind + .register[hidden] { display: none; }
 .zh-inline { font-size: 1.1em; }

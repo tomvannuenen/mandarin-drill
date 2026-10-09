@@ -1,6 +1,7 @@
 {
   "_comment": "Chinese that appears inside notes but is not a phrase or word of the deck: [romanisation, English]. A third value \"mandarin\" marks pinyin inside a Cantonese note. The build fails when a note contains Chinese with no meaning here or in the deck.",
   "mandarin": {
+    "中文怎麼說": ["Zhōng-wén zěn-me shuō", "how do you say … in Chinese?"],
     "我是": ["wǒ shì", "I am"],
     "她": ["tā", "she"],
     "它": ["tā", "it"],

@@ -32,6 +32,8 @@ Practice:
   except *Read it* cards for words you won't see written in Hong Kong.
 - A card can show how the phrase sounds (*Everyday*, *Casual*, *Polite*, *Formal*), and which part can be
   swapped: that word is underlined, with a few things to put in its place.
+- Simple before complex: within a lesson week or a set, single words come first, then phrases from short to
+  long. When a short phrase does the job (這個中文怎麼說？), the longer one gets `"tier": 2`.
 - Useful before polite: essentials come first, then your wishes and the lesson weeks; the politer, more formal
   or rarer way to say something waits until the everyday phrases are in.
 - Tap any word (in answers, on tiles, in "Which part?") to hear just that word.

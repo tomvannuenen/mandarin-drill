@@ -1,5 +1,5 @@
 {
- "version": "3fa60c222ceb",
+ "version": "df47ed440a35",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -4884,8 +4884,11 @@
     ]
    },
    "situation": "You point at an object and want its Chinese name.",
+   "note": "Point at the thing, or say the English word first: \"outfit\" 中文怎麼說？",
    "topic": "Getting by",
-   "mission": "Point at something and ask how to say it"
+   "mission": "Point at something and ask how to say it",
+   "wish": "wish-1791247432973",
+   "register": "everyday"
   },
   {
    "id": "ni-keyi-jiao-wo-ma",
@@ -5433,11 +5436,11 @@
     ]
    },
    "situation": "Someone explains something in Chinese and you're lost.",
-   "note": "用英文 = using English, and it goes before the verb. 解釋 jiěshì = to explain; 一下 softens the request (\"explain it a bit\")",
+   "note": "The longer version of 可以說英文嗎？ 用英文 = using English, before the verb. 解釋 = to explain; 一下 softens it",
    "topic": "Getting by",
    "mission": "When a colleague or your coach says something you can't follow, ask 可以用英文解釋一下嗎？",
-   "wish": "wish-1791068534984",
-   "register": "polite"
+   "register": "polite",
+   "tier": 2
   },
   {
    "id": "xihuan",
@@ -13136,10 +13139,10 @@
     ]
    },
    "situation": "You know what you want to say in English but not in Chinese.",
-   "note": "這句話 = this sentence (句 is the counter for sentences). For one word, say it in English and add 的中文怎麼說: \"outfit\" 的中文怎麼說？",
+   "note": "這句話 = this sentence (句 counts sentences). The short version does the same job: 這個中文怎麼說？",
    "topic": "Getting by",
    "mission": "In your next lesson, say something in English and ask your coach 這句話中文怎麼說？",
-   "wish": "wish-1791247432973"
+   "tier": 2
   },
   {
    "id": "wo-shi-cong-helan-lai-de",
@@ -13222,7 +13225,8 @@
    "topic": "Introducing yourself",
    "mission": "When a student or taxi driver asks 你是哪裡人？, answer 我是從荷蘭來的",
    "wish": "wish-1791302600145",
-   "register": "everyday"
+   "register": "everyday",
+   "tier": 2
   },
   {
    "id": "bu-hui",
@@ -14292,6 +14296,73 @@
    "mission": "Answer 不客氣 when someone thanks you for holding the door",
    "wish": "wish-1791506283731",
    "register": "polite"
+  },
+  {
+   "id": "keyi-shuo-yingwen-ma",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "可以說英文嗎？",
+   "roman": "kě-yǐ shuō Yīng-wén ma?",
+   "en": "Can you say it in English?",
+   "words": [
+    {
+     "zh": "可以",
+     "roman": "kě-yǐ",
+     "gloss": "can, may (allowed)",
+     "script": "hk"
+    },
+    {
+     "zh": "說",
+     "roman": "shuō",
+     "gloss": "to speak, say",
+     "script": "cn",
+     "zhDisp": "说",
+     "zhS": "说"
+    },
+    {
+     "zh": "英文",
+     "roman": "Yīng-wén",
+     "gloss": "English (language)",
+     "script": "cn",
+     "zhDisp": "英文"
+    },
+    {
+     "zh": "嗎",
+     "roman": "ma",
+     "gloss": "(question particle)",
+     "script": "cn",
+     "zhDisp": "吗",
+     "zhS": "吗"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/keyi-shuo-yingwen-ma.mp3",
+     "audio/tw-yunjhe/keyi-shuo-yingwen-ma-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/keyi-shuo-yingwen-ma.mp3",
+     "audio/tw-hsiaochen/keyi-shuo-yingwen-ma-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/keyi-shuo-yingwen-ma.mp3",
+     "audio/tw-hsiaoyu/keyi-shuo-yingwen-ma-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/keyi-shuo-yingwen-ma.mp3",
+     "audio/cn-yunyang/keyi-shuo-yingwen-ma-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/keyi-shuo-yingwen-ma.mp3",
+     "audio/cn-xiaoxiao/keyi-shuo-yingwen-ma-slow.mp3"
+    ]
+   },
+   "situation": "Someone explains something in Chinese and you're lost.",
+   "topic": "Getting by",
+   "mission": "When you can't follow your coach or a colleague, ask 可以說英文嗎？",
+   "wish": "wish-1791068534984",
+   "register": "everyday"
   },
   {
    "id": "yue-nei-hou",
@@ -22496,6 +22567,10 @@
     "r": "rén-gōng-zhì-néng",
     "e": "AI (artificial intelligence)"
    },
+   "中文怎麼說": {
+    "r": "Zhōng-wén zěn-me shuō",
+    "e": "how do you say … in Chinese?"
+   },
    "吧": {
     "r": "ba",
     "e": "(suggestion: let's…)"
@@ -22511,6 +22586,10 @@
    "謝謝": {
     "r": "xiè-xie",
     "e": "Thank you"
+   },
+   "可以說英文嗎": {
+    "r": "kě-yǐ shuō Yīng-wén ma?",
+    "e": "Can you say it in English?"
    },
    "用英文": {
     "r": "yòng Yīng-wén",
@@ -22784,9 +22863,9 @@
     "r": "jù",
     "e": "counter for sentences"
    },
-   "的中文怎麼說": {
-    "r": "de Zhōng-wén zěn-me shuō",
-    "e": "how do you say … in Chinese?"
+   "這個中文怎麼說": {
+    "r": "zhè-ge Zhōng-wén zěn-me shuō?",
+    "e": "How do you say this in Chinese?"
    },
    "是…的": {
     "r": "shì … de",

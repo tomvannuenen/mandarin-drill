@@ -303,3 +303,18 @@ test('buildQueue introduces essentials first and the politer or rarer phrasing l
   const q = buildQueue(items, defaults(), NOW, 10);
   assert.deepEqual(q.map((c) => c.id), ['essential', 'week', 'verb', 'polite-wish']);
 });
+
+test('buildQueue puts simple before complex within a week or set', () => {
+  const w = (n) => Array.from({ length: n }, () => ({ zh: 'x' }));
+  const items = [
+    { id: 'long', week: 2, words: w(5) },
+    { id: 'short', week: 2, words: w(2) },
+    { id: 'word', week: 2, words: w(1) },
+    { id: 'newer-long', week: 3, words: w(6) },
+    { id: 'verbs-long', set: 'Verbs', words: w(4) },
+    { id: 'extra-word', set: 'Extra', words: w(1) },
+    { id: 'verbs-word', set: 'Verbs', words: w(1) },
+  ];
+  assert.deepEqual(buildQueue(items, defaults(), NOW, 10).map((c) => c.id),
+    ['newer-long', 'word', 'short', 'long', 'verbs-word', 'verbs-long', 'extra-word']);
+});

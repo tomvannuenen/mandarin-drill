@@ -292,6 +292,15 @@ button.note-zh.on { text-decoration-color: var(--seal); text-decoration-style: s
 .note-gloss[hidden] { display: none; }
 .note-gloss b { font-weight: 600; }
 .wg.swappable .wg-zh { text-decoration: underline dashed var(--seal); text-underline-offset: 6px; text-decoration-thickness: 1.5px; }
+.tile-ear { font-family: var(--serif); font-size: 20px; }
+.tone-target { font-weight: 700; text-decoration: underline; text-underline-offset: 5px; }
+.tone-rest { color: var(--ink-3); }
+.pairs { display: grid; grid-template-columns: 88px 1fr; gap: 10px; margin: 14px auto 0; max-width: 36ch; }
+.pairs-col { display: grid; gap: 8px; }
+.pair { min-height: 54px; padding: 8px 10px; border-radius: 14px; border: 1px solid var(--rule); background: var(--paper-2); color: inherit; font-family: var(--sans); font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.pair.on { border-color: var(--ink); background: var(--paper-3); }
+.pair.done { opacity: .35; border-color: var(--good); }
+.pair.wrong { border-color: var(--seal); background: var(--seal-soft); }
 .opts { display: grid; gap: 8px; margin: 16px auto 0; max-width: 34ch; }
 .opt { font-family: var(--sans); font-size: 16px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--rule); background: var(--paper-2); color: inherit; cursor: pointer; text-align: center; }
 .opt.right { border-color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent); }

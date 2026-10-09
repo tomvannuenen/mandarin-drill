@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
 import { defaults } from '../lib/store.js';
-import { methodStats, dropped, pickMethod, applicable, chainSteps, needsExposure, logActivity } from '../lib/methods.js';
+import { methodStats, methodNews, dropped, pickMethod, applicable, chainSteps, needsExposure, logActivity } from '../lib/methods.js';
 import { adaptiveNew, mayReturn } from '../lib/session.js';
 
 const DAY = 86400000;
@@ -35,9 +35,9 @@ test('a method that clearly trails is dropped, and the rest are tried by record 
 
 test('applicable and chainSteps fit the sentence', () => {
   const w = (...zh) => zh.map((z) => ({ zh: z }));
-  assert.deepEqual(applicable({ words: w('謝謝') }, 10), ['echo', 'ear']);
-  assert.deepEqual(applicable({ words: w('我', '要', '這個') }, 10), ['echo', 'chain', 'ear', 'fill', 'build']);
-  assert.deepEqual(applicable({ words: w('我', '要', '這個') }, 1, { tiles: false }), ['echo', 'chain']);
+  assert.deepEqual(applicable({ words: w('謝謝') }, 10), ['echo', 'ear', 'match', 'tone']);
+  assert.deepEqual(applicable({ words: w('我', '要', '這個') }, 10), ['echo', 'chain', 'dictate', 'ear', 'match', 'fill', 'tone', 'build']);
+  assert.deepEqual(applicable({ words: w('我', '要', '這個') }, 1, { tiles: false, tones: false }), ['echo', 'chain', 'dictate']);
   const steps = chainSteps(w('可以', '用', '英文', '解釋', '一下', '嗎')).map((s) => s.map((x) => x.zh).join(''));
   assert.deepEqual(steps, ['一下嗎', '解釋一下嗎', '英文解釋一下嗎', '用英文解釋一下嗎', '可以用英文解釋一下嗎']);
   assert.deepEqual(chainSteps(w('我', '要', '這個')).map((s) => s.length), [1, 2, 3]);
@@ -64,4 +64,19 @@ test('pace: fewer new phrases while many are shaky, and a session cannot grow wi
   assert.equal(mayReturn(1, 10), true);
   assert.equal(mayReturn(2, 10), false, 'a card returns once');
   assert.equal(mayReturn(1, 60), false, 'nothing returns in a long session');
+});
+
+test('methodNews reports a way of practising being dropped, coming back, or taking the lead, once', () => {
+  const first = methodNews({ echo: { n: 8, ok: 6 } }, null);
+  assert.deepEqual(first, { state: { dropped: [], lead: 'echo' }, news: [] }, 'nothing to compare with yet');
+  const stats = { echo: { n: 10, ok: 8 }, ear: { n: 10, ok: 4 }, chain: { n: 9, ok: 9 } };
+  const { state, news } = methodNews(stats, first.state);
+  assert.deepEqual(state, { dropped: ['ear'], lead: 'chain' });
+  assert.deepEqual(news, [
+    'Dropped Pick by ear: 40% stuck, against 100% for Build it up.',
+    'More Build it up from now on: 100% stuck, the best so far.',
+  ]);
+  assert.deepEqual(methodNews(stats, state).news, [], 'no repeat');
+  const back = methodNews({ ...stats, ear: { n: 14, ok: 11 } }, state);
+  assert.deepEqual(back.news, ['Pick by ear is back in.']);
 });

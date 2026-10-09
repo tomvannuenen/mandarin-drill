@@ -39,7 +39,13 @@ Practice:
   (一下嗎 → 解釋一下嗎 → …), and only tested a few cards later. A phrase that went wrong is practised another
   way before it is asked again, in the session and at its next review.
 - **Ways of practising**, besides the say-it card: *Listen and repeat*, *Build it up*, *Pick by ear* (hear it,
-  pick the meaning), *Missing word by ear*, *Word tiles*. A short listening round sits in the middle of the session.
+  pick the meaning), *Missing word by ear*, *Right or wrong* (hear it: is this what it means?), *Pick the tones*
+  (also feeds the tone statistics), *Rebuild by ear* (hear it, tap the pinyin back into order), *Match the pairs*
+  (four sounds, four meanings) and *Word tiles*. A short listening round (*Pick by ear*, *Right or wrong* or
+  *Match the pairs*) sits in the middle of the session. To add a way: register it in `lib/methods.js`
+  (`ACTIVITIES`, `METHOD_NAME`, `applicable`) and give it content and a prompt in `app.js`.
+- **You are told when the mix changes**: one line on the session's end screen and on Today for the rest of that
+  day, e.g. "Dropped Pick by ear: 40% stuck, against 85% for Build it up." or "More Rebuild by ear from now on".
 - **What works for you** (Me): for each way of practising, how often the phrase was then said right *on a later
   day*. The session leans on the ways with the best record, keeps trying the untried, and drops a way once it
   has eight results and trails the best by 25 points (`lib/methods.js`).

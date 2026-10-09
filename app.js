@@ -3,7 +3,8 @@ import { icon, hydrateIcons } from './icons.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
 import { buildQueue, shouldRequeue, weekQueue, orderQueue, lessonWeeks, shakyCount, adaptiveNew, mayReturn, SESSION_CAP } from './lib/session.js';
-import { ACTIVITIES, METHODS, METHOD_NAME, methodStats, dropped, pickMethod, applicable, chainSteps, logActivity } from './lib/methods.js';
+import { ACTIVITIES, METHODS, METHOD_NAME, methodStats, methodNews, dropped, pickMethod, applicable, chainSteps, logActivity } from './lib/methods.js';
+import { options as toneOptions, toneSeq, scoreAnswer } from './lib/tonequiz.js';
 import { load, save, exportJSON, importJSON, applyReview, localDate } from './lib/store.js';
 import { initBook, renderBook } from './book.js';
 import { syncCoach, coachUrls } from './coach.js';
@@ -312,8 +313,10 @@ function renderHome() {
   const say = troubleSpots(progress, deck()).slice(0, 3).map((t) => roman(t.zh));
   const read = decks[deck()]?.characters === false ? [] : readingTrouble(progress, deck()).slice(0, 3).map((t) => roman(t.zh));
   const note = [say.length && `Say: ${say.join(', ')}`, read.length && `Read: ${read.join(', ')}`].filter(Boolean).join('  ·  ');
-  $('today-note').textContent = note;
-  $('today-note').hidden = !note;
+  // A change in how the session practises is announced for the rest of that day.
+  const news = progress.methodNews?.date === localDate(now) ? progress.methodNews.lines : [];
+  $('today-note').replaceChildren(...[note, ...news].filter(Boolean).flatMap((line, i) => [...(i ? [el('br')] : []), line]));
+  $('today-note').hidden = !note && !news.length;
 
   const { queue, counts } = todayPlan(now);
   const convo = readyConversation();
@@ -586,7 +589,9 @@ function hintButton(c, label = 'Hint', text = () => hintText(c.roman, c.deck)) {
 function renderBuild(c) {
   const line = el('div', { class: 'build-line' });
   const pool = el('div', { class: 'build-pool' });
+  const byEar = c.activity === 'dictate'; // heard, not read: the tiles are pinyin and there is no English
   const tileEl = (t) => {
+    if (byEar) return el('button', { class: 'tile' }, renderRoman(el('span', { class: 'tile-zh tile-ear' }), t.roman, c.deck));
     const b = el('button', { class: 'tile' }, el('span', { class: 'tile-zh', lang: zl(c.deck) }, zs(t.zh, c.deck)));
     if (!knowsWord(progress, c.deck, t.zh)) b.append(renderRoman(el('span', { class: 'tile-roman' }), t.roman, c.deck));
     return b;
@@ -613,6 +618,12 @@ function renderBuild(c) {
   };
   draw();
   c.redraw = draw;
+  if (byEar) {
+    return [
+      el('button', { class: 'icon-btn huge', 'aria-label': 'Play again', onclick: () => playCurrent({ next: true }) }, icon('play')),
+      el('p', { class: 'speaker' }), line, pool,
+    ];
+  }
   return [el('p', { class: 'prompt-en' }, c.en), line, pool];
 }
 
@@ -741,6 +752,26 @@ function promptFor(card, c) {
       optionButtons(c, (o) => [o.text]),
     ];
   }
+  if (c.activity === 'match') {
+    return [
+      el('button', { class: 'icon-btn huge', 'aria-label': 'Play again', onclick: () => playCurrent({ next: true }) }, icon('play')),
+      el('p', { class: 'speaker' }),
+      el('p', { class: 'prompt-en' }, c.claim),
+      optionButtons(c, (o) => [o.text]),
+    ];
+  }
+  if (c.activity === 'tone') {
+    return [
+      el('button', { class: 'icon-btn huge', 'aria-label': 'Play again', onclick: () => playCurrent({ next: true }) }, icon('play')),
+      el('p', { class: 'speaker' }),
+      el('p', { class: 'prompt-gap-roman' }, ...c.words.flatMap((w, i) => [
+        ...(i ? [' '] : []),
+        el('span', { class: w === c.toneWord ? 'tone-target' : 'tone-rest' }, noTones(w.roman)),
+      ])),
+      optionButtons(c, (o) => [renderRoman(el('span'), o.roman, c.deck)]),
+    ];
+  }
+  if (c.activity === 'pairs') return renderPairs(c);
   if (c.activity === 'fill') {
     return [
       el('button', { class: 'icon-btn huge', 'aria-label': 'Play again', onclick: () => playCurrent({ next: true }) }, icon('play')),
@@ -816,7 +847,7 @@ function practiceFor(id) {
   const item = byId[id];
   const tiles = decks[item.deck]?.characters !== false && item.kind !== 'word';
   // Not the way it was already practised in this session, if there is another.
-  const all = applicable(item.fills?.[0] || item, metPhrases(id).length, { tiles });
+  const all = applicable(item.fills?.[0] || item, metPhrases(id).length, { tiles, tones: item.deck === 'mandarin' });
   const fresh = all.filter((m) => !session.used[id]?.includes(m));
   const method = pickMethod(methodStats(progress.log), fresh.length ? fresh : all);
   (session.used[id] ||= []).push(method);
@@ -825,7 +856,23 @@ function practiceFor(id) {
 
 const shuffled = (list) => list.map((x) => [Math.random(), x]).sort((a, b) => a[0] - b[0]).map(([, x]) => x);
 
+const noTones = (roman) => roman.normalize('NFD').replace(/[\u0300\u0301\u0304\u030c]/g, '').normalize('NFC').replace(/-/g, '');
+
+// Match the pairs: four phrases on one card, sounds on the left, meanings on the right.
+function pairsContent(card) {
+  const rows = card.ids.map((id) => {
+    const item = byId[id];
+    const entry = item.kind === 'pattern' ? pickFill(item, progress) : item;
+    return { id, entry, voice: pickVoice(entry), missed: false, done: false };
+  });
+  return {
+    activity: 'pairs', rows, meanings: shuffled(rows), picked: null, zh: '', roman: '', en: '', words: [], audio: null, voice: null,
+    played: false, deck: byId[card.id].deck, flagged: new Set(), ...tracking(),
+  };
+}
+
 function activityContent(card, item) {
+  if (card.type === 'pairs') return pairsContent(card);
   const entry = item.kind === 'pattern' ? pickFill(item, progress) : item;
   const c = {
     activity: card.type, zh: entry.zh, roman: entry.roman, en: entry.en, words: entry.words, audio: entry.audio,
@@ -847,6 +894,19 @@ function activityContent(card, item) {
     c.gap = gap.zh;
     c.options = shuffled([{ word: gap, right: true }, ...shuffled([...pool.values()]).slice(0, 3).map((word) => ({ word, right: false }))]);
   }
+  if (card.type === 'match') {
+    const others = shuffled([...new Set(metPhrases(item.id).map((i) => (i.fills?.[0] || i).en))].filter((en) => en !== entry.en));
+    const truth = Math.random() < 0.5 || !others.length;
+    c.claim = truth ? entry.en : others[0];
+    c.options = [{ text: 'Yes, that is it', right: truth }, { text: 'No, something else', right: !truth }];
+  }
+  if (card.type === 'tone') {
+    // The word with the most tones to hear (never one that is all neutral, if there is a choice).
+    const voiced = (w) => toneSeq(w.roman).filter((t) => t !== 5).length;
+    c.toneWord = [...entry.words].sort((a, b) => voiced(b) - voiced(a))[0];
+    c.options = toneOptions(c.toneWord.roman).map((roman) => ({ roman, right: roman === c.toneWord.roman }));
+  }
+  if (card.type === 'dictate') Object.assign(c, { build: true, entry, tiles: tiles(entry, chars()), picked: [], tries: 0, result: null });
   return c;
 }
 
@@ -859,6 +919,41 @@ function playStep(c, slow = false) {
   else speakText(part.map((w) => w.zh).join(''), c.deck, slow ? 0.55 : 0.85);
 }
 
+function renderPairs(c) {
+  const draw = () => box.replaceChildren(
+    el('div', { class: 'pairs-col' }, ...c.rows.map((r, n) => {
+      const b = el('button', { class: `pair pair-sound${r.done ? ' done' : ''}${c.picked === r ? ' on' : ''}` }, icon('play'), el('span', {}, String(n + 1)));
+      b.addEventListener('click', () => {
+        play(r.entry.audio[r.voice][0]);
+        if (r.done) return;
+        c.picked = r;
+        draw();
+      });
+      return b;
+    })),
+    el('div', { class: 'pairs-col' }, ...c.meanings.map((r) => {
+      const b = el('button', { class: `pair pair-meaning${r.done ? ' done' : ''}` }, r.entry.en);
+      b.addEventListener('click', () => {
+        if (r.done || !c.picked) return;
+        if (c.picked === r) {
+          r.done = true;
+          c.picked = null;
+          draw();
+          if (c.rows.every((x) => x.done)) finishActivity(c.rows.some((x) => x.missed) ? 2 : 3);
+          return;
+        }
+        c.picked.missed = true;
+        b.classList.add('wrong');
+        setTimeout(() => b.classList.remove('wrong'), 500);
+      });
+      return b;
+    }))
+  );
+  const box = el('div', { class: 'pairs' });
+  draw();
+  return [el('p', { class: 'muted' }, 'Tap a sound, then its meaning'), box];
+}
+
 function optionButtons(c, label) {
   return el('div', { class: 'opts' }, ...c.options.map((o) => {
     const b = el('button', { class: 'opt' }, ...label(o));
@@ -866,6 +961,8 @@ function optionButtons(c, label) {
     b.addEventListener('click', () => {
       if (c.result) return;
       b.classList.add(o.right ? 'right' : 'wrong');
+      // Tone answers also feed the tone statistics, like the tone check does.
+      if (c.activity === 'tone') scoreAnswer(progress.tones, c.toneWord.roman, o.roman, (progress.toneConfusions ||= {}));
       finishActivity(o.right ? 3 : 1);
     });
     return b;
@@ -882,6 +979,11 @@ function finishActivity(rating) {
   $('answer').hidden = false;
   $('reveal').hidden = true;
   $('continue').hidden = false;
+  if (c.activity === 'pairs') {
+    $('a-example').hidden = false;
+    $('a-example').replaceChildren(...c.rows.map((r) => sayLine(r.entry, c.deck)));
+    return;
+  }
   playCurrent();
 }
 
@@ -891,7 +993,7 @@ function showCard() {
   const c = contentFor(card);
   session.current = { card, c };
 
-  $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?' }[c.activity]
+  $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?', match: 'Is this what you hear?', tone: 'Which tones?', dictate: 'Rebuild it by ear', pairs: 'Match the pairs' }[c.activity]
     : c.build ? 'Build the sentence'
     : c.char ? 'Read it'
     : c.drill
@@ -908,9 +1010,9 @@ function showCard() {
   $('rec').classList.remove('recording');
   $('rec-row').hidden = true;
   $('a-en').textContent = c.en;
-  $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || c.build || c.activity === 'echo' || c.activity === 'chain';
+  $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || (c.build && !c.activity) || ['echo', 'chain', 'pairs'].includes(c.activity);
   $('continue').hidden = true;
-  $('reveal').textContent = c.activity === 'chain' ? 'Next part' : c.activity ? "I don't know" : c.build ? "I'm stuck, show me" : 'Show answer';
+  $('reveal').textContent = c.activity === 'chain' ? 'Next part' : c.build ? "I'm stuck, show me" : c.activity ? "I don't know" : 'Show answer';
   $('reveal').hidden = false;
   $('grades').hidden = true;
   $('which').hidden = true;
@@ -918,6 +1020,7 @@ function showCard() {
 
   if (c.activity === 'echo') finishActivity(3);
   else if (c.activity === 'chain') playStep(c);
+  else if (c.activity === 'pairs') $('reveal').hidden = true;
   else if (c.activity) playCurrent();
 
   // Every card moves the counter on; a card that comes back later adds one to the total.
@@ -971,6 +1074,13 @@ function rate(rating) {
 function commit(rating) {
   const { card, c } = session.current;
   const now = new Date();
+  if (c.activity === 'pairs') {
+    for (const r of c.rows) logActivity(progress, r.id, 'pairs', r.missed ? 1 : 3, now, c.revealMs);
+    persist();
+    session.pos += 1;
+    session.done += 1;
+    return showCard();
+  }
   if (c.activity) {
     logActivity(progress, card.id, c.activity, rating, now, c.revealMs);
     if (!session.used[card.id]?.includes(c.activity)) (session.used[card.id] ||= []).push(c.activity);
@@ -1014,14 +1124,25 @@ function commit(rating) {
   showCard();
 }
 
+// Has what the session leans on changed? One short line per change, kept for the day.
+function checkMethods() {
+  const { state, news } = methodNews(methodStats(progress.log), progress.methodState);
+  progress.methodState = state;
+  if (news.length) progress.methodNews = { date: localDate(new Date()), lines: news };
+  return news;
+}
+
 function finishSession() {
   const s = session;
   session = null;
+  const news = checkMethods();
+  persist();
   const results = {
     cards: s.graded,
     minutes: Math.max(1, Math.round((Date.now() - s.startedAt) / 60000)),
     pct: s.graded ? Math.round((100 * s.right) / s.graded) : 0,
     ...outcome(s.before, progress, allItems, deck()),
+    news,
   };
   syncNow();
   if (s.convo) {
@@ -1050,6 +1171,7 @@ function renderDone(r) {
   for (const zh of r.cleared) {
     changes.push(el('div', { class: 'change' }, icon('check'), el('span', {}, el('b', {}, (wordInfo(zh)?.roman || zh).replace(/-/g, '')), ' is off your trouble list')));
   }
+  for (const line of r.news || []) changes.push(el('div', { class: 'change' }, icon('target'), el('span', {}, line)));
   const soon = dueSoon(progress, items(), new Date());
   changes.push(el('div', { class: 'change info' }, icon('calendar'), el('span', {}, soon ? `Tomorrow: ${soon} review${soon === 1 ? '' : 's'}, ${minutes(estimateMinutes(soon))}` : 'Nothing due tomorrow. Enjoy the day off.')));
   $('done-changes').replaceChildren(el('p', { class: 'section' }, 'What changed'), ...changes);

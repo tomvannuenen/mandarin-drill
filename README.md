@@ -32,6 +32,17 @@ Practice:
   except *Read it* cards for words you won't see written in Hong Kong.
 - A card can show how the phrase sounds (*Everyday*, *Casual*, *Polite*, *Formal*), and which part can be
   swapped: that word is underlined, with a few things to put in its place.
+- **The daily session is the lesson**; Explore is extra. A session holds about 32 cards plus practice, and cannot
+  run away: a card comes back once at most, nothing comes back after 60 cards, and fewer new phrases are added
+  while earlier ones are still shaky (none once twelve are open).
+- **Learn before being tested.** A new phrase is first heard and repeated, a long one built up from its end
+  (一下嗎 → 解釋一下嗎 → …), and only tested a few cards later. A phrase that went wrong is practised another
+  way before it is asked again, in the session and at its next review.
+- **Ways of practising**, besides the say-it card: *Listen and repeat*, *Build it up*, *Pick by ear* (hear it,
+  pick the meaning), *Missing word by ear*, *Word tiles*. A short listening round sits in the middle of the session.
+- **What works for you** (Me): for each way of practising, how often the phrase was then said right *on a later
+  day*. The session leans on the ways with the best record, keeps trying the untried, and drops a way once it
+  has eight results and trails the best by 25 points (`lib/methods.js`).
 - **Word order** (Explore): ten sentence builds from phrases you've met, never-built ones first. After a build
   the card shows the English words in Chinese order (you · like · drink · what) and, where there is one, the
   rule behind it (items with `"order": "Place before the verb: 在 + place + verb"`). Patterns are built with a

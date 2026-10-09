@@ -2,7 +2,8 @@ import { $, el, play, renderRoman, speakText, LANG_ATTR, SCRIPT_LANG, SCRIPT_LAB
 import { icon, hydrateIcons } from './icons.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
-import { buildQueue, shouldRequeue, weekQueue, orderQueue, lessonWeeks, shakyCount } from './lib/session.js';
+import { buildQueue, shouldRequeue, weekQueue, orderQueue, lessonWeeks, shakyCount, adaptiveNew, mayReturn, SESSION_CAP } from './lib/session.js';
+import { ACTIVITIES, METHODS, METHOD_NAME, methodStats, dropped, pickMethod, applicable, chainSteps, logActivity } from './lib/methods.js';
 import { load, save, exportJSON, importJSON, applyReview, localDate } from './lib/store.js';
 import { initBook, renderBook } from './book.js';
 import { syncCoach, coachUrls } from './coach.js';
@@ -16,7 +17,7 @@ import { canRecord, startRecording, stopRecording, isRecording, compare, share a
 import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pullPlan, DEFAULT_REPO } from './lib/sync.js';
 import { flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
 import { weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from './lib/motivation.js';
-import { composeToday, snapshot, outcome, dueSoon, estimateMinutes } from './lib/today.js';
+import { composeToday, withActivities, snapshot, outcome, dueSoon, estimateMinutes } from './lib/today.js';
 import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId, reclassifyReadingFlags, displayFor } from './lib/chars.js';
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
@@ -272,7 +273,9 @@ function card(...children) {
 function newLimit() {
   const cfg = decks[deck()] || {};
   if (cfg.maxShaky && shakyCount(items(), progress) >= cfg.maxShaky) return extraNew;
-  return (cfg.newPerDay ?? progress.settings.newPerDay) + extraNew;
+  if (cfg.newPerDay != null) return cfg.newPerDay + extraNew;
+  // Fewer new phrases while earlier ones are still shaky; "Learn more" always adds on top.
+  return adaptiveNew(progress.settings.newPerDay, shakyCount(items(), progress)) + extraNew;
 }
 
 function todayPlan(now = new Date()) {
@@ -375,6 +378,7 @@ const REGISTER_LABEL = { everyday: 'Everyday', casual: 'Casual, with friends', p
 
 function contentFor(card) {
   const item = byId[card.id];
+  if (card.activity) return activityContent(card, item);
   if (card.type === 'char') {
     const { script, zhDisp } = displayFor(item, progress.settings.script);
     const word = { zh: item.zh, roman: item.roman, gloss: item.gloss, script, zhDisp, zhS: item.zhS };
@@ -697,7 +701,7 @@ function drawCard(card, c) {
   // Word order: the rule behind the sentence, and after a build the English words in Chinese order.
   $('a-order').replaceChildren(...(c.order ? mixedText(c.order, c.deck) : []));
   $('a-order').hidden = !c.order;
-  const literal = c.build && c.words.every((w) => w.gloss) ? c.words.map((w) => plainGloss(w.gloss)) : [];
+  const literal = (c.build || c.activity === 'chain') && c.words.every((w) => w.gloss) ? c.words.map((w) => plainGloss(w.gloss)) : [];
   $('a-literal').replaceChildren(...literal.flatMap((g, i) => [...(i ? [el('i', {}, '·')] : []), el('span', {}, g)]));
   $('a-literal').hidden = !literal.length;
   $('card-register').textContent = REGISTER_LABEL[c.register] || '';
@@ -718,6 +722,36 @@ function drawCard(card, c) {
 function promptFor(card, c) {
   const lang = zl(c.deck);
   if (c.build) return renderBuild(c);
+  if (c.activity === 'echo') return [el('p', { class: 'prompt-en' }, c.en), el('p', { class: 'muted' }, 'Listen, then say it out loud')];
+  if (c.activity === 'chain') {
+    // The whole sentence, with the part not reached yet dimmed: it grows from the end.
+    const on = c.words.length - c.steps[c.step].length;
+    return [
+      el('p', { class: 'prompt-en' }, c.en),
+      el('div', { class: 'chain' }, ...c.words.map((w, i) => el('span', { class: `chain-w${i < on ? ' off' : ''}` },
+        renderRoman(el('span', { class: 'chain-roman' }), w.roman, c.deck), el('span', { class: 'chain-zh', lang }, zs(w.zh, c.deck))))),
+      el('button', { class: 'icon-btn huge', 'aria-label': 'Play this part', onclick: () => playStep(c) }, icon('play')),
+      el('p', { class: 'muted' }, 'Say the bright part out loud'),
+    ];
+  }
+  if (c.activity === 'ear') {
+    return [
+      el('button', { class: 'icon-btn huge', 'aria-label': 'Play again', onclick: () => playCurrent({ next: true }) }, icon('play')),
+      el('p', { class: 'speaker' }),
+      optionButtons(c, (o) => [o.text]),
+    ];
+  }
+  if (c.activity === 'fill') {
+    return [
+      el('button', { class: 'icon-btn huge', 'aria-label': 'Play again', onclick: () => playCurrent({ next: true }) }, icon('play')),
+      el('p', { class: 'speaker' }),
+      el('p', { class: 'prompt-gap-roman' }, ...c.words.flatMap((w, i) => [
+        ...(i ? [' '] : []),
+        w.zh === c.gap && !c.result ? el('span', { class: 'gap' }, '＿＿') : renderRoman(el('span'), w.roman, c.deck),
+      ])),
+      optionButtons(c, (o) => [renderRoman(el('span'), o.word.roman, c.deck)]),
+    ];
+  }
   if (c.char) {
     return [
       el('p', { class: 'prompt-char', lang: SCRIPT_LANG[c.script] || lang }, c.zhDisp),
@@ -760,14 +794,95 @@ function startSession(queue, { convo = null } = {}) {
   if (!queue.length) return;
   session = {
     queue, pos: 0, total: queue.length, done: 0, right: 0, graded: 0,
-    startedAt: Date.now(), before: snapshot(progress), convo,
+    startedAt: Date.now(), before: snapshot(progress), convo, shown: {}, used: {},
   };
   show('study');
   showCard();
 }
 
 function startToday() {
-  startSession(todayPlan().queue, { convo: readyConversation() });
+  const tiles = decks[deck()]?.characters !== false;
+  const queue = withActivities({ queue: todayPlan().queue, items: items(), progress, stats: methodStats(progress.log), deck: deck(), tiles });
+  startSession(queue, { convo: readyConversation() });
+}
+
+// Phrases of this deck you have met, other than this one: the wrong answers in the listening games.
+function metPhrases(exceptId) {
+  return items().filter((i) => i.id !== exceptId && progress.cards[`${i.id}:say`]);
+}
+
+// Another way to practise a phrase that just went wrong, chosen by what has worked before.
+function practiceFor(id) {
+  const item = byId[id];
+  const tiles = decks[item.deck]?.characters !== false && item.kind !== 'word';
+  // Not the way it was already practised in this session, if there is another.
+  const all = applicable(item.fills?.[0] || item, metPhrases(id).length, { tiles });
+  const fresh = all.filter((m) => !session.used[id]?.includes(m));
+  const method = pickMethod(methodStats(progress.log), fresh.length ? fresh : all);
+  (session.used[id] ||= []).push(method);
+  return { key: `${id}:${method}`, id, type: method, deck: item.deck, ...(ACTIVITIES.includes(method) ? { activity: true } : {}) };
+}
+
+const shuffled = (list) => list.map((x) => [Math.random(), x]).sort((a, b) => a[0] - b[0]).map(([, x]) => x);
+
+function activityContent(card, item) {
+  const entry = item.kind === 'pattern' ? pickFill(item, progress) : item;
+  const c = {
+    activity: card.type, zh: entry.zh, roman: entry.roman, en: entry.en, words: entry.words, audio: entry.audio,
+    voice: pickVoice(entry), played: false, note: item.note, register: item.register, swap: item.swap, order: item.order,
+    chunks: item.chunks, deck: item.deck, flagged: new Set(), ...tracking(),
+  };
+  if (card.type === 'chain') Object.assign(c, { steps: chainSteps(entry.words), step: 0 });
+  if (card.type === 'ear') {
+    const wrong = shuffled([...new Set(metPhrases(item.id).map((i) => (i.fills?.[0] || i).en))].filter((en) => en !== entry.en)).slice(0, 3);
+    c.options = shuffled([{ text: entry.en, right: true }, ...wrong.map((text) => ({ text, right: false }))]);
+  }
+  if (card.type === 'fill') {
+    // Leave out a word that carries meaning: a known trouble spot if there is one, otherwise the longest.
+    const weakest = (w) => progress.weak[`w/${item.deck}/${w.zh}`]?.score || 0;
+    const gap = [...entry.words].sort((a, b) => weakest(b) - weakest(a) || b.roman.length - a.roman.length)[0];
+    const pool = new Map();
+    for (const i of metPhrases(item.id)) for (const e of i.fills || [i]) for (const w of e.words || []) pool.set(w.roman, w);
+    for (const w of entry.words) pool.delete(w.roman);
+    c.gap = gap.zh;
+    c.options = shuffled([{ word: gap, right: true }, ...shuffled([...pool.values()]).slice(0, 3).map((word) => ({ word, right: false }))]);
+  }
+  return c;
+}
+
+// The part of the sentence being built up right now, said by its own recording (or the phone's voice).
+function playStep(c, slow = false) {
+  const part = c.steps[c.step];
+  if (part.length === c.words.length) return playCurrent({ slow });
+  const src = c.chunks?.[part.length];
+  if (src) play(src, slow ? 0.75 : 1);
+  else speakText(part.map((w) => w.zh).join(''), c.deck, slow ? 0.55 : 0.85);
+}
+
+function optionButtons(c, label) {
+  return el('div', { class: 'opts' }, ...c.options.map((o) => {
+    const b = el('button', { class: 'opt' }, ...label(o));
+    b.dataset.right = o.right ? '1' : '';
+    b.addEventListener('click', () => {
+      if (c.result) return;
+      b.classList.add(o.right ? 'right' : 'wrong');
+      finishActivity(o.right ? 3 : 1);
+    });
+    return b;
+  }));
+}
+
+// An activity is over: show the sentence, say it, and wait for Continue. Nothing is graded by hand.
+function finishActivity(rating) {
+  const { c } = session.current;
+  if (c.result) return;
+  c.result = rating;
+  c.revealMs = Math.round(performance.now() - c.shownAt);
+  for (const b of document.querySelectorAll('#prompt .opt')) if (b.dataset.right) b.classList.add('right');
+  $('answer').hidden = false;
+  $('reveal').hidden = true;
+  $('continue').hidden = false;
+  playCurrent();
 }
 
 function showCard() {
@@ -776,7 +891,8 @@ function showCard() {
   const c = contentFor(card);
   session.current = { card, c };
 
-  $('card-kind').textContent = c.build ? 'Build the sentence'
+  $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?' }[c.activity]
+    : c.build ? 'Build the sentence'
     : c.char ? 'Read it'
     : c.drill
     ? 'Trouble spot'
@@ -792,13 +908,17 @@ function showCard() {
   $('rec').classList.remove('recording');
   $('rec-row').hidden = true;
   $('a-en').textContent = c.en;
-  $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || c.build;
+  $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || c.build || c.activity === 'echo' || c.activity === 'chain';
   $('continue').hidden = true;
-  $('reveal').textContent = c.build ? "I'm stuck, show me" : 'Show answer';
+  $('reveal').textContent = c.activity === 'chain' ? 'Next part' : c.activity ? "I don't know" : c.build ? "I'm stuck, show me" : 'Show answer';
   $('reveal').hidden = false;
   $('grades').hidden = true;
   $('which').hidden = true;
   for (const g of document.querySelectorAll('#grades .grade')) g.classList.remove('picked');
+
+  if (c.activity === 'echo') finishActivity(3);
+  else if (c.activity === 'chain') playStep(c);
+  else if (c.activity) playCurrent();
 
   // Every card moves the counter on; a card that comes back later adds one to the total.
   $('progress-bar').style.width = `${(session.pos / session.queue.length) * 100}%`;
@@ -808,6 +928,13 @@ function showCard() {
 function reveal() {
   if (!session || !$('answer').hidden) return;
   if (session.current.c.build) return finishBuild(1);
+  if (session.current.c.activity === 'chain') {
+    const { card, c } = session.current;
+    c.step += 1;
+    $('prompt').replaceChildren(...promptFor(card, c));
+    return c.step === c.steps.length - 1 ? finishActivity(3) : playStep(c);
+  }
+  if (session.current.c.activity) return finishActivity(1);
   session.current.c.revealMs = Math.round(performance.now() - session.current.c.shownAt);
   $('answer').hidden = false;
   $('reveal').hidden = true;
@@ -844,6 +971,14 @@ function rate(rating) {
 function commit(rating) {
   const { card, c } = session.current;
   const now = new Date();
+  if (c.activity) {
+    logActivity(progress, card.id, c.activity, rating, now, c.revealMs);
+    if (!session.used[card.id]?.includes(c.activity)) (session.used[card.id] ||= []).push(c.activity);
+    persist();
+    session.pos += 1;
+    session.done += 1;
+    return showCard();
+  }
   const state = grade(progress.cards[card.key] || null, rating, now);
   applyReview(progress, card, rating, state, now, {
     ms: c.revealMs, voice: c.voice, replays: c.replays, lookups: [...c.lookups], hint: c.hint,
@@ -862,14 +997,20 @@ function commit(rating) {
     const key = `${id}:say`;
     if (!progress.cards[key]) progress.cards[key] = grade(null, 1, now);
     drills();
-    if (!session.queue.slice(session.pos + 1).some((q) => q.key === key)) session.queue.push({ key, id, type: 'say', deck: c.deck });
+    if (session.pos < SESSION_CAP && !session.queue.slice(session.pos + 1).some((q) => q.key === key)) session.queue.push({ key, id, type: 'say', deck: c.deck });
   }
   persist();
   session.graded += 1;
   if (rating >= 3) session.right += 1;
   session.pos += 1;
-  if (shouldRequeue(state, now)) session.queue.push(card);
-  else session.done += 1;
+  // A card comes back once at most, and not at all once the session is long. A phrase that went wrong is
+  // first practised another way, then asked again.
+  const shown = (session.shown[card.key] = (session.shown[card.key] || 0) + 1);
+  if (shouldRequeue(state, now) && mayReturn(shown, session.pos)) {
+    const phrase = card.type === 'say' && !card.id.startsWith('w/') && byId[card.id];
+    if (rating < 3 && phrase) session.queue.push(practiceFor(card.id));
+    session.queue.push(card);
+  } else session.done += 1;
   showCard();
 }
 
@@ -1024,7 +1165,8 @@ function renderMe() {
           el('small', {}, info2 ? `${info2.roman.replace(/-/g, '')} · ${info2.gloss}` : ''));
       })),
       el('button', { class: 'btn small', onclick: () => startSession(reading.map((t) => ({ key: `${charId(d, t.zh)}:char`, id: charId(d, t.zh), type: 'char', deck: d }))) }, `Practise reading ${reading.length}`),
-    ] : [])
+    ] : []),
+    ...whatWorks()
   );
 
   $('me-tones').replaceChildren(...(d === 'mandarin' ? [el('p', { class: 'section' }, 'Tones'), toneBars(progress.tones)] : []));
@@ -1051,6 +1193,27 @@ function renderCheckin() {
   $('ci-coach-copy').onclick = () => navigator.clipboard.writeText(brief).then(() => { $('ci-status').textContent = 'Coach notes copied.'; }).catch(() => {});
   $('ci-coach-share').hidden = !navigator.share;
   $('ci-coach-share').onclick = () => navigator.share({ title: 'Notes for my Chinese lesson', text: brief }).catch(() => {});
+}
+
+// How often a phrase was said right on a later day, by what was done with it before. Methods that clearly
+// trail are dropped from the daily session.
+function whatWorks() {
+  const stats = methodStats(progress.log);
+  const out = new Set(dropped(stats));
+  const rows = [...METHODS, 'none'].filter((m) => stats[m]?.n).sort((a, b) => stats[b].ok / stats[b].n - stats[a].ok / stats[a].n);
+  if (!rows.length) return [];
+  return [
+    el('p', { class: 'section' }, 'What works for you'),
+    el('div', { class: 'works' }, ...rows.map((m) => {
+      const { n, ok } = stats[m];
+      const pct = Math.round((100 * ok) / n);
+      return el('div', { class: `works-row${out.has(m) ? ' dropped' : ''}` },
+        el('span', { class: 'works-name' }, METHOD_NAME[m]),
+        el('span', { class: 'works-bar' }, el('i', { style: `width:${pct}%` })),
+        el('span', { class: 'works-n' }, out.has(m) ? 'dropped' : `${pct}% of ${n}`));
+    })),
+    el('p', { class: 'muted small' }, 'Said right on a later day'),
+  ];
 }
 
 // ---------- I wish I could say…
@@ -1261,7 +1424,7 @@ async function init() {
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible') reg?.update().catch(() => {});
     });
-    const urls = allItems.flatMap((i) => (i.fills || [i]).flatMap((x) => Object.values(x.audio).flat()));
+    const urls = allItems.flatMap((i) => [...(i.fills || [i]).flatMap((x) => Object.values(x.audio).flat()), ...Object.values(i.chunks || {})]);
     const send = () => navigator.serviceWorker.controller?.postMessage({ type: 'cache-audio', urls: [...new Set(urls)] });
     if (navigator.serviceWorker.controller) send();
     else navigator.serviceWorker.addEventListener('controllerchange', send, { once: true });

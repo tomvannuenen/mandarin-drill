@@ -1,5 +1,5 @@
 {
- "version": "a0bb41e010dc",
+ "version": "15ad9ebcd312",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -268,6 +268,11 @@
      "audio/cn-xiaoxiao/hen-gaoxing-renshi-ni-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/hen-gaoxing-renshi-ni--1.mp3",
+    "2": "audio/chunks/hen-gaoxing-renshi-ni--2.mp3",
+    "3": "audio/chunks/hen-gaoxing-renshi-ni--3.mp3"
+   },
    "situation": "You've just been introduced to someone new.",
    "topic": "Introducing yourself",
    "mission": "Say it to someone you meet for the first time",
@@ -334,6 +339,11 @@
      "audio/cn-xiaoxiao/hen-gaoxing-renshi-dajia.mp3",
      "audio/cn-xiaoxiao/hen-gaoxing-renshi-dajia-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/hen-gaoxing-renshi-dajia--1.mp3",
+    "2": "audio/chunks/hen-gaoxing-renshi-dajia--2.mp3",
+    "3": "audio/chunks/hen-gaoxing-renshi-dajia--3.mp3"
    },
    "situation": "You've just been introduced to a whole group.",
    "topic": "Introducing yourself",
@@ -583,6 +593,10 @@
      "audio/cn-xiaoxiao/wo-shi-laoshi-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-shi-laoshi--1.mp3",
+    "2": "audio/chunks/wo-shi-laoshi--2.mp3"
+   },
    "situation": "Someone asks what you do. You teach.",
    "topic": "Work & study"
   },
@@ -637,6 +651,10 @@
      "audio/cn-xiaoxiao/wo-shi-jiaoshou.mp3",
      "audio/cn-xiaoxiao/wo-shi-jiaoshou-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-shi-jiaoshou--1.mp3",
+    "2": "audio/chunks/wo-shi-jiaoshou--2.mp3"
    },
    "situation": "Someone asks what you do at the university.",
    "note": "我是 [subject] 教授 = I'm a professor of [subject]",
@@ -718,6 +736,13 @@
      "audio/cn-xiaoxiao/wo-lai-zhongda-shouke-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-lai-zhongda-shouke--1.mp3",
+    "2": "audio/chunks/wo-lai-zhongda-shouke--2.mp3",
+    "3": "audio/chunks/wo-lai-zhongda-shouke--3.mp3",
+    "4": "audio/chunks/wo-lai-zhongda-shouke--4.mp3",
+    "5": "audio/chunks/wo-lai-zhongda-shouke--5.mp3"
+   },
    "situation": "A taxi driver asks why you're in Hong Kong.",
    "note": "授課 is formal (course catalogues, announcements). In conversation: 我在中文大學教書",
    "topic": "Work & study",
@@ -793,6 +818,12 @@
      "audio/cn-xiaoxiao/wo-zai-zhongda-jiaoshu-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-zai-zhongda-jiaoshu--1.mp3",
+    "2": "audio/chunks/wo-zai-zhongda-jiaoshu--2.mp3",
+    "3": "audio/chunks/wo-zai-zhongda-jiaoshu--3.mp3",
+    "4": "audio/chunks/wo-zai-zhongda-jiaoshu--4.mp3"
+   },
    "situation": "Someone asks where you teach.",
    "note": "教 (jiāo) + course/subject = teach …; note jiāo here vs jiào in 教授",
    "topic": "Work & study",
@@ -853,6 +884,10 @@
      "audio/cn-xiaoxiao/zuijin-hao-ma.mp3",
      "audio/cn-xiaoxiao/zuijin-hao-ma-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/zuijin-hao-ma--1.mp3",
+    "2": "audio/chunks/zuijin-hao-ma--2.mp3"
    },
    "situation": "You bump into a colleague you haven't seen for a while.",
    "topic": "Small talk",
@@ -965,6 +1000,10 @@
      "audio/cn-xiaoxiao/zuijin-mang-shenme.mp3",
      "audio/cn-xiaoxiao/zuijin-mang-shenme-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/zuijin-mang-shenme--1.mp3",
+    "2": "audio/chunks/zuijin-mang-shenme--2.mp3"
    },
    "situation": "You want to ask your coach what's been keeping them busy.",
    "topic": "Small talk",
@@ -1385,6 +1424,11 @@
      "audio/cn-xiaoxiao/ni-xihuan-he-shenme-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/ni-xihuan-he-shenme--1.mp3",
+    "2": "audio/chunks/ni-xihuan-he-shenme--2.mp3",
+    "3": "audio/chunks/ni-xihuan-he-shenme--3.mp3"
+   },
    "situation": "You're buying drinks and want to ask what the other person likes.",
    "topic": "Food & drink",
    "mission": "Ask someone what they like to drink",
@@ -1620,6 +1664,11 @@
      "audio/cn-xiaoxiao/ni-xihuan-chi-shenme.mp3",
      "audio/cn-xiaoxiao/ni-xihuan-chi-shenme-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/ni-xihuan-chi-shenme--1.mp3",
+    "2": "audio/chunks/ni-xihuan-chi-shenme--2.mp3",
+    "3": "audio/chunks/ni-xihuan-chi-shenme--3.mp3"
    },
    "situation": "You're choosing a restaurant with a colleague.",
    "topic": "Food & drink",
@@ -2257,6 +2306,11 @@
      "audio/cn-xiaoxiao/yao-bu-yao-la.mp3",
      "audio/cn-xiaoxiao/yao-bu-yao-la-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yao-bu-yao-la--1.mp3",
+    "2": "audio/chunks/yao-bu-yao-la--2.mp3",
+    "3": "audio/chunks/yao-bu-yao-la--3.mp3"
    },
    "situation": "You're ordering for a friend and want to check about chilli.",
    "topic": "Food & drink",
@@ -3654,6 +3708,11 @@
      "audio/cn-xiaoxiao/ni-jiao-shenme-mingzi-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/ni-jiao-shenme-mingzi--1.mp3",
+    "2": "audio/chunks/ni-jiao-shenme-mingzi--2.mp3",
+    "3": "audio/chunks/ni-jiao-shenme-mingzi--3.mp3"
+   },
    "situation": "You meet a new student and want to know their name.",
    "note": "Fine with students and peers. To someone senior, ask 請問怎麼稱呼？ (qǐngwèn zěnme chēnghū)",
    "topic": "Meeting people",
@@ -3721,6 +3780,11 @@
      "audio/cn-xiaoxiao/ni-shi-xuesheng-ma.mp3",
      "audio/cn-xiaoxiao/ni-shi-xuesheng-ma-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/ni-shi-xuesheng-ma--1.mp3",
+    "2": "audio/chunks/ni-shi-xuesheng-ma--2.mp3",
+    "3": "audio/chunks/ni-shi-xuesheng-ma--3.mp3"
    },
    "situation": "Someone young is waiting outside your office.",
    "topic": "Meeting people",
@@ -3795,6 +3859,12 @@
      "audio/cn-xiaoxiao/ni-shi-nage-xi-de-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/ni-shi-nage-xi-de--1.mp3",
+    "2": "audio/chunks/ni-shi-nage-xi-de--2.mp3",
+    "3": "audio/chunks/ni-shi-nage-xi-de--3.mp3",
+    "4": "audio/chunks/ni-shi-nage-xi-de--4.mp3"
+   },
    "situation": "You want to know a student's department.",
    "note": "系 xì = department (at a university)",
    "topic": "Meeting people",
@@ -3856,6 +3926,10 @@
      "audio/cn-xiaoxiao/ni-ji-nianji-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/ni-ji-nianji--1.mp3",
+    "2": "audio/chunks/ni-ji-nianji--2.mp3"
+   },
    "situation": "You want to know what year a student is in.",
    "topic": "Meeting people",
    "mission": "Ask a student what year they're in"
@@ -3914,6 +3988,10 @@
      "audio/cn-xiaoxiao/ni-du-shenme.mp3",
      "audio/cn-xiaoxiao/ni-du-shenme-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/ni-du-shenme--1.mp3",
+    "2": "audio/chunks/ni-du-shenme--2.mp3"
    },
    "situation": "You want to know what a student studies.",
    "note": "讀 dú = to study (a subject)",
@@ -3980,6 +4058,11 @@
      "audio/cn-xiaoxiao/ni-shi-nali-ren.mp3",
      "audio/cn-xiaoxiao/ni-shi-nali-ren-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/ni-shi-nali-ren--1.mp3",
+    "2": "audio/chunks/ni-shi-nali-ren--2.mp3",
+    "3": "audio/chunks/ni-shi-nali-ren--3.mp3"
    },
    "situation": "You want to know where someone is from.",
    "topic": "Meeting people",
@@ -4053,6 +4136,12 @@
      "audio/cn-xiaoxiao/ni-de-yingwen-hen-hao-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/ni-de-yingwen-hen-hao--1.mp3",
+    "2": "audio/chunks/ni-de-yingwen-hen-hao--2.mp3",
+    "3": "audio/chunks/ni-de-yingwen-hen-hao--3.mp3",
+    "4": "audio/chunks/ni-de-yingwen-hen-hao--4.mp3"
+   },
    "situation": "A student surprises you with excellent English.",
    "topic": "Meeting people",
    "mission": "Compliment a student's English",
@@ -4110,6 +4199,10 @@
      "audio/cn-xiaoxiao/wo-ye-shi.mp3",
      "audio/cn-xiaoxiao/wo-ye-shi-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-ye-shi--1.mp3",
+    "2": "audio/chunks/wo-ye-shi--2.mp3"
    },
    "situation": "Someone says they're new here too. Same for you!",
    "topic": "Meeting people",
@@ -4190,6 +4283,13 @@
      "audio/cn-xiaoxiao/wo-shi-xin-lai-de-jiaoshou-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-shi-xin-lai-de-jiaoshou--1.mp3",
+    "2": "audio/chunks/wo-shi-xin-lai-de-jiaoshou--2.mp3",
+    "3": "audio/chunks/wo-shi-xin-lai-de-jiaoshou--3.mp3",
+    "4": "audio/chunks/wo-shi-xin-lai-de-jiaoshou--4.mp3",
+    "5": "audio/chunks/wo-shi-xin-lai-de-jiaoshou--5.mp3"
+   },
    "situation": "You introduce yourself at your first department meeting.",
    "topic": "Meeting people",
    "mission": "Introduce yourself to a new colleague",
@@ -4255,6 +4355,11 @@
      "audio/cn-xiaoxiao/wo-gang-lai-xianggang.mp3",
      "audio/cn-xiaoxiao/wo-gang-lai-xianggang-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-gang-lai-xianggang--1.mp3",
+    "2": "audio/chunks/wo-gang-lai-xianggang--2.mp3",
+    "3": "audio/chunks/wo-gang-lai-xianggang--3.mp3"
    },
    "situation": "Someone asks how long you've been in Hong Kong. Not long!",
    "topic": "Meeting people",
@@ -4326,6 +4431,12 @@
      "audio/cn-xiaoxiao/ni-zai-xianggang-duojiu-le-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/ni-zai-xianggang-duojiu-le--1.mp3",
+    "2": "audio/chunks/ni-zai-xianggang-duojiu-le--2.mp3",
+    "3": "audio/chunks/ni-zai-xianggang-duojiu-le--3.mp3",
+    "4": "audio/chunks/ni-zai-xianggang-duojiu-le--4.mp3"
+   },
    "situation": "You want to ask a colleague how long they've lived here.",
    "topic": "Meeting people",
    "mission": "Ask a colleague how long they've been in Hong Kong",
@@ -4383,6 +4494,10 @@
      "audio/cn-xiaoxiao/wo-yanjiu-rengong-zhihui.mp3",
      "audio/cn-xiaoxiao/wo-yanjiu-rengong-zhihui-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-yanjiu-rengong-zhihui--1.mp3",
+    "2": "audio/chunks/wo-yanjiu-rengong-zhihui--2.mp3"
    },
    "situation": "Someone asks what your research is about.",
    "note": "人工智慧 is the Taiwan word. In Hong Kong and mainland China it is 人工智能 (réngōng zhìnéng); people also just say AI",
@@ -4456,6 +4571,12 @@
      "audio/cn-xiaoxiao/wo-de-bangongshi-zai-zheli.mp3",
      "audio/cn-xiaoxiao/wo-de-bangongshi-zai-zheli-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-de-bangongshi-zai-zheli--1.mp3",
+    "2": "audio/chunks/wo-de-bangongshi-zai-zheli--2.mp3",
+    "3": "audio/chunks/wo-de-bangongshi-zai-zheli--3.mp3",
+    "4": "audio/chunks/wo-de-bangongshi-zai-zheli--4.mp3"
    },
    "situation": "You show a student where your office is.",
    "topic": "Work & study",
@@ -4538,6 +4659,13 @@
      "audio/cn-xiaoxiao/huanying-lai-shang-wo-de-ke-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/huanying-lai-shang-wo-de-ke--1.mp3",
+    "2": "audio/chunks/huanying-lai-shang-wo-de-ke--2.mp3",
+    "3": "audio/chunks/huanying-lai-shang-wo-de-ke--3.mp3",
+    "4": "audio/chunks/huanying-lai-shang-wo-de-ke--4.mp3",
+    "5": "audio/chunks/huanying-lai-shang-wo-de-ke--5.mp3"
+   },
    "situation": "The first class of the semester starts.",
    "topic": "Work & study",
    "mission": "Welcome your students in Mandarin"
@@ -4595,6 +4723,10 @@
      "audio/cn-xiaoxiao/you-wenti-ma.mp3",
      "audio/cn-xiaoxiao/you-wenti-ma-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/you-wenti-ma--1.mp3",
+    "2": "audio/chunks/you-wenti-ma--2.mp3"
    },
    "situation": "You've finished explaining and check with the class.",
    "topic": "Work & study",
@@ -4770,6 +4902,13 @@
      "audio/cn-xiaoxiao/wo-de-zhongwen-bu-tai-hao-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-de-zhongwen-bu-tai-hao--1.mp3",
+    "2": "audio/chunks/wo-de-zhongwen-bu-tai-hao--2.mp3",
+    "3": "audio/chunks/wo-de-zhongwen-bu-tai-hao--3.mp3",
+    "4": "audio/chunks/wo-de-zhongwen-bu-tai-hao--4.mp3",
+    "5": "audio/chunks/wo-de-zhongwen-bu-tai-hao--5.mp3"
+   },
    "situation": "Someone compliments your Chinese, but you're modest.",
    "topic": "Getting by",
    "mission": "Say it when someone switches to fast Mandarin",
@@ -4836,6 +4975,11 @@
      "audio/cn-xiaoxiao/qing-shuo-man-yidian.mp3",
      "audio/cn-xiaoxiao/qing-shuo-man-yidian-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/qing-shuo-man-yidian--1.mp3",
+    "2": "audio/chunks/qing-shuo-man-yidian--2.mp3",
+    "3": "audio/chunks/qing-shuo-man-yidian--3.mp3"
    },
    "situation": "Someone is speaking too fast for you.",
    "topic": "Getting by",
@@ -4905,6 +5049,11 @@
      "audio/cn-xiaoxiao/zhege-zhongwen-zenme-shuo.mp3",
      "audio/cn-xiaoxiao/zhege-zhongwen-zenme-shuo-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/zhege-zhongwen-zenme-shuo--1.mp3",
+    "2": "audio/chunks/zhege-zhongwen-zenme-shuo--2.mp3",
+    "3": "audio/chunks/zhege-zhongwen-zenme-shuo--3.mp3"
    },
    "situation": "You point at an object and want its Chinese name.",
    "note": "Point at the thing, or say the English word first: \"outfit\" 中文怎麼說？",
@@ -4980,6 +5129,12 @@
      "audio/cn-xiaoxiao/ni-keyi-jiao-wo-ma.mp3",
      "audio/cn-xiaoxiao/ni-keyi-jiao-wo-ma-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/ni-keyi-jiao-wo-ma--1.mp3",
+    "2": "audio/chunks/ni-keyi-jiao-wo-ma--2.mp3",
+    "3": "audio/chunks/ni-keyi-jiao-wo-ma--3.mp3",
+    "4": "audio/chunks/ni-keyi-jiao-wo-ma--4.mp3"
    },
    "situation": "You'd like a student to teach you a word.",
    "topic": "Getting by",
@@ -5060,6 +5215,13 @@
      "audio/cn-xiaoxiao/women-yiqi-qu-he-kafei-ba-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/women-yiqi-qu-he-kafei-ba--1.mp3",
+    "2": "audio/chunks/women-yiqi-qu-he-kafei-ba--2.mp3",
+    "3": "audio/chunks/women-yiqi-qu-he-kafei-ba--3.mp3",
+    "4": "audio/chunks/women-yiqi-qu-he-kafei-ba--4.mp3",
+    "5": "audio/chunks/women-yiqi-qu-he-kafei-ba--5.mp3"
+   },
    "situation": "You want to invite a colleague for coffee.",
    "note": "吧 ba at the end makes it a suggestion: let's…",
    "topic": "Meeting people",
@@ -5126,6 +5288,11 @@
      "audio/cn-xiaoxiao/ni-you-kong-ma.mp3",
      "audio/cn-xiaoxiao/ni-you-kong-ma-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/ni-you-kong-ma--1.mp3",
+    "2": "audio/chunks/ni-you-kong-ma--2.mp3",
+    "3": "audio/chunks/ni-you-kong-ma--3.mp3"
    },
    "situation": "You want to know if someone has time now.",
    "topic": "Meeting people",
@@ -5252,6 +5419,12 @@
      "audio/cn-xiaoxiao/keyi-gei-wo-zhege-ma-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/keyi-gei-wo-zhege-ma--1.mp3",
+    "2": "audio/chunks/keyi-gei-wo-zhege-ma--2.mp3",
+    "3": "audio/chunks/keyi-gei-wo-zhege-ma--3.mp3",
+    "4": "audio/chunks/keyi-gei-wo-zhege-ma--4.mp3"
+   },
    "situation": "You point at something on the menu and ask the waiter for it.",
    "note": "Politer than 我要這個, which is what most people say when ordering",
    "topic": "Food & drink",
@@ -5360,6 +5533,14 @@
      "audio/cn-xiaoxiao/keyi-gei-wo-yibei-kafei-ma-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/keyi-gei-wo-yibei-kafei-ma--1.mp3",
+    "2": "audio/chunks/keyi-gei-wo-yibei-kafei-ma--2.mp3",
+    "3": "audio/chunks/keyi-gei-wo-yibei-kafei-ma--3.mp3",
+    "4": "audio/chunks/keyi-gei-wo-yibei-kafei-ma--4.mp3",
+    "5": "audio/chunks/keyi-gei-wo-yibei-kafei-ma--5.mp3",
+    "6": "audio/chunks/keyi-gei-wo-yibei-kafei-ma--6.mp3"
+   },
    "situation": "You're at the counter of a café and want a coffee.",
    "note": "Politer than 我要一杯咖啡, the usual way to order. Add 謝謝 once you get it",
    "topic": "Food & drink",
@@ -5464,12 +5645,18 @@
      "audio/cn-xiaoxiao/keyi-yong-yingwen-jieshi-yixia-ma-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/keyi-yong-yingwen-jieshi-yixia-ma--1.mp3",
+    "2": "audio/chunks/keyi-yong-yingwen-jieshi-yixia-ma--2.mp3",
+    "3": "audio/chunks/keyi-yong-yingwen-jieshi-yixia-ma--3.mp3",
+    "4": "audio/chunks/keyi-yong-yingwen-jieshi-yixia-ma--4.mp3",
+    "5": "audio/chunks/keyi-yong-yingwen-jieshi-yixia-ma--5.mp3"
+   },
    "situation": "Someone explains something in Chinese and you're lost.",
    "note": "The longer version of 可以說英文嗎？ 用英文 = using English, before the verb. 解釋 = to explain; 一下 softens it",
    "topic": "Getting by",
    "mission": "When a colleague or your coach says something you can't follow, ask 可以用英文解釋一下嗎？",
    "register": "polite",
-   "tier": 2,
    "order": "用 + language comes before the verb"
   },
   {
@@ -7501,6 +7688,10 @@
      "audio/cn-xiaoxiao/wo-bu-zhidao-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-bu-zhidao--1.mp3",
+    "2": "audio/chunks/wo-bu-zhidao--2.mp3"
+   },
    "situation": "Someone asks you something you have no idea about.",
    "topic": "Getting by",
    "register": "everyday",
@@ -7566,6 +7757,11 @@
      "audio/cn-xiaoxiao/wo-ting-bu-dong.mp3",
      "audio/cn-xiaoxiao/wo-ting-bu-dong-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-ting-bu-dong--1.mp3",
+    "2": "audio/chunks/wo-ting-bu-dong--2.mp3",
+    "3": "audio/chunks/wo-ting-bu-dong--3.mp3"
    },
    "situation": "Someone speaks fast Mandarin and you didn't catch it.",
    "note": "聽 listen + 不懂 not understand",
@@ -7633,6 +7829,11 @@
      "audio/cn-xiaoxiao/qing-zai-shuo-yici.mp3",
      "audio/cn-xiaoxiao/qing-zai-shuo-yici-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/qing-zai-shuo-yici--1.mp3",
+    "2": "audio/chunks/qing-zai-shuo-yici--2.mp3",
+    "3": "audio/chunks/qing-zai-shuo-yici--3.mp3"
    },
    "situation": "You almost understood, and want to hear it again.",
    "note": "請 qǐng = please; 再 zài = again",
@@ -7711,6 +7912,12 @@
      "audio/cn-xiaoxiao/ni-hui-shuo-yingwen-ma-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/ni-hui-shuo-yingwen-ma--1.mp3",
+    "2": "audio/chunks/ni-hui-shuo-yingwen-ma--2.mp3",
+    "3": "audio/chunks/ni-hui-shuo-yingwen-ma--3.mp3",
+    "4": "audio/chunks/ni-hui-shuo-yingwen-ma--4.mp3"
+   },
    "situation": "You're stuck and want to check if they speak English.",
    "topic": "Getting by",
    "order": "Statement + 嗎 = yes/no question"
@@ -7785,6 +7992,12 @@
      "audio/cn-xiaoxiao/wo-hui-shuo-yidiandian-zhongwen-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-hui-shuo-yidiandian-zhongwen--1.mp3",
+    "2": "audio/chunks/wo-hui-shuo-yidiandian-zhongwen--2.mp3",
+    "3": "audio/chunks/wo-hui-shuo-yidiandian-zhongwen--3.mp3",
+    "4": "audio/chunks/wo-hui-shuo-yidiandian-zhongwen--4.mp3"
+   },
    "situation": "Someone asks if you speak Chinese.",
    "topic": "Introducing yourself",
    "mission": "Tell a colleague you can speak a little Chinese",
@@ -7853,6 +8066,11 @@
      "audio/cn-xiaoxiao/wo-zai-xue-zhongwen-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-zai-xue-zhongwen--1.mp3",
+    "2": "audio/chunks/wo-zai-xue-zhongwen--2.mp3",
+    "3": "audio/chunks/wo-zai-xue-zhongwen--3.mp3"
+   },
    "situation": "Someone is surprised you know some Chinese.",
    "topic": "Introducing yourself",
    "mission": "Tell someone you're learning Chinese",
@@ -7916,6 +8134,11 @@
      "audio/cn-xiaoxiao/wo-zhu-zai-xianggang.mp3",
      "audio/cn-xiaoxiao/wo-zhu-zai-xianggang-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-zhu-zai-xianggang--1.mp3",
+    "2": "audio/chunks/wo-zhu-zai-xianggang--2.mp3",
+    "3": "audio/chunks/wo-zhu-zai-xianggang--3.mp3"
    },
    "situation": "Someone asks where you live.",
    "topic": "Introducing yourself",
@@ -7981,6 +8204,11 @@
      "audio/cn-xiaoxiao/ni-zai-nali-gongzuo.mp3",
      "audio/cn-xiaoxiao/ni-zai-nali-gongzuo-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/ni-zai-nali-gongzuo--1.mp3",
+    "2": "audio/chunks/ni-zai-nali-gongzuo--2.mp3",
+    "3": "audio/chunks/ni-zai-nali-gongzuo--3.mp3"
    },
    "situation": "You want to know where the person you just met works.",
    "note": "哪裡 nǎlǐ = where",
@@ -8055,6 +8283,12 @@
      "audio/cn-xiaoxiao/wo-zai-zhongda-gongzuo-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-zai-zhongda-gongzuo--1.mp3",
+    "2": "audio/chunks/wo-zai-zhongda-gongzuo--2.mp3",
+    "3": "audio/chunks/wo-zai-zhongda-gongzuo--3.mp3",
+    "4": "audio/chunks/wo-zai-zhongda-gongzuo--4.mp3"
+   },
    "situation": "Someone asks where you work.",
    "topic": "Work & study",
    "mission": "Tell someone where you work",
@@ -8113,6 +8347,10 @@
      "audio/cn-xiaoxiao/wo-hai-mei-chi.mp3",
      "audio/cn-xiaoxiao/wo-hai-mei-chi-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-hai-mei-chi--1.mp3",
+    "2": "audio/chunks/wo-hai-mei-chi--2.mp3"
    },
    "situation": "It's lunchtime and someone asks if you've eaten.",
    "topic": "Food & drink",
@@ -8179,6 +8417,11 @@
      "audio/cn-xiaoxiao/ni-xiang-chi-shenme.mp3",
      "audio/cn-xiaoxiao/ni-xiang-chi-shenme-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/ni-xiang-chi-shenme--1.mp3",
+    "2": "audio/chunks/ni-xiang-chi-shenme--2.mp3",
+    "3": "audio/chunks/ni-xiang-chi-shenme--3.mp3"
    },
    "situation": "You and a friend are choosing where to have lunch.",
    "topic": "Food & drink",
@@ -10040,6 +10283,10 @@
      "audio/cn-xiaoxiao/wo-hen-hao-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-hen-hao--1.mp3",
+    "2": "audio/chunks/wo-hen-hao--2.mp3"
+   },
    "situation": "Someone asks how you are.",
    "topic": "Small talk",
    "order": "No 是 before an adjective: 很 links them"
@@ -10154,6 +10401,11 @@
      "audio/cn-xiaoxiao/wo-ye-hen-hao-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-ye-hen-hao--1.mp3",
+    "2": "audio/chunks/wo-ye-hen-hao--2.mp3",
+    "3": "audio/chunks/wo-ye-hen-hao--3.mp3"
+   },
    "situation": "A friend says they're fine and asks about you.",
    "topic": "Small talk",
    "order": "也 (also) goes before the verb, never at the end"
@@ -10211,6 +10463,10 @@
      "audio/cn-xiaoxiao/you-mei-you-wenti.mp3",
      "audio/cn-xiaoxiao/you-mei-you-wenti-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/you-mei-you-wenti--1.mp3",
+    "2": "audio/chunks/you-mei-you-wenti--2.mp3"
    },
    "situation": "You've finished explaining and check with the class.",
    "note": "有沒有 = have or not have: a yes/no question without 嗎",
@@ -10277,6 +10533,11 @@
      "audio/cn-xiaoxiao/wo-bu-chi-la-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-bu-chi-la--1.mp3",
+    "2": "audio/chunks/wo-bu-chi-la--2.mp3",
+    "3": "audio/chunks/wo-bu-chi-la--3.mp3"
+   },
    "situation": "The waiter asks if you want chilli; you never eat it.",
    "note": "不 = don't (in general, habits). 沒 = didn't / haven't (it didn't happen)",
    "topic": "Food & drink",
@@ -10341,6 +10602,11 @@
      "audio/cn-xiaoxiao/wo-mei-chi-la.mp3",
      "audio/cn-xiaoxiao/wo-mei-chi-la-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-mei-chi-la--1.mp3",
+    "2": "audio/chunks/wo-mei-chi-la--2.mp3",
+    "3": "audio/chunks/wo-mei-chi-la--3.mp3"
    },
    "situation": "Someone asks if your lunch was spicy. It wasn't.",
    "note": "沒 = didn't / haven't. Compare 我不吃辣: I don't eat spicy food",
@@ -10408,6 +10674,11 @@
      "audio/cn-xiaoxiao/zuotian-wucan-de-shihou-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/zuotian-wucan-de-shihou--1.mp3",
+    "2": "audio/chunks/zuotian-wucan-de-shihou--2.mp3",
+    "3": "audio/chunks/zuotian-wucan-de-shihou--3.mp3"
+   },
    "situation": "You start telling a colleague what happened at lunch yesterday.",
    "note": "… 的時候 = at the time of …, when …",
    "topic": "Small talk",
@@ -10468,6 +10739,10 @@
      "audio/cn-xiaoxiao/ni-juede-zenmeyang-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/ni-juede-zenmeyang--1.mp3",
+    "2": "audio/chunks/ni-juede-zenmeyang--2.mp3"
+   },
    "situation": "You want a colleague's opinion.",
    "note": "覺得 = to feel / think (your own opinion)",
    "topic": "Small talk",
@@ -10525,6 +10800,10 @@
      "audio/cn-xiaoxiao/wo-he-le.mp3",
      "audio/cn-xiaoxiao/wo-he-le-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-he-le--1.mp3",
+    "2": "audio/chunks/wo-he-le--2.mp3"
    },
    "situation": "Someone asks if you had your coffee. You did.",
    "note": "了 le after a verb: the action happened",
@@ -10591,6 +10870,11 @@
      "audio/cn-xiaoxiao/ni-zhi-bu-zhidao-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/ni-zhi-bu-zhidao--1.mp3",
+    "2": "audio/chunks/ni-zhi-bu-zhidao--2.mp3",
+    "3": "audio/chunks/ni-zhi-bu-zhidao--3.mp3"
+   },
    "situation": "You want to check if someone knows something.",
    "note": "Verb 不 verb makes a yes/no question: 知不知道, 可不可以, 有沒有",
    "topic": "Small talk",
@@ -10647,6 +10931,10 @@
      "audio/cn-xiaoxiao/keyi-bu-keyi.mp3",
      "audio/cn-xiaoxiao/keyi-bu-keyi-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/keyi-bu-keyi--1.mp3",
+    "2": "audio/chunks/keyi-bu-keyi--2.mp3"
    },
    "situation": "You want to ask if something is allowed.",
    "topic": "Getting by",
@@ -10728,6 +11016,13 @@
      "audio/cn-xiaoxiao/zhege-ren-shi-wo-de-nupengyou-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/zhege-ren-shi-wo-de-nupengyou--1.mp3",
+    "2": "audio/chunks/zhege-ren-shi-wo-de-nupengyou--2.mp3",
+    "3": "audio/chunks/zhege-ren-shi-wo-de-nupengyou--3.mp3",
+    "4": "audio/chunks/zhege-ren-shi-wo-de-nupengyou--4.mp3",
+    "5": "audio/chunks/zhege-ren-shi-wo-de-nupengyou--5.mp3"
+   },
    "situation": "You introduce your girlfriend to someone.",
    "note": "A grammar example: 我的 = my, 這個人 = this person. When you introduce her, say 這是我女朋友",
    "topic": "Meeting people",
@@ -10793,6 +11088,11 @@
      "audio/cn-xiaoxiao/you-mei-you-qita-wenti.mp3",
      "audio/cn-xiaoxiao/you-mei-you-qita-wenti-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/you-mei-you-qita-wenti--1.mp3",
+    "2": "audio/chunks/you-mei-you-qita-wenti--2.mp3",
+    "3": "audio/chunks/you-mei-you-qita-wenti--3.mp3"
    },
    "situation": "You've answered one question and check for more.",
    "topic": "Work & study",
@@ -10876,6 +11176,13 @@
      "audio/cn-xiaoxiao/you-mei-you-qita-shijian-shangke-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/you-mei-you-qita-shijian-shangke--1.mp3",
+    "2": "audio/chunks/you-mei-you-qita-shijian-shangke--2.mp3",
+    "3": "audio/chunks/you-mei-you-qita-shijian-shangke--3.mp3",
+    "4": "audio/chunks/you-mei-you-qita-shijian-shangke--4.mp3",
+    "5": "audio/chunks/you-mei-you-qita-shijian-shangke--5.mp3"
+   },
    "situation": "You need to move your Chinese lesson.",
    "note": "時間 = time (in general, a slot). 時候 = a moment (… 的時候 = when …)",
    "topic": "Work & study",
@@ -10934,6 +11241,10 @@
      "audio/cn-xiaoxiao/xia-xingqi-jian.mp3",
      "audio/cn-xiaoxiao/xia-xingqi-jian-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/xia-xingqi-jian--1.mp3",
+    "2": "audio/chunks/xia-xingqi-jian--2.mp3"
    },
    "situation": "Your weekly lesson is ending.",
    "topic": "Small talk",
@@ -13035,6 +13346,12 @@
      "audio/cn-xiaoxiao/wo-hen-hao-ni-ne-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/wo-hen-hao-ni-ne--1.mp3",
+    "2": "audio/chunks/wo-hen-hao-ni-ne--2.mp3",
+    "3": "audio/chunks/wo-hen-hao-ni-ne--3.mp3",
+    "4": "audio/chunks/wo-hen-hao-ni-ne--4.mp3"
+   },
    "situation": "Someone asks how you are and you want to return the question.",
    "note": "我很好 + 你呢？ said in one breath. 呢 bounces the same question back, so you don't have to repeat 你好嗎",
    "topic": "Small talk",
@@ -13102,6 +13419,11 @@
      "audio/cn-xiaoxiao/wo-zai-xue-putonghua.mp3",
      "audio/cn-xiaoxiao/wo-zai-xue-putonghua-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-zai-xue-putonghua--1.mp3",
+    "2": "audio/chunks/wo-zai-xue-putonghua--2.mp3",
+    "3": "audio/chunks/wo-zai-xue-putonghua--3.mp3"
    },
    "situation": "Someone in Hong Kong asks whether you're learning Cantonese or Mandarin.",
    "note": "普通話 is what Mandarin is called in Hong Kong, where 中文 usually means Cantonese. In Taiwan people say 中文 or 國語 (guóyǔ), so with your coach 我在學中文 is enough",
@@ -13188,6 +13510,13 @@
      "audio/cn-xiaoxiao/zhe-ju-hua-zhongwen-zenme-shuo-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/zhe-ju-hua-zhongwen-zenme-shuo--1.mp3",
+    "2": "audio/chunks/zhe-ju-hua-zhongwen-zenme-shuo--2.mp3",
+    "3": "audio/chunks/zhe-ju-hua-zhongwen-zenme-shuo--3.mp3",
+    "4": "audio/chunks/zhe-ju-hua-zhongwen-zenme-shuo--4.mp3",
+    "5": "audio/chunks/zhe-ju-hua-zhongwen-zenme-shuo--5.mp3"
+   },
    "situation": "You know what you want to say in English but not in Chinese.",
    "note": "這句話 = this sentence (句 counts sentences). The short version does the same job: 這個中文怎麼說？",
    "topic": "Getting by",
@@ -13270,6 +13599,13 @@
      "audio/cn-xiaoxiao/wo-shi-cong-helan-lai-de.mp3",
      "audio/cn-xiaoxiao/wo-shi-cong-helan-lai-de-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-shi-cong-helan-lai-de--1.mp3",
+    "2": "audio/chunks/wo-shi-cong-helan-lai-de--2.mp3",
+    "3": "audio/chunks/wo-shi-cong-helan-lai-de--3.mp3",
+    "4": "audio/chunks/wo-shi-cong-helan-lai-de--4.mp3",
+    "5": "audio/chunks/wo-shi-cong-helan-lai-de--5.mp3"
    },
    "situation": "Someone asks where you're from.",
    "note": "是…的 wraps the detail you're stressing (where from). 從 cóng = from, 來 = come. 我是荷蘭人 says the same in fewer words",
@@ -13432,6 +13768,10 @@
      "audio/cn-xiaoxiao/wo-yao-zhege.mp3",
      "audio/cn-xiaoxiao/wo-yao-zhege-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-yao-zhege--1.mp3",
+    "2": "audio/chunks/wo-yao-zhege--2.mp3"
    },
    "situation": "You point at something on the menu.",
    "note": "The normal way to order: direct, not rude. 可以給我這個嗎？ is the politer version",
@@ -14059,6 +14399,11 @@
      "audio/cn-xiaoxiao/zhe-shi-wo-nupengyou-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/zhe-shi-wo-nupengyou--1.mp3",
+    "2": "audio/chunks/zhe-shi-wo-nupengyou--2.mp3",
+    "3": "audio/chunks/zhe-shi-wo-nupengyou--3.mp3"
+   },
    "situation": "You introduce your girlfriend to a colleague.",
    "note": "With family and partners 的 is usually dropped: 我女朋友, 我媽媽",
    "topic": "Meeting people",
@@ -14118,6 +14463,10 @@
      "audio/cn-xiaoxiao/hao-le-ma.mp3",
      "audio/cn-xiaoxiao/hao-le-ma-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/hao-le-ma--1.mp3",
+    "2": "audio/chunks/hao-le-ma--2.mp3"
    },
    "situation": "You're waiting for someone who is still packing up.",
    "note": "好了 = done, ready (了 marks the change). Yes: 好了. Not yet: 還沒",
@@ -14236,6 +14585,10 @@
      "audio/cn-xiaoxiao/dui-bu-dui-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/dui-bu-dui--1.mp3",
+    "2": "audio/chunks/dui-bu-dui--2.mp3"
+   },
    "situation": "You've said something and want the other person to confirm.",
    "note": "Tag question after a statement. Answer: 對 (right) or 不對 (not right)",
    "topic": "Small talk",
@@ -14295,6 +14648,10 @@
      "audio/cn-xiaoxiao/hao-bu-hao.mp3",
      "audio/cn-xiaoxiao/hao-bu-hao-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/hao-bu-hao--1.mp3",
+    "2": "audio/chunks/hao-bu-hao--2.mp3"
    },
    "situation": "You've suggested a plan and ask whether it suits them.",
    "note": "Goes after a suggestion. Answer: 好 (OK) or 不好 (no)",
@@ -14410,6 +14767,11 @@
      "audio/cn-xiaoxiao/keyi-shuo-yingwen-ma.mp3",
      "audio/cn-xiaoxiao/keyi-shuo-yingwen-ma-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/keyi-shuo-yingwen-ma--1.mp3",
+    "2": "audio/chunks/keyi-shuo-yingwen-ma--2.mp3",
+    "3": "audio/chunks/keyi-shuo-yingwen-ma--3.mp3"
    },
    "situation": "Someone explains something in Chinese and you're lost.",
    "topic": "Getting by",
@@ -14801,6 +15163,10 @@
      "audio/hk-hiugaai/yue-nei-hou-maa-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/yue-nei-hou-maa--1.mp3",
+    "2": "audio/chunks/yue-nei-hou-maa--2.mp3"
+   },
    "situation": "You ask a friend how they are.",
    "topic": "Small talk"
   },
@@ -14919,6 +15285,10 @@
      "audio/hk-hiugaai/yue-m-hou-jisi-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/yue-m-hou-jisi--1.mp3",
+    "2": "audio/chunks/yue-m-hou-jisi--2.mp3"
+   },
    "situation": "You need to squeeze past someone on the MTR.",
    "topic": "Getting by",
    "mission": "Say 唔好意思 to squeeze past someone on the MTR"
@@ -14964,6 +15334,10 @@
      "audio/hk-hiugaai/yue-m-sai-haakhei.mp3",
      "audio/hk-hiugaai/yue-m-sai-haakhei-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-m-sai-haakhei--1.mp3",
+    "2": "audio/chunks/yue-m-sai-haakhei--2.mp3"
    },
    "situation": "Someone thanks you for helping.",
    "topic": "Small talk"
@@ -15483,6 +15857,11 @@
      "audio/hk-hiugaai/yue-jau-mou-jingman-caanpaai-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/yue-jau-mou-jingman-caanpaai--1.mp3",
+    "2": "audio/chunks/yue-jau-mou-jingman-caanpaai--2.mp3",
+    "3": "audio/chunks/yue-jau-mou-jingman-caanpaai--3.mp3"
+   },
    "situation": "The menu is all in Chinese.",
    "note": "有冇 (have / not have) = do you have…?",
    "topic": "Food & drink",
@@ -15561,6 +15940,10 @@
      "audio/hk-hiugaai/yue-ngodei-heoi-jamcaa.mp3",
      "audio/hk-hiugaai/yue-ngodei-heoi-jamcaa-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-ngodei-heoi-jamcaa--1.mp3",
+    "2": "audio/chunks/yue-ngodei-heoi-jamcaa--2.mp3"
    },
    "situation": "You propose dim sum to a friend.",
    "topic": "Food & drink",
@@ -15677,6 +16060,11 @@
      "audio/hk-hiugaai/yue-ngo-teng-m-ming-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/yue-ngo-teng-m-ming--1.mp3",
+    "2": "audio/chunks/yue-ngo-teng-m-ming--2.mp3",
+    "3": "audio/chunks/yue-ngo-teng-m-ming--3.mp3"
+   },
    "situation": "You didn't understand what was said.",
    "note": "聽 is teng1 in everyday speech",
    "topic": "Getting by"
@@ -15728,6 +16116,11 @@
      "audio/hk-hiugaai/yue-m-goi-gong-do-ci.mp3",
      "audio/hk-hiugaai/yue-m-goi-gong-do-ci-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-m-goi-gong-do-ci--1.mp3",
+    "2": "audio/chunks/yue-m-goi-gong-do-ci--2.mp3",
+    "3": "audio/chunks/yue-m-goi-gong-do-ci--3.mp3"
    },
    "situation": "You want someone to repeat themselves.",
    "topic": "Getting by"
@@ -15824,6 +16217,12 @@
      "audio/hk-hiugaai/yue-nei-giu-matje-meng.mp3",
      "audio/hk-hiugaai/yue-nei-giu-matje-meng-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-nei-giu-matje-meng--1.mp3",
+    "2": "audio/chunks/yue-nei-giu-matje-meng--2.mp3",
+    "3": "audio/chunks/yue-nei-giu-matje-meng--3.mp3",
+    "4": "audio/chunks/yue-nei-giu-matje-meng--4.mp3"
    },
    "situation": "You want to know someone's name.",
    "note": "咩 me1 = what (Mandarin 什麼)",
@@ -16372,6 +16771,10 @@
      "audio/hk-hiugaai/yue-ngo-hai-lousi-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/yue-ngo-hai-lousi--1.mp3",
+    "2": "audio/chunks/yue-ngo-hai-lousi--2.mp3"
+   },
    "situation": "Someone asks what you do. You teach.",
    "topic": "Work & study"
   },
@@ -16416,6 +16819,10 @@
      "audio/hk-hiugaai/yue-ngo-hai-gaausau.mp3",
      "audio/hk-hiugaai/yue-ngo-hai-gaausau-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-ngo-hai-gaausau--1.mp3",
+    "2": "audio/chunks/yue-ngo-hai-gaausau--2.mp3"
    },
    "situation": "Someone asks what you do at the university.",
    "topic": "Work & study"
@@ -16474,6 +16881,12 @@
      "audio/hk-hiugaai/yue-ngo-sik-gong-siusiu-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/yue-ngo-sik-gong-siusiu--1.mp3",
+    "2": "audio/chunks/yue-ngo-sik-gong-siusiu--2.mp3",
+    "3": "audio/chunks/yue-ngo-sik-gong-siusiu--3.mp3",
+    "4": "audio/chunks/yue-ngo-sik-gong-siusiu--4.mp3"
+   },
    "situation": "Someone asks if you speak Cantonese.",
    "topic": "Getting by",
    "mission": "Surprise a colleague with it"
@@ -16531,6 +16944,12 @@
      "audio/hk-hiugaai/yue-ngo-m-sik-gong.mp3",
      "audio/hk-hiugaai/yue-ngo-m-sik-gong-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-ngo-m-sik-gong--1.mp3",
+    "2": "audio/chunks/yue-ngo-m-sik-gong--2.mp3",
+    "3": "audio/chunks/yue-ngo-m-sik-gong--3.mp3",
+    "4": "audio/chunks/yue-ngo-m-sik-gong--4.mp3"
    },
    "situation": "A shopkeeper starts speaking fast Cantonese to you.",
    "note": "識 sik1 = know how to; 講 gong2 = speak",
@@ -16597,6 +17016,13 @@
      "audio/hk-hiugaai/yue-nei-sik-m-sik-gong-jingman-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/yue-nei-sik-m-sik-gong-jingman--1.mp3",
+    "2": "audio/chunks/yue-nei-sik-m-sik-gong-jingman--2.mp3",
+    "3": "audio/chunks/yue-nei-sik-m-sik-gong-jingman--3.mp3",
+    "4": "audio/chunks/yue-nei-sik-m-sik-gong-jingman--4.mp3",
+    "5": "audio/chunks/yue-nei-sik-m-sik-gong-jingman--5.mp3"
+   },
    "situation": "You're stuck and want to check if they speak English.",
    "note": "Questions often use verb + 唔 + verb: 識唔識 = can or can't?",
    "topic": "Getting by"
@@ -16648,6 +17074,11 @@
      "audio/hk-hiugaai/yue-ngo-zyu-hai-hoenggong.mp3",
      "audio/hk-hiugaai/yue-ngo-zyu-hai-hoenggong-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-ngo-zyu-hai-hoenggong--1.mp3",
+    "2": "audio/chunks/yue-ngo-zyu-hai-hoenggong--2.mp3",
+    "3": "audio/chunks/yue-ngo-zyu-hai-hoenggong--3.mp3"
    },
    "situation": "Someone asks where you live.",
    "topic": "Introducing yourself"
@@ -16705,6 +17136,12 @@
      "audio/hk-hiugaai/yue-ngo-hai-zungman-daaihok-gaausyu.mp3",
      "audio/hk-hiugaai/yue-ngo-hai-zungman-daaihok-gaausyu-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-ngo-hai-zungman-daaihok-gaausyu--1.mp3",
+    "2": "audio/chunks/yue-ngo-hai-zungman-daaihok-gaausyu--2.mp3",
+    "3": "audio/chunks/yue-ngo-hai-zungman-daaihok-gaausyu--3.mp3",
+    "4": "audio/chunks/yue-ngo-hai-zungman-daaihok-gaausyu--4.mp3"
    },
    "situation": "Someone asks where you teach.",
    "note": "喺 hai2 = at/in (Mandarin 在)",
@@ -17654,6 +18091,10 @@
      "audio/hk-hiugaai/yue-m-jiu-laat-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/yue-m-jiu-laat--1.mp3",
+    "2": "audio/chunks/yue-m-jiu-laat--2.mp3"
+   },
    "situation": "You don't want chilli in your noodles.",
    "topic": "Food & drink"
   },
@@ -17841,6 +18282,10 @@
      "audio/hk-hiugaai/yue-ngo-jiu-nigo-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/yue-ngo-jiu-nigo--1.mp3",
+    "2": "audio/chunks/yue-ngo-jiu-nigo--2.mp3"
+   },
    "situation": "You point at the dish you want.",
    "topic": "Food & drink",
    "mission": "Point at something and say 我要呢個"
@@ -17966,6 +18411,10 @@
      "audio/hk-hiugaai/yue-saisaugaan-hai-bindou.mp3",
      "audio/hk-hiugaai/yue-saisaugaan-hai-bindou-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-saisaugaan-hai-bindou--1.mp3",
+    "2": "audio/chunks/yue-saisaugaan-hai-bindou--2.mp3"
    },
    "situation": "You need the toilet.",
    "topic": "Getting by",
@@ -18412,6 +18861,10 @@
      "audio/hk-hiugaai/yue-zou-me-aa-slow.mp3"
     ]
    },
+   "chunks": {
+    "1": "audio/chunks/yue-zou-me-aa--1.mp3",
+    "2": "audio/chunks/yue-zou-me-aa--2.mp3"
+   },
    "situation": "You greet a friend casually.",
    "topic": "Small talk"
   },
@@ -18468,6 +18921,12 @@
      "audio/hk-hiugaai/yue-m-goi-ngo-soeng-jiu-nigo.mp3",
      "audio/hk-hiugaai/yue-m-goi-ngo-soeng-jiu-nigo-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-m-goi-ngo-soeng-jiu-nigo--1.mp3",
+    "2": "audio/chunks/yue-m-goi-ngo-soeng-jiu-nigo--2.mp3",
+    "3": "audio/chunks/yue-m-goi-ngo-soeng-jiu-nigo--3.mp3",
+    "4": "audio/chunks/yue-m-goi-ngo-soeng-jiu-nigo--4.mp3"
    },
    "situation": "You call the waiter over and point at what you want on the menu.",
    "note": "想要 soeng2 jiu3 = would like: softer than 我要呢個. Swap 呢個 for any dish or drink",
@@ -18534,6 +18993,13 @@
      "audio/hk-hiugaai/yue-m-goi-ngo-soeng-jiu-bui-gaafe.mp3",
      "audio/hk-hiugaai/yue-m-goi-ngo-soeng-jiu-bui-gaafe-slow.mp3"
     ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-m-goi-ngo-soeng-jiu-bui-gaafe--1.mp3",
+    "2": "audio/chunks/yue-m-goi-ngo-soeng-jiu-bui-gaafe--2.mp3",
+    "3": "audio/chunks/yue-m-goi-ngo-soeng-jiu-bui-gaafe--3.mp3",
+    "4": "audio/chunks/yue-m-goi-ngo-soeng-jiu-bui-gaafe--4.mp3",
+    "5": "audio/chunks/yue-m-goi-ngo-soeng-jiu-bui-gaafe--5.mp3"
    },
    "situation": "You're at the counter and want a coffee.",
    "note": "杯 bui1 = a cup of: Cantonese drops the 一. Same frame as 我想要呢個",

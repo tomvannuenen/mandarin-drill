@@ -423,6 +423,9 @@ def expand(items, root=ROOT, deck="mandarin", glossary=None):
             o["en"] = it["en"]
             o["words"] = _words(it["zh"], o["roman"], it["en"], known, glossary, it.get("gloss", {}), deck)
             o["audio"] = _audio(it["id"], deck, root)
+            if it["kind"] == "phrase" and len(o["words"]) >= 3:
+                # Recordings of the sentence's tail, growing a word at a time: for building it up from the end.
+                o["chunks"] = {str(k): f"audio/chunks/{it['id']}--{k}.mp3" for k in range(1, len(o["words"]))}
         if it["kind"] == "pattern" and "situation" in it:
             o["situation"] = SLOT_RE.sub("___", it["situation"])
         elif "situation" in it:
@@ -473,6 +476,10 @@ def audio_jobs(out_items):
                 tts = VOICES[vid]["tts"]
                 jobs.append((normal, entry["zh"], NORMAL_RATE, o["id"], tts))
                 jobs.append((slow, entry["zh"], SLOW_RATE, o["id"], tts))
+        if "chunks" in o:
+            tts = VOICES[DECKS[o["deck"]]["voices"][1]]["tts"]
+            for k, path in o["chunks"].items():
+                jobs.append((path, "".join(w["zh"] for w in o["words"][-int(k):]), NORMAL_RATE, o["id"], tts))
     return jobs
 
 

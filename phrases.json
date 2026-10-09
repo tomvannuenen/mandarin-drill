@@ -1,5 +1,5 @@
 {
- "version": "15ad9ebcd312",
+ "version": "5d4957f63377",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -14818,7 +14818,9 @@
    },
    "situation": "You greet the security guard.",
    "topic": "Small talk",
-   "mission": "Greet the security guard or a shopkeeper with 你好"
+   "mission": "Greet the security guard or a shopkeeper with 你好",
+   "register": "everyday",
+   "tier": 0
   },
   {
    "id": "yue-m-goi",
@@ -14853,7 +14855,9 @@
    "situation": "Someone holds the lift door for you.",
    "note": "唔該 for help or service; 多謝 for gifts or compliments",
    "topic": "Getting by",
-   "mission": "Say 唔該 when someone holds a door or hands you something"
+   "mission": "Say 唔該 when someone holds a door or hands you something",
+   "register": "everyday",
+   "tier": 0
   },
   {
    "id": "yue-dozi",
@@ -14887,7 +14891,9 @@
    },
    "situation": "A colleague gives you a small gift.",
    "topic": "Small talk",
-   "mission": "Thank someone for a gift or compliment with 多謝"
+   "mission": "Thank someone for a gift or compliment with 多謝",
+   "register": "everyday",
+   "tier": 0
   },
   {
    "id": "yue-hai",
@@ -14919,7 +14925,8 @@
      "audio/hk-hiugaai/yue-hai-slow.mp3"
     ]
    },
-   "note": "Cantonese 係 = Mandarin 是"
+   "note": "Cantonese 係 = Mandarin 是",
+   "tier": 0
   },
   {
    "id": "yue-m-hai",
@@ -14958,7 +14965,9 @@
     ]
    },
    "note": "唔 m4 = not (Mandarin 不)",
-   "topic": "Getting by"
+   "topic": "Getting by",
+   "tier": 0,
+   "order": "唔 (not) goes right before the verb"
   },
   {
    "id": "yue-hou",
@@ -14989,7 +14998,8 @@
      "audio/hk-hiugaai/yue-hou.mp3",
      "audio/hk-hiugaai/yue-hou-slow.mp3"
     ]
-   }
+   },
+   "tier": 0
   },
   {
    "id": "yue-baaibaai",
@@ -15023,7 +15033,9 @@
    },
    "situation": "You leave a shop.",
    "topic": "Small talk",
-   "mission": "Say 拜拜 when you leave a shop"
+   "mission": "Say 拜拜 when you leave a shop",
+   "register": "everyday",
+   "tier": 0
   },
   {
    "id": "yue-ngo",
@@ -15168,7 +15180,11 @@
     "2": "audio/chunks/yue-nei-hou-maa--2.mp3"
    },
    "situation": "You ask a friend how they are.",
-   "topic": "Small talk"
+   "note": "Textbook Cantonese: correct, but friends ask 你點呀？",
+   "topic": "Small talk",
+   "register": "formal",
+   "tier": 2,
+   "order": "Statement + 嗎 = yes/no question"
   },
   {
    "id": "yue-gei-hou",
@@ -15208,7 +15224,8 @@
    },
    "situation": "Someone asks how you are. You're fine.",
    "topic": "Small talk",
-   "mission": "When someone asks how you are, answer 幾好"
+   "mission": "When someone asks how you are, answer 幾好",
+   "register": "everyday"
   },
   {
    "id": "yue-deoimzyu",
@@ -15241,7 +15258,9 @@
     ]
    },
    "situation": "You bump into someone.",
-   "topic": "Getting by"
+   "note": "A real apology. For small things (bumping into someone, getting past), 唔好意思 is more usual",
+   "topic": "Getting by",
+   "register": "everyday"
   },
   {
    "id": "yue-m-hou-jisi",
@@ -15291,7 +15310,8 @@
    },
    "situation": "You need to squeeze past someone on the MTR.",
    "topic": "Getting by",
-   "mission": "Say 唔好意思 to squeeze past someone on the MTR"
+   "mission": "Say 唔好意思 to squeeze past someone on the MTR",
+   "register": "everyday"
   },
   {
    "id": "yue-m-sai-haakhei",
@@ -15340,7 +15360,9 @@
     "2": "audio/chunks/yue-m-sai-haakhei--2.mp3"
    },
    "situation": "Someone thanks you for helping.",
-   "topic": "Small talk"
+   "note": "The full, polite form. Day to day people just say 唔使",
+   "topic": "Small talk",
+   "register": "polite"
   },
   {
    "id": "yue-tingjat-gin",
@@ -15588,7 +15610,8 @@
    },
    "situation": "You know what you want and need the waiter to come over.",
    "topic": "Food & drink",
-   "mission": "Wave a waiter over in a cha chaan teng with 唔該，落單"
+   "mission": "Wave a waiter over in a cha chaan teng with 唔該，落單",
+   "register": "everyday"
   },
   {
    "id": "yue-m-goi-saai",
@@ -15865,7 +15888,8 @@
    "situation": "The menu is all in Chinese.",
    "note": "有冇 (have / not have) = do you have…?",
    "topic": "Food & drink",
-   "mission": "Ask for the English menu in a local restaurant"
+   "mission": "Ask for the English menu in a local restaurant",
+   "order": "有冇 (have or not) = do you have…?"
   },
   {
    "id": "yue-jamcaa",
@@ -15947,7 +15971,8 @@
    },
    "situation": "You propose dim sum to a friend.",
    "topic": "Food & drink",
-   "mission": "Suggest yum cha to a colleague for the weekend"
+   "mission": "Suggest yum cha to a colleague for the weekend",
+   "order": "Who + go + do what"
   },
   {
    "id": "yue-zaulau",
@@ -16067,7 +16092,9 @@
    },
    "situation": "You didn't understand what was said.",
    "note": "聽 is teng1 in everyday speech",
-   "topic": "Getting by"
+   "topic": "Getting by",
+   "register": "everyday",
+   "order": "唔 goes between the verb and its result: 聽 + 唔 + 明"
   },
   {
    "id": "yue-m-goi-gong-do-ci",
@@ -16123,7 +16150,9 @@
     "3": "audio/chunks/yue-m-goi-gong-do-ci--3.mp3"
    },
    "situation": "You want someone to repeat themselves.",
-   "topic": "Getting by"
+   "topic": "Getting by",
+   "register": "polite",
+   "order": "The verb first, then 多次 (once more)"
   },
   {
    "id": "yue-ngo-giu",
@@ -16226,7 +16255,9 @@
    },
    "situation": "You want to know someone's name.",
    "note": "咩 me1 = what (Mandarin 什麼)",
-   "topic": "Introducing yourself"
+   "topic": "Introducing yourself",
+   "register": "everyday",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "yue-helan",
@@ -16889,7 +16920,8 @@
    },
    "situation": "Someone asks if you speak Cantonese.",
    "topic": "Getting by",
-   "mission": "Surprise a colleague with it"
+   "mission": "Surprise a colleague with it",
+   "order": "The amount comes before the thing: 少少 + 廣東話"
   },
   {
    "id": "yue-ngo-m-sik-gong",
@@ -16954,7 +16986,8 @@
    "situation": "A shopkeeper starts speaking fast Cantonese to you.",
    "note": "識 sik1 = know how to; 講 gong2 = speak",
    "topic": "Getting by",
-   "mission": "Say it when someone starts speaking fast Cantonese to you"
+   "mission": "Say it when someone starts speaking fast Cantonese to you",
+   "order": "唔 (not) goes right before the verb"
   },
   {
    "id": "yue-nei-sik-m-sik-gong-jingman",
@@ -17025,7 +17058,8 @@
    },
    "situation": "You're stuck and want to check if they speak English.",
    "note": "Questions often use verb + 唔 + verb: 識唔識 = can or can't?",
-   "topic": "Getting by"
+   "topic": "Getting by",
+   "order": "Verb + 唔 + verb = yes/no question"
   },
   {
    "id": "yue-ngo-zyu-hai-hoenggong",
@@ -17081,7 +17115,8 @@
     "3": "audio/chunks/yue-ngo-zyu-hai-hoenggong--3.mp3"
    },
    "situation": "Someone asks where you live.",
-   "topic": "Introducing yourself"
+   "topic": "Introducing yourself",
+   "order": "住 (live) is the exception: the place comes after it"
   },
   {
    "id": "yue-ngo-hai-zungman-daaihok-gaausyu",
@@ -17146,7 +17181,8 @@
    "situation": "Someone asks where you teach.",
    "note": "喺 hai2 = at/in (Mandarin 在)",
    "topic": "Work & study",
-   "mission": "Tell someone where you teach in Cantonese"
+   "mission": "Tell someone where you teach in Cantonese",
+   "order": "Place before the verb: 喺 + place + verb"
   },
   {
    "id": "yue-sik",
@@ -17659,7 +17695,8 @@
    "situation": "You order at a cha chaan teng. (___)",
    "note": "Ordering: 要 jiu3 = want",
    "topic": "Food & drink",
-   "mission": "Order your drink in Cantonese at a café or cha chaan teng"
+   "mission": "Order your drink in Cantonese at a café or cha chaan teng",
+   "register": "everyday"
   },
   {
    "id": "yue-ngo-zungji-jam-x",
@@ -18096,7 +18133,8 @@
     "2": "audio/chunks/yue-m-jiu-laat--2.mp3"
    },
    "situation": "You don't want chilli in your noodles.",
-   "topic": "Food & drink"
+   "topic": "Food & drink",
+   "order": "唔 (not) goes right before the verb"
   },
   {
    "id": "yue-hou-sik",
@@ -18136,7 +18174,8 @@
    },
    "situation": "The staff ask how the food was.",
    "topic": "Food & drink",
-   "mission": "Tell the staff 好食 after a meal"
+   "mission": "Tell the staff 好食 after a meal",
+   "register": "everyday"
   },
   {
    "id": "yue-gei-do-cin",
@@ -18176,7 +18215,8 @@
    },
    "situation": "You want to know the price at a market stall.",
    "topic": "Food & drink",
-   "mission": "Ask 幾多錢？ at a market stall"
+   "mission": "Ask 幾多錢？ at a market stall",
+   "register": "everyday"
   },
   {
    "id": "yue-nigo",
@@ -18247,7 +18287,7 @@
    "set": "Eating & drinking",
    "zh": "我要呢個",
    "roman": "ngo5 jiu3 ni1-go3",
-   "en": "I'd like this one",
+   "en": "I'll have this one (ordering)",
    "words": [
     {
      "zh": "我",
@@ -18287,8 +18327,31 @@
     "2": "audio/chunks/yue-ngo-jiu-nigo--2.mp3"
    },
    "situation": "You point at the dish you want.",
+   "note": "The normal way to order: point and say it. Add 唔該 to be friendly",
    "topic": "Food & drink",
-   "mission": "Point at something and say 我要呢個"
+   "mission": "Point at something and say 我要呢個",
+   "wish": "wish-1790803319538",
+   "register": "everyday",
+   "swap": {
+    "word": "呢個",
+    "with": [
+     {
+      "zh": "嗰個",
+      "roman": "go2-go3",
+      "en": "that one"
+     },
+     {
+      "zh": "凍奶茶",
+      "roman": "dung3 naai5-caa4",
+      "en": "iced milk tea"
+     },
+     {
+      "zh": "熱咖啡",
+      "roman": "jit6 gaa3-fe1",
+      "en": "hot coffee"
+     }
+    ]
+   }
   },
   {
    "id": "yue-m-goi-maaidaan",
@@ -18328,7 +18391,8 @@
    },
    "situation": "You've finished eating and want to pay.",
    "topic": "Food & drink",
-   "mission": "Ask for the bill in Cantonese"
+   "mission": "Ask for the bill in Cantonese",
+   "register": "everyday"
   },
   {
    "id": "yue-hai-bindou",
@@ -18368,7 +18432,8 @@
    },
    "situation": "You're looking for something and ask where it is.",
    "note": "邊度 bin1dou6 = where (Mandarin 哪裡)",
-   "topic": "Getting by"
+   "topic": "Getting by",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "yue-saisaugaan-hai-bindou",
@@ -18418,7 +18483,8 @@
    },
    "situation": "You need the toilet.",
    "topic": "Getting by",
-   "mission": "Ask where the toilet is in Cantonese"
+   "mission": "Ask where the toilet is in Cantonese",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "yue-jau-lok",
@@ -18459,7 +18525,8 @@
    "situation": "Your stop is coming up on the minibus.",
    "note": "Call it out to the driver of a red or green minibus",
    "topic": "Getting by",
-   "mission": "Call out 有落 on a minibus"
+   "mission": "Call out 有落 on a minibus",
+   "register": "everyday"
   },
   {
    "id": "yue-heoi",
@@ -18817,7 +18884,8 @@
     }
    ],
    "situation": "Someone asks where you'd like to go. (___)",
-   "topic": "Small talk"
+   "topic": "Small talk",
+   "order": "想 (want to) goes before the verb"
   },
   {
    "id": "yue-zou-me-aa",
@@ -18866,7 +18934,9 @@
     "2": "audio/chunks/yue-zou-me-aa--2.mp3"
    },
    "situation": "You greet a friend casually.",
-   "topic": "Small talk"
+   "topic": "Small talk",
+   "register": "casual",
+   "order": "The question word sits where the answer will go"
   },
   {
    "id": "yue-m-goi-ngo-soeng-jiu-nigo",
@@ -18929,10 +18999,11 @@
     "4": "audio/chunks/yue-m-goi-ngo-soeng-jiu-nigo--4.mp3"
    },
    "situation": "You call the waiter over and point at what you want on the menu.",
-   "note": "想要 soeng2 jiu3 = would like: softer than 我要呢個. Swap 呢個 for any dish or drink",
+   "note": "想要 soeng2 jiu3 = would like: softer than 我要呢個, which is what most people say",
    "topic": "Food & drink",
    "mission": "Catch the waiter in a cha chaan teng with 唔該, point at the menu and say 我想要呢個",
-   "wish": "wish-1790803319538"
+   "register": "polite",
+   "tier": 2
   },
   {
    "id": "yue-m-goi-ngo-soeng-jiu-bui-gaafe",
@@ -19002,10 +19073,186 @@
     "5": "audio/chunks/yue-m-goi-ngo-soeng-jiu-bui-gaafe--5.mp3"
    },
    "situation": "You're at the counter and want a coffee.",
-   "note": "杯 bui1 = a cup of: Cantonese drops the 一. Same frame as 我想要呢個",
+   "note": "杯 bui1 = a cup of: Cantonese drops the 一. The short way to order is 一杯咖啡，唔該",
    "topic": "Food & drink",
    "mission": "Order a coffee in a cha chaan teng or the CUHK canteen with 唔該，我想要杯咖啡",
-   "wish": "wish-1791059623536"
+   "register": "polite",
+   "tier": 2
+  },
+  {
+   "id": "yue-m-sai",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "Basics",
+   "zh": "唔使",
+   "roman": "m4 sai2",
+   "en": "No need / no thanks / you're welcome",
+   "words": [
+    {
+     "zh": "唔",
+     "roman": "m4",
+     "gloss": "not",
+     "script": "hk"
+    },
+    {
+     "zh": "使",
+     "roman": "sai2",
+     "gloss": "to need to (唔使 = no need)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-m-sai.mp3",
+     "audio/hk-wanlung/yue-m-sai-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-m-sai.mp3",
+     "audio/hk-hiumaan/yue-m-sai-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-m-sai.mp3",
+     "audio/hk-hiugaai/yue-m-sai-slow.mp3"
+    ]
+   },
+   "situation": "Someone offers you a bag, or thanks you.",
+   "note": "Three jobs in two syllables: refusing politely, saying there's no need, and answering thanks",
+   "topic": "Getting by",
+   "mission": "Turn down a plastic bag with 唔使, or answer 唔該 with it",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-nei-dim-aa",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "Basics",
+   "zh": "你點呀？",
+   "roman": "nei5 dim2 aa3?",
+   "en": "How are you? / How's it going?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nei5",
+     "gloss": "you",
+     "script": "hk"
+    },
+    {
+     "zh": "點",
+     "roman": "dim2",
+     "gloss": "how",
+     "script": "hk"
+    },
+    {
+     "zh": "呀",
+     "roman": "aa3",
+     "gloss": "(softening particle)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-nei-dim-aa.mp3",
+     "audio/hk-wanlung/yue-nei-dim-aa-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-nei-dim-aa.mp3",
+     "audio/hk-hiumaan/yue-nei-dim-aa-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-nei-dim-aa.mp3",
+     "audio/hk-hiugaai/yue-nei-dim-aa-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-nei-dim-aa--1.mp3",
+    "2": "audio/chunks/yue-nei-dim-aa--2.mp3"
+   },
+   "situation": "You run into a colleague you know.",
+   "note": "點 dim2 = how. The everyday way to ask; the answer can be 幾好",
+   "topic": "Small talk",
+   "mission": "Greet a colleague you know with 你點呀？",
+   "register": "casual",
+   "order": "The question word sits where the answer will go"
+  },
+  {
+   "id": "yue-jat-bui-gaafe-m-goi",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "My phrases",
+   "zh": "一杯咖啡，唔該",
+   "roman": "jat1 bui1 gaa3-fe1, m4-goi1",
+   "en": "A coffee, please",
+   "words": [
+    {
+     "zh": "一",
+     "roman": "jat1",
+     "gloss": "one",
+     "script": "hk"
+    },
+    {
+     "zh": "杯",
+     "roman": "bui1",
+     "gloss": "a cup of (measure word)",
+     "script": "hk"
+    },
+    {
+     "zh": "咖啡",
+     "roman": "gaa3-fe1",
+     "gloss": "coffee",
+     "script": "hk"
+    },
+    {
+     "zh": "唔該",
+     "roman": "m4-goi1",
+     "gloss": "please; thanks",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-jat-bui-gaafe-m-goi.mp3",
+     "audio/hk-wanlung/yue-jat-bui-gaafe-m-goi-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-jat-bui-gaafe-m-goi.mp3",
+     "audio/hk-hiumaan/yue-jat-bui-gaafe-m-goi-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-jat-bui-gaafe-m-goi.mp3",
+     "audio/hk-hiugaai/yue-jat-bui-gaafe-m-goi-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-jat-bui-gaafe-m-goi--1.mp3",
+    "2": "audio/chunks/yue-jat-bui-gaafe-m-goi--2.mp3",
+    "3": "audio/chunks/yue-jat-bui-gaafe-m-goi--3.mp3"
+   },
+   "situation": "You're at the counter of a café and want a coffee.",
+   "topic": "Food & drink",
+   "mission": "Order your next coffee with 一杯咖啡，唔該",
+   "wish": "wish-1791059623536",
+   "register": "everyday",
+   "order": "Number + measure word + thing; 唔該 comes last",
+   "swap": {
+    "word": "咖啡",
+    "with": [
+     {
+      "zh": "奶茶",
+      "roman": "naai5-caa4",
+      "en": "milk tea"
+     },
+     {
+      "zh": "水",
+      "roman": "seoi2",
+      "en": "water"
+     },
+     {
+      "zh": "啤酒",
+      "roman": "be1-zau2",
+      "en": "beer"
+     }
+    ]
+   }
   }
  ],
  "conversations": [
@@ -23511,6 +23758,18 @@
     "e": "not (Mandarin)",
     "k": "mandarin"
    },
+   "你點呀": {
+    "r": "nei5 dim2 aa3?",
+    "e": "How are you? / How's it going?"
+   },
+   "唔好意思": {
+    "r": "m4 hou2 ji3-si1",
+    "e": "Excuse me; sorry (small things)"
+   },
+   "唔使": {
+    "r": "m4 sai2",
+    "e": "No need / no thanks / you're welcome"
+   },
    "他": {
     "r": "tā",
     "e": "he (Mandarin)",
@@ -23655,11 +23914,7 @@
    },
    "我要呢個": {
     "r": "ngo5 jiu3 ni1-go3",
-    "e": "I'd like this one"
-   },
-   "呢個": {
-    "r": "ni1-go3",
-    "e": "this one"
+    "e": "I'll have this one (ordering)"
    },
    "杯": {
     "r": "bui1",
@@ -23669,9 +23924,17 @@
     "r": "jat1",
     "e": "one"
    },
-   "我想要呢個": {
-    "r": "ngo5 soeng2 jiu3 ni1 go3",
-    "e": "I'd like this one"
+   "一杯咖啡": {
+    "r": "jat1 bui1 gaa3-fe1",
+    "e": "a cup of coffee"
+   },
+   "點": {
+    "r": "dim2",
+    "e": "how"
+   },
+   "幾好": {
+    "r": "gei2 hou2",
+    "e": "Pretty good"
    }
   }
  }

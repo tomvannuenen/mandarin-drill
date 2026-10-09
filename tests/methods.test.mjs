@@ -80,3 +80,17 @@ test('methodNews reports a way of practising being dropped, coming back, or taki
   const back = methodNews({ ...stats, ear: { n: 14, ok: 11 } }, state);
   assert.deepEqual(back.news, ['Pick by ear is back in.']);
 });
+
+test('strengthOf: new, learning, hard, solid', async () => {
+  const { strengthOf } = await import('../lib/methods.js');
+  const p = defaults();
+  assert.equal(strengthOf(p, 'a'), 'new');
+  p.cards['a:say'] = { state: 2, stability: 3 };
+  p.log.push([at(0), 'a:say', 3]);
+  assert.equal(strengthOf(p, 'a'), 'learning');
+  p.goodCounts.a = 2;
+  p.cards['a:say'].stability = 9;
+  assert.equal(strengthOf(p, 'a'), 'solid');
+  p.log.push([at(1), 'a:say', 1]);
+  assert.equal(strengthOf(p, 'a'), 'hard');
+});

@@ -301,6 +301,21 @@ button.note-zh.on { text-decoration-color: var(--seal); text-decoration-style: s
 .pair.on { border-color: var(--ink); background: var(--paper-3); }
 .pair.done { opacity: .35; border-color: var(--good); }
 .pair.wrong { border-color: var(--seal); background: var(--seal-soft); }
+.lvl { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex: none; }
+.lvl-solid { background: var(--good); }
+.lvl-learning { background: var(--t2); }
+.lvl-hard { background: var(--seal); }
+.lvl-new { box-shadow: inset 0 0 0 1.5px var(--ink-3); }
+.legend { display: grid; gap: 4px; font-size: 12px; color: var(--ink-3); margin: 0 0 12px; }
+.legend .lvl { margin: 0 4px 0 0; }
+.legend b { font-weight: 700; }
+.card-kind[data-lvl]::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+.card-kind[data-lvl='solid']::before { background: var(--good); }
+.card-kind[data-lvl='learning']::before { background: var(--t2); }
+.card-kind[data-lvl='hard']::before { background: var(--seal); }
+.card-kind[data-lvl='new']::before { box-shadow: inset 0 0 0 1.5px var(--ink-3); }
+.wg.weak { position: relative; }
+.wg.weak::after { content: ''; position: absolute; top: 4px; right: 2px; width: 7px; height: 7px; border-radius: 50%; background: var(--seal); }
 .opts { display: grid; gap: 8px; margin: 16px auto 0; max-width: 34ch; }
 .opt { font-family: var(--sans); font-size: 16px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--rule); background: var(--paper-2); color: inherit; cursor: pointer; text-align: center; }
 .opt.right { border-color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent); }

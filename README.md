@@ -57,6 +57,10 @@ Practice:
   long. When a short phrase does the job (這個中文怎麼說？), the longer one gets `"tier": 2`.
 - Useful before polite: essentials come first, then your wishes and the lesson weeks; the politer, more formal
   or rarer way to say something waits until the everyday phrases are in.
+- Letter colours are tones (Mandarin 1 red, 2 amber, 3 green, 4 blue, neutral grey; Cantonese adds 6 purple).
+  How a phrase is going for you is the dot: green solid, amber learning, red hard right now, hollow not met.
+  It sits before each phrase in All phrases and before the card's title; a red dot on a word in an answer
+  marks a current trouble spot.
 - Tap any word (in answers, on tiles, in "Which part?") to hear just that word.
 - Tap a word in an answer to see its characters; tap a character to see what it means and what it is made of;
   tap a part to go deeper. Dashed green marks the part that gives the meaning, dashed purple the sound.

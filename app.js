@@ -3,7 +3,7 @@ import { icon, hydrateIcons } from './icons.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
 import { buildQueue, shouldRequeue, weekQueue, orderQueue, lessonWeeks, shakyCount, adaptiveNew, mayReturn, SESSION_CAP } from './lib/session.js';
-import { ACTIVITIES, METHODS, METHOD_NAME, methodStats, methodNews, dropped, pickMethod, applicable, chainSteps, logActivity } from './lib/methods.js';
+import { ACTIVITIES, METHODS, METHOD_NAME, methodStats, methodNews, dropped, pickMethod, applicable, chainSteps, logActivity, strengthOf } from './lib/methods.js';
 import { options as toneOptions, toneSeq, scoreAnswer } from './lib/tonequiz.js';
 import { load, save, exportJSON, importJSON, applyReview, localDate } from './lib/store.js';
 import { initBook, renderBook } from './book.js';
@@ -460,7 +460,8 @@ function renderWords(c) {
       const wLang = c.char ? (SCRIPT_LANG[w.script] || lang) : lang;
       const btn = el(
         'button',
-        { class: `wg${w.zh === c.target && c.drill === 'gap' ? ' target' : ''}${w.zh === c.swap?.word ? ' swappable' : ''}`, 'data-zh': w.zh, 'aria-label': `${disp}: ${w.gloss}` },
+        // A dot marks a word that is a current trouble spot: to say, or on a Read it card to read.
+        { class: `wg${w.zh === c.target && c.drill === 'gap' ? ' target' : ''}${w.zh === c.swap?.word ? ' swappable' : ''}${(c.char ? progress.weakChars?.[`${c.deck}/${w.zh}`]?.score : progress.weak[`w/${c.deck}/${w.zh}`]?.score) > 0 ? ' weak' : ''}`, 'data-zh': w.zh, 'aria-label': `${disp}: ${w.gloss}` },
         el('span', { class: 'wg-zh', lang: wLang }, disp),
         renderRoman(el('span', { class: 'wg-roman' }), w.roman, c.deck)
       );
@@ -1001,6 +1002,10 @@ function showCard() {
     : c.level === 'situation' ? 'What would you say?'
     : c.level === 'speed' ? 'Speed round: say it before the bar runs out'
     : { say: `Say it in ${LANG_NAME[c.deck]}`, listen: 'What does this mean?', read: 'Read it aloud' }[card.type];
+  // The dot before the card's title shows how this phrase is going (as in All phrases).
+  const lvlId = card.ids ? null : card.id;
+  if (lvlId && byId[lvlId] && !lvlId.startsWith('w/') && !lvlId.startsWith('c/')) $('card-kind').dataset.lvl = strengthOf(progress, lvlId);
+  else delete $('card-kind').dataset.lvl;
   $('answer').hidden = true;
   drawCard(card, c);
   if (!c.drill && card.type === 'listen') playCurrent();
@@ -1208,9 +1213,15 @@ function groupLabel(item) {
   return item.set || `Week ${item.week}`;
 }
 
+const LEVEL_NAME = { new: 'not met yet', learning: 'learning', hard: 'hard for you right now', solid: 'solid' };
+function levelDot(id) {
+  const lvl = strengthOf(progress, id);
+  return el('i', { class: `lvl lvl-${lvl}`, role: 'img', 'aria-label': LEVEL_NAME[lvl] });
+}
+
 function rowParts(entry, d, badge) {
   return [
-    el('span', { class: 'zh-s', lang: LANG_ATTR[d] }, entry.zh, ...(badge ? [el('span', { class: 'badge' }, badge)] : [])),
+    el('span', { class: 'zh-s', lang: zl(d) }, ...(entry.id ? [levelDot(entry.id)] : []), zs(entry.zh, d), ...(badge ? [el('span', { class: 'badge' }, badge)] : [])),
     el('span', { class: 'en-s' }, entry.en),
     renderRoman(el('span', { class: 'pinyin-s' }), entry.roman, d),
   ];
@@ -1225,6 +1236,11 @@ function renderBrowse() {
   const d = deck();
   // Newest group first: groups ordered by where they first appear in the data, reversed.
   const labels = [...new Set(list.map(groupLabel))].reverse();
+  const tones = d === 'cantonese' ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5];
+  $('browse-legend').replaceChildren(
+    el('span', {}, ...['solid', 'learning', 'hard', 'new'].flatMap((l) => [el('i', { class: `lvl lvl-${l}` }), `${LEVEL_NAME[l]}  `])),
+    el('span', {}, 'Letter colours are tones: ', ...tones.flatMap((t) => [el('b', { class: `${d === 'cantonese' ? 'jtone' : 'tone'}${t}` }, d === 'mandarin' && t === 5 ? 'neutral' : `${t}`), ' ']))
+  );
   $('browse-list').replaceChildren(...labels.map((label) => el('div', { class: 'week' },
     el('h3', {}, label),
     ...list.filter((i) => groupLabel(i) === label).map((i) => (i.kind !== 'pattern'

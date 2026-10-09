@@ -10,10 +10,26 @@ export const $ = (id) => document.getElementById(id);
 const audio = new Audio();
 export function play(src, rate = 1) {
   if (!src) return;
+  audio.onended = null;
   audio.src = src;
   audio.currentTime = 0;
   audio.playbackRate = rate;
   audio.play().catch(() => {});
+}
+
+// Several recordings one after the other, with a short pause between them (the same player, so phones allow it).
+export function playSequence(srcs, onDone = () => {}, gap = 600) {
+  let i = 0;
+  const stop = () => { audio.onended = null; onDone(); };
+  const next = () => {
+    if (i >= srcs.length) return stop();
+    audio.src = srcs[i++];
+    audio.currentTime = 0;
+    audio.playbackRate = 1;
+    audio.play().catch(stop);
+  };
+  audio.onended = () => setTimeout(next, gap);
+  next();
 }
 
 export function el(tag, attrs = {}, ...children) {

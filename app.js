@@ -1,4 +1,4 @@
-import { $, el, play, renderRoman, speakText, LANG_ATTR, SCRIPT_LANG, SCRIPT_LABEL } from './ui.js';
+import { $, el, play, playSequence, renderRoman, speakText, LANG_ATTR, SCRIPT_LANG, SCRIPT_LABEL } from './ui.js';
 import { icon, hydrateIcons } from './icons.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
@@ -288,7 +288,9 @@ function todayPlan(now = new Date()) {
   const weakest = (x) => -(progress.weak[x.id]?.score || 0);
   const d = cfg.maxDrills ? drills().sort((a, b) => weakest(a) - weakest(b)).slice(0, cfg.maxDrills) : drills();
   const characters = cfg.characters !== false;
-  return composeToday({ items: items(), drills: d, chars: characters ? chars() : [], progress, plan, now, newLimit: newLimit(), deck: deck(), characters });
+  // Once the day's session is done, only what is really due is offered again (no pulling reviews forward).
+  const topUp = progress.stats.dailyDone?.[deck()] !== localDate(now);
+  return composeToday({ items: items(), drills: d, chars: characters ? chars() : [], progress, plan, now, newLimit: newLimit(), deck: deck(), characters, topUp });
 }
 
 function readyConversation() {
@@ -334,7 +336,7 @@ function renderHome() {
       counts.builds && `${counts.builds} to build`,
       convo && '1 conversation',
     ].filter(Boolean);
-    const m = minutes(estimateMinutes(queue.length) + (convo ? 2 : 0));
+    const m = minutes(estimateMinutes(dailyQueue(queue).length) + (convo ? 2 : 0));
     $('start-sub').textContent = `${m[0].toUpperCase()}${m.slice(1)} · ${parts.join(', ')}`;
   } else {
     const soon = dueSoon(progress, items(), now);
@@ -780,6 +782,16 @@ function promptFor(card, c) {
     ];
   }
   if (c.activity === 'pairs') return renderPairs(c);
+  if (c.activity === 'passage') {
+    // Today's sentences in a row, nothing to read: then say how much of it you caught.
+    const start = () => playSequence(c.rows.map((r) => r.entry.audio[r.voice][0]));
+    return [
+      el('button', { class: 'icon-btn huge', 'aria-label': 'Play the passage', onclick: start }, icon('play')),
+      el('p', { class: 'muted' }, `${c.rows.length} sentences from today, without looking`),
+      el('div', { class: 'opts' }, ...[[3, 'I caught all of it'], [2, 'Most of it'], [1, 'Not much']].map(([rating, text]) =>
+        el('button', { class: 'opt', onclick: () => finishActivity(rating) }, text))),
+    ];
+  }
   if (c.activity === 'fill') {
     return [
       el('button', { class: 'icon-btn huge', 'aria-label': 'Play again', onclick: () => playCurrent({ next: true }) }, icon('play')),
@@ -829,20 +841,25 @@ function promptFor(card, c) {
   ];
 }
 
-function startSession(queue, { convo = null } = {}) {
+function startSession(queue, { convo = null, daily = null } = {}) {
   if (!queue.length) return;
   session = {
     queue, pos: 0, total: queue.length, done: 0, right: 0, graded: 0,
-    startedAt: Date.now(), before: snapshot(progress), convo, shown: {}, used: {},
+    startedAt: Date.now(), before: snapshot(progress), convo, daily, shown: {}, used: {},
   };
   show('study');
   showCard();
 }
 
-function startToday() {
+// The day's cards with the practice woven in.
+function dailyQueue(base = todayPlan().queue) {
   const tiles = decks[deck()]?.characters !== false;
-  const queue = withActivities({ queue: todayPlan().queue, items: items(), progress, stats: methodStats(progress.log), deck: deck(), tiles });
-  startSession(queue, { convo: readyConversation() });
+  const extras = progress.stats.dailyDone?.[deck()] !== localDate(new Date());
+  return withActivities({ queue: base, items: items(), progress, stats: methodStats(progress.log), deck: deck(), tiles, extras });
+}
+
+function startToday() {
+  startSession(dailyQueue(), { convo: readyConversation(), daily: deck() });
 }
 
 // Phrases of this deck you have met, other than this one: the wrong answers in the listening games.
@@ -874,13 +891,13 @@ function pairsContent(card) {
     return { id, entry, voice: pickVoice(entry), missed: false, done: false };
   });
   return {
-    activity: 'pairs', rows, meanings: shuffled(rows), picked: null, zh: '', roman: '', en: '', words: [], audio: null, voice: null,
+    activity: card.type, rows, meanings: shuffled(rows), picked: null, zh: '', roman: '', en: '', words: [], audio: null, voice: null,
     played: false, deck: byId[card.id].deck, flagged: new Set(), ...tracking(),
   };
 }
 
 function activityContent(card, item) {
-  if (card.type === 'pairs') return pairsContent(card);
+  if (card.type === 'pairs' || card.type === 'passage') return pairsContent(card);
   const entry = item.kind === 'pattern' ? pickFill(item, progress) : item;
   const c = {
     activity: card.type, zh: entry.zh, roman: entry.roman, en: entry.en, words: entry.words, audio: entry.audio,
@@ -987,7 +1004,7 @@ function finishActivity(rating) {
   $('answer').hidden = false;
   $('reveal').hidden = true;
   $('continue').hidden = false;
-  if (c.activity === 'pairs') {
+  if (c.rows) {
     $('a-example').hidden = false;
     $('a-example').replaceChildren(...c.rows.map((r) => sayLine(r.entry, c.deck)));
     return;
@@ -1001,7 +1018,7 @@ function showCard() {
   const c = contentFor(card);
   session.current = { card, c };
 
-  $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?', match: 'Is this what you hear?', tone: 'Which tones?', dictate: 'Rebuild it by ear', pairs: 'Match the pairs' }[c.activity]
+  $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?', match: 'Is this what you hear?', tone: 'Which tones?', dictate: 'Rebuild it by ear', pairs: 'Match the pairs', passage: 'Listen through' }[c.activity]
     : c.build ? 'Build the sentence'
     : c.char ? 'Read it'
     : c.drill
@@ -1022,7 +1039,7 @@ function showCard() {
   $('rec').classList.remove('recording');
   $('rec-row').hidden = true;
   $('a-en').textContent = c.en;
-  $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || (c.build && !c.activity) || ['echo', 'chain', 'pairs'].includes(c.activity);
+  $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || (c.build && !c.activity) || ['echo', 'chain', 'pairs', 'passage'].includes(c.activity);
   $('continue').hidden = true;
   $('reveal').textContent = c.activity === 'chain' ? 'Next part' : c.build ? "I'm stuck, show me" : c.activity ? "I don't know" : 'Show answer';
   $('reveal').hidden = false;
@@ -1032,7 +1049,7 @@ function showCard() {
 
   if (c.activity === 'echo') finishActivity(3);
   else if (c.activity === 'chain') playStep(c);
-  else if (c.activity === 'pairs') $('reveal').hidden = true;
+  else if (c.rows) $('reveal').hidden = true;
   else if (c.activity) playCurrent();
 
   // Every card moves the counter on; a card that comes back later adds one to the total.
@@ -1083,11 +1100,18 @@ function rate(rating) {
   commit(rating);
 }
 
+// A card that comes back goes to the end of the session, but before the closing passage.
+function enqueue(card) {
+  const last = session.queue.length - 1;
+  if (session.queue[last]?.type === 'passage' && last >= session.pos) session.queue.splice(last, 0, card);
+  else session.queue.push(card);
+}
+
 function commit(rating) {
   const { card, c } = session.current;
   const now = new Date();
-  if (c.activity === 'pairs') {
-    for (const r of c.rows) logActivity(progress, r.id, 'pairs', r.missed ? 1 : 3, now, c.revealMs);
+  if (c.rows) {
+    for (const r of c.rows) logActivity(progress, r.id, c.activity, c.activity === 'pairs' ? (r.missed ? 1 : 3) : rating, now, c.revealMs);
     persist();
     session.pos += 1;
     session.done += 1;
@@ -1119,7 +1143,7 @@ function commit(rating) {
     const key = `${id}:say`;
     if (!progress.cards[key]) progress.cards[key] = grade(null, 1, now);
     drills();
-    if (session.pos < SESSION_CAP && !session.queue.slice(session.pos + 1).some((q) => q.key === key)) session.queue.push({ key, id, type: 'say', deck: c.deck });
+    if (session.pos < SESSION_CAP && !session.queue.slice(session.pos + 1).some((q) => q.key === key)) enqueue({ key, id, type: 'say', deck: c.deck });
   }
   persist();
   session.graded += 1;
@@ -1130,8 +1154,8 @@ function commit(rating) {
   const shown = (session.shown[card.key] = (session.shown[card.key] || 0) + 1);
   if (shouldRequeue(state, now) && mayReturn(shown, session.pos)) {
     const phrase = card.type === 'say' && !card.id.startsWith('w/') && byId[card.id];
-    if (rating < 3 && phrase) session.queue.push(practiceFor(card.id));
-    session.queue.push(card);
+    if (rating < 3 && phrase) enqueue(practiceFor(card.id));
+    enqueue(card);
   } else session.done += 1;
   showCard();
 }
@@ -1148,6 +1172,7 @@ function finishSession() {
   const s = session;
   session = null;
   const news = checkMethods();
+  if (s.daily) (progress.stats.dailyDone ||= {})[s.daily] = localDate(new Date());
   persist();
   const results = {
     cards: s.graded,

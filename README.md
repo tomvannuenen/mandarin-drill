@@ -32,7 +32,13 @@ Practice:
   except *Read it* cards for words you won't see written in Hong Kong.
 - A card can show how the phrase sounds (*Everyday*, *Casual*, *Polite*, *Formal*), and which part can be
   swapped: that word is underlined, with a few things to put in its place.
-- **The daily session is the lesson**; Explore is extra. A session holds about 32 cards plus practice, and cannot
+- **The mix** (`MIX` in `lib/today.js`, about 40 cards): speaking a sentence from its meaning is the centre (11,
+  topped up with phrases due in the next three days); 5 listening tasks on phrases not otherwise tested that day
+  (rebuild by ear twice, missing word, pick by ear, right or wrong) plus match the pairs; 2 tone picks; listen and
+  repeat or build-up for new and shaky phrases; 4 word-order builds; 4 word cards and 2 read-aloud sentences;
+  3 trouble words, asked inside a sentence; 1 old-style listening card. It closes on a passage: five of the day's
+  sentences played in a row, then "how much did you catch?".
+- **The daily session is the lesson**; Explore is extra. A session holds about 40 cards, and cannot
   run away: a card comes back once at most, nothing comes back after 60 cards, and fewer new phrases are added
   while earlier ones are still shaky (none once twelve are open).
 - **Learn before being tested.** A new phrase is first heard and repeated, a long one built up from its end

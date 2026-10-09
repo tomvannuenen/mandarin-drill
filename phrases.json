@@ -1,5 +1,5 @@
 {
- "version": "b8bb10245ed7",
+ "version": "3fa60c222ceb",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -22429,5 +22429,651 @@
    "ph": "占"
   },
   "龶": {}
+ },
+ "notes": {
+  "mandarin": {
+   "我是": {
+    "r": "wǒ shì",
+    "e": "I am"
+   },
+   "我是荷蘭人": {
+    "r": "wǒ shì Hé-lán rén",
+    "e": "I am Dutch"
+   },
+   "我是從荷蘭來的": {
+    "r": "wǒ shì cóng Hé-lán lái de",
+    "e": "I am from the Netherlands"
+   },
+   "人": {
+    "r": "rén",
+    "e": "person"
+   },
+   "教授": {
+    "r": "jiào-shòu",
+    "e": "professor"
+   },
+   "授課": {
+    "r": "shòu-kè",
+    "e": "to teach a class"
+   },
+   "我在中文大學教書": {
+    "r": "wǒ zài Zhōng-wén Dà-xué jiāo-shū",
+    "e": "I teach at the Chinese University"
+   },
+   "教": {
+    "r": "jiāo",
+    "e": "to teach"
+   },
+   "他": {
+    "r": "tā",
+    "e": "he (she / it)"
+   },
+   "她": {
+    "r": "tā",
+    "e": "she"
+   },
+   "它": {
+    "r": "tā",
+    "e": "it"
+   },
+   "請問怎麼稱呼": {
+    "r": "qǐng-wèn zěn-me chēng-hū",
+    "e": "May I ask what I should call you?"
+   },
+   "系": {
+    "r": "xì",
+    "e": "department"
+   },
+   "讀": {
+    "r": "dú",
+    "e": "to read (aloud); to study"
+   },
+   "人工智慧": {
+    "r": "rén-gōng-zhì-huì",
+    "e": "AI (artificial intelligence)"
+   },
+   "人工智能": {
+    "r": "rén-gōng-zhì-néng",
+    "e": "AI (artificial intelligence)"
+   },
+   "吧": {
+    "r": "ba",
+    "e": "(suggestion: let's…)"
+   },
+   "我要這個": {
+    "r": "wǒ yào zhè-ge",
+    "e": "I'll have this one (ordering)"
+   },
+   "我要一杯咖啡": {
+    "r": "wǒ yào yì bēi kā-fēi",
+    "e": "I'd like a cup of coffee"
+   },
+   "謝謝": {
+    "r": "xiè-xie",
+    "e": "Thank you"
+   },
+   "用英文": {
+    "r": "yòng Yīng-wén",
+    "e": "in English (using English)"
+   },
+   "解釋": {
+    "r": "jiě-shì",
+    "e": "to explain"
+   },
+   "一下": {
+    "r": "yí-xià",
+    "e": "a bit (softens a request)"
+   },
+   "不要": {
+    "r": "bú yào",
+    "e": "don't want"
+   },
+   "不是": {
+    "r": "bú shì",
+    "e": "is not"
+   },
+   "一點點": {
+    "r": "yì-diǎn-diǎn",
+    "e": "A little bit"
+   },
+   "二": {
+    "r": "èr",
+    "e": "two (counting)"
+   },
+   "兩": {
+    "r": "liǎng",
+    "e": "two (of something)"
+   },
+   "回家": {
+    "r": "huí jiā",
+    "e": "to go home"
+   },
+   "沒": {
+    "r": "méi",
+    "e": "not (沒問題 = no problem)"
+   },
+   "不": {
+    "r": "bù",
+    "e": "not"
+   },
+   "沒有": {
+    "r": "méi-yǒu",
+    "e": "not have; there isn't"
+   },
+   "我在學中文": {
+    "r": "wǒ zài xué Zhōng-wén",
+    "e": "I'm learning Chinese"
+   },
+   "知道": {
+    "r": "zhī-dào",
+    "e": "to know"
+   },
+   "認識": {
+    "r": "rèn-shì",
+    "e": "to know (a person), to meet"
+   },
+   "賣": {
+    "r": "mài",
+    "e": "to sell"
+   },
+   "想": {
+    "r": "xiǎng",
+    "e": "to want to; to think; to miss"
+   },
+   "要": {
+    "r": "yào",
+    "e": "to want; will"
+   },
+   "我想喝": {
+    "r": "wǒ xiǎng hē",
+    "e": "I'd like to drink"
+   },
+   "會說中文": {
+    "r": "huì shuō Zhōng-wén",
+    "e": "can speak Chinese"
+   },
+   "我要": {
+    "r": "wǒ yào",
+    "e": "I want"
+   },
+   "聽": {
+    "r": "tīng",
+    "e": "to listen"
+   },
+   "不懂": {
+    "r": "bù dǒng",
+    "e": "not understand"
+   },
+   "請": {
+    "r": "qǐng",
+    "e": "please"
+   },
+   "再": {
+    "r": "zài",
+    "e": "again"
+   },
+   "哪裡": {
+    "r": "nǎ-lǐ",
+    "e": "where"
+   },
+   "菠蘿油": {
+    "r": "bō-luó-yóu",
+    "e": "pineapple bun with butter"
+   },
+   "們": {
+    "r": "men",
+    "e": "(plural marker for people)"
+   },
+   "你們": {
+    "r": "nǐ-men",
+    "e": "you (plural)"
+   },
+   "我們": {
+    "r": "wǒ-men",
+    "e": "we, us"
+   },
+   "大家好": {
+    "r": "dà-jiā hǎo",
+    "e": "Hello everyone"
+   },
+   "有沒有": {
+    "r": "yǒu méi-yǒu",
+    "e": "is there, do you have (or not)?"
+   },
+   "嗎": {
+    "r": "ma",
+    "e": "(question particle)"
+   },
+   "我不吃辣": {
+    "r": "wǒ bù chī là",
+    "e": "I don't eat spicy food (in general)"
+   },
+   "的時候": {
+    "r": "de shí-hòu",
+    "e": "when…, at the time of…"
+   },
+   "覺得": {
+    "r": "jué-de",
+    "e": "to feel, think (an opinion)"
+   },
+   "了": {
+    "r": "le",
+    "e": "(marks a change / completion)"
+   },
+   "知不知道": {
+    "r": "zhī bù zhī-dào",
+    "e": "know or not?"
+   },
+   "可不可以": {
+    "r": "kě bù kě-yǐ?",
+    "e": "Is that OK? / Can I?"
+   },
+   "我的": {
+    "r": "wǒ de",
+    "e": "my"
+   },
+   "這個人": {
+    "r": "zhè-ge rén",
+    "e": "this person"
+   },
+   "這是我女朋友": {
+    "r": "zhè shì wǒ nǚ-péng-yǒu",
+    "e": "This is my girlfriend (introducing her)"
+   },
+   "時間": {
+    "r": "shí-jiān",
+    "e": "time (in general, a slot)"
+   },
+   "時候": {
+    "r": "shí-hòu",
+    "e": "time, moment"
+   },
+   "第一": {
+    "r": "dì-yī",
+    "e": "first"
+   },
+   "首": {
+    "r": "shǒu",
+    "e": "first (formal)"
+   },
+   "首次": {
+    "r": "shǒu-cì",
+    "e": "the first time (formal)"
+   },
+   "杯": {
+    "r": "bēi",
+    "e": "cup (measure word)"
+   },
+   "一杯咖啡": {
+    "r": "yì bēi kā-fēi",
+    "e": "a cup of coffee"
+   },
+   "過": {
+    "r": "guò",
+    "e": "(after a verb: have done it before)"
+   },
+   "以前": {
+    "r": "yǐ-qián",
+    "e": "before, in the past"
+   },
+   "之前": {
+    "r": "zhī-qián",
+    "e": "before (a specific moment)"
+   },
+   "以後": {
+    "r": "yǐ-hòu",
+    "e": "after, in the future"
+   },
+   "之後": {
+    "r": "zhī-hòu",
+    "e": "after (a specific moment)"
+   },
+   "一個人": {
+    "r": "yí ge rén",
+    "e": "one person"
+   },
+   "這個": {
+    "r": "zhè-ge",
+    "e": "this"
+   },
+   "穿": {
+    "r": "chuān",
+    "e": "to wear"
+   },
+   "搭": {
+    "r": "dā",
+    "e": "to match, go together"
+   },
+   "我喜歡你的穿搭": {
+    "r": "wǒ xǐ-huān nǐ de chuān-dā",
+    "e": "I like your outfit"
+   },
+   "我很好": {
+    "r": "wǒ hěn hǎo",
+    "e": "I'm fine"
+   },
+   "你呢": {
+    "r": "nǐ ne?",
+    "e": "How about you?"
+   },
+   "呢": {
+    "r": "ne",
+    "e": "(and you? / what about…?)"
+   },
+   "你好嗎": {
+    "r": "nǐ hǎo ma",
+    "e": "How are you?"
+   },
+   "普通話": {
+    "r": "pǔ-tōng-huà",
+    "e": "Mandarin (as it is called in Hong Kong and mainland China)"
+   },
+   "中文": {
+    "r": "Zhōng-wén",
+    "e": "Chinese (language)"
+   },
+   "國語": {
+    "r": "guó-yǔ",
+    "e": "Mandarin (Taiwan's word for it)"
+   },
+   "這句話": {
+    "r": "zhè jù huà",
+    "e": "this sentence"
+   },
+   "句": {
+    "r": "jù",
+    "e": "counter for sentences"
+   },
+   "的中文怎麼說": {
+    "r": "de Zhōng-wén zěn-me shuō",
+    "e": "how do you say … in Chinese?"
+   },
+   "是…的": {
+    "r": "shì … de",
+    "e": "(frames the detail you are stressing)"
+   },
+   "從": {
+    "r": "cóng",
+    "e": "from"
+   },
+   "來": {
+    "r": "lái",
+    "e": "to come"
+   },
+   "不客氣": {
+    "r": "bú-kè-qì",
+    "e": "You're welcome"
+   },
+   "沒問題": {
+    "r": "méi wèn-tí",
+    "e": "No problem"
+   },
+   "可以給我這個嗎": {
+    "r": "kě-yǐ gěi wǒ zhè-ge ma?",
+    "e": "Can I have this one? (in a restaurant)"
+   },
+   "對不起": {
+    "r": "duì-bù-qǐ",
+    "e": "I'm sorry"
+   },
+   "不好意思": {
+    "r": "bù-hǎo-yì-si",
+    "e": "Excuse me / sorry (small things)"
+   },
+   "好": {
+    "r": "hǎo",
+    "e": "good; well"
+   },
+   "好啊": {
+    "r": "hǎo a",
+    "e": "Sure!"
+   },
+   "對": {
+    "r": "duì",
+    "e": "Yes, that's right"
+   },
+   "你是老師嗎": {
+    "r": "nǐ shì lǎo-shī ma",
+    "e": "Are you a teacher?"
+   },
+   "是": {
+    "r": "shì",
+    "e": "is / am / are"
+   },
+   "請問": {
+    "r": "qǐng-wèn",
+    "e": "Excuse me, may I ask…"
+   },
+   "多少錢": {
+    "r": "duō-shǎo qián?",
+    "e": "How much is it?"
+   },
+   "掰掰": {
+    "r": "bāi-bāi",
+    "e": "bye-bye"
+   },
+   "的": {
+    "r": "de",
+    "e": "(possessive / 'the one that…')"
+   },
+   "我女朋友": {
+    "r": "wǒ nǚ-péng-yǒu",
+    "e": "my girlfriend"
+   },
+   "我媽媽": {
+    "r": "wǒ mā-ma",
+    "e": "my mum"
+   },
+   "好了": {
+    "r": "hǎo le",
+    "e": "done, ready"
+   },
+   "還沒": {
+    "r": "hái-méi",
+    "e": "not yet"
+   },
+   "不對": {
+    "r": "bú duì",
+    "e": "not right"
+   },
+   "不好": {
+    "r": "bù hǎo",
+    "e": "not good; no"
+   },
+   "不會": {
+    "r": "bú-huì!",
+    "e": "No problem! (when someone thanks you)"
+   }
+  },
+  "cantonese": {
+   "唔該": {
+    "r": "m4-goi1",
+    "e": "Thank you (for a service); excuse me"
+   },
+   "多謝": {
+    "r": "do1-ze6",
+    "e": "Thank you (for a gift)"
+   },
+   "係": {
+    "r": "hai6",
+    "e": "yes; to be"
+   },
+   "是": {
+    "r": "shì",
+    "e": "is, am, are (Mandarin)",
+    "k": "mandarin"
+   },
+   "唔": {
+    "r": "m4",
+    "e": "not"
+   },
+   "不": {
+    "r": "bù",
+    "e": "not (Mandarin)",
+    "k": "mandarin"
+   },
+   "他": {
+    "r": "tā",
+    "e": "he (Mandarin)",
+    "k": "mandarin"
+   },
+   "她": {
+    "r": "tā",
+    "e": "she (Mandarin)",
+    "k": "mandarin"
+   },
+   "哋": {
+    "r": "dei6",
+    "e": "(plural marker)"
+   },
+   "你哋": {
+    "r": "nei5-dei6",
+    "e": "you all"
+   },
+   "佢哋": {
+    "r": "keoi5-dei6",
+    "e": "they"
+   },
+   "沒有": {
+    "r": "méi-yǒu",
+    "e": "not have (Mandarin)",
+    "k": "mandarin"
+   },
+   "位": {
+    "r": "wai2",
+    "e": "(polite measure word for people)"
+   },
+   "一位": {
+    "r": "jat1 wai2",
+    "e": "one person (polite)"
+   },
+   "晒": {
+    "r": "saai3",
+    "e": "completely (唔該晒 = thanks a lot)"
+   },
+   "喺度食定拎走": {
+    "r": "hai2 dou6 sik6 ding6 ling1 zau2",
+    "e": "Eat here or take away?"
+   },
+   "熱": {
+    "r": "jit6",
+    "e": "hot"
+   },
+   "凍": {
+    "r": "dung3",
+    "e": "cold, iced"
+   },
+   "凍奶茶": {
+    "r": "dung3 naai5-caa4",
+    "e": "iced milk tea"
+   },
+   "熱咖啡": {
+    "r": "jit6 gaa3-fe1",
+    "e": "hot coffee"
+   },
+   "有冇": {
+    "r": "jau5 mou5",
+    "e": "have or not have?"
+   },
+   "飲茶": {
+    "r": "jam2-caa4",
+    "e": "yum cha (going for dim sum)"
+   },
+   "聽": {
+    "r": "teng1",
+    "e": "to listen, hear"
+   },
+   "咩": {
+    "r": "me1",
+    "e": "what"
+   },
+   "什麼": {
+    "r": "shé-me",
+    "e": "what (Mandarin)",
+    "k": "mandarin"
+   },
+   "識": {
+    "r": "sik1",
+    "e": "to know how to"
+   },
+   "講": {
+    "r": "gong2",
+    "e": "to speak"
+   },
+   "識唔識": {
+    "r": "sik1 m4 sik1",
+    "e": "can or can't?"
+   },
+   "喺": {
+    "r": "hai2",
+    "e": "at, in"
+   },
+   "在": {
+    "r": "zài",
+    "e": "at, in (Mandarin)",
+    "k": "mandarin"
+   },
+   "吃": {
+    "r": "chī",
+    "e": "to eat (Mandarin)",
+    "k": "mandarin"
+   },
+   "喝": {
+    "r": "hē",
+    "e": "to drink (Mandarin)",
+    "k": "mandarin"
+   },
+   "要": {
+    "r": "jiu3",
+    "e": "to want"
+   },
+   "鍾意": {
+    "r": "zung1-ji3",
+    "e": "to like"
+   },
+   "喜歡": {
+    "r": "xǐ-huān",
+    "e": "to like (Mandarin)",
+    "k": "mandarin"
+   },
+   "邊度": {
+    "r": "bin1-dou6",
+    "e": "where"
+   },
+   "哪裡": {
+    "r": "nǎ-lǐ",
+    "e": "where (Mandarin)",
+    "k": "mandarin"
+   },
+   "來": {
+    "r": "lái",
+    "e": "to come (Mandarin)",
+    "k": "mandarin"
+   },
+   "想要": {
+    "r": "soeng2 jiu3",
+    "e": "would like"
+   },
+   "我要呢個": {
+    "r": "ngo5 jiu3 ni1-go3",
+    "e": "I'd like this one"
+   },
+   "呢個": {
+    "r": "ni1-go3",
+    "e": "this one"
+   },
+   "杯": {
+    "r": "bui1",
+    "e": "a cup of (measure word)"
+   },
+   "一": {
+    "r": "jat1",
+    "e": "one"
+   },
+   "我想要呢個": {
+    "r": "ngo5 soeng2 jiu3 ni1 go3",
+    "e": "I'd like this one"
+   }
+  }
  }
 }

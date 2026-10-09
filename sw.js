@@ -1,5 +1,5 @@
 // Offline support. VERSION is stamped by tools/build.py whenever app files change.
-const VERSION = '83c52f372415';
+const VERSION = '0a7df69cf74f';
 const SHELL_CACHE = `shell-${VERSION}`;
 const AUDIO_CACHE = 'audio-v1';
 const SHELL = [

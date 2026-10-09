@@ -97,6 +97,9 @@ Cantonese phrases go in `data/cantonese.json` in the same format, with `jyutping
   formal or less common variant of something that has an everyday card). Always add the everyday phrasing first.
 - `swap` marks the replaceable part of a phrase: `{"word": "這個", "with": [["那個", "nà-ge", "that one"]]}`.
   `word` must be one of the phrase's words. Prefer it to describing the swap in a `note`.
+- Chinese inside a `note` can be tapped for its pinyin and meaning. The build takes those from the deck when the
+  piece is one of its phrases or words; anything else must be listed in `data/note-glosses.json`
+  (`"不要": ["bù yào", "don't want"]`), or the build fails.
 - Optional: `note` (shown after reveal), `fillEn`, `allowChars` (to skip the Simplified check for specific characters).
 
 ### Audio

@@ -32,6 +32,7 @@ const nullStorage = { getItem: () => null, setItem() {} };
 let allItems = [];
 let byId = {};
 let decks = {}; // {deck: {label, voices}}
+let noteGloss = {}; // {deck: {chinese inside a note: {r romanisation, e English, k?: 'mandarin'}}}
 let hanzi = {}; // {character: {d meaning, p pinyin, c components, s meaning part, ph sound part, h hint}}
 let t2s = {}; // {Traditional: Simplified} for the Mandarin deck's characters
 let conversations = [];
@@ -467,6 +468,40 @@ function renderWords(c) {
   );
 }
 
+// A note, with its Chinese tappable: a tap says it and shows its pinyin and meaning under the note.
+const NOTE_RUN = /([㐀-鿿]+(?:…[㐀-鿿]+)*)/;
+function noteNodes(text, d) {
+  const out = el('span', { class: 'note-gloss', hidden: '' });
+  const buttons = [];
+  const open = (b, part, g) => {
+    for (const x of buttons) x.classList.remove('on');
+    b.classList.add('on');
+    out.hidden = false;
+    out.replaceChildren(el('span', { class: 'zh-inline', lang: zl(d) }, zs(part, d)), ' ', renderRoman(el('b'), g.r, g.k || d), ` = ${g.e}`);
+  };
+  const nodes = text.split(NOTE_RUN).map((part, i) => {
+    if (!(i % 2)) return part;
+    const g = noteGloss[d]?.[part];
+    if (!g) return el('span', { class: 'zh-inline', lang: zl(d) }, zs(part, d));
+    const b = el('button', { class: 'zh-inline note-zh', lang: zl(d) }, zs(part, d));
+    b.addEventListener('click', () => {
+      if (b.classList.contains('on') && buttons.length > 1) {
+        b.classList.remove('on');
+        out.hidden = true;
+        return;
+      }
+      open(b, part, g);
+      if (!part.includes('…')) speakText(part, g.k || d);
+    });
+    buttons.push(b);
+    if (buttons.length === 1) b._first = [part, g];
+    return b;
+  });
+  // A note with a single piece of Chinese shows its meaning straight away.
+  if (buttons.length === 1) open(buttons[0], ...buttons[0]._first);
+  return [...nodes, out];
+}
+
 // Under a tapped word: its characters, and under a tapped character its parts, as deep as they go.
 // Every chip can be tapped; the trail (喜 › 口) leads back up.
 function renderChars(word) {
@@ -650,7 +685,7 @@ function drawCard(card, c) {
   renderWords(c);
   renderSwap(c);
   showAccent();
-  $('a-note').replaceChildren(...(c.note ? mixedText(c.note, c.deck) : []));
+  $('a-note').replaceChildren(...(c.note ? noteNodes(c.note, c.deck) : []));
   $('a-note').hidden = !c.note;
   $('a-example').hidden = !c.example;
   $('a-example').replaceChildren(...(c.example ? [el('p', { class: 'section' }, 'In a phrase you know'), sayLine(c.example, c.deck)] : []));
@@ -1182,6 +1217,7 @@ async function init() {
   decks = data.decks;
   t2s = data.t2s || {};
   hanzi = data.hanzi || {};
+  noteGloss = data.notes || {};
   conversations = data.conversations || [];
   version = data.version;
   byId = Object.fromEntries(allItems.map((i) => [i.id, i]));

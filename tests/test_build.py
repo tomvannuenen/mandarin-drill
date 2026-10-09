@@ -325,3 +325,32 @@ class Hanzi(unittest.TestCase):
         self.assertEqual(set(table), {"謝", "言", "射", "口", "嚟"})
         self.assertEqual(table["射"]["d"], "to shoot an arrow")
         self.assertEqual(table["嚟"], {"d": "to come (Cantonese)", "c": "口黎"})
+
+
+class NoteGlosses(unittest.TestCase):
+    ITEMS = [
+        {"id": "wo-yao-zhege", "kind": "phrase", "week": 1, "zh": "我要這個", "pinyin": "wǒ yào zhè-ge", "en": "I'll have this one", "topic": "Food & drink"},
+        {"id": "keyi", "kind": "phrase", "week": 1, "zh": "可以嗎？", "pinyin": "kě-yǐ ma?", "en": "May I?", "topic": "Getting by",
+         "note": "Politer than 我要這個. Compare 不要 and 是…的, or just 可以"},
+    ]
+    GLOSSARY = {"我": "I", "要": "want", "這個": "this", "可以": "can", "嗎": "?"}
+
+    def out(self):
+        return expand(self.ITEMS, root=Path("/nonexistent"), glossary=self.GLOSSARY)
+
+    def test_resolves_from_the_deck_then_from_the_manual_file(self):
+        from tools.build import note_glosses
+        manual = {"mandarin": {"不要": ["bù yào", "don't want"], "是…的": ["shì … de", "(frame)"]}}
+        table, errs = note_glosses(self.out(), manual)
+        self.assertEqual(errs, [])
+        self.assertEqual(table["mandarin"]["我要這個"], {"r": "wǒ yào zhè-ge", "e": "I'll have this one"})
+        self.assertEqual(table["mandarin"]["可以"], {"r": "kě-yǐ", "e": "can"})
+        self.assertEqual(table["mandarin"]["不要"], {"r": "bú yào", "e": "don't want"})
+        self.assertEqual(table["mandarin"]["是…的"]["r"], "shì … de")
+
+    def test_untranslated_chinese_in_a_note_is_an_error(self):
+        from tools.build import note_glosses
+        _, errs = note_glosses(self.out(), {"mandarin": {"不要": ["bù", "don't want"]}})
+        self.assertEqual(len(errs), 2)
+        self.assertIn("one syllable per character", errs[0])
+        self.assertIn("是…的", errs[1])

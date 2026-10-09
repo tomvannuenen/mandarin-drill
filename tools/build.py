@@ -233,6 +233,49 @@ def simplified_map(out_items):
     return {c: to_simplified(c) for c in chars if to_simplified(c) != c}
 
 
+NOTE_RUN = re.compile(r"[\u3400-\u9fff]+(?:…[\u3400-\u9fff]+)*")
+_PUNCT = re.compile(r"[？！，。?!,.\s]")
+
+
+def note_glosses(out_items, manual=None):
+    """({deck: {chinese: {r, e, k?}}}, errors): pinyin and meaning for every piece of Chinese inside a note.
+    Taken from the deck when the piece is one of its phrases or words, else from data/note-glosses.json."""
+    manual = manual or {}
+    table, errs = {}, []
+    for deck in DECKS:
+        mine = [o for o in out_items if o["deck"] == deck]
+        known = {}
+        for o in mine:
+            for e in o.get("fills") or [o]:
+                known.setdefault(_PUNCT.sub("", e["zh"]), (e["roman"], e["en"]))
+        for o in mine:
+            for e in o.get("fills") or [o]:
+                for w in e["words"]:
+                    if w["gloss"]:
+                        known.setdefault(w["zh"], (w["roman"], w["gloss"]))
+        for o in mine:
+            for run in NOTE_RUN.findall(o.get("note", "")):
+                if run in table.get(deck, {}):
+                    continue
+                if run in manual.get(deck, {}):
+                    r, e, *kind = manual[deck][run]
+                    han = [c for c in run if c != "…"]
+                    if len(re.split(r"[-\s]+", r.replace("…", "").strip())) != len(han):
+                        errs.append(f"[{deck}] note-glosses.json: {run} needs one syllable per character, got {r!r}")
+                        continue
+                    pinyin = deck == "mandarin" or kind == ["mandarin"]
+                    g = {"r": apply_sandhi(run, r, False) if pinyin and "…" not in run else r, "e": e}
+                    if kind:
+                        g["k"] = kind[0]
+                elif run in known:
+                    g = {"r": known[run][0], "e": known[run][1]}
+                else:
+                    errs.append(f"[{deck}] {o['id']}: the note uses {run} with no meaning; add it to data/note-glosses.json")
+                    continue
+                table.setdefault(deck, {})[run] = g
+    return table, errs
+
+
 IDS_OPERATORS = set("⿰⿱⿲⿳⿴⿵⿶⿷⿸⿹⿺⿻？")
 HANZI_SOURCE = ROOT / ".local" / "mmah-dictionary.txt"  # Make Me a Hanzi dictionary.txt (not in the repo)
 
@@ -513,6 +556,13 @@ def main(argv):
         for e in errs:
             print("  -", e)
         return 1
+    gloss_file = ROOT / "data" / "note-glosses.json"
+    notes, errs = note_glosses(out, json.loads(gloss_file.read_text()) if gloss_file.exists() else {})
+    if errs:
+        print(f"{len(errs)} error(s):")
+        for e in errs:
+            print("  -", e)
+        return 1
     used = {v for o in out for e in (o.get("fills") or [o]) for v in e["audio"]}
     voices = {v: {k: VOICES[v][k] for k in ("flag", "name")} for v in VOICES if v in used}
     if "coach" in used:
@@ -523,9 +573,9 @@ def main(argv):
     t2s = simplified_map(out)
     body += json.dumps(t2s, ensure_ascii=False, sort_keys=True)
     hanzi, no_breakdown = load_hanzi(out, t2s)
-    body += json.dumps(hanzi, ensure_ascii=False, sort_keys=True)
+    body += json.dumps([hanzi, notes], ensure_ascii=False, sort_keys=True)
     doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "voices": voices, "decks": decks, "items": out,
-           "conversations": convos, "t2s": t2s, "hanzi": hanzi}
+           "conversations": convos, "t2s": t2s, "hanzi": hanzi, "notes": notes}
     (ROOT / "phrases.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
     made, failed = ([], []) if no_audio else generate_audio(audio_jobs(out), ROOT, force_ids=force)
     stamp_service_worker(ROOT)

@@ -483,6 +483,26 @@ def audio_jobs(out_items):
     return jobs
 
 
+def word_audio(out_items):
+    """({deck: {word: path}}, jobs): a recording of its own for every word inside a phrase that has no card
+    (and so no recording) of its own, so a single word can always be heard by itself."""
+    table, jobs = {}, []
+    for deck in DECKS:
+        mine = [o for o in out_items if o["deck"] == deck]
+        own = {o["words"][0]["zh"] for o in mine if o["kind"] != "pattern" and len(o["words"]) == 1}
+        tts = VOICES[DECKS[deck]["voices"][1]]["tts"]
+        for o in mine:
+            for e in o.get("fills") or [o]:
+                for w in e["words"]:
+                    z = w["zh"]
+                    if z in own or z in table.get(deck, {}):
+                        continue
+                    path = f"audio/words/{deck}/{'-'.join(format(ord(c), 'x') for c in z)}.mp3"
+                    table.setdefault(deck, {})[z] = path
+                    jobs.append((path, z, NORMAL_RATE, o["id"], tts))
+    return table, jobs
+
+
 def edge_synth(text, rate, path, voice):
     import edge_tts
     asyncio.run(edge_tts.Communicate(text, voice, rate=rate).save(str(path)))
@@ -580,11 +600,12 @@ def main(argv):
     t2s = simplified_map(out)
     body += json.dumps(t2s, ensure_ascii=False, sort_keys=True)
     hanzi, no_breakdown = load_hanzi(out, t2s)
-    body += json.dumps([hanzi, notes], ensure_ascii=False, sort_keys=True)
+    words, word_jobs = word_audio(out)
+    body += json.dumps([hanzi, notes, words], ensure_ascii=False, sort_keys=True)
     doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "voices": voices, "decks": decks, "items": out,
-           "conversations": convos, "t2s": t2s, "hanzi": hanzi, "notes": notes}
+           "conversations": convos, "t2s": t2s, "hanzi": hanzi, "notes": notes, "words": words}
     (ROOT / "phrases.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
-    made, failed = ([], []) if no_audio else generate_audio(audio_jobs(out), ROOT, force_ids=force)
+    made, failed = ([], []) if no_audio else generate_audio(audio_jobs(out) + word_jobs, ROOT, force_ids=force)
     stamp_service_worker(ROOT)
     for deck in DECKS:
         mine = [o for o in out if o["deck"] == deck]

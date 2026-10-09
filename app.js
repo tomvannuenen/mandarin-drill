@@ -75,7 +75,10 @@ const studyItems = () => [...items(), ...drills()];
 // Words from phrases you've met, as virtual word-card items (kept in byId so queued cards resolve).
 function chars() {
   const c = charItems(allItems, progress, deck());
-  for (const x of c) byId[x.id] = x;
+  for (const x of c) {
+    x.audio ||= wordAudio[`${x.deck}/${x.zh}`] || null;
+    byId[x.id] = x;
+  }
   return c;
 }
 
@@ -404,10 +407,12 @@ function contentFor(card) {
   if (item.kind === 'drill') {
     const p = drillPrompt(item);
     const word = { zh: item.zh, roman: item.roman, gloss: item.gloss };
-    const src = p.mode === 'gap' ? p.context : { words: [word], audio: item.audio || item.contexts[0]?.audio };
+    // A word on its own is heard on its own; a sentence it occurs in is offered underneath.
+    const src = p.mode === 'gap' ? p.context : { words: [word], audio: item.audio || wordAudio[`${item.deck}/${item.zh}`] || null };
+    const example = p.mode === 'gap' || !item.contexts.length ? null : item.contexts[Math.floor(Math.random() * item.contexts.length)];
     return {
-      drill: p.mode, target: item.zh, context: p.context, zh: item.zh, en: item.gloss, roman: item.roman,
-      words: src.words, audio: src.audio, voice: pickVoice(src), played: false, deck: item.deck, flagged: new Set(),
+      drill: p.mode, target: item.zh, context: p.context, zh: item.zh, en: item.gloss, roman: item.roman, example,
+      words: src.words, audio: src.audio, voice: src.audio ? pickVoice(src) : null, played: false, deck: item.deck, flagged: new Set(),
       ...tracking(),
     };
   }
@@ -445,7 +450,9 @@ function playCurrent({ slow = false, next = false } = {}) {
   showAccent();
   if (!c.audio) return speakText(c.zh, c.deck, slow ? 0.55 : 0.85);
   if (c.voice === 'coach') return play(c.audio.coach[0], slow ? 0.7 : 1); // one recording, slowed down
-  play(c.audio[c.voice][slow ? 1 : 0]);
+  const [normal, slowFile] = c.audio[c.voice];
+  if (slow && slowFile === normal) return play(normal, 0.7);
+  play(slow ? slowFile : normal);
 }
 
 // Answer shown word by word; tap a word for its meaning. A :char card shows the same script as its prompt.
@@ -709,7 +716,7 @@ function drawCard(card, c) {
   $('a-note').replaceChildren(...(c.note ? noteNodes(c.note, c.deck) : []));
   $('a-note').hidden = !c.note;
   $('a-example').hidden = !c.example;
-  $('a-example').replaceChildren(...(c.example ? [el('p', { class: 'section' }, 'In a phrase you know'), sayLine(c.example, c.deck)] : []));
+  $('a-example').replaceChildren(...(c.example ? [el('p', { class: 'section' }, 'Hear it in a sentence'), sayLine(c.example, c.deck)] : []));
   // Word order: the rule behind the sentence, and after a build the English words in Chinese order.
   $('a-order').replaceChildren(...(c.order ? mixedText(c.order, c.deck) : []));
   $('a-order').hidden = !c.order;
@@ -1538,6 +1545,10 @@ async function init() {
   version = data.version;
   byId = Object.fromEntries(allItems.map((i) => [i.id, i]));
   for (const i of allItems) if (i.kind !== 'pattern' && i.words?.length === 1 && i.audio) wordAudio[`${i.deck}/${i.words[0].zh}`] = i.audio;
+  // Words that only occur inside phrases have one recording each, by one voice (slow = the same file, slowed).
+  for (const [d, table] of Object.entries(data.words || {})) {
+    for (const [zh, path] of Object.entries(table)) wordAudio[`${d}/${zh}`] ||= { [decks[d].voices[1]]: [path, path] };
+  }
   // One-time cleanup: speaking flags that really came from failed read-aloud cards become reading problems.
   if (!(progress.migrations || []).includes('reading-flags-v1')) {
     for (const d of Object.keys(decks)) reclassifyReadingFlags(progress, allItems, d, new Date());
@@ -1562,7 +1573,7 @@ async function init() {
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible') reg?.update().catch(() => {});
     });
-    const urls = allItems.flatMap((i) => [...(i.fills || [i]).flatMap((x) => Object.values(x.audio).flat()), ...Object.values(i.chunks || {})]);
+    const urls = allItems.flatMap((i) => [...(i.fills || [i]).flatMap((x) => Object.values(x.audio).flat()), ...Object.values(i.chunks || {})]).concat(Object.values(data.words || {}).flatMap((t) => Object.values(t)));
     const send = () => navigator.serviceWorker.controller?.postMessage({ type: 'cache-audio', urls: [...new Set(urls)] });
     if (navigator.serviceWorker.controller) send();
     else navigator.serviceWorker.addEventListener('controllerchange', send, { once: true });

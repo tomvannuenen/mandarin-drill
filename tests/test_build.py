@@ -354,3 +354,17 @@ class NoteGlosses(unittest.TestCase):
         self.assertEqual(len(errs), 2)
         self.assertIn("one syllable per character", errs[0])
         self.assertIn("是…的", errs[1])
+
+
+class WordAudio(unittest.TestCase):
+    def test_words_without_a_card_get_one_recording_each(self):
+        from tools.build import word_audio
+        items = [
+            {"id": "wo", "kind": "word", "week": 1, "zh": "我", "pinyin": "wǒ", "en": "I"},
+            {"id": "wo-yao-zhege", "kind": "phrase", "week": 1, "zh": "我要這個", "pinyin": "wǒ yào zhè-ge", "en": "I'll have this one", "topic": "Food & drink"},
+            {"id": "yao-zhege", "kind": "phrase", "week": 1, "zh": "要這個", "pinyin": "yào zhè-ge", "en": "want this", "topic": "Food & drink"},
+        ]
+        out = expand(items, root=Path("/nonexistent"), glossary={"要": "want", "這個": "this"})
+        table, jobs = word_audio(out)
+        self.assertEqual(table, {"mandarin": {"要": "audio/words/mandarin/8981.mp3", "這個": "audio/words/mandarin/9019-500b.mp3"}})
+        self.assertEqual([(j[0], j[1]) for j in jobs], [("audio/words/mandarin/8981.mp3", "要"), ("audio/words/mandarin/9019-500b.mp3", "這個")])

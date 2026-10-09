@@ -275,3 +275,28 @@ class AudioRetry(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RegisterAndSwap(unittest.TestCase):
+    ITEM = {"id": "wo-yao-zhege", "kind": "phrase", "set": "Essentials", "tier": 0, "register": "everyday",
+            "zh": "我要這個", "pinyin": "wǒ yào zhè-ge", "en": "I'll have this one", "topic": "Food & drink",
+            "swap": {"word": "這個", "with": [["一杯水", "yī bēi shuǐ", "a glass of water"]]}}
+
+    def test_passes_through_with_sandhi_on_the_alternatives(self):
+        self.assertEqual(validate([self.ITEM]), [])
+        out = expand([self.ITEM], root=Path("/nonexistent"), glossary={"我": "I", "要": "want", "這個": "this"})[0]
+        self.assertEqual((out["register"], out["tier"]), ("everyday", 0))
+        self.assertEqual(out["swap"], {"word": "這個", "with": [{"zh": "一杯水", "roman": "yì bēi shuǐ", "en": "a glass of water"}]})
+
+    def test_rejects_unknown_register_tier_and_swap_word(self):
+        bad = {**self.ITEM, "register": "rude", "tier": 5, "swap": {"word": "那個", "with": [["水", "shuǐ", "water"]]}}
+        errs = " ".join(validate([bad]))
+        for part in ("register", "tier", "swap word"):
+            self.assertIn(part, errs)
+
+    def test_simplified_map_covers_phrases_notes_and_alternatives(self):
+        from tools.build import simplified_map
+        out = expand([{**self.ITEM, "note": "可以給我這個嗎"}], root=Path("/nonexistent"), glossary={"我": "I", "要": "want", "這個": "this"})
+        m = simplified_map(out)
+        self.assertEqual((m["這"], m["個"], m["給"], m["嗎"]), ("这", "个", "给", "吗"))
+        self.assertNotIn("我", m)

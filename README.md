@@ -27,8 +27,13 @@ Practice:
 - The daily session has a fixed shape (40 cards at most): a short warm-up (the 5 weakest trouble spots, the 3
   hardest-to-read words, today's focus), then reviews with the day's new material mixed in. The new speaking
   cards, 3 new word cards and 2 sentence builds always get their place; reviews give way when the day is full.
-- *Read it* cards show Hong Kong-visible words in Traditional and the rest in Simplified. Tap the script label
-  on the card to switch between Traditional and Simplified, or pick one in Settings (*Characters on word cards*).
+- **繁 / 简** at the top of every Mandarin card switches all characters (answers, tiles, notes) between
+  Traditional and Simplified, from that card on. Settings → *Characters* also offers *Mixed*: Traditional,
+  except *Read it* cards for words you won't see written in Hong Kong.
+- A card can show how the phrase sounds (*Everyday*, *Casual*, *Polite*, *Formal*), and which part can be
+  swapped: that word is underlined, with a few things to put in its place.
+- Useful before polite: essentials come first, then your wishes and the lesson weeks; the politer, more formal
+  or rarer way to say something waits until the everyday phrases are in.
 - Tap any word (in answers, on tiles, in "Which part?") to hear just that word.
 - Missing a *Read it* card marks a **reading** problem (Me → "Hard to read"), kept apart from speaking trouble
   spots ("Hard to say"): the word's pinyin returns on tiles and its Read it card comes first in the next sessions,
@@ -85,6 +90,11 @@ Cantonese phrases go in `data/cantonese.json` in the same format, with `jyutping
   Getting by, Work & study) and can have a `mission`: a concrete thing to do with the phrase in real life.
 - Patterns about the learner can set `mine` to their own answer (e.g. `"mine": "helan"`), used in missions.
 - Phrases can have a `situation` (a prompt used once the phrase is solid). In patterns, `{cat}` is filled in.
+- `register` (`everyday`, `casual`, `polite`, `formal`) is shown on the card; set it wherever there is a contrast.
+  `tier` decides when a card is introduced: `0` essentials (first), `1` default, `2` later (the politer, more
+  formal or less common variant of something that has an everyday card). Always add the everyday phrasing first.
+- `swap` marks the replaceable part of a phrase: `{"word": "這個", "with": [["那個", "nà-ge", "that one"]]}`.
+  `word` must be one of the phrase's words. Prefer it to describing the swap in a `note`.
 - Optional: `note` (shown after reveal), `fillEn`, `allowChars` (to skip the Simplified check for specific characters).
 
 ### Audio

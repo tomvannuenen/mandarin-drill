@@ -1,6 +1,12 @@
 {
   "_comment": "Short meanings for words inside phrases, shown when a word is tapped. Words that have their own card use that card's English instead.",
   "mandarin": {
+    "對": "right, correct",
+    "謝謝": "thank you",
+    "不用": "no need",
+    "等": "to wait",
+    "多少": "how much, how many",
+    "錢": "money",
     "普通話": "Mandarin (as it is called in Hong Kong and mainland China)",
     "句": "counter for sentences",
     "話": "speech, words",

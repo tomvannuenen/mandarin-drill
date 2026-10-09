@@ -52,6 +52,11 @@ DECKS = {
 SLOW_RATE = "-30%"
 NORMAL_RATE = "+0%"
 KINDS = {"word", "phrase", "pattern"}
+# How a phrase sounds, shown on its card. Leave it out when there is nothing to contrast it with.
+REGISTERS = {"everyday", "casual", "polite", "formal"}
+# When an item is introduced: 0 = essentials (before everything), 1 = the default, 2 = later (the politer,
+# more formal or less common way to say something that already has an everyday card).
+TIERS = {0, 1, 2}
 ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 SLOT_RE = re.compile(r"\{(\w+)(?::(\w+))?\}")
 # Characters OpenCC "corrects" that are standard everyday Traditional in Taiwan.
@@ -154,6 +159,12 @@ def validate(items, deck="mandarin"):
         if bad:
             errs.append(f"{iid}: Simplified characters {''.join(bad)} in {it['zh']!r}")
         no_yi = it.get("noYiSandhi", False)
+        if "register" in it and it["register"] not in REGISTERS:
+            errs.append(f"{iid}: register must be one of {sorted(REGISTERS)}")
+        if "tier" in it and it["tier"] not in TIERS:
+            errs.append(f"{iid}: tier must be 0 (essentials), 1 or 2 (later)")
+        if "swap" in it:
+            errs += [f"{iid}: {e}" for e in _swap_errors(it, deck, roman)]
         if it["kind"] != "pattern":
             try:
                 _romanize(deck, it["zh"], it[roman], no_yi)
@@ -180,6 +191,46 @@ def validate(items, deck="mandarin"):
             except ValueError as e:
                 errs.append(f"{iid} + {f.get('id')}: {e}")
     return errs
+
+
+def _swap_errors(it, deck, roman):
+    """swap = {"word": <a word of the phrase>, "with": [[zh, roman, en], ...]}: the part you can replace."""
+    sw = it["swap"]
+    if it.get("kind") != "phrase" or not isinstance(sw, dict) or not sw.get("word") or not sw.get("with"):
+        return ["swap needs a phrase, a 'word' and a 'with' list of [characters, romanisation, English]"]
+    errs = []
+    try:
+        if sw["word"] not in [z for z, _ in word_groups(it["zh"], it[roman])]:
+            errs.append(f"swap word {sw['word']!r} is not one of the phrase's words")
+    except ValueError:
+        pass
+    for alt in sw["with"]:
+        if not (isinstance(alt, list) and len(alt) == 3 and all(alt)):
+            errs.append(f"swap alternative {alt!r} must be [characters, romanisation, English]")
+            continue
+        bad = simplified_chars(alt[0], it.get("allowChars", ""))
+        if bad:
+            errs.append(f"Simplified characters {''.join(bad)} in swap alternative {alt[0]!r}")
+        try:
+            _romanize(deck, alt[0], alt[1])
+        except ValueError as e:
+            errs.append(f"swap alternative {alt[0]}: {e}")
+    return errs
+
+
+def simplified_map(out_items):
+    """{Traditional: Simplified} for every character the Mandarin deck shows, so the app can switch script."""
+    text = []
+    for o in out_items:
+        if o["deck"] != "mandarin":
+            continue
+        text.append(o.get("note", ""))
+        for alt in o.get("swap", {}).get("with", []):
+            text.append(alt["zh"])
+        for entry in o.get("fills") or [o]:
+            text.append(entry["zh"])
+    chars = sorted({c for c in "".join(text) if "\u3400" <= c <= "\u9fff"})
+    return {c: to_simplified(c) for c in chars if to_simplified(c) != c}
 
 
 def _romanize(deck, zh, roman, no_yi=False):
@@ -272,9 +323,12 @@ def expand(items, root=ROOT, deck="mandarin", glossary=None):
             o["situation"] = SLOT_RE.sub("___", it["situation"])
         elif "situation" in it:
             o["situation"] = it["situation"]
-        for k in ("note", "cat", "topic", "mission", "mine", "wish"):
+        for k in ("note", "cat", "topic", "mission", "mine", "wish", "register", "tier"):
             if k in it:
                 o[k] = it[k]
+        if "swap" in it:
+            o["swap"] = {"word": it["swap"]["word"],
+                         "with": [{"zh": z, "roman": _romanize(deck, z, r), "en": e} for z, r, e in it["swap"]["with"]]}
         out.append(o)
     return out
 
@@ -405,8 +459,10 @@ def main(argv):
     decks = {d: {k: c[k] for k in ("label", "voices", "newPerDay", "maxShaky", "maxDrills", "characters") if k in c} for d, c in DECKS.items()}
     body = json.dumps([out, voices], ensure_ascii=False, sort_keys=True)
     body += json.dumps(convos, ensure_ascii=False, sort_keys=True)
+    t2s = simplified_map(out)
+    body += json.dumps(t2s, ensure_ascii=False, sort_keys=True)
     doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "voices": voices, "decks": decks, "items": out,
-           "conversations": convos}
+           "conversations": convos, "t2s": t2s}
     (ROOT / "phrases.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
     made, failed = ([], []) if no_audio else generate_audio(audio_jobs(out), ROOT, force_ids=force)
     stamp_service_worker(ROOT)

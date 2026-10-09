@@ -32,6 +32,7 @@ const nullStorage = { getItem: () => null, setItem() {} };
 let allItems = [];
 let byId = {};
 let decks = {}; // {deck: {label, voices}}
+let t2s = {}; // {Traditional: Simplified} for the Mandarin deck's characters
 let conversations = [];
 let wordAudio = {}; // '<deck>/<word>' -> audio of the word's own card
 let plan = null; // Claude's daily focus note
@@ -48,6 +49,16 @@ let pendingEnd = null; // session results waiting for a chained conversation to 
 
 const deck = () => (decks[progress.settings.deck] ? progress.settings.deck : 'mandarin');
 const items = () => allItems.filter((i) => i.deck === deck());
+
+// Script: Mandarin can be shown in Simplified. 'auto' keeps everything Traditional except word cards, which mix.
+const simplified = (d) => d === 'mandarin' && progress.settings.script === 'cn';
+const zs = (text, d) => (simplified(d) ? [...text].map((ch) => t2s[ch] || ch).join('') : text);
+const zl = (d) => (simplified(d) ? SCRIPT_LANG.cn : LANG_ATTR[d]);
+const HAN_RUN = /([㐀-鿿]+)/;
+// Text with Chinese in it (notes): the characters get the same font and script as the card's own.
+function mixedText(text, d) {
+  return text.split(HAN_RUN).map((part, i) => (i % 2 ? el('span', { class: 'zh-inline', lang: zl(d) }, zs(part, d)) : part));
+}
 
 // Deck items plus practice items for the current trouble spots (kept in byId so queued drills still resolve).
 function drills() {
@@ -230,7 +241,7 @@ function sayLine(entry, d) {
     { class: 'say-line', onclick: () => play(entry.audio[pickVoice(entry)][0]) },
     el('span', { class: 'say-top' }, renderRoman(el('span', { class: 'say-roman' }), entry.roman, d), icon('play', 'say-play')),
     el('span', { class: 'say-en' }, entry.en),
-    el('span', { class: 'say-zh', lang: LANG_ATTR[d] }, entry.zh)
+    el('span', { class: 'say-zh', lang: zl(d) }, zs(entry.zh, d))
   );
 }
 
@@ -352,6 +363,8 @@ function renderMission(now) {
 
 // ---------- practice
 
+const REGISTER_LABEL = { everyday: 'Everyday', casual: 'Casual, with friends', polite: 'Polite', formal: 'Formal' };
+
 function contentFor(card) {
   const item = byId[card.id];
   if (card.type === 'char') {
@@ -390,7 +403,8 @@ function contentFor(card) {
   if (lvl === 'situation' && item.mine) src = item.fills.find((f) => f.fillId === item.mine) || src;
   return {
     zh: src.zh, roman: src.roman, en: src.en, words: src.words, audio: src.audio, situation: src.situation,
-    voice: pickVoice(src), played: false, note: item.note, deck: item.deck, flagged: new Set(), level: lvl,
+    voice: pickVoice(src), played: false, note: item.note, register: item.register, swap: item.swap,
+    deck: item.deck, flagged: new Set(), level: lvl,
     ...tracking(),
   };
 }
@@ -422,16 +436,16 @@ function playCurrent({ slow = false, next = false } = {}) {
 
 // Answer shown word by word; tap a word for its meaning. A :char card shows the same script as its prompt.
 function renderWords(c) {
-  const lang = LANG_ATTR[c.deck];
+  const lang = zl(c.deck);
   const gloss = $('a-gloss');
   gloss.hidden = true;
   $('a-words').replaceChildren(
     ...c.words.map((w) => {
-      const disp = c.char ? (w.zhDisp || w.zh) : w.zh;
+      const disp = c.char ? (w.zhDisp || w.zh) : zs(w.zh, c.deck);
       const wLang = c.char ? (SCRIPT_LANG[w.script] || lang) : lang;
       const btn = el(
         'button',
-        { class: `wg${w.zh === c.target && c.drill === 'gap' ? ' target' : ''}`, 'data-zh': w.zh, 'aria-label': `${disp}: ${w.gloss}` },
+        { class: `wg${w.zh === c.target && c.drill === 'gap' ? ' target' : ''}${w.zh === c.swap?.word ? ' swappable' : ''}`, 'data-zh': w.zh, 'aria-label': `${disp}: ${w.gloss}` },
         el('span', { class: 'wg-zh', lang: wLang }, disp),
         renderRoman(el('span', { class: 'wg-roman' }), w.roman, c.deck)
       );
@@ -450,6 +464,21 @@ function renderWords(c) {
   );
 }
 
+// The part of a phrase you can replace, and a few things to put there. Tap one to hear it.
+function renderSwap(c) {
+  const box = $('a-swap');
+  box.hidden = !c.swap;
+  if (!c.swap) return box.replaceChildren();
+  box.replaceChildren(
+    el('span', { class: 'swap-from', lang: zl(c.deck) }, zs(c.swap.word, c.deck)),
+    el('span', { class: 'swap-arrow', 'aria-label': 'can be swapped for' }, '⇄'),
+    ...c.swap.with.map((alt) => el('button', { class: 'swap-alt', onclick: () => speakText(alt.zh, c.deck) },
+      el('span', { class: 'swap-zh', lang: zl(c.deck) }, zs(alt.zh, c.deck)),
+      renderRoman(el('span', { class: 'swap-roman' }), alt.roman, c.deck),
+      el('small', {}, alt.en)))
+  );
+}
+
 // A small button that reveals a hint (first letters of the pinyin by default) and records that it was used.
 function hintButton(c, label = 'Hint', text = () => hintText(c.roman, c.deck)) {
   const b = el('button', { class: 'hint-btn' }, icon('bulb'), label);
@@ -465,7 +494,7 @@ function renderBuild(c) {
   const line = el('div', { class: 'build-line' });
   const pool = el('div', { class: 'build-pool' });
   const tileEl = (t) => {
-    const b = el('button', { class: 'tile' }, el('span', { class: 'tile-zh', lang: LANG_ATTR[c.deck] }, t.zh));
+    const b = el('button', { class: 'tile' }, el('span', { class: 'tile-zh', lang: zl(c.deck) }, zs(t.zh, c.deck)));
     if (!knowsWord(progress, c.deck, t.zh)) b.append(renderRoman(el('span', { class: 'tile-roman' }), t.roman, c.deck));
     return b;
   };
@@ -519,26 +548,49 @@ function finishBuild(rating) {
   playCurrent();
 }
 
-function switchScript(card, c) {
-  progress.settings.script = c.script === 'cn' ? 'hk' : 'cn';
+// The 繁/简 button at the top of every Mandarin card: switches all characters, on this card and from now on.
+function scriptNow(c) {
+  return c.char ? c.script : simplified(c.deck) ? 'cn' : 'hk';
+}
+
+function switchScript() {
+  if (!session?.current) return;
+  const { card, c } = session.current;
+  progress.settings.script = scriptNow(c) === 'cn' ? 'hk' : 'cn';
   persist();
-  Object.assign(c, displayFor(c, progress.settings.script));
-  Object.assign(c.words[0], displayFor(c.words[0], progress.settings.script));
+  if (c.char) {
+    Object.assign(c, displayFor(c, progress.settings.script));
+    Object.assign(c.words[0], displayFor(c.words[0], progress.settings.script));
+  }
+  drawCard(card, c);
+}
+
+// Everything on the card that shows characters; safe to call again mid-card.
+function drawCard(card, c) {
   $('prompt').replaceChildren(...promptFor(card, c));
   if (!$('answer').hidden) document.querySelector('#prompt .hint-btn')?.remove();
   renderWords(c);
+  renderSwap(c);
+  showAccent();
+  $('a-note').replaceChildren(...(c.note ? mixedText(c.note, c.deck) : []));
+  $('a-note').hidden = !c.note;
+  $('a-example').hidden = !c.example;
+  $('a-example').replaceChildren(...(c.example ? [el('p', { class: 'section' }, 'In a phrase you know'), sayLine(c.example, c.deck)] : []));
+  $('card-register').textContent = REGISTER_LABEL[c.register] || '';
+  $('card-register').hidden = !c.register;
+  const sw = $('script-switch');
+  sw.hidden = c.deck !== 'mandarin';
+  sw.textContent = scriptNow(c) === 'cn' ? '简' : '繁';
+  sw.setAttribute('aria-label', scriptNow(c) === 'cn' ? 'Simplified characters. Switch to Traditional' : 'Traditional characters. Switch to Simplified');
 }
 
 function promptFor(card, c) {
-  const lang = LANG_ATTR[c.deck];
+  const lang = zl(c.deck);
   if (c.build) return renderBuild(c);
   if (c.char) {
     return [
       el('p', { class: 'prompt-char', lang: SCRIPT_LANG[c.script] || lang }, c.zhDisp),
-      // Tapping the badge switches between Traditional and Simplified, for this card and the ones after it.
-      c.deck === 'mandarin'
-        ? el('button', { class: `script-badge script-${c.script}`, 'aria-label': 'Switch between Traditional and Simplified', onclick: () => switchScript(card, c) }, `${SCRIPT_LABEL[c.script] || ''} ⇄`)
-        : el('span', { class: `script-badge script-${c.script}` }, SCRIPT_LABEL[c.script] || ''),
+      el('span', { class: `script-badge script-${c.script}` }, SCRIPT_LABEL[c.script] || ''),
       el('p', { class: 'muted' }, 'Say it out loud'),
       hintButton(c),
     ];
@@ -552,7 +604,7 @@ function promptFor(card, c) {
     ]));
     const parts = [el('p', { class: 'prompt-en' }, c.context.en), romanGap];
     if (progress.settings.reading) {
-      parts.push(el('p', { class: 'prompt-gap', lang }, ...words.map((w) => (w.zh === c.target ? el('span', { class: 'gap' }, '＿＿') : w.zh))));
+      parts.push(el('p', { class: 'prompt-gap', lang }, ...words.map((w) => (w.zh === c.target ? el('span', { class: 'gap' }, '＿＿') : zs(w.zh, c.deck)))));
     }
     return parts;
   }
@@ -566,7 +618,7 @@ function promptFor(card, c) {
     }
     return [el('p', { class: 'prompt-en' }, c.en), hintButton(c)];
   }
-  if (card.type === 'read') return [el('p', { class: 'prompt-zh', lang }, c.zh)];
+  if (card.type === 'read') return [el('p', { class: 'prompt-zh', lang }, zs(c.zh, c.deck))];
   return [
     el('button', { class: 'icon-btn huge', 'aria-label': 'Play, then next voice', onclick: () => playCurrent({ next: true }) }, icon('play')),
     el('p', { class: 'speaker' }),
@@ -600,24 +652,18 @@ function showCard() {
     : c.level === 'situation' ? 'What would you say?'
     : c.level === 'speed' ? 'Speed round: say it before the bar runs out'
     : { say: `Say it in ${LANG_NAME[c.deck]}`, listen: 'What does this mean?', read: 'Read it aloud' }[card.type];
-  $('prompt').replaceChildren(...promptFor(card, c));
+  $('answer').hidden = true;
+  drawCard(card, c);
   if (!c.drill && card.type === 'listen') playCurrent();
 
-  renderWords(c);
-  showAccent();
   $('rec').hidden = !canRecord();
   $('rec').replaceChildren(icon('mic'));
   $('rec').classList.remove('recording');
   $('rec-row').hidden = true;
   $('a-en').textContent = c.en;
   $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || c.build;
-  $('a-example').hidden = !c.example;
-  $('a-example').replaceChildren(...(c.example ? [el('p', { class: 'section' }, 'In a phrase you know'), sayLine(c.example, c.deck)] : []));
   $('continue').hidden = true;
   $('reveal').textContent = c.build ? "I'm stuck, show me" : 'Show answer';
-  $('a-note').textContent = c.note || '';
-  $('a-note').hidden = !c.note;
-  $('answer').hidden = true;
   $('reveal').hidden = false;
   $('grades').hidden = true;
   $('which').hidden = true;
@@ -961,6 +1007,7 @@ function wire() {
   $('more').addEventListener('click', () => { extraNew += decks[deck()]?.newPerDay || 5; startToday(); });
   $('quit').addEventListener('click', () => { session = null; show('home'); });
   $('reveal').addEventListener('click', reveal);
+  $('script-switch').addEventListener('click', switchScript);
   $('continue').addEventListener('click', () => { if (session?.current?.c.result) commit(session.current.c.result); });
   $('play').addEventListener('click', () => playCurrent({ next: true }));
   $('play-slow').addEventListener('click', () => playCurrent({ slow: true }));
@@ -1046,6 +1093,7 @@ async function init() {
   const data = await res.json();
   allItems = data.items;
   decks = data.decks;
+  t2s = data.t2s || {};
   conversations = data.conversations || [];
   version = data.version;
   byId = Object.fromEntries(allItems.map((i) => [i.id, i]));

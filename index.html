@@ -54,12 +54,15 @@
         <button class="icon-btn quiet" id="quit" aria-label="End session"><i data-icon="x"></i></button>
         <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
         <span class="progress-text" id="progress-text"></span>
+        <button class="script-switch" id="script-switch" hidden></button>
       </div>
       <div class="card" id="card">
         <p class="card-kind" id="card-kind"></p>
+        <p class="register" id="card-register" hidden></p>
         <div class="prompt" id="prompt"></div>
         <div class="answer" id="answer" hidden>
           <div class="words" id="a-words"></div>
+          <div class="swap" id="a-swap" hidden></div>
           <p class="gloss" id="a-gloss" hidden></p>
           <p class="en" id="a-en"></p>
           <p class="note-box" id="a-note" hidden></p>
@@ -283,7 +286,7 @@
         <input type="checkbox" id="reading">
       </label>
       <label class="setting">
-        <span>Characters on word cards<br><small class="muted">Mandarin. Tap the label on a card to switch.</small></span>
+        <span>Characters<br><small class="muted">Mandarin. 繁 / 简 at the top of a card switches too. Mixed: Traditional, except word cards for words you won't see written in Hong Kong.</small></span>
         <select id="script" class="field">
           <option value="auto">Mixed</option>
           <option value="hk">Traditional</option>

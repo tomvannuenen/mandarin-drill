@@ -292,3 +292,14 @@ test('buildQueue leaves words you already say inside a solid phrase until last',
   p.goodCounts.p = 2;
   assert.deepEqual(buildQueue(items, p, NOW, 10).filter((c) => c.type === 'say').map((c) => c.id), ['tea', 'v1', 'like']);
 });
+
+test('buildQueue introduces essentials first and the politer or rarer phrasing last', () => {
+  const items = [
+    { id: 'polite-wish', wish: 'w1', tier: 2 },
+    { id: 'week', week: 3 },
+    { id: 'verb', set: 'Verbs' },
+    { id: 'essential', set: 'Essentials', tier: 0 },
+  ];
+  const q = buildQueue(items, defaults(), NOW, 10);
+  assert.deepEqual(q.map((c) => c.id), ['essential', 'week', 'verb', 'polite-wish']);
+});

@@ -1,5 +1,5 @@
 {
- "version": "47fff205b5cf",
+ "version": "4272464a66da",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -107,7 +107,8 @@
    },
    "situation": "You walk into a room of students and greet them all.",
    "topic": "Introducing yourself",
-   "mission": "Open a class or meeting with 大家好"
+   "mission": "Open a class or meeting with 大家好",
+   "register": "everyday"
   },
   {
    "id": "wo-jiao",
@@ -158,7 +159,8 @@
    "situation": "Someone asks your name.",
    "note": "我是…… (wǒ shì…) = I am…",
    "topic": "Introducing yourself",
-   "mission": "Tell someone your name in Mandarin"
+   "mission": "Tell someone your name in Mandarin",
+   "register": "everyday"
   },
   {
    "id": "xiexie",
@@ -201,7 +203,8 @@
    },
    "situation": "A colleague hands you a coffee.",
    "topic": "Small talk",
-   "mission": "Thank a shop assistant or a colleague with 謝謝"
+   "mission": "Thank a shop assistant or a colleague with 謝謝",
+   "register": "everyday"
   },
   {
    "id": "hen-gaoxing-renshi-ni",
@@ -267,7 +270,8 @@
    },
    "situation": "You've just been introduced to someone new.",
    "topic": "Introducing yourself",
-   "mission": "Say it to someone you meet for the first time"
+   "mission": "Say it to someone you meet for the first time",
+   "register": "polite"
   },
   {
    "id": "hen-gaoxing-renshi-dajia",
@@ -333,7 +337,8 @@
    },
    "situation": "You've just been introduced to a whole group.",
    "topic": "Introducing yourself",
-   "mission": "Use it when you're introduced to a group"
+   "mission": "Use it when you're introduced to a group",
+   "register": "polite"
   },
   {
    "id": "helan",
@@ -442,9 +447,12 @@
     }
    ],
    "situation": "Someone asks where you come from. (___)",
+   "note": "Sounds written or formal. In conversation: 我是荷蘭人 or 我是從荷蘭來的",
    "topic": "Introducing yourself",
    "mission": "Tell a colleague or taxi driver where you're from",
-   "mine": "helan"
+   "mine": "helan",
+   "register": "formal",
+   "tier": 2
   },
   {
    "id": "wo-shi-x-ren",
@@ -519,7 +527,8 @@
    "note": "Country + 人 (rén, person) = nationality",
    "topic": "Introducing yourself",
    "mission": "When someone asks where you're from, answer in Mandarin",
-   "mine": "helan"
+   "mine": "helan",
+   "register": "everyday"
   },
   {
    "id": "wo-shi-laoshi",
@@ -710,8 +719,11 @@
     ]
    },
    "situation": "A taxi driver asks why you're in Hong Kong.",
+   "note": "授課 is formal (course catalogues, announcements). In conversation: 我在中文大學教書",
    "topic": "Work & study",
-   "mission": "Explain why you're in Hong Kong"
+   "mission": "Explain why you're in Hong Kong",
+   "register": "formal",
+   "tier": 2
   },
   {
    "id": "wo-zai-zhongda-jiaoshu",
@@ -784,7 +796,8 @@
    "situation": "Someone asks where you teach.",
    "note": "教 (jiāo) + course/subject = teach …; note jiāo here vs jiào in 教授",
    "topic": "Work & study",
-   "mission": "Tell a Mandarin-speaking colleague where you teach"
+   "mission": "Tell a Mandarin-speaking colleague where you teach",
+   "register": "everyday"
   },
   {
    "id": "zuijin-hao-ma",
@@ -842,7 +855,8 @@
    },
    "situation": "You bump into a colleague you haven't seen for a while.",
    "topic": "Small talk",
-   "mission": "Greet a Mandarin-speaking colleague with it"
+   "mission": "Greet a Mandarin-speaking colleague with it",
+   "register": "everyday"
   },
   {
    "id": "zuijin-zenmeyang",
@@ -893,7 +907,8 @@
    },
    "situation": "You want to ask a friend how things are going.",
    "topic": "Small talk",
-   "mission": "Ask a colleague how things are"
+   "mission": "Ask a colleague how things are",
+   "register": "casual"
   },
   {
    "id": "zuijin-mang-shenme",
@@ -951,7 +966,8 @@
    },
    "situation": "You want to ask your coach what's been keeping them busy.",
    "topic": "Small talk",
-   "mission": "Ask your coach what they've been busy with"
+   "mission": "Ask your coach what they've been busy with",
+   "register": "casual"
   },
   {
    "id": "kafei",
@@ -3630,8 +3646,10 @@
     ]
    },
    "situation": "You meet a new student and want to know their name.",
+   "note": "Fine with students and peers. To someone senior, ask 請問怎麼稱呼？ (qǐngwèn zěnme chēnghū)",
    "topic": "Meeting people",
-   "mission": "Ask a student their name"
+   "mission": "Ask a student their name",
+   "register": "everyday"
   },
   {
    "id": "ni-shi-xuesheng-ma",
@@ -4348,6 +4366,7 @@
     ]
    },
    "situation": "Someone asks what your research is about.",
+   "note": "人工智慧 is the Taiwan word. In Hong Kong and mainland China it is 人工智能 (réngōng zhìnéng); people also just say AI",
    "topic": "Work & study",
    "mission": "Tell someone what you research"
   },
@@ -4653,7 +4672,8 @@
    },
    "situation": "A student is nervous before their presentation.",
    "topic": "Work & study",
-   "mission": "Say 加油 to a student before an exam or presentation"
+   "mission": "Say 加油 to a student before an exam or presentation",
+   "register": "casual"
   },
   {
    "id": "wo-de-zhongwen-bu-tai-hao",
@@ -4797,7 +4817,8 @@
    },
    "situation": "Someone is speaking too fast for you.",
    "topic": "Getting by",
-   "mission": "Ask someone to slow down in Mandarin"
+   "mission": "Ask someone to slow down in Mandarin",
+   "register": "polite"
   },
   {
    "id": "zhege-zhongwen-zenme-shuo",
@@ -5129,7 +5150,8 @@
    },
    "situation": "A student asks you for a small favour.",
    "topic": "Getting by",
-   "mission": "Answer 沒問題 when someone asks for a favour"
+   "mission": "Answer 沒問題 when someone asks for a favour",
+   "register": "everyday"
   },
   {
    "id": "keyi-gei-wo-zhege-ma",
@@ -5201,10 +5223,32 @@
     ]
    },
    "situation": "You point at something on the menu and ask the waiter for it.",
-   "note": "可以給我…嗎？ = Can I have…? Swap 這個 for anything: 菜單 (cài-dān, menu), 一杯水 (a glass of water)",
+   "note": "Politer than 我要這個, which is what most people say when ordering",
    "topic": "Food & drink",
    "mission": "Point at a dish on the menu in a CUHK canteen and ask 可以給我這個嗎？",
-   "wish": "wish-1790803302621"
+   "wish": "wish-1790803302621",
+   "register": "polite",
+   "tier": 2,
+   "swap": {
+    "word": "這個",
+    "with": [
+     {
+      "zh": "菜單",
+      "roman": "cài-dān",
+      "en": "the menu"
+     },
+     {
+      "zh": "一杯水",
+      "roman": "yì bēi shuǐ",
+      "en": "a glass of water"
+     },
+     {
+      "zh": "那個",
+      "roman": "nà-ge",
+      "en": "that one"
+     }
+    ]
+   }
   },
   {
    "id": "keyi-gei-wo-yibei-kafei-ma",
@@ -5286,10 +5330,32 @@
     ]
    },
    "situation": "You're at the counter of a café and want a coffee.",
-   "note": "Same frame as 可以給我這個嗎？ with 一杯咖啡 (a cup of coffee). The 可以…嗎？ already makes it polite; add 謝謝 once you get it",
+   "note": "Politer than 我要一杯咖啡, the usual way to order. Add 謝謝 once you get it",
    "topic": "Food & drink",
    "mission": "Order your next coffee on campus with 可以給我一杯咖啡嗎？",
-   "wish": "wish-1791059610386"
+   "wish": "wish-1791059610386",
+   "register": "polite",
+   "tier": 2,
+   "swap": {
+    "word": "咖啡",
+    "with": [
+     {
+      "zh": "奶茶",
+      "roman": "nǎi-chá",
+      "en": "milk tea"
+     },
+     {
+      "zh": "水",
+      "roman": "shuǐ",
+      "en": "water"
+     },
+     {
+      "zh": "啤酒",
+      "roman": "pí-jiǔ",
+      "en": "beer"
+     }
+    ]
+   }
   },
   {
    "id": "keyi-yong-yingwen-jieshi-yixia-ma",
@@ -5370,7 +5436,8 @@
    "note": "用英文 = using English, and it goes before the verb. 解釋 jiěshì = to explain; 一下 softens the request (\"explain it a bit\")",
    "topic": "Getting by",
    "mission": "When a colleague or your coach says something you can't follow, ask 可以用英文解釋一下嗎？",
-   "wish": "wish-1791068534984"
+   "wish": "wish-1791068534984",
+   "register": "polite"
   },
   {
    "id": "xihuan",
@@ -7343,9 +7410,10 @@
     }
    ],
    "situation": "The waiter asks what you'd like to drink. (___)",
-   "note": "Polite way to order",
+   "note": "Softer than 我要…: I'd like…",
    "topic": "Food & drink",
-   "mission": "Order a drink in Mandarin"
+   "mission": "Order a drink in Mandarin",
+   "register": "polite"
   },
   {
    "id": "wo-bu-zhidao",
@@ -7401,7 +7469,8 @@
     ]
    },
    "situation": "Someone asks you something you have no idea about.",
-   "topic": "Getting by"
+   "topic": "Getting by",
+   "register": "everyday"
   },
   {
    "id": "wo-ting-bu-dong",
@@ -7467,7 +7536,8 @@
    "situation": "Someone speaks fast Mandarin and you didn't catch it.",
    "note": "聽 listen + 不懂 not understand",
    "topic": "Getting by",
-   "mission": "When you don't catch something, say it instead of switching to English"
+   "mission": "When you don't catch something, say it instead of switching to English",
+   "register": "everyday"
   },
   {
    "id": "qing-zai-shuo-yici",
@@ -7533,7 +7603,8 @@
    "situation": "You almost understood, and want to hear it again.",
    "note": "請 qǐng = please; 再 zài = again",
    "topic": "Getting by",
-   "mission": "Ask your coach or someone else to repeat something"
+   "mission": "Ask your coach or someone else to repeat something",
+   "register": "polite"
   },
   {
    "id": "ni-hui-shuo-yingwen-ma",
@@ -7680,7 +7751,9 @@
    },
    "situation": "Someone asks if you speak Chinese.",
    "topic": "Introducing yourself",
-   "mission": "Tell a colleague you can speak a little Chinese"
+   "mission": "Tell a colleague you can speak a little Chinese",
+   "wish": "wish-1791518241214",
+   "register": "everyday"
   },
   {
    "id": "wo-zai-xue-zhongwen",
@@ -8922,7 +8995,8 @@
    "situation": "The waiter is ready to take your order. (___)",
    "note": "我要… is how you order: direct, and normal at a counter",
    "topic": "Food & drink",
-   "mission": "Order at a cha chaan teng counter with 我要…"
+   "mission": "Order at a cha chaan teng counter with 我要…",
+   "register": "everyday"
   },
   {
    "id": "qing-gei-wo-x",
@@ -9350,8 +9424,11 @@
     }
    ],
    "situation": "You order politely. (___)",
+   "note": "Politer than 我要…, which is what most people say when ordering",
    "topic": "Food & drink",
-   "mission": "Order one thing today with 請給我…"
+   "mission": "Order one thing today with 請給我…",
+   "register": "polite",
+   "tier": 2
   },
   {
    "id": "hai-mei",
@@ -9863,9 +9940,10 @@
     ]
    },
    "situation": "You greet a group of students.",
-   "note": "們 men makes a plural: 你們 = you (all), 我們 = we",
+   "note": "們 men makes a plural: 你們 = you (all), 我們 = we. For greeting a group, 大家好 is more common",
    "topic": "Small talk",
-   "mission": "Greet a group with 你們好"
+   "mission": "Greet a group with 你們好",
+   "tier": 2
   },
   {
    "id": "wo-hen-hao",
@@ -10220,7 +10298,8 @@
    },
    "situation": "Someone asks if your lunch was spicy. It wasn't.",
    "note": "沒 = didn't / haven't. Compare 我不吃辣: I don't eat spicy food",
-   "topic": "Food & drink"
+   "topic": "Food & drink",
+   "tier": 2
   },
   {
    "id": "zuotian-wucan-de-shihou",
@@ -10522,7 +10601,8 @@
    },
    "situation": "You want to ask if something is allowed.",
    "topic": "Getting by",
-   "mission": "Ask 可不可以？ before taking a free seat"
+   "mission": "Ask 可不可以？ before taking a free seat",
+   "register": "everyday"
   },
   {
    "id": "zhege-ren-shi-wo-de-nupengyou",
@@ -10600,8 +10680,9 @@
     ]
    },
    "situation": "You introduce your girlfriend to someone.",
-   "note": "我的 = my: 的 marks possession",
-   "topic": "Meeting people"
+   "note": "A grammar example: 我的 = my, 這個人 = this person. When you introduce her, say 這是我女朋友",
+   "topic": "Meeting people",
+   "tier": 2
   },
   {
    "id": "you-mei-you-qita-wenti",
@@ -11186,7 +11267,8 @@
    "situation": "The waiter asks what you'd like. (___)",
    "note": "杯 bēi is the measure word for cups: 一杯咖啡",
    "topic": "Food & drink",
-   "mission": "Order a drink with 一杯"
+   "mission": "Order a drink with 一杯",
+   "register": "everyday"
   },
   {
    "id": "wo-quguo-x",
@@ -11928,7 +12010,9 @@
      "audio/cn-xiaoxiao/shou-slow.mp3"
     ]
    },
-   "note": "首 in formal contexts (首次 = the first time); everyday: 第一"
+   "note": "首 in formal contexts (首次 = the first time); everyday: 第一",
+   "register": "formal",
+   "tier": 2
   },
   {
    "id": "diyi",
@@ -13134,10 +13218,11 @@
     ]
    },
    "situation": "Someone asks where you're from.",
-   "note": "是…的 wraps the detail you're stressing (where from). 從 cóng = from, 來 = come. More conversational than 我來自荷蘭; 我是荷蘭人 says the same in fewer words",
+   "note": "是…的 wraps the detail you're stressing (where from). 從 cóng = from, 來 = come. 我是荷蘭人 says the same in fewer words",
    "topic": "Introducing yourself",
    "mission": "When a student or taxi driver asks 你是哪裡人？, answer 我是從荷蘭來的",
-   "wish": "wish-1791302600145"
+   "wish": "wish-1791302600145",
+   "register": "everyday"
   },
   {
    "id": "bu-hui",
@@ -13183,7 +13268,1030 @@
    "note": "The everyday Taiwan reply to 謝謝, lighter than 不客氣. When someone asks a favour, the answer is 沒問題",
    "topic": "Small talk",
    "mission": "When a student thanks you after class, answer 不會！",
-   "wish": "wish-1791303319597"
+   "wish": "wish-1791303319597",
+   "register": "casual"
+  },
+  {
+   "id": "ni-hao",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "你好",
+   "roman": "nǐ hǎo",
+   "en": "Hello",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you",
+     "script": "cn",
+     "zhDisp": "你"
+    },
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well",
+     "script": "cn",
+     "zhDisp": "好"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-hao.mp3",
+     "audio/tw-yunjhe/ni-hao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-hao.mp3",
+     "audio/tw-hsiaochen/ni-hao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-hao.mp3",
+     "audio/tw-hsiaoyu/ni-hao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-hao.mp3",
+     "audio/cn-yunyang/ni-hao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-hao.mp3",
+     "audio/cn-xiaoxiao/ni-hao-slow.mp3"
+    ]
+   },
+   "situation": "You walk into a shop or meet someone.",
+   "topic": "Small talk",
+   "mission": "Greet the staff with 你好 the next time you walk into a shop",
+   "register": "everyday",
+   "tier": 0
+  },
+  {
+   "id": "wo-yao-zhege",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "我要這個",
+   "roman": "wǒ yào zhè-ge",
+   "en": "I'll have this one (ordering)",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me",
+     "script": "cn",
+     "zhDisp": "我"
+    },
+    {
+     "zh": "要",
+     "roman": "yào",
+     "gloss": "to want; will",
+     "script": "cn",
+     "zhDisp": "要"
+    },
+    {
+     "zh": "這個",
+     "roman": "zhè-ge",
+     "gloss": "this",
+     "script": "cn",
+     "zhDisp": "这个",
+     "zhS": "这个"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-yao-zhege.mp3",
+     "audio/tw-yunjhe/wo-yao-zhege-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-yao-zhege.mp3",
+     "audio/tw-hsiaochen/wo-yao-zhege-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-yao-zhege.mp3",
+     "audio/tw-hsiaoyu/wo-yao-zhege-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-yao-zhege.mp3",
+     "audio/cn-yunyang/wo-yao-zhege-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-yao-zhege.mp3",
+     "audio/cn-xiaoxiao/wo-yao-zhege-slow.mp3"
+    ]
+   },
+   "situation": "You point at something on the menu.",
+   "note": "The normal way to order: direct, not rude. 可以給我這個嗎？ is the politer version",
+   "topic": "Food & drink",
+   "mission": "Order by pointing at the menu: 我要這個",
+   "register": "everyday",
+   "tier": 0,
+   "swap": {
+    "word": "這個",
+    "with": [
+     {
+      "zh": "那個",
+      "roman": "nà-ge",
+      "en": "that one"
+     },
+     {
+      "zh": "一杯水",
+      "roman": "yì bēi shuǐ",
+      "en": "a glass of water"
+     },
+     {
+      "zh": "兩個",
+      "roman": "liǎng ge",
+      "en": "two of them"
+     }
+    ]
+   }
+  },
+  {
+   "id": "bu-hao-yisi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "不好意思",
+   "roman": "bù-hǎo-yì-si",
+   "en": "Excuse me / sorry (small things)",
+   "words": [
+    {
+     "zh": "不好意思",
+     "roman": "bù-hǎo-yì-si",
+     "gloss": "Excuse me / sorry (small things)",
+     "script": "cn",
+     "zhDisp": "不好意思"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/bu-hao-yisi.mp3",
+     "audio/tw-yunjhe/bu-hao-yisi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/bu-hao-yisi.mp3",
+     "audio/tw-hsiaochen/bu-hao-yisi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/bu-hao-yisi.mp3",
+     "audio/tw-hsiaoyu/bu-hao-yisi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/bu-hao-yisi.mp3",
+     "audio/cn-yunyang/bu-hao-yisi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/bu-hao-yisi.mp3",
+     "audio/cn-xiaoxiao/bu-hao-yisi-slow.mp3"
+    ]
+   },
+   "situation": "You need to get past someone or catch a waiter's attention.",
+   "note": "The all-purpose \"excuse me\": getting attention, squeezing past, a small slip. 對不起 is for a real apology",
+   "topic": "Getting by",
+   "mission": "Use 不好意思 to get a waiter's attention or to squeeze past someone on the MTR",
+   "register": "everyday",
+   "tier": 0
+  },
+  {
+   "id": "duibuqi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "對不起",
+   "roman": "duì-bù-qǐ",
+   "en": "I'm sorry",
+   "words": [
+    {
+     "zh": "對不起",
+     "roman": "duì-bù-qǐ",
+     "gloss": "I'm sorry",
+     "script": "cn",
+     "zhDisp": "对不起",
+     "zhS": "对不起"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/duibuqi.mp3",
+     "audio/tw-yunjhe/duibuqi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/duibuqi.mp3",
+     "audio/tw-hsiaochen/duibuqi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/duibuqi.mp3",
+     "audio/tw-hsiaoyu/duibuqi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/duibuqi.mp3",
+     "audio/cn-yunyang/duibuqi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/duibuqi.mp3",
+     "audio/cn-xiaoxiao/duibuqi-slow.mp3"
+    ]
+   },
+   "situation": "You are late or made a real mistake.",
+   "note": "A real apology. For small things (bumping into someone, interrupting), 不好意思 is more usual",
+   "topic": "Getting by",
+   "mission": "Apologise with 對不起 the next time you're late",
+   "register": "everyday",
+   "tier": 0
+  },
+  {
+   "id": "mei-guanxi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "沒關係",
+   "roman": "méi-guān-xì",
+   "en": "It's OK / never mind",
+   "words": [
+    {
+     "zh": "沒關係",
+     "roman": "méi-guān-xì",
+     "gloss": "It's OK / never mind",
+     "script": "cn",
+     "zhDisp": "没关系",
+     "zhS": "没关系"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/mei-guanxi.mp3",
+     "audio/tw-yunjhe/mei-guanxi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/mei-guanxi.mp3",
+     "audio/tw-hsiaochen/mei-guanxi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/mei-guanxi.mp3",
+     "audio/tw-hsiaoyu/mei-guanxi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/mei-guanxi.mp3",
+     "audio/cn-yunyang/mei-guanxi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/mei-guanxi.mp3",
+     "audio/cn-xiaoxiao/mei-guanxi-slow.mp3"
+    ]
+   },
+   "situation": "Someone apologises to you.",
+   "topic": "Getting by",
+   "mission": "Answer 沒關係 when someone says sorry to you",
+   "wish": "wish-1791506155451",
+   "register": "everyday",
+   "tier": 0
+  },
+  {
+   "id": "hao-de",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "好的",
+   "roman": "hǎo de",
+   "en": "OK / sure",
+   "words": [
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good, OK",
+     "script": "cn",
+     "zhDisp": "好"
+    },
+    {
+     "zh": "的",
+     "roman": "de",
+     "gloss": "(softens it)",
+     "script": "cn",
+     "zhDisp": "的"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/hao-de.mp3",
+     "audio/tw-yunjhe/hao-de-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/hao-de.mp3",
+     "audio/tw-hsiaochen/hao-de-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/hao-de.mp3",
+     "audio/tw-hsiaoyu/hao-de-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/hao-de.mp3",
+     "audio/cn-yunyang/hao-de-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/hao-de.mp3",
+     "audio/cn-xiaoxiao/hao-de-slow.mp3"
+    ]
+   },
+   "situation": "Someone suggests something and you agree.",
+   "note": "Just 好 works too. With friends: 好啊 (hǎo a) = sure!",
+   "topic": "Getting by",
+   "mission": "Agree to a plan with 好的",
+   "register": "everyday",
+   "tier": 0
+  },
+  {
+   "id": "dui",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "對",
+   "roman": "duì",
+   "en": "Yes, that's right",
+   "words": [
+    {
+     "zh": "對",
+     "roman": "duì",
+     "gloss": "Yes, that's right",
+     "script": "cn",
+     "zhDisp": "对",
+     "zhS": "对"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/dui.mp3",
+     "audio/tw-yunjhe/dui-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/dui.mp3",
+     "audio/tw-hsiaochen/dui-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/dui.mp3",
+     "audio/tw-hsiaoyu/dui-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/dui.mp3",
+     "audio/cn-yunyang/dui-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/dui.mp3",
+     "audio/cn-xiaoxiao/dui-slow.mp3"
+    ]
+   },
+   "situation": "Someone checks a fact with you and they are right.",
+   "note": "Chinese has no single word for yes. 對 confirms what someone said; otherwise repeat the verb (你是老師嗎？ 是)",
+   "topic": "Getting by",
+   "mission": "Confirm something with 對 instead of nodding",
+   "register": "everyday",
+   "tier": 0
+  },
+  {
+   "id": "bu-yong-xiexie",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "不用，謝謝",
+   "roman": "bú-yòng, xiè-xie",
+   "en": "No, thanks",
+   "words": [
+    {
+     "zh": "不用",
+     "roman": "bú-yòng",
+     "gloss": "no need",
+     "script": "cn",
+     "zhDisp": "不用"
+    },
+    {
+     "zh": "謝謝",
+     "roman": "xiè-xie",
+     "gloss": "thank you",
+     "script": "hk",
+     "zhS": "谢谢"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/bu-yong-xiexie.mp3",
+     "audio/tw-yunjhe/bu-yong-xiexie-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/bu-yong-xiexie.mp3",
+     "audio/tw-hsiaochen/bu-yong-xiexie-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/bu-yong-xiexie.mp3",
+     "audio/tw-hsiaoyu/bu-yong-xiexie-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/bu-yong-xiexie.mp3",
+     "audio/cn-yunyang/bu-yong-xiexie-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/bu-yong-xiexie.mp3",
+     "audio/cn-xiaoxiao/bu-yong-xiexie-slow.mp3"
+    ]
+   },
+   "situation": "A waiter offers you a bag or more tea and you don't want it.",
+   "topic": "Getting by",
+   "mission": "Turn down a plastic bag with 不用，謝謝",
+   "register": "everyday",
+   "tier": 0
+  },
+  {
+   "id": "deng-yixia",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "等一下",
+   "roman": "děng yí-xià",
+   "en": "Wait a moment",
+   "words": [
+    {
+     "zh": "等",
+     "roman": "děng",
+     "gloss": "to wait",
+     "script": "cn",
+     "zhDisp": "等"
+    },
+    {
+     "zh": "一下",
+     "roman": "yí-xià",
+     "gloss": "a bit (softens a request)",
+     "script": "cn",
+     "zhDisp": "一下"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/deng-yixia.mp3",
+     "audio/tw-yunjhe/deng-yixia-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/deng-yixia.mp3",
+     "audio/tw-hsiaochen/deng-yixia-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/deng-yixia.mp3",
+     "audio/tw-hsiaoyu/deng-yixia-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/deng-yixia.mp3",
+     "audio/cn-yunyang/deng-yixia-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/deng-yixia.mp3",
+     "audio/cn-xiaoxiao/deng-yixia-slow.mp3"
+    ]
+   },
+   "situation": "You need a moment before answering or ordering.",
+   "topic": "Getting by",
+   "mission": "Ask for a moment with 等一下 while you read the menu",
+   "register": "everyday",
+   "tier": 0
+  },
+  {
+   "id": "duoshao-qian",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "多少錢？",
+   "roman": "duō-shǎo qián?",
+   "en": "How much is it?",
+   "words": [
+    {
+     "zh": "多少",
+     "roman": "duō-shǎo",
+     "gloss": "how much, how many",
+     "script": "cn",
+     "zhDisp": "多少"
+    },
+    {
+     "zh": "錢",
+     "roman": "qián",
+     "gloss": "money",
+     "script": "cn",
+     "zhDisp": "钱",
+     "zhS": "钱"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/duoshao-qian.mp3",
+     "audio/tw-yunjhe/duoshao-qian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/duoshao-qian.mp3",
+     "audio/tw-hsiaochen/duoshao-qian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/duoshao-qian.mp3",
+     "audio/tw-hsiaoyu/duoshao-qian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/duoshao-qian.mp3",
+     "audio/cn-yunyang/duoshao-qian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/duoshao-qian.mp3",
+     "audio/cn-xiaoxiao/duoshao-qian-slow.mp3"
+    ]
+   },
+   "situation": "You want to know the price of something.",
+   "topic": "Getting by",
+   "mission": "Ask 多少錢？ at a market stall",
+   "register": "everyday",
+   "tier": 0
+  },
+  {
+   "id": "maidan",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "買單",
+   "roman": "mǎi-dān",
+   "en": "The bill, please",
+   "words": [
+    {
+     "zh": "買單",
+     "roman": "mǎi-dān",
+     "gloss": "The bill, please",
+     "script": "cn",
+     "zhDisp": "买单",
+     "zhS": "买单"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/maidan.mp3",
+     "audio/tw-yunjhe/maidan-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/maidan.mp3",
+     "audio/tw-hsiaochen/maidan-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/maidan.mp3",
+     "audio/tw-hsiaoyu/maidan-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/maidan.mp3",
+     "audio/cn-yunyang/maidan-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/maidan.mp3",
+     "audio/cn-xiaoxiao/maidan-slow.mp3"
+    ]
+   },
+   "situation": "You've finished eating and want to pay.",
+   "note": "Understood in Hong Kong too (Cantonese: maai4 daan1). Add 謝謝 after it",
+   "topic": "Food & drink",
+   "mission": "Ask for the bill with 買單",
+   "register": "everyday",
+   "tier": 0
+  },
+  {
+   "id": "qingwen",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "請問",
+   "roman": "qǐng-wèn",
+   "en": "Excuse me, may I ask…",
+   "words": [
+    {
+     "zh": "請問",
+     "roman": "qǐng-wèn",
+     "gloss": "Excuse me, may I ask…",
+     "script": "cn",
+     "zhDisp": "请问",
+     "zhS": "请问"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/qingwen.mp3",
+     "audio/tw-yunjhe/qingwen-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/qingwen.mp3",
+     "audio/tw-hsiaochen/qingwen-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/qingwen.mp3",
+     "audio/tw-hsiaoyu/qingwen-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/qingwen.mp3",
+     "audio/cn-yunyang/qingwen-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/qingwen.mp3",
+     "audio/cn-xiaoxiao/qingwen-slow.mp3"
+    ]
+   },
+   "situation": "You are about to ask a stranger a question.",
+   "note": "Goes in front of any question to a stranger: 請問，多少錢？",
+   "topic": "Getting by",
+   "mission": "Start a question to a stranger with 請問",
+   "register": "polite",
+   "tier": 0
+  },
+  {
+   "id": "zaijian",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "Essentials",
+   "zh": "再見",
+   "roman": "zài-jiàn",
+   "en": "Goodbye",
+   "words": [
+    {
+     "zh": "再見",
+     "roman": "zài-jiàn",
+     "gloss": "Goodbye",
+     "script": "cn",
+     "zhDisp": "再见",
+     "zhS": "再见"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zaijian.mp3",
+     "audio/tw-yunjhe/zaijian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zaijian.mp3",
+     "audio/tw-hsiaochen/zaijian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zaijian.mp3",
+     "audio/tw-hsiaoyu/zaijian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zaijian.mp3",
+     "audio/cn-yunyang/zaijian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zaijian.mp3",
+     "audio/cn-xiaoxiao/zaijian-slow.mp3"
+    ]
+   },
+   "situation": "You are leaving.",
+   "note": "Friends mostly say 掰掰 (bāi-bāi, bye-bye)",
+   "topic": "Small talk",
+   "mission": "Say 再見 when you leave your lesson",
+   "register": "everyday",
+   "tier": 0
+  },
+  {
+   "id": "zhe-shi-wo-nupengyou",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "week": 2,
+   "zh": "這是我女朋友",
+   "roman": "zhè shì wǒ nǚ-péng-yǒu",
+   "en": "This is my girlfriend (introducing her)",
+   "words": [
+    {
+     "zh": "這",
+     "roman": "zhè",
+     "gloss": "this",
+     "script": "cn",
+     "zhDisp": "这",
+     "zhS": "这"
+    },
+    {
+     "zh": "是",
+     "roman": "shì",
+     "gloss": "is / am / are",
+     "script": "cn",
+     "zhDisp": "是"
+    },
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me",
+     "script": "cn",
+     "zhDisp": "我"
+    },
+    {
+     "zh": "女朋友",
+     "roman": "nǚ-péng-yǒu",
+     "gloss": "girlfriend",
+     "script": "cn",
+     "zhDisp": "女朋友"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhe-shi-wo-nupengyou.mp3",
+     "audio/tw-yunjhe/zhe-shi-wo-nupengyou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhe-shi-wo-nupengyou.mp3",
+     "audio/tw-hsiaochen/zhe-shi-wo-nupengyou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhe-shi-wo-nupengyou.mp3",
+     "audio/tw-hsiaoyu/zhe-shi-wo-nupengyou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhe-shi-wo-nupengyou.mp3",
+     "audio/cn-yunyang/zhe-shi-wo-nupengyou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhe-shi-wo-nupengyou.mp3",
+     "audio/cn-xiaoxiao/zhe-shi-wo-nupengyou-slow.mp3"
+    ]
+   },
+   "situation": "You introduce your girlfriend to a colleague.",
+   "note": "With family and partners 的 is usually dropped: 我女朋友, 我媽媽",
+   "topic": "Meeting people",
+   "mission": "Introduce your girlfriend to someone: 這是我女朋友",
+   "register": "everyday"
+  },
+  {
+   "id": "hao-le-ma",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "好了嗎？",
+   "roman": "hǎo le ma?",
+   "en": "Ready? / Are you done?",
+   "words": [
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well",
+     "script": "cn",
+     "zhDisp": "好"
+    },
+    {
+     "zh": "了",
+     "roman": "le",
+     "gloss": "(marks a change / completion)",
+     "script": "cn",
+     "zhDisp": "了"
+    },
+    {
+     "zh": "嗎",
+     "roman": "ma",
+     "gloss": "(question particle)",
+     "script": "cn",
+     "zhDisp": "吗",
+     "zhS": "吗"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/hao-le-ma.mp3",
+     "audio/tw-yunjhe/hao-le-ma-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/hao-le-ma.mp3",
+     "audio/tw-hsiaochen/hao-le-ma-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/hao-le-ma.mp3",
+     "audio/tw-hsiaoyu/hao-le-ma-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/hao-le-ma.mp3",
+     "audio/cn-yunyang/hao-le-ma-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/hao-le-ma.mp3",
+     "audio/cn-xiaoxiao/hao-le-ma-slow.mp3"
+    ]
+   },
+   "situation": "You're waiting for someone who is still packing up.",
+   "note": "好了 = done, ready (了 marks the change). Yes: 好了. Not yet: 還沒",
+   "topic": "Small talk",
+   "mission": "Ask a colleague who is packing up after a meeting: 好了嗎？",
+   "wish": "wish-1791506198624",
+   "register": "everyday"
+  },
+  {
+   "id": "hai-mei-ne",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "還沒呢",
+   "roman": "hái-méi ne",
+   "en": "Not yet!",
+   "words": [
+    {
+     "zh": "還沒",
+     "roman": "hái-méi",
+     "gloss": "not yet",
+     "script": "cn",
+     "zhDisp": "还没",
+     "zhS": "还没"
+    },
+    {
+     "zh": "呢",
+     "roman": "ne",
+     "gloss": "(and you? / what about…?)",
+     "script": "cn",
+     "zhDisp": "呢"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/hai-mei-ne.mp3",
+     "audio/tw-yunjhe/hai-mei-ne-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/hai-mei-ne.mp3",
+     "audio/tw-hsiaochen/hai-mei-ne-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/hai-mei-ne.mp3",
+     "audio/tw-hsiaoyu/hai-mei-ne-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/hai-mei-ne.mp3",
+     "audio/cn-yunyang/hai-mei-ne-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/hai-mei-ne.mp3",
+     "audio/cn-xiaoxiao/hai-mei-ne-slow.mp3"
+    ]
+   },
+   "situation": "Someone asks 好了嗎？ and you need more time.",
+   "note": "還沒 alone is enough; 呢 makes it sound relaxed, \"not yet, you know\"",
+   "topic": "Small talk",
+   "mission": "When someone asks whether you're ready or have eaten, answer 還沒呢",
+   "wish": "wish-1791506177603",
+   "register": "casual"
+  },
+  {
+   "id": "dui-bu-dui",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "對不對？",
+   "roman": "duì bú duì?",
+   "en": "Right? / Isn't that so?",
+   "words": [
+    {
+     "zh": "對",
+     "roman": "duì",
+     "gloss": "right, correct",
+     "script": "cn",
+     "zhDisp": "对",
+     "zhS": "对"
+    },
+    {
+     "zh": "不",
+     "roman": "bú",
+     "gloss": "not",
+     "script": "cn",
+     "zhDisp": "不"
+    },
+    {
+     "zh": "對",
+     "roman": "duì",
+     "gloss": "right, correct",
+     "script": "cn",
+     "zhDisp": "对",
+     "zhS": "对"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/dui-bu-dui.mp3",
+     "audio/tw-yunjhe/dui-bu-dui-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/dui-bu-dui.mp3",
+     "audio/tw-hsiaochen/dui-bu-dui-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/dui-bu-dui.mp3",
+     "audio/tw-hsiaoyu/dui-bu-dui-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/dui-bu-dui.mp3",
+     "audio/cn-yunyang/dui-bu-dui-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/dui-bu-dui.mp3",
+     "audio/cn-xiaoxiao/dui-bu-dui-slow.mp3"
+    ]
+   },
+   "situation": "You've said something and want the other person to confirm.",
+   "note": "Tag question after a statement. Answer: 對 (right) or 不對 (not right)",
+   "topic": "Small talk",
+   "mission": "End a sentence with 對不對？ to check you got something right with your coach",
+   "wish": "wish-1791506243442",
+   "register": "everyday"
+  },
+  {
+   "id": "hao-bu-hao",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "好不好？",
+   "roman": "hǎo bù hǎo?",
+   "en": "OK? / How about it?",
+   "words": [
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well",
+     "script": "cn",
+     "zhDisp": "好"
+    },
+    {
+     "zh": "不",
+     "roman": "bù",
+     "gloss": "not",
+     "script": "cn",
+     "zhDisp": "不"
+    },
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well",
+     "script": "cn",
+     "zhDisp": "好"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/hao-bu-hao.mp3",
+     "audio/tw-yunjhe/hao-bu-hao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/hao-bu-hao.mp3",
+     "audio/tw-hsiaochen/hao-bu-hao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/hao-bu-hao.mp3",
+     "audio/tw-hsiaoyu/hao-bu-hao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/hao-bu-hao.mp3",
+     "audio/cn-yunyang/hao-bu-hao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/hao-bu-hao.mp3",
+     "audio/cn-xiaoxiao/hao-bu-hao-slow.mp3"
+    ]
+   },
+   "situation": "You've suggested a plan and ask whether it suits them.",
+   "note": "Goes after a suggestion. Answer: 好 (OK) or 不好 (no)",
+   "topic": "Small talk",
+   "mission": "Suggest coffee and add 好不好？: 我們去喝咖啡，好不好？",
+   "wish": "wish-1791506251870",
+   "register": "everyday"
+  },
+  {
+   "id": "bu-keqi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "不客氣",
+   "roman": "bú-kè-qì",
+   "en": "You're welcome",
+   "words": [
+    {
+     "zh": "不客氣",
+     "roman": "bú-kè-qì",
+     "gloss": "You're welcome",
+     "script": "cn",
+     "zhDisp": "不客气",
+     "zhS": "不客气"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/bu-keqi.mp3",
+     "audio/tw-yunjhe/bu-keqi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/bu-keqi.mp3",
+     "audio/tw-hsiaochen/bu-keqi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/bu-keqi.mp3",
+     "audio/tw-hsiaoyu/bu-keqi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/bu-keqi.mp3",
+     "audio/cn-yunyang/bu-keqi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/bu-keqi.mp3",
+     "audio/cn-xiaoxiao/bu-keqi-slow.mp3"
+    ]
+   },
+   "situation": "Someone thanks you warmly.",
+   "note": "The standard reply to 謝謝, understood everywhere. In Taiwan, 不會 is the lighter everyday one",
+   "topic": "Small talk",
+   "mission": "Answer 不客氣 when someone thanks you for holding the door",
+   "wish": "wish-1791506283731",
+   "register": "polite"
   },
   {
    "id": "yue-nei-hou",
@@ -17739,5 +18847,73 @@
     }
    ]
   }
- ]
+ ],
+ "t2s": {
+  "來": "来",
+  "係": "系",
+  "個": "个",
+  "們": "们",
+  "兩": "两",
+  "剛": "刚",
+  "問": "问",
+  "單": "单",
+  "嗎": "吗",
+  "國": "国",
+  "媽": "妈",
+  "學": "学",
+  "寫": "写",
+  "對": "对",
+  "師": "师",
+  "幾": "几",
+  "廳": "厅",
+  "後": "后",
+  "從": "从",
+  "愛": "爱",
+  "時": "时",
+  "書": "书",
+  "會": "会",
+  "樣": "样",
+  "歡": "欢",
+  "氣": "气",
+  "沒": "没",
+  "稱": "称",
+  "級": "级",
+  "紹": "绍",
+  "給": "给",
+  "聽": "听",
+  "興": "兴",
+  "蘭": "兰",
+  "蘿": "萝",
+  "裡": "里",
+  "見": "见",
+  "覺": "觉",
+  "話": "话",
+  "認": "认",
+  "語": "语",
+  "說": "说",
+  "課": "课",
+  "請": "请",
+  "謝": "谢",
+  "識": "识",
+  "讀": "读",
+  "買": "买",
+  "賣": "卖",
+  "車": "车",
+  "辦": "办",
+  "這": "这",
+  "過": "过",
+  "還": "还",
+  "釋": "释",
+  "錢": "钱",
+  "門": "门",
+  "開": "开",
+  "間": "间",
+  "關": "关",
+  "雞": "鸡",
+  "電": "电",
+  "題": "题",
+  "飯": "饭",
+  "麼": "么",
+  "點": "点"
+ }
 }

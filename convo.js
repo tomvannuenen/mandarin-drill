@@ -1,6 +1,6 @@
 // Mini-conversations: step through a short dialogue. Their lines are heard first (text on tap);
 // your lines show the English, you say it, then check.
-import { $, el, play, renderRoman, LANG_ATTR } from './ui.js';
+import { $, el, play, renderRoman } from './ui.js';
 import { localDate } from './lib/store.js';
 import { icon } from './icons.js';
 
@@ -33,6 +33,7 @@ export function startConvo(convo) {
   $('cv-end').hidden = true;
   $('cv-next').hidden = false;
   ctx.show('convo');
+  ctx.syncScriptViews(convo.deck);
   showTurn();
 }
 
@@ -66,7 +67,7 @@ function reveal() {
   const { turn, entry, body, d } = state.current;
   body.replaceChildren(
     renderRoman(el('p', { class: 'cv-roman' }), entry.roman, d),
-    el('p', { class: 'cv-zh', lang: LANG_ATTR[d] }, entry.zh),
+    ctx.zhNode('p', { class: 'cv-zh' }, entry.zh, d),
     el('p', { class: 'cv-en' }, entry.en),
     el('button', { class: 'icon-btn', 'aria-label': 'Play', onclick: () => speak(entry, turn.who) }, icon('play')));
   if (turn.who === 'you') speak(entry, 'you');

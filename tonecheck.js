@@ -1,5 +1,5 @@
 // Tone check: 10 quick questions. Hear a word you know, pick the right tones.
-import { $, el, play, renderRoman, LANG_ATTR } from './ui.js';
+import { $, el, play, renderRoman } from './ui.js';
 import { pickVoice } from './lib/cards.js';
 import { candidates, pickQuestion, options, scoreAnswer, toneStats } from './lib/tonequiz.js';
 
@@ -36,6 +36,7 @@ export function startTones() {
   if (!words.length) return;
   round = { n: 0, right: 0, words };
   ctx.show('tones');
+  ctx.syncScriptViews();
   ask();
 }
 
@@ -65,8 +66,9 @@ function answer(opt) {
     b.classList.toggle('right', b.dataset.roman === w.roman);
     b.classList.toggle('wrong', b.dataset.roman === opt && !right);
   }
-  $('tq-zh').textContent = w.zh;
-  $('tq-zh').setAttribute('lang', LANG_ATTR.mandarin);
+  $('tq-zh').dataset.zhSrc = w.zh;
+  $('tq-zh').dataset.zhDeck = 'mandarin';
+  ctx.syncScriptViews();
   renderRoman($('tq-roman'), w.roman, 'mandarin');
   $('tq-en').textContent = w.en;
   $('tq-feedback').hidden = false;

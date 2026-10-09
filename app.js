@@ -548,6 +548,32 @@ function finishBuild(rating) {
   playCurrent();
 }
 
+// Outside the card view (conversations, tone check): characters are tagged with their Traditional source, so
+// the same 繁/简 button can redraw them in place.
+function zhNode(tag, attrs, text, d) {
+  return el(tag, { ...attrs, lang: zl(d), 'data-zh-src': text, 'data-zh-deck': d }, zs(text, d));
+}
+
+function syncScriptViews(d = null) {
+  for (const b of document.querySelectorAll('[data-script-view]')) {
+    if (d) b.dataset.scriptView = d;
+    const deckOf = b.dataset.scriptView;
+    b.hidden = deckOf !== 'mandarin';
+    b.textContent = simplified(deckOf) ? '简' : '繁';
+    b.setAttribute('aria-label', simplified(deckOf) ? 'Simplified characters. Switch to Traditional' : 'Traditional characters. Switch to Simplified');
+  }
+  for (const n of document.querySelectorAll('[data-zh-src]')) {
+    n.textContent = zs(n.dataset.zhSrc, n.dataset.zhDeck);
+    n.setAttribute('lang', zl(n.dataset.zhDeck));
+  }
+}
+
+function switchScriptView() {
+  progress.settings.script = simplified('mandarin') ? 'hk' : 'cn';
+  persist();
+  syncScriptViews();
+}
+
 // The 繁/简 button at the top of every Mandarin card: switches all characters, on this card and from now on.
 function scriptNow(c) {
   return c.char ? c.script : simplified(c.deck) ? 'cn' : 'hk';
@@ -1008,6 +1034,7 @@ function wire() {
   $('quit').addEventListener('click', () => { session = null; show('home'); });
   $('reveal').addEventListener('click', reveal);
   $('script-switch').addEventListener('click', switchScript);
+  for (const b of document.querySelectorAll('[data-script-view]')) b.addEventListener('click', switchScriptView);
   $('continue').addEventListener('click', () => { if (session?.current?.c.result) commit(session.current.c.result); });
   $('play').addEventListener('click', () => playCurrent({ next: true }));
   $('play-slow').addEventListener('click', () => playCurrent({ slow: true }));
@@ -1085,7 +1112,7 @@ async function init() {
   hydrateIcons();
   wire();
   initBook();
-  const ctx = { allItems: () => allItems, progress: () => progress, persist, show, byId: () => byId, decks: () => decks };
+  const ctx = { allItems: () => allItems, progress: () => progress, persist, show, byId: () => byId, decks: () => decks, zhNode, syncScriptViews };
   initTones(ctx);
   initConvo(ctx);
   $('tq-again').addEventListener('click', startTones);

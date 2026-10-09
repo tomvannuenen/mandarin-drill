@@ -1,0 +1,3514 @@
+{
+"⺀": {
+"d": "ice"
+},
+"⺈": {},
+"⺊": {
+"c": "丨",
+"h": "A crack on an oracle bone; compare 卜"
+},
+"⺍": {},
+"⺮": {
+"d": "bamboo; flute",
+"h": "Two stalks of bamboo; see 竹",
+"p": "zhú"
+},
+"⺼": {
+"d": "meat, flesh; organic compound",
+"h": "Meat on the ribs of an animal; compare 肉"
+},
+"㠯": {
+"c": "己",
+"d": "according to, for, with; to use",
+"p": "yǐ"
+},
+"䜌": {
+"c": "糹言糹",
+"d": "chaos, distraction; to manage, to tie together",
+"h": "A spool 言 bound by thread 糹",
+"p": "luán"
+},
+"一": {
+"d": "one; a, an",
+"h": "Represents heaven (天), earth (旦), or the number 1",
+"p": "yī"
+},
+"丁": {
+"c": "一",
+"d": "male adult; robust, vigorous",
+"h": "A nail",
+"p": "dīng"
+},
+"七": {
+"c": "一乚",
+"d": "seven",
+"p": "qī"
+},
+"丄": {
+"c": "丨一",
+"d": "above",
+"h": "One stroke on top of another; variant of 上",
+"p": "shàng"
+},
+"丈": {
+"c": "一又",
+"d": "gentleman, man, husband",
+"p": "zhàng"
+},
+"三": {
+"c": "一二",
+"d": "three",
+"h": "Three  parallel lines; compare 一 (one) and 二 (two)",
+"p": "sān"
+},
+"上": {
+"c": "⺊一",
+"d": "above, on top, superior; to go up",
+"h": "One stroke on top of another; compare 下 (below)",
+"p": "shàng"
+},
+"下": {
+"c": "一卜",
+"d": "below, underneath; inferior",
+"h": "One stroke under another; compare 上 (above)",
+"p": "xià"
+},
+"不": {
+"c": "一",
+"d": "no, not, un-; negative prefix",
+"h": "A bird flying toward the sky 一",
+"p": "bù"
+},
+"与": {
+"c": "一",
+"d": "and; with",
+"p": "yǔ"
+},
+"业": {
+"c": "一",
+"d": "business, profession; to study, to work",
+"p": "yè"
+},
+"两": {
+"c": "一冂从",
+"d": "two, both, pair, couple; ounce",
+"h": "Two people 从 together in a cart",
+"p": "liǎng"
+},
+"並": {
+"c": "丷亚",
+"d": "to combine, to annex; also, what's more",
+"h": "Two people sitting side-by-side; compare 竝",
+"p": "bìng"
+},
+"丨": {
+"d": "number one; line",
+"p": "shù"
+},
+"丩": {
+"c": "丨",
+"d": "to connect, to join; vine",
+"p": "jiū"
+},
+"个": {
+"c": "人丨",
+"d": "this, that; single",
+"h": "A tally 丨 of people 人",
+"p": "gè"
+},
+"中": {
+"c": "口丨",
+"d": "central; center, middle",
+"h": "A line 丨 through the center of a box 口",
+"p": "zhōng"
+},
+"丰": {
+"c": "三丨",
+"d": "abundant, lush, bountiful, plenty",
+"h": "An ear of grass",
+"p": "fēng"
+},
+"丱": {
+"c": "丩",
+"d": "a child's hair bound in two tufts; ore",
+"h": "Two braids 丱 of hair",
+"p": "guàn"
+},
+"丶": {
+"d": "dot",
+"p": "diǎn"
+},
+"丷": {
+"c": "丶",
+"d": "kwukyel",
+"p": "ha"
+},
+"丸": {
+"c": "九丶",
+"d": "ball, pebble, pellet, pill",
+"h": "A fist 九 holding a pebble 丶",
+"p": "wán"
+},
+"主": {
+"c": "丶王",
+"d": "to own; to host",
+"h": "A lamp 王 with a flame 丶",
+"p": "zhǔ"
+},
+"丿": {
+"d": "slash",
+"p": "piě"
+},
+"乂": {
+"c": "丿",
+"d": "to govern; to control",
+"h": "Shears, for cultivating a garden",
+"p": "yì"
+},
+"乃": {
+"c": "丿",
+"d": "then; really, indeed, after all",
+"h": "A pregnant woman; compare 孕",
+"p": "nǎi"
+},
+"久": {
+"c": "勹",
+"d": "long ago; a long time",
+"p": "jiǔ"
+},
+"么": {
+"c": "丿厶",
+"d": "interrogative particle",
+"p": "me"
+},
+"之": {
+"c": "丶",
+"d": "marks preceding phrase as modifier of following phrase",
+"h": "A foot meaning \"to follow\"; cursive version of 止",
+"p": "zhī"
+},
+"乍": {
+"c": "丿下一",
+"d": "first time, for the first time, suddenly",
+"p": "zhà"
+},
+"乙": {
+"d": "second; 2nd heavenly stem",
+"h": "A swallow",
+"p": "yǐ"
+},
+"乚": {
+"d": "secret, hidden, mysterious; small, minute",
+"p": "gōu"
+},
+"乛": {
+"d": "kwukyel",
+"p": "ya"
+},
+"九": {
+"c": "丿乙",
+"d": "nine",
+"h": "An elbow",
+"p": "jiǔ"
+},
+"乞": {
+"c": "乙",
+"d": "to beg; to request",
+"p": "qǐ"
+},
+"也": {
+"c": "乚",
+"d": "also, too",
+"p": "yě"
+},
+"书": {
+"c": "丨",
+"d": "book, letter, document; writing",
+"h": "A mark made by a pen ⺺",
+"p": "shū"
+},
+"买": {
+"c": "乛头",
+"d": "to buy, to purchase; to bribe, to persuade",
+"p": "mǎi"
+},
+"亅": {
+"d": "hook",
+"p": "jué"
+},
+"了": {
+"c": "乛亅",
+"d": "clear; to finish",
+"h": "A child swaddled in blanklets; compare 子",
+"p": "le"
+},
+"二": {
+"c": "一一",
+"d": "two; twice",
+"h": "Two  parallel lines; compare 一 (one) and 三 (three)",
+"p": "èr"
+},
+"云": {
+"c": "二厶",
+"d": "cloud; to say, to speak",
+"h": "A cloud",
+"p": "yún"
+},
+"五": {
+"c": "二",
+"d": "five; surname",
+"h": "Five elements (the cross with the extra stroke) between heaven 一 and earth 一 ",
+"p": "wǔ"
+},
+"井": {
+"c": "二",
+"d": "well, mine shaft, pit",
+"h": "A mine or well",
+"p": "jǐng"
+},
+"亚": {
+"c": "一业",
+"d": "Asia; second",
+"h": "Picture of a cross-shaped house or temple",
+"p": "yà"
+},
+"亠": {
+"c": "丶一",
+"d": "lid, cover; head",
+"p": "tóu"
+},
+"亡": {
+"c": "亠",
+"d": "death, destruction; to lose",
+"h": "A man 人 in a coffin; see 亾",
+"p": "wáng"
+},
+"亥": {
+"c": "亠",
+"d": "12th terrestrial branch",
+"p": "hài"
+},
+"亭": {
+"c": "亠口冖丁",
+"d": "pavilion; erect",
+"h": "亠, 口, and 冖 form a picture of a pavilion; 丁 provides the pronunciation",
+"p": "tíng"
+},
+"亲": {
+"c": "立一小",
+"d": "relatives, parents; intimate",
+"h": "A tree 木 bearing fruit 立",
+"p": "qīn"
+},
+"人": {
+"d": "man, person; people",
+"h": "The legs of a human being",
+"p": "rén"
+},
+"亻": {
+"d": "man, person; people",
+"h": "Visual abbreviation of 人",
+"p": "rén"
+},
+"亼": {
+"c": "人一",
+"d": "to assemble, to gather together",
+"p": "jí"
+},
+"什": {
+"c": "亻十",
+"d": "what? mixed, miscellaneous",
+"h": "A file of ten 十 people 亻",
+"p": "shén"
+},
+"今": {
+"c": "人",
+"d": "modern, current; today, now",
+"h": "A mouth 亼 talking about things",
+"p": "jīn"
+},
+"介": {
+"c": "人",
+"d": "agent, go-between, intermediary; to introduce",
+"h": "A border 八 dividing people 人",
+"p": "jiè"
+},
+"仌": {
+"c": "人人",
+"d": "frozen; ice-cold",
+"h": "Old variant of 冰 (\"ice-water\")",
+"p": "bīng"
+},
+"从": {
+"c": "人人",
+"d": "from, by, since, whence, through",
+"h": "One person 人 following another",
+"p": "cóng"
+},
+"他": {
+"c": "亻也",
+"d": "other, another; he, she, it",
+"h": "An additional, \"also\" 也  person 亻",
+"p": "tā"
+},
+"付": {
+"c": "亻寸",
+"d": "give, deliver, pay, hand over; entrust",
+"h": "To hand 寸 something over to someone 亻 ",
+"p": "fù"
+},
+"令": {
+"c": "人",
+"d": "command, decree, order; magistrate",
+"h": "A person kneeling before a master 人",
+"p": "lìng"
+},
+"以": {
+"c": "人",
+"d": "according to; so as to",
+"p": "yǐ"
+},
+"们": {
+"c": "亻门",
+"d": "plural marker for pronouns and some nouns",
+"p": "men",
+"ph": "门",
+"s": "亻"
+},
+"会": {
+"c": "人云",
+"d": "to assemble, to meet; meeting",
+"h": "People 人 speaking 云",
+"p": "huì"
+},
+"位": {
+"c": "亻立",
+"d": "seat, throne; rank, status",
+"h": "The place where a person 亻 stands 立",
+"p": "wèi"
+},
+"住": {
+"c": "亻主",
+"d": "to reside, to live at, to dwell, to lodge",
+"h": "A person 亻 who hosts 主; 主 also provides the pronunciation",
+"p": "zhù"
+},
+"何": {
+"c": "亻可",
+"d": "what, why, where, which, how",
+"p": "hé"
+},
+"作": {
+"c": "亻乍",
+"d": "to make; to write, to compose",
+"h": "A person 亻 making something for the first time 乍; 乍 also provides the pronunciation",
+"p": "zuò"
+},
+"你": {
+"c": "亻尔",
+"d": "you, second person pronoun",
+"h": "Pronoun 尔 for a person 亻",
+"p": "nǐ"
+},
+"佢": {
+"c": "亻巨",
+"d": "he, she, it (Cantonese)",
+"ph": "巨",
+"s": "亻"
+},
+"使": {
+"c": "亻吏",
+"d": "cause, mission, orders",
+"h": "A person 亻 working for the government 吏",
+"p": "shǐ"
+},
+"來": {
+"c": "木从",
+"d": "to arrive, to come, to return",
+"h": "A wheat plant that has just borne fruit; compare 来",
+"p": "lái"
+},
+"係": {
+"c": "亻系",
+"d": "system; line, link, connection",
+"h": "Someone 亻 who connects 系 people; 系 also provides the pronunciation",
+"p": "xì"
+},
+"個": {
+"c": "亻固",
+"d": "this, that; single",
+"p": "gè",
+"ph": "固",
+"s": "亻"
+},
+"們": {
+"c": "亻門",
+"d": "plural marker for pronouns and some nouns",
+"p": "men",
+"ph": "門",
+"s": "亻"
+},
+"候": {
+"c": "亻矦",
+"d": "to wait, to expect; to visit",
+"p": "hòu",
+"ph": "矦",
+"s": "亻"
+},
+"做": {
+"c": "亻故",
+"d": "to work, to make; to act",
+"h": "Someone 亻 who causes things to happen 故; 故 also provides the pronuncation",
+"p": "zuò"
+},
+"停": {
+"c": "亻亭",
+"d": "to suspend, to halt, to delay; suitable",
+"p": "tíng",
+"ph": "亭",
+"s": "亻"
+},
+"儿": {
+"c": "丿乚",
+"d": "son, child",
+"h": "Simplified form of 兒, a picture of a child; compare 人",
+"p": "ér"
+},
+"兀": {
+"c": "一儿",
+"d": "weak; lame",
+"h": "Cutting 一 off the feet 儿",
+"p": "wù"
+},
+"兄": {
+"c": "口儿",
+"d": "elder brother",
+"h": "Older brother 儿 speaking 口 to younger ones",
+"p": "xiōng"
+},
+"先": {
+"c": "土儿",
+"d": "first, former, previous",
+"h": "Someone stepping 止 in front of another person 儿",
+"p": "xiān"
+},
+"兌": {
+"c": "八口儿",
+"d": "cash, check; to exchange",
+"h": "A beast 兄 with two horns 丷",
+"p": "duì"
+},
+"兑": {
+"c": "丷兄",
+"d": "cash, check; to exchange",
+"h": "A beast 兄 with two horns 丷",
+"p": "duì"
+},
+"入": {
+"d": "to enter, to come in; to join",
+"h": "An arrow indicating \"enter\"",
+"p": "rù"
+},
+"兩": {
+"c": "一巾入入",
+"d": "two, both, pair, couple; ounce",
+"h": "Two people 入 together in a cart",
+"p": "liǎng"
+},
+"八": {
+"d": "eight; all around, all sides",
+"h": "Two bent lines meaning \"to divide\"",
+"p": "bā"
+},
+"公": {
+"c": "八厶",
+"d": "fair, equitable; public",
+"h": "To divide 八 what is private 厶",
+"p": "gōng"
+},
+"兰": {
+"c": "丷三",
+"d": "orchid; elegant, graceful",
+"h": "An orchid in bloom",
+"p": "lán"
+},
+"共": {
+"c": "廾一八",
+"d": "all, total; together",
+"h": "Two hands 八 holding one object 廾",
+"p": "gòng"
+},
+"关": {
+"c": "丷天",
+"d": "frontier pass; to close, to shut",
+"p": "guān"
+},
+"兴": {
+"c": "⺍一八",
+"d": "to thrive, to prosper, to flourish",
+"p": "xìng"
+},
+"其": {
+"c": "甘一八",
+"d": "his, her, its, their; that",
+"p": "qí"
+},
+"冂": {
+"c": "丨",
+"d": "wide",
+"p": "jiōng"
+},
+"冇": {
+"d": "not have (Cantonese)",
+"h": "有 (to have) with its inner strokes taken out"
+},
+"冈": {
+"c": "冂乂",
+"d": "ridge or crest of hill",
+"h": "Simplified form of 岡, clouds 网 forming over a mountain 山",
+"p": "gāng"
+},
+"冉": {
+"c": "冂土",
+"d": "tender; weak",
+"p": "rǎn"
+},
+"冋": {
+"c": "冂口",
+"d": "desert; border",
+"h": "A plot of land 口 surrounded by a border 冂; 冂 also provides the pronunciation",
+"p": "jiōng"
+},
+"再": {
+"c": "一冉",
+"d": "again, twice, re-",
+"h": "Two fish 冉 caught on a line 一",
+"p": "zài"
+},
+"冎": {
+"c": "冂",
+"d": "bone",
+"h": "Cross-section of a bone",
+"p": "guǎ"
+},
+"冓": {
+"c": "井再",
+"d": "secret, niche, hiding-hole, cabinet",
+"p": "gòu"
+},
+"冖": {
+"d": "cover",
+"h": "A cover-cloth",
+"p": "mì"
+},
+"写": {
+"c": "冖与",
+"d": "to write; to draw, to sketch",
+"p": "xiě"
+},
+"冫": {
+"c": "丶",
+"d": "ice",
+"p": "bīng"
+},
+"冰": {
+"c": "冫水",
+"d": "ice; ice-cold",
+"h": "Ice-cold冫 water 水",
+"p": "bīng"
+},
+"凍": {
+"c": "冫東",
+"d": "cold; to freeze, to congeal",
+"p": "dòng",
+"ph": "東",
+"s": "冫"
+},
+"几": {
+"c": "丿乙",
+"d": "small table; how many",
+"h": "A small table; compare 丌",
+"p": "jǐ"
+},
+"凵": {
+"d": "container; receptacle",
+"h": "A tray",
+"p": "qiǎn"
+},
+"刀": {
+"c": "丿",
+"d": "knife; old coin",
+"p": "dāo"
+},
+"刂": {
+"c": "丨亅",
+"d": "knife",
+"p": "dāo"
+},
+"刃": {
+"c": "刀丶",
+"d": "edged tool, cutlery, knife edge",
+"h": "A knife 刀 sharp enough to draw blood 丶",
+"p": "rèn"
+},
+"刖": {
+"c": "月刂",
+"d": "cutting off the feet as a form of punishment",
+"p": "yuè",
+"ph": "月",
+"s": "刂"
+},
+"刚": {
+"c": "冈刂",
+"d": "hard, strong, tough; just, barely",
+"p": "gāng",
+"ph": "冈",
+"s": "刂"
+},
+"前": {
+"c": "丷一刖",
+"d": "in front, forward; former, preceding",
+"p": "qián"
+},
+"剛": {
+"c": "岡刂",
+"d": "hard, strong, tough; just, barely",
+"p": "gāng",
+"ph": "岡",
+"s": "刂"
+},
+"力": {
+"c": "丿",
+"d": "strength, power; capability, influence",
+"h": "A plow's head representing strength",
+"p": "lì"
+},
+"办": {
+"c": "力八",
+"d": "to set up; to manage, to run",
+"p": "bàn",
+"ph": "八",
+"s": "力"
+},
+"加": {
+"c": "力口",
+"d": "to add to, to increase, to augment",
+"h": "Supporting a cause with the strength 力 of one's words 口",
+"p": "jiā"
+},
+"勹": {
+"c": "丿",
+"d": "wrap",
+"p": "bāo"
+},
+"勺": {
+"c": "勹丶",
+"d": "spoon, ladle; unit of volume",
+"h": "A spoon 勹 with something in it 丶",
+"p": "sháo"
+},
+"勿": {
+"c": "勹丿丿",
+"d": "must not, do not; without, never",
+"h": "A knife 勹 cutting fragments 丿 off",
+"p": "wù"
+},
+"包": {
+"c": "勹巳",
+"d": "wrap, pack, bundle; package",
+"h": "To swaddle 勹 a baby 巳; 勹 also provides the pronunciation",
+"p": "bāo"
+},
+"匋": {
+"c": "勹缶",
+"d": "pottery",
+"p": "táo",
+"ph": "勹",
+"s": "缶"
+},
+"匍": {
+"c": "勹甫",
+"d": "to crawl; to lie prostrate",
+"p": "pú",
+"ph": "甫",
+"s": "勹"
+},
+"匕": {
+"c": "乚丿",
+"d": "spoon, ladle; knife, dirk",
+"h": "A spoon",
+"p": "bǐ"
+},
+"匚": {
+"c": "一",
+"d": "box; basket",
+"p": "fāng"
+},
+"十": {
+"c": "一丨",
+"d": "ten, tenth; complete",
+"p": "shí"
+},
+"千": {
+"c": "丿十",
+"d": "thousand; many, numerous",
+"p": "qiān"
+},
+"卄": {
+"c": "十丨",
+"d": "twenty, twentieth",
+"h": "Two tens 十 side by side",
+"p": "niàn"
+},
+"午": {
+"c": "丿干",
+"d": "noon; 7th terrestrial branch",
+"p": "wǔ"
+},
+"卑": {
+"c": "白十",
+"d": "humble, low, inferior; to despise",
+"h": "A hand 又(altered) holding an empty shell 甲 (altered)",
+"p": "bēi"
+},
+"单": {
+"c": "丷",
+"d": "single, individual, only; lone",
+"p": "dān"
+},
+"卖": {
+"c": "十买",
+"d": "to sell; to betray",
+"p": "mài",
+"ph": "买",
+"s": "买"
+},
+"卜": {
+"c": "丨丶",
+"d": "divination, fortune-telling; prophecy",
+"h": "A crack on an oracle bone",
+"p": "bo"
+},
+"占": {
+"c": "⺊口",
+"d": "to divine; to observe",
+"h": "To speak 口 omens ⺊",
+"p": "zhàn"
+},
+"卩": {
+"c": "丨",
+"d": "seal; kneeling person",
+"h": "A rolled-up scroll or kneeling person",
+"p": "jié"
+},
+"卬": {
+"c": "匕卩",
+"d": "lofty; high",
+"h": "A person kneeling 卩 before a person (a king) sitting 匕",
+"p": "áng"
+},
+"厂": {
+"d": "cliff; factory, workshop",
+"p": "chǎng"
+},
+"厃": {
+"c": "⺈厂",
+"d": "to look upward",
+"p": "wěi"
+},
+"厅": {
+"c": "厂丁",
+"d": "hall, central room",
+"p": "tīng",
+"ph": "丁"
+},
+"厶": {
+"d": "private, secret",
+"h": "A silk cocoon",
+"p": "sī"
+},
+"去": {
+"c": "土厶",
+"d": "to go away, to leave, to depart",
+"p": "qù"
+},
+"又": {
+"d": "and, also, again, in addition",
+"h": "A right hand, representing a pair; compare 左",
+"p": "yòu"
+},
+"及": {
+"c": "又",
+"d": "to extend; to reach",
+"p": "jí"
+},
+"友": {
+"c": "又",
+"d": "friend, companion; fraternity",
+"h": "Two hands 又 joined, representing friendship; 又 also provides the pronunciation",
+"p": "yǒu"
+},
+"反": {
+"c": "厂又",
+"d": "reverse, opposite; contrary, anti-",
+"h": "A hand 又 held up against a cliff 厂",
+"p": "fǎn"
+},
+"取": {
+"c": "耳又",
+"d": "to take, to receive, to obtain; to select",
+"h": "A hand 又 taking the ear 耳 of a fallen enemy",
+"p": "qǔ"
+},
+"受": {
+"c": "爫冖又",
+"d": "to receive, to get, to accept; to bear",
+"h": "Something 冖 passed from one hand 爫 to another 又",
+"p": "shòu"
+},
+"口": {
+"c": "冂一",
+"d": "mouth; entrance, gate, opening",
+"h": "An open mouth",
+"p": "kǒu"
+},
+"古": {
+"c": "十口",
+"d": "old, classic, ancient",
+"h": "Words passing through ten 十 mouths 口",
+"p": "gǔ"
+},
+"句": {
+"c": "勹口",
+"d": "sentence, clause, phrase, paragraph; stanza",
+"h": "A phrase 勹 from the mouth 口",
+"p": "jù"
+},
+"只": {
+"c": "口八",
+"d": "only, merely, just",
+"h": "Simple words 八 coming from the mouth 口",
+"p": "zhī"
+},
+"叫": {
+"c": "口丩",
+"d": "cry, shout; to call, to greet, to hail",
+"p": "jiào",
+"ph": "丩",
+"s": "口"
+},
+"召": {
+"c": "刀口",
+"d": "imperial decree; to summon, to call, to beckon",
+"p": "zhào",
+"ph": "刀",
+"s": "口"
+},
+"可": {
+"c": "丁口",
+"d": "may, can, -able; possibly",
+"h": "A mouth 口 giving approval",
+"p": "kě"
+},
+"台": {
+"c": "厶口",
+"d": "platform; unit",
+"p": "tái"
+},
+"吃": {
+"c": "口乞",
+"d": "to eat; to drink",
+"p": "chī",
+"ph": "乞",
+"s": "口"
+},
+"各": {
+"c": "夂口",
+"d": "individual; each, every",
+"h": "Walking 夂 and talking 口",
+"p": "gè"
+},
+"合": {
+"c": "亼口",
+"d": "to combine, to join, to unite; to gather",
+"p": "hé"
+},
+"名": {
+"c": "夕口",
+"d": "name; position, rank, title",
+"h": "A name called out 口 to hail someone at night 夕",
+"p": "míng"
+},
+"后": {
+"c": "口",
+"d": "after; behind, rear",
+"p": "hòu"
+},
+"吏": {
+"c": "丈口",
+"d": "government official, magistrate",
+"p": "lì"
+},
+"吗": {
+"c": "口马",
+"d": "final interrogative particle",
+"p": "ma",
+"ph": "马",
+"s": "口"
+},
+"吧": {
+"c": "口巴",
+"d": "emphatic final particle",
+"p": "bā",
+"ph": "巴",
+"s": "口"
+},
+"听": {
+"c": "口斤",
+"d": "to hear, to listen; to understand",
+"h": "Words 口 reaching an ear 斤",
+"p": "tīng"
+},
+"吾": {
+"c": "五口",
+"d": "I, my, our; to resist, to impede",
+"p": "wú",
+"ph": "五",
+"s": "口"
+},
+"呀": {
+"c": "口牙",
+"d": "particle used to express surprise",
+"p": "ya",
+"ph": "牙",
+"s": "口"
+},
+"呢": {
+"c": "口尼",
+"d": "wool; interrogative or emphatic final particle",
+"p": "né",
+"ph": "尼",
+"s": "口"
+},
+"咖": {
+"c": "口加",
+"d": "coffee; used in transliterations",
+"p": "kā",
+"ph": "加",
+"s": "口"
+},
+"咩": {
+"c": "口羊",
+"d": "the bleating of sheep",
+"h": "The sound a sheep 羊 makes with its mouth 口",
+"p": "miē"
+},
+"咼": {
+"c": "冎口",
+"d": "to chat, to gossip, to jaw, to talk; mouth",
+"h": "A jaw 口 bone 冎",
+"p": "guō"
+},
+"哋": {
+"c": "口地",
+"d": "plural marker: we, you all, they (Cantonese)",
+"h": "口 marks a spoken Cantonese word",
+"ph": "地"
+},
+"哪": {
+"c": "口那",
+"d": "which? where? how?",
+"p": "nǎ",
+"ph": "那",
+"s": "口"
+},
+"唔": {
+"c": "口吾",
+"d": "to hold in the mouth; bite",
+"p": "wú",
+"ph": "吾",
+"s": "口"
+},
+"問": {
+"c": "門口",
+"d": "to ask about, to inquire after",
+"p": "wèn",
+"ph": "門",
+"s": "口"
+},
+"啡": {
+"c": "口非",
+"d": "coffee; morphine",
+"p": "fēi",
+"ph": "非",
+"s": "口"
+},
+"啤": {
+"c": "口卑",
+"d": "beer",
+"p": "pí",
+"ph": "卑",
+"s": "口"
+},
+"喜": {
+"c": "壴口",
+"d": "to love; to enjoy, to be happy",
+"h": "Singing 口 and beating drums 壴",
+"p": "xǐ"
+},
+"喝": {
+"c": "口曷",
+"d": "to drink; to shout, to call out",
+"p": "hē",
+"ph": "曷",
+"s": "口"
+},
+"單": {
+"c": "口口",
+"d": "single, individual, only; lone",
+"p": "dān"
+},
+"喺": {
+"c": "口係",
+"d": "to be at, in (Cantonese)",
+"h": "口 marks a spoken Cantonese word",
+"ph": "係"
+},
+"嗎": {
+"c": "口馬",
+"d": "final interrogative particle",
+"p": "ma",
+"ph": "馬",
+"s": "口"
+},
+"嗰": {
+"c": "口個",
+"d": "that (Cantonese)",
+"h": "口 marks a spoken Cantonese word",
+"ph": "個"
+},
+"嚟": {
+"c": "口黎",
+"d": "to come (Cantonese)",
+"h": "口 marks a spoken Cantonese word",
+"ph": "黎"
+},
+"囗": {
+"c": "冂一",
+"d": "enclosure; border",
+"p": "wéi"
+},
+"回": {
+"c": "囗口",
+"d": "to return, to turn around; a time",
+"h": "Originally, a spiral signifying return",
+"p": "huí"
+},
+"固": {
+"c": "囗古",
+"d": "to solidify; strength",
+"p": "gù",
+"ph": "古",
+"s": "囗"
+},
+"国": {
+"c": "囗玉",
+"d": "country, nation, state; national",
+"h": "Treasure 玉 within a country's borders 囗",
+"p": "guó"
+},
+"國": {
+"c": "囗或",
+"d": "country, nation, state; national",
+"h": "Treasure 或 within a country's borders 囗",
+"p": "guó"
+},
+"土": {
+"c": "十一",
+"d": "soil, earth; items made of earth",
+"h": "A lump of clay on a potter's wheel",
+"p": "tǔ"
+},
+"在": {
+"c": "才土",
+"d": "at, in, on; to exist",
+"p": "zài",
+"ph": "才",
+"s": "土"
+},
+"地": {
+"c": "土也",
+"d": "earth, ground, soil; land, region",
+"p": "de",
+"ph": "也",
+"s": "土"
+},
+"坐": {
+"c": "从土",
+"d": "seat; to sit",
+"h": "Two people 从 sitting on the ground 土",
+"p": "zuò"
+},
+"坴": {
+"c": "土八土",
+"d": "a clod of earth; land",
+"h": "Soil 土 heaped 八 on the earth 土",
+"p": "lù"
+},
+"垂": {
+"c": "士卄",
+"d": "to hang, to dangle; to hand down, to bequeath",
+"h": "A tree with drooping branches",
+"p": "chuí"
+},
+"埋": {
+"c": "土里",
+"d": "to bury; to conceal",
+"p": "mái",
+"ph": "里",
+"s": "土"
+},
+"埶": {
+"c": "坴丸",
+"d": "art",
+"h": "Clay 坴 formed into a ball 丸",
+"p": "yì"
+},
+"塔": {
+"c": "土荅",
+"d": "tower, spire, tall building",
+"p": "tǎ",
+"ph": "荅",
+"s": "土"
+},
+"士": {
+"d": "scholar, gentleman; soldier",
+"p": "shì"
+},
+"壴": {
+"c": "土口",
+"d": "drum",
+"h": "A drum 口 on a stand with feathers 土 on top",
+"p": "zhù"
+},
+"夂": {
+"c": "丿又",
+"d": "to go",
+"p": "zhǐ"
+},
+"夕": {
+"c": "勹丶",
+"d": "evening, night, dusk; slanted",
+"h": "A crescent moon",
+"p": "xī"
+},
+"多": {
+"c": "夕夕",
+"d": "much, many, multi-; more than, over",
+"h": "Two nights 夕, suggesting many",
+"p": "duō"
+},
+"大": {
+"c": "一人",
+"d": "big, great, vast, high, deep",
+"h": "A man 人 with outstretched arms",
+"p": "dà"
+},
+"天": {
+"c": "一大",
+"d": "sky, heaven; god, celestial",
+"h": "The heavens 一 above a man 大",
+"p": "tiān"
+},
+"太": {
+"c": "大丶",
+"d": "very, too much; big",
+"h": "A giant 大 with a normal-sized man 丶 for scale",
+"p": "tài"
+},
+"央": {
+"c": "冂大",
+"d": "central; to beg",
+"p": "yāng"
+},
+"头": {
+"c": "⺀大",
+"d": "head; chief, boss",
+"p": "tóu",
+"s": "大"
+},
+"奚": {
+"c": "爫幺大",
+"d": "where, what, why, how",
+"p": "xī"
+},
+"女": {
+"d": "woman, girl; female",
+"h": "A woman turned to the side",
+"p": "nǚ"
+},
+"奶": {
+"c": "女乃",
+"d": "milk; breasts",
+"p": "nǎi",
+"ph": "乃",
+"s": "女"
+},
+"好": {
+"c": "女子",
+"d": "good, excellent, fine; proper, suitable",
+"h": "A woman 女 with a son 子",
+"p": "hǎo"
+},
+"婁": {
+"c": "母女",
+"d": "a constellation; to wear",
+"h": "A daughter 女 looking up at her mother 母",
+"p": "lóu"
+},
+"婆": {
+"c": "波女",
+"d": "old woman; grandmother",
+"p": "pó",
+"ph": "波",
+"s": "女"
+},
+"子": {
+"c": "了一",
+"d": "son, child; seed, egg",
+"h": "A child in a wrap, with outstretched arms but bundled legs",
+"p": "zi"
+},
+"字": {
+"c": "宀子",
+"d": "character, letter, symbol, word",
+"h": "A child 子 in a house 宀; 子 also provides the pronunciation",
+"p": "zì"
+},
+"孝": {
+"c": "耂子",
+"d": "filial piety, obedience; mourning",
+"h": "A young man 子 carrying an older man 耂",
+"p": "xiào"
+},
+"学": {
+"c": "⺍冖子",
+"d": "learning, knowledge, science",
+"h": "A building 冖 where children 子 study; ⺍ provides the pronunciation",
+"p": "xué"
+},
+"學": {
+"c": "冖子",
+"d": "learning, knowledge, science",
+"h": "A building 冖 where children 子 study",
+"p": "xué"
+},
+"宀": {
+"c": "丶冖",
+"d": "roof; house",
+"p": "gài"
+},
+"客": {
+"c": "宀各",
+"d": "guest, traveller; customer",
+"h": "A person 各 welcomed under one's roof 宀; 各 also provides the pronunciation",
+"p": "kè"
+},
+"室": {
+"c": "宀至",
+"d": "house, home; room, chamber",
+"p": "shì",
+"ph": "至",
+"s": "宀"
+},
+"家": {
+"c": "宀豕",
+"d": "house, home, residence; family",
+"p": "jiā",
+"ph": "豕",
+"s": "宀"
+},
+"寫": {
+"c": "宀舄",
+"d": "to write; to draw, to sketch",
+"p": "xiě"
+},
+"寸": {
+"d": "inch; small, tiny",
+"h": "A hand with a dot indicating where the pulse can be felt, about an inch up the wrist",
+"p": "cùn"
+},
+"对": {
+"c": "又寸",
+"d": "correct, right; facing, opposed",
+"h": "A pair 又 of hands 寸",
+"p": "duì"
+},
+"寺": {
+"c": "土寸",
+"d": "court, office; temple, monastery",
+"h": "An offering 土 in your hand 寸",
+"p": "sì"
+},
+"射": {
+"c": "身寸",
+"d": "to shoot, to eject, to emit",
+"h": "A bow 身 being drawn by a hand 寸",
+"p": "shè"
+},
+"對": {
+"c": "业羊寸",
+"d": "correct, right; facing, opposed",
+"h": "A hand 寸 holding a lit 业 candelabrum 羊",
+"p": "duì"
+},
+"小": {
+"c": "亅八",
+"d": "small, tiny, insignificant",
+"h": "Dividing 八 by a line 亅",
+"p": "xiǎo"
+},
+"少": {
+"c": "小丿",
+"d": "few, little; less",
+"h": "Grains of sand; 小 provides the pronunciation and meaning",
+"p": "shǎo"
+},
+"尔": {
+"c": "⺈小",
+"d": "you; that, those",
+"p": "ěr"
+},
+"尸": {
+"c": "丿",
+"d": "body, corpse",
+"h": "A man keeled over",
+"p": "shī"
+},
+"尼": {
+"c": "尸匕",
+"d": "Buddhist nun; used in transliterations",
+"p": "ní"
+},
+"山": {
+"c": "凵丨",
+"d": "mountain, hill, peak",
+"h": "Three mountain peaks",
+"p": "shān"
+},
+"岡": {
+"c": "冂山",
+"d": "ridge or crest of hill",
+"h": "Clouds 网 forming over a mountain 山",
+"p": "gāng"
+},
+"工": {
+"c": "一丄",
+"d": "labor, work; laborer, worker",
+"h": "A spade or other workman's tool",
+"p": "gōng"
+},
+"巨": {
+"c": "匚",
+"d": "large, huge, gigantic; chief",
+"h": "A hand holding a large carpenter's square 工",
+"p": "jù"
+},
+"己": {
+"c": "乚",
+"d": "self, oneself; personal, private",
+"h": "A loom woven with thread",
+"p": "jǐ"
+},
+"巳": {
+"c": "乚",
+"d": "the hours from 9 to 11; 6th terrestrial branch",
+"p": "sì"
+},
+"巴": {
+"c": "巳",
+"d": "to desire, to wish for",
+"p": "bā"
+},
+"巷": {
+"c": "共巳",
+"d": "alley, lane",
+"p": "xiàng"
+},
+"巾": {
+"c": "冂丨",
+"d": "cloth, curtain, handkerchief, towel",
+"h": "A curtain or towel hanging from a rack",
+"p": "jīn"
+},
+"帀": {
+"c": "一巾",
+"d": "to rotate, to revolve, to make a circuit",
+"p": "zā"
+},
+"师": {
+"c": "刂帀",
+"d": "teacher, professional, master",
+"h": "To skillfully wield 帀 a knife 刂",
+"p": "shī"
+},
+"師": {
+"c": "丿㠯帀",
+"d": "teacher, professional, master",
+"h": "To skillfully wield 帀 a knife 㠯",
+"p": "shī"
+},
+"干": {
+"c": "一十",
+"d": "arid, dry; to oppose",
+"h": "A club or axe",
+"p": "gàn"
+},
+"年": {
+"c": "干",
+"d": "year; anniversary",
+"h": "A man 干 carrying grain, representing the annual harvest",
+"p": "nián"
+},
+"幸": {
+"c": "土丷干",
+"d": "favor, fortune, luck; surname",
+"h": "Two men, one alive 土 and one dead 干; the living one is lucky",
+"p": "xìng"
+},
+"幺": {
+"d": "one; tiny, small",
+"p": "yāo"
+},
+"幾": {
+"c": "幺幺戍",
+"d": "small table; how many",
+"h": "A very small 幺 table 戍",
+"p": "jǐ"
+},
+"广": {
+"c": "丶厂",
+"d": "broad, vast, wide; building, house",
+"h": "A lean-to 厂, suggesting a building",
+"p": "guǎng"
+},
+"度": {
+"c": "广廿又",
+"d": "degree, system; manner",
+"h": "Twenty 廿 people 又 meeting inside a building 广 to deliberate",
+"p": "dù"
+},
+"廣": {
+"c": "广黄",
+"d": "broad, vast, wide; building, house",
+"p": "guǎng",
+"ph": "黄",
+"s": "广"
+},
+"廳": {
+"c": "广聽",
+"d": "hall, central room",
+"p": "tīng",
+"ph": "聽",
+"s": "广"
+},
+"廾": {
+"d": "two hands",
+"h": "Two hands 十 side by side",
+"p": "gǒng"
+},
+"廿": {
+"c": "廾一",
+"d": "twenty, twentieth",
+"h": "Two tens 十 side by side",
+"p": "niàn"
+},
+"开": {
+"c": "一廾",
+"d": "to open; to start, to initiate, to begin",
+"h": "Simplified form of 開; hands 廾 lifting the latch 一 of a door",
+"p": "kāi"
+},
+"弓": {
+"d": "bow; curved, arched",
+"h": "A bow aimed to the left",
+"p": "gōng"
+},
+"弟": {
+"c": "丷弓",
+"d": "young brother, junior",
+"p": "dì"
+},
+"彎": {
+"c": "䜌弓",
+"d": "bend, curve, turn",
+"p": "wān",
+"ph": "䜌",
+"s": "弓"
+},
+"彐": {
+"c": "二",
+"d": "snout",
+"p": "jì"
+},
+"彗": {
+"c": "丰丰彐",
+"d": "comet; broomstick",
+"h": "A hand 彐 holding a bamboo broom 丰",
+"p": "huì"
+},
+"彳": {
+"c": "丨",
+"d": "to step with the left foot",
+"p": "chì"
+},
+"很": {
+"c": "彳艮",
+"d": "very, quite, much",
+"p": "hěn",
+"ph": "艮",
+"s": "彳"
+},
+"後": {
+"c": "彳幺夂",
+"d": "after; behind, rear",
+"h": "One step 彳 coming behind another 夂; 幺 provides the pronunciation",
+"p": "hòu"
+},
+"得": {
+"c": "彳旦寸",
+"d": "to obtain, to get, to acquire; suitable, proper",
+"h": "A hand 寸 grabbing a shell 旦",
+"p": "dé"
+},
+"從": {
+"c": "彳从足",
+"d": "from, by, since, whence, through",
+"p": "cóng",
+"ph": "从",
+"s": "彳"
+},
+"心": {
+"d": "heart; mind",
+"h": "A heart",
+"p": "xīn"
+},
+"忄": {
+"c": "八丨",
+"d": "heart; mind",
+"p": "xīn"
+},
+"忍": {
+"c": "刃心",
+"d": "to endure, to bear, to suffer, to tolerate",
+"h": "A knife 刃 piercing the heart 心; 刃 also provides the pronunciation",
+"p": "rěn"
+},
+"忙": {
+"c": "忄亡",
+"d": "busy, hurried, pressed for time",
+"h": "A heart 忄 faced with death 亡; 亡 also provides the pronunciation",
+"p": "máng"
+},
+"怎": {
+"c": "乍心",
+"d": "what? why? how?",
+"p": "zěn",
+"ph": "乍",
+"s": "心"
+},
+"思": {
+"c": "田心",
+"d": "to think, to ponder, to consider; final particle",
+"h": "Weighing something with your mind 囟 (altered) and heart 心",
+"p": "sī"
+},
+"想": {
+"c": "相心",
+"d": "to believe, to wish for",
+"p": "xiǎng",
+"ph": "相",
+"s": "心"
+},
+"意": {
+"c": "音心",
+"d": "thought, idea, opinion; desire, wish",
+"p": "yì",
+"ph": "音",
+"s": "心"
+},
+"愛": {
+"c": "爫冖心夂",
+"d": "to love, to like, to be fond of; love, affection",
+"h": "To bring a lover 心 into one's house 冖",
+"p": "ài"
+},
+"慢": {
+"c": "忄曼",
+"d": "slowly, leisurely; sluggish",
+"p": "màn",
+"ph": "曼",
+"s": "忄"
+},
+"慧": {
+"c": "彗心",
+"d": "bright, intelligent; intelligence",
+"p": "huì",
+"ph": "彗",
+"s": "心"
+},
+"懂": {
+"c": "忄董",
+"d": "to understand, to know",
+"p": "dǒng",
+"ph": "董",
+"s": "忄"
+},
+"戈": {
+"d": "spear, lance, halberd",
+"h": "A spear pointing to the bottom-right",
+"p": "gē"
+},
+"戊": {
+"c": "丿戈",
+"d": "5th heavenly stem",
+"p": "wù"
+},
+"戋": {
+"c": "戈一",
+"d": "small, narrow; tiny, little",
+"p": "jiān"
+},
+"戍": {
+"c": "戊丶",
+"d": "to garrison, to defend the border",
+"h": "Arms 戈 surrounding the country 丶",
+"p": "shù"
+},
+"我": {
+"c": "扌戈",
+"d": "I, me, my; our, us",
+"h": "A hand 扌 holding a weapon 戈",
+"p": "wǒ"
+},
+"戔": {
+"c": "戈戈",
+"d": "small, narrow; tiny, little",
+"h": "The narrow space between two blades 戈",
+"p": "jiān"
+},
+"或": {
+"c": "戈口一",
+"d": "or, either, else; maybe, perhaps, possibly",
+"h": "To defend yourself 口 with a spear 戈; \"or else\"",
+"p": "huò"
+},
+"戠": {
+"c": "音戈",
+"d": "sword; potter's clay",
+"p": "zhī",
+"ph": "音",
+"s": "戈"
+},
+"手": {
+"d": "hand",
+"h": "A hand with the fingers splayed",
+"p": "shǒu"
+},
+"扌": {
+"c": "二亅",
+"d": "hand",
+"h": "A hand with the fingers splayed; compare 手",
+"p": "shǒu"
+},
+"才": {
+"c": "扌",
+"d": "ability, talent, gift; just, only",
+"h": "A sprout growing in the ground, representing a budding talent",
+"p": "cái"
+},
+"打": {
+"c": "扌丁",
+"d": "to attack, to beat, to hit, to strike",
+"p": "dǎ",
+"ph": "丁",
+"s": "扌"
+},
+"拎": {
+"c": "扌令",
+"d": "to lift, to haul, to take",
+"p": "līn",
+"ph": "令",
+"s": "扌"
+},
+"拜": {
+"c": "手手",
+"d": "to bow, to salute; to worship, to pay respects",
+"h": "Two hands 手 put together in respect",
+"p": "bài"
+},
+"授": {
+"c": "扌受",
+"d": "to award, to confer, to instruct, to teach",
+"p": "shòu",
+"ph": "受",
+"s": "扌"
+},
+"搭": {
+"c": "扌荅",
+"d": "to attach, to build, to join",
+"p": "dā",
+"ph": "荅",
+"s": "扌"
+},
+"攴": {
+"c": "⺊又",
+"d": "to rap, to tap",
+"h": "A hand 又 wielding a stick ⺊",
+"p": "pū"
+},
+"攵": {
+"c": "乂",
+"d": "to rap, to tap; script",
+"h": "A fist made with one's right hand",
+"p": "pū"
+},
+"故": {
+"c": "古攵",
+"d": "reason, cause; happening, instance",
+"p": "gù",
+"ph": "古",
+"s": "攵"
+},
+"教": {
+"c": "孝攵",
+"d": "school, education",
+"p": "jiào",
+"ph": "孝",
+"s": "攵"
+},
+"文": {
+"c": "亠乂",
+"d": "culture, literature, writing",
+"h": "A tattooed chest, representing writing",
+"p": "wén"
+},
+"斤": {
+"c": "厂下",
+"d": "a catty (about 500 grams); an axe",
+"p": "jīn"
+},
+"新": {
+"c": "亲斤",
+"d": "new, recent, fresh, modern",
+"h": "A freshly chopped 斤 tree 亲",
+"p": "xīn"
+},
+"方": {
+"c": "亠",
+"d": "square, rectangle; side",
+"p": "fāng"
+},
+"日": {
+"c": "口一",
+"d": "sun; day",
+"h": "The sun",
+"p": "rì"
+},
+"旦": {
+"c": "日一",
+"d": "dawn; morning",
+"h": "The sun 日 rising over the horizon 一",
+"p": "dàn"
+},
+"早": {
+"c": "日十",
+"d": "early; soon",
+"h": "The first rays 十 of the sun 日",
+"p": "zǎo"
+},
+"时": {
+"c": "日寸",
+"d": "time, season; period, era, age",
+"p": "shí",
+"s": "日"
+},
+"明": {
+"c": "日月",
+"d": "bright, clear",
+"h": "The light of the sun 日 and moon 月",
+"p": "míng"
+},
+"星": {
+"c": "日生",
+"d": "star, planet; a point of light",
+"p": "xīng",
+"ph": "生",
+"s": "日"
+},
+"昨": {
+"c": "日乍",
+"d": "yesterday; formerly, in the past",
+"p": "zuó",
+"ph": "乍",
+"s": "日"
+},
+"是": {
+"c": "日疋",
+"d": "to be; indeed, right, yes",
+"h": "To speak 日 directly 疋",
+"p": "shì"
+},
+"時": {
+"c": "日寺",
+"d": "time, season; period, era, age",
+"p": "shí",
+"ph": "寺",
+"s": "日"
+},
+"晒": {
+"c": "日西",
+"d": "to dry in the sun; to expose to the sun",
+"p": "shài",
+"ph": "西",
+"s": "日"
+},
+"晨": {
+"c": "日辰",
+"d": "dawn, early morning",
+"p": "chén",
+"ph": "辰",
+"s": "日"
+},
+"普": {
+"c": "並日",
+"d": "widespread, universal, general",
+"h": "Everyone 並 under the sun 日",
+"p": "pǔ"
+},
+"智": {
+"c": "知日",
+"d": "wisdom, knowledge, intelligence",
+"h": "Known 知 clearly 日; 知 also provides the pronunciation",
+"p": "zhì"
+},
+"曰": {
+"c": "口一",
+"d": "to speak; to say",
+"h": "Picture of an open 一 mouth 口",
+"p": "yuē"
+},
+"曷": {
+"c": "日",
+"d": "what, why, where, which, how",
+"h": "Variant of 何",
+"p": "hé"
+},
+"書": {
+"c": "聿曰",
+"d": "book, letter, document; writing",
+"h": "A brush 聿 used to write words 曰",
+"p": "shū"
+},
+"曼": {
+"c": "日罒又",
+"d": "long, extended, vast; beautiful",
+"h": "Two hands 日, 又 pulling an eye open 罒",
+"p": "màn"
+},
+"最": {
+"c": "日取",
+"d": "most, extremely, exceedingly; superlative",
+"h": "To take place 取 under the sun 日 (that is, everywhere)",
+"p": "zuì"
+},
+"會": {
+"c": "亼日",
+"d": "to assemble, to meet; meeting",
+"h": "People 人 speaking 日",
+"p": "huì"
+},
+"月": {
+"c": "冂二",
+"d": "moon; month",
+"h": "A crescent moon",
+"p": "yuè"
+},
+"有": {
+"c": "月",
+"d": "to have, to own, to possess; to exist",
+"p": "yǒu",
+"ph": "月"
+},
+"朋": {
+"c": "月月",
+"d": "friend, pal, acquaintance",
+"h": "Two people 月 walking together",
+"p": "péng"
+},
+"期": {
+"c": "其月",
+"d": "a period of time; date, time",
+"p": "qī",
+"ph": "其",
+"s": "月"
+},
+"木": {
+"c": "十八",
+"d": "tree; wood, lumber",
+"h": "A tree",
+"p": "mù"
+},
+"未": {
+"c": "一木",
+"d": "not yet; 8th terrestrial branch",
+"h": "A wheat plant that has not yet borne fruit; compare 來",
+"p": "wèi"
+},
+"本": {
+"c": "木一",
+"d": "root, origin, source; basis",
+"h": "A tree 木 with its roots highlighted",
+"p": "běn"
+},
+"束": {
+"c": "木口",
+"d": "to bind, to control, to restrain; bale",
+"h": "Lumber 木 bound by rope 口",
+"p": "shù"
+},
+"来": {
+"c": "未丷",
+"d": "to arrive, to come, to return",
+"h": "A wheat plant that has not yet borne fruit; compare 來",
+"p": "lái"
+},
+"杯": {
+"c": "木不",
+"d": "cup, glass; measure word for liquids",
+"p": "bēi",
+"ph": "不",
+"s": "木"
+},
+"東": {
+"c": "木日",
+"d": "east, eastern, eastward",
+"h": "The sun 日 rising behind a tree 木; compare 西",
+"p": "dōng"
+},
+"林": {
+"c": "木木",
+"d": "forest, grove; surname",
+"h": "Two trees 木 representing a forest",
+"p": "lín"
+},
+"果": {
+"c": "田木",
+"d": "fruit, nut; result",
+"h": "Fruit 田 growing on a tree 木",
+"p": "guǒ"
+},
+"柬": {
+"c": "束八",
+"d": "card, letter, invitation, note",
+"h": "A bound 束 package",
+"p": "jiǎn"
+},
+"样": {
+"c": "木羊",
+"d": "form, pattern, shape, style",
+"p": "yàng",
+"ph": "羊",
+"s": "木"
+},
+"樓": {
+"c": "木婁",
+"d": "multi-story building; floor",
+"p": "lóu",
+"ph": "婁",
+"s": "木"
+},
+"樣": {
+"c": "木羕",
+"d": "form, pattern, shape, style",
+"p": "yàng",
+"ph": "羕",
+"s": "木"
+},
+"欠": {
+"c": "⺈人",
+"d": "to lack, to owe; to breathe, to yawn",
+"h": "A man 人 yawning ⺈",
+"p": "qiàn"
+},
+"次": {
+"c": "冫欠",
+"d": "order, sequence; second, next",
+"h": "A person 欠 yawning multiple times 冫",
+"p": "cì"
+},
+"欢": {
+"c": "又欠",
+"d": "happy, glad, joyful",
+"p": "huān"
+},
+"歡": {
+"c": "雚欠",
+"d": "happy, glad, joyful",
+"p": "huān",
+"ph": "雚",
+"s": "欠"
+},
+"止": {
+"c": "上丨",
+"d": "to stop, to halt; to detain",
+"h": "A foot",
+"p": "zhǐ"
+},
+"歺": {
+"c": "⺊夕",
+"d": "evil, depraved, wicked",
+"h": "A corpse; compare 歹",
+"p": "è"
+},
+"殳": {
+"c": "几又",
+"d": "tool, weapon",
+"h": "A hand 又 holding a weapon 几",
+"p": "shū"
+},
+"母": {
+"d": "mother; female elders",
+"h": "A mother's breasts",
+"p": "mǔ"
+},
+"气": {
+"c": "亻",
+"d": "air, gas; steam, vapor",
+"h": "A person 亻 breathing air",
+"p": "qì"
+},
+"氣": {
+"c": "气米",
+"d": "air, gas; steam, vapor",
+"h": "A person 亻 breathing air 米",
+"p": "qì"
+},
+"水": {
+"c": "亅",
+"d": "water, liquid, lotion, juice",
+"h": "A river running between two banks; compare 川",
+"p": "shuǐ"
+},
+"氵": {
+"d": "water",
+"p": "shuǐ"
+},
+"永": {
+"c": "水",
+"d": "long; perpetual, eternal",
+"p": "yǒng"
+},
+"氺": {
+"c": "亅",
+"h": "A river running between two banks; compare 川 and 水",
+"p": "shui"
+},
+"沒": {
+"c": "氵又",
+"d": "not, none, gone; to bury",
+"p": "méi",
+"s": "氵"
+},
+"没": {
+"c": "氵殳",
+"d": "not, none, gone; to bury",
+"p": "méi",
+"ph": "殳",
+"s": "氵"
+},
+"油": {
+"c": "氵由",
+"d": "oil, fat, grease, lard; oil paints",
+"p": "yóu",
+"ph": "由",
+"s": "氵"
+},
+"治": {
+"c": "氵台",
+"d": "to administer, to govern, to regulate",
+"h": "A structure 台 that directs the flow of water 氵",
+"p": "zhì"
+},
+"波": {
+"c": "氵皮",
+"d": "waves, ripples, breakers; undulations",
+"p": "bō",
+"ph": "皮",
+"s": "氵"
+},
+"洗": {
+"c": "氵先",
+"d": "to bathe, to rinse, to wash",
+"p": "xǐ",
+"ph": "先",
+"s": "氵"
+},
+"洛": {
+"c": "氵各",
+"d": "a river in the Shanxi province; a city",
+"p": "luò",
+"ph": "各",
+"s": "氵"
+},
+"港": {
+"c": "氵巷",
+"d": "port, harbor, bay; Hong Kong",
+"p": "gǎng",
+"ph": "巷",
+"s": "氵"
+},
+"灣": {
+"c": "氵彎",
+"d": "bay, cove, gulf, inlet",
+"p": "wān",
+"ph": "彎",
+"s": "氵"
+},
+"灬": {
+"d": "fire",
+"p": "huǒ"
+},
+"点": {
+"c": "占灬",
+"d": "dot, point, speck",
+"p": "diǎn",
+"ph": "占",
+"s": "灬"
+},
+"煮": {
+"c": "者灬",
+"d": "to boil, to cook",
+"p": "zhǔ",
+"ph": "者",
+"s": "灬"
+},
+"熱": {
+"c": "埶灬",
+"d": "heat, fever, zeal",
+"p": "rè",
+"ph": "埶",
+"s": "灬"
+},
+"爫": {
+"d": "claws, nails, talons",
+"h": "A bird's talons; compare 爪",
+"p": "zhǎo"
+},
+"爱": {
+"c": "爫冖友",
+"d": "to love, to like, to be fond of; love, affection",
+"h": "To bring a friend 友 into one's house 冖",
+"p": "ài"
+},
+"片": {
+"d": "slice, splinter; page, strip",
+"h": "Half of a tree trunk; compare 爿",
+"p": "piàn"
+},
+"牌": {
+"c": "片卑",
+"d": "card, game piece; placard, signboard, tablet",
+"p": "pái",
+"ph": "卑",
+"s": "片"
+},
+"牙": {
+"d": "tooth, molar; fang, tusk",
+"p": "yá"
+},
+"牛": {
+"d": "ox, cow, bull",
+"h": "An ox's horned head",
+"p": "niú"
+},
+"玉": {
+"c": "王丶",
+"d": "jade, gem, precious stone",
+"h": "A necklace 丨 adorned with three pieces of jade",
+"p": "yù"
+},
+"王": {
+"c": "一土",
+"d": "king, ruler; royal",
+"h": "A man 十 bridging heaven and earth (both 一)",
+"p": "wáng"
+},
+"甘": {
+"c": "卄二",
+"d": "sweet, tasty; willing",
+"h": "Picture of a tongue with 一 marking the sweet spot",
+"p": "gān"
+},
+"甜": {
+"c": "舌甘",
+"d": "sweet, sweetness",
+"h": "Something tasty 甘 to the tongue 舌",
+"p": "tián"
+},
+"生": {
+"c": "一土",
+"d": "life, lifetime; birth",
+"h": " A shoot 屮 growing in the soil 土",
+"p": "shēng"
+},
+"用": {
+"c": "冂",
+"d": "to use, to employ, to apply; use",
+"p": "yòng"
+},
+"甫": {
+"c": "十用",
+"d": "to begin; man, father",
+"p": "fǔ"
+},
+"甬": {
+"c": "用",
+"d": "path; river in Ningbo",
+"p": "yǒng",
+"ph": "用"
+},
+"田": {
+"c": "冂土",
+"d": "field, farm, arable land; cultivated",
+"h": "The plots of a rice paddy",
+"p": "tián"
+},
+"由": {
+"c": "田",
+"d": "cause, reason; from",
+"h": "Road 丨 leading to the farm 田",
+"p": "yóu"
+},
+"电": {
+"c": "曰乚",
+"d": "electricity; electric",
+"h": "Simplified form of 電; lightning 申 from a storm cloud 雨",
+"p": "diàn"
+},
+"疋": {
+"d": "roll, bolt of cloth; foot",
+"h": "A foot 止 with a leg on top",
+"p": "pǐ"
+},
+"白": {
+"c": "日",
+"d": "white; clear, pure, unblemished",
+"h": "A burning candle; the rays of the sun",
+"p": "bái"
+},
+"的": {
+"c": "白勺",
+"d": "aim, goal; of",
+"p": "de"
+},
+"皮": {
+"c": "攴",
+"d": "skin, hide, fur, feathers",
+"h": "A hand using a tool 攴 to strip the hide from a carcass",
+"p": "pí"
+},
+"目": {
+"c": "口二",
+"d": "eye; to look, to see",
+"h": "An eye drawn on its side",
+"p": "mù"
+},
+"直": {
+"c": "十目一",
+"d": "straight, vertical; candid, direct, frank",
+"h": "To look someone in the eye 目",
+"p": "zhí"
+},
+"相": {
+"c": "木目",
+"d": "mutual, reciprocal; equal",
+"h": "To stare 目 at a tree 木, meaning to observe",
+"p": "xiāng"
+},
+"看": {
+"c": "手目",
+"d": "to look, to see; to examine, to scrutinize",
+"h": "Shielding one's eyes 目 with a hand 手 to look to the distance",
+"p": "kàn"
+},
+"真": {
+"c": "直几",
+"d": "real, actual, true, genuine",
+"h": "A straight 直 (that is, level) table 几",
+"p": "zhēn"
+},
+"睘": {
+"c": "罒一",
+"d": "round; to stare",
+"p": "qióng"
+},
+"睡": {
+"c": "目垂",
+"d": "to sleep, to doze",
+"p": "shuì",
+"ph": "垂",
+"s": "目"
+},
+"睪": {
+"c": "罒幸",
+"d": "to spy on",
+"h": "An eye 目 on top of a tower 幸",
+"p": "yì"
+},
+"矢": {
+"c": "丿天",
+"d": "arrow, dart; to vow, to swear",
+"h": "An arrow pointing upwards",
+"p": "shǐ"
+},
+"知": {
+"c": "矢口",
+"d": "to know, to perceive, to comprehend",
+"p": "zhī",
+"ph": "矢",
+"s": "口"
+},
+"矦": {
+"c": "厃矢",
+"d": "target in archery",
+"h": "An arrow 矢 hitting a target 厃",
+"p": "hóu"
+},
+"石": {
+"c": "厂口",
+"d": "stone, rock, mineral",
+"h": "A rock 口 at the base of a cliff 厂",
+"p": "shí"
+},
+"研": {
+"c": "石开",
+"d": "to grind, to rub; to study, to research",
+"p": "yán",
+"ph": "开",
+"s": "石"
+},
+"禾": {
+"c": "丿木",
+"d": "cereal, grain, rice; plant, stalk",
+"h": "A plant stalk with a sagging head",
+"p": "hé"
+},
+"穴": {
+"c": "宀八",
+"d": "cave, den, hole",
+"h": "The mouth of a cave",
+"p": "xué"
+},
+"究": {
+"c": "穴九",
+"d": "to dig into, to investigate; actually, after all",
+"p": "jiū",
+"ph": "九",
+"s": "穴"
+},
+"空": {
+"c": "穴工",
+"d": "hollow, empty, deserted, bare",
+"p": "kōng",
+"ph": "工",
+"s": "穴"
+},
+"穿": {
+"c": "穴牙",
+"d": "to drill, to pierce; to dress, to wear",
+"p": "chuān",
+"ph": "穴",
+"s": "牙"
+},
+"立": {
+"c": "亠丷一",
+"d": "to stand; to establish, to set up",
+"h": "A man standing on the ground 一",
+"p": "lì"
+},
+"第": {
+"c": "⺮弟",
+"d": "sequence, number; grade, degree",
+"h": "Bamboo strips ⺮ arrayed in sequence; 弟 provides the pronunciation",
+"p": "dì"
+},
+"等": {
+"c": "⺮寺",
+"d": "rank, grade; same, equal",
+"h": "Bamboo strips ⺮ laid before a court 寺",
+"p": "děng"
+},
+"米": {
+"c": "丷木",
+"d": "rice, millet, grain",
+"h": "Grains of rice",
+"p": "mǐ"
+},
+"粥": {
+"c": "弓米弓",
+"d": "porridge, gruel, congee",
+"h": "Steaming 弓 rice 米",
+"p": "zhōu"
+},
+"糸": {
+"c": "幺小",
+"d": "silk; thread",
+"h": "A twisted strand of silk",
+"p": "mì"
+},
+"糹": {
+"c": "幺",
+"d": "silk; thread",
+"h": "A twisted strand of silk",
+"p": "sī"
+},
+"系": {
+"c": "丿糸",
+"d": "system; line, link, connection",
+"p": "xì",
+"s": "糸"
+},
+"級": {
+"c": "糹及",
+"d": "level, rank; class, grade",
+"p": "jí",
+"ph": "及",
+"s": "糹"
+},
+"紹": {
+"c": "糹召",
+"d": "to connect; to introduce",
+"p": "shào",
+"ph": "召",
+"s": "糹"
+},
+"給": {
+"c": "糹合",
+"d": "to give, to lend; for, by",
+"p": "gěi",
+"ph": "合",
+"s": "糹"
+},
+"維": {
+"c": "糹隹",
+"d": "to preserve, to maintain, to hold together",
+"p": "wéi",
+"ph": "隹",
+"s": "糹"
+},
+"纟": {
+"c": "一",
+"d": "silk; thread",
+"h": "A twisted strand of silk; see 糸",
+"p": "sī"
+},
+"级": {
+"c": "纟及",
+"d": "level, rank; class, grade",
+"p": "jí",
+"ph": "及",
+"s": "纟"
+},
+"绍": {
+"c": "纟召",
+"d": "to connect; to introduce",
+"p": "shào",
+"ph": "召",
+"s": "纟"
+},
+"给": {
+"c": "纟合",
+"d": "to give, to lend; for, by",
+"p": "gěi",
+"ph": "合",
+"s": "纟"
+},
+"缶": {
+"c": "山",
+"d": "earthen crock or jar; pottery",
+"h": "An earthen jar",
+"p": "fǒu"
+},
+"罒": {
+"c": "口",
+"d": "net, network",
+"p": "wǎng"
+},
+"罗": {
+"c": "罒夕",
+"d": "gauze, net; to collect, to display",
+"p": "luō",
+"s": "罒"
+},
+"羅": {
+"c": "罒維",
+"d": "gauze, net; to collect, to display",
+"h": "A silk 糹 net 罒 for catching birds 隹",
+"p": "luō"
+},
+"羊": {
+"c": "丷",
+"d": "sheep, goat",
+"h": "A sheep's head with horns",
+"p": "yáng"
+},
+"美": {
+"c": "羊大",
+"d": "beautiful, pretty; pleasing",
+"h": "A person 大 wearing an elegant crown 羊",
+"p": "měi"
+},
+"羕": {
+"c": "羊永",
+"d": "river, flowing water",
+"p": "yàng",
+"ph": "羊",
+"s": "永"
+},
+"老": {
+"c": "耂匕",
+"d": "old, aged; experienced",
+"h": "A person bent over with long hair 匕 and a crutch; compare 耂",
+"p": "lǎo"
+},
+"耂": {
+"c": "土丿",
+"d": "old, aged; experienced",
+"h": "A person bent over with long hair",
+"p": "lǎo"
+},
+"者": {
+"c": "耂日",
+"d": "that which; they who",
+"p": "zhě"
+},
+"耳": {
+"c": "二",
+"d": "ear; to hear, to hear of",
+"h": "An ear",
+"p": "ěr"
+},
+"聽": {
+"c": "耳王十罒一心",
+"d": "to hear, to listen; to understand",
+"h": "Someone listening 耳 attentively 心",
+"p": "tīng"
+},
+"聿": {
+"c": "肀",
+"d": "writing brush, pencil; thereupon",
+"h": "A hand 彐 holding a brush; compare 肀",
+"p": "yù"
+},
+"肀": {
+"c": "彐丨",
+"d": "pen",
+"h": "A hand 彐 holding a pen; compare 聿",
+"p": "yù"
+},
+"肉": {
+"c": "冂仌",
+"d": "meat; flesh",
+"h": "Meat on the ribs of an animal",
+"p": "ròu"
+},
+"能": {
+"c": "厶⺼匕匕",
+"d": "can, may; capable, full of energy",
+"h": "A bear's head 厶, body ⺼, and claws 匕",
+"p": "néng"
+},
+"腐": {
+"c": "广付肉",
+"d": "to spoil, to rot, to decay; rotten",
+"p": "fǔ",
+"ph": "付",
+"s": "肉"
+},
+"自": {
+"c": "目",
+"d": "self; private, personal",
+"h": "A nose; in China, people refer to themselves by pointing to their noses",
+"p": "zì"
+},
+"臱": {
+"c": "自穴方",
+"p": "mián"
+},
+"至": {
+"c": "一厶土",
+"d": "reach, arrive; very, extremely",
+"h": "A bird alighting on the ground 土",
+"p": "zhì"
+},
+"臼": {
+"d": "mortar; bone joint socket",
+"h": "A mortar used to grind out powders",
+"p": "jiù"
+},
+"舄": {
+"c": "臼勹灬",
+"d": "shoe, the sole of a shoe; magpie",
+"h": "A magpie; compare 鳥",
+"p": "xì"
+},
+"興": {
+"c": "臼八",
+"d": "to thrive, to prosper, to flourish",
+"p": "xìng"
+},
+"舌": {
+"c": "千口",
+"d": "tongue; bell clapper",
+"h": "A tongue 千 sticking out of a mouth 口",
+"p": "shé"
+},
+"艮": {
+"d": "blunt; tough, chewy",
+"p": "gěn"
+},
+"良": {
+"c": "丶艮",
+"d": "good, virtuous, respectable",
+"p": "liáng"
+},
+"艹": {
+"d": "grass, weed, plant, herb",
+"h": "Simplified form of 艸; grass sprouting",
+"p": "cǎo"
+},
+"英": {
+"c": "艹央",
+"d": "petal, flower, leaf; brave, heroic",
+"p": "yīng",
+"ph": "央",
+"s": "艹"
+},
+"茶": {
+"c": "艹人木",
+"d": "tea; tea leaves",
+"p": "chá",
+"s": "艹"
+},
+"荅": {
+"c": "艹合",
+"d": "to answer; small bean",
+"p": "dā",
+"ph": "合",
+"s": "艹"
+},
+"荷": {
+"c": "艹何",
+"d": "lotus, water lily; burden, responsibility",
+"p": "hé",
+"ph": "何",
+"s": "艹"
+},
+"菜": {
+"c": "艹采",
+"d": "vegetables; order, dish",
+"p": "cài",
+"ph": "采",
+"s": "艹"
+},
+"菠": {
+"c": "艹波",
+"d": "spinach",
+"p": "bō",
+"ph": "波",
+"s": "艹"
+},
+"萄": {
+"c": "艹匋",
+"d": "grapes",
+"p": "táo",
+"ph": "匋",
+"s": "艹"
+},
+"萝": {
+"c": "艹罗",
+"d": "carrot, radish, turnip",
+"p": "luó",
+"ph": "罗",
+"s": "艹"
+},
+"落": {
+"c": "艹洛",
+"d": "to fall, to drop; surplus, net income",
+"p": "luò",
+"ph": "洛",
+"s": "艹"
+},
+"葡": {
+"c": "艹匍",
+"d": "grapes; Portugal, Portuguese",
+"p": "pú",
+"ph": "匍",
+"s": "艹"
+},
+"董": {
+"c": "艹重",
+"d": "to direct, to supervise; surname",
+"p": "dǒng",
+"ph": "重",
+"s": "艹"
+},
+"蘭": {
+"c": "艹闌",
+"d": "orchid; elegant, graceful",
+"p": "lán",
+"ph": "闌",
+"s": "艹"
+},
+"蘿": {
+"c": "艹羅",
+"d": "carrot, radish, turnip",
+"p": "luó",
+"ph": "羅",
+"s": "艹"
+},
+"虫": {
+"c": "中",
+"d": "insect, worm; mollusk",
+"p": "chóng",
+"ph": "中"
+},
+"蛋": {
+"c": "疋虫",
+"d": "egg",
+"p": "dàn",
+"s": "虫"
+},
+"衤": {
+"d": "cloth",
+"p": "yī"
+},
+"裡": {
+"c": "衤里",
+"d": "unit of distance equal to 0.5km; village",
+"h": "Unit of measure for farm 田 land 土; 衤 provides the pronunciation",
+"p": "lǐ"
+},
+"西": {
+"c": "兀囗",
+"d": "west, western, westward",
+"h": "A bird settling into its nest, representing sunset; compare 東",
+"p": "xī"
+},
+"覀": {
+"d": "west, western, westward",
+"h": "A bird settling into its nest, representing sunset; compare 東",
+"p": "xī"
+},
+"要": {
+"c": "覀女",
+"d": "essential, necessary; to ask for",
+"h": "A woman 女 with hands on her waist 覀",
+"p": "yào"
+},
+"見": {
+"c": "目儿",
+"d": "to see, to observe, to meet, to appear",
+"h": "A man 儿 with the eye 目 emphasized",
+"p": "jiàn"
+},
+"覺": {
+"c": "見",
+"d": "conscious; to nap, to sleep",
+"p": "jué"
+},
+"见": {
+"c": "冂儿",
+"d": "to see, to observe, to meet, to appear",
+"h": "Simplified form of 見; a man 儿 with the eye 目 emphasized",
+"p": "jiàn"
+},
+"觉": {
+"c": "⺍冖见",
+"d": "conscious; to nap, to sleep",
+"p": "jué",
+"ph": "⺍",
+"s": "见"
+},
+"角": {
+"c": "⺈用",
+"d": "angle, corner; horn, horn-shaped",
+"h": "A rhinoceros or other animal horn",
+"p": "jiǎo"
+},
+"解": {
+"c": "角刀牛",
+"d": "to explain; to loosen",
+"h": "To cut 刀 the horns 角 off of an ox 牛; 角 also provides the pronunciation",
+"p": "jiě"
+},
+"言": {
+"c": "亠二口",
+"d": "words, speech; to speak, to say",
+"h": "A tongue sticking out of a mouth 口",
+"p": "yán"
+},
+"話": {
+"c": "言舌",
+"d": "talk, speech; language, dialect",
+"h": "A spoken 言 tongue 舌; 舌 also provides the pronunciation",
+"p": "huà"
+},
+"該": {
+"c": "言亥",
+"d": "should, ought to, must",
+"p": "gāi",
+"ph": "亥",
+"s": "言"
+},
+"認": {
+"c": "言忍",
+"d": "to know, to recognize, to understand",
+"p": "rèn",
+"ph": "忍",
+"s": "言"
+},
+"說": {
+"c": "言兌",
+"d": "to speak, to say; to scold, to upbraid",
+"p": "shuō",
+"ph": "兌",
+"s": "言"
+},
+"課": {
+"c": "言果",
+"d": "subject, lesson, course; classwork",
+"p": "kè",
+"ph": "果",
+"s": "言"
+},
+"請": {
+"c": "言青",
+"d": "to ask, to request; to invite",
+"p": "qǐng",
+"ph": "青",
+"s": "言"
+},
+"講": {
+"c": "言冓",
+"d": "talk, speech, lecture; to speak, to explain",
+"p": "jiǎng",
+"ph": "冓",
+"s": "言"
+},
+"謝": {
+"c": "言射",
+"d": "to thank; to refuse politely",
+"p": "xiè",
+"ph": "射",
+"s": "言"
+},
+"識": {
+"c": "言戠",
+"d": "knowledge; to understand, to recognize, to know",
+"p": "shí",
+"ph": "戠",
+"s": "言"
+},
+"讀": {
+"c": "言賣",
+"d": "to study, to learn; to read, to pronounce",
+"h": "To show off 賣 one's literacy 言",
+"p": "dú"
+},
+"讠": {
+"d": "words, speech; to speak, to say",
+"p": "yán"
+},
+"认": {
+"c": "讠人",
+"d": "to know, to recognize, to understand",
+"p": "rèn",
+"ph": "人",
+"s": "讠"
+},
+"识": {
+"c": "讠只",
+"d": "knowledge; to understand, to recognize, to know",
+"p": "shí",
+"ph": "只",
+"s": "讠"
+},
+"话": {
+"c": "讠舌",
+"d": "talk, speech; language, dialect",
+"h": "A spoken 讠 tongue 舌; 舌 also provides the pronunciation",
+"p": "huà"
+},
+"说": {
+"c": "讠兑",
+"d": "to speak, to say; to scold, to upbraid",
+"p": "shuō",
+"ph": "兑",
+"s": "讠"
+},
+"请": {
+"c": "讠青",
+"d": "to ask, to request; to invite",
+"p": "qǐng",
+"ph": "青",
+"s": "讠"
+},
+"读": {
+"c": "讠卖",
+"d": "to study, to learn; to read, to pronounce",
+"h": "To show off 卖 one's literacy 讠",
+"p": "dú"
+},
+"课": {
+"c": "讠果",
+"d": "subject, lesson, course; classwork",
+"p": "kè",
+"ph": "果",
+"s": "讠"
+},
+"谢": {
+"c": "讠射",
+"d": "to thank; to refuse politely",
+"p": "xiè",
+"ph": "射",
+"s": "讠"
+},
+"豆": {
+"c": "一口丷一",
+"d": "beans, peas; bean-shaped",
+"h": "An old serving dish 口 on a stand with a lid 一",
+"p": "dòu"
+},
+"豕": {
+"c": "一勿",
+"d": "pig, boar",
+"h": "A pig drawn on its side",
+"p": "shǐ"
+},
+"貝": {
+"c": "目八",
+"d": "sea shell; money, currency",
+"h": "A sea shell, once used as currency",
+"p": "bèi"
+},
+"買": {
+"c": "罒貝",
+"d": "to buy, to purchase; to bribe, to persuade",
+"p": "mǎi",
+"s": "貝"
+},
+"賣": {
+"c": "士罒貝",
+"d": "to sell; to betray",
+"p": "mài",
+"s": "貝"
+},
+"贝": {
+"c": "冂人",
+"d": "sea shell; money, currency",
+"h": "A sea shell, once used as currency",
+"p": "bèi"
+},
+"走": {
+"c": "土止",
+"d": "to walk, to run, to flee",
+"h": "Someone 土 stepping with their foot 止",
+"p": "zǒu"
+},
+"起": {
+"c": "走己",
+"d": "to begin, to initiate; to rise, to stand up",
+"p": "qǐ",
+"ph": "己",
+"s": "走"
+},
+"足": {
+"c": "口",
+"d": "foot; to attain, to satisfy",
+"h": "The leg 口 above the foot",
+"p": "zú"
+},
+"身": {
+"d": "body, torso; person",
+"h": "A pregnant woman",
+"p": "shēn"
+},
+"車": {
+"c": "日",
+"d": "cart, vehicle; to move in a cart",
+"h": "A cart with two wheels, seen from above",
+"p": "chē"
+},
+"车": {
+"c": "七十",
+"d": "cart, vehicle; to move in a cart",
+"h": "Simplified form of 車, a cart with two wheels, seen from above",
+"p": "chē"
+},
+"辛": {
+"c": "立十",
+"d": "bitter; toilsome, laborious",
+"h": "A hot iron used to brand prisoners and slaves",
+"p": "xīn"
+},
+"辣": {
+"c": "辛束",
+"d": "pepper; hot, spicy",
+"p": "là",
+"ph": "束",
+"s": "辛"
+},
+"辦": {
+"c": "辛力辛",
+"d": "to set up; to manage, to run",
+"p": "bàn",
+"ph": "辛",
+"s": "力"
+},
+"辰": {
+"c": "厂二",
+"d": "early morning; fortune, good luck",
+"p": "chén"
+},
+"辶": {
+"d": "to walk; walking",
+"h": "A foot stepping",
+"p": "chuò"
+},
+"过": {
+"c": "辶寸",
+"d": "pass; to go across, to pass through",
+"p": "guò",
+"s": "辶"
+},
+"迎": {
+"c": "辶卬",
+"d": "to welcome, to receive, to greet",
+"p": "yíng",
+"ph": "卬",
+"s": "辶"
+},
+"近": {
+"c": "辶斤",
+"d": "to approach; near, close",
+"p": "jìn",
+"ph": "斤",
+"s": "辶"
+},
+"还": {
+"c": "辶不",
+"d": "also, besides; still, yet",
+"h": "Not 不 moving 辶",
+"p": "hái"
+},
+"这": {
+"c": "辶文",
+"d": "this, these; such",
+"p": "zhè"
+},
+"這": {
+"c": "辶言",
+"d": "this, these; such",
+"p": "zhè"
+},
+"通": {
+"c": "辶甬",
+"d": "to pass through, to open, to connect",
+"p": "tōng",
+"ph": "甬",
+"s": "辶"
+},
+"過": {
+"c": "辶咼",
+"d": "pass; to go across, to pass through",
+"p": "guò",
+"ph": "咼",
+"s": "辶"
+},
+"道": {
+"c": "辶首",
+"d": "method, way; path, road",
+"p": "dào",
+"ph": "首",
+"s": "辶"
+},
+"還": {
+"c": "辶睘",
+"d": "also, besides; still, yet",
+"p": "hái"
+},
+"邊": {
+"c": "辶臱",
+"d": "border, edge, margin, side",
+"p": "biān",
+"ph": "臱",
+"s": "辶"
+},
+"那": {
+"c": "阝",
+"d": "that, that one, those",
+"p": "nà"
+},
+"酉": {
+"c": "兀日",
+"d": "wine; wine vessel",
+"h": "A vessel half-filled with wine",
+"p": "yǒu"
+},
+"酒": {
+"c": "氵酉",
+"d": "wine, spirits, liquor, alcohol",
+"h": "A jar 酉 of wine 氵; 酉 also provides the pronunciation",
+"p": "jiǔ"
+},
+"釆": {
+"c": "丿米",
+"d": "to distinguish; to pick, to gather, to collect",
+"h": "Rice 米 ready to be picked",
+"p": "biàn"
+},
+"采": {
+"c": "爫木",
+"d": "to collect, to gather; to pick, to pluck",
+"h": "A hand picking 爫 fruit from a tree 木",
+"p": "cǎi"
+},
+"释": {
+"c": "釆",
+"d": "to explain, to interpret; to release",
+"p": "shì",
+"s": "釆"
+},
+"釋": {
+"c": "釆睪",
+"d": "to explain, to interpret; to release",
+"p": "shì",
+"ph": "睪",
+"s": "釆"
+},
+"里": {
+"c": "田土",
+"d": "unit of distance equal to 0.5km; village",
+"h": "Unit of measure for farm 田 land 土",
+"p": "lǐ"
+},
+"重": {
+"c": "千里",
+"d": "heavy, weighty; to double, to repeat",
+"h": "A burden carried for a thousand 千 miles 里",
+"p": "zhòng"
+},
+"釒": {
+"d": "gold, metal; money",
+"h": "A cast-iron bell; compare 金",
+"p": "jīn"
+},
+"錢": {
+"c": "釒戔",
+"d": "money, currency, coins",
+"p": "qián",
+"ph": "戔",
+"s": "釒"
+},
+"鍾": {
+"c": "釒重",
+"d": "cup, glass, goblet; surname",
+"p": "zhōng",
+"ph": "重",
+"s": "釒"
+},
+"钅": {
+"d": "gold, metal; money",
+"h": "A cast-iron bell; compare 金",
+"p": "jīn"
+},
+"钱": {
+"c": "钅戋",
+"d": "money, currency, coins",
+"p": "qián",
+"ph": "戋",
+"s": "钅"
+},
+"門": {
+"d": "gate, door, entrance, opening",
+"h": "An open doorway or gate",
+"p": "mén"
+},
+"開": {
+"c": "門开",
+"d": "to open; to start, to initiate, to begin",
+"p": "kāi",
+"ph": "开",
+"s": "門"
+},
+"間": {
+"c": "門日",
+"d": "between, among; midpoint",
+"h": "The sun 日 shining through a doorway 門",
+"p": "jiān"
+},
+"闌": {
+"c": "門柬",
+"d": "screen door, railing, fence",
+"p": "lán",
+"ph": "柬",
+"s": "門"
+},
+"關": {
+"c": "門幺幺丱",
+"d": "frontier pass; to close, to shut",
+"p": "guān",
+"ph": "丱",
+"s": "門"
+},
+"门": {
+"c": "丶丨",
+"d": "gate, door, entrance, opening",
+"h": "An open doorway or gate",
+"p": "mén"
+},
+"问": {
+"c": "门口",
+"d": "to ask about, to inquire after",
+"p": "wèn",
+"ph": "门",
+"s": "口"
+},
+"间": {
+"c": "门日",
+"d": "between, among; midpoint",
+"h": "The sun 日 shining through a doorway 门",
+"p": "jiān"
+},
+"阝": {
+"c": "丨",
+"d": "place, town, city",
+"p": "yì"
+},
+"隹": {
+"c": "亻",
+"d": "short-tailed bird; sparrow",
+"h": "A bird facing left; compare 鳥",
+"p": "zhuī"
+},
+"雚": {
+"c": "艹隹",
+"d": "heron; small cup",
+"p": "guàn",
+"s": "隹"
+},
+"雞": {
+"c": "奚隹",
+"d": "chicken",
+"h": "Another 奚 kind of bird 隹",
+"p": "jī"
+},
+"雨": {
+"c": "帀",
+"d": "rain",
+"h": "Rain drops falling from a cloud 帀",
+"p": "yǔ"
+},
+"電": {
+"c": "雨电",
+"d": "electricity; electric",
+"h": "A thunderbolt 电 cast by a storm cloud 雨",
+"p": "diàn"
+},
+"青": {
+"c": "龶月",
+"d": "nature's color; blue, green, black",
+"p": "qīng"
+},
+"非": {
+"d": "not, negative, non-; to oppose",
+"h": "Two bird's wings opposed; two people back-to-back",
+"p": "fēi"
+},
+"音": {
+"c": "立日",
+"d": "sound, tone, pitch, pronunciation",
+"h": "A tongue 立 forming a sound in the mouth 日",
+"p": "yīn"
+},
+"頁": {
+"c": "貝",
+"d": "page, sheet, leaf",
+"h": "A person's head",
+"p": "yè"
+},
+"題": {
+"c": "是頁",
+"d": "forehead; headline, title",
+"p": "tí",
+"ph": "是",
+"s": "頁"
+},
+"页": {
+"c": "贝",
+"d": "page, sheet, leaf",
+"h": "A person's head",
+"p": "yè"
+},
+"题": {
+"c": "是页",
+"d": "forehead; headline, title",
+"p": "tí",
+"ph": "是",
+"s": "页"
+},
+"食": {
+"c": "人良",
+"d": "food; to eat",
+"h": "A dish of food 良 with a lid on top 人",
+"p": "shí"
+},
+"飠": {
+"c": "人",
+"d": "food; to eat",
+"h": "A dish of food 良 with a lid on top 人",
+"p": "shí"
+},
+"飯": {
+"c": "飠反",
+"d": "meal, food; cooked rice",
+"p": "fàn",
+"ph": "反",
+"s": "飠"
+},
+"飲": {
+"c": "飠欠",
+"d": "to swallow, to drink; a kind of drink",
+"p": "yǐn",
+"ph": "欠",
+"s": "飠"
+},
+"餐": {
+"c": "歺又食",
+"d": "to eat, to dine; meal, food",
+"p": "cān",
+"s": "食"
+},
+"饣": {
+"c": "乚",
+"d": "food; to eat",
+"p": "shí"
+},
+"饭": {
+"c": "饣反",
+"d": "meal, food; cooked rice",
+"p": "fàn",
+"ph": "反",
+"s": "饣"
+},
+"首": {
+"c": "丷自",
+"d": "chief, head, leader",
+"h": "A deer's head 自 adorned with antlers 丷",
+"p": "shǒu"
+},
+"香": {
+"c": "禾日",
+"d": "incense; fragrant, aromatic",
+"h": "A herb 禾 with a sweet 甘 smell",
+"p": "xiāng"
+},
+"馬": {
+"c": "灬",
+"d": "horse; surname",
+"h": "A horse galloping to the left",
+"p": "mǎ"
+},
+"马": {
+"c": "一",
+"d": "horse; surname",
+"h": "Simplified form of 馬, a horse galloping to the left",
+"p": "mǎ"
+},
+"高": {
+"c": "亠口冋",
+"d": "tall, lofty; high, elevated",
+"h": "A tall palace",
+"p": "gāo"
+},
+"魚": {
+"c": "⺈田灬",
+"d": "fish",
+"h": "A fish swimming upwards",
+"p": "yú"
+},
+"鮑": {
+"c": "魚包",
+"d": "abalone; dried fish",
+"p": "bào",
+"ph": "包",
+"s": "魚"
+},
+"鸟": {
+"d": "bird",
+"h": "Simplified form of 烏, a bird",
+"p": "niǎo"
+},
+"鸡": {
+"c": "又鸟",
+"d": "chicken",
+"h": "Another 又 kind of bird 鸟",
+"p": "jī"
+},
+"麻": {
+"c": "广林",
+"d": "hemp, flax, sesame; numb",
+"h": "Hemp plants 林 growing in a greenhouse 广",
+"p": "má"
+},
+"麼": {
+"c": "麻幺",
+"d": "interrogative particle",
+"p": "me",
+"ph": "麻",
+"s": "幺"
+},
+"黄": {
+"c": "由八",
+"d": "yellow; surname",
+"h": "A jade pendant",
+"p": "huáng"
+},
+"黍": {
+"c": "禾人氺",
+"d": "broomcorn millet; glutinous millet",
+"h": "Grain 禾 that can be fermented to make wine 氺",
+"p": "shǔ"
+},
+"黎": {
+"c": "黍",
+"d": "many, numerous; black",
+"p": "lí"
+},
+"黑": {
+"c": "灬",
+"d": "black; dark",
+"h": "A man's face blacked by soot from a fire 灬",
+"p": "hēi"
+},
+"點": {
+"c": "黑占",
+"d": "dot, point, speck",
+"p": "diǎn",
+"ph": "占",
+"s": "黑"
+},
+"龶": {}
+}

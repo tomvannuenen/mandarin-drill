@@ -32,6 +32,7 @@ const nullStorage = { getItem: () => null, setItem() {} };
 let allItems = [];
 let byId = {};
 let decks = {}; // {deck: {label, voices}}
+let hanzi = {}; // {character: {d meaning, p pinyin, c components, s meaning part, ph sound part, h hint}}
 let t2s = {}; // {Traditional: Simplified} for the Mandarin deck's characters
 let conversations = [];
 let wordAudio = {}; // '<deck>/<word>' -> audio of the word's own card
@@ -56,8 +57,8 @@ const zs = (text, d) => (simplified(d) ? [...text].map((ch) => t2s[ch] || ch).jo
 const zl = (d) => (simplified(d) ? SCRIPT_LANG.cn : LANG_ATTR[d]);
 const HAN_RUN = /([㐀-鿿]+)/;
 // Text with Chinese in it (notes): the characters get the same font and script as the card's own.
-function mixedText(text, d) {
-  return text.split(HAN_RUN).map((part, i) => (i % 2 ? el('span', { class: 'zh-inline', lang: zl(d) }, zs(part, d)) : part));
+function mixedText(text, d, lang = null) {
+  return text.split(HAN_RUN).map((part, i) => (i % 2 ? el('span', { class: 'zh-inline', lang: lang || zl(d) }, lang ? part : zs(part, d)) : part));
 }
 
 // Deck items plus practice items for the current trouble spots (kept in byId so queued drills still resolve).
@@ -439,6 +440,7 @@ function renderWords(c) {
   const lang = zl(c.deck);
   const gloss = $('a-gloss');
   gloss.hidden = true;
+  renderChars(null);
   $('a-words').replaceChildren(
     ...c.words.map((w) => {
       const disp = c.char ? (w.zhDisp || w.zh) : zs(w.zh, c.deck);
@@ -453,6 +455,7 @@ function renderWords(c) {
         const wasActive = btn.classList.contains('active');
         for (const b of $('a-words').children) b.classList.remove('active');
         gloss.hidden = wasActive;
+        renderChars(wasActive ? null : { text: disp, roman: w.roman, lang: wLang, deck: c.deck });
         if (wasActive) return speakWord(w.zh, c.deck, c.voice);
         btn.classList.add('active');
         c.lookups.add(w.zh);
@@ -462,6 +465,52 @@ function renderWords(c) {
       return btn;
     })
   );
+}
+
+// Under a tapped word: its characters, and under a tapped character its parts, as deep as they go.
+// Every chip can be tapped; the trail (喜 › 口) leads back up.
+function renderChars(word) {
+  const box = $('a-chars');
+  const chars = word ? [...word.text].filter((ch) => hanzi[ch]) : [];
+  box.hidden = !chars.length;
+  if (!chars.length) return box.replaceChildren();
+  const mandarin = word.deck === 'mandarin';
+  // In a word, a character's reading is the one it has there (bú yào, xǐhuān), not the dictionary's.
+  const syllables = word.roman.split(/[-\s]+/);
+  const inWord = [...word.text].length === syllables.length
+    ? Object.fromEntries([...word.text].map((ch, i) => [ch, syllables[i]])) : {};
+  const reading = (ch, top) => (top && inWord[ch]) || (mandarin ? hanzi[ch].p : '') || '';
+  const chip = (ch, { top = false, role = '', onclick }) => el('button', { class: `hz-chip${role ? ` ${role}` : ''}`, onclick },
+    el('span', { class: 'hz-zh', lang: word.lang }, ch),
+    ...(reading(ch, top) ? [renderRoman(el('span', { class: 'hz-roman' }), reading(ch, top), word.deck)] : []),
+    el('small', {}, [role === 'means' ? 'meaning' : role === 'sounds' ? 'sound' : '', hanzi[ch].d].filter(Boolean).join(' · ')));
+  const detail = el('div', { class: 'hz-detail' });
+  const open = (trail) => {
+    const ch = trail[trail.length - 1];
+    const e = hanzi[ch];
+    for (const b of row.children) b.classList.toggle('active', b.dataset.ch === trail[0]);
+    const parts = [...(e.c || '')].filter((p) => hanzi[p]);
+    detail.replaceChildren(
+      ...(trail.length > 1 ? [el('p', { class: 'hz-trail' }, ...trail.flatMap((t, i) => [
+        ...(i ? [' › '] : []),
+        el('button', { class: 'hz-crumb', lang: word.lang, onclick: () => open(trail.slice(0, i + 1)) }, t),
+      ]))] : []),
+      el('p', { class: 'hz-line' }, el('span', { class: 'hz-zh', lang: word.lang }, ch), ' ',
+        ...(reading(ch, trail.length === 1) ? [renderRoman(el('b'), reading(ch, trail.length === 1), word.deck), ' '] : []),
+        e.d ? `= ${e.d}` : ''),
+      ...(e.h ? [el('p', { class: 'hz-hint' }, ...mixedText(e.h, word.deck, word.lang))] : []),
+      ...(parts.length ? [el('div', { class: 'hz-row' }, ...parts.map((p) => chip(p, {
+        role: p === e.s ? 'means' : p === e.ph ? 'sounds' : '', onclick: () => open([...trail, p]),
+      })))] : [])
+    );
+  };
+  const row = el('div', { class: 'hz-row' }, ...chars.map((ch) => {
+    const b = chip(ch, { top: true, onclick: () => open([ch]) });
+    b.dataset.ch = ch;
+    return b;
+  }));
+  box.replaceChildren(...(chars.length > 1 ? [row] : []), detail);
+  if (chars.length === 1) open([chars[0]]);
 }
 
 // The part of a phrase you can replace, and a few things to put there. Tap one to hear it.
@@ -1121,6 +1170,7 @@ async function init() {
   allItems = data.items;
   decks = data.decks;
   t2s = data.t2s || {};
+  hanzi = data.hanzi || {};
   conversations = data.conversations || [];
   version = data.version;
   byId = Object.fromEntries(allItems.map((i) => [i.id, i]));

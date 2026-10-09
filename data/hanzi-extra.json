@@ -1,0 +1,11 @@
+{
+  "_comment": "Corrections and additions to the character breakdowns (d meaning, p pinyin, c components, s the part that gives the meaning, ph the part that gives the sound, h how it is put together). Merged over data/hanzi.json.",
+  "這": {"s": null, "ph": null, "h": null},
+  "可": {"s": null, "ph": null, "h": "A mouth 口 giving approval"},
+  "冇": {"d": "not have (Cantonese)", "c": "", "h": "有 (to have) with its inner strokes taken out"},
+  "嚟": {"d": "to come (Cantonese)", "c": "口黎", "ph": "黎", "h": "口 marks a spoken Cantonese word"},
+  "喺": {"d": "to be at, in (Cantonese)", "c": "口係", "ph": "係", "h": "口 marks a spoken Cantonese word"},
+  "嗰": {"d": "that (Cantonese)", "c": "口個", "ph": "個", "h": "口 marks a spoken Cantonese word"},
+  "哋": {"d": "plural marker: we, you all, they (Cantonese)", "c": "口地", "ph": "地", "h": "口 marks a spoken Cantonese word"},
+  "佢": {"d": "he, she, it (Cantonese)", "c": "亻巨", "s": "亻", "ph": "巨"}
+}

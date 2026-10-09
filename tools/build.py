@@ -233,6 +233,67 @@ def simplified_map(out_items):
     return {c: to_simplified(c) for c in chars if to_simplified(c) != c}
 
 
+IDS_OPERATORS = set("⿰⿱⿲⿳⿴⿵⿶⿷⿸⿹⿺⿻？")
+HANZI_SOURCE = ROOT / ".local" / "mmah-dictionary.txt"  # Make Me a Hanzi dictionary.txt (not in the repo)
+
+
+def _short(definition, limit=48):
+    """The first sense or two of a dictionary definition."""
+    senses = [s.strip() for s in (definition or "").split(";") if s.strip()]
+    text = senses[0] if senses else ""
+    if len(senses) > 1 and len(text) + len(senses[1]) + 2 <= limit:
+        text += "; " + senses[1]
+    return text
+
+
+def hanzi_entry(rec):
+    """One Make Me a Hanzi record as {d meaning, p pinyin, c components, s meaning part, ph sound part, h hint}."""
+    ety = rec.get("etymology") or {}
+    parts = "".join(ch for ch in rec.get("decomposition", "") if ch not in IDS_OPERATORS and ch != rec["character"])
+    e = {"d": _short(rec.get("definition")), "p": (rec.get("pinyin") or [""])[0], "c": parts}
+    if ety.get("type") == "pictophonetic":
+        e.update({k: v for k, v in (("s", ety.get("semantic")), ("ph", ety.get("phonetic"))) if v and v in parts})
+    elif ety.get("hint"):
+        e["h"] = ety["hint"].replace("\xa0", " ")
+    return e
+
+
+def hanzi_table(chars, source, extra=None):
+    """Breakdowns for these characters and, so every part can be tapped too, for the parts inside them."""
+    extra = extra or {}
+    table, todo = {}, sorted(chars)
+    while todo:
+        ch = todo.pop()
+        if ch in table or (ch not in source and ch not in extra):
+            continue
+        e = {**(hanzi_entry(source[ch]) if ch in source else {"d": "", "p": "", "c": ""}), **extra.get(ch, {})}
+        table[ch] = {k: v for k, v in e.items() if v}
+        todo += list(e.get("c") or "")
+    return dict(sorted(table.items()))
+
+
+def load_hanzi(out_items, t2s, root=ROOT):
+    """data/hanzi.json is the committed table; it is refreshed whenever the dictionary file is on this machine."""
+    file = root / "data" / "hanzi.json"
+    table = json.loads(file.read_text()) if file.exists() else {}
+    text = "".join(e["zh"] for o in out_items for e in (o.get("fills") or [o]))
+    text += "".join(a["zh"] for o in out_items for a in o.get("swap", {}).get("with", []))
+    chars = {c for c in text if "\u3400" <= c <= "\u9fff"}
+    chars |= {t2s[c] for c in chars if c in t2s}
+    if HANZI_SOURCE.exists():
+        source = {}
+        for line in HANZI_SOURCE.read_text().splitlines():
+            rec = json.loads(line)
+            source[rec["character"]] = rec
+        extra_file = root / "data" / "hanzi-extra.json"
+        extra = {k: v for k, v in json.loads(extra_file.read_text()).items() if not k.startswith("_")} if extra_file.exists() else {}
+        fresh = hanzi_table(chars, source, extra)
+        if fresh != table:
+            file.write_text(json.dumps(fresh, ensure_ascii=False, indent=0, sort_keys=True) + "\n")
+        table = fresh
+    return table, sorted(c for c in chars if c not in table)
+
+
 def _romanize(deck, zh, roman, no_yi=False):
     """Checks syllable/character alignment; Mandarin also gets 不/一 tone sandhi."""
     return apply_sandhi(zh, roman, no_yi or deck != "mandarin")
@@ -461,8 +522,10 @@ def main(argv):
     body += json.dumps(convos, ensure_ascii=False, sort_keys=True)
     t2s = simplified_map(out)
     body += json.dumps(t2s, ensure_ascii=False, sort_keys=True)
+    hanzi, no_breakdown = load_hanzi(out, t2s)
+    body += json.dumps(hanzi, ensure_ascii=False, sort_keys=True)
     doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "voices": voices, "decks": decks, "items": out,
-           "conversations": convos, "t2s": t2s}
+           "conversations": convos, "t2s": t2s, "hanzi": hanzi}
     (ROOT / "phrases.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
     made, failed = ([], []) if no_audio else generate_audio(audio_jobs(out), ROOT, force_ids=force)
     stamp_service_worker(ROOT)
@@ -470,6 +533,8 @@ def main(argv):
         mine = [o for o in out if o["deck"] == deck]
         fills = sum(len(o.get("fills", [])) for o in mine)
         print(f"{deck}: {len(mine)} items ({fills} pattern sentences)")
+    if no_breakdown:
+        print(f"no character breakdown for: {''.join(no_breakdown)} (add them to data/hanzi-extra.json)")
     print(f"{len(made)} audio files generated")
     if failed:
         print(f"{len(failed)} audio file(s) failed (re-run to retry): {', '.join(failed[:10])}")

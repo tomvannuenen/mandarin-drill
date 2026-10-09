@@ -300,3 +300,28 @@ class RegisterAndSwap(unittest.TestCase):
         m = simplified_map(out)
         self.assertEqual((m["這"], m["個"], m["給"], m["嗎"]), ("这", "个", "给", "吗"))
         self.assertNotIn("我", m)
+
+
+class Hanzi(unittest.TestCase):
+    SOURCE = {r["character"]: r for r in [
+        {"character": "謝", "definition": "to thank; to refuse politely; to wither", "pinyin": ["xiè"], "decomposition": "⿰言射",
+         "etymology": {"type": "pictophonetic", "semantic": "言", "phonetic": "射", "hint": "speech"}},
+        {"character": "言", "definition": "words, speech", "pinyin": ["yán"], "decomposition": "⿱亠⿱二口",
+         "etymology": {"type": "ideographic", "hint": "A tongue sticking out of a mouth\xa0口"}},
+        {"character": "射", "definition": "to shoot", "pinyin": ["shè"], "decomposition": "⿰身寸"},
+        {"character": "口", "definition": "mouth", "pinyin": ["kǒu"], "decomposition": "？"},
+    ]}
+
+    def test_entry_keeps_parts_roles_and_a_short_meaning(self):
+        from tools.build import hanzi_entry
+        self.assertEqual(hanzi_entry(self.SOURCE["謝"]),
+                         {"d": "to thank; to refuse politely", "p": "xiè", "c": "言射", "s": "言", "ph": "射"})
+        self.assertEqual(hanzi_entry(self.SOURCE["言"])["h"], "A tongue sticking out of a mouth 口")
+        self.assertEqual(hanzi_entry(self.SOURCE["口"])["c"], "")
+
+    def test_table_includes_the_parts_so_they_can_be_tapped_and_applies_corrections(self):
+        from tools.build import hanzi_table
+        table = hanzi_table({"謝", "嚟"}, self.SOURCE, {"嚟": {"d": "to come (Cantonese)", "c": "口黎"}, "射": {"d": "to shoot an arrow"}})
+        self.assertEqual(set(table), {"謝", "言", "射", "口", "嚟"})
+        self.assertEqual(table["射"]["d"], "to shoot an arrow")
+        self.assertEqual(table["嚟"], {"d": "to come (Cantonese)", "c": "口黎"})

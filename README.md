@@ -35,6 +35,8 @@ Practice:
 - Useful before polite: essentials come first, then your wishes and the lesson weeks; the politer, more formal
   or rarer way to say something waits until the everyday phrases are in.
 - Tap any word (in answers, on tiles, in "Which part?") to hear just that word.
+- Tap a word in an answer to see its characters; tap a character to see what it means and what it is made of;
+  tap a part to go deeper. Dashed green marks the part that gives the meaning, dashed purple the sound.
 - Missing a *Read it* card marks a **reading** problem (Me → "Hard to read"), kept apart from speaking trouble
   spots ("Hard to say"): the word's pinyin returns on tiles and its Read it card comes first in the next sessions,
   until you read it right on later days (four at most, however often it was missed). "Almost" changes nothing.
@@ -132,5 +134,9 @@ uv run --no-project --with opencc-python-reimplemented --with edge-tts --with nu
 /opt/homebrew/opt/node@18/bin/node --test tests/
 python3 -m http.server 8765
 ```
+
+Character meanings and breakdowns (`data/hanzi.json`) come from [Make Me a Hanzi](https://github.com/skishore/makemeahanzi)'s
+`dictionary.txt` (derived from Unihan and cjk-decomp; LGPL). The build refreshes the table when that file is at
+`.local/mmah-dictionary.txt`; corrections and Cantonese-only characters go in `data/hanzi-extra.json`.
 
 Scheduling uses [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) 5.4.2 (MIT), vendored in `vendor/`.

@@ -20,12 +20,13 @@ import { flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/w
 import { weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from './lib/motivation.js';
 import { composeToday, withActivities, snapshot, outcome, dueSoon, estimateMinutes } from './lib/today.js';
 import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId, reclassifyReadingFlags, displayFor } from './lib/chars.js';
+import { hskItems, hskPool, hskQueue, hskWaiting, typedMatches, hskLevel } from './lib/hsk.js';
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 const LANG_NAME = { mandarin: 'Mandarin', cantonese: 'Cantonese' };
 const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 // Which tab each screen belongs to; screens without a tab are full-screen.
-const TAB_OF = { home: 'home', done: 'home', explore: 'explore', browse: 'explore', book: 'explore', wish: 'explore', me: 'me', checkin: 'me', settings: 'me' };
+const TAB_OF = { home: 'home', done: 'home', explore: 'explore', browse: 'explore', book: 'explore', hsk: 'explore', wish: 'explore', me: 'me', checkin: 'me', settings: 'me' };
 const ACCENT = { tw: 'TW', cn: 'CN', hk: 'HK', coach: 'Coach' };
 
 const storage = (() => { try { return window.localStorage; } catch { return null; } })();
@@ -39,6 +40,7 @@ let hanzi = {}; // {character: {d meaning, p pinyin, c components, s meaning par
 let t2s = {}; // {Traditional: Simplified} for the Mandarin deck's characters
 let conversations = [];
 let wordAudio = {}; // '<deck>/<word>' -> audio of the word's own card
+let hsk = { lessons: {}, list: [] }; // HSK 1 words and characters, as word-card items
 let plan = null; // Claude's daily focus note
 let syncCfg = loadConfig();
 let syncDirty = false;
@@ -80,6 +82,16 @@ function chars() {
     byId[x.id] = x;
   }
   return c;
+}
+
+// Word cards for the day: words from your phrases first, then the HSK 1 book's words and characters in book order.
+function dailyChars() {
+  const c = chars();
+  if (deck() !== 'mandarin') return c;
+  const have = new Set(c.map((x) => x.zh));
+  const extra = hsk.list.filter((x) => !have.has(x.zh));
+  for (const x of extra) byId[x.id] = x;
+  return [...c, ...extra];
 }
 
 // ---------- persistence and sync
@@ -225,7 +237,7 @@ function show(view) {
   $('which').hidden = true;
   renderDeckPills();
   ({ home: renderHome, explore: renderExplore, browse: renderBrowse, me: renderMe, settings: renderSettings,
-    book: renderBook, checkin: renderCheckin, wish: renderWishes })[view]?.();
+    book: renderBook, hsk: renderHsk, checkin: renderCheckin, wish: renderWishes })[view]?.();
   window.scrollTo(0, 0);
 }
 
@@ -290,7 +302,7 @@ function todayPlan(now = new Date()) {
   const characters = cfg.characters !== false;
   // Once the day's session is done, only what is really due is offered again (no pulling reviews forward).
   const topUp = progress.stats.dailyDone?.[deck()] !== localDate(now);
-  return composeToday({ items: items(), drills: d, chars: characters ? chars() : [], progress, plan, now, newLimit: newLimit(), deck: deck(), characters, topUp });
+  return composeToday({ items: items(), drills: d, chars: characters ? dailyChars() : [], progress, plan, now, newLimit: newLimit(), deck: deck(), characters, topUp });
 }
 
 function readyConversation() {
@@ -326,6 +338,8 @@ function renderHome() {
   const { queue, counts } = todayPlan(now);
   const convo = readyConversation();
   $('start-block').hidden = !queue.length;
+  // A round is short; once the first is done, the seal offers another one with what is left.
+  $('start-cta').textContent = progress.stats.dailyDone?.[deck()] === localDate(now) ? 'Another round' : "Start today's practice";
   $('rest-block').hidden = !!queue.length;
   if (queue.length) {
     const parts = [
@@ -393,6 +407,15 @@ function contentFor(card) {
     return {
       char: true, zh: item.zh, zhDisp, zhS: item.zhS, script, roman: item.roman, en: item.gloss, words: [word], example: item.example,
       audio: item.audio, voice: item.audio ? pickVoice(item) : null, played: false, deck: item.deck, flagged: new Set(),
+      ...tracking(),
+    };
+  }
+  if (card.type === 'type') {
+    const word = { zh: item.zh, roman: item.roman, gloss: item.gloss };
+    return {
+      typing: true, zh: item.zh, roman: item.roman, en: item.gloss, words: [word], example: item.example,
+      audio: item.audio, voice: item.audio ? pickVoice(item) : null, played: false, deck: item.deck, flagged: new Set(),
+      tries: 0, typed: '', result: null,
       ...tracking(),
     };
   }
@@ -662,6 +685,59 @@ function finishBuild(rating) {
   playCurrent();
 }
 
+// Type it: meaning and pinyin shown, the word heard; type the characters on a Chinese keyboard. Either script
+// counts. First try = Got it, second = Almost, else Didn't know.
+function renderTyping(c) {
+  const input = el('input', {
+    class: `type-input${c.result ? (c.result >= 2 ? ' right' : ' wrong') : ''}`, type: 'text', lang: 'zh-Hant',
+    autocomplete: 'off', autocorrect: 'off', autocapitalize: 'off', spellcheck: 'false', enterkeyhint: 'done',
+    'aria-label': 'Type the characters', placeholder: '打字',
+  });
+  input.value = c.typed;
+  input.disabled = !!c.result;
+  input.addEventListener('input', () => { c.typed = input.value; });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.isComposing) {
+      e.preventDefault();
+      checkTyped(c, input);
+    }
+  });
+  c.input = input;
+  return [
+    el('p', { class: 'prompt-en' }, c.en),
+    el('div', { class: 'type-hear' },
+      renderRoman(el('span', { class: 'type-roman' }), c.roman, c.deck),
+      el('button', { class: 'icon-btn', 'aria-label': 'Play again', onclick: () => playCurrent({ next: true }) }, icon('play'))),
+    el('div', { class: 'type-row' }, input,
+      el('button', { class: 'btn small', onclick: () => checkTyped(c, input), ...(c.result ? { hidden: '' } : {}) }, 'Check')),
+  ];
+}
+
+function checkTyped(c, input) {
+  if (c.result || !input.value.trim()) return;
+  if (typedMatches(input.value, c.zh, t2s)) return finishTyped(c.tries === 0 ? 3 : 2);
+  c.tries += 1;
+  input.classList.add('wrong');
+  setTimeout(() => {
+    input.classList.remove('wrong');
+    if (c.tries >= 2) return finishTyped(1);
+    input.select();
+  }, 700);
+}
+
+function finishTyped(rating) {
+  const { card, c } = session.current;
+  if (c.result) return;
+  c.result = rating;
+  c.revealMs = Math.round(performance.now() - c.shownAt);
+  $('card-kind').textContent = rating === 3 ? 'Right' : rating === 2 ? 'Right the second time' : "Here's how it's written";
+  $('prompt').replaceChildren(...promptFor(card, c));
+  $('answer').hidden = false;
+  $('reveal').hidden = true;
+  $('continue').hidden = false;
+  playCurrent();
+}
+
 // Outside the card view (conversations, tone check): characters are tagged with their Traditional source, so
 // the same 繁/简 button can redraw them in place.
 function zhNode(tag, attrs, text, d) {
@@ -718,7 +794,7 @@ function drawCard(card, c) {
   $('a-note').replaceChildren(...(c.note ? noteNodes(c.note, c.deck) : []));
   $('a-note').hidden = !c.note;
   $('a-example').hidden = !c.example;
-  $('a-example').replaceChildren(...(c.example ? [el('p', { class: 'section' }, 'Hear it in a sentence'), sayLine(c.example, c.deck)] : []));
+  $('a-example').replaceChildren(...(c.example ? [el('p', { class: 'section' }, c.example.inWord ? 'Hear it in its word' : 'Hear it in a sentence'), sayLine(c.example, c.deck)] : []));
   // Word order: the rule behind the sentence, and after a build the English words in Chinese order.
   $('a-order').replaceChildren(...(c.order ? mixedText(c.order, c.deck) : []));
   $('a-order').hidden = !c.order;
@@ -803,6 +879,7 @@ function promptFor(card, c) {
       optionButtons(c, (o) => [renderRoman(el('span'), o.word.roman, c.deck)]),
     ];
   }
+  if (c.typing) return renderTyping(c);
   if (c.char) {
     return [
       el('p', { class: 'prompt-char', lang: SCRIPT_LANG[c.script] || lang }, c.zhDisp),
@@ -1021,6 +1098,7 @@ function showCard() {
   $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?', match: 'Is this what you hear?', tone: 'Which tones?', dictate: 'Rebuild it by ear', pairs: 'Match the pairs', passage: 'Listen through' }[c.activity]
     : c.build ? 'Build the sentence'
     : c.char ? 'Read it'
+    : c.typing ? 'Type it'
     : c.drill
     ? 'Trouble spot'
     : c.level === 'situation' ? 'What would you say?'
@@ -1039,9 +1117,9 @@ function showCard() {
   $('rec').classList.remove('recording');
   $('rec-row').hidden = true;
   $('a-en').textContent = c.en;
-  $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || (c.build && !c.activity) || ['echo', 'chain', 'pairs', 'passage'].includes(c.activity);
+  $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || (c.build && !c.activity) || c.typing || ['echo', 'chain', 'pairs', 'passage'].includes(c.activity);
   $('continue').hidden = true;
-  $('reveal').textContent = c.activity === 'chain' ? 'Next part' : c.build ? "I'm stuck, show me" : c.activity ? "I don't know" : 'Show answer';
+  $('reveal').textContent = c.activity === 'chain' ? 'Next part' : c.build ? "I'm stuck, show me" : c.activity || c.typing ? "I don't know" : 'Show answer';
   $('reveal').hidden = false;
   $('grades').hidden = true;
   $('which').hidden = true;
@@ -1051,6 +1129,10 @@ function showCard() {
   else if (c.activity === 'chain') playStep(c);
   else if (c.rows) $('reveal').hidden = true;
   else if (c.activity) playCurrent();
+  else if (c.typing) {
+    playCurrent();
+    c.input.focus();
+  }
 
   // Every card moves the counter on; a card that comes back later adds one to the total.
   $('progress-bar').style.width = `${(session.pos / session.queue.length) * 100}%`;
@@ -1060,6 +1142,7 @@ function showCard() {
 function reveal() {
   if (!session || !$('answer').hidden) return;
   if (session.current.c.build) return finishBuild(1);
+  if (session.current.c.typing) return finishTyped(1);
   if (session.current.c.activity === 'chain') {
     const { card, c } = session.current;
     c.step += 1;
@@ -1131,7 +1214,7 @@ function commit(rating) {
   });
   // Reading, not speaking. "Almost" neither flags the word nor counts toward its recovery.
   if (c.char) { if (rating !== 2) markReading(progress, c.deck, c.zh, rating >= 3, now); }
-  else if (rating >= 3) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words, now);
+  else if (rating >= 3 && !c.typing) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words, now);
   for (const zh of c.flagged) {
     // On a read-aloud card the problem is reading the characters, not saying the word.
     if (card.type === 'read') {
@@ -1193,6 +1276,7 @@ function finishSession() {
 function renderDone(r) {
   pendingEnd = null;
   show('done');
+  $('again').hidden = !todayPlan().queue.length;
   $('done-title').textContent = r.pct >= 80 ? 'Nicely done.' : r.pct >= 50 ? 'Good work.' : 'That was a hard one. Well done for showing up.';
   $('done-stats').replaceChildren(
     ...[[r.cards, 'cards'], [r.minutes, 'minutes'], [`${r.pct}%`, 'got it']].map(([n, l]) => el('div', { class: 'stat' }, el('b', {}, String(n)), el('span', {}, l)))
@@ -1236,9 +1320,51 @@ function renderExplore() {
   $('tones-row').hidden = deck() !== 'mandarin';
   $('tones-sub').textContent = words.length ? '10 questions' : 'after a few words';
   $('browse-sub').textContent = `${items().length}`;
+  $('hsk-row').hidden = deck() !== 'mandarin' || !hsk.list.length;
+  const hskPoolNow = hskPool(hsk.list, hskLessons(), progress.settings.hskWhat || 'both');
+  $('hsk-sub').textContent = `${hskPoolNow.filter((x) => hskLevel(progress, x) === 'solid').length} of ${hskPoolNow.length} solid`;
   const wishes = wishStatus(progress, allItems);
   const waiting = wishes.filter((w) => !w.item).length;
   $('wish-sub').textContent = wishes.length ? `${wishes.length - waiting} ready${waiting ? `, ${waiting} waiting` : ''}` : '';
+}
+
+// ---------- HSK 1 characters
+
+const hskLessons = () => progress.settings.hskLessons || [1, 2, 3];
+const HSK_WHAT = [['both', 'Words and characters'], ['words', 'Words'], ['chars', 'Single characters']];
+
+function renderHsk() {
+  const now = new Date();
+  const lessons = hskLessons();
+  const what = progress.settings.hskWhat || 'both';
+  const set = (k, v) => { progress.settings[k] = v; persist(); renderHsk(); };
+  $('hsk-lessons').replaceChildren(...Object.keys(hsk.lessons).map(Number).map((n) => el('button', {
+    class: `chip lesson${lessons.includes(n) ? ' on' : ''}`, 'aria-label': `Lesson ${n}: ${hsk.lessons[n]}`,
+    onclick: () => set('hskLessons', lessons.includes(n) ? lessons.filter((x) => x !== n) : [...lessons, n].sort((a, b) => a - b)),
+  }, `${n}`)));
+  $('hsk-what').replaceChildren(...HSK_WHAT.map(([k, label]) => el('button', { class: `chip lesson${what === k ? ' on' : ''}`, onclick: () => set('hskWhat', k) }, label)));
+  syncScriptViews();
+  const pool = hskPool(hsk.list, lessons, what);
+  for (const [mode, id] of [['read', 'hsk-read'], ['type', 'hsk-type']]) {
+    const n = hskWaiting(pool, progress, mode, now);
+    $(id).disabled = !pool.length;
+    $(`${id}-n`).textContent = pool.length ? (n ? `${Math.min(n, 15)} to do` : 'all done, practise again') : '';
+  }
+  const d = 'mandarin';
+  $('hsk-list').replaceChildren(...lessons.map((n) => el('div', { class: 'week' },
+    el('h3', {}, `Lesson ${n} · `, zhNode('span', {}, hsk.lessons[n], d)),
+    ...pool.filter((x) => x.lesson === n).map((x) => el('button', {
+      class: `row${x.single ? ' single' : ''}`, onclick: () => (x.audio ? play(x.audio[pickVoice(x)][0]) : speakText(x.zh, d)),
+    },
+    el('span', { class: 'zh-s' }, el('i', { class: `lvl lvl-${hskLevel(progress, x)}` }), zhNode('span', {}, x.zh, d)),
+    el('span', { class: 'en-s' }, x.gloss),
+    renderRoman(el('span', { class: 'pinyin-s' }), x.roman, d))))));
+}
+
+function startHsk(mode) {
+  const pool = hskPool(hsk.list, hskLessons(), progress.settings.hskWhat || 'both');
+  for (const x of pool) byId[x.id] = x;
+  startSession(hskQueue(pool, progress, mode, new Date()));
 }
 
 function groupLabel(item) {
@@ -1471,6 +1597,7 @@ function wire() {
     if (e.target.closest('.deck-pill')) switchDeck();
   });
   $('start').addEventListener('click', startToday);
+  $('again').addEventListener('click', startToday);
   $('more').addEventListener('click', () => { extraNew += decks[deck()]?.newPerDay || 5; startToday(); });
   $('quit').addEventListener('click', () => { session = null; show('home'); });
   $('reveal').addEventListener('click', reveal);
@@ -1488,6 +1615,8 @@ function wire() {
     commit(session.current.pending);
   });
   $('tones-row').addEventListener('click', startTones);
+  $('hsk-read').addEventListener('click', () => startHsk('read'));
+  $('hsk-type').addEventListener('click', () => startHsk('type'));
   $('order-row').addEventListener('click', () => startSession(orderQueue(items(), progress, deck())));
   $('cv-done').addEventListener('click', () => (pendingEnd ? renderDone(pendingEnd) : show('explore')));
   document.addEventListener('keydown', (e) => {
@@ -1574,6 +1703,8 @@ async function init() {
   for (const [d, table] of Object.entries(data.words || {})) {
     for (const [zh, path] of Object.entries(table)) wordAudio[`${d}/${zh}`] ||= { [decks[d].voices[1]]: [path, path] };
   }
+  hsk = { lessons: data.hsk?.lessons || {}, list: hskItems(data.hsk?.entries || [], (zh) => wordAudio[`mandarin/${zh}`] || null) };
+  for (const x of hsk.list) byId[x.id] ||= x;
   // One-time cleanup: speaking flags that really came from failed read-aloud cards become reading problems.
   if (!(progress.migrations || []).includes('reading-flags-v1')) {
     for (const d of Object.keys(decks)) reclassifyReadingFlags(progress, allItems, d, new Date());

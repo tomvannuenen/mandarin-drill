@@ -20,27 +20,28 @@ Three tabs:
 Practice:
 - **Say it**: English is shown → say it out loud → reveal → *Didn't know / Almost / Got it*. After a miss on a
   multi-word phrase, pick the part that tripped you up; it becomes a trouble spot.
-- **Characters, a little a day** (about 3 word cards and 2 sentence builds in the daily session):
+- **Characters, a little a day** (2 word cards and a sentence build in each round):
   *Read it* cards show a word from phrases you've met (most frequent first): say it, then check. Once you can
   say a phrase, *Build the sentence* asks you to tap word tiles into order (with two decoys). Tiles show pinyin
   under words you can't read yet; it disappears once you've recognised a word on two different days.
-- The daily session has a fixed shape (40 cards at most): a short warm-up (the 5 weakest trouble spots, the 3
-  hardest-to-read words, today's focus), then reviews with the day's new material mixed in. The new speaking
-  cards, 3 new word cards and 3 sentence builds always get their place; reviews give way when the day is full.
+- Practice comes in **short rounds** of about 15 cards (5 to 8 minutes): a short warm-up (the 2 weakest trouble
+  spots, the hardest-to-read word, today's focus), then reviews with at most 2 new phrases mixed in. When a round
+  ends, *Another round* (on the end screen and on Today) takes what is left: more new phrases, the rest of what
+  is due.
 - **繁 / 简** at the top of every Mandarin card switches all characters (answers, tiles, notes) between
   Traditional and Simplified, from that card on. Settings → *Characters* also offers *Mixed*: Traditional,
   except *Read it* cards for words you won't see written in Hong Kong.
 - A card can show how the phrase sounds (*Everyday*, *Casual*, *Polite*, *Formal*), and which part can be
   swapped: that word is underlined, with a few things to put in its place.
-- **The mix** (`MIX` in `lib/today.js`, about 40 cards): speaking a sentence from its meaning is the centre (11,
-  topped up with phrases due in the next three days); 5 listening tasks on phrases not otherwise tested that day
-  (rebuild by ear twice, missing word, pick by ear, right or wrong) plus match the pairs; 2 tone picks; listen and
-  repeat or build-up for new and shaky phrases; 4 word-order builds; 4 word cards and 2 read-aloud sentences;
-  3 trouble words, asked inside a sentence; 1 old-style listening card. It closes on a passage: five of the day's
-  sentences played in a row, then "how much did you catch?".
-- **The daily session is the lesson**; Explore is extra. A session holds about 40 cards, and cannot
-  run away: a card comes back once at most, nothing comes back after 60 cards, and fewer new phrases are added
-  while earlier ones are still shaky (none once twelve are open).
+- **The mix** of a round (`MIX` and `ROUND_NEW` in `lib/today.js`): speaking a sentence from its meaning is the
+  centre (5, topped up with phrases due in the next three days, at most 2 of them new); listen and repeat or
+  build-up for new and shaky phrases; 1 word-order build; 2 word cards and 1 read-aloud sentence; 2 trouble
+  words, asked inside a sentence. The day's first round adds one listening task on a phrase not otherwise tested
+  that day (rebuild by ear, else missing word or pick by ear), match the pairs, a tone pick, and closes on a
+  passage: three of the day's sentences played in a row, then "how much did you catch?".
+- **The rounds are the lesson**; Explore is extra. A round cannot run away: a card comes back once at most,
+  nothing comes back after 25 cards, and fewer new phrases are added while earlier ones are still shaky (none
+  once twelve are open).
 - **Learn before being tested.** A new phrase is first heard and repeated, a long one built up from its end
   (一下嗎 → 解釋一下嗎 → …), and only tested a few cards later. A phrase that went wrong is practised another
   way before it is asked again, in the session and at its next review.
@@ -55,6 +56,12 @@ Practice:
 - **What works for you** (Me): for each way of practising, how often the phrase was then said right *on a later
   day*. The session leans on the ways with the best record, keeps trying the untried, and drops a way once it
   has eight results and trails the best by 25 points (`lib/methods.js`).
+- **HSK 1 characters** (Explore): every word of HSK标准教程 1 (`data/hsk1.json`, by lesson) and each of its
+  characters on its own. Pick lessons and words, single characters or both; *Read* shows the characters (say
+  them, then check: the same Read it card as in the rounds) and *Type* gives the meaning, pinyin and sound and
+  asks you to type the characters on a Chinese keyboard (Traditional or Simplified both count). Due cards come
+  first, then new ones in book order. Rounds also take their new word cards from here, after the words of your
+  phrases. A character read differently in its word than on its own (覺 in 睡覺) is heard in its word.
 - **Word order** (Explore): ten sentence builds from phrases you've met, never-built ones first. After a build
   the card shows the English words in Chinese order (you · like · drink · what) and, where there is one, the
   rule behind it (items with `"order": "Place before the verb: 在 + place + verb"`). Patterns are built with a

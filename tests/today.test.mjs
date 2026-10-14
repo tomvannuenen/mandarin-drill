@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 import { defaults } from '../lib/store.js';
 import { grade } from '../lib/srs.js';
-import { composeToday, withActivities, MIX, snapshot, outcome, dueSoon, estimateMinutes } from '../lib/today.js';
+import { composeToday, withActivities, MIX, ROUND_NEW, snapshot, outcome, dueSoon, estimateMinutes } from '../lib/today.js';
 
 const NOW = new Date(2026, 8, 27, 8);
 const DAY = 86400000;
@@ -22,7 +22,7 @@ test('composeToday mixes in a few new word cards and sentence builds', () => {
   p.goodCounts.a = 2;
   const chars = ['我', '喝', '你', '好'].map((zh) => ({ id: `c/mandarin/${zh}`, kind: 'char', deck: 'mandarin', zh }));
   const { queue, counts } = composeToday({ items, drills: [], chars, progress: p, plan: null, now: NOW, newLimit: 0, deck: 'mandarin', charLimit: 3, buildLimit: 2 });
-  assert.deepEqual(queue.map((q) => q.type).sort(), ['build', 'char', 'char', 'char', 'listen', 'say'].sort());
+  assert.deepEqual(queue.map((q) => q.type).sort(), ['build', 'char', 'char', 'char', 'say'].sort());
   assert.deepEqual([counts.chars, counts.builds], [3, 1]);
 });
 
@@ -111,7 +111,7 @@ test('composeToday opens on trouble words, then new phrases, focus and reviews',
   assert.ok(!stale.queue.some((q) => q.key === 'c:say'), 'an old plan is ignored');
 });
 
-test('composeToday keeps each kind of card to its share, and new material always fits', () => {
+test('composeToday keeps a round short: each kind to its share, a couple of new phrases, the rest for another round', () => {
   const p = defaults();
   const words = '一二三四五六七八九十'.split('');
   const items = Array.from({ length: 50 }, (_, n) => ({ id: `i${n}`, kind: 'phrase', deck: 'mandarin', week: 1, words: [{ zh: '我' }, { zh: '喝' }] }));
@@ -132,17 +132,16 @@ test('composeToday keeps each kind of card to its share, and new material always
   });
   const { queue, counts } = composeToday({ items, drills, chars, progress: p, plan: null, now: NOW, newLimit: 14, deck: 'mandarin' });
   const n = (f) => queue.filter(f).length;
-  assert.deepEqual(queue.slice(0, MIX.drills).map((q) => q.id), ['十', '九', '八'].map((zh) => `w/mandarin/${zh}`), 'the weakest trouble words open');
+  assert.deepEqual(queue.slice(0, MIX.drills).map((q) => q.id), ['十', '九'].map((zh) => `w/mandarin/${zh}`), 'the weakest trouble words open');
   assert.equal(n((q) => q.id.startsWith('w/')), MIX.drills);
-  assert.equal(n((q) => q.type === 'say' && !q.id.startsWith('w/')), 14, 'all 14 new phrases, though the share is 11');
+  assert.equal(n((q) => q.type === 'say' && !q.id.startsWith('w/')), MIX.say);
+  assert.equal(n((q) => q.type === 'say' && !p.cards[q.key]), ROUND_NEW, 'a couple of the 14 new phrases; the rest wait for another round');
   assert.equal(n((q) => q.type === 'char'), MIX.chars);
   assert.equal(n((q) => q.type === 'read'), MIX.read);
   assert.equal(n((q) => q.type === 'listen'), MIX.listen);
   assert.equal(n((q) => q.type === 'build'), MIX.builds);
-  assert.deepEqual([counts.fresh, counts.chars, counts.builds], [14, 2, 0]);
-  // No kind comes in a block: the two read-aloud cards sit in different halves.
-  const reads = queue.map((q, i) => (q.type === 'read' ? i : -1)).filter((i) => i >= 0);
-  assert.ok(reads[0] < queue.length / 2 && reads[1] > queue.length / 2);
+  assert.deepEqual([counts.fresh, counts.chars, counts.builds], [ROUND_NEW, 2, 0]);
+  assert.ok(queue.length <= 15, `a short round (${queue.length} cards)`);
 });
 
 test('composeToday fills the speaking share with phrases that are due soon', () => {
@@ -177,12 +176,12 @@ test('withActivities: learn before test, practice after a miss, listening tasks,
   const types = out.map((q) => q.type);
   const n = (t) => types.filter((x) => x === t).length;
   const bFirst = keys[practice].split(':')[1];
-  assert.deepEqual([n('dictate'), n('fill'), n('ear'), n('match')].map((x, i) => x - (['dictate', 'fill', 'ear', 'match'][i] === bFirst ? 1 : 0)), [2, 1, 1, 1], 'five listening tasks, rebuilding by ear twice');
-  assert.equal(n('tone') - (bFirst === 'tone' ? 1 : 0), 2);
+  assert.deepEqual([n('dictate'), n('fill'), n('ear'), n('match')].map((x, i) => x - (['dictate', 'fill', 'ear', 'match'][i] === bFirst ? 1 : 0)), [1, 0, 0, 0], 'one listening task: rebuilding by ear');
+  assert.equal(n('tone') - (bFirst === 'tone' ? 1 : 0), 1);
   assert.equal(out.find((q) => q.type === 'pairs').ids.length, 4);
   const last = out.at(-1);
   assert.equal(last.type, 'passage');
-  assert.deepEqual(last.ids, out.filter((q) => q.type === 'say').map((q) => q.id).slice(0, 5), "today's sentences, to listen through");
+  assert.deepEqual(last.ids, out.filter((q) => q.type === 'say').map((q) => q.id).slice(0, 3), "today's sentences, to listen through");
   assert.ok(out.filter((q) => ['dictate', 'fill', 'ear', 'match', 'tone'].includes(q.type) && q.id !== 'b').every((q) => !['new', 'a', 'c', 'd', 'e', 'f'].includes(q.id)), 'listening goes to phrases not tested today');
   const used = out.filter((q) => q.activity && q.type !== 'passage').flatMap((q) => q.ids || [q.id]);
   assert.equal(new Set(used).size, used.length, 'each on a different phrase');

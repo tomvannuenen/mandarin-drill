@@ -488,3 +488,21 @@ body.pinyin-first .prompt-char { font-size: 64px; }
 .tile.used { visibility: hidden; }
 .tile-zh { font-size: 26px; line-height: 1.2; }
 .tile-roman { font-family: var(--serif); font-size: 13px; }
+
+/* ---------- HSK 1 characters ---------- */
+.chip.lesson { font-family: var(--sans); font-size: 15px; min-width: 40px; text-align: center; }
+.hsk-start { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 4px 0 8px; }
+.hsk-start .btn { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.hsk-start small { font-size: 12px; font-weight: 400; opacity: .8; }
+/* Characters first here, whatever the reading setting: reading them is the point of this list. */
+#hsk-list .row .zh-s, body.pinyin-first #hsk-list .row .zh-s { grid-row: 1; font-size: 24px; color: var(--ink); }
+#hsk-list .row .pinyin-s, body.pinyin-first #hsk-list .row .pinyin-s { grid-row: 2; font-size: 15px; font-weight: 400; }
+#hsk-list .row.single .zh-s { font-size: 28px; }
+.type-hear { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 10px 0 18px; }
+.type-roman { font-family: var(--serif); font-size: 22px; }
+.type-row { display: flex; gap: 8px; max-width: 30ch; margin: 0 auto; }
+.type-input { flex: 1; min-width: 0; font-family: var(--han); font-size: 28px; text-align: center; padding: 8px 12px; border-radius: 14px; border: 1.5px solid var(--rule); background: var(--paper-2); color: var(--ink); }
+.type-input:focus { outline: none; border-color: var(--ink-2); }
+.type-input.wrong { border-color: var(--seal); animation: shake .3s; }
+.type-input.right { border-color: var(--good); }
+@keyframes shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }

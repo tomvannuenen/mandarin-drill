@@ -39,6 +39,11 @@
 "h": "A nail",
 "p": "dīng"
 },
+"丂": {
+"c": "一",
+"d": "obstruction of breath (qi); variant of 考",
+"p": "kǎo"
+},
 "七": {
 "c": "一乚",
 "d": "seven",
@@ -84,10 +89,22 @@
 "d": "and; with",
 "p": "yǔ"
 },
+"且": {
+"c": "月一",
+"d": "moreover, also (post-subject)",
+"h": "A stone altar",
+"p": "qiě"
+},
 "业": {
 "c": "一",
 "d": "business, profession; to study, to work",
 "p": "yè"
+},
+"东": {
+"c": "七小",
+"d": "east, eastern, eastward",
+"h": "Simplified form of 東, the sun 日 rising behind a tree 木",
+"p": "dōng"
 },
 "两": {
 "c": "一冂从",
@@ -221,6 +238,11 @@
 "d": "also, too",
 "p": "yě"
 },
+"习": {
+"c": "冫",
+"d": "to study, to practice; habit",
+"p": "xí"
+},
 "书": {
 "c": "丨",
 "d": "book, letter, document; writing",
@@ -272,6 +294,13 @@
 "h": "Picture of a cross-shaped house or temple",
 "p": "yà"
 },
+"些": {
+"c": "此二",
+"d": "little, few; rather, somewhat",
+"p": "xiē",
+"ph": "此",
+"s": "二"
+},
 "亠": {
 "c": "丶一",
 "d": "lid, cover; head",
@@ -283,16 +312,34 @@
 "h": "A man 人 in a coffin; see 亾",
 "p": "wáng"
 },
+"交": {
+"c": "六乂",
+"d": "to connect; to deliver, to exchange",
+"h": "A person with crossed (intersecting) legs",
+"p": "jiāo"
+},
 "亥": {
 "c": "亠",
 "d": "12th terrestrial branch",
 "p": "hài"
+},
+"京": {
+"c": "亠口小",
+"d": "capital city",
+"h": "A capital building on a hill",
+"p": "jīng"
 },
 "亭": {
 "c": "亠口冖丁",
 "d": "pavilion; erect",
 "h": "亠, 口, and 冖 form a picture of a pavilion; 丁 provides the pronunciation",
 "p": "tíng"
+},
+"亮": {
+"c": "亠口冖几",
+"d": "bright, brilliant, radiant, light",
+"h": "A lit oil lamp",
+"p": "liàng"
 },
 "亲": {
 "c": "立一小",
@@ -393,6 +440,11 @@
 "h": "A person 亻 who hosts 主; 主 also provides the pronunciation",
 "p": "zhù"
 },
+"体": {
+"c": "亻本",
+"d": "body; group, class",
+"p": "tǐ"
+},
 "何": {
 "c": "亻可",
 "d": "what, why, where, which, how",
@@ -480,6 +532,12 @@
 "h": "Cutting 一 off the feet 儿",
 "p": "wù"
 },
+"元": {
+"c": "二儿",
+"d": "first; dollar",
+"h": "A man 儿 with two lines emphasizing their head 二",
+"p": "yuán"
+},
 "兄": {
 "c": "口儿",
 "d": "elder brother",
@@ -504,6 +562,13 @@
 "h": "A beast 兄 with two horns 丷",
 "p": "duì"
 },
+"兒": {
+"c": "臼儿",
+"d": "son, child",
+"p": "ér",
+"ph": "儿",
+"s": "儿"
+},
 "入": {
 "d": "to enter, to come in; to join",
 "h": "An arrow indicating \"enter\"",
@@ -525,6 +590,11 @@
 "d": "fair, equitable; public",
 "h": "To divide 八 what is private 厶",
 "p": "gōng"
+},
+"六": {
+"c": "亠八",
+"d": "six",
+"p": "liù"
 },
 "兰": {
 "c": "丷三",
@@ -591,6 +661,12 @@
 "h": "Cross-section of a bone",
 "p": "guǎ"
 },
+"冏": {
+"c": "冂八口",
+"d": "bright, brilliant; clear",
+"h": "Archaic form of 炯",
+"p": "jiǒng"
+},
 "冓": {
 "c": "井再",
 "d": "secret, niche, hiding-hole, cabinet",
@@ -617,6 +693,13 @@
 "h": "Ice-cold冫 water 水",
 "p": "bīng"
 },
+"冷": {
+"c": "冫令",
+"d": "cold, cool; lonely",
+"p": "lěng",
+"ph": "令",
+"s": "冫"
+},
 "凍": {
 "c": "冫東",
 "d": "cold; to freeze, to congeal",
@@ -630,10 +713,28 @@
 "h": "A small table; compare 丌",
 "p": "jǐ"
 },
+"凡": {
+"c": "几丶",
+"d": "any, every, all; common, ordinary",
+"h": "A plate or flat dish; an everyday item",
+"p": "fán"
+},
 "凵": {
 "d": "container; receptacle",
 "h": "A tray",
 "p": "qiǎn"
+},
+"凶": {
+"c": "凵乂",
+"d": "culprit; murder",
+"h": "A container 凵 of wickedness 乂",
+"p": "xiōng"
+},
+"出": {
+"c": "屮凵",
+"d": "to go out, to send out; stand",
+"h": "A sprout 屮 growing out of a container 凵",
+"p": "chū"
 },
 "刀": {
 "c": "丿",
@@ -650,6 +751,12 @@
 "d": "edged tool, cutlery, knife edge",
 "h": "A knife 刀 sharp enough to draw blood 丶",
 "p": "rèn"
+},
+"分": {
+"c": "八刀",
+"d": "to divide, to allocate; fraction",
+"h": "Pieces 八 being further subdivided with a knife 刀 ",
+"p": "fēn"
 },
 "刖": {
 "c": "月刂",
@@ -739,10 +846,27 @@
 "h": "A spoon",
 "p": "bǐ"
 },
+"北": {
+"c": "匕",
+"d": "north; northern",
+"h": "Two people 匕 sitting back-to-back; phonetic loan for \"north\"",
+"p": "běi"
+},
 "匚": {
 "c": "一",
 "d": "box; basket",
 "p": "fāng"
+},
+"匸": {
+"d": "box",
+"p": "xì"
+},
+"医": {
+"c": "匸矢",
+"d": "to cure, to heal, to treat; doctor",
+"p": "yī",
+"ph": "匸",
+"s": "矢"
 },
 "十": {
 "c": "一丨",
@@ -770,6 +894,12 @@
 "d": "humble, low, inferior; to despise",
 "h": "A hand 又(altered) holding an empty shell 甲 (altered)",
 "p": "bēi"
+},
+"卓": {
+"c": "⺊早",
+"d": "profound, lofty, brilliant",
+"h": "To foresee ⺊ the dawn 早 coming; 早 also provides the pronunciation",
+"p": "zhuō"
 },
 "单": {
 "c": "丷",
@@ -915,6 +1045,13 @@
 "d": "platform; unit",
 "p": "tái"
 },
+"号": {
+"c": "口丂",
+"d": "mark, sign; symbol",
+"p": "hào",
+"ph": "丂",
+"s": "口"
+},
 "吃": {
 "c": "口乞",
 "d": "to eat; to drink",
@@ -932,6 +1069,12 @@
 "c": "亼口",
 "d": "to combine, to join, to unite; to gather",
 "p": "hé"
+},
+"同": {
+"c": "凡口",
+"d": "same, similar; together with, alike",
+"h": "Sharing a common 凡 tongue 口",
+"p": "tóng"
 },
 "名": {
 "c": "夕口",
@@ -990,6 +1133,13 @@
 "ph": "尼",
 "s": "口"
 },
+"和": {
+"c": "禾口",
+"d": "harmony, peace; calm, peaceful",
+"p": "hé",
+"ph": "禾",
+"s": "口"
+},
 "咖": {
 "c": "口加",
 "d": "coffee; used in transliterations",
@@ -1029,6 +1179,19 @@
 "ph": "吾",
 "s": "口"
 },
+"商": {
+"c": "亠丷冏",
+"d": "commerce, business, trade",
+"p": "shāng",
+"s": "冏"
+},
+"啊": {
+"c": "口阿",
+"d": "ah, exclamatory particle",
+"p": "a",
+"ph": "阿",
+"s": "口"
+},
 "問": {
 "c": "門口",
 "d": "to ask about, to inquire after",
@@ -1048,6 +1211,13 @@
 "d": "beer",
 "p": "pí",
 "ph": "卑",
+"s": "口"
+},
+"喂": {
+"c": "口畏",
+"d": "interjection used to call attention",
+"p": "wèi",
+"ph": "畏",
 "s": "口"
 },
 "喜": {
@@ -1098,11 +1268,23 @@
 "d": "enclosure; border",
 "p": "wéi"
 },
+"四": {
+"c": "囗儿",
+"d": "four",
+"h": "A child 儿 in a room with four walls 囗",
+"p": "sì"
+},
 "回": {
 "c": "囗口",
 "d": "to return, to turn around; a time",
 "h": "Originally, a spiral signifying return",
 "p": "huí"
+},
+"囟": {
+"c": "丿囗乂",
+"d": "top of the head; skull",
+"h": "A skull from above, with 乂 marking the fontanelle",
+"p": "xìn"
 },
 "固": {
 "c": "囗古",
@@ -1149,6 +1331,13 @@
 "h": "Two people 从 sitting on the ground 土",
 "p": "zuò"
 },
+"块": {
+"c": "土夬",
+"d": "piece, lump, chunk; dollar",
+"p": "kuài",
+"ph": "夬",
+"s": "土"
+},
 "坴": {
 "c": "土八土",
 "d": "a clod of earth; land",
@@ -1173,6 +1362,19 @@
 "d": "art",
 "h": "Clay 坴 formed into a ball 丸",
 "p": "yì"
+},
+"堇": {
+"c": "黄土",
+"d": "yellow loam; clay",
+"h": "Yellow 黄 earth 土",
+"p": "jǐn"
+},
+"塊": {
+"c": "土鬼",
+"d": "piece, lump, chunk; dollar",
+"p": "kuài",
+"ph": "鬼",
+"s": "土"
 },
 "塔": {
 "c": "土荅",
@@ -1226,6 +1428,11 @@
 "h": "A giant 大 with a normal-sized man 丶 for scale",
 "p": "tài"
 },
+"夬": {
+"c": "大",
+"d": "decisive, certain; parted",
+"p": "guài"
+},
 "央": {
 "c": "冂大",
 "d": "central; to beg",
@@ -1236,6 +1443,12 @@
 "d": "head; chief, boss",
 "p": "tóu",
 "s": "大"
+},
+"奇": {
+"c": "大可",
+"d": "strange, unusual, odd; uncanny, occult",
+"h": "A person 大 riding a horse 可",
+"p": "qí"
 },
 "奚": {
 "c": "爫幺大",
@@ -1254,11 +1467,31 @@
 "ph": "乃",
 "s": "女"
 },
+"她": {
+"c": "女也",
+"d": "she, her",
+"h": "A woman 女 beside you 也",
+"p": "tā"
+},
 "好": {
 "c": "女子",
 "d": "good, excellent, fine; proper, suitable",
 "h": "A woman 女 with a son 子",
 "p": "hǎo"
+},
+"妈": {
+"c": "女马",
+"d": "mother, mama",
+"p": "mā",
+"ph": "马",
+"s": "女"
+},
+"姐": {
+"c": "女且",
+"d": "elder sister; miss, young lady",
+"p": "jiě",
+"ph": "且",
+"s": "女"
 },
 "婁": {
 "c": "母女",
@@ -1271,6 +1504,13 @@
 "d": "old woman; grandmother",
 "p": "pó",
 "ph": "波",
+"s": "女"
+},
+"媽": {
+"c": "女馬",
+"d": "mother, mama",
+"p": "mā",
+"ph": "馬",
 "s": "女"
 },
 "子": {
@@ -1307,6 +1547,13 @@
 "c": "丶冖",
 "d": "roof; house",
 "p": "gài"
+},
+"完": {
+"c": "宀元",
+"d": "to complete, to finish, to settle; whole",
+"p": "wán",
+"ph": "元",
+"s": "宀"
 },
 "客": {
 "c": "宀各",
@@ -1390,17 +1637,33 @@
 "d": "Buddhist nun; used in transliterations",
 "p": "ní"
 },
+"屮": {
+"c": "凵丨",
+"d": "sprout",
+"h": "A sprout",
+"p": "chè"
+},
 "山": {
 "c": "凵丨",
 "d": "mountain, hill, peak",
 "h": "Three mountain peaks",
 "p": "shān"
 },
+"岁": {
+"c": "山夕",
+"d": "year; years old, age",
+"p": "suì"
+},
 "岡": {
 "c": "冂山",
 "d": "ridge or crest of hill",
 "h": "Clouds 网 forming over a mountain 山",
 "p": "gāng"
+},
+"巛": {
+"d": "stream, river",
+"h": "A river flowing",
+"p": "chuān"
 },
 "工": {
 "c": "一丄",
@@ -1464,6 +1727,12 @@
 "h": "A club or axe",
 "p": "gàn"
 },
+"平": {
+"c": "干丷",
+"d": "flat, level, even; peaceful",
+"h": "A leveling scale",
+"p": "píng"
+},
 "年": {
 "c": "干",
 "d": "year; anniversary",
@@ -1491,6 +1760,13 @@
 "d": "broad, vast, wide; building, house",
 "h": "A lean-to 厂, suggesting a building",
 "p": "guǎng"
+},
+"店": {
+"c": "广占",
+"d": "shop, store; inn, hotel",
+"p": "diàn",
+"ph": "占",
+"s": "广"
 },
 "度": {
 "c": "广廿又",
@@ -1557,6 +1833,19 @@
 "h": "A hand 彐 holding a bamboo broom 丰",
 "p": "huì"
 },
+"彡": {
+"c": "丿丿丿",
+"d": "hair; sunlight",
+"h": "Tufts of hair",
+"p": "shān"
+},
+"影": {
+"c": "景彡",
+"d": "shadow; image, reflection",
+"p": "yǐng",
+"ph": "景",
+"s": "彡"
+},
 "彳": {
 "c": "丨",
 "d": "to step with the left foot",
@@ -1622,6 +1911,12 @@
 "d": "to think, to ponder, to consider; final particle",
 "h": "Weighing something with your mind 囟 (altered) and heart 心",
 "p": "sī"
+},
+"您": {
+"c": "你心",
+"d": "honorific for 'you'",
+"h": "You 你 said with affection 心",
+"p": "nín"
 },
 "想": {
 "c": "相心",
@@ -1733,6 +2028,12 @@
 "p": "dǎ",
 "ph": "丁",
 "s": "扌"
+},
+"执": {
+"c": "扌丸",
+"d": "to execute; to grasp, to hold",
+"h": "A hand 扌 clutching a pebble 丸",
+"p": "zhí"
 },
 "拎": {
 "c": "扌令",
@@ -1886,6 +2187,12 @@
 "h": "Everyone 並 under the sun 日",
 "p": "pǔ"
 },
+"景": {
+"c": "日京",
+"d": "scenery, view; conditions, circumstances",
+"h": "The sun 日 rising over a city 京; 京 also provides the pronunciation",
+"p": "jǐng"
+},
 "智": {
 "c": "知日",
 "d": "wisdom, knowledge, intelligence",
@@ -1897,6 +2204,12 @@
 "d": "to speak; to say",
 "h": "Picture of an open 一 mouth 口",
 "p": "yuē"
+},
+"曲": {
+"c": "曰丨丨",
+"d": "crooked, bent; wrong, false",
+"h": "A folded object 曰",
+"p": "qū"
 },
 "曷": {
 "c": "日",
@@ -1946,6 +2259,12 @@
 "h": "Two people 月 walking together",
 "p": "péng"
 },
+"服": {
+"c": "月卩又",
+"d": "clothes; to dress, to wear",
+"h": "A person 卩 putting on 又 a coat 月",
+"p": "fú"
+},
 "期": {
 "c": "其月",
 "d": "a period of time; date, time",
@@ -1970,6 +2289,12 @@
 "d": "root, origin, source; basis",
 "h": "A tree 木 with its roots highlighted",
 "p": "běn"
+},
+"机": {
+"c": "木几",
+"d": "desk; machine",
+"h": "A table 几 made of wood 木; 几 also provides the pronunciation",
+"p": "jī"
 },
 "束": {
 "c": "木口",
@@ -2014,11 +2339,30 @@
 "h": "A bound 束 package",
 "p": "jiǎn"
 },
+"校": {
+"c": "木交",
+"d": "school; military field officer",
+"p": "xiào",
+"ph": "交",
+"s": "木"
+},
 "样": {
 "c": "木羊",
 "d": "form, pattern, shape, style",
 "p": "yàng",
 "ph": "羊",
+"s": "木"
+},
+"桌": {
+"c": "卓木",
+"d": "table, stand, desk, counter",
+"p": "zhuō"
+},
+"椅": {
+"c": "木奇",
+"d": "chair, seat",
+"p": "yǐ",
+"ph": "奇",
 "s": "木"
 },
 "樓": {
@@ -2034,6 +2378,12 @@
 "p": "yàng",
 "ph": "羕",
 "s": "木"
+},
+"機": {
+"c": "木幾",
+"d": "desk; machine",
+"h": "A table 幾 made of wood 木; 幾 also provides the pronunciation",
+"p": "jī"
 },
 "欠": {
 "c": "⺈人",
@@ -2065,6 +2415,24 @@
 "h": "A foot",
 "p": "zhǐ"
 },
+"此": {
+"c": "止匕",
+"d": "this, these; in this case, then",
+"p": "cǐ",
+"ph": "止",
+"s": "匕"
+},
+"步": {
+"c": "止",
+"d": "walk, stroll, pace, march; to make progress",
+"h": "Modern form of 歨; putting one foot 止 in front of the other",
+"p": "bù"
+},
+"歲": {
+"c": "止戊",
+"d": "year; years old, age",
+"p": "suì"
+},
 "歺": {
 "c": "⺊夕",
 "d": "evil, depraved, wicked",
@@ -2076,6 +2444,13 @@
 "d": "tool, weapon",
 "h": "A hand 又 holding a weapon 几",
 "p": "shū"
+},
+"殹": {
+"c": "医殳",
+"d": "an echo",
+"p": "yì",
+"ph": "医",
+"s": "殳"
 },
 "母": {
 "d": "mother; female elders",
@@ -2113,6 +2488,12 @@
 "c": "亅",
 "h": "A river running between two banks; compare 川 and 水",
 "p": "shui"
+},
+"汉": {
+"c": "氵又",
+"d": "Chinese people; Chinese language",
+"h": "Simplified form of 漢; the Han 𦰩 river 氵",
+"p": "hàn"
 },
 "沒": {
 "c": "氵又",
@@ -2168,6 +2549,19 @@
 "ph": "巷",
 "s": "氵"
 },
+"漂": {
+"c": "氵票",
+"d": "to drift, to float; to be tossed about",
+"p": "piào",
+"ph": "票",
+"s": "氵"
+},
+"漢": {
+"c": "氵堇",
+"d": "Chinese people; Chinese language",
+"h": "The Han 𦰩 river 氵",
+"p": "hàn"
+},
 "灣": {
 "c": "氵彎",
 "d": "bay, cove, gulf, inlet",
@@ -2184,6 +2578,13 @@
 "d": "dot, point, speck",
 "p": "diǎn",
 "ph": "占",
+"s": "灬"
+},
+"热": {
+"c": "执灬",
+"d": "heat, fever, zeal",
+"p": "rè",
+"ph": "执",
 "s": "灬"
 },
 "煮": {
@@ -2211,6 +2612,19 @@
 "h": "To bring a friend 友 into one's house 冖",
 "p": "ài"
 },
+"父": {
+"c": "八乂",
+"d": "father, dad",
+"h": "A hand 乂 holding an axe 八",
+"p": "fù"
+},
+"爸": {
+"c": "父巴",
+"d": "father, papa",
+"p": "bà",
+"ph": "巴",
+"s": "父"
+},
 "片": {
 "d": "slice, splinter; page, strip",
 "h": "Half of a tree trunk; compare 爿",
@@ -2232,6 +2646,25 @@
 "h": "An ox's horned head",
 "p": "niú"
 },
+"犭": {
+"d": "dog",
+"h": "A dog turned to the side",
+"p": "quǎn"
+},
+"狗": {
+"c": "犭句",
+"d": "dog",
+"p": "gǒu",
+"ph": "句",
+"s": "犭"
+},
+"猫": {
+"c": "犭苗",
+"d": "cat",
+"p": "māo",
+"ph": "苗",
+"s": "犭"
+},
 "玉": {
 "c": "王丶",
 "d": "jade, gem, precious stone",
@@ -2243,6 +2676,18 @@
 "d": "king, ruler; royal",
 "h": "A man 十 bridging heaven and earth (both 一)",
 "p": "wáng"
+},
+"现": {
+"c": "王见",
+"d": "to appear, to manifest; current, now",
+"h": "To see 见 jade 王; 见 also provides the pronunciation",
+"p": "xiàn"
+},
+"現": {
+"c": "王見",
+"d": "to appear, to manifest; current, now",
+"h": "To see 見 jade 王; 見 also provides the pronunciation",
+"p": "xiàn"
 },
 "甘": {
 "c": "卄二",
@@ -2295,6 +2740,12 @@
 "d": "electricity; electric",
 "h": "Simplified form of 電; lightning 申 from a storm cloud 雨",
 "p": "diàn"
+},
+"畏": {
+"c": "田一",
+"d": "fear, dread, awe, reverence",
+"h": "A monster with a scary head 田",
+"p": "wèi"
 },
 "疋": {
 "d": "roll, bolt of cloth; foot",
@@ -2398,11 +2849,34 @@
 "ph": "开",
 "s": "石"
 },
+"示": {
+"c": "二小",
+"d": "altar; ceremony",
+"h": "An altar",
+"p": "shì"
+},
+"礻": {
+"c": "卜",
+"d": "spirit",
+"p": "shì"
+},
+"票": {
+"c": "覀示",
+"d": "bank note; ticket",
+"h": "Flames 覀 over an altar 示, referring to a Chinese tradition of burning fake money as an offering",
+"p": "piào"
+},
 "禾": {
 "c": "丿木",
 "d": "cereal, grain, rice; plant, stalk",
 "h": "A plant stalk with a sagging head",
 "p": "hé"
+},
+"租": {
+"c": "禾且",
+"d": "to rent, to lease; tax, rent",
+"h": "Regularly paid 且 tribute in grain 禾",
+"p": "zū"
 },
 "穴": {
 "c": "宀八",
@@ -2436,6 +2910,12 @@
 "d": "to stand; to establish, to set up",
 "h": "A man standing on the ground 一",
 "p": "lì"
+},
+"童": {
+"c": "立里",
+"d": "child, boy; servant boy",
+"h": "A child standing 立 in the village 里",
+"p": "tóng"
 },
 "第": {
 "c": "⺮弟",
@@ -2576,6 +3056,18 @@
 "ph": "羊",
 "s": "永"
 },
+"羽": {
+"c": "习习",
+"d": "feather, plume; wings",
+"h": "Two feathers or wings",
+"p": "yǔ"
+},
+"習": {
+"c": "羽白",
+"d": "to study, to practice; habit",
+"h": "Birds flying 羽 in the daytime 白",
+"p": "xí"
+},
 "老": {
 "c": "耂匕",
 "d": "old, aged; experienced",
@@ -2629,12 +3121,24 @@
 "h": "A bear's head 厶, body ⺼, and claws 匕",
 "p": "néng"
 },
+"脑": {
+"c": "⺼亠凶",
+"d": "brain",
+"p": "nǎo",
+"s": "⺼"
+},
 "腐": {
 "c": "广付肉",
 "d": "to spoil, to rot, to decay; rotten",
 "p": "fǔ",
 "ph": "付",
 "s": "肉"
+},
+"腦": {
+"c": "⺼巛囟",
+"d": "brain",
+"h": "An organ ⺼ in the skull 囟",
+"p": "nǎo"
 },
 "自": {
 "c": "目",
@@ -2688,11 +3192,24 @@
 "h": "Simplified form of 艸; grass sprouting",
 "p": "cǎo"
 },
+"苗": {
+"c": "艹田",
+"d": "sprouts; Miao nationality",
+"h": "Grass 艹 growing in a field 田",
+"p": "miáo"
+},
 "英": {
 "c": "艹央",
 "d": "petal, flower, leaf; brave, heroic",
 "p": "yīng",
 "ph": "央",
+"s": "艹"
+},
+"苹": {
+"c": "艹平",
+"d": "apple; duckweed, Artemisia",
+"p": "píng",
+"ph": "平",
 "s": "艹"
 },
 "茶": {
@@ -2764,6 +3281,13 @@
 "ph": "重",
 "s": "艹"
 },
+"蘋": {
+"c": "艹頻",
+"d": "apple; duckweed, Artemisia",
+"p": "píng",
+"ph": "頻",
+"s": "艹"
+},
 "蘭": {
 "c": "艹闌",
 "d": "orchid; elegant, graceful",
@@ -2778,6 +3302,23 @@
 "ph": "羅",
 "s": "艹"
 },
+"虍": {
+"c": "七",
+"d": "tiger",
+"p": "hū"
+},
+"虎": {
+"c": "虍几",
+"d": "tiger; brave, fierce",
+"h": "A tiger 虍 standing on a rock 几; 虍 also provides the pronunciation",
+"p": "hǔ"
+},
+"號": {
+"c": "号虎",
+"d": "mark, sign; symbol",
+"h": "The roar 口 of the tiger 虎; 丂 provides the pronunciation",
+"p": "hào"
+},
 "虫": {
 "c": "中",
 "d": "insect, worm; mollusk",
@@ -2789,6 +3330,12 @@
 "d": "egg",
 "p": "dàn",
 "s": "虫"
+},
+"衣": {
+"c": "亠",
+"d": "cloth; clothes, apparel",
+"h": "A woman's dress",
+"p": "yī"
 },
 "衤": {
 "d": "cloth",
@@ -2823,6 +3370,13 @@
 "h": "A man 儿 with the eye 目 emphasized",
 "p": "jiàn"
 },
+"視": {
+"c": "礻見",
+"d": "to look at, to inspect, to observe, to regard",
+"p": "shì",
+"ph": "礻",
+"s": "見"
+},
 "覺": {
 "c": "見",
 "d": "conscious; to nap, to sleep",
@@ -2833,6 +3387,13 @@
 "d": "to see, to observe, to meet, to appear",
 "h": "Simplified form of 見; a man 儿 with the eye 目 emphasized",
 "p": "jiàn"
+},
+"视": {
+"c": "礻见",
+"d": "to look at, to inspect, to observe, to regard",
+"p": "shì",
+"ph": "礻",
+"s": "见"
 },
 "觉": {
 "c": "⺍冖见",
@@ -2879,11 +3440,25 @@
 "ph": "忍",
 "s": "言"
 },
+"語": {
+"c": "言吾",
+"d": "words, language; saying, expression",
+"p": "yǔ",
+"ph": "吾",
+"s": "言"
+},
 "說": {
 "c": "言兌",
 "d": "to speak, to say; to scold, to upbraid",
 "p": "shuō",
 "ph": "兌",
+"s": "言"
+},
+"誰": {
+"c": "言隹",
+"d": "who? whom? whose? anyone?",
+"p": "shuí",
+"ph": "隹",
 "s": "言"
 },
 "課": {
@@ -2951,6 +3526,13 @@
 "h": "A spoken 讠 tongue 舌; 舌 also provides the pronunciation",
 "p": "huà"
 },
+"语": {
+"c": "讠吾",
+"d": "words, language; saying, expression",
+"p": "yǔ",
+"ph": "吾",
+"s": "讠"
+},
 "说": {
 "c": "讠兑",
 "d": "to speak, to say; to scold, to upbraid",
@@ -2978,6 +3560,13 @@
 "ph": "果",
 "s": "讠"
 },
+"谁": {
+"c": "讠隹",
+"d": "who? whom? whose? anyone?",
+"p": "shuí",
+"ph": "隹",
+"s": "讠"
+},
 "谢": {
 "c": "讠射",
 "d": "to thank; to refuse politely",
@@ -2991,11 +3580,29 @@
 "h": "An old serving dish 口 on a stand with a lid 一",
 "p": "dòu"
 },
+"豊": {
+"c": "曲豆",
+"d": "abundant, lush, bountiful, plenty",
+"h": "A stalk bent crooked 曲 by the weight of its beans 豆",
+"p": "lǐ"
+},
 "豕": {
 "c": "一勿",
 "d": "pig, boar",
 "h": "A pig drawn on its side",
 "p": "shǐ"
+},
+"豸": {
+"c": "爫犭",
+"d": "badger; legendary beast",
+"p": "zhì"
+},
+"貓": {
+"c": "豸苗",
+"d": "cat",
+"p": "māo",
+"ph": "苗",
+"s": "豸"
 },
 "貝": {
 "c": "目八",
@@ -3161,6 +3768,13 @@
 "d": "that, that one, those",
 "p": "nà"
 },
+"都": {
+"c": "者阝",
+"d": "all, each, entirely, whole; metropolis",
+"p": "dōu",
+"ph": "者",
+"s": "阝"
+},
 "酉": {
 "c": "兀日",
 "d": "wine; wine vessel",
@@ -3172,6 +3786,13 @@
 "d": "wine, spirits, liquor, alcohol",
 "h": "A jar 酉 of wine 氵; 酉 also provides the pronunciation",
 "p": "jiǔ"
+},
+"醫": {
+"c": "殹酉",
+"d": "to cure, to heal, to treat; doctor",
+"p": "yī",
+"ph": "殹",
+"s": "酉"
 },
 "釆": {
 "c": "丿米",
@@ -3229,10 +3850,24 @@
 "ph": "重",
 "s": "釒"
 },
+"鐘": {
+"c": "釒童",
+"d": "clock; bell",
+"p": "zhōng",
+"ph": "童",
+"s": "釒"
+},
 "钅": {
 "d": "gold, metal; money",
 "h": "A cast-iron bell; compare 金",
 "p": "jīn"
+},
+"钟": {
+"c": "钅中",
+"d": "clock; bell",
+"p": "zhōng",
+"ph": "中",
+"s": "钅"
 },
 "钱": {
 "c": "钅戋",
@@ -3297,6 +3932,20 @@
 "d": "place, town, city",
 "p": "yì"
 },
+"阿": {
+"c": "阝可",
+"d": "an initial particle, a prefix used for names",
+"p": "ā",
+"ph": "可",
+"s": "阝"
+},
+"院": {
+"c": "阝完",
+"d": "court, yard, courtyard; school",
+"p": "yuàn",
+"ph": "完",
+"s": "阝"
+},
 "隹": {
 "c": "亻",
 "d": "short-tailed bird; sparrow",
@@ -3337,6 +3986,11 @@
 "h": "Two bird's wings opposed; two people back-to-back",
 "p": "fēi"
 },
+"面": {
+"d": "face; surface, side",
+"h": "A person's face",
+"p": "miàn"
+},
 "音": {
 "c": "立日",
 "d": "sound, tone, pitch, pronunciation",
@@ -3348,6 +4002,11 @@
 "d": "page, sheet, leaf",
 "h": "A person's head",
 "p": "yè"
+},
+"頻": {
+"c": "步頁",
+"d": "frequency; repeatedly, again and again",
+"p": "pín"
 },
 "題": {
 "c": "是頁",
@@ -3368,6 +4027,17 @@
 "p": "tí",
 "ph": "是",
 "s": "页"
+},
+"飛": {
+"c": "飞飞",
+"d": "to fly, to dart; high",
+"h": "Two birds 飞 flying",
+"p": "fēi"
+},
+"飞": {
+"d": "to fly, to dart; high",
+"h": "A bird flapping its wings",
+"p": "fēi"
 },
 "食": {
 "c": "人良",
@@ -3437,11 +4107,30 @@
 "h": "Simplified form of 馬, a horse galloping to the left",
 "p": "mǎ"
 },
+"骨": {
+"c": "冎⺼",
+"d": "bone; skeleton",
+"h": "Flesh ⺼ and bones 冎",
+"p": "gǔ"
+},
+"體": {
+"c": "骨豊",
+"d": "body; group, class",
+"p": "tǐ",
+"ph": "豊",
+"s": "骨"
+},
 "高": {
 "c": "亠口冋",
 "d": "tall, lofty; high, elevated",
 "h": "A tall palace",
 "p": "gāo"
+},
+"鬼": {
+"c": "乚厶",
+"d": "ghost; demon",
+"h": "A ghost with a scary face",
+"p": "guǐ"
 },
 "魚": {
 "c": "⺈田灬",

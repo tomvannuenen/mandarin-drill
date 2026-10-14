@@ -1,6 +1,6 @@
 # /// script
 # requires-python = ">=3.9"
-# dependencies = ["edge-tts", "opencc-python-reimplemented"]
+# dependencies = ["edge-tts>=7.3.1", "opencc-python-reimplemented"]
 # ///
 """Build phrases.json and audio from data/items.json (Mandarin) and data/cantonese.json.
 
@@ -21,7 +21,7 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from tools.pinyin import apply_sandhi, word_groups
+from tools.pinyin import apply_sandhi, han_chars, syllables, tone_of, word_groups
 
 ROOT = Path(__file__).resolve().parent.parent
 # Every phrase is recorded by every voice of its deck; the app rotates between them.
@@ -503,6 +503,88 @@ def word_audio(out_items):
     return table, jobs
 
 
+HSK_FILE = "hsk1.json"
+
+
+def _word_path(deck, z):
+    return f"audio/words/{deck}/{'-'.join(format(ord(c), 'x') for c in z)}.mp3"
+
+
+def hsk_words(src):
+    """(words, errors) for data/hsk1.json: [{zh, dict, roman, en, lesson}] with the pinyin checked."""
+    words, errs, seen = [], [], set()
+    for row in src.get("words", []):
+        if not (isinstance(row, list) and len(row) == 4 and all(row[:3]) and isinstance(row[3], int)):
+            errs.append(f"hsk: {row!r} must be [characters, pinyin, English, lesson]")
+            continue
+        zh, r, en, lesson = row
+        if zh in seen:
+            errs.append(f"hsk: {zh} is listed twice")
+        seen.add(zh)
+        # Character by character: Taiwan's word swaps (出租車 → 計程車) are not script errors.
+        bad = [c for c in zh if simplified_chars(c)]
+        if bad:
+            errs.append(f"hsk: Simplified characters {''.join(bad)} in {zh!r}")
+        try:
+            roman = apply_sandhi(zh, r)
+        except ValueError as e:
+            errs.append(f"hsk: {e}")
+            continue
+        words.append({"zh": zh, "dict": r, "roman": roman, "en": en, "lesson": lesson})
+    return words, errs
+
+
+def hsk_entries(words, hanzi, overrides=None):
+    """Every HSK word, then each character inside a longer word that isn't a word of its own: {zh, roman, en,
+    lesson, script, zhDisp?, zhS?, single?, from?}. A character is read as it sounds in its word, unless that
+    syllable is toneless (麼 in 什麼): then its dictionary reading."""
+    overrides = overrides or {}
+    out = [{**_word(w["zh"], w["roman"], w["en"], "mandarin"), "en": w["en"], "lesson": w["lesson"]} for w in words]
+    for e in out:
+        del e["gloss"]
+    have = {w["zh"] for w in words}
+    for w in sorted(words, key=lambda w: w["lesson"]):
+        for ch, syl in zip(han_chars(w["zh"]), syllables(w["dict"])):
+            if ch in have:
+                continue
+            have.add(ch)
+            h = hanzi.get(ch, {})
+            roman = syl if tone_of(syl) != 5 or not h.get("p") else h["p"]
+            en = h.get("d") or w["en"]
+            # data/hsk1.json "chars": a plainer meaning, or [reading, meaning].
+            o = overrides.get(ch)
+            if isinstance(o, list):
+                roman, en = o
+            elif o:
+                en = o
+            e = {**_word(ch, roman.lower(), en, "mandarin"), "en": en, "lesson": w["lesson"], "single": True, "from": w["zh"]}
+            del e["gloss"]
+            out.append(e)
+    return out
+
+
+def hsk_audio(entries, hanzi, words_table, out_items):
+    """A recording for every HSK word and character that has none yet. A character whose reading here isn't
+    its usual one (覺 in 睡覺) is heard through its word instead: entry["sound"] names what to play."""
+    deck = "mandarin"
+    own = {o["words"][0]["zh"] for o in out_items if o["deck"] == deck and o["kind"] != "pattern" and len(o["words"]) == 1}
+    table = words_table.setdefault(deck, {})
+    tts = VOICES[DECKS[deck]["voices"][1]]["tts"]
+    jobs = []
+    for e in entries:
+        z = e["zh"]
+        if e.get("single"):
+            usual = hanzi.get(z, {}).get("p", "")
+            if tone_of(e["roman"]) == 5 or e["roman"] != usual.lower():
+                e["sound"] = e["from"]
+                continue
+        if z in own or z in table:
+            continue
+        table[z] = _word_path(deck, z)
+        jobs.append((table[z], z, NORMAL_RATE, "hsk", tts))
+    return jobs
+
+
 def edge_synth(text, rate, path, voice):
     import edge_tts
     asyncio.run(edge_tts.Communicate(text, voice, rate=rate).save(str(path)))
@@ -590,6 +672,16 @@ def main(argv):
         for e in errs:
             print("  -", e)
         return 1
+    hsk_file = ROOT / "data" / HSK_FILE
+    hsk_src = json.loads(hsk_file.read_text()) if hsk_file.exists() else {}
+    hsk_list, errs = hsk_words(hsk_src)
+    if errs:
+        print(f"{len(errs)} error(s):")
+        for e in errs:
+            print("  -", e)
+        return 1
+    # HSK characters need Simplified forms and breakdowns too, like the deck's own.
+    hsk_text = [{"deck": "mandarin", "zh": w["zh"]} for w in hsk_list]
     used = {v for o in out for e in (o.get("fills") or [o]) for v in e["audio"]}
     voices = {v: {k: VOICES[v][k] for k in ("flag", "name")} for v in VOICES if v in used}
     if "coach" in used:
@@ -597,13 +689,16 @@ def main(argv):
     decks = {d: {k: c[k] for k in ("label", "voices", "newPerDay", "maxShaky", "maxDrills", "characters") if k in c} for d, c in DECKS.items()}
     body = json.dumps([out, voices], ensure_ascii=False, sort_keys=True)
     body += json.dumps(convos, ensure_ascii=False, sort_keys=True)
-    t2s = simplified_map(out)
+    t2s = simplified_map(out + hsk_text)
     body += json.dumps(t2s, ensure_ascii=False, sort_keys=True)
-    hanzi, no_breakdown = load_hanzi(out, t2s)
+    hanzi, no_breakdown = load_hanzi(out + hsk_text, t2s)
     words, word_jobs = word_audio(out)
-    body += json.dumps([hanzi, notes, words], ensure_ascii=False, sort_keys=True)
+    hsk_list = hsk_entries(hsk_list, hanzi, hsk_src.get("chars", {}))
+    word_jobs += hsk_audio(hsk_list, hanzi, words, out)
+    hsk = {"lessons": hsk_src.get("lessons", {}), "entries": hsk_list}
+    body += json.dumps([hanzi, notes, words, hsk], ensure_ascii=False, sort_keys=True)
     doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "voices": voices, "decks": decks, "items": out,
-           "conversations": convos, "t2s": t2s, "hanzi": hanzi, "notes": notes, "words": words}
+           "conversations": convos, "t2s": t2s, "hanzi": hanzi, "notes": notes, "words": words, "hsk": hsk}
     (ROOT / "phrases.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
     made, failed = ([], []) if no_audio else generate_audio(audio_jobs(out) + word_jobs, ROOT, force_ids=force)
     stamp_service_worker(ROOT)

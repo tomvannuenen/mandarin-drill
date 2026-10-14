@@ -2,8 +2,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.build import (DECKS, audio_jobs, expand, generate_audio, missing_glosses, simplified_chars, validate,
-                         validate_conversations)
+from tools.build import (DECKS, audio_jobs, expand, generate_audio, hsk_audio, hsk_entries, hsk_words, missing_glosses,
+                         simplified_chars, validate, validate_conversations)
 
 DRINKS = [
     {"id": "kafei", "kind": "word", "week": 1, "zh": "咖啡", "pinyin": "kā-fēi", "en": "coffee", "cat": ["drink"]},
@@ -368,3 +368,51 @@ class WordAudio(unittest.TestCase):
         table, jobs = word_audio(out)
         self.assertEqual(table, {"mandarin": {"要": "audio/words/mandarin/8981.mp3", "這個": "audio/words/mandarin/9019-500b.mp3"}})
         self.assertEqual([(j[0], j[1]) for j in jobs], [("audio/words/mandarin/8981.mp3", "要"), ("audio/words/mandarin/9019-500b.mp3", "這個")])
+
+
+class Hsk(unittest.TestCase):
+    HANZI = {"師": {"p": "shī", "d": "teacher, master"}, "老": {"p": "lǎo", "d": "old"},
+             "覺": {"p": "jué", "d": "to feel"}, "睡": {"p": "shuì", "d": "to sleep"},
+             "麼": {"p": "me", "d": "interrogative particle"}, "什": {"p": "shí", "d": "ten"},
+             "子": {"p": "zǐ", "d": "son"}, "杯": {"p": "bēi", "d": "cup"}}
+
+    def words(self, rows):
+        words, errs = hsk_words({"words": rows})
+        self.assertEqual(errs, [])
+        return words
+
+    def test_checks_rows(self):
+        _, errs = hsk_words({"words": [["老师", "lǎo-shī", "teacher", 3], ["老師", "lǎo", "teacher", 3], ["好", "hǎo", "good"]]})
+        self.assertEqual(len(errs), 3)
+
+    def test_taiwan_word_swaps_are_not_script_errors(self):
+        self.assertEqual(hsk_words({"words": [["出租車", "chū-zū-chē", "taxi", 15]]})[1], [])
+
+    def test_sandhi_on_words_dictionary_tone_on_characters(self):
+        words = self.words([["不客氣", "bù-kè-qì", "you're welcome", 2]])
+        entries = hsk_entries(words, {})
+        self.assertEqual(entries[0]["roman"], "bú-kè-qì")
+        self.assertEqual([(e["zh"], e["roman"]) for e in entries[1:]], [("不", "bù"), ("客", "kè"), ("氣", "qì")])
+        self.assertEqual(entries[0]["zhS"], "不客气")
+
+    def test_characters_once_with_meanings_and_overrides(self):
+        words = self.words([["老師", "lǎo-shī", "teacher", 3], ["師", "shī", "teacher", 4], ["什麼", "shé-me", "what", 3],
+                            ["杯子", "bēi-zi", "cup", 8]])
+        entries = {e["zh"]: e for e in hsk_entries(words, self.HANZI, {"子": ["zǐ", "child"]})}
+        self.assertNotIn("single", entries["師"])  # a word of its own
+        self.assertEqual((entries["老"]["en"], entries["老"]["from"], entries["老"]["lesson"]), ("old", "老師", 3))
+        self.assertEqual(entries["麼"]["roman"], "me")
+        self.assertEqual(entries["什"]["roman"], "shé")
+        self.assertEqual((entries["子"]["roman"], entries["子"]["en"]), ("zǐ", "child"))
+
+    def test_audio_for_new_words_and_usual_readings_only(self):
+        words = self.words([["老師", "lǎo-shī", "teacher", 3], ["睡覺", "shuì-jiào", "to sleep", 13], ["什麼", "shé-me", "what", 3]])
+        entries = hsk_entries(words, self.HANZI)
+        table = {"mandarin": {"老師": "audio/words/mandarin/old.mp3"}}
+        jobs = hsk_audio(entries, self.HANZI, table, [])
+        spoken = {j[1] for j in jobs}
+        self.assertEqual(spoken, {"睡覺", "什麼", "老", "師", "睡"})
+        e = {x["zh"]: x for x in entries}
+        self.assertEqual(e["覺"]["sound"], "睡覺")  # jiào here, jué alone
+        self.assertEqual(e["麼"]["sound"], "什麼")  # toneless
+        self.assertEqual(e["什"]["sound"], "什麼")

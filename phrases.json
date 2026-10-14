@@ -1,5 +1,5 @@
 {
- "version": "46492acfdc43",
+ "version": "6a2a586678c2",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -19691,12 +19691,14 @@
   "係": "系",
   "個": "个",
   "們": "们",
+  "兒": "儿",
   "兩": "两",
   "剛": "刚",
   "問": "问",
   "單": "单",
   "嗎": "吗",
   "國": "国",
+  "塊": "块",
   "媽": "妈",
   "學": "学",
   "寫": "写",
@@ -19710,30 +19712,43 @@
   "時": "时",
   "書": "书",
   "會": "会",
+  "東": "东",
   "樣": "样",
+  "機": "机",
   "歡": "欢",
+  "歲": "岁",
   "氣": "气",
   "沒": "没",
+  "漢": "汉",
+  "熱": "热",
+  "現": "现",
   "稱": "称",
   "級": "级",
   "紹": "绍",
   "給": "给",
+  "習": "习",
   "聽": "听",
+  "腦": "脑",
   "興": "兴",
+  "蘋": "苹",
   "蘭": "兰",
   "蘿": "萝",
+  "號": "号",
   "裡": "里",
   "見": "见",
+  "視": "视",
   "覺": "觉",
   "話": "话",
   "認": "认",
   "語": "语",
   "說": "说",
+  "誰": "谁",
   "課": "课",
   "請": "请",
   "謝": "谢",
   "識": "识",
   "讀": "读",
+  "貓": "猫",
   "買": "买",
   "賣": "卖",
   "車": "车",
@@ -19741,8 +19756,10 @@
   "這": "这",
   "過": "过",
   "還": "还",
+  "醫": "医",
   "釋": "释",
   "錢": "钱",
+  "鐘": "钟",
   "門": "门",
   "開": "开",
   "間": "间",
@@ -19750,7 +19767,9 @@
   "雞": "鸡",
   "電": "电",
   "題": "题",
+  "飛": "飞",
   "飯": "饭",
+  "體": "体",
   "麼": "么",
   "點": "点"
  },
@@ -19794,6 +19813,11 @@
    "p": "dīng",
    "c": "一",
    "h": "A nail"
+  },
+  "丂": {
+   "d": "obstruction of breath (qi); variant of 考",
+   "p": "kǎo",
+   "c": "一"
   },
   "七": {
    "d": "seven",
@@ -19840,10 +19864,22 @@
    "p": "yǔ",
    "c": "一"
   },
+  "且": {
+   "d": "moreover, also (post-subject)",
+   "p": "qiě",
+   "c": "月一",
+   "h": "A stone altar"
+  },
   "业": {
    "d": "business, profession; to study, to work",
    "p": "yè",
    "c": "一"
+  },
+  "东": {
+   "d": "east, eastern, eastward",
+   "p": "dōng",
+   "c": "七小",
+   "h": "Simplified form of 東, the sun 日 rising behind a tree 木"
   },
   "两": {
    "d": "two, both, pair, couple; ounce",
@@ -19977,6 +20013,11 @@
    "p": "yě",
    "c": "乚"
   },
+  "习": {
+   "d": "to study, to practice; habit",
+   "p": "xí",
+   "c": "冫"
+  },
   "书": {
    "d": "book, letter, document; writing",
    "p": "shū",
@@ -20028,6 +20069,13 @@
    "c": "一业",
    "h": "Picture of a cross-shaped house or temple"
   },
+  "些": {
+   "d": "little, few; rather, somewhat",
+   "p": "xiē",
+   "c": "此二",
+   "s": "二",
+   "ph": "此"
+  },
   "亠": {
    "d": "lid, cover; head",
    "p": "tóu",
@@ -20039,16 +20087,34 @@
    "c": "亠",
    "h": "A man 人 in a coffin; see 亾"
   },
+  "交": {
+   "d": "to connect; to deliver, to exchange",
+   "p": "jiāo",
+   "c": "六乂",
+   "h": "A person with crossed (intersecting) legs"
+  },
   "亥": {
    "d": "12th terrestrial branch",
    "p": "hài",
    "c": "亠"
+  },
+  "京": {
+   "d": "capital city",
+   "p": "jīng",
+   "c": "亠口小",
+   "h": "A capital building on a hill"
   },
   "亭": {
    "d": "pavilion; erect",
    "p": "tíng",
    "c": "亠口冖丁",
    "h": "亠, 口, and 冖 form a picture of a pavilion; 丁 provides the pronunciation"
+  },
+  "亮": {
+   "d": "bright, brilliant, radiant, light",
+   "p": "liàng",
+   "c": "亠口冖几",
+   "h": "A lit oil lamp"
   },
   "亲": {
    "d": "relatives, parents; intimate",
@@ -20149,6 +20215,11 @@
    "c": "亻主",
    "h": "A person 亻 who hosts 主; 主 also provides the pronunciation"
   },
+  "体": {
+   "d": "body; group, class",
+   "p": "tǐ",
+   "c": "亻本"
+  },
   "何": {
    "d": "what, why, where, which, how",
    "p": "hé",
@@ -20236,6 +20307,12 @@
    "c": "一儿",
    "h": "Cutting 一 off the feet 儿"
   },
+  "元": {
+   "d": "first; dollar",
+   "p": "yuán",
+   "c": "二儿",
+   "h": "A man 儿 with two lines emphasizing their head 二"
+  },
   "兄": {
    "d": "elder brother",
    "p": "xiōng",
@@ -20260,6 +20337,13 @@
    "c": "丷兄",
    "h": "A beast 兄 with two horns 丷"
   },
+  "兒": {
+   "d": "son, child",
+   "p": "ér",
+   "c": "臼儿",
+   "s": "儿",
+   "ph": "儿"
+  },
   "入": {
    "d": "to enter, to come in; to join",
    "p": "rù",
@@ -20281,6 +20365,11 @@
    "p": "gōng",
    "c": "八厶",
    "h": "To divide 八 what is private 厶"
+  },
+  "六": {
+   "d": "six",
+   "p": "liù",
+   "c": "亠八"
   },
   "兰": {
    "d": "orchid; elegant, graceful",
@@ -20347,6 +20436,12 @@
    "c": "冂",
    "h": "Cross-section of a bone"
   },
+  "冏": {
+   "d": "bright, brilliant; clear",
+   "p": "jiǒng",
+   "c": "冂八口",
+   "h": "Archaic form of 炯"
+  },
   "冓": {
    "d": "secret, niche, hiding-hole, cabinet",
    "p": "gòu",
@@ -20373,6 +20468,13 @@
    "c": "冫水",
    "h": "Ice-cold冫 water 水"
   },
+  "冷": {
+   "d": "cold, cool; lonely",
+   "p": "lěng",
+   "c": "冫令",
+   "s": "冫",
+   "ph": "令"
+  },
   "凍": {
    "d": "cold; to freeze, to congeal",
    "p": "dòng",
@@ -20386,10 +20488,28 @@
    "c": "丿乙",
    "h": "A small table; compare 丌"
   },
+  "凡": {
+   "d": "any, every, all; common, ordinary",
+   "p": "fán",
+   "c": "几丶",
+   "h": "A plate or flat dish; an everyday item"
+  },
   "凵": {
    "d": "container; receptacle",
    "p": "qiǎn",
    "h": "A tray"
+  },
+  "凶": {
+   "d": "culprit; murder",
+   "p": "xiōng",
+   "c": "凵乂",
+   "h": "A container 凵 of wickedness 乂"
+  },
+  "出": {
+   "d": "to go out, to send out; stand",
+   "p": "chū",
+   "c": "屮凵",
+   "h": "A sprout 屮 growing out of a container 凵"
   },
   "刀": {
    "d": "knife; old coin",
@@ -20406,6 +20526,12 @@
    "p": "rèn",
    "c": "刀丶",
    "h": "A knife 刀 sharp enough to draw blood 丶"
+  },
+  "分": {
+   "d": "to divide, to allocate; fraction",
+   "p": "fēn",
+   "c": "八刀",
+   "h": "Pieces 八 being further subdivided with a knife 刀 "
   },
   "刖": {
    "d": "cutting off the feet as a form of punishment",
@@ -20495,10 +20621,27 @@
    "c": "乚丿",
    "h": "A spoon"
   },
+  "北": {
+   "d": "north; northern",
+   "p": "běi",
+   "c": "匕",
+   "h": "Two people 匕 sitting back-to-back; phonetic loan for \"north\""
+  },
   "匚": {
    "d": "box; basket",
    "p": "fāng",
    "c": "一"
+  },
+  "匸": {
+   "d": "box",
+   "p": "xì"
+  },
+  "医": {
+   "d": "to cure, to heal, to treat; doctor",
+   "p": "yī",
+   "c": "匸矢",
+   "s": "矢",
+   "ph": "匸"
   },
   "十": {
    "d": "ten, tenth; complete",
@@ -20526,6 +20669,12 @@
    "p": "bēi",
    "c": "白十",
    "h": "A hand 又(altered) holding an empty shell 甲 (altered)"
+  },
+  "卓": {
+   "d": "profound, lofty, brilliant",
+   "p": "zhuō",
+   "c": "⺊早",
+   "h": "To foresee ⺊ the dawn 早 coming; 早 also provides the pronunciation"
   },
   "单": {
    "d": "single, individual, only; lone",
@@ -20671,6 +20820,13 @@
    "p": "tái",
    "c": "厶口"
   },
+  "号": {
+   "d": "mark, sign; symbol",
+   "p": "hào",
+   "c": "口丂",
+   "s": "口",
+   "ph": "丂"
+  },
   "吃": {
    "d": "to eat; to drink",
    "p": "chī",
@@ -20688,6 +20844,12 @@
    "d": "to combine, to join, to unite; to gather",
    "p": "hé",
    "c": "亼口"
+  },
+  "同": {
+   "d": "same, similar; together with, alike",
+   "p": "tóng",
+   "c": "凡口",
+   "h": "Sharing a common 凡 tongue 口"
   },
   "名": {
    "d": "name; position, rank, title",
@@ -20746,6 +20908,13 @@
    "s": "口",
    "ph": "尼"
   },
+  "和": {
+   "d": "harmony, peace; calm, peaceful",
+   "p": "hé",
+   "c": "禾口",
+   "s": "口",
+   "ph": "禾"
+  },
   "咖": {
    "d": "coffee; used in transliterations",
    "p": "kā",
@@ -20785,6 +20954,19 @@
    "s": "口",
    "ph": "吾"
   },
+  "商": {
+   "d": "commerce, business, trade",
+   "p": "shāng",
+   "c": "亠丷冏",
+   "s": "冏"
+  },
+  "啊": {
+   "d": "ah, exclamatory particle",
+   "p": "a",
+   "c": "口阿",
+   "s": "口",
+   "ph": "阿"
+  },
   "問": {
    "d": "to ask about, to inquire after",
    "p": "wèn",
@@ -20805,6 +20987,13 @@
    "c": "口卑",
    "s": "口",
    "ph": "卑"
+  },
+  "喂": {
+   "d": "interjection used to call attention",
+   "p": "wèi",
+   "c": "口畏",
+   "s": "口",
+   "ph": "畏"
   },
   "喜": {
    "d": "to love; to enjoy, to be happy",
@@ -20854,11 +21043,23 @@
    "p": "wéi",
    "c": "冂一"
   },
+  "四": {
+   "d": "four",
+   "p": "sì",
+   "c": "囗儿",
+   "h": "A child 儿 in a room with four walls 囗"
+  },
   "回": {
    "d": "to return, to turn around; a time",
    "p": "huí",
    "c": "囗口",
    "h": "Originally, a spiral signifying return"
+  },
+  "囟": {
+   "d": "top of the head; skull",
+   "p": "xìn",
+   "c": "丿囗乂",
+   "h": "A skull from above, with 乂 marking the fontanelle"
   },
   "固": {
    "d": "to solidify; strength",
@@ -20905,6 +21106,13 @@
    "c": "从土",
    "h": "Two people 从 sitting on the ground 土"
   },
+  "块": {
+   "d": "piece, lump, chunk; dollar",
+   "p": "kuài",
+   "c": "土夬",
+   "s": "土",
+   "ph": "夬"
+  },
   "坴": {
    "d": "a clod of earth; land",
    "p": "lù",
@@ -20929,6 +21137,19 @@
    "p": "yì",
    "c": "坴丸",
    "h": "Clay 坴 formed into a ball 丸"
+  },
+  "堇": {
+   "d": "yellow loam; clay",
+   "p": "jǐn",
+   "c": "黄土",
+   "h": "Yellow 黄 earth 土"
+  },
+  "塊": {
+   "d": "piece, lump, chunk; dollar",
+   "p": "kuài",
+   "c": "土鬼",
+   "s": "土",
+   "ph": "鬼"
   },
   "塔": {
    "d": "tower, spire, tall building",
@@ -20982,6 +21203,11 @@
    "c": "大丶",
    "h": "A giant 大 with a normal-sized man 丶 for scale"
   },
+  "夬": {
+   "d": "decisive, certain; parted",
+   "p": "guài",
+   "c": "大"
+  },
   "央": {
    "d": "central; to beg",
    "p": "yāng",
@@ -20992,6 +21218,12 @@
    "p": "tóu",
    "c": "⺀大",
    "s": "大"
+  },
+  "奇": {
+   "d": "strange, unusual, odd; uncanny, occult",
+   "p": "qí",
+   "c": "大可",
+   "h": "A person 大 riding a horse 可"
   },
   "奚": {
    "d": "where, what, why, how",
@@ -21010,11 +21242,31 @@
    "s": "女",
    "ph": "乃"
   },
+  "她": {
+   "d": "she, her",
+   "p": "tā",
+   "c": "女也",
+   "h": "A woman 女 beside you 也"
+  },
   "好": {
    "d": "good, excellent, fine; proper, suitable",
    "p": "hǎo",
    "c": "女子",
    "h": "A woman 女 with a son 子"
+  },
+  "妈": {
+   "d": "mother, mama",
+   "p": "mā",
+   "c": "女马",
+   "s": "女",
+   "ph": "马"
+  },
+  "姐": {
+   "d": "elder sister; miss, young lady",
+   "p": "jiě",
+   "c": "女且",
+   "s": "女",
+   "ph": "且"
   },
   "婁": {
    "d": "a constellation; to wear",
@@ -21028,6 +21280,13 @@
    "c": "波女",
    "s": "女",
    "ph": "波"
+  },
+  "媽": {
+   "d": "mother, mama",
+   "p": "mā",
+   "c": "女馬",
+   "s": "女",
+   "ph": "馬"
   },
   "子": {
    "d": "son, child; seed, egg",
@@ -21063,6 +21322,13 @@
    "d": "roof; house",
    "p": "gài",
    "c": "丶冖"
+  },
+  "完": {
+   "d": "to complete, to finish, to settle; whole",
+   "p": "wán",
+   "c": "宀元",
+   "s": "宀",
+   "ph": "元"
   },
   "客": {
    "d": "guest, traveller; customer",
@@ -21146,17 +21412,33 @@
    "p": "ní",
    "c": "尸匕"
   },
+  "屮": {
+   "d": "sprout",
+   "p": "chè",
+   "c": "凵丨",
+   "h": "A sprout"
+  },
   "山": {
    "d": "mountain, hill, peak",
    "p": "shān",
    "c": "凵丨",
    "h": "Three mountain peaks"
   },
+  "岁": {
+   "d": "year; years old, age",
+   "p": "suì",
+   "c": "山夕"
+  },
   "岡": {
    "d": "ridge or crest of hill",
    "p": "gāng",
    "c": "冂山",
    "h": "Clouds 网 forming over a mountain 山"
+  },
+  "巛": {
+   "d": "stream, river",
+   "p": "chuān",
+   "h": "A river flowing"
   },
   "工": {
    "d": "labor, work; laborer, worker",
@@ -21220,6 +21502,12 @@
    "c": "一十",
    "h": "A club or axe"
   },
+  "平": {
+   "d": "flat, level, even; peaceful",
+   "p": "píng",
+   "c": "干丷",
+   "h": "A leveling scale"
+  },
   "年": {
    "d": "year; anniversary",
    "p": "nián",
@@ -21247,6 +21535,13 @@
    "p": "guǎng",
    "c": "丶厂",
    "h": "A lean-to 厂, suggesting a building"
+  },
+  "店": {
+   "d": "shop, store; inn, hotel",
+   "p": "diàn",
+   "c": "广占",
+   "s": "广",
+   "ph": "占"
   },
   "度": {
    "d": "degree, system; manner",
@@ -21313,6 +21608,19 @@
    "c": "丰丰彐",
    "h": "A hand 彐 holding a bamboo broom 丰"
   },
+  "彡": {
+   "d": "hair; sunlight",
+   "p": "shān",
+   "c": "丿丿丿",
+   "h": "Tufts of hair"
+  },
+  "影": {
+   "d": "shadow; image, reflection",
+   "p": "yǐng",
+   "c": "景彡",
+   "s": "彡",
+   "ph": "景"
+  },
   "彳": {
    "d": "to step with the left foot",
    "p": "chì",
@@ -21378,6 +21686,12 @@
    "p": "sī",
    "c": "田心",
    "h": "Weighing something with your mind 囟 (altered) and heart 心"
+  },
+  "您": {
+   "d": "honorific for 'you'",
+   "p": "nín",
+   "c": "你心",
+   "h": "You 你 said with affection 心"
   },
   "想": {
    "d": "to believe, to wish for",
@@ -21489,6 +21803,12 @@
    "c": "扌丁",
    "s": "扌",
    "ph": "丁"
+  },
+  "执": {
+   "d": "to execute; to grasp, to hold",
+   "p": "zhí",
+   "c": "扌丸",
+   "h": "A hand 扌 clutching a pebble 丸"
   },
   "拎": {
    "d": "to lift, to haul, to take",
@@ -21642,6 +21962,12 @@
    "c": "並日",
    "h": "Everyone 並 under the sun 日"
   },
+  "景": {
+   "d": "scenery, view; conditions, circumstances",
+   "p": "jǐng",
+   "c": "日京",
+   "h": "The sun 日 rising over a city 京; 京 also provides the pronunciation"
+  },
   "智": {
    "d": "wisdom, knowledge, intelligence",
    "p": "zhì",
@@ -21653,6 +21979,12 @@
    "p": "yuē",
    "c": "口一",
    "h": "Picture of an open 一 mouth 口"
+  },
+  "曲": {
+   "d": "crooked, bent; wrong, false",
+   "p": "qū",
+   "c": "曰丨丨",
+   "h": "A folded object 曰"
   },
   "曷": {
    "d": "what, why, where, which, how",
@@ -21702,6 +22034,12 @@
    "c": "月月",
    "h": "Two people 月 walking together"
   },
+  "服": {
+   "d": "clothes; to dress, to wear",
+   "p": "fú",
+   "c": "月卩又",
+   "h": "A person 卩 putting on 又 a coat 月"
+  },
   "期": {
    "d": "a period of time; date, time",
    "p": "qī",
@@ -21726,6 +22064,12 @@
    "p": "běn",
    "c": "木一",
    "h": "A tree 木 with its roots highlighted"
+  },
+  "机": {
+   "d": "desk; machine",
+   "p": "jī",
+   "c": "木几",
+   "h": "A table 几 made of wood 木; 几 also provides the pronunciation"
   },
   "束": {
    "d": "to bind, to control, to restrain; bale",
@@ -21770,12 +22114,31 @@
    "c": "束八",
    "h": "A bound 束 package"
   },
+  "校": {
+   "d": "school; military field officer",
+   "p": "xiào",
+   "c": "木交",
+   "s": "木",
+   "ph": "交"
+  },
   "样": {
    "d": "form, pattern, shape, style",
    "p": "yàng",
    "c": "木羊",
    "s": "木",
    "ph": "羊"
+  },
+  "桌": {
+   "d": "table, stand, desk, counter",
+   "p": "zhuō",
+   "c": "卓木"
+  },
+  "椅": {
+   "d": "chair, seat",
+   "p": "yǐ",
+   "c": "木奇",
+   "s": "木",
+   "ph": "奇"
   },
   "樓": {
    "d": "multi-story building; floor",
@@ -21790,6 +22153,12 @@
    "c": "木羕",
    "s": "木",
    "ph": "羕"
+  },
+  "機": {
+   "d": "desk; machine",
+   "p": "jī",
+   "c": "木幾",
+   "h": "A table 幾 made of wood 木; 幾 also provides the pronunciation"
   },
   "欠": {
    "d": "to lack, to owe; to breathe, to yawn",
@@ -21821,6 +22190,24 @@
    "c": "上丨",
    "h": "A foot"
   },
+  "此": {
+   "d": "this, these; in this case, then",
+   "p": "cǐ",
+   "c": "止匕",
+   "s": "匕",
+   "ph": "止"
+  },
+  "步": {
+   "d": "walk, stroll, pace, march; to make progress",
+   "p": "bù",
+   "c": "止",
+   "h": "Modern form of 歨; putting one foot 止 in front of the other"
+  },
+  "歲": {
+   "d": "year; years old, age",
+   "p": "suì",
+   "c": "止戊"
+  },
   "歺": {
    "d": "evil, depraved, wicked",
    "p": "è",
@@ -21832,6 +22219,13 @@
    "p": "shū",
    "c": "几又",
    "h": "A hand 又 holding a weapon 几"
+  },
+  "殹": {
+   "d": "an echo",
+   "p": "yì",
+   "c": "医殳",
+   "s": "殳",
+   "ph": "医"
   },
   "母": {
    "d": "mother; female elders",
@@ -21869,6 +22263,12 @@
    "p": "shui",
    "c": "亅",
    "h": "A river running between two banks; compare 川 and 水"
+  },
+  "汉": {
+   "d": "Chinese people; Chinese language",
+   "p": "hàn",
+   "c": "氵又",
+   "h": "Simplified form of 漢; the Han 𦰩 river 氵"
   },
   "沒": {
    "d": "not, none, gone; to bury",
@@ -21924,6 +22324,19 @@
    "s": "氵",
    "ph": "巷"
   },
+  "漂": {
+   "d": "to drift, to float; to be tossed about",
+   "p": "piào",
+   "c": "氵票",
+   "s": "氵",
+   "ph": "票"
+  },
+  "漢": {
+   "d": "Chinese people; Chinese language",
+   "p": "hàn",
+   "c": "氵堇",
+   "h": "The Han 𦰩 river 氵"
+  },
   "灣": {
    "d": "bay, cove, gulf, inlet",
    "p": "wān",
@@ -21941,6 +22354,13 @@
    "c": "占灬",
    "s": "灬",
    "ph": "占"
+  },
+  "热": {
+   "d": "heat, fever, zeal",
+   "p": "rè",
+   "c": "执灬",
+   "s": "灬",
+   "ph": "执"
   },
   "煮": {
    "d": "to boil, to cook",
@@ -21967,6 +22387,19 @@
    "c": "爫冖友",
    "h": "To bring a friend 友 into one's house 冖"
   },
+  "父": {
+   "d": "father, dad",
+   "p": "fù",
+   "c": "八乂",
+   "h": "A hand 乂 holding an axe 八"
+  },
+  "爸": {
+   "d": "father, papa",
+   "p": "bà",
+   "c": "父巴",
+   "s": "父",
+   "ph": "巴"
+  },
   "片": {
    "d": "slice, splinter; page, strip",
    "p": "piàn",
@@ -21988,6 +22421,25 @@
    "p": "niú",
    "h": "An ox's horned head"
   },
+  "犭": {
+   "d": "dog",
+   "p": "quǎn",
+   "h": "A dog turned to the side"
+  },
+  "狗": {
+   "d": "dog",
+   "p": "gǒu",
+   "c": "犭句",
+   "s": "犭",
+   "ph": "句"
+  },
+  "猫": {
+   "d": "cat",
+   "p": "māo",
+   "c": "犭苗",
+   "s": "犭",
+   "ph": "苗"
+  },
   "玉": {
    "d": "jade, gem, precious stone",
    "p": "yù",
@@ -21999,6 +22451,18 @@
    "p": "wáng",
    "c": "一土",
    "h": "A man 十 bridging heaven and earth (both 一)"
+  },
+  "现": {
+   "d": "to appear, to manifest; current, now",
+   "p": "xiàn",
+   "c": "王见",
+   "h": "To see 见 jade 王; 见 also provides the pronunciation"
+  },
+  "現": {
+   "d": "to appear, to manifest; current, now",
+   "p": "xiàn",
+   "c": "王見",
+   "h": "To see 見 jade 王; 見 also provides the pronunciation"
   },
   "甘": {
    "d": "sweet, tasty; willing",
@@ -22051,6 +22515,12 @@
    "p": "diàn",
    "c": "曰乚",
    "h": "Simplified form of 電; lightning 申 from a storm cloud 雨"
+  },
+  "畏": {
+   "d": "fear, dread, awe, reverence",
+   "p": "wèi",
+   "c": "田一",
+   "h": "A monster with a scary head 田"
   },
   "疋": {
    "d": "roll, bolt of cloth; foot",
@@ -22154,11 +22624,34 @@
    "s": "石",
    "ph": "开"
   },
+  "示": {
+   "d": "altar; ceremony",
+   "p": "shì",
+   "c": "二小",
+   "h": "An altar"
+  },
+  "礻": {
+   "d": "spirit",
+   "p": "shì",
+   "c": "卜"
+  },
+  "票": {
+   "d": "bank note; ticket",
+   "p": "piào",
+   "c": "覀示",
+   "h": "Flames 覀 over an altar 示, referring to a Chinese tradition of burning fake money as an offering"
+  },
   "禾": {
    "d": "cereal, grain, rice; plant, stalk",
    "p": "hé",
    "c": "丿木",
    "h": "A plant stalk with a sagging head"
+  },
+  "租": {
+   "d": "to rent, to lease; tax, rent",
+   "p": "zū",
+   "c": "禾且",
+   "h": "Regularly paid 且 tribute in grain 禾"
   },
   "穴": {
    "d": "cave, den, hole",
@@ -22192,6 +22685,12 @@
    "p": "lì",
    "c": "亠丷一",
    "h": "A man standing on the ground 一"
+  },
+  "童": {
+   "d": "child, boy; servant boy",
+   "p": "tóng",
+   "c": "立里",
+   "h": "A child standing 立 in the village 里"
   },
   "第": {
    "d": "sequence, number; grade, degree",
@@ -22332,6 +22831,18 @@
    "s": "永",
    "ph": "羊"
   },
+  "羽": {
+   "d": "feather, plume; wings",
+   "p": "yǔ",
+   "c": "习习",
+   "h": "Two feathers or wings"
+  },
+  "習": {
+   "d": "to study, to practice; habit",
+   "p": "xí",
+   "c": "羽白",
+   "h": "Birds flying 羽 in the daytime 白"
+  },
   "老": {
    "d": "old, aged; experienced",
    "p": "lǎo",
@@ -22385,12 +22896,24 @@
    "c": "厶⺼匕匕",
    "h": "A bear's head 厶, body ⺼, and claws 匕"
   },
+  "脑": {
+   "d": "brain",
+   "p": "nǎo",
+   "c": "⺼亠凶",
+   "s": "⺼"
+  },
   "腐": {
    "d": "to spoil, to rot, to decay; rotten",
    "p": "fǔ",
    "c": "广付肉",
    "s": "肉",
    "ph": "付"
+  },
+  "腦": {
+   "d": "brain",
+   "p": "nǎo",
+   "c": "⺼巛囟",
+   "h": "An organ ⺼ in the skull 囟"
   },
   "自": {
    "d": "self; private, personal",
@@ -22444,12 +22967,25 @@
    "p": "cǎo",
    "h": "Simplified form of 艸; grass sprouting"
   },
+  "苗": {
+   "d": "sprouts; Miao nationality",
+   "p": "miáo",
+   "c": "艹田",
+   "h": "Grass 艹 growing in a field 田"
+  },
   "英": {
    "d": "petal, flower, leaf; brave, heroic",
    "p": "yīng",
    "c": "艹央",
    "s": "艹",
    "ph": "央"
+  },
+  "苹": {
+   "d": "apple; duckweed, Artemisia",
+   "p": "píng",
+   "c": "艹平",
+   "s": "艹",
+   "ph": "平"
   },
   "茶": {
    "d": "tea; tea leaves",
@@ -22520,6 +23056,13 @@
    "s": "艹",
    "ph": "重"
   },
+  "蘋": {
+   "d": "apple; duckweed, Artemisia",
+   "p": "píng",
+   "c": "艹頻",
+   "s": "艹",
+   "ph": "頻"
+  },
   "蘭": {
    "d": "orchid; elegant, graceful",
    "p": "lán",
@@ -22534,6 +23077,23 @@
    "s": "艹",
    "ph": "羅"
   },
+  "虍": {
+   "d": "tiger",
+   "p": "hū",
+   "c": "七"
+  },
+  "虎": {
+   "d": "tiger; brave, fierce",
+   "p": "hǔ",
+   "c": "虍几",
+   "h": "A tiger 虍 standing on a rock 几; 虍 also provides the pronunciation"
+  },
+  "號": {
+   "d": "mark, sign; symbol",
+   "p": "hào",
+   "c": "号虎",
+   "h": "The roar 口 of the tiger 虎; 丂 provides the pronunciation"
+  },
   "虫": {
    "d": "insect, worm; mollusk",
    "p": "chóng",
@@ -22545,6 +23105,12 @@
    "p": "dàn",
    "c": "疋虫",
    "s": "虫"
+  },
+  "衣": {
+   "d": "cloth; clothes, apparel",
+   "p": "yī",
+   "c": "亠",
+   "h": "A woman's dress"
   },
   "衤": {
    "d": "cloth",
@@ -22579,6 +23145,13 @@
    "c": "目儿",
    "h": "A man 儿 with the eye 目 emphasized"
   },
+  "視": {
+   "d": "to look at, to inspect, to observe, to regard",
+   "p": "shì",
+   "c": "礻見",
+   "s": "見",
+   "ph": "礻"
+  },
   "覺": {
    "d": "conscious; to nap, to sleep",
    "p": "jué",
@@ -22589,6 +23162,13 @@
    "p": "jiàn",
    "c": "冂儿",
    "h": "Simplified form of 見; a man 儿 with the eye 目 emphasized"
+  },
+  "视": {
+   "d": "to look at, to inspect, to observe, to regard",
+   "p": "shì",
+   "c": "礻见",
+   "s": "见",
+   "ph": "礻"
   },
   "觉": {
    "d": "conscious; to nap, to sleep",
@@ -22635,12 +23215,26 @@
    "s": "言",
    "ph": "忍"
   },
+  "語": {
+   "d": "words, language; saying, expression",
+   "p": "yǔ",
+   "c": "言吾",
+   "s": "言",
+   "ph": "吾"
+  },
   "說": {
    "d": "to speak, to say; to scold, to upbraid",
    "p": "shuō",
    "c": "言兌",
    "s": "言",
    "ph": "兌"
+  },
+  "誰": {
+   "d": "who? whom? whose? anyone?",
+   "p": "shuí",
+   "c": "言隹",
+   "s": "言",
+   "ph": "隹"
   },
   "課": {
    "d": "subject, lesson, course; classwork",
@@ -22707,6 +23301,13 @@
    "c": "讠舌",
    "h": "A spoken 讠 tongue 舌; 舌 also provides the pronunciation"
   },
+  "语": {
+   "d": "words, language; saying, expression",
+   "p": "yǔ",
+   "c": "讠吾",
+   "s": "讠",
+   "ph": "吾"
+  },
   "说": {
    "d": "to speak, to say; to scold, to upbraid",
    "p": "shuō",
@@ -22734,6 +23335,13 @@
    "s": "讠",
    "ph": "果"
   },
+  "谁": {
+   "d": "who? whom? whose? anyone?",
+   "p": "shuí",
+   "c": "讠隹",
+   "s": "讠",
+   "ph": "隹"
+  },
   "谢": {
    "d": "to thank; to refuse politely",
    "p": "xiè",
@@ -22747,11 +23355,29 @@
    "c": "一口丷一",
    "h": "An old serving dish 口 on a stand with a lid 一"
   },
+  "豊": {
+   "d": "abundant, lush, bountiful, plenty",
+   "p": "lǐ",
+   "c": "曲豆",
+   "h": "A stalk bent crooked 曲 by the weight of its beans 豆"
+  },
   "豕": {
    "d": "pig, boar",
    "p": "shǐ",
    "c": "一勿",
    "h": "A pig drawn on its side"
+  },
+  "豸": {
+   "d": "badger; legendary beast",
+   "p": "zhì",
+   "c": "爫犭"
+  },
+  "貓": {
+   "d": "cat",
+   "p": "māo",
+   "c": "豸苗",
+   "s": "豸",
+   "ph": "苗"
   },
   "貝": {
    "d": "sea shell; money, currency",
@@ -22917,6 +23543,13 @@
    "p": "nà",
    "c": "阝"
   },
+  "都": {
+   "d": "all, each, entirely, whole; metropolis",
+   "p": "dōu",
+   "c": "者阝",
+   "s": "阝",
+   "ph": "者"
+  },
   "酉": {
    "d": "wine; wine vessel",
    "p": "yǒu",
@@ -22928,6 +23561,13 @@
    "p": "jiǔ",
    "c": "氵酉",
    "h": "A jar 酉 of wine 氵; 酉 also provides the pronunciation"
+  },
+  "醫": {
+   "d": "to cure, to heal, to treat; doctor",
+   "p": "yī",
+   "c": "殹酉",
+   "s": "酉",
+   "ph": "殹"
   },
   "釆": {
    "d": "to distinguish; to pick, to gather, to collect",
@@ -22985,10 +23625,24 @@
    "s": "釒",
    "ph": "重"
   },
+  "鐘": {
+   "d": "clock; bell",
+   "p": "zhōng",
+   "c": "釒童",
+   "s": "釒",
+   "ph": "童"
+  },
   "钅": {
    "d": "gold, metal; money",
    "p": "jīn",
    "h": "A cast-iron bell; compare 金"
+  },
+  "钟": {
+   "d": "clock; bell",
+   "p": "zhōng",
+   "c": "钅中",
+   "s": "钅",
+   "ph": "中"
   },
   "钱": {
    "d": "money, currency, coins",
@@ -23053,6 +23707,20 @@
    "p": "yì",
    "c": "丨"
   },
+  "阿": {
+   "d": "an initial particle, a prefix used for names",
+   "p": "ā",
+   "c": "阝可",
+   "s": "阝",
+   "ph": "可"
+  },
+  "院": {
+   "d": "court, yard, courtyard; school",
+   "p": "yuàn",
+   "c": "阝完",
+   "s": "阝",
+   "ph": "完"
+  },
   "隹": {
    "d": "short-tailed bird; sparrow",
    "p": "zhuī",
@@ -23093,6 +23761,11 @@
    "p": "fēi",
    "h": "Two bird's wings opposed; two people back-to-back"
   },
+  "面": {
+   "d": "face; surface, side",
+   "p": "miàn",
+   "h": "A person's face"
+  },
   "音": {
    "d": "sound, tone, pitch, pronunciation",
    "p": "yīn",
@@ -23104,6 +23777,11 @@
    "p": "yè",
    "c": "貝",
    "h": "A person's head"
+  },
+  "頻": {
+   "d": "frequency; repeatedly, again and again",
+   "p": "pín",
+   "c": "步頁"
   },
   "題": {
    "d": "forehead; headline, title",
@@ -23124,6 +23802,17 @@
    "c": "是页",
    "s": "页",
    "ph": "是"
+  },
+  "飛": {
+   "d": "to fly, to dart; high",
+   "p": "fēi",
+   "c": "飞飞",
+   "h": "Two birds 飞 flying"
+  },
+  "飞": {
+   "d": "to fly, to dart; high",
+   "p": "fēi",
+   "h": "A bird flapping its wings"
   },
   "食": {
    "d": "food; to eat",
@@ -23193,11 +23882,30 @@
    "c": "一",
    "h": "Simplified form of 馬, a horse galloping to the left"
   },
+  "骨": {
+   "d": "bone; skeleton",
+   "p": "gǔ",
+   "c": "冎⺼",
+   "h": "Flesh ⺼ and bones 冎"
+  },
+  "體": {
+   "d": "body; group, class",
+   "p": "tǐ",
+   "c": "骨豊",
+   "s": "骨",
+   "ph": "豊"
+  },
   "高": {
    "d": "tall, lofty; high, elevated",
    "p": "gāo",
    "c": "亠口冋",
    "h": "A tall palace"
+  },
+  "鬼": {
+   "d": "ghost; demon",
+   "p": "guǐ",
+   "c": "乚厶",
+   "h": "A ghost with a scary face"
   },
   "魚": {
    "d": "fish",
@@ -24007,7 +24715,178 @@
    "不用": "audio/words/mandarin/4e0d-7528.mp3",
    "等": "audio/words/mandarin/7b49.mp3",
    "多少": "audio/words/mandarin/591a-5c11.mp3",
-   "錢": "audio/words/mandarin/9322.mp3"
+   "錢": "audio/words/mandarin/9322.mp3",
+   "你好": "audio/words/mandarin/4f60-597d.mp3",
+   "您": "audio/words/mandarin/60a8.mp3",
+   "謝謝你": "audio/words/mandarin/8b1d-8b1d-4f60.mp3",
+   "中國": "audio/words/mandarin/4e2d-570b.mp3",
+   "美國": "audio/words/mandarin/7f8e-570b.mp3",
+   "她": "audio/words/mandarin/5979.mp3",
+   "誰": "audio/words/mandarin/8ab0.mp3",
+   "漢語": "audio/words/mandarin/6f22-8a9e.mp3",
+   "哪": "audio/words/mandarin/54ea.mp3",
+   "同學": "audio/words/mandarin/540c-5b78.mp3",
+   "家": "audio/words/mandarin/5bb6.mp3",
+   "口": "audio/words/mandarin/53e3.mp3",
+   "女兒": "audio/words/mandarin/5973-5152.mp3",
+   "歲": "audio/words/mandarin/6b72.mp3",
+   "今年": "audio/words/mandarin/4eca-5e74.mp3",
+   "多": "audio/words/mandarin/591a.mp3",
+   "大": "audio/words/mandarin/5927.mp3",
+   "三": "audio/words/mandarin/4e09.mp3",
+   "四": "audio/words/mandarin/56db.mp3",
+   "五": "audio/words/mandarin/4e94.mp3",
+   "六": "audio/words/mandarin/516d.mp3",
+   "七": "audio/words/mandarin/4e03.mp3",
+   "八": "audio/words/mandarin/516b.mp3",
+   "九": "audio/words/mandarin/4e5d.mp3",
+   "十": "audio/words/mandarin/5341.mp3",
+   "媽媽": "audio/words/mandarin/5abd-5abd.mp3",
+   "菜": "audio/words/mandarin/83dc.mp3",
+   "好吃": "audio/words/mandarin/597d-5403.mp3",
+   "漢字": "audio/words/mandarin/6f22-5b57.mp3",
+   "字": "audio/words/mandarin/5b57.mp3",
+   "問": "audio/words/mandarin/554f.mp3",
+   "號": "audio/words/mandarin/865f.mp3",
+   "月": "audio/words/mandarin/6708.mp3",
+   "學校": "audio/words/mandarin/5b78-6821.mp3",
+   "書": "audio/words/mandarin/66f8.mp3",
+   "茶": "audio/words/mandarin/8336.mp3",
+   "米飯": "audio/words/mandarin/7c73-98ef.mp3",
+   "下午": "audio/words/mandarin/4e0b-5348.mp3",
+   "商店": "audio/words/mandarin/5546-5e97.mp3",
+   "杯子": "audio/words/mandarin/676f-5b50.mp3",
+   "塊": "audio/words/mandarin/584a.mp3",
+   "小": "audio/words/mandarin/5c0f.mp3",
+   "貓": "audio/words/mandarin/8c93.mp3",
+   "那裡": "audio/words/mandarin/90a3-88e1.mp3",
+   "狗": "audio/words/mandarin/72d7.mp3",
+   "椅子": "audio/words/mandarin/6905-5b50.mp3",
+   "下面": "audio/words/mandarin/4e0b-9762.mp3",
+   "兒子": "audio/words/mandarin/5152-5b50.mp3",
+   "醫院": "audio/words/mandarin/91ab-9662.mp3",
+   "醫生": "audio/words/mandarin/91ab-751f.mp3",
+   "爸爸": "audio/words/mandarin/7238-7238.mp3",
+   "桌子": "audio/words/mandarin/684c-5b50.mp3",
+   "電腦": "audio/words/mandarin/96fb-8166.mp3",
+   "和": "audio/words/mandarin/548c.mp3",
+   "本": "audio/words/mandarin/672c.mp3",
+   "裡": "audio/words/mandarin/88e1.mp3",
+   "前面": "audio/words/mandarin/524d-9762.mp3",
+   "後面": "audio/words/mandarin/5f8c-9762.mp3",
+   "現在": "audio/words/mandarin/73fe-5728.mp3",
+   "點": "audio/words/mandarin/9ede.mp3",
+   "分": "audio/words/mandarin/5206.mp3",
+   "中午": "audio/words/mandarin/4e2d-5348.mp3",
+   "吃飯": "audio/words/mandarin/5403-98ef.mp3",
+   "電影": "audio/words/mandarin/96fb-5f71.mp3",
+   "前": "audio/words/mandarin/524d.mp3",
+   "北京": "audio/words/mandarin/5317-4eac.mp3",
+   "天氣": "audio/words/mandarin/5929-6c23.mp3",
+   "熱": "audio/words/mandarin/71b1.mp3",
+   "冷": "audio/words/mandarin/51b7.mp3",
+   "下雨": "audio/words/mandarin/4e0b-96e8.mp3",
+   "小姐": "audio/words/mandarin/5c0f-59d0.mp3",
+   "身體": "audio/words/mandarin/8eab-9ad4.mp3",
+   "些": "audio/words/mandarin/4e9b.mp3",
+   "水果": "audio/words/mandarin/6c34-679c.mp3",
+   "喂": "audio/words/mandarin/5582.mp3",
+   "學習": "audio/words/mandarin/5b78-7fd2.mp3",
+   "上午": "audio/words/mandarin/4e0a-5348.mp3",
+   "電視": "audio/words/mandarin/96fb-8996.mp3",
+   "打電話": "audio/words/mandarin/6253-96fb-8a71.mp3",
+   "東西": "audio/words/mandarin/6771-897f.mp3",
+   "蘋果": "audio/words/mandarin/860b-679c.mp3",
+   "先生": "audio/words/mandarin/5148-751f.mp3",
+   "車": "audio/words/mandarin/8eca.mp3",
+   "回來": "audio/words/mandarin/56de-4f86.mp3",
+   "分鐘": "audio/words/mandarin/5206-9418.mp3",
+   "後": "audio/words/mandarin/5f8c.mp3",
+   "衣服": "audio/words/mandarin/8863-670d.mp3",
+   "漂亮": "audio/words/mandarin/6f02-4eae.mp3",
+   "啊": "audio/words/mandarin/554a.mp3",
+   "少": "audio/words/mandarin/5c11.mp3",
+   "這些": "audio/words/mandarin/9019-4e9b.mp3",
+   "都": "audio/words/mandarin/90fd.mp3",
+   "年": "audio/words/mandarin/5e74.mp3",
+   "飯店": "audio/words/mandarin/98ef-5e97.mp3",
+   "出租車": "audio/words/mandarin/51fa-79df-8eca.mp3",
+   "飛機": "audio/words/mandarin/98db-6a5f.mp3",
+   "起": "audio/words/mandarin/8d77.mp3",
+   "關": "audio/words/mandarin/95dc.mp3",
+   "係": "audio/words/mandarin/4fc2.mp3",
+   "謝": "audio/words/mandarin/8b1d.mp3",
+   "客": "audio/words/mandarin/5ba2.mp3",
+   "氣": "audio/words/mandarin/6c23.mp3",
+   "名": "audio/words/mandarin/540d.mp3",
+   "老": "audio/words/mandarin/8001.mp3",
+   "師": "audio/words/mandarin/5e2b.mp3",
+   "生": "audio/words/mandarin/751f.mp3",
+   "中": "audio/words/mandarin/4e2d.mp3",
+   "美": "audio/words/mandarin/7f8e.mp3",
+   "漢": "audio/words/mandarin/6f22.mp3",
+   "語": "audio/words/mandarin/8a9e.mp3",
+   "同": "audio/words/mandarin/540c.mp3",
+   "朋": "audio/words/mandarin/670b.mp3",
+   "友": "audio/words/mandarin/53cb.mp3",
+   "女": "audio/words/mandarin/5973.mp3",
+   "兒": "audio/words/mandarin/5152.mp3",
+   "今": "audio/words/mandarin/4eca.mp3",
+   "媽": "audio/words/mandarin/5abd.mp3",
+   "怎": "audio/words/mandarin/600e.mp3",
+   "天": "audio/words/mandarin/5929.mp3",
+   "星": "audio/words/mandarin/661f.mp3",
+   "昨": "audio/words/mandarin/6628.mp3",
+   "明": "audio/words/mandarin/660e.mp3",
+   "校": "audio/words/mandarin/6821.mp3",
+   "米": "audio/words/mandarin/7c73.mp3",
+   "飯": "audio/words/mandarin/98ef.mp3",
+   "午": "audio/words/mandarin/5348.mp3",
+   "商": "audio/words/mandarin/5546.mp3",
+   "店": "audio/words/mandarin/5e97.mp3",
+   "椅": "audio/words/mandarin/6905.mp3",
+   "面": "audio/words/mandarin/9762.mp3",
+   "工": "audio/words/mandarin/5de5.mp3",
+   "作": "audio/words/mandarin/4f5c.mp3",
+   "醫": "audio/words/mandarin/91ab.mp3",
+   "院": "audio/words/mandarin/9662.mp3",
+   "爸": "audio/words/mandarin/7238.mp3",
+   "桌": "audio/words/mandarin/684c.mp3",
+   "電": "audio/words/mandarin/96fb.mp3",
+   "腦": "audio/words/mandarin/8166.mp3",
+   "現": "audio/words/mandarin/73fe.mp3",
+   "時": "audio/words/mandarin/6642.mp3",
+   "候": "audio/words/mandarin/5019.mp3",
+   "影": "audio/words/mandarin/5f71.mp3",
+   "北": "audio/words/mandarin/5317.mp3",
+   "京": "audio/words/mandarin/4eac.mp3",
+   "樣": "audio/words/mandarin/6a23.mp3",
+   "雨": "audio/words/mandarin/96e8.mp3",
+   "姐": "audio/words/mandarin/59d0.mp3",
+   "身": "audio/words/mandarin/8eab.mp3",
+   "體": "audio/words/mandarin/9ad4.mp3",
+   "果": "audio/words/mandarin/679c.mp3",
+   "習": "audio/words/mandarin/7fd2.mp3",
+   "睡": "audio/words/mandarin/7761.mp3",
+   "視": "audio/words/mandarin/8996.mp3",
+   "喜": "audio/words/mandarin/559c.mp3",
+   "歡": "audio/words/mandarin/6b61.mp3",
+   "東": "audio/words/mandarin/6771.mp3",
+   "西": "audio/words/mandarin/897f.mp3",
+   "蘋": "audio/words/mandarin/860b.mp3",
+   "先": "audio/words/mandarin/5148.mp3",
+   "鐘": "audio/words/mandarin/9418.mp3",
+   "衣": "audio/words/mandarin/8863.mp3",
+   "服": "audio/words/mandarin/670d.mp3",
+   "漂": "audio/words/mandarin/6f02.mp3",
+   "亮": "audio/words/mandarin/4eae.mp3",
+   "認": "audio/words/mandarin/8a8d.mp3",
+   "出": "audio/words/mandarin/51fa.mp3",
+   "租": "audio/words/mandarin/79df.mp3",
+   "高": "audio/words/mandarin/9ad8.mp3",
+   "興": "audio/words/mandarin/8208.mp3",
+   "飛": "audio/words/mandarin/98db.mp3",
+   "機": "audio/words/mandarin/6a5f.mp3"
   },
   "cantonese": {
    "唔": "audio/words/cantonese/5514.mp3",
@@ -24065,5 +24944,2469 @@
    "點": "audio/words/cantonese/9ede.mp3",
    "一": "audio/words/cantonese/4e00.mp3"
   }
+ },
+ "hsk": {
+  "lessons": {
+   "1": "你好",
+   "2": "謝謝你",
+   "3": "你叫什麼名字",
+   "4": "她是我的漢語老師",
+   "5": "她女兒今年二十歲",
+   "6": "我會說漢語",
+   "7": "今天幾號",
+   "8": "我想喝茶",
+   "9": "你兒子在哪裡工作",
+   "10": "我能坐這裡嗎",
+   "11": "現在幾點",
+   "12": "明天天氣怎麼樣",
+   "13": "他在學做中國菜呢",
+   "14": "她買了不少衣服",
+   "15": "我是坐飛機來的"
+  },
+  "entries": [
+   {
+    "zh": "你",
+    "roman": "nǐ",
+    "script": "cn",
+    "zhDisp": "你",
+    "en": "you",
+    "lesson": 1
+   },
+   {
+    "zh": "好",
+    "roman": "hǎo",
+    "script": "cn",
+    "zhDisp": "好",
+    "en": "good; well",
+    "lesson": 1
+   },
+   {
+    "zh": "你好",
+    "roman": "nǐ-hǎo",
+    "script": "cn",
+    "zhDisp": "你好",
+    "en": "hello",
+    "lesson": 1
+   },
+   {
+    "zh": "您",
+    "roman": "nín",
+    "script": "cn",
+    "zhDisp": "您",
+    "en": "you (polite)",
+    "lesson": 1
+   },
+   {
+    "zh": "你們",
+    "roman": "nǐ-men",
+    "script": "cn",
+    "zhDisp": "你们",
+    "zhS": "你们",
+    "en": "you (plural)",
+    "lesson": 1
+   },
+   {
+    "zh": "對不起",
+    "roman": "duì-bù-qǐ",
+    "script": "cn",
+    "zhDisp": "对不起",
+    "zhS": "对不起",
+    "en": "sorry",
+    "lesson": 1
+   },
+   {
+    "zh": "沒關係",
+    "roman": "méi-guān-xì",
+    "script": "cn",
+    "zhDisp": "没关系",
+    "zhS": "没关系",
+    "en": "it doesn't matter",
+    "lesson": 1
+   },
+   {
+    "zh": "謝謝",
+    "roman": "xiè-xie",
+    "script": "hk",
+    "zhS": "谢谢",
+    "en": "thank you",
+    "lesson": 2
+   },
+   {
+    "zh": "謝謝你",
+    "roman": "xiè-xie nǐ",
+    "script": "cn",
+    "zhDisp": "谢谢你",
+    "zhS": "谢谢你",
+    "en": "thank you",
+    "lesson": 2
+   },
+   {
+    "zh": "不",
+    "roman": "bù",
+    "script": "cn",
+    "zhDisp": "不",
+    "en": "not; no",
+    "lesson": 2
+   },
+   {
+    "zh": "不客氣",
+    "roman": "bú-kè-qì",
+    "script": "cn",
+    "zhDisp": "不客气",
+    "zhS": "不客气",
+    "en": "you're welcome",
+    "lesson": 2
+   },
+   {
+    "zh": "再見",
+    "roman": "zài-jiàn",
+    "script": "cn",
+    "zhDisp": "再见",
+    "zhS": "再见",
+    "en": "goodbye",
+    "lesson": 2
+   },
+   {
+    "zh": "我",
+    "roman": "wǒ",
+    "script": "cn",
+    "zhDisp": "我",
+    "en": "I; me",
+    "lesson": 3
+   },
+   {
+    "zh": "叫",
+    "roman": "jiào",
+    "script": "cn",
+    "zhDisp": "叫",
+    "en": "to be called",
+    "lesson": 3
+   },
+   {
+    "zh": "什麼",
+    "roman": "shé-me",
+    "script": "cn",
+    "zhDisp": "什么",
+    "zhS": "什么",
+    "en": "what",
+    "lesson": 3
+   },
+   {
+    "zh": "名字",
+    "roman": "míng-zì",
+    "script": "cn",
+    "zhDisp": "名字",
+    "en": "name",
+    "lesson": 3
+   },
+   {
+    "zh": "是",
+    "roman": "shì",
+    "script": "cn",
+    "zhDisp": "是",
+    "en": "to be (am, is, are)",
+    "lesson": 3
+   },
+   {
+    "zh": "老師",
+    "roman": "lǎo-shī",
+    "script": "hk",
+    "zhS": "老师",
+    "en": "teacher",
+    "lesson": 3
+   },
+   {
+    "zh": "嗎",
+    "roman": "ma",
+    "script": "cn",
+    "zhDisp": "吗",
+    "zhS": "吗",
+    "en": "(question particle)",
+    "lesson": 3
+   },
+   {
+    "zh": "學生",
+    "roman": "xué-shēng",
+    "script": "hk",
+    "zhS": "学生",
+    "en": "student",
+    "lesson": 3
+   },
+   {
+    "zh": "人",
+    "roman": "rén",
+    "script": "cn",
+    "zhDisp": "人",
+    "en": "person",
+    "lesson": 3
+   },
+   {
+    "zh": "中國",
+    "roman": "Zhōng-guó",
+    "script": "cn",
+    "zhDisp": "中国",
+    "zhS": "中国",
+    "en": "China",
+    "lesson": 3
+   },
+   {
+    "zh": "美國",
+    "roman": "Měi-guó",
+    "script": "cn",
+    "zhDisp": "美国",
+    "zhS": "美国",
+    "en": "the United States",
+    "lesson": 3
+   },
+   {
+    "zh": "她",
+    "roman": "tā",
+    "script": "cn",
+    "zhDisp": "她",
+    "en": "she; her",
+    "lesson": 4
+   },
+   {
+    "zh": "他",
+    "roman": "tā",
+    "script": "cn",
+    "zhDisp": "他",
+    "en": "he; him",
+    "lesson": 4
+   },
+   {
+    "zh": "誰",
+    "roman": "shéi",
+    "script": "cn",
+    "zhDisp": "谁",
+    "zhS": "谁",
+    "en": "who",
+    "lesson": 4
+   },
+   {
+    "zh": "的",
+    "roman": "de",
+    "script": "cn",
+    "zhDisp": "的",
+    "en": "(possessive particle: 's)",
+    "lesson": 4
+   },
+   {
+    "zh": "漢語",
+    "roman": "Hàn-yǔ",
+    "script": "cn",
+    "zhDisp": "汉语",
+    "zhS": "汉语",
+    "en": "Chinese (the language)",
+    "lesson": 4
+   },
+   {
+    "zh": "哪",
+    "roman": "nǎ",
+    "script": "cn",
+    "zhDisp": "哪",
+    "en": "which",
+    "lesson": 4
+   },
+   {
+    "zh": "國",
+    "roman": "guó",
+    "script": "cn",
+    "zhDisp": "国",
+    "zhS": "国",
+    "en": "country",
+    "lesson": 4
+   },
+   {
+    "zh": "呢",
+    "roman": "ne",
+    "script": "cn",
+    "zhDisp": "呢",
+    "en": "(particle: and you?)",
+    "lesson": 4
+   },
+   {
+    "zh": "同學",
+    "roman": "tóng-xué",
+    "script": "cn",
+    "zhDisp": "同学",
+    "zhS": "同学",
+    "en": "classmate",
+    "lesson": 4
+   },
+   {
+    "zh": "朋友",
+    "roman": "péng-yǒu",
+    "script": "cn",
+    "zhDisp": "朋友",
+    "en": "friend",
+    "lesson": 4
+   },
+   {
+    "zh": "家",
+    "roman": "jiā",
+    "script": "cn",
+    "zhDisp": "家",
+    "en": "home; family",
+    "lesson": 5
+   },
+   {
+    "zh": "有",
+    "roman": "yǒu",
+    "script": "cn",
+    "zhDisp": "有",
+    "en": "to have; there is",
+    "lesson": 5
+   },
+   {
+    "zh": "口",
+    "roman": "kǒu",
+    "script": "cn",
+    "zhDisp": "口",
+    "en": "(measure word for family members); mouth",
+    "lesson": 5
+   },
+   {
+    "zh": "女兒",
+    "roman": "nǚ-ér",
+    "script": "cn",
+    "zhDisp": "女儿",
+    "zhS": "女儿",
+    "en": "daughter",
+    "lesson": 5
+   },
+   {
+    "zh": "幾",
+    "roman": "jǐ",
+    "script": "cn",
+    "zhDisp": "几",
+    "zhS": "几",
+    "en": "how many",
+    "lesson": 5
+   },
+   {
+    "zh": "歲",
+    "roman": "suì",
+    "script": "cn",
+    "zhDisp": "岁",
+    "zhS": "岁",
+    "en": "years old",
+    "lesson": 5
+   },
+   {
+    "zh": "了",
+    "roman": "le",
+    "script": "cn",
+    "zhDisp": "了",
+    "en": "(particle: something has changed or happened)",
+    "lesson": 5
+   },
+   {
+    "zh": "今年",
+    "roman": "jīn-nián",
+    "script": "cn",
+    "zhDisp": "今年",
+    "en": "this year",
+    "lesson": 5
+   },
+   {
+    "zh": "多",
+    "roman": "duō",
+    "script": "cn",
+    "zhDisp": "多",
+    "en": "many; how (old, much)",
+    "lesson": 5
+   },
+   {
+    "zh": "大",
+    "roman": "dà",
+    "script": "cn",
+    "zhDisp": "大",
+    "en": "big; old (of age)",
+    "lesson": 5
+   },
+   {
+    "zh": "一",
+    "roman": "yī",
+    "script": "hk",
+    "en": "one",
+    "lesson": 5
+   },
+   {
+    "zh": "二",
+    "roman": "èr",
+    "script": "hk",
+    "en": "two",
+    "lesson": 5
+   },
+   {
+    "zh": "三",
+    "roman": "sān",
+    "script": "cn",
+    "zhDisp": "三",
+    "en": "three",
+    "lesson": 5
+   },
+   {
+    "zh": "四",
+    "roman": "sì",
+    "script": "cn",
+    "zhDisp": "四",
+    "en": "four",
+    "lesson": 5
+   },
+   {
+    "zh": "五",
+    "roman": "wǔ",
+    "script": "cn",
+    "zhDisp": "五",
+    "en": "five",
+    "lesson": 5
+   },
+   {
+    "zh": "六",
+    "roman": "liù",
+    "script": "cn",
+    "zhDisp": "六",
+    "en": "six",
+    "lesson": 5
+   },
+   {
+    "zh": "七",
+    "roman": "qī",
+    "script": "cn",
+    "zhDisp": "七",
+    "en": "seven",
+    "lesson": 5
+   },
+   {
+    "zh": "八",
+    "roman": "bā",
+    "script": "cn",
+    "zhDisp": "八",
+    "en": "eight",
+    "lesson": 5
+   },
+   {
+    "zh": "九",
+    "roman": "jiǔ",
+    "script": "cn",
+    "zhDisp": "九",
+    "en": "nine",
+    "lesson": 5
+   },
+   {
+    "zh": "十",
+    "roman": "shí",
+    "script": "cn",
+    "zhDisp": "十",
+    "en": "ten",
+    "lesson": 5
+   },
+   {
+    "zh": "會",
+    "roman": "huì",
+    "script": "cn",
+    "zhDisp": "会",
+    "zhS": "会",
+    "en": "can (a learned skill)",
+    "lesson": 6
+   },
+   {
+    "zh": "說",
+    "roman": "shuō",
+    "script": "cn",
+    "zhDisp": "说",
+    "zhS": "说",
+    "en": "to speak; to say",
+    "lesson": 6
+   },
+   {
+    "zh": "媽媽",
+    "roman": "mā-ma",
+    "script": "cn",
+    "zhDisp": "妈妈",
+    "zhS": "妈妈",
+    "en": "mum",
+    "lesson": 6
+   },
+   {
+    "zh": "菜",
+    "roman": "cài",
+    "script": "cn",
+    "zhDisp": "菜",
+    "en": "dish; food",
+    "lesson": 6
+   },
+   {
+    "zh": "很",
+    "roman": "hěn",
+    "script": "cn",
+    "zhDisp": "很",
+    "en": "very",
+    "lesson": 6
+   },
+   {
+    "zh": "好吃",
+    "roman": "hǎo-chī",
+    "script": "cn",
+    "zhDisp": "好吃",
+    "en": "tasty",
+    "lesson": 6
+   },
+   {
+    "zh": "做",
+    "roman": "zuò",
+    "script": "cn",
+    "zhDisp": "做",
+    "en": "to do; to make",
+    "lesson": 6
+   },
+   {
+    "zh": "寫",
+    "roman": "xiě",
+    "script": "cn",
+    "zhDisp": "写",
+    "zhS": "写",
+    "en": "to write",
+    "lesson": 6
+   },
+   {
+    "zh": "漢字",
+    "roman": "Hàn-zì",
+    "script": "cn",
+    "zhDisp": "汉字",
+    "zhS": "汉字",
+    "en": "Chinese character",
+    "lesson": 6
+   },
+   {
+    "zh": "字",
+    "roman": "zì",
+    "script": "cn",
+    "zhDisp": "字",
+    "en": "character; word",
+    "lesson": 6
+   },
+   {
+    "zh": "怎麼",
+    "roman": "zěn-me",
+    "script": "cn",
+    "zhDisp": "怎么",
+    "zhS": "怎么",
+    "en": "how",
+    "lesson": 6
+   },
+   {
+    "zh": "讀",
+    "roman": "dú",
+    "script": "cn",
+    "zhDisp": "读",
+    "zhS": "读",
+    "en": "to read",
+    "lesson": 6
+   },
+   {
+    "zh": "請",
+    "roman": "qǐng",
+    "script": "hk",
+    "zhS": "请",
+    "en": "please",
+    "lesson": 7
+   },
+   {
+    "zh": "問",
+    "roman": "wèn",
+    "script": "cn",
+    "zhDisp": "问",
+    "zhS": "问",
+    "en": "to ask",
+    "lesson": 7
+   },
+   {
+    "zh": "今天",
+    "roman": "jīn-tiān",
+    "script": "cn",
+    "zhDisp": "今天",
+    "en": "today",
+    "lesson": 7
+   },
+   {
+    "zh": "號",
+    "roman": "hào",
+    "script": "cn",
+    "zhDisp": "号",
+    "zhS": "号",
+    "en": "day of the month; number",
+    "lesson": 7
+   },
+   {
+    "zh": "月",
+    "roman": "yuè",
+    "script": "cn",
+    "zhDisp": "月",
+    "en": "month",
+    "lesson": 7
+   },
+   {
+    "zh": "星期",
+    "roman": "xīng-qí",
+    "script": "cn",
+    "zhDisp": "星期",
+    "en": "week",
+    "lesson": 7
+   },
+   {
+    "zh": "昨天",
+    "roman": "zuó-tiān",
+    "script": "cn",
+    "zhDisp": "昨天",
+    "en": "yesterday",
+    "lesson": 7
+   },
+   {
+    "zh": "明天",
+    "roman": "míng-tiān",
+    "script": "cn",
+    "zhDisp": "明天",
+    "en": "tomorrow",
+    "lesson": 7
+   },
+   {
+    "zh": "去",
+    "roman": "qù",
+    "script": "cn",
+    "zhDisp": "去",
+    "en": "to go",
+    "lesson": 7
+   },
+   {
+    "zh": "學校",
+    "roman": "xué-xiào",
+    "script": "cn",
+    "zhDisp": "学校",
+    "zhS": "学校",
+    "en": "school",
+    "lesson": 7
+   },
+   {
+    "zh": "看",
+    "roman": "kàn",
+    "script": "cn",
+    "zhDisp": "看",
+    "en": "to look; to read; to watch",
+    "lesson": 7
+   },
+   {
+    "zh": "書",
+    "roman": "shū",
+    "script": "cn",
+    "zhDisp": "书",
+    "zhS": "书",
+    "en": "book",
+    "lesson": 7
+   },
+   {
+    "zh": "想",
+    "roman": "xiǎng",
+    "script": "cn",
+    "zhDisp": "想",
+    "en": "to want to; to think",
+    "lesson": 8
+   },
+   {
+    "zh": "喝",
+    "roman": "hē",
+    "script": "cn",
+    "zhDisp": "喝",
+    "en": "to drink",
+    "lesson": 8
+   },
+   {
+    "zh": "茶",
+    "roman": "chá",
+    "script": "cn",
+    "zhDisp": "茶",
+    "en": "tea",
+    "lesson": 8
+   },
+   {
+    "zh": "吃",
+    "roman": "chī",
+    "script": "cn",
+    "zhDisp": "吃",
+    "en": "to eat",
+    "lesson": 8
+   },
+   {
+    "zh": "米飯",
+    "roman": "mǐ-fàn",
+    "script": "cn",
+    "zhDisp": "米饭",
+    "zhS": "米饭",
+    "en": "rice (cooked)",
+    "lesson": 8
+   },
+   {
+    "zh": "下午",
+    "roman": "xià-wǔ",
+    "script": "cn",
+    "zhDisp": "下午",
+    "en": "afternoon",
+    "lesson": 8
+   },
+   {
+    "zh": "商店",
+    "roman": "shāng-diàn",
+    "script": "cn",
+    "zhDisp": "商店",
+    "en": "shop",
+    "lesson": 8
+   },
+   {
+    "zh": "買",
+    "roman": "mǎi",
+    "script": "cn",
+    "zhDisp": "买",
+    "zhS": "买",
+    "en": "to buy",
+    "lesson": 8
+   },
+   {
+    "zh": "個",
+    "roman": "gè",
+    "script": "hk",
+    "zhS": "个",
+    "en": "(measure word, the general one)",
+    "lesson": 8
+   },
+   {
+    "zh": "杯子",
+    "roman": "bēi-zi",
+    "script": "cn",
+    "zhDisp": "杯子",
+    "en": "cup; glass",
+    "lesson": 8
+   },
+   {
+    "zh": "這",
+    "roman": "zhè",
+    "script": "cn",
+    "zhDisp": "这",
+    "zhS": "这",
+    "en": "this",
+    "lesson": 8
+   },
+   {
+    "zh": "多少",
+    "roman": "duō-shǎo",
+    "script": "cn",
+    "zhDisp": "多少",
+    "en": "how many; how much",
+    "lesson": 8
+   },
+   {
+    "zh": "錢",
+    "roman": "qián",
+    "script": "cn",
+    "zhDisp": "钱",
+    "zhS": "钱",
+    "en": "money",
+    "lesson": 8
+   },
+   {
+    "zh": "塊",
+    "roman": "kuài",
+    "script": "cn",
+    "zhDisp": "块",
+    "zhS": "块",
+    "en": "(unit of money: dollar, yuan)",
+    "lesson": 8
+   },
+   {
+    "zh": "那",
+    "roman": "nà",
+    "script": "cn",
+    "zhDisp": "那",
+    "en": "that",
+    "lesson": 8
+   },
+   {
+    "zh": "小",
+    "roman": "xiǎo",
+    "script": "cn",
+    "zhDisp": "小",
+    "en": "small; little",
+    "lesson": 9
+   },
+   {
+    "zh": "貓",
+    "roman": "māo",
+    "script": "cn",
+    "zhDisp": "猫",
+    "zhS": "猫",
+    "en": "cat",
+    "lesson": 9
+   },
+   {
+    "zh": "在",
+    "roman": "zài",
+    "script": "cn",
+    "zhDisp": "在",
+    "en": "to be at; in",
+    "lesson": 9
+   },
+   {
+    "zh": "那裡",
+    "roman": "nà-lǐ",
+    "script": "cn",
+    "zhDisp": "那里",
+    "zhS": "那里",
+    "en": "there",
+    "lesson": 9
+   },
+   {
+    "zh": "狗",
+    "roman": "gǒu",
+    "script": "cn",
+    "zhDisp": "狗",
+    "en": "dog",
+    "lesson": 9
+   },
+   {
+    "zh": "椅子",
+    "roman": "yǐ-zi",
+    "script": "cn",
+    "zhDisp": "椅子",
+    "en": "chair",
+    "lesson": 9
+   },
+   {
+    "zh": "下面",
+    "roman": "xià-miàn",
+    "script": "cn",
+    "zhDisp": "下面",
+    "en": "under; below",
+    "lesson": 9
+   },
+   {
+    "zh": "哪裡",
+    "roman": "nǎ-lǐ",
+    "script": "cn",
+    "zhDisp": "哪里",
+    "zhS": "哪里",
+    "en": "where",
+    "lesson": 9
+   },
+   {
+    "zh": "工作",
+    "roman": "gōng-zuò",
+    "script": "cn",
+    "zhDisp": "工作",
+    "en": "to work; job",
+    "lesson": 9
+   },
+   {
+    "zh": "兒子",
+    "roman": "ér-zi",
+    "script": "cn",
+    "zhDisp": "儿子",
+    "zhS": "儿子",
+    "en": "son",
+    "lesson": 9
+   },
+   {
+    "zh": "醫院",
+    "roman": "yī-yuàn",
+    "script": "cn",
+    "zhDisp": "医院",
+    "zhS": "医院",
+    "en": "hospital",
+    "lesson": 9
+   },
+   {
+    "zh": "醫生",
+    "roman": "yī-shēng",
+    "script": "cn",
+    "zhDisp": "医生",
+    "zhS": "医生",
+    "en": "doctor",
+    "lesson": 9
+   },
+   {
+    "zh": "爸爸",
+    "roman": "bà-ba",
+    "script": "cn",
+    "zhDisp": "爸爸",
+    "en": "dad",
+    "lesson": 9
+   },
+   {
+    "zh": "桌子",
+    "roman": "zhuō-zi",
+    "script": "cn",
+    "zhDisp": "桌子",
+    "en": "table; desk",
+    "lesson": 10
+   },
+   {
+    "zh": "上",
+    "roman": "shàng",
+    "script": "cn",
+    "zhDisp": "上",
+    "en": "on; above",
+    "lesson": 10
+   },
+   {
+    "zh": "電腦",
+    "roman": "diàn-nǎo",
+    "script": "cn",
+    "zhDisp": "电脑",
+    "zhS": "电脑",
+    "en": "computer",
+    "lesson": 10
+   },
+   {
+    "zh": "和",
+    "roman": "hé",
+    "script": "cn",
+    "zhDisp": "和",
+    "en": "and",
+    "lesson": 10
+   },
+   {
+    "zh": "本",
+    "roman": "běn",
+    "script": "cn",
+    "zhDisp": "本",
+    "en": "(measure word for books)",
+    "lesson": 10
+   },
+   {
+    "zh": "裡",
+    "roman": "lǐ",
+    "script": "cn",
+    "zhDisp": "里",
+    "zhS": "里",
+    "en": "in; inside",
+    "lesson": 10
+   },
+   {
+    "zh": "前面",
+    "roman": "qián-miàn",
+    "script": "cn",
+    "zhDisp": "前面",
+    "en": "in front",
+    "lesson": 10
+   },
+   {
+    "zh": "後面",
+    "roman": "hòu-miàn",
+    "script": "cn",
+    "zhDisp": "后面",
+    "zhS": "后面",
+    "en": "behind",
+    "lesson": 10
+   },
+   {
+    "zh": "這裡",
+    "roman": "zhè-lǐ",
+    "script": "cn",
+    "zhDisp": "这里",
+    "zhS": "这里",
+    "en": "here",
+    "lesson": 10
+   },
+   {
+    "zh": "沒有",
+    "roman": "méi-yǒu",
+    "script": "cn",
+    "zhDisp": "没有",
+    "zhS": "没有",
+    "en": "not have; there isn't",
+    "lesson": 10
+   },
+   {
+    "zh": "能",
+    "roman": "néng",
+    "script": "cn",
+    "zhDisp": "能",
+    "en": "can (be able, allowed)",
+    "lesson": 10
+   },
+   {
+    "zh": "坐",
+    "roman": "zuò",
+    "script": "cn",
+    "zhDisp": "坐",
+    "en": "to sit; to take (a bus, a plane)",
+    "lesson": 10
+   },
+   {
+    "zh": "現在",
+    "roman": "xiàn-zài",
+    "script": "cn",
+    "zhDisp": "现在",
+    "zhS": "现在",
+    "en": "now",
+    "lesson": 11
+   },
+   {
+    "zh": "點",
+    "roman": "diǎn",
+    "script": "cn",
+    "zhDisp": "点",
+    "zhS": "点",
+    "en": "o'clock",
+    "lesson": 11
+   },
+   {
+    "zh": "分",
+    "roman": "fēn",
+    "script": "cn",
+    "zhDisp": "分",
+    "en": "minute (of the clock)",
+    "lesson": 11
+   },
+   {
+    "zh": "中午",
+    "roman": "zhōng-wǔ",
+    "script": "cn",
+    "zhDisp": "中午",
+    "en": "noon",
+    "lesson": 11
+   },
+   {
+    "zh": "吃飯",
+    "roman": "chī-fàn",
+    "script": "cn",
+    "zhDisp": "吃饭",
+    "zhS": "吃饭",
+    "en": "to eat (a meal)",
+    "lesson": 11
+   },
+   {
+    "zh": "時候",
+    "roman": "shí-hòu",
+    "script": "cn",
+    "zhDisp": "时候",
+    "zhS": "时候",
+    "en": "time; when",
+    "lesson": 11
+   },
+   {
+    "zh": "回",
+    "roman": "huí",
+    "script": "cn",
+    "zhDisp": "回",
+    "en": "to return; to go back",
+    "lesson": 11
+   },
+   {
+    "zh": "我們",
+    "roman": "wǒ-men",
+    "script": "cn",
+    "zhDisp": "我们",
+    "zhS": "我们",
+    "en": "we; us",
+    "lesson": 11
+   },
+   {
+    "zh": "電影",
+    "roman": "diàn-yǐng",
+    "script": "cn",
+    "zhDisp": "电影",
+    "zhS": "电影",
+    "en": "film",
+    "lesson": 11
+   },
+   {
+    "zh": "住",
+    "roman": "zhù",
+    "script": "cn",
+    "zhDisp": "住",
+    "en": "to live (somewhere)",
+    "lesson": 11
+   },
+   {
+    "zh": "前",
+    "roman": "qián",
+    "script": "cn",
+    "zhDisp": "前",
+    "en": "before; ago",
+    "lesson": 11
+   },
+   {
+    "zh": "北京",
+    "roman": "Běi-jīng",
+    "script": "cn",
+    "zhDisp": "北京",
+    "en": "Beijing",
+    "lesson": 11
+   },
+   {
+    "zh": "天氣",
+    "roman": "tiān-qì",
+    "script": "cn",
+    "zhDisp": "天气",
+    "zhS": "天气",
+    "en": "weather",
+    "lesson": 12
+   },
+   {
+    "zh": "怎麼樣",
+    "roman": "zěn-me-yàng",
+    "script": "cn",
+    "zhDisp": "怎么样",
+    "zhS": "怎么样",
+    "en": "how is it",
+    "lesson": 12
+   },
+   {
+    "zh": "太",
+    "roman": "tài",
+    "script": "cn",
+    "zhDisp": "太",
+    "en": "too (much)",
+    "lesson": 12
+   },
+   {
+    "zh": "熱",
+    "roman": "rè",
+    "script": "cn",
+    "zhDisp": "热",
+    "zhS": "热",
+    "en": "hot",
+    "lesson": 12
+   },
+   {
+    "zh": "冷",
+    "roman": "lěng",
+    "script": "cn",
+    "zhDisp": "冷",
+    "en": "cold",
+    "lesson": 12
+   },
+   {
+    "zh": "下雨",
+    "roman": "xià-yǔ",
+    "script": "cn",
+    "zhDisp": "下雨",
+    "en": "to rain",
+    "lesson": 12
+   },
+   {
+    "zh": "小姐",
+    "roman": "xiǎo-jiě",
+    "script": "cn",
+    "zhDisp": "小姐",
+    "en": "Miss; young lady",
+    "lesson": 12
+   },
+   {
+    "zh": "來",
+    "roman": "lái",
+    "script": "cn",
+    "zhDisp": "来",
+    "zhS": "来",
+    "en": "to come",
+    "lesson": 12
+   },
+   {
+    "zh": "身體",
+    "roman": "shēn-tǐ",
+    "script": "cn",
+    "zhDisp": "身体",
+    "zhS": "身体",
+    "en": "body; health",
+    "lesson": 12
+   },
+   {
+    "zh": "愛",
+    "roman": "ài",
+    "script": "cn",
+    "zhDisp": "爱",
+    "zhS": "爱",
+    "en": "to love",
+    "lesson": 12
+   },
+   {
+    "zh": "些",
+    "roman": "xiē",
+    "script": "cn",
+    "zhDisp": "些",
+    "en": "some",
+    "lesson": 12
+   },
+   {
+    "zh": "水果",
+    "roman": "shuǐ-guǒ",
+    "script": "cn",
+    "zhDisp": "水果",
+    "en": "fruit",
+    "lesson": 12
+   },
+   {
+    "zh": "水",
+    "roman": "shuǐ",
+    "script": "hk",
+    "en": "water",
+    "lesson": 12
+   },
+   {
+    "zh": "喂",
+    "roman": "wéi",
+    "script": "cn",
+    "zhDisp": "喂",
+    "en": "hello (on the phone)",
+    "lesson": 13
+   },
+   {
+    "zh": "也",
+    "roman": "yě",
+    "script": "cn",
+    "zhDisp": "也",
+    "en": "also; too",
+    "lesson": 13
+   },
+   {
+    "zh": "學習",
+    "roman": "xué-xí",
+    "script": "cn",
+    "zhDisp": "学习",
+    "zhS": "学习",
+    "en": "to study",
+    "lesson": 13
+   },
+   {
+    "zh": "上午",
+    "roman": "shàng-wǔ",
+    "script": "cn",
+    "zhDisp": "上午",
+    "en": "morning",
+    "lesson": 13
+   },
+   {
+    "zh": "睡覺",
+    "roman": "shuì-jiào",
+    "script": "cn",
+    "zhDisp": "睡觉",
+    "zhS": "睡觉",
+    "en": "to sleep",
+    "lesson": 13
+   },
+   {
+    "zh": "電視",
+    "roman": "diàn-shì",
+    "script": "cn",
+    "zhDisp": "电视",
+    "zhS": "电视",
+    "en": "television",
+    "lesson": 13
+   },
+   {
+    "zh": "喜歡",
+    "roman": "xǐ-huān",
+    "script": "cn",
+    "zhDisp": "喜欢",
+    "zhS": "喜欢",
+    "en": "to like",
+    "lesson": 13
+   },
+   {
+    "zh": "給",
+    "roman": "gěi",
+    "script": "cn",
+    "zhDisp": "给",
+    "zhS": "给",
+    "en": "to give; for",
+    "lesson": 13
+   },
+   {
+    "zh": "打電話",
+    "roman": "dǎ diàn-huà",
+    "script": "cn",
+    "zhDisp": "打电话",
+    "zhS": "打电话",
+    "en": "to make a phone call",
+    "lesson": 13
+   },
+   {
+    "zh": "吧",
+    "roman": "ba",
+    "script": "cn",
+    "zhDisp": "吧",
+    "en": "(particle: let's…, …right?)",
+    "lesson": 13
+   },
+   {
+    "zh": "東西",
+    "roman": "dōng-xī",
+    "script": "cn",
+    "zhDisp": "东西",
+    "zhS": "东西",
+    "en": "thing; stuff",
+    "lesson": 14
+   },
+   {
+    "zh": "一點",
+    "roman": "yì-diǎn",
+    "script": "cn",
+    "zhDisp": "一点",
+    "zhS": "一点",
+    "en": "a little",
+    "lesson": 14
+   },
+   {
+    "zh": "蘋果",
+    "roman": "píng-guǒ",
+    "script": "cn",
+    "zhDisp": "苹果",
+    "zhS": "苹果",
+    "en": "apple",
+    "lesson": 14
+   },
+   {
+    "zh": "看見",
+    "roman": "kàn-jiàn",
+    "script": "cn",
+    "zhDisp": "看见",
+    "zhS": "看见",
+    "en": "to see",
+    "lesson": 14
+   },
+   {
+    "zh": "先生",
+    "roman": "xiān-shēng",
+    "script": "cn",
+    "zhDisp": "先生",
+    "en": "Mr; sir; husband",
+    "lesson": 14
+   },
+   {
+    "zh": "開",
+    "roman": "kāi",
+    "script": "cn",
+    "zhDisp": "开",
+    "zhS": "开",
+    "en": "to open; to drive",
+    "lesson": 14
+   },
+   {
+    "zh": "車",
+    "roman": "chē",
+    "script": "cn",
+    "zhDisp": "车",
+    "zhS": "车",
+    "en": "car",
+    "lesson": 14
+   },
+   {
+    "zh": "回來",
+    "roman": "huí-lái",
+    "script": "cn",
+    "zhDisp": "回来",
+    "zhS": "回来",
+    "en": "to come back",
+    "lesson": 14
+   },
+   {
+    "zh": "分鐘",
+    "roman": "fēn-zhōng",
+    "script": "cn",
+    "zhDisp": "分钟",
+    "zhS": "分钟",
+    "en": "minute(s)",
+    "lesson": 14
+   },
+   {
+    "zh": "後",
+    "roman": "hòu",
+    "script": "cn",
+    "zhDisp": "后",
+    "zhS": "后",
+    "en": "after; behind",
+    "lesson": 14
+   },
+   {
+    "zh": "衣服",
+    "roman": "yī-fú",
+    "script": "cn",
+    "zhDisp": "衣服",
+    "en": "clothes",
+    "lesson": 14
+   },
+   {
+    "zh": "漂亮",
+    "roman": "piào-liàng",
+    "script": "cn",
+    "zhDisp": "漂亮",
+    "en": "pretty",
+    "lesson": 14
+   },
+   {
+    "zh": "啊",
+    "roman": "a",
+    "script": "cn",
+    "zhDisp": "啊",
+    "en": "(particle: ah, oh)",
+    "lesson": 14
+   },
+   {
+    "zh": "少",
+    "roman": "shǎo",
+    "script": "cn",
+    "zhDisp": "少",
+    "en": "few; little",
+    "lesson": 14
+   },
+   {
+    "zh": "這些",
+    "roman": "zhè-xiē",
+    "script": "cn",
+    "zhDisp": "这些",
+    "zhS": "这些",
+    "en": "these",
+    "lesson": 14
+   },
+   {
+    "zh": "都",
+    "roman": "dōu",
+    "script": "cn",
+    "zhDisp": "都",
+    "en": "all; both",
+    "lesson": 14
+   },
+   {
+    "zh": "認識",
+    "roman": "rèn-shì",
+    "script": "cn",
+    "zhDisp": "认识",
+    "zhS": "认识",
+    "en": "to know (a person); to meet",
+    "lesson": 15
+   },
+   {
+    "zh": "年",
+    "roman": "nián",
+    "script": "cn",
+    "zhDisp": "年",
+    "en": "year",
+    "lesson": 15
+   },
+   {
+    "zh": "大學",
+    "roman": "dà-xué",
+    "script": "hk",
+    "zhS": "大学",
+    "en": "university",
+    "lesson": 15
+   },
+   {
+    "zh": "飯店",
+    "roman": "fàn-diàn",
+    "script": "cn",
+    "zhDisp": "饭店",
+    "zhS": "饭店",
+    "en": "hotel; restaurant",
+    "lesson": 15
+   },
+   {
+    "zh": "出租車",
+    "roman": "chū-zū-chē",
+    "script": "cn",
+    "zhDisp": "出租车",
+    "zhS": "出租车",
+    "en": "taxi",
+    "lesson": 15
+   },
+   {
+    "zh": "一起",
+    "roman": "yì-qǐ",
+    "script": "cn",
+    "zhDisp": "一起",
+    "en": "together",
+    "lesson": 15
+   },
+   {
+    "zh": "高興",
+    "roman": "gāo-xìng",
+    "script": "cn",
+    "zhDisp": "高兴",
+    "zhS": "高兴",
+    "en": "happy",
+    "lesson": 15
+   },
+   {
+    "zh": "聽",
+    "roman": "tīng",
+    "script": "cn",
+    "zhDisp": "听",
+    "zhS": "听",
+    "en": "to listen",
+    "lesson": 15
+   },
+   {
+    "zh": "飛機",
+    "roman": "fēi-jī",
+    "script": "cn",
+    "zhDisp": "飞机",
+    "zhS": "飞机",
+    "en": "plane",
+    "lesson": 15
+   },
+   {
+    "zh": "們",
+    "roman": "men",
+    "script": "cn",
+    "zhDisp": "们",
+    "zhS": "们",
+    "en": "(plural ending for people: 你們, 我們)",
+    "lesson": 1,
+    "single": true,
+    "from": "你們",
+    "sound": "你們"
+   },
+   {
+    "zh": "對",
+    "roman": "duì",
+    "script": "cn",
+    "zhDisp": "对",
+    "zhS": "对",
+    "en": "correct, right; facing, opposed",
+    "lesson": 1,
+    "single": true,
+    "from": "對不起"
+   },
+   {
+    "zh": "起",
+    "roman": "qǐ",
+    "script": "cn",
+    "zhDisp": "起",
+    "en": "to begin, to initiate; to rise, to stand up",
+    "lesson": 1,
+    "single": true,
+    "from": "對不起"
+   },
+   {
+    "zh": "沒",
+    "roman": "méi",
+    "script": "cn",
+    "zhDisp": "没",
+    "zhS": "没",
+    "en": "not (have)",
+    "lesson": 1,
+    "single": true,
+    "from": "沒關係"
+   },
+   {
+    "zh": "關",
+    "roman": "guān",
+    "script": "cn",
+    "zhDisp": "关",
+    "zhS": "关",
+    "en": "to close; connection",
+    "lesson": 1,
+    "single": true,
+    "from": "沒關係"
+   },
+   {
+    "zh": "係",
+    "roman": "xì",
+    "script": "cn",
+    "zhDisp": "系",
+    "zhS": "系",
+    "en": "connection; relation",
+    "lesson": 1,
+    "single": true,
+    "from": "沒關係"
+   },
+   {
+    "zh": "謝",
+    "roman": "xiè",
+    "script": "cn",
+    "zhDisp": "谢",
+    "zhS": "谢",
+    "en": "to thank; to refuse politely",
+    "lesson": 2,
+    "single": true,
+    "from": "謝謝"
+   },
+   {
+    "zh": "客",
+    "roman": "kè",
+    "script": "cn",
+    "zhDisp": "客",
+    "en": "guest, traveller; customer",
+    "lesson": 2,
+    "single": true,
+    "from": "不客氣"
+   },
+   {
+    "zh": "氣",
+    "roman": "qì",
+    "script": "cn",
+    "zhDisp": "气",
+    "zhS": "气",
+    "en": "air; breath; mood",
+    "lesson": 2,
+    "single": true,
+    "from": "不客氣"
+   },
+   {
+    "zh": "再",
+    "roman": "zài",
+    "script": "cn",
+    "zhDisp": "再",
+    "en": "again, twice, re-",
+    "lesson": 2,
+    "single": true,
+    "from": "再見"
+   },
+   {
+    "zh": "見",
+    "roman": "jiàn",
+    "script": "cn",
+    "zhDisp": "见",
+    "zhS": "见",
+    "en": "to see, to observe, to meet, to appear",
+    "lesson": 2,
+    "single": true,
+    "from": "再見"
+   },
+   {
+    "zh": "什",
+    "roman": "shé",
+    "script": "cn",
+    "zhDisp": "什",
+    "en": "(in 什麼) what",
+    "lesson": 3,
+    "single": true,
+    "from": "什麼",
+    "sound": "什麼"
+   },
+   {
+    "zh": "麼",
+    "roman": "me",
+    "script": "cn",
+    "zhDisp": "么",
+    "zhS": "么",
+    "en": "(question ending: 什麼, 怎麼)",
+    "lesson": 3,
+    "single": true,
+    "from": "什麼",
+    "sound": "什麼"
+   },
+   {
+    "zh": "名",
+    "roman": "míng",
+    "script": "cn",
+    "zhDisp": "名",
+    "en": "name; position, rank, title",
+    "lesson": 3,
+    "single": true,
+    "from": "名字"
+   },
+   {
+    "zh": "老",
+    "roman": "lǎo",
+    "script": "cn",
+    "zhDisp": "老",
+    "en": "old, aged; experienced",
+    "lesson": 3,
+    "single": true,
+    "from": "老師"
+   },
+   {
+    "zh": "師",
+    "roman": "shī",
+    "script": "cn",
+    "zhDisp": "师",
+    "zhS": "师",
+    "en": "teacher, professional, master",
+    "lesson": 3,
+    "single": true,
+    "from": "老師"
+   },
+   {
+    "zh": "學",
+    "roman": "xué",
+    "script": "cn",
+    "zhDisp": "学",
+    "zhS": "学",
+    "en": "learning, knowledge, science",
+    "lesson": 3,
+    "single": true,
+    "from": "學生"
+   },
+   {
+    "zh": "生",
+    "roman": "shēng",
+    "script": "cn",
+    "zhDisp": "生",
+    "en": "life, lifetime; birth",
+    "lesson": 3,
+    "single": true,
+    "from": "學生"
+   },
+   {
+    "zh": "中",
+    "roman": "zhōng",
+    "script": "cn",
+    "zhDisp": "中",
+    "en": "middle; centre",
+    "lesson": 3,
+    "single": true,
+    "from": "中國"
+   },
+   {
+    "zh": "美",
+    "roman": "měi",
+    "script": "cn",
+    "zhDisp": "美",
+    "en": "beautiful, pretty; pleasing",
+    "lesson": 3,
+    "single": true,
+    "from": "美國"
+   },
+   {
+    "zh": "漢",
+    "roman": "hàn",
+    "script": "cn",
+    "zhDisp": "汉",
+    "zhS": "汉",
+    "en": "Chinese people; Chinese language",
+    "lesson": 4,
+    "single": true,
+    "from": "漢語"
+   },
+   {
+    "zh": "語",
+    "roman": "yǔ",
+    "script": "cn",
+    "zhDisp": "语",
+    "zhS": "语",
+    "en": "words, language; saying, expression",
+    "lesson": 4,
+    "single": true,
+    "from": "漢語"
+   },
+   {
+    "zh": "同",
+    "roman": "tóng",
+    "script": "cn",
+    "zhDisp": "同",
+    "en": "same, similar; together with, alike",
+    "lesson": 4,
+    "single": true,
+    "from": "同學"
+   },
+   {
+    "zh": "朋",
+    "roman": "péng",
+    "script": "cn",
+    "zhDisp": "朋",
+    "en": "friend, pal, acquaintance",
+    "lesson": 4,
+    "single": true,
+    "from": "朋友"
+   },
+   {
+    "zh": "友",
+    "roman": "yǒu",
+    "script": "cn",
+    "zhDisp": "友",
+    "en": "friend, companion; fraternity",
+    "lesson": 4,
+    "single": true,
+    "from": "朋友"
+   },
+   {
+    "zh": "女",
+    "roman": "nǚ",
+    "script": "cn",
+    "zhDisp": "女",
+    "en": "woman, girl; female",
+    "lesson": 5,
+    "single": true,
+    "from": "女兒"
+   },
+   {
+    "zh": "兒",
+    "roman": "ér",
+    "script": "cn",
+    "zhDisp": "儿",
+    "zhS": "儿",
+    "en": "child; son",
+    "lesson": 5,
+    "single": true,
+    "from": "女兒"
+   },
+   {
+    "zh": "今",
+    "roman": "jīn",
+    "script": "cn",
+    "zhDisp": "今",
+    "en": "modern, current; today, now",
+    "lesson": 5,
+    "single": true,
+    "from": "今年"
+   },
+   {
+    "zh": "媽",
+    "roman": "mā",
+    "script": "cn",
+    "zhDisp": "妈",
+    "zhS": "妈",
+    "en": "mother, mama",
+    "lesson": 6,
+    "single": true,
+    "from": "媽媽"
+   },
+   {
+    "zh": "怎",
+    "roman": "zěn",
+    "script": "cn",
+    "zhDisp": "怎",
+    "en": "how; why",
+    "lesson": 6,
+    "single": true,
+    "from": "怎麼"
+   },
+   {
+    "zh": "天",
+    "roman": "tiān",
+    "script": "cn",
+    "zhDisp": "天",
+    "en": "sky, heaven; god, celestial",
+    "lesson": 7,
+    "single": true,
+    "from": "今天"
+   },
+   {
+    "zh": "星",
+    "roman": "xīng",
+    "script": "cn",
+    "zhDisp": "星",
+    "en": "star, planet; a point of light",
+    "lesson": 7,
+    "single": true,
+    "from": "星期"
+   },
+   {
+    "zh": "期",
+    "roman": "qí",
+    "script": "cn",
+    "zhDisp": "期",
+    "en": "period of time",
+    "lesson": 7,
+    "single": true,
+    "from": "星期",
+    "sound": "星期"
+   },
+   {
+    "zh": "昨",
+    "roman": "zuó",
+    "script": "cn",
+    "zhDisp": "昨",
+    "en": "yesterday; formerly, in the past",
+    "lesson": 7,
+    "single": true,
+    "from": "昨天"
+   },
+   {
+    "zh": "明",
+    "roman": "míng",
+    "script": "cn",
+    "zhDisp": "明",
+    "en": "bright, clear",
+    "lesson": 7,
+    "single": true,
+    "from": "明天"
+   },
+   {
+    "zh": "校",
+    "roman": "xiào",
+    "script": "cn",
+    "zhDisp": "校",
+    "en": "school; military field officer",
+    "lesson": 7,
+    "single": true,
+    "from": "學校"
+   },
+   {
+    "zh": "米",
+    "roman": "mǐ",
+    "script": "cn",
+    "zhDisp": "米",
+    "en": "rice, millet, grain",
+    "lesson": 8,
+    "single": true,
+    "from": "米飯"
+   },
+   {
+    "zh": "飯",
+    "roman": "fàn",
+    "script": "cn",
+    "zhDisp": "饭",
+    "zhS": "饭",
+    "en": "meal, food; cooked rice",
+    "lesson": 8,
+    "single": true,
+    "from": "米飯"
+   },
+   {
+    "zh": "下",
+    "roman": "xià",
+    "script": "cn",
+    "zhDisp": "下",
+    "en": "below, underneath; inferior",
+    "lesson": 8,
+    "single": true,
+    "from": "下午"
+   },
+   {
+    "zh": "午",
+    "roman": "wǔ",
+    "script": "cn",
+    "zhDisp": "午",
+    "en": "noon",
+    "lesson": 8,
+    "single": true,
+    "from": "下午"
+   },
+   {
+    "zh": "商",
+    "roman": "shāng",
+    "script": "cn",
+    "zhDisp": "商",
+    "en": "commerce, business, trade",
+    "lesson": 8,
+    "single": true,
+    "from": "商店"
+   },
+   {
+    "zh": "店",
+    "roman": "diàn",
+    "script": "cn",
+    "zhDisp": "店",
+    "en": "shop, store; inn, hotel",
+    "lesson": 8,
+    "single": true,
+    "from": "商店"
+   },
+   {
+    "zh": "杯",
+    "roman": "bēi",
+    "script": "hk",
+    "en": "cup, glass; measure word for liquids",
+    "lesson": 8,
+    "single": true,
+    "from": "杯子"
+   },
+   {
+    "zh": "子",
+    "roman": "zǐ",
+    "script": "cn",
+    "zhDisp": "子",
+    "en": "child; (noun ending: 杯子, 椅子)",
+    "lesson": 8,
+    "single": true,
+    "from": "杯子",
+    "sound": "杯子"
+   },
+   {
+    "zh": "椅",
+    "roman": "yǐ",
+    "script": "cn",
+    "zhDisp": "椅",
+    "en": "chair, seat",
+    "lesson": 9,
+    "single": true,
+    "from": "椅子"
+   },
+   {
+    "zh": "面",
+    "roman": "miàn",
+    "script": "cn",
+    "zhDisp": "面",
+    "en": "face; surface, side",
+    "lesson": 9,
+    "single": true,
+    "from": "下面"
+   },
+   {
+    "zh": "工",
+    "roman": "gōng",
+    "script": "cn",
+    "zhDisp": "工",
+    "en": "labor, work; laborer, worker",
+    "lesson": 9,
+    "single": true,
+    "from": "工作"
+   },
+   {
+    "zh": "作",
+    "roman": "zuò",
+    "script": "cn",
+    "zhDisp": "作",
+    "en": "to do; to make",
+    "lesson": 9,
+    "single": true,
+    "from": "工作"
+   },
+   {
+    "zh": "醫",
+    "roman": "yī",
+    "script": "cn",
+    "zhDisp": "医",
+    "zhS": "医",
+    "en": "to cure, to heal, to treat; doctor",
+    "lesson": 9,
+    "single": true,
+    "from": "醫院"
+   },
+   {
+    "zh": "院",
+    "roman": "yuàn",
+    "script": "cn",
+    "zhDisp": "院",
+    "en": "court, yard, courtyard; school",
+    "lesson": 9,
+    "single": true,
+    "from": "醫院"
+   },
+   {
+    "zh": "爸",
+    "roman": "bà",
+    "script": "cn",
+    "zhDisp": "爸",
+    "en": "father, papa",
+    "lesson": 9,
+    "single": true,
+    "from": "爸爸"
+   },
+   {
+    "zh": "桌",
+    "roman": "zhuō",
+    "script": "cn",
+    "zhDisp": "桌",
+    "en": "table, stand, desk, counter",
+    "lesson": 10,
+    "single": true,
+    "from": "桌子"
+   },
+   {
+    "zh": "電",
+    "roman": "diàn",
+    "script": "cn",
+    "zhDisp": "电",
+    "zhS": "电",
+    "en": "electricity; electric",
+    "lesson": 10,
+    "single": true,
+    "from": "電腦"
+   },
+   {
+    "zh": "腦",
+    "roman": "nǎo",
+    "script": "cn",
+    "zhDisp": "脑",
+    "zhS": "脑",
+    "en": "brain",
+    "lesson": 10,
+    "single": true,
+    "from": "電腦"
+   },
+   {
+    "zh": "現",
+    "roman": "xiàn",
+    "script": "cn",
+    "zhDisp": "现",
+    "zhS": "现",
+    "en": "now; to appear",
+    "lesson": 11,
+    "single": true,
+    "from": "現在"
+   },
+   {
+    "zh": "時",
+    "roman": "shí",
+    "script": "cn",
+    "zhDisp": "时",
+    "zhS": "时",
+    "en": "time, season; period, era, age",
+    "lesson": 11,
+    "single": true,
+    "from": "時候"
+   },
+   {
+    "zh": "候",
+    "roman": "hòu",
+    "script": "cn",
+    "zhDisp": "候",
+    "en": "to wait; (in 時候) time",
+    "lesson": 11,
+    "single": true,
+    "from": "時候"
+   },
+   {
+    "zh": "影",
+    "roman": "yǐng",
+    "script": "cn",
+    "zhDisp": "影",
+    "en": "shadow; image, reflection",
+    "lesson": 11,
+    "single": true,
+    "from": "電影"
+   },
+   {
+    "zh": "北",
+    "roman": "běi",
+    "script": "cn",
+    "zhDisp": "北",
+    "en": "north; northern",
+    "lesson": 11,
+    "single": true,
+    "from": "北京"
+   },
+   {
+    "zh": "京",
+    "roman": "jīng",
+    "script": "cn",
+    "zhDisp": "京",
+    "en": "capital city",
+    "lesson": 11,
+    "single": true,
+    "from": "北京"
+   },
+   {
+    "zh": "樣",
+    "roman": "yàng",
+    "script": "cn",
+    "zhDisp": "样",
+    "zhS": "样",
+    "en": "kind; manner; appearance",
+    "lesson": 12,
+    "single": true,
+    "from": "怎麼樣"
+   },
+   {
+    "zh": "雨",
+    "roman": "yǔ",
+    "script": "cn",
+    "zhDisp": "雨",
+    "en": "rain",
+    "lesson": 12,
+    "single": true,
+    "from": "下雨"
+   },
+   {
+    "zh": "姐",
+    "roman": "jiě",
+    "script": "cn",
+    "zhDisp": "姐",
+    "en": "elder sister; miss, young lady",
+    "lesson": 12,
+    "single": true,
+    "from": "小姐"
+   },
+   {
+    "zh": "身",
+    "roman": "shēn",
+    "script": "cn",
+    "zhDisp": "身",
+    "en": "body, torso; person",
+    "lesson": 12,
+    "single": true,
+    "from": "身體"
+   },
+   {
+    "zh": "體",
+    "roman": "tǐ",
+    "script": "cn",
+    "zhDisp": "体",
+    "zhS": "体",
+    "en": "body; group, class",
+    "lesson": 12,
+    "single": true,
+    "from": "身體"
+   },
+   {
+    "zh": "果",
+    "roman": "guǒ",
+    "script": "cn",
+    "zhDisp": "果",
+    "en": "fruit, nut; result",
+    "lesson": 12,
+    "single": true,
+    "from": "水果"
+   },
+   {
+    "zh": "習",
+    "roman": "xí",
+    "script": "cn",
+    "zhDisp": "习",
+    "zhS": "习",
+    "en": "to study, to practice; habit",
+    "lesson": 13,
+    "single": true,
+    "from": "學習"
+   },
+   {
+    "zh": "睡",
+    "roman": "shuì",
+    "script": "cn",
+    "zhDisp": "睡",
+    "en": "to sleep, to doze",
+    "lesson": 13,
+    "single": true,
+    "from": "睡覺"
+   },
+   {
+    "zh": "覺",
+    "roman": "jiào",
+    "script": "cn",
+    "zhDisp": "觉",
+    "zhS": "觉",
+    "en": "(in 睡覺) sleep; jué: to feel",
+    "lesson": 13,
+    "single": true,
+    "from": "睡覺",
+    "sound": "睡覺"
+   },
+   {
+    "zh": "視",
+    "roman": "shì",
+    "script": "cn",
+    "zhDisp": "视",
+    "zhS": "视",
+    "en": "to look at, to inspect, to observe, to regard",
+    "lesson": 13,
+    "single": true,
+    "from": "電視"
+   },
+   {
+    "zh": "喜",
+    "roman": "xǐ",
+    "script": "cn",
+    "zhDisp": "喜",
+    "en": "to love; to enjoy, to be happy",
+    "lesson": 13,
+    "single": true,
+    "from": "喜歡"
+   },
+   {
+    "zh": "歡",
+    "roman": "huān",
+    "script": "cn",
+    "zhDisp": "欢",
+    "zhS": "欢",
+    "en": "happy, glad, joyful",
+    "lesson": 13,
+    "single": true,
+    "from": "喜歡"
+   },
+   {
+    "zh": "打",
+    "roman": "dǎ",
+    "script": "cn",
+    "zhDisp": "打",
+    "en": "to hit; to make (a call)",
+    "lesson": 13,
+    "single": true,
+    "from": "打電話"
+   },
+   {
+    "zh": "話",
+    "roman": "huà",
+    "script": "cn",
+    "zhDisp": "话",
+    "zhS": "话",
+    "en": "talk, speech; language, dialect",
+    "lesson": 13,
+    "single": true,
+    "from": "打電話"
+   },
+   {
+    "zh": "東",
+    "roman": "dōng",
+    "script": "cn",
+    "zhDisp": "东",
+    "zhS": "东",
+    "en": "east, eastern, eastward",
+    "lesson": 14,
+    "single": true,
+    "from": "東西"
+   },
+   {
+    "zh": "西",
+    "roman": "xī",
+    "script": "cn",
+    "zhDisp": "西",
+    "en": "west, western, westward",
+    "lesson": 14,
+    "single": true,
+    "from": "東西"
+   },
+   {
+    "zh": "蘋",
+    "roman": "píng",
+    "script": "cn",
+    "zhDisp": "苹",
+    "zhS": "苹",
+    "en": "(in 蘋果) apple",
+    "lesson": 14,
+    "single": true,
+    "from": "蘋果"
+   },
+   {
+    "zh": "先",
+    "roman": "xiān",
+    "script": "cn",
+    "zhDisp": "先",
+    "en": "first, former, previous",
+    "lesson": 14,
+    "single": true,
+    "from": "先生"
+   },
+   {
+    "zh": "鐘",
+    "roman": "zhōng",
+    "script": "cn",
+    "zhDisp": "钟",
+    "zhS": "钟",
+    "en": "clock; bell",
+    "lesson": 14,
+    "single": true,
+    "from": "分鐘"
+   },
+   {
+    "zh": "衣",
+    "roman": "yī",
+    "script": "cn",
+    "zhDisp": "衣",
+    "en": "cloth; clothes, apparel",
+    "lesson": 14,
+    "single": true,
+    "from": "衣服"
+   },
+   {
+    "zh": "服",
+    "roman": "fú",
+    "script": "cn",
+    "zhDisp": "服",
+    "en": "clothes; to dress, to wear",
+    "lesson": 14,
+    "single": true,
+    "from": "衣服"
+   },
+   {
+    "zh": "漂",
+    "roman": "piào",
+    "script": "cn",
+    "zhDisp": "漂",
+    "en": "(in 漂亮) pretty; to float",
+    "lesson": 14,
+    "single": true,
+    "from": "漂亮"
+   },
+   {
+    "zh": "亮",
+    "roman": "liàng",
+    "script": "cn",
+    "zhDisp": "亮",
+    "en": "bright, brilliant, radiant, light",
+    "lesson": 14,
+    "single": true,
+    "from": "漂亮"
+   },
+   {
+    "zh": "認",
+    "roman": "rèn",
+    "script": "cn",
+    "zhDisp": "认",
+    "zhS": "认",
+    "en": "to know, to recognize, to understand",
+    "lesson": 15,
+    "single": true,
+    "from": "認識"
+   },
+   {
+    "zh": "識",
+    "roman": "shì",
+    "script": "cn",
+    "zhDisp": "识",
+    "zhS": "识",
+    "en": "to know; knowledge",
+    "lesson": 15,
+    "single": true,
+    "from": "認識",
+    "sound": "認識"
+   },
+   {
+    "zh": "出",
+    "roman": "chū",
+    "script": "cn",
+    "zhDisp": "出",
+    "en": "to go out, to send out; stand",
+    "lesson": 15,
+    "single": true,
+    "from": "出租車"
+   },
+   {
+    "zh": "租",
+    "roman": "zū",
+    "script": "cn",
+    "zhDisp": "租",
+    "en": "to rent, to lease; tax, rent",
+    "lesson": 15,
+    "single": true,
+    "from": "出租車"
+   },
+   {
+    "zh": "高",
+    "roman": "gāo",
+    "script": "cn",
+    "zhDisp": "高",
+    "en": "tall, lofty; high, elevated",
+    "lesson": 15,
+    "single": true,
+    "from": "高興"
+   },
+   {
+    "zh": "興",
+    "roman": "xìng",
+    "script": "cn",
+    "zhDisp": "兴",
+    "zhS": "兴",
+    "en": "joy; to rise",
+    "lesson": 15,
+    "single": true,
+    "from": "高興"
+   },
+   {
+    "zh": "飛",
+    "roman": "fēi",
+    "script": "cn",
+    "zhDisp": "飞",
+    "zhS": "飞",
+    "en": "to fly, to dart; high",
+    "lesson": 15,
+    "single": true,
+    "from": "飛機"
+   },
+   {
+    "zh": "機",
+    "roman": "jī",
+    "script": "cn",
+    "zhDisp": "机",
+    "zhS": "机",
+    "en": "machine",
+    "lesson": 15,
+    "single": true,
+    "from": "飛機"
+   }
+  ]
  }
 }

@@ -44,7 +44,6 @@ test('weekSummary counts the last 7 days only', () => {
   review(p, 'a', 3, ago(1));
   review(p, 'b', 3, ago(1));
   review(p, 'c', 4, ago(0), 'cantonese');
-  p.missions.push({ date: '2026-09-25', id: 'b' });
   p.convos = { coffee: { n: 2, last: '2026-09-25' }, old: { n: 1, last: '2026-08-01' } };
   const s = weekSummary(p, ITEMS, NOW);
   assert.equal(s.reviews, 5);
@@ -52,7 +51,6 @@ test('weekSummary counts the last 7 days only', () => {
   assert.equal(s.daysStudied, 3);
   assert.deepEqual(s.byDeck, { mandarin: 4, cantonese: 1 });
   assert.deepEqual(s.mostMissed.map((m) => [m.id, m.misses]), [['a', 2]]);
-  assert.equal(s.missions, 1);
   assert.deepEqual(s.conversations, ['coffee']);
 });
 

@@ -160,8 +160,6 @@ input.field { width: 100%; margin-bottom: 4px; }
 .start-sub { color: var(--ink-3); font-size: 14px; margin-top: 3px; max-width: 30ch; }
 .paper-card { background: var(--paper-2); border: 1px solid var(--rule); border-radius: var(--radius); padding: 14px 16px; margin: 0 0 12px; }
 .paper-card .eyebrow { margin-bottom: 6px; }
-.mission-what { font-weight: 600; margin: 0 0 6px; }
-.mission-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 8px; }
 
 /* a phrase shown pinyin-first, tap to hear */
 .say-line { display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 1px; width: 100%; padding: 2px 0; }

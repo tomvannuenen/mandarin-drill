@@ -17,7 +17,7 @@ import { addWish, wishStatus } from './lib/wishes.js';
 import { canRecord, startRecording, stopRecording, isRecording, compare, share as shareRecording } from './rec.js';
 import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pullPlan, DEFAULT_REPO } from './lib/sync.js';
 import { flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
-import { weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from './lib/motivation.js';
+import { weekReadiness, daysUntil, canSay } from './lib/motivation.js';
 import { composeToday, withActivities, snapshot, outcome, dueSoon, estimateMinutes } from './lib/today.js';
 import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId, reclassifyReadingFlags, displayFor } from './lib/chars.js';
 import { hskItems, hskPool, hskQueue, hskWaiting, typedMatches, hskLevel } from './lib/hsk.js';
@@ -49,7 +49,6 @@ let syncError = '';
 let version = '';
 let progress = load(storage || nullStorage);
 let extraNew = 0;
-let missionSkip = 0;
 let session = null; // { queue, pos, total, done, right, graded, startedAt, before, convo, current: {card, c} }
 let pendingEnd = null; // session results waiting for a chained conversation to finish
 
@@ -221,7 +220,6 @@ function switchDeck() {
   const keys = Object.keys(decks);
   progress.settings.deck = keys[(keys.indexOf(deck()) + 1) % keys.length];
   extraNew = 0;
-  missionSkip = 0;
   persist();
   show(currentView);
 }
@@ -363,29 +361,6 @@ function renderHome() {
   const stale = !syncCfg && (!progress.lastExport || now - new Date(progress.lastExport) > WEEK_MS);
   $('export-banner').hidden = !(stale && totalSeen >= 10);
 
-  renderMission(now);
-}
-
-function renderMission(now) {
-  const slot = $('mission-slot');
-  if (missionDoneToday(progress, now)) {
-    const n = progress.missions.length;
-    slot.replaceChildren(card(el('p', { class: 'eyebrow' }, "Today's mission"), el('p', { class: 'mission-what' }, `Done. ${n} real-life mission${n === 1 ? '' : 's'} so far.`)));
-    return;
-  }
-  const m = pickMission(items(), progress, now, missionSkip);
-  if (!m) {
-    slot.replaceChildren();
-    return;
-  }
-  slot.replaceChildren(card(
-    el('p', { class: 'eyebrow' }, "Today's mission"),
-    el('p', { class: 'mission-what' }, m.mission),
-    sayLine(sample(m), deck()),
-    el('div', { class: 'mission-foot' },
-      el('button', { class: 'link small', onclick: () => { missionSkip += 1; renderMission(new Date()); } }, 'Another one'),
-      el('button', { class: 'btn primary small', onclick: () => { markMissionDone(progress, m.id, new Date()); persist(); renderMission(new Date()); } }, 'I did it'))
-  ));
 }
 
 // ---------- practice
@@ -622,9 +597,12 @@ function hintButton(c, label = 'Hint', text = () => hintText(c.roman, c.deck)) {
 function renderBuild(c) {
   const line = el('div', { class: 'build-line' });
   const pool = el('div', { class: 'build-pool' });
-  const byEar = c.activity === 'dictate'; // heard, not read: the tiles are pinyin and there is no English
+  // Heard, not read: no English. Rebuild by ear has pinyin tiles; in characters, the tiles are characters
+  // only (tapping one says it).
+  const byEar = c.activity === 'dictate' || c.activity === 'hanzi';
   const tileEl = (t) => {
-    if (byEar) return el('button', { class: 'tile' }, renderRoman(el('span', { class: 'tile-zh tile-ear' }), t.roman, c.deck));
+    if (c.activity === 'dictate') return el('button', { class: 'tile' }, renderRoman(el('span', { class: 'tile-zh tile-ear' }), t.roman, c.deck));
+    if (c.activity === 'hanzi') return el('button', { class: 'tile' }, el('span', { class: 'tile-zh', lang: zl(c.deck) }, zs(t.zh, c.deck)));
     const b = el('button', { class: 'tile' }, el('span', { class: 'tile-zh', lang: zl(c.deck) }, zs(t.zh, c.deck)));
     if (!knowsWord(progress, c.deck, t.zh)) b.append(renderRoman(el('span', { class: 'tile-roman' }), t.roman, c.deck));
     return b;
@@ -798,7 +776,9 @@ function drawCard(card, c) {
   // Word order: the rule behind the sentence, and after a build the English words in Chinese order.
   $('a-order').replaceChildren(...(c.order ? mixedText(c.order, c.deck) : []));
   $('a-order').hidden = !c.order;
-  const literal = (c.build || c.activity === 'chain') && c.words.every((w) => w.gloss) ? c.words.map((w) => plainGloss(w.gloss)) : [];
+  // The English words in Chinese order, under every sentence: it shows how the sentence is put together
+  // (可以 用 英文 解釋 一下 嗎 = can · use · English · explain · a bit · ?).
+  const literal = !c.char && c.words?.length >= 2 && c.words.every((w) => w.gloss) ? c.words.map((w) => plainGloss(w.gloss)) : [];
   $('a-literal').replaceChildren(...literal.flatMap((g, i) => [...(i ? [el('i', {}, '·')] : []), el('span', {}, g)]));
   $('a-literal').hidden = !literal.length;
   $('card-register').textContent = REGISTER_LABEL[c.register] || '';
@@ -932,7 +912,7 @@ function startSession(queue, { convo = null, daily = null } = {}) {
 function dailyQueue(base = todayPlan().queue) {
   const tiles = decks[deck()]?.characters !== false;
   const extras = progress.stats.dailyDone?.[deck()] !== localDate(new Date());
-  return withActivities({ queue: base, items: items(), progress, stats: methodStats(progress.log), deck: deck(), tiles, extras });
+  return withActivities({ queue: base, items: items(), progress, stats: methodStats(progress.log), deck: deck(), tiles, characters: tiles, extras });
 }
 
 function startToday() {
@@ -1008,7 +988,7 @@ function activityContent(card, item) {
     c.toneWord = [...entry.words].sort((a, b) => voiced(b) - voiced(a))[0];
     c.options = toneOptions(c.toneWord.roman).map((roman) => ({ roman, right: roman === c.toneWord.roman }));
   }
-  if (card.type === 'dictate') Object.assign(c, { build: true, entry, tiles: tiles(entry, chars()), picked: [], tries: 0, result: null });
+  if (card.type === 'dictate' || card.type === 'hanzi') Object.assign(c, { build: true, entry, tiles: tiles(entry, chars()), picked: [], tries: 0, result: null });
   return c;
 }
 
@@ -1095,7 +1075,7 @@ function showCard() {
   const c = contentFor(card);
   session.current = { card, c };
 
-  $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?', match: 'Is this what you hear?', tone: 'Which tones?', dictate: 'Rebuild it by ear', pairs: 'Match the pairs', passage: 'Listen through' }[c.activity]
+  $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?', match: 'Is this what you hear?', tone: 'Which tones?', dictate: 'Rebuild it by ear', hanzi: 'Rebuild it in characters', pairs: 'Match the pairs', passage: 'Listen through' }[c.activity]
     : c.build ? 'Build the sentence'
     : c.char ? 'Read it'
     : c.typing ? 'Type it'
@@ -1466,9 +1446,8 @@ function renderMe() {
   );
 
   $('me-tones').replaceChildren(...(d === 'mandarin' ? [el('p', { class: 'section' }, 'Tones'), toneBars(progress.tones)] : []));
-  const n = progress.missions.length;
   const known = chars().filter((x) => knowsWord(progress, d, x.zh)).length;
-  $('me-missions').textContent = [known && `You can read ${known} word${known === 1 ? '' : 's'}.`, n && `${n} real-life mission${n === 1 ? '' : 's'} done.`].filter(Boolean).join(' ');
+  $('me-reading').textContent = known ? `You can read ${known} word${known === 1 ? '' : 's'}.` : '';
 }
 
 // ---------- weekly check-in

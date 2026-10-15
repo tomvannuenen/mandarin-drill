@@ -140,7 +140,7 @@ test('composeToday keeps a round short: each kind to its share, a couple of new 
   assert.equal(n((q) => q.type === 'read'), MIX.read);
   assert.equal(n((q) => q.type === 'listen'), MIX.listen);
   assert.equal(n((q) => q.type === 'build'), MIX.builds);
-  assert.deepEqual([counts.fresh, counts.chars, counts.builds], [ROUND_NEW, 2, 0]);
+  assert.deepEqual([counts.fresh, counts.chars, counts.builds], [ROUND_NEW, MIX.chars, 0]);
   assert.ok(queue.length <= 15, `a short round (${queue.length} cards)`);
 });
 
@@ -191,4 +191,26 @@ test('withActivities: learn before test, practice after a miss, listening tasks,
   const stats = { echo: { n: 10, ok: 9 }, dictate: { n: 10, ok: 2 } };
   const without = withActivities({ queue, items, progress: p, stats, deck: 'mandarin', rand: () => 0 });
   assert.equal(without.filter((q) => q.type === 'dictate').length, 0);
+});
+
+test('no new word cards while five or more words are hard to read', () => {
+  const p = defaults();
+  const chars = '一二三'.split('').map((zh) => ({ id: `c/mandarin/${zh}`, kind: 'char', deck: 'mandarin', zh }));
+  const fresh = () => composeToday({ items: ITEMS, drills: [], chars, progress: p, plan: null, now: NOW, newLimit: 0, deck: 'mandarin' })
+    .queue.filter((q) => q.type === 'char' && !p.cards[q.key]).length;
+  assert.equal(fresh(), 1);
+  p.weakChars = Object.fromEntries('甲乙丙丁戊'.split('').map((zh) => [`mandarin/${zh}`, { score: 2, flags: 1, lastDay: '2026-09-01' }]));
+  assert.equal(fresh(), 0);
+});
+
+test('withActivities: one rebuild in characters per round, only when the deck does character work', () => {
+  const w = (n) => Array.from({ length: n }, (_, i) => ({ zh: `字${i}`, roman: 'zì' }));
+  const ids = 'abcdefghij'.split('');
+  const items = ids.map((id) => ({ id, kind: 'phrase', deck: 'mandarin', words: w(4), en: id }));
+  const p = defaults();
+  for (const id of ids) p.cards[`${id}:say`] = past(1);
+  const queue = ids.slice(0, 4).map((id) => ({ key: `${id}:say`, id, type: 'say', deck: 'mandarin' }));
+  const count = (opts) => withActivities({ queue, items, progress: p, stats: {}, deck: 'mandarin', rand: () => 0.5, ...opts }).filter((q) => q.type === 'hanzi').length;
+  assert.equal(count({}), 1);
+  assert.equal(count({ characters: false }), 0);
 });

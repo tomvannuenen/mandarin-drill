@@ -1,5 +1,5 @@
 {
- "version": "6a2a586678c2",
+ "version": "a0609c87fa9e",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -107,7 +107,6 @@
    },
    "situation": "You walk into a room of students and greet them all.",
    "topic": "Introducing yourself",
-   "mission": "Open a class or meeting with 大家好",
    "register": "everyday"
   },
   {
@@ -159,7 +158,6 @@
    "situation": "Someone asks your name.",
    "note": "我是…… (wǒ shì…) = I am…",
    "topic": "Introducing yourself",
-   "mission": "Tell someone your name in Mandarin",
    "register": "everyday"
   },
   {
@@ -203,7 +201,6 @@
    },
    "situation": "A colleague hands you a coffee.",
    "topic": "Small talk",
-   "mission": "Thank a shop assistant or a colleague with 謝謝",
    "register": "everyday"
   },
   {
@@ -275,7 +272,6 @@
    },
    "situation": "You've just been introduced to someone new.",
    "topic": "Introducing yourself",
-   "mission": "Say it to someone you meet for the first time",
    "register": "polite"
   },
   {
@@ -347,7 +343,6 @@
    },
    "situation": "You've just been introduced to a whole group.",
    "topic": "Introducing yourself",
-   "mission": "Use it when you're introduced to a group",
    "register": "polite"
   },
   {
@@ -459,7 +454,6 @@
    "situation": "Someone asks where you come from. (___)",
    "note": "Sounds written or formal. In conversation: 我是荷蘭人 or 我是從荷蘭來的",
    "topic": "Introducing yourself",
-   "mission": "Tell a colleague or taxi driver where you're from",
    "mine": "helan",
    "register": "formal",
    "tier": 2
@@ -536,7 +530,6 @@
    "situation": "Someone asks your nationality. (___)",
    "note": "Country + 人 (rén, person) = nationality",
    "topic": "Introducing yourself",
-   "mission": "When someone asks where you're from, answer in Mandarin",
    "mine": "helan",
    "register": "everyday"
   },
@@ -658,8 +651,7 @@
    },
    "situation": "Someone asks what you do at the university.",
    "note": "我是 [subject] 教授 = I'm a professor of [subject]",
-   "topic": "Work & study",
-   "mission": "Tell someone off campus what you do"
+   "topic": "Work & study"
   },
   {
    "id": "wo-lai-zhongda-shouke",
@@ -746,7 +738,6 @@
    "situation": "A taxi driver asks why you're in Hong Kong.",
    "note": "授課 is formal (course catalogues, announcements). In conversation: 我在中文大學教書",
    "topic": "Work & study",
-   "mission": "Explain why you're in Hong Kong",
    "register": "formal",
    "tier": 2
   },
@@ -827,7 +818,6 @@
    "situation": "Someone asks where you teach.",
    "note": "教 (jiāo) + course/subject = teach …; note jiāo here vs jiào in 教授",
    "topic": "Work & study",
-   "mission": "Tell a Mandarin-speaking colleague where you teach",
    "register": "everyday",
    "order": "Place before the verb: 在 + place + verb"
   },
@@ -891,7 +881,6 @@
    },
    "situation": "You bump into a colleague you haven't seen for a while.",
    "topic": "Small talk",
-   "mission": "Greet a Mandarin-speaking colleague with it",
    "register": "everyday",
    "order": "Statement + 嗎 = yes/no question"
   },
@@ -944,7 +933,6 @@
    },
    "situation": "You want to ask a friend how things are going.",
    "topic": "Small talk",
-   "mission": "Ask a colleague how things are",
    "register": "casual"
   },
   {
@@ -1007,7 +995,6 @@
    },
    "situation": "You want to ask your coach what's been keeping them busy.",
    "topic": "Small talk",
-   "mission": "Ask your coach what they've been busy with",
    "register": "casual",
    "order": "The question word sits where the answer will go"
   },
@@ -1359,8 +1346,7 @@
     }
    ],
    "situation": "Someone asks what you like to drink. (___)",
-   "topic": "Food & drink",
-   "mission": "Tell someone what you like to drink"
+   "topic": "Food & drink"
   },
   {
    "id": "ni-xihuan-he-shenme",
@@ -1431,7 +1417,6 @@
    },
    "situation": "You're buying drinks and want to ask what the other person likes.",
    "topic": "Food & drink",
-   "mission": "Ask someone what they like to drink",
    "order": "The question word sits where the answer will go"
   },
   {
@@ -1672,7 +1657,6 @@
    },
    "situation": "You're choosing a restaurant with a colleague.",
    "topic": "Food & drink",
-   "mission": "Ask a colleague at lunch what they like to eat",
    "order": "The question word sits where the answer will go"
   },
   {
@@ -2245,8 +2229,7 @@
     }
    ],
    "situation": "Someone asks what food you like. (___)",
-   "topic": "Food & drink",
-   "mission": "Tell someone at lunch what you like to eat"
+   "topic": "Food & drink"
   },
   {
    "id": "yao-bu-yao-la",
@@ -2357,8 +2340,7 @@
     ]
    },
    "situation": "The waiter asks if you want it spicy. Only a little!",
-   "topic": "Food & drink",
-   "mission": "When asked if you want it spicy, answer 一點點"
+   "topic": "Food & drink"
   },
   {
    "id": "zhende",
@@ -2400,8 +2382,7 @@
     ]
    },
    "situation": "A colleague tells you something surprising.",
-   "topic": "Small talk",
-   "mission": "React with 真的？ when someone tells you something"
+   "topic": "Small talk"
   },
   {
    "id": "ni-xihuan-x-ma",
@@ -2476,7 +2457,6 @@
    ],
    "situation": "You want to ask someone if they like ___.",
    "topic": "Small talk",
-   "mission": "Ask someone if they like a country they've visited",
    "order": "Statement + 嗎 = yes/no question"
   },
   {
@@ -3716,7 +3696,6 @@
    "situation": "You meet a new student and want to know their name.",
    "note": "Fine with students and peers. To someone senior, ask 請問怎麼稱呼？ (qǐngwèn zěnme chēnghū)",
    "topic": "Meeting people",
-   "mission": "Ask a student their name",
    "register": "everyday",
    "order": "The question word sits where the answer will go"
   },
@@ -3788,7 +3767,6 @@
    },
    "situation": "Someone young is waiting outside your office.",
    "topic": "Meeting people",
-   "mission": "Ask someone on campus if they're a student",
    "order": "Statement + 嗎 = yes/no question"
   },
   {
@@ -3868,7 +3846,6 @@
    "situation": "You want to know a student's department.",
    "note": "系 xì = department (at a university)",
    "topic": "Meeting people",
-   "mission": "Ask a student which department they're in",
    "order": "The question word sits where the answer will go"
   },
   {
@@ -3931,8 +3908,7 @@
     "2": "audio/chunks/ni-ji-nianji--2.mp3"
    },
    "situation": "You want to know what year a student is in.",
-   "topic": "Meeting people",
-   "mission": "Ask a student what year they're in"
+   "topic": "Meeting people"
   },
   {
    "id": "ni-du-shenme",
@@ -4066,7 +4042,6 @@
    },
    "situation": "You want to know where someone is from.",
    "topic": "Meeting people",
-   "mission": "Ask someone where they're from",
    "order": "The question word sits where the answer will go"
   },
   {
@@ -4144,7 +4119,6 @@
    },
    "situation": "A student surprises you with excellent English.",
    "topic": "Meeting people",
-   "mission": "Compliment a student's English",
    "order": "No 是 before an adjective: 很 links them"
   },
   {
@@ -4206,7 +4180,6 @@
    },
    "situation": "Someone says they're new here too. Same for you!",
    "topic": "Meeting people",
-   "mission": "Answer 我也是 when someone says something that's true for you too",
    "order": "也 (also) goes before the verb, never at the end"
   },
   {
@@ -4292,7 +4265,6 @@
    },
    "situation": "You introduce yourself at your first department meeting.",
    "topic": "Meeting people",
-   "mission": "Introduce yourself to a new colleague",
    "order": "The description + 的 comes before the noun"
   },
   {
@@ -4439,7 +4411,6 @@
    },
    "situation": "You want to ask a colleague how long they've lived here.",
    "topic": "Meeting people",
-   "mission": "Ask a colleague how long they've been in Hong Kong",
    "order": "Place before 多久 (how long); 了 comes last"
   },
   {
@@ -4501,8 +4472,7 @@
    },
    "situation": "Someone asks what your research is about.",
    "note": "人工智慧 is the Taiwan word. In Hong Kong and mainland China it is 人工智能 (réngōng zhìnéng); people also just say AI",
-   "topic": "Work & study",
-   "mission": "Tell someone what you research"
+   "topic": "Work & study"
   },
   {
    "id": "wo-de-bangongshi-zai-zheli",
@@ -4667,8 +4637,7 @@
     "5": "audio/chunks/huanying-lai-shang-wo-de-ke--5.mp3"
    },
    "situation": "The first class of the semester starts.",
-   "topic": "Work & study",
-   "mission": "Welcome your students in Mandarin"
+   "topic": "Work & study"
   },
   {
    "id": "you-wenti-ma",
@@ -4730,7 +4699,6 @@
    },
    "situation": "You've finished explaining and check with the class.",
    "topic": "Work & study",
-   "mission": "Ask 有問題嗎？ at the end of a class",
    "order": "Statement + 嗎 = yes/no question"
   },
   {
@@ -4781,8 +4749,7 @@
     ]
    },
    "situation": "The lecture is over.",
-   "topic": "Work & study",
-   "mission": "End a class with 下課了"
+   "topic": "Work & study"
   },
   {
    "id": "jiayou",
@@ -4825,7 +4792,6 @@
    },
    "situation": "A student is nervous before their presentation.",
    "topic": "Work & study",
-   "mission": "Say 加油 to a student before an exam or presentation",
    "register": "casual"
   },
   {
@@ -4911,7 +4877,6 @@
    },
    "situation": "Someone compliments your Chinese, but you're modest.",
    "topic": "Getting by",
-   "mission": "Say it when someone switches to fast Mandarin",
    "order": "不太 (not very) goes before the adjective"
   },
   {
@@ -4983,7 +4948,6 @@
    },
    "situation": "Someone is speaking too fast for you.",
    "topic": "Getting by",
-   "mission": "Ask someone to slow down in Mandarin",
    "register": "polite",
    "order": "Verb first, then how: 說 + 慢一點"
   },
@@ -5058,7 +5022,6 @@
    "situation": "You point at an object and want its Chinese name.",
    "note": "Point at the thing, or say the English word first: \"outfit\" 中文怎麼說？",
    "topic": "Getting by",
-   "mission": "Point at something and ask how to say it",
    "wish": "wish-1791247432973",
    "register": "everyday",
    "order": "The topic first, then 怎麼 + verb"
@@ -5138,7 +5101,6 @@
    },
    "situation": "You'd like a student to teach you a word.",
    "topic": "Getting by",
-   "mission": "Ask a student to teach you a word",
    "order": "Statement + 嗎 = yes/no question"
   },
   {
@@ -5225,7 +5187,6 @@
    "situation": "You want to invite a colleague for coffee.",
    "note": "吧 ba at the end makes it a suggestion: let's…",
    "topic": "Meeting people",
-   "mission": "Invite a colleague for coffee in Mandarin",
    "order": "Who + together + go + do what; 吧 comes last"
   },
   {
@@ -5347,7 +5308,6 @@
    },
    "situation": "A student asks you for a small favour.",
    "topic": "Getting by",
-   "mission": "Answer 沒問題 when someone asks for a favour",
    "register": "everyday"
   },
   {
@@ -5428,7 +5388,6 @@
    "situation": "You point at something on the menu and ask the waiter for it.",
    "note": "Politer than 我要這個, which is what most people say when ordering",
    "topic": "Food & drink",
-   "mission": "Point at a dish on the menu in a CUHK canteen and ask 可以給我這個嗎？",
    "wish": "wish-1790803302621",
    "register": "polite",
    "tier": 2,
@@ -5544,7 +5503,6 @@
    "situation": "You're at the counter of a café and want a coffee.",
    "note": "Politer than 我要一杯咖啡, the usual way to order. Add 謝謝 once you get it",
    "topic": "Food & drink",
-   "mission": "Order your next coffee on campus with 可以給我一杯咖啡嗎？",
    "wish": "wish-1791059610386",
    "register": "polite",
    "tier": 2,
@@ -5655,7 +5613,6 @@
    "situation": "Someone explains something in Chinese and you're lost.",
    "note": "The longer version of 可以說英文嗎？ 用英文 = using English, before the verb. 解釋 = to explain; 一下 softens it",
    "topic": "Getting by",
-   "mission": "When a colleague or your coach says something you can't follow, ask 可以用英文解釋一下嗎？",
    "register": "polite",
    "order": "用 + language comes before the verb"
   },
@@ -7326,8 +7283,7 @@
     }
    ],
    "situation": "Someone asks where you'd like to travel. (___)",
-   "topic": "Small talk",
-   "mission": "Tell someone where you'd like to travel next"
+   "topic": "Small talk"
   },
   {
    "id": "wo-xiang-he-x",
@@ -7632,7 +7588,6 @@
    "situation": "The waiter asks what you'd like to drink. (___)",
    "note": "Softer than 我要…: I'd like…",
    "topic": "Food & drink",
-   "mission": "Order a drink in Mandarin",
    "register": "polite"
   },
   {
@@ -7766,7 +7721,6 @@
    "situation": "Someone speaks fast Mandarin and you didn't catch it.",
    "note": "聽 listen + 不懂 not understand",
    "topic": "Getting by",
-   "mission": "When you don't catch something, say it instead of switching to English",
    "register": "everyday"
   },
   {
@@ -7838,7 +7792,6 @@
    "situation": "You almost understood, and want to hear it again.",
    "note": "請 qǐng = please; 再 zài = again",
    "topic": "Getting by",
-   "mission": "Ask your coach or someone else to repeat something",
    "register": "polite",
    "order": "再 (again) before the verb; how many times after it"
   },
@@ -8000,7 +7953,6 @@
    },
    "situation": "Someone asks if you speak Chinese.",
    "topic": "Introducing yourself",
-   "mission": "Tell a colleague you can speak a little Chinese",
    "wish": "wish-1791518241214",
    "register": "everyday",
    "order": "The amount comes before the thing: 一點點 + 中文"
@@ -8073,7 +8025,6 @@
    },
    "situation": "Someone is surprised you know some Chinese.",
    "topic": "Introducing yourself",
-   "mission": "Tell someone you're learning Chinese",
    "order": "在 before a verb = doing it now"
   },
   {
@@ -8141,8 +8092,7 @@
     "3": "audio/chunks/wo-zhu-zai-xianggang--3.mp3"
    },
    "situation": "Someone asks where you live.",
-   "topic": "Introducing yourself",
-   "mission": "Tell someone where you live"
+   "topic": "Introducing yourself"
   },
   {
    "id": "ni-zai-nali-gongzuo",
@@ -8213,7 +8163,6 @@
    "situation": "You want to know where the person you just met works.",
    "note": "哪裡 nǎlǐ = where",
    "topic": "Work & study",
-   "mission": "Ask someone new where they work",
    "order": "Place before the verb: 在 + place + verb"
   },
   {
@@ -8291,7 +8240,6 @@
    },
    "situation": "Someone asks where you work.",
    "topic": "Work & study",
-   "mission": "Tell someone where you work",
    "order": "Place before the verb: 在 + place + verb"
   },
   {
@@ -8354,7 +8302,6 @@
    },
    "situation": "It's lunchtime and someone asks if you've eaten.",
    "topic": "Food & drink",
-   "mission": "When a colleague asks around noon if you've had lunch, answer 我還沒吃",
    "order": "還沒 (not yet) goes before the verb"
   },
   {
@@ -8425,7 +8372,6 @@
    },
    "situation": "You and a friend are choosing where to have lunch.",
    "topic": "Food & drink",
-   "mission": "Ask a colleague 你想吃什麼？ when you pick a place for lunch at CUHK",
    "order": "The question word sits where the answer will go"
   },
   {
@@ -8905,8 +8851,7 @@
     }
    ],
    "situation": "A friend asks what you feel like eating. (___)",
-   "topic": "Food & drink",
-   "mission": "Tell a friend what you feel like eating today"
+   "topic": "Food & drink"
   },
   {
    "id": "wo-yao-x",
@@ -9280,7 +9225,6 @@
    "situation": "The waiter is ready to take your order. (___)",
    "note": "我要… is how you order: direct, and normal at a counter",
    "topic": "Food & drink",
-   "mission": "Order at a cha chaan teng counter with 我要…",
    "register": "everyday"
   },
   {
@@ -9711,7 +9655,6 @@
    "situation": "You order politely. (___)",
    "note": "Politer than 我要…, which is what most people say when ordering",
    "topic": "Food & drink",
-   "mission": "Order one thing today with 請給我…",
    "register": "polite",
    "tier": 2
   },
@@ -10227,7 +10170,6 @@
    "situation": "You greet a group of students.",
    "note": "們 men makes a plural: 你們 = you (all), 我們 = we. For greeting a group, 大家好 is more common",
    "topic": "Small talk",
-   "mission": "Greet a group with 你們好",
    "tier": 2
   },
   {
@@ -10338,8 +10280,7 @@
     ]
    },
    "situation": "Someone asks how you are; ask back.",
-   "topic": "Small talk",
-   "mission": "Ask back 你呢？ after answering a question"
+   "topic": "Small talk"
   },
   {
    "id": "wo-ye-hen-hao",
@@ -10471,7 +10412,6 @@
    "situation": "You've finished explaining and check with the class.",
    "note": "有沒有 = have or not have: a yes/no question without 嗎",
    "topic": "Work & study",
-   "mission": "Ask your class 有沒有問題？",
    "order": "Verb + 不 + verb = yes/no question, no 嗎"
   },
   {
@@ -10745,8 +10685,7 @@
    },
    "situation": "You want a colleague's opinion.",
    "note": "覺得 = to feel / think (your own opinion)",
-   "topic": "Small talk",
-   "mission": "Ask someone's opinion with 你覺得怎麼樣？"
+   "topic": "Small talk"
   },
   {
    "id": "wo-he-le",
@@ -10938,7 +10877,6 @@
    },
    "situation": "You want to ask if something is allowed.",
    "topic": "Getting by",
-   "mission": "Ask 可不可以？ before taking a free seat",
    "register": "everyday"
   },
   {
@@ -11096,7 +11034,6 @@
    },
    "situation": "You've answered one question and check for more.",
    "topic": "Work & study",
-   "mission": "End a class or meeting with 有沒有其他問題？",
    "order": "Verb + 不 + verb = yes/no question, no 嗎"
   },
   {
@@ -11185,8 +11122,7 @@
    },
    "situation": "You need to move your Chinese lesson.",
    "note": "時間 = time (in general, a slot). 時候 = a moment (… 的時候 = when …)",
-   "topic": "Work & study",
-   "mission": "Ask your coach about another lesson time in Mandarin"
+   "topic": "Work & study"
   },
   {
    "id": "xia-xingqi-jian",
@@ -11247,8 +11183,7 @@
     "2": "audio/chunks/xia-xingqi-jian--2.mp3"
    },
    "situation": "Your weekly lesson is ending.",
-   "topic": "Small talk",
-   "mission": "Say 下星期見！ at the end of your lesson"
+   "topic": "Small talk"
   },
   {
    "id": "di-yi-ci",
@@ -11628,7 +11563,6 @@
    "situation": "The waiter asks what you'd like. (___)",
    "note": "杯 bēi is the measure word for cups: 一杯咖啡",
    "topic": "Food & drink",
-   "mission": "Order a drink with 一杯",
    "register": "everyday",
    "order": "Number + measure word + thing"
   },
@@ -13276,7 +13210,6 @@
    "situation": "You want to name what someone is wearing today, as a whole look.",
    "note": "穿 wear + 搭 match: the everyday Taiwan word for an outfit (how the clothes go together). 我喜歡你的穿搭 = I like your outfit",
    "topic": "Small talk",
-   "mission": "Compliment a friend's outfit: 我喜歡你的穿搭",
    "wish": "wish-1791068540254"
   },
   {
@@ -13355,7 +13288,6 @@
    "situation": "Someone asks how you are and you want to return the question.",
    "note": "我很好 + 你呢？ said in one breath. 呢 bounces the same question back, so you don't have to repeat 你好嗎",
    "topic": "Small talk",
-   "mission": "Next time a colleague at CUHK asks 你好嗎？ or 最近怎麼樣？, answer 我很好，你呢？",
    "wish": "wish-1791245389497"
   },
   {
@@ -13428,7 +13360,6 @@
    "situation": "Someone in Hong Kong asks whether you're learning Cantonese or Mandarin.",
    "note": "普通話 is what Mandarin is called in Hong Kong, where 中文 usually means Cantonese. In Taiwan people say 中文 or 國語 (guóyǔ), so with your coach 我在學中文 is enough",
    "topic": "Introducing yourself",
-   "mission": "Tell someone in Hong Kong that it's Mandarin you're learning: 我在學普通話",
    "wish": "wish-1791247386488",
    "order": "在 before a verb = doing it now"
   },
@@ -13520,7 +13451,6 @@
    "situation": "You know what you want to say in English but not in Chinese.",
    "note": "這句話 = this sentence (句 counts sentences). The short version does the same job: 這個中文怎麼說？",
    "topic": "Getting by",
-   "mission": "In your next lesson, say something in English and ask your coach 這句話中文怎麼說？",
    "tier": 2,
    "order": "The topic first, then 怎麼 + verb"
   },
@@ -13610,7 +13540,6 @@
    "situation": "Someone asks where you're from.",
    "note": "是…的 wraps the detail you're stressing (where from). 從 cóng = from, 來 = come. 我是荷蘭人 says the same in fewer words",
    "topic": "Introducing yourself",
-   "mission": "When a student or taxi driver asks 你是哪裡人？, answer 我是從荷蘭來的",
    "wish": "wish-1791302600145",
    "register": "everyday",
    "tier": 2,
@@ -13659,7 +13588,6 @@
    "situation": "Someone thanks you for a small favour.",
    "note": "The everyday Taiwan reply to 謝謝, lighter than 不客氣. When someone asks a favour, the answer is 沒問題",
    "topic": "Small talk",
-   "mission": "When a student thanks you after class, answer 不會！",
    "wish": "wish-1791303319597",
    "register": "casual"
   },
@@ -13711,7 +13639,6 @@
    },
    "situation": "You walk into a shop or meet someone.",
    "topic": "Small talk",
-   "mission": "Greet the staff with 你好 the next time you walk into a shop",
    "register": "everyday",
    "tier": 0
   },
@@ -13776,7 +13703,6 @@
    "situation": "You point at something on the menu.",
    "note": "The normal way to order: direct, not rude. 可以給我這個嗎？ is the politer version",
    "topic": "Food & drink",
-   "mission": "Order by pointing at the menu: 我要這個",
    "register": "everyday",
    "tier": 0,
    "swap": {
@@ -13842,7 +13768,6 @@
    "situation": "You need to get past someone or catch a waiter's attention.",
    "note": "The all-purpose \"excuse me\": getting attention, squeezing past, a small slip. 對不起 is for a real apology",
    "topic": "Getting by",
-   "mission": "Use 不好意思 to get a waiter's attention or to squeeze past someone on the MTR",
    "register": "everyday",
    "tier": 0
   },
@@ -13889,7 +13814,6 @@
    "situation": "You are late or made a real mistake.",
    "note": "A real apology. For small things (bumping into someone, interrupting), 不好意思 is more usual",
    "topic": "Getting by",
-   "mission": "Apologise with 對不起 the next time you're late",
    "register": "everyday",
    "tier": 0
   },
@@ -13935,7 +13859,6 @@
    },
    "situation": "Someone apologises to you.",
    "topic": "Getting by",
-   "mission": "Answer 沒關係 when someone says sorry to you",
    "wish": "wish-1791506155451",
    "register": "everyday",
    "tier": 0
@@ -13989,7 +13912,6 @@
    "situation": "Someone suggests something and you agree.",
    "note": "Just 好 works too. With friends: 好啊 (hǎo a) = sure!",
    "topic": "Getting by",
-   "mission": "Agree to a plan with 好的",
    "register": "everyday",
    "tier": 0
   },
@@ -14036,7 +13958,6 @@
    "situation": "Someone checks a fact with you and they are right.",
    "note": "Chinese has no single word for yes. 對 confirms what someone said; otherwise repeat the verb (你是老師嗎？ 是)",
    "topic": "Getting by",
-   "mission": "Confirm something with 對 instead of nodding",
    "register": "everyday",
    "tier": 0
   },
@@ -14088,7 +14009,6 @@
    },
    "situation": "A waiter offers you a bag or more tea and you don't want it.",
    "topic": "Getting by",
-   "mission": "Turn down a plastic bag with 不用，謝謝",
    "register": "everyday",
    "tier": 0
   },
@@ -14140,7 +14060,6 @@
    },
    "situation": "You need a moment before answering or ordering.",
    "topic": "Getting by",
-   "mission": "Ask for a moment with 等一下 while you read the menu",
    "register": "everyday",
    "tier": 0
   },
@@ -14193,7 +14112,6 @@
    },
    "situation": "You want to know the price of something.",
    "topic": "Getting by",
-   "mission": "Ask 多少錢？ at a market stall",
    "register": "everyday",
    "tier": 0
   },
@@ -14240,7 +14158,6 @@
    "situation": "You've finished eating and want to pay.",
    "note": "Understood in Hong Kong too (Cantonese: maai4 daan1). Add 謝謝 after it",
    "topic": "Food & drink",
-   "mission": "Ask for the bill with 買單",
    "register": "everyday",
    "tier": 0
   },
@@ -14287,7 +14204,6 @@
    "situation": "You are about to ask a stranger a question.",
    "note": "Goes in front of any question to a stranger: 請問，多少錢？",
    "topic": "Getting by",
-   "mission": "Start a question to a stranger with 請問",
    "register": "polite",
    "tier": 0
   },
@@ -14334,7 +14250,6 @@
    "situation": "You are leaving.",
    "note": "Friends mostly say 掰掰 (bāi-bāi, bye-bye)",
    "topic": "Small talk",
-   "mission": "Say 再見 when you leave your lesson",
    "register": "everyday",
    "tier": 0
   },
@@ -14407,7 +14322,6 @@
    "situation": "You introduce your girlfriend to a colleague.",
    "note": "With family and partners 的 is usually dropped: 我女朋友, 我媽媽",
    "topic": "Meeting people",
-   "mission": "Introduce your girlfriend to someone: 這是我女朋友",
    "register": "everyday"
   },
   {
@@ -14471,7 +14385,6 @@
    "situation": "You're waiting for someone who is still packing up.",
    "note": "好了 = done, ready (了 marks the change). Yes: 好了. Not yet: 還沒",
    "topic": "Small talk",
-   "mission": "Ask a colleague who is packing up after a meeting: 好了嗎？",
    "wish": "wish-1791506198624",
    "register": "everyday",
    "order": "Statement + 嗎 = yes/no question"
@@ -14526,7 +14439,6 @@
    "situation": "Someone asks 好了嗎？ and you need more time.",
    "note": "還沒 alone is enough; 呢 makes it sound relaxed, \"not yet, you know\"",
    "topic": "Small talk",
-   "mission": "When someone asks whether you're ready or have eaten, answer 還沒呢",
    "wish": "wish-1791506177603",
    "register": "casual"
   },
@@ -14592,7 +14504,6 @@
    "situation": "You've said something and want the other person to confirm.",
    "note": "Tag question after a statement. Answer: 對 (right) or 不對 (not right)",
    "topic": "Small talk",
-   "mission": "End a sentence with 對不對？ to check you got something right with your coach",
    "wish": "wish-1791506243442",
    "register": "everyday"
   },
@@ -14656,7 +14567,6 @@
    "situation": "You've suggested a plan and ask whether it suits them.",
    "note": "Goes after a suggestion. Answer: 好 (OK) or 不好 (no)",
    "topic": "Small talk",
-   "mission": "Suggest coffee and add 好不好？: 我們去喝咖啡，好不好？",
    "wish": "wish-1791506251870",
    "register": "everyday"
   },
@@ -14703,7 +14613,6 @@
    "situation": "Someone thanks you warmly.",
    "note": "The standard reply to 謝謝, understood everywhere. In Taiwan, 不會 is the lighter everyday one",
    "topic": "Small talk",
-   "mission": "Answer 不客氣 when someone thanks you for holding the door",
    "wish": "wish-1791506283731",
    "register": "polite"
   },
@@ -14775,7 +14684,6 @@
    },
    "situation": "Someone explains something in Chinese and you're lost.",
    "topic": "Getting by",
-   "mission": "When you can't follow your coach or a colleague, ask 可以說英文嗎？",
    "wish": "wish-1791068534984",
    "register": "everyday",
    "order": "Statement + 嗎 = yes/no question"
@@ -14818,7 +14726,6 @@
    },
    "situation": "You greet the security guard.",
    "topic": "Small talk",
-   "mission": "Greet the security guard or a shopkeeper with 你好",
    "register": "everyday",
    "tier": 0
   },
@@ -14855,7 +14762,6 @@
    "situation": "Someone holds the lift door for you.",
    "note": "唔該 for help or service; 多謝 for gifts or compliments",
    "topic": "Getting by",
-   "mission": "Say 唔該 when someone holds a door or hands you something",
    "register": "everyday",
    "tier": 0
   },
@@ -14891,7 +14797,6 @@
    },
    "situation": "A colleague gives you a small gift.",
    "topic": "Small talk",
-   "mission": "Thank someone for a gift or compliment with 多謝",
    "register": "everyday",
    "tier": 0
   },
@@ -15033,7 +14938,6 @@
    },
    "situation": "You leave a shop.",
    "topic": "Small talk",
-   "mission": "Say 拜拜 when you leave a shop",
    "register": "everyday",
    "tier": 0
   },
@@ -15130,8 +15034,7 @@
     ]
    },
    "situation": "It's 8 am and you see a colleague.",
-   "topic": "Small talk",
-   "mission": "Say 早晨 to someone before noon"
+   "topic": "Small talk"
   },
   {
    "id": "yue-nei-hou-maa",
@@ -15224,7 +15127,6 @@
    },
    "situation": "Someone asks how you are. You're fine.",
    "topic": "Small talk",
-   "mission": "When someone asks how you are, answer 幾好",
    "register": "everyday"
   },
   {
@@ -15310,7 +15212,6 @@
    },
    "situation": "You need to squeeze past someone on the MTR.",
    "topic": "Getting by",
-   "mission": "Say 唔好意思 to squeeze past someone on the MTR",
    "register": "everyday"
   },
   {
@@ -15401,8 +15302,7 @@
     ]
    },
    "situation": "You leave work and will see your colleague tomorrow.",
-   "topic": "Small talk",
-   "mission": "Say 聽日見 to a colleague when leaving"
+   "topic": "Small talk"
   },
   {
    "id": "yue-keoi",
@@ -15569,8 +15469,7 @@
    },
    "situation": "The host at the door asks how many you are, and there are two of you.",
    "note": "位 wai2 counts people politely. One person: 一位 jat1 wai2",
-   "topic": "Food & drink",
-   "mission": "At the door of a restaurant, hold up two fingers and say 兩位"
+   "topic": "Food & drink"
   },
   {
    "id": "yue-m-goi-lok-daan",
@@ -15610,7 +15509,6 @@
    },
    "situation": "You know what you want and need the waiter to come over.",
    "topic": "Food & drink",
-   "mission": "Wave a waiter over in a cha chaan teng with 唔該，落單",
    "register": "everyday"
   },
   {
@@ -15651,8 +15549,7 @@
    },
    "situation": "The waiter brings your food.",
    "note": "晒 saai3 makes it warmer: say it when the food arrives or as you leave",
-   "topic": "Food & drink",
-   "mission": "Say 唔該晒 when the waiter puts your food down"
+   "topic": "Food & drink"
   },
   {
    "id": "yue-hai-dou-sik",
@@ -15692,8 +15589,7 @@
    },
    "situation": "At the counter they ask: here or takeaway? You're staying.",
    "note": "The counter asks 喺度食定拎走？ (here or to go?)",
-   "topic": "Food & drink",
-   "mission": "Answer 喺度食 at a counter on campus"
+   "topic": "Food & drink"
   },
   {
    "id": "yue-ling-zau",
@@ -15726,8 +15622,7 @@
     ]
    },
    "situation": "At the counter they ask: here or takeaway? You're taking it with you.",
-   "topic": "Food & drink",
-   "mission": "Order a coffee 拎走 on your way to class"
+   "topic": "Food & drink"
   },
   {
    "id": "yue-jit",
@@ -15888,7 +15783,6 @@
    "situation": "The menu is all in Chinese.",
    "note": "有冇 (have / not have) = do you have…?",
    "topic": "Food & drink",
-   "mission": "Ask for the English menu in a local restaurant",
    "order": "有冇 (have or not) = do you have…?"
   },
   {
@@ -15971,7 +15865,6 @@
    },
    "situation": "You propose dim sum to a friend.",
    "topic": "Food & drink",
-   "mission": "Suggest yum cha to a colleague for the weekend",
    "order": "Who + go + do what"
   },
   {
@@ -16757,7 +16650,6 @@
    ],
    "situation": "A taxi driver asks where you're from. (___)",
    "topic": "Introducing yourself",
-   "mission": "Tell a taxi driver where you're from",
    "mine": "yue-helan"
   },
   {
@@ -16920,7 +16812,6 @@
    },
    "situation": "Someone asks if you speak Cantonese.",
    "topic": "Getting by",
-   "mission": "Surprise a colleague with it",
    "order": "The amount comes before the thing: 少少 + 廣東話"
   },
   {
@@ -16986,7 +16877,6 @@
    "situation": "A shopkeeper starts speaking fast Cantonese to you.",
    "note": "識 sik1 = know how to; 講 gong2 = speak",
    "topic": "Getting by",
-   "mission": "Say it when someone starts speaking fast Cantonese to you",
    "order": "唔 (not) goes right before the verb"
   },
   {
@@ -17181,7 +17071,6 @@
    "situation": "Someone asks where you teach.",
    "note": "喺 hai2 = at/in (Mandarin 在)",
    "topic": "Work & study",
-   "mission": "Tell someone where you teach in Cantonese",
    "order": "Place before the verb: 喺 + place + verb"
   },
   {
@@ -17695,7 +17584,6 @@
    "situation": "You order at a cha chaan teng. (___)",
    "note": "Ordering: 要 jiu3 = want",
    "topic": "Food & drink",
-   "mission": "Order your drink in Cantonese at a café or cha chaan teng",
    "register": "everyday"
   },
   {
@@ -18043,8 +17931,7 @@
     ]
    },
    "situation": "You want your cold drink without ice.",
-   "topic": "Food & drink",
-   "mission": "Order a cold drink 走冰"
+   "topic": "Food & drink"
   },
   {
    "id": "yue-siu-tim",
@@ -18083,8 +17970,7 @@
     ]
    },
    "situation": "Your milk tea is always too sweet.",
-   "topic": "Food & drink",
-   "mission": "Ask for your milk tea 少甜"
+   "topic": "Food & drink"
   },
   {
    "id": "yue-m-jiu-laat",
@@ -18174,7 +18060,6 @@
    },
    "situation": "The staff ask how the food was.",
    "topic": "Food & drink",
-   "mission": "Tell the staff 好食 after a meal",
    "register": "everyday"
   },
   {
@@ -18215,7 +18100,6 @@
    },
    "situation": "You want to know the price at a market stall.",
    "topic": "Food & drink",
-   "mission": "Ask 幾多錢？ at a market stall",
    "register": "everyday"
   },
   {
@@ -18329,7 +18213,6 @@
    "situation": "You point at the dish you want.",
    "note": "The normal way to order: point and say it. Add 唔該 to be friendly",
    "topic": "Food & drink",
-   "mission": "Point at something and say 我要呢個",
    "wish": "wish-1790803319538",
    "register": "everyday",
    "swap": {
@@ -18391,7 +18274,6 @@
    },
    "situation": "You've finished eating and want to pay.",
    "topic": "Food & drink",
-   "mission": "Ask for the bill in Cantonese",
    "register": "everyday"
   },
   {
@@ -18483,7 +18365,6 @@
    },
    "situation": "You need the toilet.",
    "topic": "Getting by",
-   "mission": "Ask where the toilet is in Cantonese",
    "order": "The question word sits where the answer will go"
   },
   {
@@ -18525,7 +18406,6 @@
    "situation": "Your stop is coming up on the minibus.",
    "note": "Call it out to the driver of a red or green minibus",
    "topic": "Getting by",
-   "mission": "Call out 有落 on a minibus",
    "register": "everyday"
   },
   {
@@ -19001,7 +18881,6 @@
    "situation": "You call the waiter over and point at what you want on the menu.",
    "note": "想要 soeng2 jiu3 = would like: softer than 我要呢個, which is what most people say",
    "topic": "Food & drink",
-   "mission": "Catch the waiter in a cha chaan teng with 唔該, point at the menu and say 我想要呢個",
    "register": "polite",
    "tier": 2
   },
@@ -19075,7 +18954,6 @@
    "situation": "You're at the counter and want a coffee.",
    "note": "杯 bui1 = a cup of: Cantonese drops the 一. The short way to order is 一杯咖啡，唔該",
    "topic": "Food & drink",
-   "mission": "Order a coffee in a cha chaan teng or the CUHK canteen with 唔該，我想要杯咖啡",
    "register": "polite",
    "tier": 2
   },
@@ -19118,7 +18996,6 @@
    "situation": "Someone offers you a bag, or thanks you.",
    "note": "Three jobs in two syllables: refusing politely, saying there's no need, and answering thanks",
    "topic": "Getting by",
-   "mission": "Turn down a plastic bag with 唔使, or answer 唔該 with it",
    "register": "everyday"
   },
   {
@@ -19170,7 +19047,6 @@
    "situation": "You run into a colleague you know.",
    "note": "點 dim2 = how. The everyday way to ask; the answer can be 幾好",
    "topic": "Small talk",
-   "mission": "Greet a colleague you know with 你點呀？",
    "register": "casual",
    "order": "The question word sits where the answer will go"
   },
@@ -19229,7 +19105,6 @@
    },
    "situation": "You're at the counter of a café and want a coffee.",
    "topic": "Food & drink",
-   "mission": "Order your next coffee with 一杯咖啡，唔該",
    "wish": "wish-1791059623536",
    "register": "everyday",
    "order": "Number + measure word + thing; 唔該 comes last",

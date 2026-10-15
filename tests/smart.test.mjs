@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 import { defaults, localDate } from '../lib/store.js';
 import { drillId, flagWord, credit, troubleSpots, drillItems, drillPrompt } from '../lib/weak.js';
-import { isSolid, weekReadiness, daysUntil, canSay, pickMission, markMissionDone, missionDoneToday } from '../lib/motivation.js';
+import { isSolid, weekReadiness, daysUntil, canSay } from '../lib/motivation.js';
 
 const NOW = new Date(2026, 8, 23, 10); // a Wednesday
 const DAY = 86400000;
@@ -106,26 +106,4 @@ test('canSay groups phrases and patterns by topic, skipping words', () => {
   p.goodCounts.xiexie = 2;
   const groups = canSay(ITEMS.filter((i) => i.deck === 'mandarin'), p);
   assert.deepEqual(groups.map((g) => [g.topic, g.solid, g.total]), [['Intro', 0, 1], ['Small talk', 1, 2]]);
-});
-
-test('pickMission only uses solid phrases with a mission, stable per day', () => {
-  const p = defaults();
-  assert.equal(pickMission(ITEMS, p, NOW), null);
-  p.goodCounts.xiexie = 2;
-  p.goodCounts['laizi-x'] = 2;
-  const a = pickMission(ITEMS, p, NOW);
-  assert.ok(['xiexie', 'laizi-x'].includes(a.id));
-  assert.equal(pickMission(ITEMS, p, NOW).id, a.id);
-  assert.notEqual(pickMission(ITEMS, p, NOW, 1).id, a.id); // "another one"
-});
-
-test('done missions rest for two weeks and count as done today', () => {
-  const p = defaults();
-  p.goodCounts.xiexie = 2;
-  assert.equal(missionDoneToday(p, NOW), false);
-  markMissionDone(p, 'xiexie', NOW);
-  assert.equal(missionDoneToday(p, NOW), true);
-  assert.equal(pickMission(ITEMS, p, new Date(NOW.getTime() + DAY)), null);
-  assert.equal(pickMission(ITEMS, p, new Date(NOW.getTime() + 15 * DAY)).id, 'xiexie');
-  assert.equal(p.missions[0].date, localDate(NOW));
 });

@@ -430,7 +430,7 @@ def expand(items, root=ROOT, deck="mandarin", glossary=None):
             o["situation"] = SLOT_RE.sub("___", it["situation"])
         elif "situation" in it:
             o["situation"] = it["situation"]
-        for k in ("note", "cat", "topic", "mission", "mine", "wish", "register", "tier", "order"):
+        for k in ("note", "cat", "topic", "mine", "wish", "register", "tier", "order"):
             if k in it:
                 o[k] = it[k]
         if "swap" in it:

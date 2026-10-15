@@ -465,6 +465,44 @@ def validate_conversations(convos, out_items):
     return errs
 
 
+def load_frames(out_items, root=ROOT):
+    """data/frames.json: sentence patterns. Each listed sentence gets the pattern's id in its "frames"."""
+    file = root / "data" / "frames.json"
+    frames = json.loads(file.read_text())["frames"] if file.exists() else []
+    by_key = {(o["deck"], o["id"]): o for o in out_items}
+    errs, seen = [], set()
+    for f in frames:
+        fid = f.get("id", "?")
+        if fid in seen:
+            errs.append(f"frame {fid}: duplicate id")
+        seen.add(fid)
+        for k in ("deck", "zh", "roman", "en", "why", "items"):
+            if not f.get(k):
+                errs.append(f"frame {fid}: needs {k}")
+        for iid in f.get("items", []):
+            o = by_key.get((f.get("deck"), iid))
+            if not o:
+                errs.append(f"frame {fid}: no {f.get('deck')} item {iid!r}")
+            elif fid not in o.setdefault("frames", []):
+                o["frames"].append(fid)
+    return frames, errs
+
+
+def load_lookalikes(root=ROOT):
+    """data/lookalikes.json: sets of characters that are easy to mix up, per script."""
+    file = root / "data" / "lookalikes.json"
+    sets = json.loads(file.read_text())["sets"] if file.exists() else []
+    errs, seen = [], set()
+    for x in sets:
+        sid = x.get("id", "?")
+        if sid in seen:
+            errs.append(f"lookalikes {sid}: duplicate id")
+        seen.add(sid)
+        if len(x.get("chars", "")) < 2 or x.get("script") not in ("both", "cn", "hk") or not x.get("hint"):
+            errs.append(f"lookalikes {sid}: needs 2+ chars, a script (both/cn/hk) and a hint")
+    return sets, errs
+
+
 def audio_jobs(out_items):
     """(path, text, rate, item_id, tts_voice) for every TTS file the output references."""
     jobs = []
@@ -660,6 +698,9 @@ def main(argv):
     convo_file = ROOT / "data" / "conversations.json"
     convos = json.loads(convo_file.read_text())["conversations"] if convo_file.exists() else []
     errs = validate_conversations(convos, out)
+    frames, frame_errs = load_frames(out)
+    looks, look_errs = load_lookalikes()
+    errs += frame_errs + look_errs
     if errs:
         print(f"{len(errs)} error(s):")
         for e in errs:
@@ -691,14 +732,16 @@ def main(argv):
     body += json.dumps(convos, ensure_ascii=False, sort_keys=True)
     t2s = simplified_map(out + hsk_text)
     body += json.dumps(t2s, ensure_ascii=False, sort_keys=True)
-    hanzi, no_breakdown = load_hanzi(out + hsk_text, t2s)
+    look_text = [{"deck": "mandarin", "zh": x["chars"]} for x in looks]
+    hanzi, no_breakdown = load_hanzi(out + hsk_text + look_text, t2s)
     words, word_jobs = word_audio(out)
     hsk_list = hsk_entries(hsk_list, hanzi, hsk_src.get("chars", {}))
     word_jobs += hsk_audio(hsk_list, hanzi, words, out)
     hsk = {"lessons": hsk_src.get("lessons", {}), "entries": hsk_list}
-    body += json.dumps([hanzi, notes, words, hsk], ensure_ascii=False, sort_keys=True)
+    body += json.dumps([hanzi, notes, words, hsk, frames, looks], ensure_ascii=False, sort_keys=True)
     doc = {"version": hashlib.sha256(body.encode()).hexdigest()[:12], "voices": voices, "decks": decks, "items": out,
-           "conversations": convos, "t2s": t2s, "hanzi": hanzi, "notes": notes, "words": words, "hsk": hsk}
+           "conversations": convos, "t2s": t2s, "hanzi": hanzi, "notes": notes, "words": words, "hsk": hsk,
+           "frames": frames, "lookalikes": looks}
     (ROOT / "phrases.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
     made, failed = ([], []) if no_audio else generate_audio(audio_jobs(out) + word_jobs, ROOT, force_ids=force)
     stamp_service_worker(ROOT)

@@ -19,7 +19,7 @@ import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pul
 import { flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
 import { weekReadiness, daysUntil, canSay } from './lib/motivation.js';
 import { composeToday, withActivities, snapshot, outcome, dueSoon, estimateMinutes } from './lib/today.js';
-import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId, reclassifyReadingFlags, displayFor } from './lib/chars.js';
+import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId, reclassifyReadingFlags, displayFor, pickLookalike, markLookalike } from './lib/chars.js';
 import { hskItems, hskPool, hskQueue, hskWaiting, typedMatches, hskLevel } from './lib/hsk.js';
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
@@ -38,6 +38,8 @@ let decks = {}; // {deck: {label, voices}}
 let noteGloss = {}; // {deck: {chinese inside a note: {r romanisation, e English, k?: 'mandarin'}}}
 let hanzi = {}; // {character: {d meaning, p pinyin, c components, s meaning part, ph sound part, h hint}}
 let t2s = {}; // {Traditional: Simplified} for the Mandarin deck's characters
+let frames = {}; // {id: sentence pattern}
+let lookalikes = []; // sets of characters that are easy to mix up
 let conversations = [];
 let wordAudio = {}; // '<deck>/<word>' -> audio of the word's own card
 let hsk = { lessons: {}, list: [] }; // HSK 1 words and characters, as word-card items
@@ -374,6 +376,7 @@ function plainGloss(gloss) {
 const REGISTER_LABEL = { everyday: 'Everyday', casual: 'Casual, with friends', polite: 'Polite', formal: 'Formal' };
 
 function contentFor(card) {
+  if (card.type === 'look') return lookContent(card);
   const item = byId[card.id];
   if (card.activity) return activityContent(card, item);
   if (card.type === 'char') {
@@ -838,6 +841,33 @@ function promptFor(card, c) {
     ];
   }
   if (c.activity === 'pairs') return renderPairs(c);
+  if (c.activity === 'frame') {
+    const f = c.frame;
+    return [
+      el('p', { class: 'frame-zh', lang }, ...mixedText(f.zh, c.deck)),
+      el('p', { class: 'frame-roman' }, f.roman),
+      el('p', { class: 'prompt-en' }, f.en),
+      el('p', { class: 'frame-why' }, ...mixedText(f.why, c.deck)),
+      el('div', { class: 'frame-examples' }, ...c.examples.map((e) => sayLine(e, c.deck))),
+    ];
+  }
+  if (c.activity === 'look') {
+    return [
+      el('button', { class: 'icon-btn huge', 'aria-label': 'Play again', onclick: () => playCurrent() }, icon('play')),
+      el('p', { class: 'look-sound' }, renderRoman(el('span'), c.roman, c.deck), c.en ? ` · ${c.en}` : ''),
+      el('div', { class: 'look-opts' }, ...c.options.map((o) => {
+        const b = el('button', { class: 'look-opt', lang }, o.ch);
+        if (o.right) b.dataset.right = '1';
+        b.addEventListener('click', () => {
+          if (c.result) return;
+          b.classList.add(o.right ? 'right' : 'wrong');
+          if (!o.right) c.missed = true;
+          if (o.right) finishLook(c);
+        });
+        return b;
+      })),
+    ];
+  }
   if (c.activity === 'passage') {
     // Today's sentences in a row, nothing to read: then say how much of it you caught.
     const start = () => playSequence(c.rows.map((r) => r.entry.audio[r.voice][0]));
@@ -912,7 +942,19 @@ function startSession(queue, { convo = null, daily = null } = {}) {
 function dailyQueue(base = todayPlan().queue) {
   const tiles = decks[deck()]?.characters !== false;
   const extras = progress.stats.dailyDone?.[deck()] !== localDate(new Date());
-  return withActivities({ queue: base, items: items(), progress, stats: methodStats(progress.log), deck: deck(), tiles, characters: tiles, extras });
+  const out = withActivities({ queue: base, items: items(), progress, stats: methodStats(progress.log), deck: deck(), tiles, characters: tiles, extras });
+  // One look-alike character card (字 or 学?) in the day's first round, halfway through.
+  const look = tiles && extras ? lookalikeCard() : null;
+  if (look) out.splice(Math.round(out.length / 2), 0, look);
+  return out;
+}
+
+function lookalikeCard() {
+  const script = simplified('mandarin') ? 'cn' : 'hk';
+  const known = new Set(chars().flatMap((c) => [...zs(c.zh, 'mandarin')]));
+  const pick = pickLookalike(lookalikes, script, known, progress);
+  if (!pick) return null;
+  return { key: `l/${pick.set.id}:look`, id: `l/${pick.set.id}`, type: 'look', activity: true, deck: 'mandarin', set: pick.set.id, target: pick.target };
 }
 
 function startToday() {
@@ -953,6 +995,28 @@ function pairsContent(card) {
   };
 }
 
+// Which character? Hear one, see its sound and meaning, pick it from its look-alikes.
+function lookContent(card) {
+  const set = lookalikes.find((x) => x.id === card.set);
+  const s2t = Object.fromEntries(Object.entries(t2s).map(([t, sm]) => [sm, t]));
+  const h = hanzi[card.target] || hanzi[s2t[card.target]] || {};
+  const audio = wordAudio[`mandarin/${s2t[card.target] || card.target}`] || null;
+  return {
+    activity: 'look', set, target: card.target, zh: card.target, roman: h.p || '', en: (h.d || '').split(/[;,]/)[0],
+    words: [], audio, voice: audio ? Object.keys(audio)[0] : null, played: false, deck: 'mandarin', flagged: new Set(),
+    options: shuffled([...set.chars]).map((ch) => ({ ch, right: ch === card.target })), ...tracking(),
+  };
+}
+
+// The pattern behind a sentence, with the sentences you know (and this one) that follow it.
+function frameContent(card, item, c) {
+  const f = frames[card.frame] || frames[item.frames?.[0]];
+  const known = f.items.filter((id) => id !== item.id && progress.cards[`${id}:say`]).slice(0, 3);
+  c.frame = f;
+  c.examples = [item.id, ...known].map((id) => (byId[id].kind === 'pattern' ? pickFill(byId[id], progress) : byId[id]));
+  return c;
+}
+
 function activityContent(card, item) {
   if (card.type === 'pairs' || card.type === 'passage') return pairsContent(card);
   const entry = item.kind === 'pattern' ? pickFill(item, progress) : item;
@@ -962,6 +1026,7 @@ function activityContent(card, item) {
     chunks: item.chunks, deck: item.deck, flagged: new Set(), ...tracking(),
   };
   if (card.type === 'chain') Object.assign(c, { steps: chainSteps(entry.words), step: 0 });
+  if (card.type === 'frame') return frameContent(card, item, c);
   if (card.type === 'ear') {
     const wrong = shuffled([...new Set(metPhrases(item.id).map((i) => (i.fills?.[0] || i).en))].filter((en) => en !== entry.en)).slice(0, 3);
     c.options = shuffled([{ text: entry.en, right: true }, ...wrong.map((text) => ({ text, right: false }))]);
@@ -1052,6 +1117,20 @@ function optionButtons(c, label) {
 }
 
 // An activity is over: show the sentence, say it, and wait for Continue. Nothing is graded by hand.
+// Found it: first try = Got it, otherwise Didn't know. Then how to tell them apart.
+function finishLook(c) {
+  if (c.result) return;
+  c.result = c.missed ? 1 : 3;
+  c.revealMs = Math.round(performance.now() - c.shownAt);
+  $('card-kind').textContent = c.missed ? 'Tricky pair' : 'Spot on';
+  $('a-note').replaceChildren(...mixedText(c.set.hint, 'mandarin', zl('mandarin')));
+  $('a-note').hidden = false;
+  $('answer').hidden = false;
+  $('reveal').hidden = true;
+  $('continue').hidden = false;
+  playCurrent();
+}
+
 function finishActivity(rating) {
   const { c } = session.current;
   if (c.result) return;
@@ -1075,7 +1154,7 @@ function showCard() {
   const c = contentFor(card);
   session.current = { card, c };
 
-  $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?', match: 'Is this what you hear?', tone: 'Which tones?', dictate: 'Rebuild it by ear', hanzi: 'Rebuild it in characters', pairs: 'Match the pairs', passage: 'Listen through' }[c.activity]
+  $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?', match: 'Is this what you hear?', tone: 'Which tones?', dictate: 'Rebuild it by ear', hanzi: 'Rebuild it in characters', frame: 'The pattern', look: 'Which character?', pairs: 'Match the pairs', passage: 'Listen through' }[c.activity]
     : c.build ? 'Build the sentence'
     : c.char ? 'Read it'
     : c.typing ? 'Type it'
@@ -1097,9 +1176,9 @@ function showCard() {
   $('rec').classList.remove('recording');
   $('rec-row').hidden = true;
   $('a-en').textContent = c.en;
-  $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || (c.build && !c.activity) || c.typing || ['echo', 'chain', 'pairs', 'passage'].includes(c.activity);
+  $('a-en').hidden = (card.type === 'say' && c.level !== 'situation' && !c.drill) || (c.build && !c.activity) || c.typing || ['echo', 'chain', 'pairs', 'passage', 'look', 'frame'].includes(c.activity);
   $('continue').hidden = true;
-  $('reveal').textContent = c.activity === 'chain' ? 'Next part' : c.build ? "I'm stuck, show me" : c.activity || c.typing ? "I don't know" : 'Show answer';
+  $('reveal').textContent = c.activity === 'frame' ? 'Got it' : c.activity === 'chain' ? 'Next part' : c.build ? "I'm stuck, show me" : c.activity || c.typing ? "I don't know" : 'Show answer';
   $('reveal').hidden = false;
   $('grades').hidden = true;
   $('which').hidden = true;
@@ -1123,6 +1202,13 @@ function reveal() {
   if (!session || !$('answer').hidden) return;
   if (session.current.c.build) return finishBuild(1);
   if (session.current.c.typing) return finishTyped(1);
+  if (session.current.c.activity === 'frame') return commit(3); // nothing to answer: seen it, on to the sentence
+  if (session.current.c.activity === 'look') {
+    const { c } = session.current;
+    c.missed = true;
+    document.querySelector('#prompt .look-opt[data-right]')?.classList.add('right');
+    return finishLook(c);
+  }
   if (session.current.c.activity === 'chain') {
     const { card, c } = session.current;
     c.step += 1;
@@ -1182,6 +1268,11 @@ function commit(rating) {
   }
   if (c.activity) {
     logActivity(progress, card.id, c.activity, rating, now, c.revealMs);
+    if (c.activity === 'frame') {
+      const r = ((progress.frames ||= {})[c.frame.id] ||= { n: 0 });
+      Object.assign(r, { n: r.n + 1, day: localDate(now) });
+    }
+    if (c.activity === 'look') markLookalike(progress, c.set.id, c.target, rating >= 3);
     if (!session.used[card.id]?.includes(c.activity)) (session.used[card.id] ||= []).push(c.activity);
     persist();
     session.pos += 1;
@@ -1672,6 +1763,8 @@ async function init() {
   allItems = data.items;
   decks = data.decks;
   t2s = data.t2s || {};
+  frames = Object.fromEntries((data.frames || []).map((f) => [f.id, f]));
+  lookalikes = data.lookalikes || [];
   hanzi = data.hanzi || {};
   noteGloss = data.notes || {};
   conversations = data.conversations || [];

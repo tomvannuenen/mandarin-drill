@@ -214,3 +214,15 @@ test('withActivities: one rebuild in characters per round, only when the deck do
   assert.equal(count({}), 1);
   assert.equal(count({ characters: false }), 0);
 });
+
+test('withActivities: a new sentence with an unseen pattern is preceded by the pattern', () => {
+  const w = (n) => Array.from({ length: n }, (_, i) => ({ zh: `字${i}`, roman: 'zì' }));
+  const items = [{ id: 'keyi', kind: 'phrase', deck: 'mandarin', words: w(4), en: 'can?', frames: ['keyi-ma'] }];
+  const p = defaults();
+  const queue = [{ key: 'keyi:say', id: 'keyi', type: 'say', deck: 'mandarin' }];
+  const out = withActivities({ queue, items, progress: p, stats: {}, deck: 'mandarin', extras: false, rand: () => 0.5 });
+  assert.deepEqual([out[0].type, out[0].frame], ['frame', 'keyi-ma']);
+  p.frames = { 'keyi-ma': { n: 1, day: '2026-10-01' } };
+  const again = withActivities({ queue, items, progress: p, stats: {}, deck: 'mandarin', extras: false, rand: () => 0.5 });
+  assert.notEqual(again[0].type, 'frame', 'a pattern you have seen is not introduced again');
+});

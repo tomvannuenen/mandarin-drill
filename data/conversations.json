@@ -261,6 +261,91 @@
    ]
   },
   {
+   "id": "yue-yuenyeung",
+   "title": "A yuenyeung to go",
+   "deck": "cantonese",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "yue-zousan"
+    },
+    {
+     "who": "you",
+     "ref": "yue-jat-bui-x",
+     "fill": "yue-jyunjoeng"
+    },
+    {
+     "who": "them",
+     "ref": "yue-jiu-jit-ding-dung"
+    },
+    {
+     "who": "you",
+     "ref": "yue-dung-ge"
+    },
+    {
+     "who": "them",
+     "ref": "yue-tongsik-ding-lingzau"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ling-zau"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ho-m-ho-ji-jung-baatdaattung"
+    },
+    {
+     "who": "you",
+     "ref": "yue-m-goi-saai"
+    }
+   ]
+  },
+  {
+   "id": "yue-lunch",
+   "title": "Lunch at a cha chaan teng",
+   "deck": "cantonese",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "yue-gei-do-wai"
+    },
+    {
+     "who": "you",
+     "ref": "yue-jat-wai"
+    },
+    {
+     "who": "them",
+     "ref": "yue-daap-toi"
+    },
+    {
+     "who": "you",
+     "ref": "yue-dak"
+    },
+    {
+     "who": "you",
+     "ref": "yue-jau-me-hou-gaaisiu"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-jiu-food",
+     "fill": "yue-caan-daan-min"
+    },
+    {
+     "who": "you",
+     "ref": "yue-jat-bui-x",
+     "fill": "yue-dung-ningcaa"
+    },
+    {
+     "who": "you",
+     "ref": "yue-zau-gam-do"
+    },
+    {
+     "who": "you",
+     "ref": "yue-m-goi-maaidaan"
+    }
+   ]
+  },
+  {
    "id": "yue-cafe",
    "title": "Ordering at a cha chaan teng",
    "deck": "cantonese",

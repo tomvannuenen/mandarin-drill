@@ -75,7 +75,8 @@
     "可": "can (可不可以 = can or not?)",
     "用": "to use; with, in (a language)",
     "解釋": "to explain",
-    "一下": "a bit (softens a request)"
+    "一下": "a bit (softens a request)",
+    "上課": "to have class; (for a teacher) to teach a class"
   },
   "cantonese": {
     "點": "how",
@@ -133,6 +134,29 @@
     "兩": "two (of something)",
     "位": "(polite measure word for people)",
     "喺度": "here",
-    "餐牌": "menu"
+    "餐牌": "menu",
+    "檸茶": "lemon tea",
+    "定": "or (in a question)",
+    "嘅": "the … one ('s)",
+    "堂食": "eat in (at the shop)",
+    "拎走": "take away, to go",
+    "可": "can (in 可唔可以)",
+    "可以": "can, may",
+    "用": "to use; with",
+    "八達通": "Octopus card",
+    "㗎": "(sentence particle, softens a question)",
+    "就": "just, then",
+    "咁": "so, this (much)",
+    "搭": "to share (a table); to take (transport)",
+    "枱": "table",
+    "得": "OK, can do",
+    "介紹": "to recommend; to introduce",
+    "餐蛋": "luncheon meat and egg",
+    "麵": "noodles",
+    "叉燒": "barbecue pork (char siu)",
+    "飯": "rice; meal",
+    "雲吞": "wonton",
+    "炒": "to stir-fry",
+    "飽": "full (after eating)"
   }
 }

@@ -318,6 +318,17 @@ button.note-zh.on { text-decoration-color: var(--seal); text-decoration-style: s
 .opt { font-family: var(--sans); font-size: 16px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--rule); background: var(--paper-2); color: inherit; cursor: pointer; text-align: center; }
 .opt.right { border-color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent); }
 .opt.wrong { border-color: var(--seal); background: var(--seal-soft); }
+/* Which character? Big look-alike characters to pick from. */
+.look-sound { margin: 6px 0 0; font-size: 17px; color: var(--ink-2); }
+.look-opts { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 22px; }
+.look-opt { font-size: 44px; line-height: 1; width: 76px; height: 76px; border-radius: 16px; border: 1px solid var(--rule); background: var(--paper-2); color: inherit; cursor: pointer; }
+.look-opt.right { border-color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent); }
+.look-opt.wrong { border-color: var(--seal); background: var(--seal-soft); opacity: .6; }
+/* The pattern behind a sentence. */
+.frame-zh { font-size: 30px; margin: 0; }
+.frame-roman { margin: 2px 0 10px; color: var(--ink-3); font-size: 15px; }
+.frame-why { text-align: left; font-size: 16px; line-height: 1.5; color: var(--ink-2); margin: 14px 0 10px; }
+.frame-examples { display: flex; flex-direction: column; gap: 8px; width: 100%; margin-bottom: 16px; text-align: left; }
 .chain { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; margin: 18px 0 4px; }
 .chain-w { display: flex; flex-direction: column; align-items: center; transition: opacity .25s; }
 .chain-w.off { opacity: .22; }

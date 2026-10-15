@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.build import (DECKS, audio_jobs, expand, generate_audio, hsk_audio, hsk_entries, hsk_words, missing_glosses,
+from tools.build import (DECKS, audio_jobs, expand, load_frames, generate_audio, hsk_audio, hsk_entries, hsk_words, missing_glosses,
                          simplified_chars, validate, validate_conversations)
 
 DRINKS = [
@@ -272,6 +272,19 @@ class AudioRetry(unittest.TestCase):
             made, failed = generate_audio(jobs, Path(d), flaky, sleep=lambda s: None, workers=1)
         self.assertEqual(made, ["audio/tw-yunjhe/kafei.mp3"])
         self.assertEqual(failed, ["audio/tw-yunjhe/kafei-slow.mp3"])
+
+class Frames(unittest.TestCase):
+    def test_sentences_get_their_patterns_and_unknown_ones_fail(self):
+        import json
+        out = [{"id": "a", "deck": "mandarin"}, {"id": "b", "deck": "mandarin"}]
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / "data").mkdir()
+            frame = {"id": "f", "deck": "mandarin", "zh": "可以 … 嗎？", "roman": "kě-yǐ … ma?", "en": "Can …?", "why": "…", "items": ["a", "zzz"]}
+            (Path(d) / "data" / "frames.json").write_text(json.dumps({"frames": [frame]}))
+            frames, errs = load_frames(out, root=Path(d))
+        self.assertEqual(out[0]["frames"], ["f"])
+        self.assertNotIn("frames", out[1])
+        self.assertEqual(errs, ["frame f: no mandarin item 'zzz'"])
 
 
 if __name__ == "__main__":

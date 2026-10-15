@@ -7,5 +7,9 @@
   "喺": {"d": "to be at, in (Cantonese)", "c": "口係", "ph": "係", "h": "口 marks a spoken Cantonese word"},
   "嗰": {"d": "that (Cantonese)", "c": "口個", "ph": "個", "h": "口 marks a spoken Cantonese word"},
   "哋": {"d": "plural marker: we, you all, they (Cantonese)", "c": "口地", "ph": "地", "h": "口 marks a spoken Cantonese word"},
-  "佢": {"d": "he, she, it (Cantonese)", "c": "亻巨", "s": "亻", "ph": "巨"}
+  "佢": {"d": "he, she, it (Cantonese)", "c": "亻巨", "s": "亻", "ph": "巨"},
+  "㗎": {"d": "sentence particle: softens a question or statement (Cantonese)", "c": "口架", "ph": "架", "h": "口 marks a spoken Cantonese word"},
+  "咁": {"d": "so, like this, that much (Cantonese)", "c": "口甘", "ph": "甘", "h": "口 marks a spoken Cantonese word"},
+  "干": {"p": "gān", "d": "dry; to do (in 干杯 cheers)"},
+  "枱": {"d": "table", "p": "tái", "c": "木台", "s": "木", "ph": "台", "h": "Wood 木 for the meaning, 台 for the sound"}
 }

@@ -7,6 +7,7 @@
 "c": "丨",
 "h": "A crack on an oracle bone; compare 卜"
 },
+"⺌": {},
 "⺍": {},
 "⺮": {
 "d": "bamboo; flute",
@@ -16,6 +17,17 @@
 "⺼": {
 "d": "meat, flesh; organic compound",
 "h": "Meat on the ribs of an animal; compare 肉"
+},
+"㔾": {
+"d": "seal; kneeling person",
+"h": "A rolled-up scroll or kneeling person; compare 卩",
+"p": "xiān"
+},
+"㗎": {
+"c": "口架",
+"d": "sentence particle: softens a question or statement (Cantonese)",
+"h": "口 marks a spoken Cantonese word",
+"ph": "架"
 },
 "㠯": {
 "c": "己",
@@ -967,6 +979,12 @@
 "h": "A right hand, representing a pair; compare 左",
 "p": "yòu"
 },
+"叉": {
+"c": "又丶",
+"d": "fork; prong",
+"h": "A hand 又 grasping an object 丶",
+"p": "chā"
+},
 "及": {
 "c": "又",
 "d": "to extend; to reach",
@@ -1099,6 +1117,13 @@
 "ph": "马",
 "s": "口"
 },
+"吞": {
+"c": "天口",
+"d": "to absorb, to annex; to engulf",
+"p": "tūn",
+"ph": "天",
+"s": "口"
+},
 "吧": {
 "c": "口巴",
 "d": "emphatic final particle",
@@ -1132,6 +1157,12 @@
 "p": "né",
 "ph": "尼",
 "s": "口"
+},
+"咁": {
+"c": "口甘",
+"d": "so, like this, that much (Cantonese)",
+"h": "口 marks a spoken Cantonese word",
+"ph": "甘"
 },
 "和": {
 "c": "禾口",
@@ -1257,6 +1288,13 @@
 "h": "口 marks a spoken Cantonese word",
 "ph": "個"
 },
+"嘅": {
+"c": "口既",
+"d": "the sound of a sigh",
+"p": "kǎi",
+"ph": "既",
+"s": "口"
+},
 "嚟": {
 "c": "口黎",
 "d": "to come (Cantonese)",
@@ -1350,6 +1388,12 @@
 "h": "A tree with drooping branches",
 "p": "chuí"
 },
+"垚": {
+"c": "土土土",
+"d": "mound, lump, round mass",
+"h": "A mound 土 of clay 土",
+"p": "yáo"
+},
 "埋": {
 "c": "土里",
 "d": "to bury; to conceal",
@@ -1363,11 +1407,24 @@
 "h": "Clay 坴 formed into a ball 丸",
 "p": "yì"
 },
+"堂": {
+"c": "尚土",
+"d": "hall, large room; government office",
+"p": "táng",
+"ph": "尚",
+"s": "土"
+},
 "堇": {
 "c": "黄土",
 "d": "yellow loam; clay",
 "h": "Yellow 黄 earth 土",
 "p": "jǐn"
+},
+"堯": {
+"c": "垚兀",
+"d": "a legendary ancient emperor-sage",
+"h": "A mound 垚 borne by a man 兀; 垚 also provides the pronunciation",
+"p": "yáo"
 },
 "塊": {
 "c": "土鬼",
@@ -1404,6 +1461,12 @@
 "h": "A crescent moon",
 "p": "xī"
 },
+"夗": {
+"c": "夕㔾",
+"d": "to turn over when asleep",
+"h": "A person 㔾 curled up at night 夕",
+"p": "yuàn"
+},
 "多": {
 "c": "夕夕",
 "d": "much, many, multi-; more than, over",
@@ -1427,6 +1490,12 @@
 "d": "very, too much; big",
 "h": "A giant 大 with a normal-sized man 丶 for scale",
 "p": "tài"
+},
+"夫": {
+"c": "一大",
+"d": "man, husband; worker",
+"h": "A man 大 wearing a coming-of-age hairpin 一",
+"p": "fū"
 },
 "夬": {
 "c": "大",
@@ -1555,6 +1624,12 @@
 "ph": "元",
 "s": "宀"
 },
+"定": {
+"c": "宀疋",
+"d": "to decide, to fix, to settle; to order",
+"h": "A person 疋 settling under a roof 宀",
+"p": "dìng"
+},
 "客": {
 "c": "宀各",
 "d": "guest, traveller; customer",
@@ -1574,6 +1649,13 @@
 "p": "jiā",
 "ph": "豕",
 "s": "宀"
+},
+"寧": {
+"c": "宀心皿丁",
+"d": "calm, peaceful; healthy",
+"p": "níng",
+"ph": "丁",
+"s": "心"
 },
 "寫": {
 "c": "宀舄",
@@ -1625,6 +1707,30 @@
 "c": "⺈小",
 "d": "you; that, those",
 "p": "ěr"
+},
+"尚": {
+"c": "⺌冂口",
+"d": "still, yet; even",
+"p": "shàng"
+},
+"尢": {
+"c": "乚",
+"d": "weak, lame",
+"h": "Cutting 一 off the feet 儿; compare 兀",
+"p": "yóu"
+},
+"尤": {
+"c": "尢丶",
+"d": "especially, particularly",
+"p": "yóu",
+"ph": "尢"
+},
+"就": {
+"c": "京尤",
+"d": "just, simply; to go to",
+"p": "jiù",
+"ph": "京",
+"s": "尤"
 },
 "尸": {
 "c": "丿",
@@ -1683,6 +1789,10 @@
 "h": "A loom woven with thread",
 "p": "jǐ"
 },
+"已": {
+"d": "already; finished",
+"p": "yǐ"
+},
 "巳": {
 "c": "乚",
 "d": "the hours from 9 to 11; 6th terrestrial branch",
@@ -1723,9 +1833,9 @@
 },
 "干": {
 "c": "一十",
-"d": "arid, dry; to oppose",
+"d": "dry; to do (in 干杯 cheers)",
 "h": "A club or axe",
-"p": "gàn"
+"p": "gān"
 },
 "平": {
 "c": "干丷",
@@ -2035,6 +2145,12 @@
 "h": "A hand 扌 clutching a pebble 丸",
 "p": "zhí"
 },
+"找": {
+"c": "扌戈",
+"d": "to search for, to look for, to find",
+"h": "To go searching with a spear 戈 in hand 扌",
+"p": "zhǎo"
+},
 "拎": {
 "c": "扌令",
 "d": "to lift, to haul, to take",
@@ -2109,6 +2225,16 @@
 "c": "亠",
 "d": "square, rectangle; side",
 "p": "fāng"
+},
+"旡": {
+"d": "to choke on something",
+"p": "jì"
+},
+"既": {
+"c": "旡",
+"d": "already, since, then; both",
+"h": "A person 旡 turning away from food 皀; compare 即",
+"p": "jì"
 },
 "日": {
 "c": "口一",
@@ -2284,6 +2410,12 @@
 "h": "A wheat plant that has not yet borne fruit; compare 來",
 "p": "wèi"
 },
+"末": {
+"c": "木一",
+"d": "end, final, last; insignificant",
+"h": "The top 一 of a tree 木",
+"p": "mò"
+},
 "本": {
 "c": "木一",
 "d": "root, origin, source; basis",
@@ -2332,6 +2464,21 @@
 "d": "fruit, nut; result",
 "h": "Fruit 田 growing on a tree 木",
 "p": "guǒ"
+},
+"枱": {
+"c": "木台",
+"d": "table",
+"h": "Wood 木 for the meaning, 台 for the sound",
+"p": "tái",
+"ph": "台",
+"s": "木"
+},
+"架": {
+"c": "加木",
+"d": "frame, rack, stand; to prop up",
+"p": "jià",
+"ph": "加",
+"s": "木"
 },
 "柬": {
 "c": "束八",
@@ -2384,6 +2531,13 @@
 "d": "desk; machine",
 "h": "A table 幾 made of wood 木; 幾 also provides the pronunciation",
 "p": "jī"
+},
+"檸": {
+"c": "木寧",
+"d": "lemon",
+"p": "níng",
+"ph": "寧",
+"s": "木"
 },
 "欠": {
 "c": "⺈人",
@@ -2569,9 +2723,22 @@
 "ph": "彎",
 "s": "氵"
 },
+"火": {
+"c": "丷人",
+"d": "fire, flame; to burn",
+"h": "Flames",
+"p": "huǒ"
+},
 "灬": {
 "d": "fire",
 "p": "huǒ"
+},
+"炒": {
+"c": "火少",
+"d": "to boil, to fry, to roast, to sauté",
+"p": "chǎo",
+"ph": "少",
+"s": "火"
 },
 "点": {
 "c": "占灬",
@@ -2600,6 +2767,13 @@
 "p": "rè",
 "ph": "埶",
 "s": "灬"
+},
+"燒": {
+"c": "火堯",
+"d": "to burn, to bake; to heat, to roast",
+"p": "shāo",
+"ph": "堯",
+"s": "火"
 },
 "爫": {
 "d": "claws, nails, talons",
@@ -2758,6 +2932,13 @@
 "h": "A burning candle; the rays of the sun",
 "p": "bái"
 },
+"百": {
+"c": "一白",
+"d": "one hundred; numerous, many",
+"p": "bǎi",
+"ph": "白",
+"s": "一"
+},
 "的": {
 "c": "白勺",
 "d": "aim, goal; of",
@@ -2768,6 +2949,11 @@
 "d": "skin, hide, fur, feathers",
 "h": "A hand using a tool 攴 to strip the hide from a carcass",
 "p": "pí"
+},
+"皿": {
+"c": "一",
+"d": "dish, vessel; shallow container",
+"p": "mǐn"
 },
 "目": {
 "c": "口二",
@@ -3042,6 +3228,12 @@
 "d": "sheep, goat",
 "h": "A sheep's head with horns",
 "p": "yáng"
+},
+"羍": {
+"c": "大羊",
+"p": "dá",
+"ph": "大",
+"s": "羊"
 },
 "美": {
 "c": "羊大",
@@ -3751,6 +3943,13 @@
 "ph": "首",
 "s": "辶"
 },
+"達": {
+"c": "辶羍",
+"d": "to reach, to arrive at; intelligent",
+"p": "dá",
+"ph": "羍",
+"s": "辶"
+},
 "還": {
 "c": "辶睘",
 "d": "also, besides; still, yet",
@@ -3970,6 +4169,12 @@
 "h": "Rain drops falling from a cloud 帀",
 "p": "yǔ"
 },
+"雲": {
+"c": "雨云",
+"d": "cloud; to say, to speak",
+"h": "Rain 雨 falling from a cloud 云",
+"p": "yún"
+},
 "電": {
 "c": "雨电",
 "d": "electricity; electric",
@@ -4065,6 +4270,13 @@
 "ph": "欠",
 "s": "飠"
 },
+"飽": {
+"c": "飠包",
+"d": "satisfied; to eat one's fill",
+"p": "bǎo",
+"ph": "包",
+"s": "飠"
+},
 "餐": {
 "c": "歺又食",
 "d": "to eat, to dine; meal, food",
@@ -4145,6 +4357,26 @@
 "ph": "包",
 "s": "魚"
 },
+"鳥": {
+"c": "灬",
+"d": "bird",
+"h": "A bird",
+"p": "niǎo"
+},
+"鴛": {
+"c": "夗鳥",
+"d": "male mandarin duck (Aix galericulata)",
+"p": "yuān",
+"ph": "夗",
+"s": "鳥"
+},
+"鴦": {
+"c": "央鳥",
+"d": "female mandarin duck (Aix galericulata)",
+"p": "yāng",
+"ph": "央",
+"s": "鳥"
+},
 "鸟": {
 "d": "bird",
 "h": "Simplified form of 烏, a bird",
@@ -4155,6 +4387,19 @@
 "d": "chicken",
 "h": "Another 又 kind of bird 鸟",
 "p": "jī"
+},
+"麥": {
+"c": "來夂",
+"d": "wheat, barley, oats",
+"h": "Grains 來 ready to be harvested 夂; compare 麦",
+"p": "mài"
+},
+"麵": {
+"c": "麥面",
+"d": "face; surface, side",
+"p": "miàn",
+"ph": "麥",
+"s": "面"
 },
 "麻": {
 "c": "广林",
@@ -4198,6 +4443,18 @@
 "p": "diǎn",
 "ph": "占",
 "s": "黑"
+},
+"齊": {
+"d": "even, uniform, of equal length",
+"h": "Three stalks of grain growing evenly",
+"p": "qí"
+},
+"齋": {
+"c": "齊小",
+"d": "to fast, to abstain; a vegetarian diet",
+"p": "zhāi",
+"ph": "小",
+"s": "齊"
 },
 "龶": {}
 }

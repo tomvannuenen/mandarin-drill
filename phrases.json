@@ -1,5 +1,5 @@
 {
- "version": "a0609c87fa9e",
+ "version": "5c6e0f153e21",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -819,7 +819,10 @@
    "note": "教 (jiāo) + course/subject = teach …; note jiāo here vs jiào in 教授",
    "topic": "Work & study",
    "register": "everyday",
-   "order": "Place before the verb: 在 + place + verb"
+   "order": "Place before the verb: 在 + place + verb",
+   "frames": [
+    "zai-place"
+   ]
   },
   {
    "id": "zuijin-hao-ma",
@@ -882,7 +885,10 @@
    "situation": "You bump into a colleague you haven't seen for a while.",
    "topic": "Small talk",
    "register": "everyday",
-   "order": "Statement + 嗎 = yes/no question"
+   "order": "Statement + 嗎 = yes/no question",
+   "frames": [
+    "ma"
+   ]
   },
   {
    "id": "zuijin-zenmeyang",
@@ -996,7 +1002,10 @@
    "situation": "You want to ask your coach what's been keeping them busy.",
    "topic": "Small talk",
    "register": "casual",
-   "order": "The question word sits where the answer will go"
+   "order": "The question word sits where the answer will go",
+   "frames": [
+    "wh-in-place"
+   ]
   },
   {
    "id": "kafei",
@@ -1346,7 +1355,10 @@
     }
    ],
    "situation": "Someone asks what you like to drink. (___)",
-   "topic": "Food & drink"
+   "topic": "Food & drink",
+   "frames": [
+    "xihuan-verb"
+   ]
   },
   {
    "id": "ni-xihuan-he-shenme",
@@ -1417,7 +1429,11 @@
    },
    "situation": "You're buying drinks and want to ask what the other person likes.",
    "topic": "Food & drink",
-   "order": "The question word sits where the answer will go"
+   "order": "The question word sits where the answer will go",
+   "frames": [
+    "wh-in-place",
+    "xihuan-verb"
+   ]
   },
   {
    "id": "shui",
@@ -1657,7 +1673,11 @@
    },
    "situation": "You're choosing a restaurant with a colleague.",
    "topic": "Food & drink",
-   "order": "The question word sits where the answer will go"
+   "order": "The question word sits where the answer will go",
+   "frames": [
+    "wh-in-place",
+    "xihuan-verb"
+   ]
   },
   {
    "id": "la",
@@ -2229,7 +2249,10 @@
     }
    ],
    "situation": "Someone asks what food you like. (___)",
-   "topic": "Food & drink"
+   "topic": "Food & drink",
+   "frames": [
+    "xihuan-verb"
+   ]
   },
   {
    "id": "yao-bu-yao-la",
@@ -2297,7 +2320,10 @@
    },
    "situation": "You're ordering for a friend and want to check about chilli.",
    "topic": "Food & drink",
-   "order": "Verb + 不 + verb = yes/no question, no 嗎"
+   "order": "Verb + 不 + verb = yes/no question, no 嗎",
+   "frames": [
+    "a-not-a"
+   ]
   },
   {
    "id": "yidiandian",
@@ -2457,7 +2483,10 @@
    ],
    "situation": "You want to ask someone if they like ___.",
    "topic": "Small talk",
-   "order": "Statement + 嗎 = yes/no question"
+   "order": "Statement + 嗎 = yes/no question",
+   "frames": [
+    "ma"
+   ]
   },
   {
    "id": "wo-bu-xihuan-he-x",
@@ -2801,7 +2830,11 @@
    ],
    "situation": "Someone offers you ___, but you don't like it.",
    "topic": "Food & drink",
-   "order": "不 goes right before the verb"
+   "order": "不 goes right before the verb",
+   "frames": [
+    "bu-verb",
+    "xihuan-verb"
+   ]
   },
   {
    "id": "wo-bu-xihuan-chi-x",
@@ -3345,7 +3378,11 @@
    ],
    "situation": "Someone offers you ___, but you don't like it.",
    "topic": "Food & drink",
-   "order": "不 goes right before the verb"
+   "order": "不 goes right before the verb",
+   "frames": [
+    "bu-verb",
+    "xihuan-verb"
+   ]
   },
   {
    "id": "xianggang",
@@ -3697,7 +3734,10 @@
    "note": "Fine with students and peers. To someone senior, ask 請問怎麼稱呼？ (qǐngwèn zěnme chēnghū)",
    "topic": "Meeting people",
    "register": "everyday",
-   "order": "The question word sits where the answer will go"
+   "order": "The question word sits where the answer will go",
+   "frames": [
+    "wh-in-place"
+   ]
   },
   {
    "id": "ni-shi-xuesheng-ma",
@@ -3767,7 +3807,10 @@
    },
    "situation": "Someone young is waiting outside your office.",
    "topic": "Meeting people",
-   "order": "Statement + 嗎 = yes/no question"
+   "order": "Statement + 嗎 = yes/no question",
+   "frames": [
+    "ma"
+   ]
   },
   {
    "id": "ni-shi-nage-xi-de",
@@ -3846,7 +3889,10 @@
    "situation": "You want to know a student's department.",
    "note": "系 xì = department (at a university)",
    "topic": "Meeting people",
-   "order": "The question word sits where the answer will go"
+   "order": "The question word sits where the answer will go",
+   "frames": [
+    "wh-in-place"
+   ]
   },
   {
    "id": "ni-ji-nianji",
@@ -3908,7 +3954,10 @@
     "2": "audio/chunks/ni-ji-nianji--2.mp3"
    },
    "situation": "You want to know what year a student is in.",
-   "topic": "Meeting people"
+   "topic": "Meeting people",
+   "frames": [
+    "wh-in-place"
+   ]
   },
   {
    "id": "ni-du-shenme",
@@ -3972,7 +4021,10 @@
    "situation": "You want to know what a student studies.",
    "note": "讀 dú = to study (a subject)",
    "topic": "Meeting people",
-   "order": "The question word sits where the answer will go"
+   "order": "The question word sits where the answer will go",
+   "frames": [
+    "wh-in-place"
+   ]
   },
   {
    "id": "ni-shi-nali-ren",
@@ -4042,7 +4094,10 @@
    },
    "situation": "You want to know where someone is from.",
    "topic": "Meeting people",
-   "order": "The question word sits where the answer will go"
+   "order": "The question word sits where the answer will go",
+   "frames": [
+    "wh-in-place"
+   ]
   },
   {
    "id": "ni-de-yingwen-hen-hao",
@@ -4411,7 +4466,10 @@
    },
    "situation": "You want to ask a colleague how long they've lived here.",
    "topic": "Meeting people",
-   "order": "Place before 多久 (how long); 了 comes last"
+   "order": "Place before 多久 (how long); 了 comes last",
+   "frames": [
+    "wh-in-place"
+   ]
   },
   {
    "id": "wo-yanjiu-rengong-zhihui",
@@ -4699,7 +4757,10 @@
    },
    "situation": "You've finished explaining and check with the class.",
    "topic": "Work & study",
-   "order": "Statement + 嗎 = yes/no question"
+   "order": "Statement + 嗎 = yes/no question",
+   "frames": [
+    "ma"
+   ]
   },
   {
    "id": "xiake-le",
@@ -4877,7 +4938,10 @@
    },
    "situation": "Someone compliments your Chinese, but you're modest.",
    "topic": "Getting by",
-   "order": "不太 (not very) goes before the adjective"
+   "order": "不太 (not very) goes before the adjective",
+   "frames": [
+    "bu-verb"
+   ]
   },
   {
    "id": "qing-shuo-man-yidian",
@@ -5024,7 +5088,10 @@
    "topic": "Getting by",
    "wish": "wish-1791247432973",
    "register": "everyday",
-   "order": "The topic first, then 怎麼 + verb"
+   "order": "The topic first, then 怎麼 + verb",
+   "frames": [
+    "zenme-shuo"
+   ]
   },
   {
    "id": "ni-keyi-jiao-wo-ma",
@@ -5101,7 +5168,11 @@
    },
    "situation": "You'd like a student to teach you a word.",
    "topic": "Getting by",
-   "order": "Statement + 嗎 = yes/no question"
+   "order": "Statement + 嗎 = yes/no question",
+   "frames": [
+    "keyi-ma",
+    "ma"
+   ]
   },
   {
    "id": "women-yiqi-qu-he-kafei-ba",
@@ -5257,7 +5328,10 @@
    },
    "situation": "You want to know if someone has time now.",
    "topic": "Meeting people",
-   "order": "Statement + 嗎 = yes/no question"
+   "order": "Statement + 嗎 = yes/no question",
+   "frames": [
+    "ma"
+   ]
   },
   {
    "id": "mei-wenti",
@@ -5411,7 +5485,11 @@
       "en": "that one"
      }
     ]
-   }
+   },
+   "frames": [
+    "keyi-ma",
+    "gei-wo"
+   ]
   },
   {
    "id": "keyi-gei-wo-yibei-kafei-ma",
@@ -5526,7 +5604,12 @@
       "en": "beer"
      }
     ]
-   }
+   },
+   "frames": [
+    "keyi-ma",
+    "gei-wo",
+    "yi-bei"
+   ]
   },
   {
    "id": "keyi-yong-yingwen-jieshi-yixia-ma",
@@ -5614,7 +5697,173 @@
    "note": "The longer version of 可以說英文嗎？ 用英文 = using English, before the verb. 解釋 = to explain; 一下 softens it",
    "topic": "Getting by",
    "register": "polite",
-   "order": "用 + language comes before the verb"
+   "order": "用 + language comes before the verb",
+   "frames": [
+    "keyi-ma",
+    "yong",
+    "verb-yixia"
+   ]
+  },
+  {
+   "id": "zhege-yong-zhongwen-zenme-shuo",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "這個用中文怎麼說？",
+   "roman": "zhè-ge yòng Zhōng-wén zěn-me shuō?",
+   "en": "How do you say this in Chinese?",
+   "words": [
+    {
+     "zh": "這個",
+     "roman": "zhè-ge",
+     "gloss": "this",
+     "script": "cn",
+     "zhDisp": "这个",
+     "zhS": "这个"
+    },
+    {
+     "zh": "用",
+     "roman": "yòng",
+     "gloss": "to use; with, in (a language)",
+     "script": "cn",
+     "zhDisp": "用"
+    },
+    {
+     "zh": "中文",
+     "roman": "Zhōng-wén",
+     "gloss": "Chinese (language)",
+     "script": "cn",
+     "zhDisp": "中文"
+    },
+    {
+     "zh": "怎麼",
+     "roman": "zěn-me",
+     "gloss": "how",
+     "script": "cn",
+     "zhDisp": "怎么",
+     "zhS": "怎么"
+    },
+    {
+     "zh": "說",
+     "roman": "shuō",
+     "gloss": "to speak, say",
+     "script": "cn",
+     "zhDisp": "说",
+     "zhS": "说"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhege-yong-zhongwen-zenme-shuo.mp3",
+     "audio/tw-yunjhe/zhege-yong-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhege-yong-zhongwen-zenme-shuo.mp3",
+     "audio/tw-hsiaochen/zhege-yong-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhege-yong-zhongwen-zenme-shuo.mp3",
+     "audio/tw-hsiaoyu/zhege-yong-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhege-yong-zhongwen-zenme-shuo.mp3",
+     "audio/cn-yunyang/zhege-yong-zhongwen-zenme-shuo-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhege-yong-zhongwen-zenme-shuo.mp3",
+     "audio/cn-xiaoxiao/zhege-yong-zhongwen-zenme-shuo-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/zhege-yong-zhongwen-zenme-shuo--1.mp3",
+    "2": "audio/chunks/zhege-yong-zhongwen-zenme-shuo--2.mp3",
+    "3": "audio/chunks/zhege-yong-zhongwen-zenme-shuo--3.mp3",
+    "4": "audio/chunks/zhege-yong-zhongwen-zenme-shuo--4.mp3"
+   },
+   "situation": "You point at something and want its Chinese name.",
+   "note": "Same as 這個中文怎麼說？ with 用 (using) spelled out: this, using Chinese, how say?",
+   "topic": "Getting by",
+   "register": "everyday",
+   "order": "用 + language comes before the verb",
+   "frames": [
+    "yong",
+    "zenme-shuo"
+   ]
+  },
+  {
+   "id": "wo-yong-yingwen-shangke",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "我用英文上課",
+   "roman": "wǒ yòng Yīng-wén shàng-kè",
+   "en": "I teach (my classes) in English",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me",
+     "script": "cn",
+     "zhDisp": "我"
+    },
+    {
+     "zh": "用",
+     "roman": "yòng",
+     "gloss": "to use; with, in (a language)",
+     "script": "cn",
+     "zhDisp": "用"
+    },
+    {
+     "zh": "英文",
+     "roman": "Yīng-wén",
+     "gloss": "English (language)",
+     "script": "cn",
+     "zhDisp": "英文"
+    },
+    {
+     "zh": "上課",
+     "roman": "shàng-kè",
+     "gloss": "to have class; (for a teacher) to teach a class",
+     "script": "cn",
+     "zhDisp": "上课",
+     "zhS": "上课"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-yong-yingwen-shangke.mp3",
+     "audio/tw-yunjhe/wo-yong-yingwen-shangke-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-yong-yingwen-shangke.mp3",
+     "audio/tw-hsiaochen/wo-yong-yingwen-shangke-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-yong-yingwen-shangke.mp3",
+     "audio/tw-hsiaoyu/wo-yong-yingwen-shangke-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-yong-yingwen-shangke.mp3",
+     "audio/cn-yunyang/wo-yong-yingwen-shangke-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-yong-yingwen-shangke.mp3",
+     "audio/cn-xiaoxiao/wo-yong-yingwen-shangke-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-yong-yingwen-shangke--1.mp3",
+    "2": "audio/chunks/wo-yong-yingwen-shangke--2.mp3",
+    "3": "audio/chunks/wo-yong-yingwen-shangke--3.mp3"
+   },
+   "situation": "A colleague asks what language you teach in.",
+   "note": "上課 = have class; said by a teacher it means teaching it",
+   "topic": "Work",
+   "register": "everyday",
+   "order": "用 + language comes before the verb",
+   "frames": [
+    "yong"
+   ]
   },
   {
    "id": "xihuan",
@@ -7283,7 +7532,10 @@
     }
    ],
    "situation": "Someone asks where you'd like to travel. (___)",
-   "topic": "Small talk"
+   "topic": "Small talk",
+   "frames": [
+    "xiang-yao"
+   ]
   },
   {
    "id": "wo-xiang-he-x",
@@ -7588,7 +7840,10 @@
    "situation": "The waiter asks what you'd like to drink. (___)",
    "note": "Softer than 我要…: I'd like…",
    "topic": "Food & drink",
-   "register": "polite"
+   "register": "polite",
+   "frames": [
+    "xiang-yao"
+   ]
   },
   {
    "id": "wo-bu-zhidao",
@@ -7650,7 +7905,10 @@
    "situation": "Someone asks you something you have no idea about.",
    "topic": "Getting by",
    "register": "everyday",
-   "order": "不 goes right before the verb"
+   "order": "不 goes right before the verb",
+   "frames": [
+    "bu-verb"
+   ]
   },
   {
    "id": "wo-ting-bu-dong",
@@ -7873,7 +8131,10 @@
    },
    "situation": "You're stuck and want to check if they speak English.",
    "topic": "Getting by",
-   "order": "Statement + 嗎 = yes/no question"
+   "order": "Statement + 嗎 = yes/no question",
+   "frames": [
+    "ma"
+   ]
   },
   {
    "id": "wo-hui-shuo-yidiandian-zhongwen",
@@ -8025,7 +8286,10 @@
    },
    "situation": "Someone is surprised you know some Chinese.",
    "topic": "Introducing yourself",
-   "order": "在 before a verb = doing it now"
+   "order": "在 before a verb = doing it now",
+   "frames": [
+    "zai-doing"
+   ]
   },
   {
    "id": "wo-zhu-zai-xianggang",
@@ -8163,7 +8427,11 @@
    "situation": "You want to know where the person you just met works.",
    "note": "哪裡 nǎlǐ = where",
    "topic": "Work & study",
-   "order": "Place before the verb: 在 + place + verb"
+   "order": "Place before the verb: 在 + place + verb",
+   "frames": [
+    "wh-in-place",
+    "zai-place"
+   ]
   },
   {
    "id": "wo-zai-zhongda-gongzuo",
@@ -8240,7 +8508,10 @@
    },
    "situation": "Someone asks where you work.",
    "topic": "Work & study",
-   "order": "Place before the verb: 在 + place + verb"
+   "order": "Place before the verb: 在 + place + verb",
+   "frames": [
+    "zai-place"
+   ]
   },
   {
    "id": "wo-hai-mei-chi",
@@ -8372,7 +8643,11 @@
    },
    "situation": "You and a friend are choosing where to have lunch.",
    "topic": "Food & drink",
-   "order": "The question word sits where the answer will go"
+   "order": "The question word sits where the answer will go",
+   "frames": [
+    "wh-in-place",
+    "xiang-yao"
+   ]
   },
   {
    "id": "wo-xiang-chi-x",
@@ -8851,7 +9126,10 @@
     }
    ],
    "situation": "A friend asks what you feel like eating. (___)",
-   "topic": "Food & drink"
+   "topic": "Food & drink",
+   "frames": [
+    "xiang-yao"
+   ]
   },
   {
    "id": "wo-yao-x",
@@ -9225,7 +9503,10 @@
    "situation": "The waiter is ready to take your order. (___)",
    "note": "我要… is how you order: direct, and normal at a counter",
    "topic": "Food & drink",
-   "register": "everyday"
+   "register": "everyday",
+   "frames": [
+    "xiang-yao"
+   ]
   },
   {
    "id": "qing-gei-wo-x",
@@ -9656,7 +9937,10 @@
    "note": "Politer than 我要…, which is what most people say when ordering",
    "topic": "Food & drink",
    "register": "polite",
-   "tier": 2
+   "tier": 2,
+   "frames": [
+    "gei-wo"
+   ]
   },
   {
    "id": "hai-mei",
@@ -10412,7 +10696,10 @@
    "situation": "You've finished explaining and check with the class.",
    "note": "有沒有 = have or not have: a yes/no question without 嗎",
    "topic": "Work & study",
-   "order": "Verb + 不 + verb = yes/no question, no 嗎"
+   "order": "Verb + 不 + verb = yes/no question, no 嗎",
+   "frames": [
+    "a-not-a"
+   ]
   },
   {
    "id": "wo-bu-chi-la",
@@ -10481,7 +10768,10 @@
    "situation": "The waiter asks if you want chilli; you never eat it.",
    "note": "不 = don't (in general, habits). 沒 = didn't / haven't (it didn't happen)",
    "topic": "Food & drink",
-   "order": "不 goes right before the verb"
+   "order": "不 goes right before the verb",
+   "frames": [
+    "bu-verb"
+   ]
   },
   {
    "id": "wo-mei-chi-la",
@@ -10817,7 +11107,10 @@
    "situation": "You want to check if someone knows something.",
    "note": "Verb 不 verb makes a yes/no question: 知不知道, 可不可以, 有沒有",
    "topic": "Small talk",
-   "order": "Verb + 不 + verb = yes/no question, no 嗎"
+   "order": "Verb + 不 + verb = yes/no question, no 嗎",
+   "frames": [
+    "a-not-a"
+   ]
   },
   {
    "id": "keyi-bu-keyi",
@@ -10877,7 +11170,10 @@
    },
    "situation": "You want to ask if something is allowed.",
    "topic": "Getting by",
-   "register": "everyday"
+   "register": "everyday",
+   "frames": [
+    "a-not-a"
+   ]
   },
   {
    "id": "zhege-ren-shi-wo-de-nupengyou",
@@ -11034,7 +11330,10 @@
    },
    "situation": "You've answered one question and check for more.",
    "topic": "Work & study",
-   "order": "Verb + 不 + verb = yes/no question, no 嗎"
+   "order": "Verb + 不 + verb = yes/no question, no 嗎",
+   "frames": [
+    "a-not-a"
+   ]
   },
   {
    "id": "you-mei-you-qita-shijian-shangke",
@@ -11122,7 +11421,10 @@
    },
    "situation": "You need to move your Chinese lesson.",
    "note": "時間 = time (in general, a slot). 時候 = a moment (… 的時候 = when …)",
-   "topic": "Work & study"
+   "topic": "Work & study",
+   "frames": [
+    "a-not-a"
+   ]
   },
   {
    "id": "xia-xingqi-jian",
@@ -11564,7 +11866,11 @@
    "note": "杯 bēi is the measure word for cups: 一杯咖啡",
    "topic": "Food & drink",
    "register": "everyday",
-   "order": "Number + measure word + thing"
+   "order": "Number + measure word + thing",
+   "frames": [
+    "xiang-yao",
+    "yi-bei"
+   ]
   },
   {
    "id": "wo-quguo-x",
@@ -13361,7 +13667,10 @@
    "note": "普通話 is what Mandarin is called in Hong Kong, where 中文 usually means Cantonese. In Taiwan people say 中文 or 國語 (guóyǔ), so with your coach 我在學中文 is enough",
    "topic": "Introducing yourself",
    "wish": "wish-1791247386488",
-   "order": "在 before a verb = doing it now"
+   "order": "在 before a verb = doing it now",
+   "frames": [
+    "zai-doing"
+   ]
   },
   {
    "id": "zhe-ju-hua-zhongwen-zenme-shuo",
@@ -13452,7 +13761,10 @@
    "note": "這句話 = this sentence (句 counts sentences). The short version does the same job: 這個中文怎麼說？",
    "topic": "Getting by",
    "tier": 2,
-   "order": "The topic first, then 怎麼 + verb"
+   "order": "The topic first, then 怎麼 + verb",
+   "frames": [
+    "zenme-shuo"
+   ]
   },
   {
    "id": "wo-shi-cong-helan-lai-de",
@@ -13724,7 +14036,10 @@
       "en": "two of them"
      }
     ]
-   }
+   },
+   "frames": [
+    "xiang-yao"
+   ]
   },
   {
    "id": "bu-hao-yisi",
@@ -14061,7 +14376,10 @@
    "situation": "You need a moment before answering or ordering.",
    "topic": "Getting by",
    "register": "everyday",
-   "tier": 0
+   "tier": 0,
+   "frames": [
+    "verb-yixia"
+   ]
   },
   {
    "id": "duoshao-qian",
@@ -14387,7 +14705,10 @@
    "topic": "Small talk",
    "wish": "wish-1791506198624",
    "register": "everyday",
-   "order": "Statement + 嗎 = yes/no question"
+   "order": "Statement + 嗎 = yes/no question",
+   "frames": [
+    "ma"
+   ]
   },
   {
    "id": "hai-mei-ne",
@@ -14505,7 +14826,10 @@
    "note": "Tag question after a statement. Answer: 對 (right) or 不對 (not right)",
    "topic": "Small talk",
    "wish": "wish-1791506243442",
-   "register": "everyday"
+   "register": "everyday",
+   "frames": [
+    "a-not-a"
+   ]
   },
   {
    "id": "hao-bu-hao",
@@ -14568,7 +14892,10 @@
    "note": "Goes after a suggestion. Answer: 好 (OK) or 不好 (no)",
    "topic": "Small talk",
    "wish": "wish-1791506251870",
-   "register": "everyday"
+   "register": "everyday",
+   "frames": [
+    "a-not-a"
+   ]
   },
   {
    "id": "bu-keqi",
@@ -14686,7 +15013,11 @@
    "topic": "Getting by",
    "wish": "wish-1791068534984",
    "register": "everyday",
-   "order": "Statement + 嗎 = yes/no question"
+   "order": "Statement + 嗎 = yes/no question",
+   "frames": [
+    "keyi-ma",
+    "ma"
+   ]
   },
   {
    "id": "yue-nei-hou",
@@ -14940,6 +15271,2959 @@
    "topic": "Small talk",
    "register": "everyday",
    "tier": 0
+  },
+  {
+   "id": "yue-gaafe",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "咖啡",
+   "roman": "gaa3-fe1",
+   "en": "coffee",
+   "words": [
+    {
+     "zh": "咖啡",
+     "roman": "gaa3-fe1",
+     "gloss": "coffee",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-gaafe.mp3",
+     "audio/hk-wanlung/yue-gaafe-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-gaafe.mp3",
+     "audio/hk-hiumaan/yue-gaafe-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-gaafe.mp3",
+     "audio/hk-hiugaai/yue-gaafe-slow.mp3"
+    ]
+   },
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "yue-naaicaa",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "奶茶",
+   "roman": "naai5-caa4",
+   "en": "milk tea",
+   "words": [
+    {
+     "zh": "奶茶",
+     "roman": "naai5-caa4",
+     "gloss": "milk tea",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-naaicaa.mp3",
+     "audio/hk-wanlung/yue-naaicaa-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-naaicaa.mp3",
+     "audio/hk-hiumaan/yue-naaicaa-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-naaicaa.mp3",
+     "audio/hk-hiugaai/yue-naaicaa-slow.mp3"
+    ]
+   },
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "yue-jyunjoeng",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "鴛鴦",
+   "roman": "jyun1-joeng1",
+   "en": "yuenyeung (coffee mixed with milk tea)",
+   "words": [
+    {
+     "zh": "鴛鴦",
+     "roman": "jyun1-joeng1",
+     "gloss": "yuenyeung (coffee mixed with milk tea)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-jyunjoeng.mp3",
+     "audio/hk-wanlung/yue-jyunjoeng-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-jyunjoeng.mp3",
+     "audio/hk-hiumaan/yue-jyunjoeng-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-jyunjoeng.mp3",
+     "audio/hk-hiugaai/yue-jyunjoeng-slow.mp3"
+    ]
+   },
+   "note": "Hong Kong's own drink: coffee and milk tea mixed. The name means a pair of mandarin ducks",
+   "cat": [
+    "drink"
+   ],
+   "tier": 0
+  },
+  {
+   "id": "yue-jat-bui-x",
+   "kind": "pattern",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "唔該，一杯___",
+   "roman": "m4-goi1, jat1 bui1 ___",
+   "en": "One ___, please",
+   "fills": [
+    {
+     "fillId": "yue-gaafe",
+     "zh": "唔該，一杯咖啡",
+     "roman": "m4-goi1, jat1 bui1 gaa3-fe1",
+     "en": "One coffee, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "一",
+       "roman": "jat1",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bui1",
+       "gloss": "a cup of (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "咖啡",
+       "roman": "gaa3-fe1",
+       "gloss": "coffee",
+       "script": "hk"
+      }
+     ],
+     "situation": "You're at the counter and order a drink. (coffee)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-jat-bui-x--yue-gaafe.mp3",
+       "audio/hk-wanlung/yue-jat-bui-x--yue-gaafe-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-gaafe.mp3",
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-gaafe-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-gaafe.mp3",
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-gaafe-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-naaicaa",
+     "zh": "唔該，一杯奶茶",
+     "roman": "m4-goi1, jat1 bui1 naai5-caa4",
+     "en": "One milk tea, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "一",
+       "roman": "jat1",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bui1",
+       "gloss": "a cup of (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "奶茶",
+       "roman": "naai5-caa4",
+       "gloss": "milk tea",
+       "script": "hk"
+      }
+     ],
+     "situation": "You're at the counter and order a drink. (milk tea)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-jat-bui-x--yue-naaicaa.mp3",
+       "audio/hk-wanlung/yue-jat-bui-x--yue-naaicaa-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-naaicaa.mp3",
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-naaicaa-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-naaicaa.mp3",
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-naaicaa-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-jyunjoeng",
+     "zh": "唔該，一杯鴛鴦",
+     "roman": "m4-goi1, jat1 bui1 jyun1-joeng1",
+     "en": "One yuenyeung (coffee mixed with milk tea), please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "一",
+       "roman": "jat1",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bui1",
+       "gloss": "a cup of (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "鴛鴦",
+       "roman": "jyun1-joeng1",
+       "gloss": "yuenyeung (coffee mixed with milk tea)",
+       "script": "hk"
+      }
+     ],
+     "situation": "You're at the counter and order a drink. (yuenyeung (coffee mixed with milk tea))",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-jat-bui-x--yue-jyunjoeng.mp3",
+       "audio/hk-wanlung/yue-jat-bui-x--yue-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-jyunjoeng.mp3",
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-jyunjoeng.mp3",
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-jyunjoeng-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-dung-naaicaa",
+     "zh": "唔該，一杯凍奶茶",
+     "roman": "m4-goi1, jat1 bui1 dung3 naai5-caa4",
+     "en": "One iced milk tea, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "一",
+       "roman": "jat1",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bui1",
+       "gloss": "a cup of (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "凍",
+       "roman": "dung3",
+       "gloss": "cold, iced",
+       "script": "hk"
+      },
+      {
+       "zh": "奶茶",
+       "roman": "naai5-caa4",
+       "gloss": "milk tea",
+       "script": "hk"
+      }
+     ],
+     "situation": "You're at the counter and order a drink. (iced milk tea)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-jat-bui-x--yue-dung-naaicaa.mp3",
+       "audio/hk-wanlung/yue-jat-bui-x--yue-dung-naaicaa-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-dung-naaicaa.mp3",
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-dung-naaicaa-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-dung-naaicaa.mp3",
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-dung-naaicaa-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-jit-naaicaa",
+     "zh": "唔該，一杯熱奶茶",
+     "roman": "m4-goi1, jat1 bui1 jit6 naai5-caa4",
+     "en": "One hot milk tea, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "一",
+       "roman": "jat1",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bui1",
+       "gloss": "a cup of (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "熱",
+       "roman": "jit6",
+       "gloss": "hot",
+       "script": "hk"
+      },
+      {
+       "zh": "奶茶",
+       "roman": "naai5-caa4",
+       "gloss": "milk tea",
+       "script": "hk"
+      }
+     ],
+     "situation": "You're at the counter and order a drink. (hot milk tea)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-jat-bui-x--yue-jit-naaicaa.mp3",
+       "audio/hk-wanlung/yue-jat-bui-x--yue-jit-naaicaa-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-jit-naaicaa.mp3",
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-jit-naaicaa-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-jit-naaicaa.mp3",
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-jit-naaicaa-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-dung-jyunjoeng",
+     "zh": "唔該，一杯凍鴛鴦",
+     "roman": "m4-goi1, jat1 bui1 dung3 jyun1-joeng1",
+     "en": "One iced yuenyeung, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "一",
+       "roman": "jat1",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bui1",
+       "gloss": "a cup of (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "凍",
+       "roman": "dung3",
+       "gloss": "cold, iced",
+       "script": "hk"
+      },
+      {
+       "zh": "鴛鴦",
+       "roman": "jyun1-joeng1",
+       "gloss": "yuenyeung (coffee mixed with milk tea)",
+       "script": "hk"
+      }
+     ],
+     "situation": "You're at the counter and order a drink. (iced yuenyeung)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-jat-bui-x--yue-dung-jyunjoeng.mp3",
+       "audio/hk-wanlung/yue-jat-bui-x--yue-dung-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-dung-jyunjoeng.mp3",
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-dung-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-dung-jyunjoeng.mp3",
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-dung-jyunjoeng-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-dung-ningcaa",
+     "zh": "唔該，一杯凍檸茶",
+     "roman": "m4-goi1, jat1 bui1 dung3 ning4-caa4",
+     "en": "One iced lemon tea, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "一",
+       "roman": "jat1",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bui1",
+       "gloss": "a cup of (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "凍",
+       "roman": "dung3",
+       "gloss": "cold, iced",
+       "script": "hk"
+      },
+      {
+       "zh": "檸茶",
+       "roman": "ning4-caa4",
+       "gloss": "lemon tea",
+       "script": "hk"
+      }
+     ],
+     "situation": "You're at the counter and order a drink. (iced lemon tea)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-jat-bui-x--yue-dung-ningcaa.mp3",
+       "audio/hk-wanlung/yue-jat-bui-x--yue-dung-ningcaa-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-dung-ningcaa.mp3",
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-dung-ningcaa-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-dung-ningcaa.mp3",
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-dung-ningcaa-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-zaaife",
+     "zh": "唔該，一杯齋啡",
+     "roman": "m4-goi1, jat1 bui1 zaai1-fe1",
+     "en": "One black coffee, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "一",
+       "roman": "jat1",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bui1",
+       "gloss": "a cup of (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "齋啡",
+       "roman": "zaai1-fe1",
+       "gloss": "black coffee",
+       "script": "hk"
+      }
+     ],
+     "situation": "You're at the counter and order a drink. (black coffee)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-jat-bui-x--yue-zaaife.mp3",
+       "audio/hk-wanlung/yue-jat-bui-x--yue-zaaife-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-zaaife.mp3",
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-zaaife-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-zaaife.mp3",
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-zaaife-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-jit-gaafe",
+     "zh": "唔該，一杯熱咖啡",
+     "roman": "m4-goi1, jat1 bui1 jit6 gaa3-fe1",
+     "en": "One hot coffee, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "一",
+       "roman": "jat1",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bui1",
+       "gloss": "a cup of (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "熱",
+       "roman": "jit6",
+       "gloss": "hot",
+       "script": "hk"
+      },
+      {
+       "zh": "咖啡",
+       "roman": "gaa3-fe1",
+       "gloss": "coffee",
+       "script": "hk"
+      }
+     ],
+     "situation": "You're at the counter and order a drink. (hot coffee)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-jat-bui-x--yue-jit-gaafe.mp3",
+       "audio/hk-wanlung/yue-jat-bui-x--yue-jit-gaafe-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-jit-gaafe.mp3",
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-jit-gaafe-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-jit-gaafe.mp3",
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-jit-gaafe-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-bezau",
+     "zh": "唔該，一杯啤酒",
+     "roman": "m4-goi1, jat1 bui1 be1-zau2",
+     "en": "One beer, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "一",
+       "roman": "jat1",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bui1",
+       "gloss": "a cup of (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "啤酒",
+       "roman": "be1-zau2",
+       "gloss": "beer",
+       "script": "hk"
+      }
+     ],
+     "situation": "You're at the counter and order a drink. (beer)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-jat-bui-x--yue-bezau.mp3",
+       "audio/hk-wanlung/yue-jat-bui-x--yue-bezau-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-bezau.mp3",
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-bezau-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-bezau.mp3",
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-bezau-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-seoi",
+     "zh": "唔該，一杯水",
+     "roman": "m4-goi1, jat1 bui1 seoi2",
+     "en": "One water, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "一",
+       "roman": "jat1",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bui1",
+       "gloss": "a cup of (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "水",
+       "roman": "seoi2",
+       "gloss": "water",
+       "script": "hk"
+      }
+     ],
+     "situation": "You're at the counter and order a drink. (water)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-jat-bui-x--yue-seoi.mp3",
+       "audio/hk-wanlung/yue-jat-bui-x--yue-seoi-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-seoi.mp3",
+       "audio/hk-hiumaan/yue-jat-bui-x--yue-seoi-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-seoi.mp3",
+       "audio/hk-hiugaai/yue-jat-bui-x--yue-seoi-slow.mp3"
+      ]
+     }
+    }
+   ],
+   "situation": "You're at the counter and order a drink. (___)",
+   "note": "杯 = cup: 一杯 = one (cup of). The easiest way to order anything to drink",
+   "topic": "Food & drink",
+   "register": "everyday",
+   "tier": 0,
+   "order": "Number + measure word + thing"
+  },
+  {
+   "id": "yue-jit",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "熱",
+   "roman": "jit6",
+   "en": "hot",
+   "words": [
+    {
+     "zh": "熱",
+     "roman": "jit6",
+     "gloss": "hot",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-jit.mp3",
+     "audio/hk-wanlung/yue-jit-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-jit.mp3",
+     "audio/hk-hiumaan/yue-jit-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-jit.mp3",
+     "audio/hk-hiugaai/yue-jit-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "yue-dung",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "凍",
+   "roman": "dung3",
+   "en": "cold, iced",
+   "words": [
+    {
+     "zh": "凍",
+     "roman": "dung3",
+     "gloss": "cold, iced",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-dung.mp3",
+     "audio/hk-wanlung/yue-dung-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-dung.mp3",
+     "audio/hk-hiumaan/yue-dung-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-dung.mp3",
+     "audio/hk-hiugaai/yue-dung-slow.mp3"
+    ]
+   },
+   "note": "Drinks are ordered 熱 or 凍: 凍奶茶, 熱咖啡"
+  },
+  {
+   "id": "yue-jiu-jit-ding-dung",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "要熱定凍？",
+   "roman": "jiu3 jit6 ding6 dung3?",
+   "en": "Hot or iced? (they ask you)",
+   "words": [
+    {
+     "zh": "要",
+     "roman": "jiu3",
+     "gloss": "to want",
+     "script": "hk"
+    },
+    {
+     "zh": "熱",
+     "roman": "jit6",
+     "gloss": "hot",
+     "script": "hk"
+    },
+    {
+     "zh": "定",
+     "roman": "ding6",
+     "gloss": "or (in a question)",
+     "script": "hk"
+    },
+    {
+     "zh": "凍",
+     "roman": "dung3",
+     "gloss": "cold, iced",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-jiu-jit-ding-dung.mp3",
+     "audio/hk-wanlung/yue-jiu-jit-ding-dung-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-jiu-jit-ding-dung.mp3",
+     "audio/hk-hiumaan/yue-jiu-jit-ding-dung-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-jiu-jit-ding-dung.mp3",
+     "audio/hk-hiugaai/yue-jiu-jit-ding-dung-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-jiu-jit-ding-dung--1.mp3",
+    "2": "audio/chunks/yue-jiu-jit-ding-dung--2.mp3",
+    "3": "audio/chunks/yue-jiu-jit-ding-dung--3.mp3"
+   },
+   "situation": "The person at the counter asks how you want it.",
+   "note": "定 = or, in a question. Answer with one of the two: 熱嘅 or 凍嘅",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-jit-ge",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "熱嘅",
+   "roman": "jit6 ge3",
+   "en": "Hot, please (the hot one)",
+   "words": [
+    {
+     "zh": "熱",
+     "roman": "jit6",
+     "gloss": "hot",
+     "script": "hk"
+    },
+    {
+     "zh": "嘅",
+     "roman": "ge3",
+     "gloss": "the … one ('s)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-jit-ge.mp3",
+     "audio/hk-wanlung/yue-jit-ge-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-jit-ge.mp3",
+     "audio/hk-hiumaan/yue-jit-ge-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-jit-ge.mp3",
+     "audio/hk-hiugaai/yue-jit-ge-slow.mp3"
+    ]
+   },
+   "situation": "They ask hot or iced; you want it hot.",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-dung-ge",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "凍嘅",
+   "roman": "dung3 ge3",
+   "en": "Iced, please (the cold one)",
+   "words": [
+    {
+     "zh": "凍",
+     "roman": "dung3",
+     "gloss": "cold, iced",
+     "script": "hk"
+    },
+    {
+     "zh": "嘅",
+     "roman": "ge3",
+     "gloss": "the … one ('s)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-dung-ge.mp3",
+     "audio/hk-wanlung/yue-dung-ge-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-dung-ge.mp3",
+     "audio/hk-hiumaan/yue-dung-ge-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-dung-ge.mp3",
+     "audio/hk-hiugaai/yue-dung-ge-slow.mp3"
+    ]
+   },
+   "situation": "They ask hot or iced; you want it cold.",
+   "note": "嘅 = the … one: 凍嘅 = the cold one",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-dung-naaicaa",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "凍奶茶",
+   "roman": "dung3 naai5-caa4",
+   "en": "iced milk tea",
+   "words": [
+    {
+     "zh": "凍",
+     "roman": "dung3",
+     "gloss": "cold, iced",
+     "script": "hk"
+    },
+    {
+     "zh": "奶茶",
+     "roman": "naai5-caa4",
+     "gloss": "milk tea",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-dung-naaicaa.mp3",
+     "audio/hk-wanlung/yue-dung-naaicaa-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-dung-naaicaa.mp3",
+     "audio/hk-hiumaan/yue-dung-naaicaa-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-dung-naaicaa.mp3",
+     "audio/hk-hiugaai/yue-dung-naaicaa-slow.mp3"
+    ]
+   },
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "yue-jit-naaicaa",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "熱奶茶",
+   "roman": "jit6 naai5-caa4",
+   "en": "hot milk tea",
+   "words": [
+    {
+     "zh": "熱",
+     "roman": "jit6",
+     "gloss": "hot",
+     "script": "hk"
+    },
+    {
+     "zh": "奶茶",
+     "roman": "naai5-caa4",
+     "gloss": "milk tea",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-jit-naaicaa.mp3",
+     "audio/hk-wanlung/yue-jit-naaicaa-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-jit-naaicaa.mp3",
+     "audio/hk-hiumaan/yue-jit-naaicaa-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-jit-naaicaa.mp3",
+     "audio/hk-hiugaai/yue-jit-naaicaa-slow.mp3"
+    ]
+   },
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "yue-dung-jyunjoeng",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "凍鴛鴦",
+   "roman": "dung3 jyun1-joeng1",
+   "en": "iced yuenyeung",
+   "words": [
+    {
+     "zh": "凍",
+     "roman": "dung3",
+     "gloss": "cold, iced",
+     "script": "hk"
+    },
+    {
+     "zh": "鴛鴦",
+     "roman": "jyun1-joeng1",
+     "gloss": "yuenyeung (coffee mixed with milk tea)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-dung-jyunjoeng.mp3",
+     "audio/hk-wanlung/yue-dung-jyunjoeng-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-dung-jyunjoeng.mp3",
+     "audio/hk-hiumaan/yue-dung-jyunjoeng-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-dung-jyunjoeng.mp3",
+     "audio/hk-hiugaai/yue-dung-jyunjoeng-slow.mp3"
+    ]
+   },
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "yue-dung-ningcaa",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "凍檸茶",
+   "roman": "dung3 ning4-caa4",
+   "en": "iced lemon tea",
+   "words": [
+    {
+     "zh": "凍",
+     "roman": "dung3",
+     "gloss": "cold, iced",
+     "script": "hk"
+    },
+    {
+     "zh": "檸茶",
+     "roman": "ning4-caa4",
+     "gloss": "lemon tea",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-dung-ningcaa.mp3",
+     "audio/hk-wanlung/yue-dung-ningcaa-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-dung-ningcaa.mp3",
+     "audio/hk-hiumaan/yue-dung-ningcaa-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-dung-ningcaa.mp3",
+     "audio/hk-hiugaai/yue-dung-ningcaa-slow.mp3"
+    ]
+   },
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "yue-zaaife",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "齋啡",
+   "roman": "zaai1-fe1",
+   "en": "black coffee",
+   "words": [
+    {
+     "zh": "齋啡",
+     "roman": "zaai1-fe1",
+     "gloss": "black coffee",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-zaaife.mp3",
+     "audio/hk-wanlung/yue-zaaife-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-zaaife.mp3",
+     "audio/hk-hiumaan/yue-zaaife-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-zaaife.mp3",
+     "audio/hk-hiugaai/yue-zaaife-slow.mp3"
+    ]
+   },
+   "note": "齋 = plain, nothing added",
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "yue-jit-gaafe",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "熱咖啡",
+   "roman": "jit6 gaa3-fe1",
+   "en": "hot coffee",
+   "words": [
+    {
+     "zh": "熱",
+     "roman": "jit6",
+     "gloss": "hot",
+     "script": "hk"
+    },
+    {
+     "zh": "咖啡",
+     "roman": "gaa3-fe1",
+     "gloss": "coffee",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-jit-gaafe.mp3",
+     "audio/hk-wanlung/yue-jit-gaafe-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-jit-gaafe.mp3",
+     "audio/hk-hiumaan/yue-jit-gaafe-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-jit-gaafe.mp3",
+     "audio/hk-hiugaai/yue-jit-gaafe-slow.mp3"
+    ]
+   },
+   "cat": [
+    "drink"
+   ]
+  },
+  {
+   "id": "yue-zau-bing",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "走冰",
+   "roman": "zau2 bing1",
+   "en": "No ice",
+   "words": [
+    {
+     "zh": "走",
+     "roman": "zau2",
+     "gloss": "without (literally: to leave out)",
+     "script": "hk"
+    },
+    {
+     "zh": "冰",
+     "roman": "bing1",
+     "gloss": "ice",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-zau-bing.mp3",
+     "audio/hk-wanlung/yue-zau-bing-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-zau-bing.mp3",
+     "audio/hk-hiumaan/yue-zau-bing-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-zau-bing.mp3",
+     "audio/hk-hiugaai/yue-zau-bing-slow.mp3"
+    ]
+   },
+   "situation": "You want your cold drink without ice.",
+   "topic": "Food & drink"
+  },
+  {
+   "id": "yue-siu-bing",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "少冰",
+   "roman": "siu2 bing1",
+   "en": "Less ice",
+   "words": [
+    {
+     "zh": "少",
+     "roman": "siu2",
+     "gloss": "less",
+     "script": "hk"
+    },
+    {
+     "zh": "冰",
+     "roman": "bing1",
+     "gloss": "ice",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-siu-bing.mp3",
+     "audio/hk-wanlung/yue-siu-bing-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-siu-bing.mp3",
+     "audio/hk-hiumaan/yue-siu-bing-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-siu-bing.mp3",
+     "audio/hk-hiugaai/yue-siu-bing-slow.mp3"
+    ]
+   },
+   "note": "少 = less; 走 = without: 走冰 = no ice",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-siu-tim",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "少甜",
+   "roman": "siu2 tim4",
+   "en": "Less sweet",
+   "words": [
+    {
+     "zh": "少",
+     "roman": "siu2",
+     "gloss": "less",
+     "script": "hk"
+    },
+    {
+     "zh": "甜",
+     "roman": "tim4",
+     "gloss": "sweet",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-siu-tim.mp3",
+     "audio/hk-wanlung/yue-siu-tim-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-siu-tim.mp3",
+     "audio/hk-hiumaan/yue-siu-tim-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-siu-tim.mp3",
+     "audio/hk-hiugaai/yue-siu-tim-slow.mp3"
+    ]
+   },
+   "situation": "Your milk tea is always too sweet.",
+   "topic": "Food & drink"
+  },
+  {
+   "id": "yue-tongsik-ding-lingzau",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "堂食定拎走？",
+   "roman": "tong4-sik6 ding6 ling1-zau2?",
+   "en": "Eat in or take away? (they ask you)",
+   "words": [
+    {
+     "zh": "堂食",
+     "roman": "tong4-sik6",
+     "gloss": "eat in (at the shop)",
+     "script": "hk"
+    },
+    {
+     "zh": "定",
+     "roman": "ding6",
+     "gloss": "or (in a question)",
+     "script": "hk"
+    },
+    {
+     "zh": "拎走",
+     "roman": "ling1-zau2",
+     "gloss": "take away, to go",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-tongsik-ding-lingzau.mp3",
+     "audio/hk-wanlung/yue-tongsik-ding-lingzau-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-tongsik-ding-lingzau.mp3",
+     "audio/hk-hiumaan/yue-tongsik-ding-lingzau-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-tongsik-ding-lingzau.mp3",
+     "audio/hk-hiugaai/yue-tongsik-ding-lingzau-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-tongsik-ding-lingzau--1.mp3",
+    "2": "audio/chunks/yue-tongsik-ding-lingzau--2.mp3"
+   },
+   "situation": "After you order, they ask if you're staying.",
+   "note": "堂食 = eat in the shop; 定 = or. Answer 喺度食 or 拎走",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-hai-dou-sik",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "喺度食",
+   "roman": "hai2-dou6 sik6",
+   "en": "Eating here",
+   "words": [
+    {
+     "zh": "喺度",
+     "roman": "hai2-dou6",
+     "gloss": "here",
+     "script": "hk"
+    },
+    {
+     "zh": "食",
+     "roman": "sik6",
+     "gloss": "to eat",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-hai-dou-sik.mp3",
+     "audio/hk-wanlung/yue-hai-dou-sik-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-hai-dou-sik.mp3",
+     "audio/hk-hiumaan/yue-hai-dou-sik-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-hai-dou-sik.mp3",
+     "audio/hk-hiugaai/yue-hai-dou-sik-slow.mp3"
+    ]
+   },
+   "situation": "At the counter they ask: here or takeaway? You're staying.",
+   "note": "The counter asks 喺度食定拎走？ (here or to go?)",
+   "topic": "Food & drink"
+  },
+  {
+   "id": "yue-ling-zau",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "拎走",
+   "roman": "ling1-zau2",
+   "en": "Takeaway (to go)",
+   "words": [
+    {
+     "zh": "拎走",
+     "roman": "ling1-zau2",
+     "gloss": "Takeaway (to go)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-ling-zau.mp3",
+     "audio/hk-wanlung/yue-ling-zau-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-ling-zau.mp3",
+     "audio/hk-hiumaan/yue-ling-zau-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-ling-zau.mp3",
+     "audio/hk-hiugaai/yue-ling-zau-slow.mp3"
+    ]
+   },
+   "situation": "At the counter they ask: here or takeaway? You're taking it with you.",
+   "topic": "Food & drink"
+  },
+  {
+   "id": "yue-gei-do-cin",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "幾多錢？",
+   "roman": "gei2-do1 cin2?",
+   "en": "How much is it?",
+   "words": [
+    {
+     "zh": "幾多",
+     "roman": "gei2-do1",
+     "gloss": "how much, how many",
+     "script": "hk"
+    },
+    {
+     "zh": "錢",
+     "roman": "cin2",
+     "gloss": "money",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-gei-do-cin.mp3",
+     "audio/hk-wanlung/yue-gei-do-cin-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-gei-do-cin.mp3",
+     "audio/hk-hiumaan/yue-gei-do-cin-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-gei-do-cin.mp3",
+     "audio/hk-hiugaai/yue-gei-do-cin-slow.mp3"
+    ]
+   },
+   "situation": "You want to know the price at a market stall.",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-ho-m-ho-ji-jung-baatdaattung",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "可唔可以用八達通？",
+   "roman": "ho2 m4 ho2-ji5 jung6 Baat3-daat6-tung1?",
+   "en": "Can I pay with Octopus?",
+   "words": [
+    {
+     "zh": "可",
+     "roman": "ho2",
+     "gloss": "can (in 可唔可以)",
+     "script": "hk"
+    },
+    {
+     "zh": "唔",
+     "roman": "m4",
+     "gloss": "not",
+     "script": "hk"
+    },
+    {
+     "zh": "可以",
+     "roman": "ho2-ji5",
+     "gloss": "can, may",
+     "script": "hk"
+    },
+    {
+     "zh": "用",
+     "roman": "jung6",
+     "gloss": "to use; with",
+     "script": "hk"
+    },
+    {
+     "zh": "八達通",
+     "roman": "Baat3-daat6-tung1",
+     "gloss": "Octopus card",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-ho-m-ho-ji-jung-baatdaattung.mp3",
+     "audio/hk-wanlung/yue-ho-m-ho-ji-jung-baatdaattung-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-ho-m-ho-ji-jung-baatdaattung.mp3",
+     "audio/hk-hiumaan/yue-ho-m-ho-ji-jung-baatdaattung-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-ho-m-ho-ji-jung-baatdaattung.mp3",
+     "audio/hk-hiugaai/yue-ho-m-ho-ji-jung-baatdaattung-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-ho-m-ho-ji-jung-baatdaattung--1.mp3",
+    "2": "audio/chunks/yue-ho-m-ho-ji-jung-baatdaattung--2.mp3",
+    "3": "audio/chunks/yue-ho-m-ho-ji-jung-baatdaattung--3.mp3",
+    "4": "audio/chunks/yue-ho-m-ho-ji-jung-baatdaattung--4.mp3"
+   },
+   "situation": "You want to pay with your Octopus card.",
+   "note": "可唔可以 = can or can't (yes/no question). 用 = use, before what you do with it",
+   "topic": "Food & drink",
+   "register": "everyday",
+   "order": "Verb + 唔 + verb = yes/no question"
+  },
+  {
+   "id": "yue-nigo-hai-me-lai-gaa",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "呢個係咩嚟㗎？",
+   "roman": "ni1-go3 hai6 me1 lai4 gaa3?",
+   "en": "What is this?",
+   "words": [
+    {
+     "zh": "呢個",
+     "roman": "ni1-go3",
+     "gloss": "this one",
+     "script": "hk"
+    },
+    {
+     "zh": "係",
+     "roman": "hai6",
+     "gloss": "yes; to be",
+     "script": "hk"
+    },
+    {
+     "zh": "咩",
+     "roman": "me1",
+     "gloss": "what",
+     "script": "hk"
+    },
+    {
+     "zh": "嚟",
+     "roman": "lai4",
+     "gloss": "to come",
+     "script": "hk"
+    },
+    {
+     "zh": "㗎",
+     "roman": "gaa3",
+     "gloss": "(sentence particle, softens a question)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-nigo-hai-me-lai-gaa.mp3",
+     "audio/hk-wanlung/yue-nigo-hai-me-lai-gaa-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-nigo-hai-me-lai-gaa.mp3",
+     "audio/hk-hiumaan/yue-nigo-hai-me-lai-gaa-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-nigo-hai-me-lai-gaa.mp3",
+     "audio/hk-hiugaai/yue-nigo-hai-me-lai-gaa-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-nigo-hai-me-lai-gaa--1.mp3",
+    "2": "audio/chunks/yue-nigo-hai-me-lai-gaa--2.mp3",
+    "3": "audio/chunks/yue-nigo-hai-me-lai-gaa--3.mp3",
+    "4": "audio/chunks/yue-nigo-hai-me-lai-gaa--4.mp3"
+   },
+   "situation": "You point at something on the menu or in the display.",
+   "note": "咩 = what. Point at it while you ask",
+   "topic": "Food & drink",
+   "register": "everyday",
+   "order": "The question word sits where the answer will go"
+  },
+  {
+   "id": "yue-nigo",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "呢個",
+   "roman": "ni1-go3",
+   "en": "this one",
+   "words": [
+    {
+     "zh": "呢個",
+     "roman": "ni1-go3",
+     "gloss": "this one",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-nigo.mp3",
+     "audio/hk-wanlung/yue-nigo-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-nigo.mp3",
+     "audio/hk-hiumaan/yue-nigo-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-nigo.mp3",
+     "audio/hk-hiugaai/yue-nigo-slow.mp3"
+    ]
+   }
+  },
+  {
+   "id": "yue-ngo-jiu-nigo",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "我要呢個",
+   "roman": "ngo5 jiu3 ni1-go3",
+   "en": "I'll have this one (ordering)",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "ngo5",
+     "gloss": "I / me",
+     "script": "hk"
+    },
+    {
+     "zh": "要",
+     "roman": "jiu3",
+     "gloss": "to want",
+     "script": "hk"
+    },
+    {
+     "zh": "呢個",
+     "roman": "ni1-go3",
+     "gloss": "this one",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-ngo-jiu-nigo.mp3",
+     "audio/hk-wanlung/yue-ngo-jiu-nigo-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-ngo-jiu-nigo.mp3",
+     "audio/hk-hiumaan/yue-ngo-jiu-nigo-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-ngo-jiu-nigo.mp3",
+     "audio/hk-hiugaai/yue-ngo-jiu-nigo-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-ngo-jiu-nigo--1.mp3",
+    "2": "audio/chunks/yue-ngo-jiu-nigo--2.mp3"
+   },
+   "situation": "You point at the dish you want.",
+   "note": "The normal way to order: point and say it. Add 唔該 to be friendly",
+   "topic": "Food & drink",
+   "wish": "wish-1790803319538",
+   "register": "everyday",
+   "swap": {
+    "word": "呢個",
+    "with": [
+     {
+      "zh": "嗰個",
+      "roman": "go2-go3",
+      "en": "that one"
+     },
+     {
+      "zh": "凍奶茶",
+      "roman": "dung3 naai5-caa4",
+      "en": "iced milk tea"
+     },
+     {
+      "zh": "熱咖啡",
+      "roman": "jit6 gaa3-fe1",
+      "en": "hot coffee"
+     }
+    ]
+   }
+  },
+  {
+   "id": "yue-zau-gam-do",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "就咁多",
+   "roman": "zau6 gam3 do1",
+   "en": "That's all (nothing else)",
+   "words": [
+    {
+     "zh": "就",
+     "roman": "zau6",
+     "gloss": "just, then",
+     "script": "hk"
+    },
+    {
+     "zh": "咁",
+     "roman": "gam3",
+     "gloss": "so, this (much)",
+     "script": "hk"
+    },
+    {
+     "zh": "多",
+     "roman": "do1",
+     "gloss": "more (講多次 = say it once more)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-zau-gam-do.mp3",
+     "audio/hk-wanlung/yue-zau-gam-do-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-zau-gam-do.mp3",
+     "audio/hk-hiumaan/yue-zau-gam-do-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-zau-gam-do.mp3",
+     "audio/hk-hiugaai/yue-zau-gam-do-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-zau-gam-do--1.mp3",
+    "2": "audio/chunks/yue-zau-gam-do--2.mp3"
+   },
+   "situation": "They ask if you want anything else.",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-m-goi-saai",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At the café",
+   "zh": "唔該晒",
+   "roman": "m4-goi1 saai3",
+   "en": "Thanks a lot (for a service)",
+   "words": [
+    {
+     "zh": "唔該",
+     "roman": "m4-goi1",
+     "gloss": "please; thanks",
+     "script": "hk"
+    },
+    {
+     "zh": "晒",
+     "roman": "saai3",
+     "gloss": "completely (唔該晒 = thanks a lot)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-m-goi-saai.mp3",
+     "audio/hk-wanlung/yue-m-goi-saai-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-m-goi-saai.mp3",
+     "audio/hk-hiumaan/yue-m-goi-saai-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-m-goi-saai.mp3",
+     "audio/hk-hiugaai/yue-m-goi-saai-slow.mp3"
+    ]
+   },
+   "situation": "The waiter brings your food.",
+   "note": "晒 saai3 makes it warmer: say it when the food arrives or as you leave",
+   "topic": "Food & drink"
+  },
+  {
+   "id": "yue-gei-do-wai",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "幾多位？",
+   "roman": "gei2-do1 wai2?",
+   "en": "How many people? (they ask you)",
+   "words": [
+    {
+     "zh": "幾多",
+     "roman": "gei2-do1",
+     "gloss": "how much, how many",
+     "script": "hk"
+    },
+    {
+     "zh": "位",
+     "roman": "wai2",
+     "gloss": "(polite measure word for people)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-gei-do-wai.mp3",
+     "audio/hk-wanlung/yue-gei-do-wai-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-gei-do-wai.mp3",
+     "audio/hk-hiumaan/yue-gei-do-wai-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-gei-do-wai.mp3",
+     "audio/hk-hiugaai/yue-gei-do-wai-slow.mp3"
+    ]
+   },
+   "situation": "You walk into a restaurant and a waiter comes up.",
+   "note": "位 = (polite) person. Answer with a number + 位",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-jat-wai",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "一位",
+   "roman": "jat1 wai2",
+   "en": "Just one (a table for one)",
+   "words": [
+    {
+     "zh": "一",
+     "roman": "jat1",
+     "gloss": "one",
+     "script": "hk"
+    },
+    {
+     "zh": "位",
+     "roman": "wai2",
+     "gloss": "(polite measure word for people)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-jat-wai.mp3",
+     "audio/hk-wanlung/yue-jat-wai-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-jat-wai.mp3",
+     "audio/hk-hiumaan/yue-jat-wai-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-jat-wai.mp3",
+     "audio/hk-hiugaai/yue-jat-wai-slow.mp3"
+    ]
+   },
+   "situation": "The waiter asks how many you are; you're alone.",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-loeng-wai",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "兩位",
+   "roman": "loeng5 wai2",
+   "en": "Two people (a table for two)",
+   "words": [
+    {
+     "zh": "兩",
+     "roman": "loeng5",
+     "gloss": "two (of something)",
+     "script": "hk"
+    },
+    {
+     "zh": "位",
+     "roman": "wai2",
+     "gloss": "(polite measure word for people)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-loeng-wai.mp3",
+     "audio/hk-wanlung/yue-loeng-wai-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-loeng-wai.mp3",
+     "audio/hk-hiumaan/yue-loeng-wai-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-loeng-wai.mp3",
+     "audio/hk-hiugaai/yue-loeng-wai-slow.mp3"
+    ]
+   },
+   "situation": "The host at the door asks how many you are, and there are two of you.",
+   "note": "位 wai2 counts people politely. One person: 一位 jat1 wai2",
+   "topic": "Food & drink"
+  },
+  {
+   "id": "yue-daap-toi",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "搭枱得唔得？",
+   "roman": "daap3 toi2 dak1 m4 dak1?",
+   "en": "OK to share a table? (they ask you)",
+   "words": [
+    {
+     "zh": "搭",
+     "roman": "daap3",
+     "gloss": "to share (a table); to take (transport)",
+     "script": "hk"
+    },
+    {
+     "zh": "枱",
+     "roman": "toi2",
+     "gloss": "table",
+     "script": "hk"
+    },
+    {
+     "zh": "得",
+     "roman": "dak1",
+     "gloss": "OK, can do",
+     "script": "hk"
+    },
+    {
+     "zh": "唔",
+     "roman": "m4",
+     "gloss": "not",
+     "script": "hk"
+    },
+    {
+     "zh": "得",
+     "roman": "dak1",
+     "gloss": "OK, can do",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-daap-toi.mp3",
+     "audio/hk-wanlung/yue-daap-toi-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-daap-toi.mp3",
+     "audio/hk-hiumaan/yue-daap-toi-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-daap-toi.mp3",
+     "audio/hk-hiugaai/yue-daap-toi-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-daap-toi--1.mp3",
+    "2": "audio/chunks/yue-daap-toi--2.mp3",
+    "3": "audio/chunks/yue-daap-toi--3.mp3",
+    "4": "audio/chunks/yue-daap-toi--4.mp3"
+   },
+   "situation": "It's busy and the waiter wants to seat you with strangers.",
+   "note": "Normal in a busy cha chaan teng. 得 = OK",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-dak",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "得",
+   "roman": "dak1",
+   "en": "OK, sure (that works)",
+   "words": [
+    {
+     "zh": "得",
+     "roman": "dak1",
+     "gloss": "OK, sure (that works)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-dak.mp3",
+     "audio/hk-wanlung/yue-dak-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-dak.mp3",
+     "audio/hk-hiumaan/yue-dak-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-dak.mp3",
+     "audio/hk-hiugaai/yue-dak-slow.mp3"
+    ]
+   },
+   "situation": "Someone asks if something is OK; it is.",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-m-goi-lok-daan",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "唔該，落單",
+   "roman": "m4-goi1, lok6-daan1",
+   "en": "Excuse me, we'd like to order",
+   "words": [
+    {
+     "zh": "唔該",
+     "roman": "m4-goi1",
+     "gloss": "please; thanks",
+     "script": "hk"
+    },
+    {
+     "zh": "落單",
+     "roman": "lok6-daan1",
+     "gloss": "to place an order",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-m-goi-lok-daan.mp3",
+     "audio/hk-wanlung/yue-m-goi-lok-daan-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-m-goi-lok-daan.mp3",
+     "audio/hk-hiumaan/yue-m-goi-lok-daan-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-m-goi-lok-daan.mp3",
+     "audio/hk-hiugaai/yue-m-goi-lok-daan-slow.mp3"
+    ]
+   },
+   "situation": "You know what you want and need the waiter to come over.",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-jau-me-hou-gaaisiu",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "有咩好介紹？",
+   "roman": "jau5 me1 hou2 gaai3-siu6?",
+   "en": "What do you recommend?",
+   "words": [
+    {
+     "zh": "有",
+     "roman": "jau5",
+     "gloss": "to have; there is",
+     "script": "hk"
+    },
+    {
+     "zh": "咩",
+     "roman": "me1",
+     "gloss": "what",
+     "script": "hk"
+    },
+    {
+     "zh": "好",
+     "roman": "hou2",
+     "gloss": "good; very; OK",
+     "script": "hk"
+    },
+    {
+     "zh": "介紹",
+     "roman": "gaai3-siu6",
+     "gloss": "to recommend; to introduce",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-jau-me-hou-gaaisiu.mp3",
+     "audio/hk-wanlung/yue-jau-me-hou-gaaisiu-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-jau-me-hou-gaaisiu.mp3",
+     "audio/hk-hiumaan/yue-jau-me-hou-gaaisiu-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-jau-me-hou-gaaisiu.mp3",
+     "audio/hk-hiugaai/yue-jau-me-hou-gaaisiu-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-jau-me-hou-gaaisiu--1.mp3",
+    "2": "audio/chunks/yue-jau-me-hou-gaaisiu--2.mp3",
+    "3": "audio/chunks/yue-jau-me-hou-gaaisiu--3.mp3"
+   },
+   "situation": "You don't know the menu and ask the waiter.",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-jau-mou-jingman-caanpaai",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "有冇英文餐牌？",
+   "roman": "jau5 mou5 Jing1-man2 caan1-paai2?",
+   "en": "Do you have an English menu?",
+   "words": [
+    {
+     "zh": "有",
+     "roman": "jau5",
+     "gloss": "to have; there is",
+     "script": "hk"
+    },
+    {
+     "zh": "冇",
+     "roman": "mou5",
+     "gloss": "not have; there isn't",
+     "script": "hk"
+    },
+    {
+     "zh": "英文",
+     "roman": "Jing1-man2",
+     "gloss": "English (language)",
+     "script": "hk"
+    },
+    {
+     "zh": "餐牌",
+     "roman": "caan1-paai2",
+     "gloss": "menu",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-jau-mou-jingman-caanpaai.mp3",
+     "audio/hk-wanlung/yue-jau-mou-jingman-caanpaai-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-jau-mou-jingman-caanpaai.mp3",
+     "audio/hk-hiumaan/yue-jau-mou-jingman-caanpaai-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-jau-mou-jingman-caanpaai.mp3",
+     "audio/hk-hiugaai/yue-jau-mou-jingman-caanpaai-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-jau-mou-jingman-caanpaai--1.mp3",
+    "2": "audio/chunks/yue-jau-mou-jingman-caanpaai--2.mp3",
+    "3": "audio/chunks/yue-jau-mou-jingman-caanpaai--3.mp3"
+   },
+   "situation": "The menu is all in Chinese.",
+   "note": "有冇 (have / not have) = do you have…?",
+   "topic": "Food & drink",
+   "order": "有冇 (have or not) = do you have…?"
+  },
+  {
+   "id": "yue-caan-daan-min",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "餐蛋麵",
+   "roman": "caan1-daan2 min6",
+   "en": "luncheon meat and egg noodles",
+   "words": [
+    {
+     "zh": "餐蛋",
+     "roman": "caan1-daan2",
+     "gloss": "luncheon meat and egg",
+     "script": "hk"
+    },
+    {
+     "zh": "麵",
+     "roman": "min6",
+     "gloss": "noodles",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-caan-daan-min.mp3",
+     "audio/hk-wanlung/yue-caan-daan-min-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-caan-daan-min.mp3",
+     "audio/hk-hiumaan/yue-caan-daan-min-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-caan-daan-min.mp3",
+     "audio/hk-hiugaai/yue-caan-daan-min-slow.mp3"
+    ]
+   },
+   "note": "A cha chaan teng classic, usually for breakfast",
+   "cat": [
+    "food"
+   ]
+  },
+  {
+   "id": "yue-caasiu-faan",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "叉燒飯",
+   "roman": "caa1-siu1 faan6",
+   "en": "barbecue pork with rice",
+   "words": [
+    {
+     "zh": "叉燒",
+     "roman": "caa1-siu1",
+     "gloss": "barbecue pork (char siu)",
+     "script": "hk"
+    },
+    {
+     "zh": "飯",
+     "roman": "faan6",
+     "gloss": "rice; meal",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-caasiu-faan.mp3",
+     "audio/hk-wanlung/yue-caasiu-faan-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-caasiu-faan.mp3",
+     "audio/hk-hiumaan/yue-caasiu-faan-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-caasiu-faan.mp3",
+     "audio/hk-hiugaai/yue-caasiu-faan-slow.mp3"
+    ]
+   },
+   "cat": [
+    "food"
+   ]
+  },
+  {
+   "id": "yue-wantan-min",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "雲吞麵",
+   "roman": "wan4-tan1 min6",
+   "en": "wonton noodles",
+   "words": [
+    {
+     "zh": "雲吞",
+     "roman": "wan4-tan1",
+     "gloss": "wonton",
+     "script": "hk"
+    },
+    {
+     "zh": "麵",
+     "roman": "min6",
+     "gloss": "noodles",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-wantan-min.mp3",
+     "audio/hk-wanlung/yue-wantan-min-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-wantan-min.mp3",
+     "audio/hk-hiumaan/yue-wantan-min-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-wantan-min.mp3",
+     "audio/hk-hiugaai/yue-wantan-min-slow.mp3"
+    ]
+   },
+   "cat": [
+    "food"
+   ]
+  },
+  {
+   "id": "yue-caau-faan",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "炒飯",
+   "roman": "caau2 faan6",
+   "en": "fried rice",
+   "words": [
+    {
+     "zh": "炒",
+     "roman": "caau2",
+     "gloss": "to stir-fry",
+     "script": "hk"
+    },
+    {
+     "zh": "飯",
+     "roman": "faan6",
+     "gloss": "rice; meal",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-caau-faan.mp3",
+     "audio/hk-wanlung/yue-caau-faan-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-caau-faan.mp3",
+     "audio/hk-hiumaan/yue-caau-faan-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-caau-faan.mp3",
+     "audio/hk-hiugaai/yue-caau-faan-slow.mp3"
+    ]
+   },
+   "cat": [
+    "food"
+   ]
+  },
+  {
+   "id": "yue-bolobaau",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "菠蘿包",
+   "roman": "bo1-lo4-baau1",
+   "en": "pineapple bun",
+   "words": [
+    {
+     "zh": "菠蘿包",
+     "roman": "bo1-lo4-baau1",
+     "gloss": "pineapple bun",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-bolobaau.mp3",
+     "audio/hk-wanlung/yue-bolobaau-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-bolobaau.mp3",
+     "audio/hk-hiumaan/yue-bolobaau-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-bolobaau.mp3",
+     "audio/hk-hiugaai/yue-bolobaau-slow.mp3"
+    ]
+   },
+   "note": "No pineapple in it: the sugary crust looks like one",
+   "cat": [
+    "food"
+   ]
+  },
+  {
+   "id": "yue-saidosi",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "西多士",
+   "roman": "sai1-do1-si2",
+   "en": "Hong Kong French toast",
+   "words": [
+    {
+     "zh": "西多士",
+     "roman": "sai1-do1-si2",
+     "gloss": "Hong Kong French toast",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-saidosi.mp3",
+     "audio/hk-wanlung/yue-saidosi-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-saidosi.mp3",
+     "audio/hk-hiumaan/yue-saidosi-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-saidosi.mp3",
+     "audio/hk-hiugaai/yue-saidosi-slow.mp3"
+    ]
+   },
+   "cat": [
+    "food"
+   ]
+  },
+  {
+   "id": "yue-ngo-jiu-food",
+   "kind": "pattern",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "唔該，我要___",
+   "roman": "m4-goi1, ngo5 jiu3 ___",
+   "en": "I'll have the ___, please",
+   "fills": [
+    {
+     "fillId": "yue-caan-daan-min",
+     "zh": "唔該，我要餐蛋麵",
+     "roman": "m4-goi1, ngo5 jiu3 caan1-daan2 min6",
+     "en": "I'll have the luncheon meat and egg noodles, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "餐蛋",
+       "roman": "caan1-daan2",
+       "gloss": "luncheon meat and egg",
+       "script": "hk"
+      },
+      {
+       "zh": "麵",
+       "roman": "min6",
+       "gloss": "noodles",
+       "script": "hk"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (luncheon meat and egg noodles)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-caan-daan-min.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-caan-daan-min-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-caan-daan-min.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-caan-daan-min-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-caan-daan-min.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-caan-daan-min-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-caasiu-faan",
+     "zh": "唔該，我要叉燒飯",
+     "roman": "m4-goi1, ngo5 jiu3 caa1-siu1 faan6",
+     "en": "I'll have the barbecue pork with rice, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "叉燒",
+       "roman": "caa1-siu1",
+       "gloss": "barbecue pork (char siu)",
+       "script": "hk"
+      },
+      {
+       "zh": "飯",
+       "roman": "faan6",
+       "gloss": "rice; meal",
+       "script": "hk"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (barbecue pork with rice)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-caasiu-faan.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-caasiu-faan-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-caasiu-faan.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-caasiu-faan-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-caasiu-faan.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-caasiu-faan-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-wantan-min",
+     "zh": "唔該，我要雲吞麵",
+     "roman": "m4-goi1, ngo5 jiu3 wan4-tan1 min6",
+     "en": "I'll have the wonton noodles, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "雲吞",
+       "roman": "wan4-tan1",
+       "gloss": "wonton",
+       "script": "hk"
+      },
+      {
+       "zh": "麵",
+       "roman": "min6",
+       "gloss": "noodles",
+       "script": "hk"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (wonton noodles)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-wantan-min.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-wantan-min-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-wantan-min.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-wantan-min-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-wantan-min.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-wantan-min-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-caau-faan",
+     "zh": "唔該，我要炒飯",
+     "roman": "m4-goi1, ngo5 jiu3 caau2 faan6",
+     "en": "I'll have the fried rice, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "炒",
+       "roman": "caau2",
+       "gloss": "to stir-fry",
+       "script": "hk"
+      },
+      {
+       "zh": "飯",
+       "roman": "faan6",
+       "gloss": "rice; meal",
+       "script": "hk"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (fried rice)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-caau-faan.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-caau-faan-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-caau-faan.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-caau-faan-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-caau-faan.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-caau-faan-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-bolobaau",
+     "zh": "唔該，我要菠蘿包",
+     "roman": "m4-goi1, ngo5 jiu3 bo1-lo4-baau1",
+     "en": "I'll have the pineapple bun, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "菠蘿包",
+       "roman": "bo1-lo4-baau1",
+       "gloss": "pineapple bun",
+       "script": "hk"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (pineapple bun)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-bolobaau.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-bolobaau-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-bolobaau.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-bolobaau-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-bolobaau.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-bolobaau-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-saidosi",
+     "zh": "唔該，我要西多士",
+     "roman": "m4-goi1, ngo5 jiu3 sai1-do1-si2",
+     "en": "I'll have the Hong Kong French toast, please",
+     "words": [
+      {
+       "zh": "唔該",
+       "roman": "m4-goi1",
+       "gloss": "please; thanks",
+       "script": "hk"
+      },
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "西多士",
+       "roman": "sai1-do1-si2",
+       "gloss": "Hong Kong French toast",
+       "script": "hk"
+      }
+     ],
+     "situation": "The waiter is ready to take your order. (Hong Kong French toast)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-saidosi.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-food--yue-saidosi-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-saidosi.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-food--yue-saidosi-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-saidosi.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-food--yue-saidosi-slow.mp3"
+      ]
+     }
+    }
+   ],
+   "situation": "The waiter is ready to take your order. (___)",
+   "note": "要 = want; it's the normal way to order, not rude",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-m-jiu-laat",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "唔要辣",
+   "roman": "m4 jiu3 laat6",
+   "en": "No chilli, please",
+   "words": [
+    {
+     "zh": "唔",
+     "roman": "m4",
+     "gloss": "not",
+     "script": "hk"
+    },
+    {
+     "zh": "要",
+     "roman": "jiu3",
+     "gloss": "to want",
+     "script": "hk"
+    },
+    {
+     "zh": "辣",
+     "roman": "laat6",
+     "gloss": "spicy, chilli",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-m-jiu-laat.mp3",
+     "audio/hk-wanlung/yue-m-jiu-laat-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-m-jiu-laat.mp3",
+     "audio/hk-hiumaan/yue-m-jiu-laat-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-m-jiu-laat.mp3",
+     "audio/hk-hiugaai/yue-m-jiu-laat-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-m-jiu-laat--1.mp3",
+    "2": "audio/chunks/yue-m-jiu-laat--2.mp3"
+   },
+   "situation": "You don't want chilli in your noodles.",
+   "topic": "Food & drink",
+   "order": "唔 (not) goes right before the verb"
+  },
+  {
+   "id": "yue-hou-sik",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "好食",
+   "roman": "hou2 sik6",
+   "en": "Delicious",
+   "words": [
+    {
+     "zh": "好",
+     "roman": "hou2",
+     "gloss": "good; very; OK",
+     "script": "hk"
+    },
+    {
+     "zh": "食",
+     "roman": "sik6",
+     "gloss": "to eat",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-hou-sik.mp3",
+     "audio/hk-wanlung/yue-hou-sik-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-hou-sik.mp3",
+     "audio/hk-hiumaan/yue-hou-sik-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-hou-sik.mp3",
+     "audio/hk-hiugaai/yue-hou-sik-slow.mp3"
+    ]
+   },
+   "situation": "The staff ask how the food was.",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-hou-baau",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "好飽",
+   "roman": "hou2 baau2",
+   "en": "I'm full",
+   "words": [
+    {
+     "zh": "好",
+     "roman": "hou2",
+     "gloss": "good; very; OK",
+     "script": "hk"
+    },
+    {
+     "zh": "飽",
+     "roman": "baau2",
+     "gloss": "full (after eating)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-hou-baau.mp3",
+     "audio/hk-wanlung/yue-hou-baau-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-hou-baau.mp3",
+     "audio/hk-hiumaan/yue-hou-baau-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-hou-baau.mp3",
+     "audio/hk-hiugaai/yue-hou-baau-slow.mp3"
+    ]
+   },
+   "situation": "Someone offers you more food.",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-m-goi-maaidaan",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "唔該埋單",
+   "roman": "m4-goi1 maai4-daan1",
+   "en": "The bill, please",
+   "words": [
+    {
+     "zh": "唔該",
+     "roman": "m4-goi1",
+     "gloss": "please; thanks",
+     "script": "hk"
+    },
+    {
+     "zh": "埋單",
+     "roman": "maai4-daan1",
+     "gloss": "the bill (to settle up)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-m-goi-maaidaan.mp3",
+     "audio/hk-wanlung/yue-m-goi-maaidaan-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-m-goi-maaidaan.mp3",
+     "audio/hk-hiumaan/yue-m-goi-maaidaan-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-m-goi-maaidaan.mp3",
+     "audio/hk-hiugaai/yue-m-goi-maaidaan-slow.mp3"
+    ]
+   },
+   "situation": "You've finished eating and want to pay.",
+   "topic": "Food & drink",
+   "register": "everyday"
+  },
+  {
+   "id": "yue-jamcaa",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "飲茶",
+   "roman": "jam2-caa4",
+   "en": "yum cha (going for dim sum)",
+   "words": [
+    {
+     "zh": "飲茶",
+     "roman": "jam2-caa4",
+     "gloss": "yum cha (going for dim sum)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-jamcaa.mp3",
+     "audio/hk-wanlung/yue-jamcaa-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-jamcaa.mp3",
+     "audio/hk-hiumaan/yue-jamcaa-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-jamcaa.mp3",
+     "audio/hk-hiugaai/yue-jamcaa-slow.mp3"
+    ]
+   },
+   "note": "Literally: drink tea. A late-morning or lunchtime meal"
+  },
+  {
+   "id": "yue-ngodei-heoi-jamcaa",
+   "kind": "phrase",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "我哋去飲茶",
+   "roman": "ngo5-dei6 heoi3 jam2-caa4",
+   "en": "Let's go for yum cha",
+   "words": [
+    {
+     "zh": "我哋",
+     "roman": "ngo5-dei6",
+     "gloss": "we / us",
+     "script": "hk"
+    },
+    {
+     "zh": "去",
+     "roman": "heoi3",
+     "gloss": "to go",
+     "script": "hk"
+    },
+    {
+     "zh": "飲茶",
+     "roman": "jam2-caa4",
+     "gloss": "yum cha (going for dim sum)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-ngodei-heoi-jamcaa.mp3",
+     "audio/hk-wanlung/yue-ngodei-heoi-jamcaa-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-ngodei-heoi-jamcaa.mp3",
+     "audio/hk-hiumaan/yue-ngodei-heoi-jamcaa-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-ngodei-heoi-jamcaa.mp3",
+     "audio/hk-hiugaai/yue-ngodei-heoi-jamcaa-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/yue-ngodei-heoi-jamcaa--1.mp3",
+    "2": "audio/chunks/yue-ngodei-heoi-jamcaa--2.mp3"
+   },
+   "situation": "You propose dim sum to a friend.",
+   "topic": "Food & drink",
+   "order": "Who + go + do what"
+  },
+  {
+   "id": "yue-zaulau",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "酒樓",
+   "roman": "zau2-lau4",
+   "en": "Chinese restaurant (dim sum by day, Cantonese dishes at night)",
+   "words": [
+    {
+     "zh": "酒樓",
+     "roman": "zau2-lau4",
+     "gloss": "Chinese restaurant (dim sum by day, Cantonese dishes at night)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-zaulau.mp3",
+     "audio/hk-wanlung/yue-zaulau-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-zaulau.mp3",
+     "audio/hk-hiumaan/yue-zaulau-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-zaulau.mp3",
+     "audio/hk-hiugaai/yue-zaulau-slow.mp3"
+    ]
+   },
+   "note": "Where you go for 飲茶, usually as a big group"
+  },
+  {
+   "id": "yue-baaujyu",
+   "kind": "word",
+   "deck": "cantonese",
+   "set": "At a restaurant",
+   "zh": "鮑魚",
+   "roman": "baau1-jyu4",
+   "en": "abalone",
+   "words": [
+    {
+     "zh": "鮑魚",
+     "roman": "baau1-jyu4",
+     "gloss": "abalone",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "hk-wanlung": [
+     "audio/hk-wanlung/yue-baaujyu.mp3",
+     "audio/hk-wanlung/yue-baaujyu-slow.mp3"
+    ],
+    "hk-hiumaan": [
+     "audio/hk-hiumaan/yue-baaujyu.mp3",
+     "audio/hk-hiumaan/yue-baaujyu-slow.mp3"
+    ],
+    "hk-hiugaai": [
+     "audio/hk-hiugaai/yue-baaujyu.mp3",
+     "audio/hk-hiugaai/yue-baaujyu-slow.mp3"
+    ]
+   }
   },
   {
    "id": "yue-ngo",
@@ -15430,505 +18714,6 @@
     ]
    },
    "note": "Mandarin 沒有"
-  },
-  {
-   "id": "yue-loeng-wai",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "兩位",
-   "roman": "loeng5 wai2",
-   "en": "Two people (a table for two)",
-   "words": [
-    {
-     "zh": "兩",
-     "roman": "loeng5",
-     "gloss": "two (of something)",
-     "script": "hk"
-    },
-    {
-     "zh": "位",
-     "roman": "wai2",
-     "gloss": "(polite measure word for people)",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-loeng-wai.mp3",
-     "audio/hk-wanlung/yue-loeng-wai-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-loeng-wai.mp3",
-     "audio/hk-hiumaan/yue-loeng-wai-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-loeng-wai.mp3",
-     "audio/hk-hiugaai/yue-loeng-wai-slow.mp3"
-    ]
-   },
-   "situation": "The host at the door asks how many you are, and there are two of you.",
-   "note": "位 wai2 counts people politely. One person: 一位 jat1 wai2",
-   "topic": "Food & drink"
-  },
-  {
-   "id": "yue-m-goi-lok-daan",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "唔該，落單",
-   "roman": "m4-goi1, lok6-daan1",
-   "en": "Excuse me, we'd like to order",
-   "words": [
-    {
-     "zh": "唔該",
-     "roman": "m4-goi1",
-     "gloss": "please; thanks",
-     "script": "hk"
-    },
-    {
-     "zh": "落單",
-     "roman": "lok6-daan1",
-     "gloss": "to place an order",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-m-goi-lok-daan.mp3",
-     "audio/hk-wanlung/yue-m-goi-lok-daan-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-m-goi-lok-daan.mp3",
-     "audio/hk-hiumaan/yue-m-goi-lok-daan-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-m-goi-lok-daan.mp3",
-     "audio/hk-hiugaai/yue-m-goi-lok-daan-slow.mp3"
-    ]
-   },
-   "situation": "You know what you want and need the waiter to come over.",
-   "topic": "Food & drink",
-   "register": "everyday"
-  },
-  {
-   "id": "yue-m-goi-saai",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "唔該晒",
-   "roman": "m4-goi1 saai3",
-   "en": "Thanks a lot (for a service)",
-   "words": [
-    {
-     "zh": "唔該",
-     "roman": "m4-goi1",
-     "gloss": "please; thanks",
-     "script": "hk"
-    },
-    {
-     "zh": "晒",
-     "roman": "saai3",
-     "gloss": "completely (唔該晒 = thanks a lot)",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-m-goi-saai.mp3",
-     "audio/hk-wanlung/yue-m-goi-saai-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-m-goi-saai.mp3",
-     "audio/hk-hiumaan/yue-m-goi-saai-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-m-goi-saai.mp3",
-     "audio/hk-hiugaai/yue-m-goi-saai-slow.mp3"
-    ]
-   },
-   "situation": "The waiter brings your food.",
-   "note": "晒 saai3 makes it warmer: say it when the food arrives or as you leave",
-   "topic": "Food & drink"
-  },
-  {
-   "id": "yue-hai-dou-sik",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "喺度食",
-   "roman": "hai2-dou6 sik6",
-   "en": "Eating here",
-   "words": [
-    {
-     "zh": "喺度",
-     "roman": "hai2-dou6",
-     "gloss": "here",
-     "script": "hk"
-    },
-    {
-     "zh": "食",
-     "roman": "sik6",
-     "gloss": "to eat",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-hai-dou-sik.mp3",
-     "audio/hk-wanlung/yue-hai-dou-sik-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-hai-dou-sik.mp3",
-     "audio/hk-hiumaan/yue-hai-dou-sik-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-hai-dou-sik.mp3",
-     "audio/hk-hiugaai/yue-hai-dou-sik-slow.mp3"
-    ]
-   },
-   "situation": "At the counter they ask: here or takeaway? You're staying.",
-   "note": "The counter asks 喺度食定拎走？ (here or to go?)",
-   "topic": "Food & drink"
-  },
-  {
-   "id": "yue-ling-zau",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "拎走",
-   "roman": "ling1-zau2",
-   "en": "Takeaway (to go)",
-   "words": [
-    {
-     "zh": "拎走",
-     "roman": "ling1-zau2",
-     "gloss": "Takeaway (to go)",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-ling-zau.mp3",
-     "audio/hk-wanlung/yue-ling-zau-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-ling-zau.mp3",
-     "audio/hk-hiumaan/yue-ling-zau-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-ling-zau.mp3",
-     "audio/hk-hiugaai/yue-ling-zau-slow.mp3"
-    ]
-   },
-   "situation": "At the counter they ask: here or takeaway? You're taking it with you.",
-   "topic": "Food & drink"
-  },
-  {
-   "id": "yue-jit",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "熱",
-   "roman": "jit6",
-   "en": "hot",
-   "words": [
-    {
-     "zh": "熱",
-     "roman": "jit6",
-     "gloss": "hot",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-jit.mp3",
-     "audio/hk-wanlung/yue-jit-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-jit.mp3",
-     "audio/hk-hiumaan/yue-jit-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-jit.mp3",
-     "audio/hk-hiugaai/yue-jit-slow.mp3"
-    ]
-   }
-  },
-  {
-   "id": "yue-dung",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "凍",
-   "roman": "dung3",
-   "en": "cold, iced",
-   "words": [
-    {
-     "zh": "凍",
-     "roman": "dung3",
-     "gloss": "cold, iced",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-dung.mp3",
-     "audio/hk-wanlung/yue-dung-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-dung.mp3",
-     "audio/hk-hiumaan/yue-dung-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-dung.mp3",
-     "audio/hk-hiugaai/yue-dung-slow.mp3"
-    ]
-   },
-   "note": "Drinks are ordered 熱 or 凍: 凍奶茶, 熱咖啡"
-  },
-  {
-   "id": "yue-jit-gaafe",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "熱咖啡",
-   "roman": "jit6 gaa3-fe1",
-   "en": "hot coffee",
-   "words": [
-    {
-     "zh": "熱",
-     "roman": "jit6",
-     "gloss": "hot",
-     "script": "hk"
-    },
-    {
-     "zh": "咖啡",
-     "roman": "gaa3-fe1",
-     "gloss": "coffee",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-jit-gaafe.mp3",
-     "audio/hk-wanlung/yue-jit-gaafe-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-jit-gaafe.mp3",
-     "audio/hk-hiumaan/yue-jit-gaafe-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-jit-gaafe.mp3",
-     "audio/hk-hiugaai/yue-jit-gaafe-slow.mp3"
-    ]
-   },
-   "cat": [
-    "drink"
-   ]
-  },
-  {
-   "id": "yue-jau-mou-jingman-caanpaai",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "有冇英文餐牌？",
-   "roman": "jau5 mou5 Jing1-man2 caan1-paai2?",
-   "en": "Do you have an English menu?",
-   "words": [
-    {
-     "zh": "有",
-     "roman": "jau5",
-     "gloss": "to have; there is",
-     "script": "hk"
-    },
-    {
-     "zh": "冇",
-     "roman": "mou5",
-     "gloss": "not have; there isn't",
-     "script": "hk"
-    },
-    {
-     "zh": "英文",
-     "roman": "Jing1-man2",
-     "gloss": "English (language)",
-     "script": "hk"
-    },
-    {
-     "zh": "餐牌",
-     "roman": "caan1-paai2",
-     "gloss": "menu",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-jau-mou-jingman-caanpaai.mp3",
-     "audio/hk-wanlung/yue-jau-mou-jingman-caanpaai-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-jau-mou-jingman-caanpaai.mp3",
-     "audio/hk-hiumaan/yue-jau-mou-jingman-caanpaai-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-jau-mou-jingman-caanpaai.mp3",
-     "audio/hk-hiugaai/yue-jau-mou-jingman-caanpaai-slow.mp3"
-    ]
-   },
-   "chunks": {
-    "1": "audio/chunks/yue-jau-mou-jingman-caanpaai--1.mp3",
-    "2": "audio/chunks/yue-jau-mou-jingman-caanpaai--2.mp3",
-    "3": "audio/chunks/yue-jau-mou-jingman-caanpaai--3.mp3"
-   },
-   "situation": "The menu is all in Chinese.",
-   "note": "有冇 (have / not have) = do you have…?",
-   "topic": "Food & drink",
-   "order": "有冇 (have or not) = do you have…?"
-  },
-  {
-   "id": "yue-jamcaa",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "飲茶",
-   "roman": "jam2-caa4",
-   "en": "yum cha (going for dim sum)",
-   "words": [
-    {
-     "zh": "飲茶",
-     "roman": "jam2-caa4",
-     "gloss": "yum cha (going for dim sum)",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-jamcaa.mp3",
-     "audio/hk-wanlung/yue-jamcaa-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-jamcaa.mp3",
-     "audio/hk-hiumaan/yue-jamcaa-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-jamcaa.mp3",
-     "audio/hk-hiugaai/yue-jamcaa-slow.mp3"
-    ]
-   },
-   "note": "Literally: drink tea. A late-morning or lunchtime meal"
-  },
-  {
-   "id": "yue-ngodei-heoi-jamcaa",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "我哋去飲茶",
-   "roman": "ngo5-dei6 heoi3 jam2-caa4",
-   "en": "Let's go for yum cha",
-   "words": [
-    {
-     "zh": "我哋",
-     "roman": "ngo5-dei6",
-     "gloss": "we / us",
-     "script": "hk"
-    },
-    {
-     "zh": "去",
-     "roman": "heoi3",
-     "gloss": "to go",
-     "script": "hk"
-    },
-    {
-     "zh": "飲茶",
-     "roman": "jam2-caa4",
-     "gloss": "yum cha (going for dim sum)",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-ngodei-heoi-jamcaa.mp3",
-     "audio/hk-wanlung/yue-ngodei-heoi-jamcaa-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-ngodei-heoi-jamcaa.mp3",
-     "audio/hk-hiumaan/yue-ngodei-heoi-jamcaa-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-ngodei-heoi-jamcaa.mp3",
-     "audio/hk-hiugaai/yue-ngodei-heoi-jamcaa-slow.mp3"
-    ]
-   },
-   "chunks": {
-    "1": "audio/chunks/yue-ngodei-heoi-jamcaa--1.mp3",
-    "2": "audio/chunks/yue-ngodei-heoi-jamcaa--2.mp3"
-   },
-   "situation": "You propose dim sum to a friend.",
-   "topic": "Food & drink",
-   "order": "Who + go + do what"
-  },
-  {
-   "id": "yue-zaulau",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "酒樓",
-   "roman": "zau2-lau4",
-   "en": "Chinese restaurant (dim sum by day, Cantonese dishes at night)",
-   "words": [
-    {
-     "zh": "酒樓",
-     "roman": "zau2-lau4",
-     "gloss": "Chinese restaurant (dim sum by day, Cantonese dishes at night)",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-zaulau.mp3",
-     "audio/hk-wanlung/yue-zaulau-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-zaulau.mp3",
-     "audio/hk-hiumaan/yue-zaulau-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-zaulau.mp3",
-     "audio/hk-hiugaai/yue-zaulau-slow.mp3"
-    ]
-   },
-   "note": "Where you go for 飲茶, usually as a big group"
-  },
-  {
-   "id": "yue-baaujyu",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "At a restaurant",
-   "zh": "鮑魚",
-   "roman": "baau1-jyu4",
-   "en": "abalone",
-   "words": [
-    {
-     "zh": "鮑魚",
-     "roman": "baau1-jyu4",
-     "gloss": "abalone",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-baaujyu.mp3",
-     "audio/hk-wanlung/yue-baaujyu-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-baaujyu.mp3",
-     "audio/hk-hiumaan/yue-baaujyu-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-baaujyu.mp3",
-     "audio/hk-hiugaai/yue-baaujyu-slow.mp3"
-    ]
-   }
   },
   {
    "id": "yue-ngo-teng-m-ming",
@@ -17138,114 +19923,6 @@
    "note": "Mandarin 喝"
   },
   {
-   "id": "yue-gaafe",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "Eating & drinking",
-   "zh": "咖啡",
-   "roman": "gaa3-fe1",
-   "en": "coffee",
-   "words": [
-    {
-     "zh": "咖啡",
-     "roman": "gaa3-fe1",
-     "gloss": "coffee",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-gaafe.mp3",
-     "audio/hk-wanlung/yue-gaafe-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-gaafe.mp3",
-     "audio/hk-hiumaan/yue-gaafe-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-gaafe.mp3",
-     "audio/hk-hiugaai/yue-gaafe-slow.mp3"
-    ]
-   },
-   "cat": [
-    "drink"
-   ]
-  },
-  {
-   "id": "yue-naaicaa",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "Eating & drinking",
-   "zh": "奶茶",
-   "roman": "naai5-caa4",
-   "en": "milk tea",
-   "words": [
-    {
-     "zh": "奶茶",
-     "roman": "naai5-caa4",
-     "gloss": "milk tea",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-naaicaa.mp3",
-     "audio/hk-wanlung/yue-naaicaa-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-naaicaa.mp3",
-     "audio/hk-hiumaan/yue-naaicaa-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-naaicaa.mp3",
-     "audio/hk-hiugaai/yue-naaicaa-slow.mp3"
-    ]
-   },
-   "cat": [
-    "drink"
-   ]
-  },
-  {
-   "id": "yue-dung-naaicaa",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "Eating & drinking",
-   "zh": "凍奶茶",
-   "roman": "dung3 naai5-caa4",
-   "en": "iced milk tea",
-   "words": [
-    {
-     "zh": "凍",
-     "roman": "dung3",
-     "gloss": "cold, iced",
-     "script": "hk"
-    },
-    {
-     "zh": "奶茶",
-     "roman": "naai5-caa4",
-     "gloss": "milk tea",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-dung-naaicaa.mp3",
-     "audio/hk-wanlung/yue-dung-naaicaa-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-dung-naaicaa.mp3",
-     "audio/hk-hiumaan/yue-dung-naaicaa-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-dung-naaicaa.mp3",
-     "audio/hk-hiugaai/yue-dung-naaicaa-slow.mp3"
-    ]
-   },
-   "cat": [
-    "drink"
-   ]
-  },
-  {
    "id": "yue-bezau",
    "kind": "word",
    "deck": "cantonese",
@@ -17322,53 +19999,6 @@
    "roman": "ngo5 jiu3 ___",
    "en": "I'd like ___",
    "fills": [
-    {
-     "fillId": "yue-jit-gaafe",
-     "zh": "我要熱咖啡",
-     "roman": "ngo5 jiu3 jit6 gaa3-fe1",
-     "en": "I'd like hot coffee",
-     "words": [
-      {
-       "zh": "我",
-       "roman": "ngo5",
-       "gloss": "I / me",
-       "script": "hk"
-      },
-      {
-       "zh": "要",
-       "roman": "jiu3",
-       "gloss": "to want",
-       "script": "hk"
-      },
-      {
-       "zh": "熱",
-       "roman": "jit6",
-       "gloss": "hot",
-       "script": "hk"
-      },
-      {
-       "zh": "咖啡",
-       "roman": "gaa3-fe1",
-       "gloss": "coffee",
-       "script": "hk"
-      }
-     ],
-     "situation": "You order at a cha chaan teng. (hot coffee)",
-     "audio": {
-      "hk-wanlung": [
-       "audio/hk-wanlung/yue-ngo-jiu-x--yue-jit-gaafe.mp3",
-       "audio/hk-wanlung/yue-ngo-jiu-x--yue-jit-gaafe-slow.mp3"
-      ],
-      "hk-hiumaan": [
-       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-jit-gaafe.mp3",
-       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-jit-gaafe-slow.mp3"
-      ],
-      "hk-hiugaai": [
-       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-jit-gaafe.mp3",
-       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-jit-gaafe-slow.mp3"
-      ]
-     }
-    },
     {
      "fillId": "yue-gaafe",
      "zh": "我要咖啡",
@@ -17452,6 +20082,47 @@
      }
     },
     {
+     "fillId": "yue-jyunjoeng",
+     "zh": "我要鴛鴦",
+     "roman": "ngo5 jiu3 jyun1-joeng1",
+     "en": "I'd like yuenyeung (coffee mixed with milk tea)",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "鴛鴦",
+       "roman": "jyun1-joeng1",
+       "gloss": "yuenyeung (coffee mixed with milk tea)",
+       "script": "hk"
+      }
+     ],
+     "situation": "You order at a cha chaan teng. (yuenyeung (coffee mixed with milk tea))",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-jyunjoeng.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-jyunjoeng.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-jyunjoeng.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-jyunjoeng-slow.mp3"
+      ]
+     }
+    },
+    {
      "fillId": "yue-dung-naaicaa",
      "zh": "我要凍奶茶",
      "roman": "ngo5 jiu3 dung3 naai5-caa4",
@@ -17495,6 +20166,235 @@
       "hk-hiugaai": [
        "audio/hk-hiugaai/yue-ngo-jiu-x--yue-dung-naaicaa.mp3",
        "audio/hk-hiugaai/yue-ngo-jiu-x--yue-dung-naaicaa-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-jit-naaicaa",
+     "zh": "我要熱奶茶",
+     "roman": "ngo5 jiu3 jit6 naai5-caa4",
+     "en": "I'd like hot milk tea",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "熱",
+       "roman": "jit6",
+       "gloss": "hot",
+       "script": "hk"
+      },
+      {
+       "zh": "奶茶",
+       "roman": "naai5-caa4",
+       "gloss": "milk tea",
+       "script": "hk"
+      }
+     ],
+     "situation": "You order at a cha chaan teng. (hot milk tea)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-jit-naaicaa.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-jit-naaicaa-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-jit-naaicaa.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-jit-naaicaa-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-jit-naaicaa.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-jit-naaicaa-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-dung-jyunjoeng",
+     "zh": "我要凍鴛鴦",
+     "roman": "ngo5 jiu3 dung3 jyun1-joeng1",
+     "en": "I'd like iced yuenyeung",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "凍",
+       "roman": "dung3",
+       "gloss": "cold, iced",
+       "script": "hk"
+      },
+      {
+       "zh": "鴛鴦",
+       "roman": "jyun1-joeng1",
+       "gloss": "yuenyeung (coffee mixed with milk tea)",
+       "script": "hk"
+      }
+     ],
+     "situation": "You order at a cha chaan teng. (iced yuenyeung)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-dung-jyunjoeng.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-dung-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-dung-jyunjoeng.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-dung-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-dung-jyunjoeng.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-dung-jyunjoeng-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-dung-ningcaa",
+     "zh": "我要凍檸茶",
+     "roman": "ngo5 jiu3 dung3 ning4-caa4",
+     "en": "I'd like iced lemon tea",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "凍",
+       "roman": "dung3",
+       "gloss": "cold, iced",
+       "script": "hk"
+      },
+      {
+       "zh": "檸茶",
+       "roman": "ning4-caa4",
+       "gloss": "lemon tea",
+       "script": "hk"
+      }
+     ],
+     "situation": "You order at a cha chaan teng. (iced lemon tea)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-dung-ningcaa.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-dung-ningcaa-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-dung-ningcaa.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-dung-ningcaa-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-dung-ningcaa.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-dung-ningcaa-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-zaaife",
+     "zh": "我要齋啡",
+     "roman": "ngo5 jiu3 zaai1-fe1",
+     "en": "I'd like black coffee",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "齋啡",
+       "roman": "zaai1-fe1",
+       "gloss": "black coffee",
+       "script": "hk"
+      }
+     ],
+     "situation": "You order at a cha chaan teng. (black coffee)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-zaaife.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-zaaife-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-zaaife.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-zaaife-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-zaaife.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-zaaife-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-jit-gaafe",
+     "zh": "我要熱咖啡",
+     "roman": "ngo5 jiu3 jit6 gaa3-fe1",
+     "en": "I'd like hot coffee",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "要",
+       "roman": "jiu3",
+       "gloss": "to want",
+       "script": "hk"
+      },
+      {
+       "zh": "熱",
+       "roman": "jit6",
+       "gloss": "hot",
+       "script": "hk"
+      },
+      {
+       "zh": "咖啡",
+       "roman": "gaa3-fe1",
+       "gloss": "coffee",
+       "script": "hk"
+      }
+     ],
+     "situation": "You order at a cha chaan teng. (hot coffee)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-jit-gaafe.mp3",
+       "audio/hk-wanlung/yue-ngo-jiu-x--yue-jit-gaafe-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-jit-gaafe.mp3",
+       "audio/hk-hiumaan/yue-ngo-jiu-x--yue-jit-gaafe-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-jit-gaafe.mp3",
+       "audio/hk-hiugaai/yue-ngo-jiu-x--yue-jit-gaafe-slow.mp3"
       ]
      }
     },
@@ -17596,59 +20496,6 @@
    "en": "I like drinking ___",
    "fills": [
     {
-     "fillId": "yue-jit-gaafe",
-     "zh": "我鍾意飲熱咖啡",
-     "roman": "ngo5 zung1-ji3 jam2 jit6 gaa3-fe1",
-     "en": "I like drinking hot coffee",
-     "words": [
-      {
-       "zh": "我",
-       "roman": "ngo5",
-       "gloss": "I / me",
-       "script": "hk"
-      },
-      {
-       "zh": "鍾意",
-       "roman": "zung1-ji3",
-       "gloss": "to like",
-       "script": "hk"
-      },
-      {
-       "zh": "飲",
-       "roman": "jam2",
-       "gloss": "to drink",
-       "script": "hk"
-      },
-      {
-       "zh": "熱",
-       "roman": "jit6",
-       "gloss": "hot",
-       "script": "hk"
-      },
-      {
-       "zh": "咖啡",
-       "roman": "gaa3-fe1",
-       "gloss": "coffee",
-       "script": "hk"
-      }
-     ],
-     "situation": "Someone asks what you like to drink. (hot coffee)",
-     "audio": {
-      "hk-wanlung": [
-       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-jit-gaafe.mp3",
-       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-jit-gaafe-slow.mp3"
-      ],
-      "hk-hiumaan": [
-       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-jit-gaafe.mp3",
-       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-jit-gaafe-slow.mp3"
-      ],
-      "hk-hiugaai": [
-       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-jit-gaafe.mp3",
-       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-jit-gaafe-slow.mp3"
-      ]
-     }
-    },
-    {
      "fillId": "yue-gaafe",
      "zh": "我鍾意飲咖啡",
      "roman": "ngo5 zung1-ji3 jam2 gaa3-fe1",
@@ -17743,6 +20590,53 @@
      }
     },
     {
+     "fillId": "yue-jyunjoeng",
+     "zh": "我鍾意飲鴛鴦",
+     "roman": "ngo5 zung1-ji3 jam2 jyun1-joeng1",
+     "en": "I like drinking yuenyeung (coffee mixed with milk tea)",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "鍾意",
+       "roman": "zung1-ji3",
+       "gloss": "to like",
+       "script": "hk"
+      },
+      {
+       "zh": "飲",
+       "roman": "jam2",
+       "gloss": "to drink",
+       "script": "hk"
+      },
+      {
+       "zh": "鴛鴦",
+       "roman": "jyun1-joeng1",
+       "gloss": "yuenyeung (coffee mixed with milk tea)",
+       "script": "hk"
+      }
+     ],
+     "situation": "Someone asks what you like to drink. (yuenyeung (coffee mixed with milk tea))",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-jyunjoeng.mp3",
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-jyunjoeng.mp3",
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-jyunjoeng.mp3",
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-jyunjoeng-slow.mp3"
+      ]
+     }
+    },
+    {
      "fillId": "yue-dung-naaicaa",
      "zh": "我鍾意飲凍奶茶",
      "roman": "ngo5 zung1-ji3 jam2 dung3 naai5-caa4",
@@ -17792,6 +20686,265 @@
       "hk-hiugaai": [
        "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-dung-naaicaa.mp3",
        "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-dung-naaicaa-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-jit-naaicaa",
+     "zh": "我鍾意飲熱奶茶",
+     "roman": "ngo5 zung1-ji3 jam2 jit6 naai5-caa4",
+     "en": "I like drinking hot milk tea",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "鍾意",
+       "roman": "zung1-ji3",
+       "gloss": "to like",
+       "script": "hk"
+      },
+      {
+       "zh": "飲",
+       "roman": "jam2",
+       "gloss": "to drink",
+       "script": "hk"
+      },
+      {
+       "zh": "熱",
+       "roman": "jit6",
+       "gloss": "hot",
+       "script": "hk"
+      },
+      {
+       "zh": "奶茶",
+       "roman": "naai5-caa4",
+       "gloss": "milk tea",
+       "script": "hk"
+      }
+     ],
+     "situation": "Someone asks what you like to drink. (hot milk tea)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-jit-naaicaa.mp3",
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-jit-naaicaa-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-jit-naaicaa.mp3",
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-jit-naaicaa-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-jit-naaicaa.mp3",
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-jit-naaicaa-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-dung-jyunjoeng",
+     "zh": "我鍾意飲凍鴛鴦",
+     "roman": "ngo5 zung1-ji3 jam2 dung3 jyun1-joeng1",
+     "en": "I like drinking iced yuenyeung",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "鍾意",
+       "roman": "zung1-ji3",
+       "gloss": "to like",
+       "script": "hk"
+      },
+      {
+       "zh": "飲",
+       "roman": "jam2",
+       "gloss": "to drink",
+       "script": "hk"
+      },
+      {
+       "zh": "凍",
+       "roman": "dung3",
+       "gloss": "cold, iced",
+       "script": "hk"
+      },
+      {
+       "zh": "鴛鴦",
+       "roman": "jyun1-joeng1",
+       "gloss": "yuenyeung (coffee mixed with milk tea)",
+       "script": "hk"
+      }
+     ],
+     "situation": "Someone asks what you like to drink. (iced yuenyeung)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-dung-jyunjoeng.mp3",
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-dung-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-dung-jyunjoeng.mp3",
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-dung-jyunjoeng-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-dung-jyunjoeng.mp3",
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-dung-jyunjoeng-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-dung-ningcaa",
+     "zh": "我鍾意飲凍檸茶",
+     "roman": "ngo5 zung1-ji3 jam2 dung3 ning4-caa4",
+     "en": "I like drinking iced lemon tea",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "鍾意",
+       "roman": "zung1-ji3",
+       "gloss": "to like",
+       "script": "hk"
+      },
+      {
+       "zh": "飲",
+       "roman": "jam2",
+       "gloss": "to drink",
+       "script": "hk"
+      },
+      {
+       "zh": "凍",
+       "roman": "dung3",
+       "gloss": "cold, iced",
+       "script": "hk"
+      },
+      {
+       "zh": "檸茶",
+       "roman": "ning4-caa4",
+       "gloss": "lemon tea",
+       "script": "hk"
+      }
+     ],
+     "situation": "Someone asks what you like to drink. (iced lemon tea)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-dung-ningcaa.mp3",
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-dung-ningcaa-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-dung-ningcaa.mp3",
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-dung-ningcaa-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-dung-ningcaa.mp3",
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-dung-ningcaa-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-zaaife",
+     "zh": "我鍾意飲齋啡",
+     "roman": "ngo5 zung1-ji3 jam2 zaai1-fe1",
+     "en": "I like drinking black coffee",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "鍾意",
+       "roman": "zung1-ji3",
+       "gloss": "to like",
+       "script": "hk"
+      },
+      {
+       "zh": "飲",
+       "roman": "jam2",
+       "gloss": "to drink",
+       "script": "hk"
+      },
+      {
+       "zh": "齋啡",
+       "roman": "zaai1-fe1",
+       "gloss": "black coffee",
+       "script": "hk"
+      }
+     ],
+     "situation": "Someone asks what you like to drink. (black coffee)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-zaaife.mp3",
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-zaaife-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-zaaife.mp3",
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-zaaife-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-zaaife.mp3",
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-zaaife-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "yue-jit-gaafe",
+     "zh": "我鍾意飲熱咖啡",
+     "roman": "ngo5 zung1-ji3 jam2 jit6 gaa3-fe1",
+     "en": "I like drinking hot coffee",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "ngo5",
+       "gloss": "I / me",
+       "script": "hk"
+      },
+      {
+       "zh": "鍾意",
+       "roman": "zung1-ji3",
+       "gloss": "to like",
+       "script": "hk"
+      },
+      {
+       "zh": "飲",
+       "roman": "jam2",
+       "gloss": "to drink",
+       "script": "hk"
+      },
+      {
+       "zh": "熱",
+       "roman": "jit6",
+       "gloss": "hot",
+       "script": "hk"
+      },
+      {
+       "zh": "咖啡",
+       "roman": "gaa3-fe1",
+       "gloss": "coffee",
+       "script": "hk"
+      }
+     ],
+     "situation": "Someone asks what you like to drink. (hot coffee)",
+     "audio": {
+      "hk-wanlung": [
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-jit-gaafe.mp3",
+       "audio/hk-wanlung/yue-ngo-zungji-jam-x--yue-jit-gaafe-slow.mp3"
+      ],
+      "hk-hiumaan": [
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-jit-gaafe.mp3",
+       "audio/hk-hiumaan/yue-ngo-zungji-jam-x--yue-jit-gaafe-slow.mp3"
+      ],
+      "hk-hiugaai": [
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-jit-gaafe.mp3",
+       "audio/hk-hiugaai/yue-ngo-zungji-jam-x--yue-jit-gaafe-slow.mp3"
       ]
      }
     },
@@ -17895,245 +21048,6 @@
    "topic": "Food & drink"
   },
   {
-   "id": "yue-zau-bing",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "Eating & drinking",
-   "zh": "走冰",
-   "roman": "zau2 bing1",
-   "en": "No ice",
-   "words": [
-    {
-     "zh": "走",
-     "roman": "zau2",
-     "gloss": "without (literally: to leave out)",
-     "script": "hk"
-    },
-    {
-     "zh": "冰",
-     "roman": "bing1",
-     "gloss": "ice",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-zau-bing.mp3",
-     "audio/hk-wanlung/yue-zau-bing-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-zau-bing.mp3",
-     "audio/hk-hiumaan/yue-zau-bing-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-zau-bing.mp3",
-     "audio/hk-hiugaai/yue-zau-bing-slow.mp3"
-    ]
-   },
-   "situation": "You want your cold drink without ice.",
-   "topic": "Food & drink"
-  },
-  {
-   "id": "yue-siu-tim",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "Eating & drinking",
-   "zh": "少甜",
-   "roman": "siu2 tim4",
-   "en": "Less sweet",
-   "words": [
-    {
-     "zh": "少",
-     "roman": "siu2",
-     "gloss": "less",
-     "script": "hk"
-    },
-    {
-     "zh": "甜",
-     "roman": "tim4",
-     "gloss": "sweet",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-siu-tim.mp3",
-     "audio/hk-wanlung/yue-siu-tim-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-siu-tim.mp3",
-     "audio/hk-hiumaan/yue-siu-tim-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-siu-tim.mp3",
-     "audio/hk-hiugaai/yue-siu-tim-slow.mp3"
-    ]
-   },
-   "situation": "Your milk tea is always too sweet.",
-   "topic": "Food & drink"
-  },
-  {
-   "id": "yue-m-jiu-laat",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "Eating & drinking",
-   "zh": "唔要辣",
-   "roman": "m4 jiu3 laat6",
-   "en": "No chilli, please",
-   "words": [
-    {
-     "zh": "唔",
-     "roman": "m4",
-     "gloss": "not",
-     "script": "hk"
-    },
-    {
-     "zh": "要",
-     "roman": "jiu3",
-     "gloss": "to want",
-     "script": "hk"
-    },
-    {
-     "zh": "辣",
-     "roman": "laat6",
-     "gloss": "spicy, chilli",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-m-jiu-laat.mp3",
-     "audio/hk-wanlung/yue-m-jiu-laat-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-m-jiu-laat.mp3",
-     "audio/hk-hiumaan/yue-m-jiu-laat-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-m-jiu-laat.mp3",
-     "audio/hk-hiugaai/yue-m-jiu-laat-slow.mp3"
-    ]
-   },
-   "chunks": {
-    "1": "audio/chunks/yue-m-jiu-laat--1.mp3",
-    "2": "audio/chunks/yue-m-jiu-laat--2.mp3"
-   },
-   "situation": "You don't want chilli in your noodles.",
-   "topic": "Food & drink",
-   "order": "唔 (not) goes right before the verb"
-  },
-  {
-   "id": "yue-hou-sik",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "Eating & drinking",
-   "zh": "好食",
-   "roman": "hou2 sik6",
-   "en": "Delicious",
-   "words": [
-    {
-     "zh": "好",
-     "roman": "hou2",
-     "gloss": "good; very; OK",
-     "script": "hk"
-    },
-    {
-     "zh": "食",
-     "roman": "sik6",
-     "gloss": "to eat",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-hou-sik.mp3",
-     "audio/hk-wanlung/yue-hou-sik-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-hou-sik.mp3",
-     "audio/hk-hiumaan/yue-hou-sik-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-hou-sik.mp3",
-     "audio/hk-hiugaai/yue-hou-sik-slow.mp3"
-    ]
-   },
-   "situation": "The staff ask how the food was.",
-   "topic": "Food & drink",
-   "register": "everyday"
-  },
-  {
-   "id": "yue-gei-do-cin",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "Eating & drinking",
-   "zh": "幾多錢？",
-   "roman": "gei2-do1 cin2?",
-   "en": "How much is it?",
-   "words": [
-    {
-     "zh": "幾多",
-     "roman": "gei2-do1",
-     "gloss": "how much, how many",
-     "script": "hk"
-    },
-    {
-     "zh": "錢",
-     "roman": "cin2",
-     "gloss": "money",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-gei-do-cin.mp3",
-     "audio/hk-wanlung/yue-gei-do-cin-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-gei-do-cin.mp3",
-     "audio/hk-hiumaan/yue-gei-do-cin-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-gei-do-cin.mp3",
-     "audio/hk-hiugaai/yue-gei-do-cin-slow.mp3"
-    ]
-   },
-   "situation": "You want to know the price at a market stall.",
-   "topic": "Food & drink",
-   "register": "everyday"
-  },
-  {
-   "id": "yue-nigo",
-   "kind": "word",
-   "deck": "cantonese",
-   "set": "Eating & drinking",
-   "zh": "呢個",
-   "roman": "ni1-go3",
-   "en": "this one",
-   "words": [
-    {
-     "zh": "呢個",
-     "roman": "ni1-go3",
-     "gloss": "this one",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-nigo.mp3",
-     "audio/hk-wanlung/yue-nigo-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-nigo.mp3",
-     "audio/hk-hiumaan/yue-nigo-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-nigo.mp3",
-     "audio/hk-hiugaai/yue-nigo-slow.mp3"
-    ]
-   }
-  },
-  {
    "id": "yue-gogo",
    "kind": "word",
    "deck": "cantonese",
@@ -18163,118 +21077,6 @@
      "audio/hk-hiugaai/yue-gogo-slow.mp3"
     ]
    }
-  },
-  {
-   "id": "yue-ngo-jiu-nigo",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "Eating & drinking",
-   "zh": "我要呢個",
-   "roman": "ngo5 jiu3 ni1-go3",
-   "en": "I'll have this one (ordering)",
-   "words": [
-    {
-     "zh": "我",
-     "roman": "ngo5",
-     "gloss": "I / me",
-     "script": "hk"
-    },
-    {
-     "zh": "要",
-     "roman": "jiu3",
-     "gloss": "to want",
-     "script": "hk"
-    },
-    {
-     "zh": "呢個",
-     "roman": "ni1-go3",
-     "gloss": "this one",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-ngo-jiu-nigo.mp3",
-     "audio/hk-wanlung/yue-ngo-jiu-nigo-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-ngo-jiu-nigo.mp3",
-     "audio/hk-hiumaan/yue-ngo-jiu-nigo-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-ngo-jiu-nigo.mp3",
-     "audio/hk-hiugaai/yue-ngo-jiu-nigo-slow.mp3"
-    ]
-   },
-   "chunks": {
-    "1": "audio/chunks/yue-ngo-jiu-nigo--1.mp3",
-    "2": "audio/chunks/yue-ngo-jiu-nigo--2.mp3"
-   },
-   "situation": "You point at the dish you want.",
-   "note": "The normal way to order: point and say it. Add 唔該 to be friendly",
-   "topic": "Food & drink",
-   "wish": "wish-1790803319538",
-   "register": "everyday",
-   "swap": {
-    "word": "呢個",
-    "with": [
-     {
-      "zh": "嗰個",
-      "roman": "go2-go3",
-      "en": "that one"
-     },
-     {
-      "zh": "凍奶茶",
-      "roman": "dung3 naai5-caa4",
-      "en": "iced milk tea"
-     },
-     {
-      "zh": "熱咖啡",
-      "roman": "jit6 gaa3-fe1",
-      "en": "hot coffee"
-     }
-    ]
-   }
-  },
-  {
-   "id": "yue-m-goi-maaidaan",
-   "kind": "phrase",
-   "deck": "cantonese",
-   "set": "Eating & drinking",
-   "zh": "唔該埋單",
-   "roman": "m4-goi1 maai4-daan1",
-   "en": "The bill, please",
-   "words": [
-    {
-     "zh": "唔該",
-     "roman": "m4-goi1",
-     "gloss": "please; thanks",
-     "script": "hk"
-    },
-    {
-     "zh": "埋單",
-     "roman": "maai4-daan1",
-     "gloss": "the bill (to settle up)",
-     "script": "hk"
-    }
-   ],
-   "audio": {
-    "hk-wanlung": [
-     "audio/hk-wanlung/yue-m-goi-maaidaan.mp3",
-     "audio/hk-wanlung/yue-m-goi-maaidaan-slow.mp3"
-    ],
-    "hk-hiumaan": [
-     "audio/hk-hiumaan/yue-m-goi-maaidaan.mp3",
-     "audio/hk-hiumaan/yue-m-goi-maaidaan-slow.mp3"
-    ],
-    "hk-hiugaai": [
-     "audio/hk-hiugaai/yue-m-goi-maaidaan.mp3",
-     "audio/hk-hiugaai/yue-m-goi-maaidaan-slow.mp3"
-    ]
-   },
-   "situation": "You've finished eating and want to pay.",
-   "topic": "Food & drink",
-   "register": "everyday"
   },
   {
    "id": "yue-hai-bindou",
@@ -19391,6 +22193,91 @@
    ]
   },
   {
+   "id": "yue-yuenyeung",
+   "title": "A yuenyeung to go",
+   "deck": "cantonese",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "yue-zousan"
+    },
+    {
+     "who": "you",
+     "ref": "yue-jat-bui-x",
+     "fill": "yue-jyunjoeng"
+    },
+    {
+     "who": "them",
+     "ref": "yue-jiu-jit-ding-dung"
+    },
+    {
+     "who": "you",
+     "ref": "yue-dung-ge"
+    },
+    {
+     "who": "them",
+     "ref": "yue-tongsik-ding-lingzau"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ling-zau"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ho-m-ho-ji-jung-baatdaattung"
+    },
+    {
+     "who": "you",
+     "ref": "yue-m-goi-saai"
+    }
+   ]
+  },
+  {
+   "id": "yue-lunch",
+   "title": "Lunch at a cha chaan teng",
+   "deck": "cantonese",
+   "turns": [
+    {
+     "who": "them",
+     "ref": "yue-gei-do-wai"
+    },
+    {
+     "who": "you",
+     "ref": "yue-jat-wai"
+    },
+    {
+     "who": "them",
+     "ref": "yue-daap-toi"
+    },
+    {
+     "who": "you",
+     "ref": "yue-dak"
+    },
+    {
+     "who": "you",
+     "ref": "yue-jau-me-hou-gaaisiu"
+    },
+    {
+     "who": "you",
+     "ref": "yue-ngo-jiu-food",
+     "fill": "yue-caan-daan-min"
+    },
+    {
+     "who": "you",
+     "ref": "yue-jat-bui-x",
+     "fill": "yue-dung-ningcaa"
+    },
+    {
+     "who": "you",
+     "ref": "yue-zau-gam-do"
+    },
+    {
+     "who": "you",
+     "ref": "yue-m-goi-maaidaan"
+    }
+   ]
+  },
+  {
    "id": "yue-cafe",
    "title": "Ordering at a cha chaan teng",
    "deck": "cantonese",
@@ -19657,6 +22544,7 @@
    "c": "丨",
    "h": "A crack on an oracle bone; compare 卜"
   },
+  "⺌": {},
   "⺍": {},
   "⺮": {
    "d": "bamboo; flute",
@@ -19666,6 +22554,17 @@
   "⺼": {
    "d": "meat, flesh; organic compound",
    "h": "Meat on the ribs of an animal; compare 肉"
+  },
+  "㔾": {
+   "d": "seal; kneeling person",
+   "p": "xiān",
+   "h": "A rolled-up scroll or kneeling person; compare 卩"
+  },
+  "㗎": {
+   "d": "sentence particle: softens a question or statement (Cantonese)",
+   "c": "口架",
+   "ph": "架",
+   "h": "口 marks a spoken Cantonese word"
   },
   "㠯": {
    "d": "according to, for, with; to use",
@@ -20617,6 +23516,12 @@
    "p": "yòu",
    "h": "A right hand, representing a pair; compare 左"
   },
+  "叉": {
+   "d": "fork; prong",
+   "p": "chā",
+   "c": "又丶",
+   "h": "A hand 又 grasping an object 丶"
+  },
   "及": {
    "d": "to extend; to reach",
    "p": "jí",
@@ -20749,6 +23654,13 @@
    "s": "口",
    "ph": "马"
   },
+  "吞": {
+   "d": "to absorb, to annex; to engulf",
+   "p": "tūn",
+   "c": "天口",
+   "s": "口",
+   "ph": "天"
+  },
   "吧": {
    "d": "emphatic final particle",
    "p": "bā",
@@ -20782,6 +23694,12 @@
    "c": "口尼",
    "s": "口",
    "ph": "尼"
+  },
+  "咁": {
+   "d": "so, like this, that much (Cantonese)",
+   "c": "口甘",
+   "ph": "甘",
+   "h": "口 marks a spoken Cantonese word"
   },
   "和": {
    "d": "harmony, peace; calm, peaceful",
@@ -20907,6 +23825,13 @@
    "ph": "個",
    "h": "口 marks a spoken Cantonese word"
   },
+  "嘅": {
+   "d": "the sound of a sigh",
+   "p": "kǎi",
+   "c": "口既",
+   "s": "口",
+   "ph": "既"
+  },
   "嚟": {
    "d": "to come (Cantonese)",
    "c": "口黎",
@@ -21000,6 +23925,12 @@
    "c": "士卄",
    "h": "A tree with drooping branches"
   },
+  "垚": {
+   "d": "mound, lump, round mass",
+   "p": "yáo",
+   "c": "土土土",
+   "h": "A mound 土 of clay 土"
+  },
   "埋": {
    "d": "to bury; to conceal",
    "p": "mái",
@@ -21013,11 +23944,24 @@
    "c": "坴丸",
    "h": "Clay 坴 formed into a ball 丸"
   },
+  "堂": {
+   "d": "hall, large room; government office",
+   "p": "táng",
+   "c": "尚土",
+   "s": "土",
+   "ph": "尚"
+  },
   "堇": {
    "d": "yellow loam; clay",
    "p": "jǐn",
    "c": "黄土",
    "h": "Yellow 黄 earth 土"
+  },
+  "堯": {
+   "d": "a legendary ancient emperor-sage",
+   "p": "yáo",
+   "c": "垚兀",
+   "h": "A mound 垚 borne by a man 兀; 垚 also provides the pronunciation"
   },
   "塊": {
    "d": "piece, lump, chunk; dollar",
@@ -21054,6 +23998,12 @@
    "c": "勹丶",
    "h": "A crescent moon"
   },
+  "夗": {
+   "d": "to turn over when asleep",
+   "p": "yuàn",
+   "c": "夕㔾",
+   "h": "A person 㔾 curled up at night 夕"
+  },
   "多": {
    "d": "much, many, multi-; more than, over",
    "p": "duō",
@@ -21077,6 +24027,12 @@
    "p": "tài",
    "c": "大丶",
    "h": "A giant 大 with a normal-sized man 丶 for scale"
+  },
+  "夫": {
+   "d": "man, husband; worker",
+   "p": "fū",
+   "c": "一大",
+   "h": "A man 大 wearing a coming-of-age hairpin 一"
   },
   "夬": {
    "d": "decisive, certain; parted",
@@ -21205,6 +24161,12 @@
    "s": "宀",
    "ph": "元"
   },
+  "定": {
+   "d": "to decide, to fix, to settle; to order",
+   "p": "dìng",
+   "c": "宀疋",
+   "h": "A person 疋 settling under a roof 宀"
+  },
   "客": {
    "d": "guest, traveller; customer",
    "p": "kè",
@@ -21224,6 +24186,13 @@
    "c": "宀豕",
    "s": "宀",
    "ph": "豕"
+  },
+  "寧": {
+   "d": "calm, peaceful; healthy",
+   "p": "níng",
+   "c": "宀心皿丁",
+   "s": "心",
+   "ph": "丁"
   },
   "寫": {
    "d": "to write; to draw, to sketch",
@@ -21275,6 +24244,30 @@
    "d": "you; that, those",
    "p": "ěr",
    "c": "⺈小"
+  },
+  "尚": {
+   "d": "still, yet; even",
+   "p": "shàng",
+   "c": "⺌冂口"
+  },
+  "尢": {
+   "d": "weak, lame",
+   "p": "yóu",
+   "c": "乚",
+   "h": "Cutting 一 off the feet 儿; compare 兀"
+  },
+  "尤": {
+   "d": "especially, particularly",
+   "p": "yóu",
+   "c": "尢丶",
+   "ph": "尢"
+  },
+  "就": {
+   "d": "just, simply; to go to",
+   "p": "jiù",
+   "c": "京尤",
+   "s": "尤",
+   "ph": "京"
   },
   "尸": {
    "d": "body, corpse",
@@ -21333,6 +24326,10 @@
    "c": "乚",
    "h": "A loom woven with thread"
   },
+  "已": {
+   "d": "already; finished",
+   "p": "yǐ"
+  },
   "巳": {
    "d": "the hours from 9 to 11; 6th terrestrial branch",
    "p": "sì",
@@ -21372,8 +24369,8 @@
    "h": "To skillfully wield 帀 a knife 㠯"
   },
   "干": {
-   "d": "arid, dry; to oppose",
-   "p": "gàn",
+   "d": "dry; to do (in 干杯 cheers)",
+   "p": "gān",
    "c": "一十",
    "h": "A club or axe"
   },
@@ -21685,6 +24682,12 @@
    "c": "扌丸",
    "h": "A hand 扌 clutching a pebble 丸"
   },
+  "找": {
+   "d": "to search for, to look for, to find",
+   "p": "zhǎo",
+   "c": "扌戈",
+   "h": "To go searching with a spear 戈 in hand 扌"
+  },
   "拎": {
    "d": "to lift, to haul, to take",
    "p": "līn",
@@ -21759,6 +24762,16 @@
    "d": "square, rectangle; side",
    "p": "fāng",
    "c": "亠"
+  },
+  "旡": {
+   "d": "to choke on something",
+   "p": "jì"
+  },
+  "既": {
+   "d": "already, since, then; both",
+   "p": "jì",
+   "c": "旡",
+   "h": "A person 旡 turning away from food 皀; compare 即"
   },
   "日": {
    "d": "sun; day",
@@ -21934,6 +24947,12 @@
    "c": "一木",
    "h": "A wheat plant that has not yet borne fruit; compare 來"
   },
+  "末": {
+   "d": "end, final, last; insignificant",
+   "p": "mò",
+   "c": "木一",
+   "h": "The top 一 of a tree 木"
+  },
   "本": {
    "d": "root, origin, source; basis",
    "p": "běn",
@@ -21982,6 +25001,21 @@
    "p": "guǒ",
    "c": "田木",
    "h": "Fruit 田 growing on a tree 木"
+  },
+  "枱": {
+   "d": "table",
+   "p": "tái",
+   "c": "木台",
+   "s": "木",
+   "ph": "台",
+   "h": "Wood 木 for the meaning, 台 for the sound"
+  },
+  "架": {
+   "d": "frame, rack, stand; to prop up",
+   "p": "jià",
+   "c": "加木",
+   "s": "木",
+   "ph": "加"
   },
   "柬": {
    "d": "card, letter, invitation, note",
@@ -22034,6 +25068,13 @@
    "p": "jī",
    "c": "木幾",
    "h": "A table 幾 made of wood 木; 幾 also provides the pronunciation"
+  },
+  "檸": {
+   "d": "lemon",
+   "p": "níng",
+   "c": "木寧",
+   "s": "木",
+   "ph": "寧"
   },
   "欠": {
    "d": "to lack, to owe; to breathe, to yawn",
@@ -22219,9 +25260,22 @@
    "s": "氵",
    "ph": "彎"
   },
+  "火": {
+   "d": "fire, flame; to burn",
+   "p": "huǒ",
+   "c": "丷人",
+   "h": "Flames"
+  },
   "灬": {
    "d": "fire",
    "p": "huǒ"
+  },
+  "炒": {
+   "d": "to boil, to fry, to roast, to sauté",
+   "p": "chǎo",
+   "c": "火少",
+   "s": "火",
+   "ph": "少"
   },
   "点": {
    "d": "dot, point, speck",
@@ -22250,6 +25304,13 @@
    "c": "埶灬",
    "s": "灬",
    "ph": "埶"
+  },
+  "燒": {
+   "d": "to burn, to bake; to heat, to roast",
+   "p": "shāo",
+   "c": "火堯",
+   "s": "火",
+   "ph": "堯"
   },
   "爫": {
    "d": "claws, nails, talons",
@@ -22408,6 +25469,13 @@
    "c": "日",
    "h": "A burning candle; the rays of the sun"
   },
+  "百": {
+   "d": "one hundred; numerous, many",
+   "p": "bǎi",
+   "c": "一白",
+   "s": "一",
+   "ph": "白"
+  },
   "的": {
    "d": "aim, goal; of",
    "p": "de",
@@ -22418,6 +25486,11 @@
    "p": "pí",
    "c": "攴",
    "h": "A hand using a tool 攴 to strip the hide from a carcass"
+  },
+  "皿": {
+   "d": "dish, vessel; shallow container",
+   "p": "mǐn",
+   "c": "一"
   },
   "目": {
    "d": "eye; to look, to see",
@@ -22692,6 +25765,12 @@
    "p": "yáng",
    "c": "丷",
    "h": "A sheep's head with horns"
+  },
+  "羍": {
+   "p": "dá",
+   "c": "大羊",
+   "s": "羊",
+   "ph": "大"
   },
   "美": {
    "d": "beautiful, pretty; pleasing",
@@ -23401,6 +26480,13 @@
    "s": "辶",
    "ph": "首"
   },
+  "達": {
+   "d": "to reach, to arrive at; intelligent",
+   "p": "dá",
+   "c": "辶羍",
+   "s": "辶",
+   "ph": "羍"
+  },
   "還": {
    "d": "also, besides; still, yet",
    "p": "hái",
@@ -23620,6 +26706,12 @@
    "c": "帀",
    "h": "Rain drops falling from a cloud 帀"
   },
+  "雲": {
+   "d": "cloud; to say, to speak",
+   "p": "yún",
+   "c": "雨云",
+   "h": "Rain 雨 falling from a cloud 云"
+  },
   "電": {
    "d": "electricity; electric",
    "p": "diàn",
@@ -23715,6 +26807,13 @@
    "s": "飠",
    "ph": "欠"
   },
+  "飽": {
+   "d": "satisfied; to eat one's fill",
+   "p": "bǎo",
+   "c": "飠包",
+   "s": "飠",
+   "ph": "包"
+  },
   "餐": {
    "d": "to eat, to dine; meal, food",
    "p": "cān",
@@ -23795,6 +26894,26 @@
    "s": "魚",
    "ph": "包"
   },
+  "鳥": {
+   "d": "bird",
+   "p": "niǎo",
+   "c": "灬",
+   "h": "A bird"
+  },
+  "鴛": {
+   "d": "male mandarin duck (Aix galericulata)",
+   "p": "yuān",
+   "c": "夗鳥",
+   "s": "鳥",
+   "ph": "夗"
+  },
+  "鴦": {
+   "d": "female mandarin duck (Aix galericulata)",
+   "p": "yāng",
+   "c": "央鳥",
+   "s": "鳥",
+   "ph": "央"
+  },
   "鸟": {
    "d": "bird",
    "p": "niǎo",
@@ -23805,6 +26924,19 @@
    "p": "jī",
    "c": "又鸟",
    "h": "Another 又 kind of bird 鸟"
+  },
+  "麥": {
+   "d": "wheat, barley, oats",
+   "p": "mài",
+   "c": "來夂",
+   "h": "Grains 來 ready to be harvested 夂; compare 麦"
+  },
+  "麵": {
+   "d": "face; surface, side",
+   "p": "miàn",
+   "c": "麥面",
+   "s": "面",
+   "ph": "麥"
   },
   "麻": {
    "d": "hemp, flax, sesame; numb",
@@ -23848,6 +26980,18 @@
    "c": "黑占",
    "s": "黑",
    "ph": "占"
+  },
+  "齊": {
+   "d": "even, uniform, of equal length",
+   "p": "qí",
+   "h": "Three stalks of grain growing evenly"
+  },
+  "齋": {
+   "d": "to fast, to abstain; a vegetarian diet",
+   "p": "zhāi",
+   "c": "齊小",
+   "s": "齊",
+   "ph": "小"
   },
   "龶": {}
  },
@@ -23952,6 +27096,18 @@
    "一下": {
     "r": "yí-xià",
     "e": "a bit (softens a request)"
+   },
+   "這個中文怎麼說": {
+    "r": "zhè-ge Zhōng-wén zěn-me shuō?",
+    "e": "How do you say this in Chinese?"
+   },
+   "用": {
+    "r": "yòng",
+    "e": "to use; with, in (a language)"
+   },
+   "上課": {
+    "r": "shàng-kè",
+    "e": "to have class; (for a teacher) to teach a class"
    },
    "不要": {
     "r": "bú yào",
@@ -24213,10 +27369,6 @@
     "r": "jù",
     "e": "counter for sentences"
    },
-   "這個中文怎麼說": {
-    "r": "zhè-ge Zhōng-wén zěn-me shuō?",
-    "e": "How do you say this in Chinese?"
-   },
    "是…的": {
     "r": "shì … de",
     "e": "(frames the detail you are stressing)"
@@ -24341,6 +27493,118 @@
     "e": "not (Mandarin)",
     "k": "mandarin"
    },
+   "杯": {
+    "r": "bui1",
+    "e": "a cup of (measure word)"
+   },
+   "一杯": {
+    "r": "jat1 bui1",
+    "e": "one cup (of)"
+   },
+   "熱": {
+    "r": "jit6",
+    "e": "hot"
+   },
+   "凍": {
+    "r": "dung3",
+    "e": "cold, iced"
+   },
+   "凍奶茶": {
+    "r": "dung3 naai5-caa4",
+    "e": "iced milk tea"
+   },
+   "熱咖啡": {
+    "r": "jit6 gaa3-fe1",
+    "e": "hot coffee"
+   },
+   "定": {
+    "r": "ding6",
+    "e": "or (in a question)"
+   },
+   "熱嘅": {
+    "r": "jit6 ge3",
+    "e": "Hot, please (the hot one)"
+   },
+   "凍嘅": {
+    "r": "dung3 ge3",
+    "e": "Iced, please (the cold one)"
+   },
+   "嘅": {
+    "r": "ge3",
+    "e": "the … one ('s)"
+   },
+   "齋": {
+    "r": "zaai1",
+    "e": "plain, nothing added"
+   },
+   "少": {
+    "r": "siu2",
+    "e": "less"
+   },
+   "走": {
+    "r": "zau2",
+    "e": "without (literally: to leave out)"
+   },
+   "走冰": {
+    "r": "zau2 bing1",
+    "e": "No ice"
+   },
+   "堂食": {
+    "r": "tong4-sik6",
+    "e": "eat in (at the shop)"
+   },
+   "喺度食": {
+    "r": "hai2-dou6 sik6",
+    "e": "Eating here"
+   },
+   "拎走": {
+    "r": "ling1-zau2",
+    "e": "Takeaway (to go)"
+   },
+   "喺度食定拎走": {
+    "r": "hai2 dou6 sik6 ding6 ling1 zau2",
+    "e": "Eat here or take away?"
+   },
+   "可唔可以": {
+    "r": "ho2 m4 ho2-ji5",
+    "e": "can or can't? (yes/no question)"
+   },
+   "用": {
+    "r": "jung6",
+    "e": "to use; with"
+   },
+   "咩": {
+    "r": "me1",
+    "e": "what"
+   },
+   "晒": {
+    "r": "saai3",
+    "e": "completely (唔該晒 = thanks a lot)"
+   },
+   "位": {
+    "r": "wai2",
+    "e": "(polite measure word for people)"
+   },
+   "一位": {
+    "r": "jat1 wai2",
+    "e": "one person (polite)"
+   },
+   "得": {
+    "r": "dak1",
+    "e": "OK, sure (that works)"
+   },
+   "有冇": {
+    "r": "jau5 mou5",
+    "e": "have or not have?"
+   },
+   "要": {
+    "r": "jiu3",
+    "e": "to want"
+   },
+   "飲茶": {
+    "r": "jam2-caa4",
+    "e": "yum cha (going for dim sum)"
+   },
    "你點呀": {
     "r": "nei5 dim2 aa3?",
     "e": "How are you? / How's it going?"
@@ -24380,53 +27644,9 @@
     "e": "not have (Mandarin)",
     "k": "mandarin"
    },
-   "位": {
-    "r": "wai2",
-    "e": "(polite measure word for people)"
-   },
-   "一位": {
-    "r": "jat1 wai2",
-    "e": "one person (polite)"
-   },
-   "晒": {
-    "r": "saai3",
-    "e": "completely (唔該晒 = thanks a lot)"
-   },
-   "喺度食定拎走": {
-    "r": "hai2 dou6 sik6 ding6 ling1 zau2",
-    "e": "Eat here or take away?"
-   },
-   "熱": {
-    "r": "jit6",
-    "e": "hot"
-   },
-   "凍": {
-    "r": "dung3",
-    "e": "cold, iced"
-   },
-   "凍奶茶": {
-    "r": "dung3 naai5-caa4",
-    "e": "iced milk tea"
-   },
-   "熱咖啡": {
-    "r": "jit6 gaa3-fe1",
-    "e": "hot coffee"
-   },
-   "有冇": {
-    "r": "jau5 mou5",
-    "e": "have or not have?"
-   },
-   "飲茶": {
-    "r": "jam2-caa4",
-    "e": "yum cha (going for dim sum)"
-   },
    "聽": {
     "r": "teng1",
     "e": "to listen, hear"
-   },
-   "咩": {
-    "r": "me1",
-    "e": "what"
    },
    "什麼": {
     "r": "shé-me",
@@ -24464,10 +27684,6 @@
     "e": "to drink (Mandarin)",
     "k": "mandarin"
    },
-   "要": {
-    "r": "jiu3",
-    "e": "to want"
-   },
    "鍾意": {
     "r": "zung1-ji3",
     "e": "to like"
@@ -24498,10 +27714,6 @@
    "我要呢個": {
     "r": "ngo5 jiu3 ni1-go3",
     "e": "I'll have this one (ordering)"
-   },
-   "杯": {
-    "r": "bui1",
-    "e": "a cup of (measure word)"
    },
    "一": {
     "r": "jat1",
@@ -24573,6 +27785,7 @@
    "用": "audio/words/mandarin/7528.mp3",
    "解釋": "audio/words/mandarin/89e3-91cb.mp3",
    "一下": "audio/words/mandarin/4e00-4e0b.mp3",
+   "上課": "audio/words/mandarin/4e0a-8ab2.mp3",
    "打": "audio/words/mandarin/6253.mp3",
    "電話": "audio/words/mandarin/96fb-8a71.mp3",
    "懂": "audio/words/mandarin/61c2.mp3",
@@ -24765,6 +27978,47 @@
   },
   "cantonese": {
    "唔": "audio/words/cantonese/5514.mp3",
+   "一": "audio/words/cantonese/4e00.mp3",
+   "杯": "audio/words/cantonese/676f.mp3",
+   "檸茶": "audio/words/cantonese/6ab8-8336.mp3",
+   "要": "audio/words/cantonese/8981.mp3",
+   "定": "audio/words/cantonese/5b9a.mp3",
+   "嘅": "audio/words/cantonese/5605.mp3",
+   "走": "audio/words/cantonese/8d70.mp3",
+   "冰": "audio/words/cantonese/51b0.mp3",
+   "少": "audio/words/cantonese/5c11.mp3",
+   "甜": "audio/words/cantonese/751c.mp3",
+   "堂食": "audio/words/cantonese/5802-98df.mp3",
+   "喺度": "audio/words/cantonese/55ba-5ea6.mp3",
+   "幾多": "audio/words/cantonese/5e7e-591a.mp3",
+   "錢": "audio/words/cantonese/9322.mp3",
+   "可": "audio/words/cantonese/53ef.mp3",
+   "可以": "audio/words/cantonese/53ef-4ee5.mp3",
+   "用": "audio/words/cantonese/7528.mp3",
+   "八達通": "audio/words/cantonese/516b-9054-901a.mp3",
+   "咩": "audio/words/cantonese/54a9.mp3",
+   "㗎": "audio/words/cantonese/35ce.mp3",
+   "就": "audio/words/cantonese/5c31.mp3",
+   "咁": "audio/words/cantonese/5481.mp3",
+   "多": "audio/words/cantonese/591a.mp3",
+   "晒": "audio/words/cantonese/6652.mp3",
+   "位": "audio/words/cantonese/4f4d.mp3",
+   "兩": "audio/words/cantonese/5169.mp3",
+   "搭": "audio/words/cantonese/642d.mp3",
+   "枱": "audio/words/cantonese/67b1.mp3",
+   "落單": "audio/words/cantonese/843d-55ae.mp3",
+   "介紹": "audio/words/cantonese/4ecb-7d39.mp3",
+   "英文": "audio/words/cantonese/82f1-6587.mp3",
+   "餐牌": "audio/words/cantonese/9910-724c.mp3",
+   "餐蛋": "audio/words/cantonese/9910-86cb.mp3",
+   "麵": "audio/words/cantonese/9eb5.mp3",
+   "叉燒": "audio/words/cantonese/53c9-71d2.mp3",
+   "飯": "audio/words/cantonese/98ef.mp3",
+   "雲吞": "audio/words/cantonese/96f2-541e.mp3",
+   "炒": "audio/words/cantonese/7092.mp3",
+   "辣": "audio/words/cantonese/8fa3.mp3",
+   "飽": "audio/words/cantonese/98fd.mp3",
+   "埋單": "audio/words/cantonese/57cb-55ae.mp3",
    "嗎": "audio/words/cantonese/55ce.mp3",
    "幾": "audio/words/cantonese/5e7e.mp3",
    "意思": "audio/words/cantonese/610f-601d.mp3",
@@ -24772,20 +28026,11 @@
    "客氣": "audio/words/cantonese/5ba2-6c23.mp3",
    "聽日": "audio/words/cantonese/807d-65e5.mp3",
    "見": "audio/words/cantonese/898b.mp3",
-   "兩": "audio/words/cantonese/5169.mp3",
-   "位": "audio/words/cantonese/4f4d.mp3",
-   "落單": "audio/words/cantonese/843d-55ae.mp3",
-   "晒": "audio/words/cantonese/6652.mp3",
-   "喺度": "audio/words/cantonese/55ba-5ea6.mp3",
-   "英文": "audio/words/cantonese/82f1-6587.mp3",
-   "餐牌": "audio/words/cantonese/9910-724c.mp3",
    "聽": "audio/words/cantonese/807d.mp3",
    "明": "audio/words/cantonese/660e.mp3",
    "講": "audio/words/cantonese/8b1b.mp3",
-   "多": "audio/words/cantonese/591a.mp3",
    "次": "audio/words/cantonese/6b21.mp3",
    "叫": "audio/words/cantonese/53eb.mp3",
-   "咩": "audio/words/cantonese/54a9.mp3",
    "名": "audio/words/cantonese/540d.mp3",
    "呀": "audio/words/cantonese/5440.mp3",
    "人": "audio/words/cantonese/4eba.mp3",
@@ -24800,24 +28045,13 @@
    "中文": "audio/words/cantonese/4e2d-6587.mp3",
    "大學": "audio/words/cantonese/5927-5b78.mp3",
    "教書": "audio/words/cantonese/6559-66f8.mp3",
-   "要": "audio/words/cantonese/8981.mp3",
    "鍾意": "audio/words/cantonese/937e-610f.mp3",
-   "走": "audio/words/cantonese/8d70.mp3",
-   "冰": "audio/words/cantonese/51b0.mp3",
-   "少": "audio/words/cantonese/5c11.mp3",
-   "甜": "audio/words/cantonese/751c.mp3",
-   "辣": "audio/words/cantonese/8fa3.mp3",
-   "幾多": "audio/words/cantonese/5e7e-591a.mp3",
-   "錢": "audio/words/cantonese/9322.mp3",
-   "埋單": "audio/words/cantonese/57cb-55ae.mp3",
    "邊度": "audio/words/cantonese/908a-5ea6.mp3",
    "洗手間": "audio/words/cantonese/6d17-624b-9593.mp3",
    "落": "audio/words/cantonese/843d.mp3",
    "想": "audio/words/cantonese/60f3.mp3",
    "做": "audio/words/cantonese/505a.mp3",
-   "杯": "audio/words/cantonese/676f.mp3",
-   "點": "audio/words/cantonese/9ede.mp3",
-   "一": "audio/words/cantonese/4e00.mp3"
+   "點": "audio/words/cantonese/9ede.mp3"
   }
  },
  "hsk": {
@@ -27283,5 +30517,374 @@
     "from": "飛機"
    }
   ]
- }
+ },
+ "frames": [
+  {
+   "id": "keyi-ma",
+   "deck": "mandarin",
+   "zh": "可以 … 嗎？",
+   "roman": "kě-yǐ … ma?",
+   "en": "Can (you / I) …?",
+   "why": "可以 = can, may. What you're asking for goes in the middle; 嗎 at the end makes it a question. The polite way to ask for anything.",
+   "items": [
+    "keyi-gei-wo-zhege-ma",
+    "keyi-gei-wo-yibei-kafei-ma",
+    "keyi-yong-yingwen-jieshi-yixia-ma",
+    "keyi-shuo-yingwen-ma",
+    "ni-keyi-jiao-wo-ma"
+   ]
+  },
+  {
+   "id": "gei-wo",
+   "deck": "mandarin",
+   "zh": "給我 + thing",
+   "roman": "gěi wǒ …",
+   "en": "give me …",
+   "why": "給 = give. 給我 + the thing = give me the thing. Wrap it to be polite: 可以給我 … 嗎？ or 請給我 …",
+   "items": [
+    "keyi-gei-wo-zhege-ma",
+    "keyi-gei-wo-yibei-kafei-ma",
+    "qing-gei-wo-x"
+   ]
+  },
+  {
+   "id": "yong",
+   "deck": "mandarin",
+   "zh": "用 + tool + verb",
+   "roman": "yòng … ",
+   "en": "do it using …",
+   "why": "用 = use. The tool or language comes before the action: 用英文解釋 = use English, explain (explain in English). 用中文說 = say it in Chinese.",
+   "items": [
+    "keyi-yong-yingwen-jieshi-yixia-ma",
+    "wo-yong-yingwen-shangke",
+    "zhege-yong-zhongwen-zenme-shuo"
+   ]
+  },
+  {
+   "id": "zenme-shuo",
+   "deck": "mandarin",
+   "zh": "… 怎麼說？",
+   "roman": "… zěn-me shuō?",
+   "en": "How do you say …?",
+   "why": "怎麼 = how. 怎麼 + verb = how to do it: 怎麼說 = how (to) say. The thing you're asking about comes first.",
+   "items": [
+    "zhege-zhongwen-zenme-shuo",
+    "zhe-ju-hua-zhongwen-zenme-shuo",
+    "zhege-yong-zhongwen-zenme-shuo"
+   ]
+  },
+  {
+   "id": "ma",
+   "deck": "mandarin",
+   "zh": "statement + 嗎？",
+   "roman": "… ma?",
+   "en": "yes/no question",
+   "why": "Say it as a statement and add 嗎: 你是學生 (you are a student) → 你是學生嗎？ (are you a student?). Nothing else moves.",
+   "items": [
+    "zuijin-hao-ma",
+    "ni-xihuan-x-ma",
+    "ni-shi-xuesheng-ma",
+    "you-wenti-ma",
+    "ni-you-kong-ma",
+    "ni-hui-shuo-yingwen-ma",
+    "hao-le-ma",
+    "keyi-shuo-yingwen-ma",
+    "ni-keyi-jiao-wo-ma"
+   ]
+  },
+  {
+   "id": "wh-in-place",
+   "deck": "mandarin",
+   "zh": "question word where the answer goes",
+   "roman": "shén-me · nǎ-lǐ · jǐ",
+   "en": "what · where · how many",
+   "why": "Chinese doesn't move the question word to the front. 你喜歡喝什麼？ = you like drink what? The answer takes its place: 我喜歡喝咖啡.",
+   "items": [
+    "zuijin-mang-shenme",
+    "ni-xihuan-he-shenme",
+    "ni-xihuan-chi-shenme",
+    "ni-jiao-shenme-mingzi",
+    "ni-shi-nage-xi-de",
+    "ni-ji-nianji",
+    "ni-du-shenme",
+    "ni-shi-nali-ren",
+    "ni-zai-nali-gongzuo",
+    "ni-xiang-chi-shenme",
+    "ni-zai-xianggang-duojiu-le"
+   ]
+  },
+  {
+   "id": "a-not-a",
+   "deck": "mandarin",
+   "zh": "verb 不 verb？",
+   "roman": "yào bu yào?",
+   "en": "(verb) or not?",
+   "why": "Say the verb, 不 (or 沒 for 有), then the verb again: 要不要 = want not want? It asks yes or no without 嗎. Answer with the verb: 要 / 不要.",
+   "items": [
+    "yao-bu-yao-la",
+    "you-mei-you-wenti",
+    "ni-zhi-bu-zhidao",
+    "keyi-bu-keyi",
+    "you-mei-you-qita-wenti",
+    "you-mei-you-qita-shijian-shangke",
+    "dui-bu-dui",
+    "hao-bu-hao"
+   ]
+  },
+  {
+   "id": "zai-place",
+   "deck": "mandarin",
+   "zh": "在 + place + verb",
+   "roman": "zài … ",
+   "en": "do it at (a place)",
+   "why": "Where comes before what you do: 我在中文大學工作 = I at CUHK work. English puts the place last; Chinese puts it first.",
+   "items": [
+    "wo-zai-zhongda-jiaoshu",
+    "ni-zai-nali-gongzuo",
+    "wo-zai-zhongda-gongzuo"
+   ]
+  },
+  {
+   "id": "zai-doing",
+   "deck": "mandarin",
+   "zh": "在 + verb",
+   "roman": "zài …",
+   "en": "be doing (right now, these days)",
+   "why": "在 right before a verb = in the middle of doing it: 我在學中文 = I'm learning Chinese.",
+   "items": [
+    "wo-zai-xue-zhongwen",
+    "wo-zai-xue-putonghua"
+   ]
+  },
+  {
+   "id": "bu-verb",
+   "deck": "mandarin",
+   "zh": "不 + verb",
+   "roman": "bù …",
+   "en": "not …",
+   "why": "不 sits right before the verb or adjective it cancels: 我不知道 = I not know. 不太 + adjective = not very.",
+   "items": [
+    "wo-bu-xihuan-he-x",
+    "wo-bu-xihuan-chi-x",
+    "wo-bu-zhidao",
+    "wo-bu-chi-la",
+    "wo-de-zhongwen-bu-tai-hao"
+   ]
+  },
+  {
+   "id": "xiang-yao",
+   "deck": "mandarin",
+   "zh": "想 / 要 + …",
+   "roman": "xiǎng / yào …",
+   "en": "would like to / want",
+   "why": "想 + verb = would like to (soft). 要 + thing = want, I'll have (direct, normal when ordering). The thing or action follows right after.",
+   "items": [
+    "wo-xiang-qu-x",
+    "wo-xiang-he-x",
+    "wo-xiang-chi-x",
+    "ni-xiang-chi-shenme",
+    "wo-yao-x",
+    "wo-yao-yibei-x",
+    "wo-yao-zhege"
+   ]
+  },
+  {
+   "id": "xihuan-verb",
+   "deck": "mandarin",
+   "zh": "喜歡 + verb + thing",
+   "roman": "xǐ-huān …",
+   "en": "like doing …",
+   "why": "Chinese says what you like doing with the verb in: 我喜歡喝咖啡 = I like drink coffee. Leave out 喝 and it sounds like you like coffee as a thing.",
+   "items": [
+    "wo-xihuan-he-x",
+    "wo-xihuan-chi-x",
+    "ni-xihuan-he-shenme",
+    "ni-xihuan-chi-shenme",
+    "wo-bu-xihuan-he-x",
+    "wo-bu-xihuan-chi-x"
+   ]
+  },
+  {
+   "id": "verb-yixia",
+   "deck": "mandarin",
+   "zh": "verb + 一下",
+   "roman": "… yí-xià",
+   "en": "(do it) a bit, for a moment",
+   "why": "一下 after a verb makes it small and soft: 等一下 = wait a moment, 解釋一下 = explain a little. It makes a request sound friendly.",
+   "items": [
+    "keyi-yong-yingwen-jieshi-yixia-ma",
+    "deng-yixia"
+   ]
+  },
+  {
+   "id": "yi-bei",
+   "deck": "mandarin",
+   "zh": "一 + measure word + thing",
+   "roman": "yì bēi …",
+   "en": "a (cup of) …",
+   "why": "A number can't go straight before a noun: it needs a measure word. 一杯咖啡 = one cup coffee. 個 is the all-purpose one: 一個人.",
+   "items": [
+    "keyi-gei-wo-yibei-kafei-ma",
+    "wo-yao-yibei-x"
+   ]
+  }
+ ],
+ "lookalikes": [
+  {
+   "id": "zi-xue",
+   "chars": "字学",
+   "script": "cn",
+   "hint": "字 has a roof 宀 (a child at home learning letters). 学 has three strokes ⺍ on top, like sparks of thought."
+  },
+  {
+   "id": "er-ji",
+   "chars": "儿几",
+   "script": "cn",
+   "hint": "儿 is two separate strokes with nothing on top: two legs (child). 几 has a lid joining them across the top: a little table (how many)."
+  },
+  {
+   "id": "da-tian-tai-guan",
+   "chars": "大天太关",
+   "script": "cn",
+   "hint": "大 a person with arms out (big). 天 one line above the head (sky). 太 a dot underneath (too, very). 关 two horns 丷 on top of 天 (close)."
+  },
+  {
+   "id": "da-tian-tai",
+   "chars": "大天太",
+   "script": "hk",
+   "hint": "大 a person with arms out (big). 天 one line above the head (sky). 太 a dot underneath (too, very)."
+  },
+  {
+   "id": "you-you",
+   "chars": "有友",
+   "script": "both",
+   "hint": "有 has 月 (meat) in a hand: to have. 友 has 又 (a second hand): two hands together, a friend."
+  },
+  {
+   "id": "ren-ru-ba",
+   "chars": "人入八",
+   "script": "both",
+   "hint": "人 the left stroke is longer (a person striding). 入 the right stroke is longer (going in). 八 the strokes don't touch (splitting apart, eight)."
+  },
+  {
+   "id": "ri-mu",
+   "chars": "日目",
+   "script": "both",
+   "hint": "日 one line inside (the sun). 目 two lines inside and taller (an eye on its side)."
+  },
+  {
+   "id": "ji-yi",
+   "chars": "己已",
+   "script": "both",
+   "hint": "己 open at the top-left (self). 已 half closed (already). The more closed, the more done."
+  },
+  {
+   "id": "wei-mo",
+   "chars": "未末",
+   "script": "both",
+   "hint": "未 the top line is shorter: the tree hasn't grown yet (not yet). 末 the top line is longer: the tip of the branch (end)."
+  },
+  {
+   "id": "tu-shi",
+   "chars": "土士",
+   "script": "both",
+   "hint": "土 the bottom line is longer: the ground is wide (earth). 士 the top line is longer: a scholar's broad shoulders."
+  },
+  {
+   "id": "wu-niu",
+   "chars": "午牛",
+   "script": "both",
+   "hint": "午 the middle stroke stops at the top line (noon). 牛 it pokes through like a horn (cow)."
+  },
+  {
+   "id": "wang-yu-zhu",
+   "chars": "王玉主",
+   "script": "both",
+   "hint": "王 three lines and a post (king). 玉 a dot of jade at the bottom right (jade). 主 a dot on top, the flame of a lamp (master)."
+  },
+  {
+   "id": "wen-jian-cn",
+   "chars": "问间",
+   "script": "cn",
+   "hint": "Both sit in a door 门. 问 has a mouth 口 in it: asking at the door. 间 has the sun 日: light through the gap (between, room)."
+  },
+  {
+   "id": "wen-jian-hk",
+   "chars": "問間",
+   "script": "hk",
+   "hint": "Both sit in a door 門. 問 has a mouth 口 in it: asking at the door. 間 has the sun 日: light through the gap (between, room)."
+  },
+  {
+   "id": "mai-mai-cn",
+   "chars": "买卖",
+   "script": "cn",
+   "hint": "卖 has an extra 十 on top: you add something on top when you sell (mài). 买 without it is buy (mǎi)."
+  },
+  {
+   "id": "mai-mai-hk",
+   "chars": "買賣",
+   "script": "hk",
+   "hint": "賣 has an extra 士 on top: you add something on top when you sell (mài). 買 without it is buy (mǎi)."
+  },
+  {
+   "id": "wo-zhao",
+   "chars": "我找",
+   "script": "both",
+   "hint": "我 has an extra stroke at the top-left: me, holding my weapon. 找 starts with the hand 扌: looking for something with your hand."
+  },
+  {
+   "id": "bai-bai",
+   "chars": "白百",
+   "script": "both",
+   "hint": "白 the sun with one ray (white). 百 adds a line on top: one 一 + 白, a hundred."
+  },
+  {
+   "id": "jian-bei-cn",
+   "chars": "见贝",
+   "script": "cn",
+   "hint": "见 the legs open out to the right (see). 贝 the legs are a small 人 under the box (shell, money)."
+  },
+  {
+   "id": "jian-bei-hk",
+   "chars": "見貝",
+   "script": "hk",
+   "hint": "見 an eye 目 on walking legs (see). 貝 the legs are two little strokes under the box (shell, money)."
+  },
+  {
+   "id": "ta-ye",
+   "chars": "他也",
+   "script": "both",
+   "hint": "他 has a person 亻 in front: him. 也 alone: also."
+  },
+  {
+   "id": "jin-ling",
+   "chars": "今令",
+   "script": "both",
+   "hint": "今 ends in a hooked フ (now, today). 令 ends in a kneeling 卩 (order, command)."
+  },
+  {
+   "id": "tian-fu",
+   "chars": "天夫",
+   "script": "both",
+   "hint": "天 the top line is wider and the person stays below it (sky). 夫 the head pokes through the top line (man, husband)."
+  },
+  {
+   "id": "le-zi",
+   "chars": "了子",
+   "script": "both",
+   "hint": "了 just a hook (done). 子 adds a crossbar: a baby with arms out (child)."
+  },
+  {
+   "id": "dong-che-cn",
+   "chars": "东车",
+   "script": "cn",
+   "hint": "东 ends in a hook with a dot on each side (east). 车 ends in a cross 十 with a long base line (car)."
+  },
+  {
+   "id": "qian-gan",
+   "chars": "千干",
+   "script": "both",
+   "hint": "千 starts with a slanting stroke ノ (thousand). 干 two flat lines (dry, do)."
+  }
+ ]
 }

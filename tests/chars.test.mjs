@@ -158,3 +158,22 @@ test('displayFor follows the script setting', () => {
   assert.deepEqual(displayFor(cn, 'hk'), { script: 'hk', zhDisp: '認識' });
   assert.deepEqual(displayFor({ zh: '我', script: 'cn' }, 'cn'), { script: 'cn', zhDisp: '我' });
 });
+
+test('look-alikes: only sets for your script with a character you know; missed ones first', async () => {
+  const { pickLookalike, markLookalike } = await import('../lib/chars.js');
+  const sets = [
+    { id: 'zi-xue', chars: '字学', script: 'cn', hint: '' },
+    { id: 'you-you', chars: '有友', script: 'both', hint: '' },
+    { id: 'ri-mu', chars: '日目', script: 'both', hint: '' },
+  ];
+  const p = { lookalikes: {} };
+  assert.equal(pickLookalike(sets, 'hk', new Set(['学']), p), null, '字/学 only look alike in Simplified');
+  assert.equal(pickLookalike(sets, 'cn', new Set(['学']), p, () => 0).set.id, 'zi-xue');
+  const known = new Set(['有', '日']);
+  markLookalike(p, 'you-you', '友', false);
+  markLookalike(p, 'ri-mu', '日', true);
+  const pick = pickLookalike(sets, 'cn', known, p, () => 0);
+  assert.deepEqual([pick.set.id, pick.target], ['you-you', '友'], 'the set you got wrong, and the character you missed');
+  markLookalike(p, 'you-you', '友', true);
+  assert.equal(p.lookalikes['you-you'].missed, undefined);
+});

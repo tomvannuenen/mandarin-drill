@@ -887,6 +887,15 @@ function promptFor(card, c) {
     ];
   }
   if (c.activity === 'look') {
+    // Once answered, tap any of them to hear it and see its pinyin and meaning.
+    const info = el('p', { class: 'look-info', hidden: '' });
+    const explain = (ch) => {
+      const h = lookInfo(ch);
+      info.hidden = false;
+      info.replaceChildren(el('span', { class: 'look-info-zh', lang }, ch), ' ', renderRoman(el('b'), h.roman, c.deck), h.en ? ` · ${h.en}` : '');
+      if (h.audio) play(h.audio[Object.keys(h.audio)[0]][0]);
+      else speakText(ch, c.deck);
+    };
     return [
       el('button', { class: 'icon-btn huge', 'aria-label': 'Play again', onclick: () => playCurrent() }, icon('play')),
       el('p', { class: 'look-sound' }, renderRoman(el('span'), c.roman, c.deck), c.en ? ` · ${c.en}` : ''),
@@ -894,13 +903,14 @@ function promptFor(card, c) {
         const b = el('button', { class: 'look-opt', lang }, o.ch);
         if (o.right) b.dataset.right = '1';
         b.addEventListener('click', () => {
-          if (c.result) return;
+          if (c.result) return explain(o.ch);
           b.classList.add(o.right ? 'right' : 'wrong');
           if (!o.right) c.missed = true;
           if (o.right) finishLook(c);
         });
         return b;
       })),
+      info,
     ];
   }
   if (c.activity === 'passage') {
@@ -1030,14 +1040,19 @@ function pairsContent(card) {
   };
 }
 
+// One character's pinyin, everyday meaning and recording (if it is a word with one).
+function lookInfo(ch) {
+  const s2t = Object.fromEntries(Object.entries(t2s).map(([t, sm]) => [sm, t]));
+  const h = hanzi[ch] || hanzi[s2t[ch]] || {};
+  return { roman: h.p || '', en: (h.d || '').split(/[;,]/)[0], audio: wordAudio[`mandarin/${s2t[ch] || ch}`] || null };
+}
+
 // Which character? Hear one, see its sound and meaning, pick it from its look-alikes.
 function lookContent(card) {
   const set = lookalikes.find((x) => x.id === card.set);
-  const s2t = Object.fromEntries(Object.entries(t2s).map(([t, sm]) => [sm, t]));
-  const h = hanzi[card.target] || hanzi[s2t[card.target]] || {};
-  const audio = wordAudio[`mandarin/${s2t[card.target] || card.target}`] || null;
+  const { roman, en, audio } = lookInfo(card.target);
   return {
-    activity: 'look', set, target: card.target, zh: card.target, roman: h.p || '', en: (h.d || '').split(/[;,]/)[0],
+    activity: 'look', set, target: card.target, zh: card.target, roman, en,
     words: [], audio, voice: audio ? Object.keys(audio)[0] : null, played: false, deck: 'mandarin', flagged: new Set(),
     options: shuffled([...set.chars]).map((ch) => ({ ch, right: ch === card.target })), ...tracking(),
   };

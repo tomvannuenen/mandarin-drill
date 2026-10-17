@@ -341,6 +341,9 @@ button.note-zh.on { text-decoration-color: var(--seal); text-decoration-style: s
 .look-opt { font-size: 44px; line-height: 1; width: 76px; height: 76px; border-radius: 16px; border: 1px solid var(--rule); background: var(--paper-2); color: inherit; cursor: pointer; }
 .look-opt.right { border-color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent); }
 .look-opt.wrong { border-color: var(--seal); background: var(--seal-soft); opacity: .6; }
+.look-info { margin: 14px 0 0; font-size: 17px; color: var(--ink-2); }
+.look-info[hidden] { display: none; }
+.look-info-zh { font-size: 26px; color: var(--ink); vertical-align: -3px; margin-right: 4px; }
 /* The pattern behind a sentence. */
 .frame-zh { font-size: 30px; margin: 0; }
 .frame-roman { margin: 2px 0 10px; color: var(--ink-3); font-size: 15px; }

@@ -218,6 +218,11 @@ function renderDeckPills() {
   }
 }
 
+const SEAL = {
+  mandarin: { zh: '說', roman: 'shuō', en: 'to speak' },
+  cantonese: { zh: '講', roman: 'gong2', en: 'to speak (Cantonese)' },
+};
+
 // The seal shows the language; turning it over switches to the other one.
 function setFlip(flipped, animate = true) {
   const f = $('deck-flip');
@@ -350,6 +355,10 @@ function renderHome() {
   // A round is short; once the first is done, the seal offers another one with what is left.
   $('start-cta').textContent = progress.stats.dailyDone?.[deck()] === localDate(now) ? 'Another round' : "Start today's practice";
   setFlip(deck() === 'cantonese', false);
+  // What the seal says (tap to hear it).
+  const seal = SEAL[deck()];
+  $('seal-name').replaceChildren(el('span', { lang: LANG_ATTR[deck()] }, seal.zh), ' ', renderRoman(el('b'), seal.roman, deck()), ` · ${seal.en}`);
+  $('seal-name').onclick = () => speakText(seal.zh, deck());
   const other = Object.keys(decks).find((d) => d !== deck());
   $('deck-flip').setAttribute('aria-label', `${LANG_NAME[deck()]}. Turn over for ${LANG_NAME[other] || 'the other language'}`);
   $('rest-block').hidden = !!queue.length;
@@ -1002,6 +1011,13 @@ function lookalikeCard() {
   return { key: `l/${pick.set.id}:look`, id: `l/${pick.set.id}`, type: 'look', activity: true, deck: 'mandarin', set: pick.set.id, target: pick.target };
 }
 
+// Just the tricky phrases: each practised another way first, then said.
+function practiseTricky(list) {
+  const queue = list.map((i) => ({ key: `${i.id}:say`, id: i.id, type: 'say', deck: i.deck }));
+  const tiles = decks[deck()]?.characters !== false;
+  startSession(withActivities({ queue, items: items(), progress, stats: methodStats(progress.log), deck: deck(), tiles, characters: tiles, extras: false }));
+}
+
 function startToday() {
   startSession(dailyQueue(), { convo: readyConversation(), daily: deck() });
 }
@@ -1595,6 +1611,14 @@ function renderMe() {
   } else {
     $('me-lesson').replaceChildren();
   }
+
+  // Phrases you flagged as tricky (or kept replaying), with a one-tap practice round for just those.
+  const tricky = list.filter((i) => isTricky(progress, i.id) && progress.cards[`${i.id}:say`]);
+  $('me-tricky').replaceChildren(...(tricky.length ? [
+    el('p', { class: 'section' }, 'Tricky phrases'),
+    ...tricky.map((i) => trickyRow(i.id, sample(i), d)),
+    el('button', { class: 'btn small', onclick: () => practiseTricky(tricky) }, `Practise ${tricky.length === 1 ? 'it' : `these ${tricky.length}`}`),
+  ] : []));
 
   const spots = troubleSpots(progress, d);
   const info = Object.fromEntries(drills().map((x) => [x.zh, x]));

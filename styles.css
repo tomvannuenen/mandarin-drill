@@ -161,7 +161,9 @@ input.field { width: 100%; margin-bottom: 4px; }
 .seal-flip.flipped .face-front { transform: rotateY(-180deg) rotate(-3deg); }
 .seal-flip.flipped .face-back { transform: rotateY(0deg) rotate(3deg); }
 .seal-flip.instant .face { transition: none; }
-.start-btn { margin-top: 24px; min-width: 230px; font-size: 17px; }
+.seal-name { margin-top: 14px; background: none; border: 0; color: var(--ink-3); font-size: 15px; cursor: pointer; }
+.seal-name b { font-weight: 600; color: var(--ink-2); }
+.start-btn { margin-top: 14px; min-width: 230px; font-size: 17px; }
 .stamp-in { animation: stamp .45s cubic-bezier(.2, 1.6, .4, 1) both; }
 @keyframes stamp { from { transform: scale(2.2) rotate(-20deg); opacity: 0; } to { opacity: 1; } }
 

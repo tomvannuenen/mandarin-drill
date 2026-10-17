@@ -334,3 +334,14 @@ test('orderQueue: builds for met phrases of three words or more, never-built and
   p.cards['built:build'] = grade(null, 3, NOW);
   assert.deepEqual(orderQueue(items, p, 'mandarin').map((c) => c.key), ['ruled:build', 'plain:build', 'pat:build', 'built:build']);
 });
+
+test('a phrase added to your lessons is the next new one, ahead of essentials', () => {
+  const items = [
+    { id: 'essential', kind: 'phrase', deck: 'mandarin', week: 1, tier: 0, words: [{ zh: '你' }] },
+    { id: 'related', kind: 'phrase', deck: 'mandarin', set: 'Extra', words: [{ zh: '多' }, { zh: '少' }] },
+  ];
+  const p = defaults();
+  p.queued = ['related'];
+  const q = buildQueue(items, p, new Date(), 1, 'mandarin');
+  assert.deepEqual(q.map((c) => c.id), ['related']);
+});

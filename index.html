@@ -31,8 +31,12 @@
       <p class="note" id="today-note"></p>
 
       <div class="start" id="start-block">
-        <button class="seal seal-big" id="start" aria-describedby="start-sub"><span lang="zh-Hant-TW">說</span></button>
-        <span class="start-cta" id="start-cta">Start today's practice</span>
+        <!-- The seal is the language: tap it and it turns over (說 Mandarin, 講 Cantonese). -->
+        <button class="seal-flip" id="deck-flip" aria-label="Switch language">
+          <span class="seal seal-big face face-front" aria-hidden="true"><span lang="zh-Hant-TW">說</span></span>
+          <span class="seal seal-big face face-back" aria-hidden="true"><span lang="zh-HK">講</span></span>
+        </button>
+        <button class="btn primary start-btn" id="start" aria-describedby="start-sub"><span id="start-cta">Start today's practice</span></button>
         <span class="start-sub" id="start-sub"></span>
       </div>
       <div class="start" id="rest-block" hidden>

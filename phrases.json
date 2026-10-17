@@ -1,5 +1,5 @@
 {
- "version": "5c6e0f153e21",
+ "version": "0d4a5ec1265e",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -22808,7 +22808,7 @@
    "p": "jué"
   },
   "了": {
-   "d": "clear; to finish",
+   "d": "done (marks a change); to finish",
    "p": "le",
    "c": "乛亅",
    "h": "A child swaddled in blanklets; compare 子"
@@ -22897,7 +22897,7 @@
    "h": "A tree 木 bearing fruit 立"
   },
   "人": {
-   "d": "man, person; people",
+   "d": "person, people",
    "p": "rén",
    "h": "The legs of a human being"
   },
@@ -22942,7 +22942,7 @@
    "h": "One person 人 following another"
   },
   "他": {
-   "d": "other, another; he, she, it",
+   "d": "he, him; other",
    "p": "tā",
    "c": "亻也",
    "h": "An additional, \"also\" 也  person 亻"
@@ -22965,7 +22965,7 @@
    "c": "人"
   },
   "们": {
-   "d": "plural marker for pronouns and some nouns",
+   "d": "(plural ending: 我们 we)",
    "p": "men",
    "c": "亻门",
    "s": "亻",
@@ -23043,7 +23043,7 @@
    "ph": "固"
   },
   "們": {
-   "d": "plural marker for pronouns and some nouns",
+   "d": "(plural ending: 我們 we)",
    "p": "men",
    "c": "亻門",
    "s": "亻",
@@ -23070,7 +23070,7 @@
    "ph": "亭"
   },
   "儿": {
-   "d": "son, child",
+   "d": "child; son",
    "p": "ér",
    "c": "丿乚",
    "h": "Simplified form of 兒, a picture of a child; compare 人"
@@ -23112,7 +23112,7 @@
    "h": "A beast 兄 with two horns 丷"
   },
   "兒": {
-   "d": "son, child",
+   "d": "child; son",
    "p": "ér",
    "c": "臼儿",
    "s": "儿",
@@ -23158,7 +23158,7 @@
    "h": "Two hands 八 holding one object 廾"
   },
   "关": {
-   "d": "frontier pass; to close, to shut",
+   "d": "to close, to turn off; pass",
    "p": "guān",
    "c": "丷天"
   },
@@ -23257,7 +23257,7 @@
    "ph": "東"
   },
   "几": {
-   "d": "small table; how many",
+   "d": "how many; small table",
    "p": "jǐ",
    "c": "丿乙",
    "h": "A small table; compare 丌"
@@ -23648,7 +23648,7 @@
    "c": "丈口"
   },
   "吗": {
-   "d": "final interrogative particle",
+   "d": "(question particle: yes/no?)",
    "p": "ma",
    "c": "口马",
    "s": "口",
@@ -23813,7 +23813,7 @@
    "h": "口 marks a spoken Cantonese word"
   },
   "嗎": {
-   "d": "final interrogative particle",
+   "d": "(question particle: yes/no?)",
    "p": "ma",
    "c": "口馬",
    "s": "口",
@@ -24028,12 +24028,6 @@
    "c": "大丶",
    "h": "A giant 大 with a normal-sized man 丶 for scale"
   },
-  "夫": {
-   "d": "man, husband; worker",
-   "p": "fū",
-   "c": "一大",
-   "h": "A man 大 wearing a coming-of-age hairpin 一"
-  },
   "夬": {
    "d": "decisive, certain; parted",
    "p": "guài",
@@ -24120,7 +24114,7 @@
    "ph": "馬"
   },
   "子": {
-   "d": "son, child; seed, egg",
+   "d": "child; son",
    "p": "zi",
    "c": "了一",
    "h": "A child in a wrap, with outstretched arms but bundled legs"
@@ -24153,6 +24147,11 @@
    "d": "roof; house",
    "p": "gài",
    "c": "丶冖"
+  },
+  "它": {
+   "d": "it; other",
+   "p": "tā",
+   "c": "宀匕"
   },
   "完": {
    "d": "to complete, to finish, to settle; whole",
@@ -24326,10 +24325,6 @@
    "c": "乚",
    "h": "A loom woven with thread"
   },
-  "已": {
-   "d": "already; finished",
-   "p": "yǐ"
-  },
   "巳": {
    "d": "the hours from 9 to 11; 6th terrestrial branch",
    "p": "sì",
@@ -24397,7 +24392,7 @@
    "p": "yāo"
   },
   "幾": {
-   "d": "small table; how many",
+   "d": "how many; small table",
    "p": "jǐ",
    "c": "幺幺戍",
    "h": "A very small 幺 table 戍"
@@ -24564,6 +24559,13 @@
    "p": "nín",
    "c": "你心",
    "h": "You 你 said with affection 心"
+  },
+  "情": {
+   "d": "emotion, feeling, sentiment",
+   "p": "qíng",
+   "c": "忄青",
+   "s": "忄",
+   "ph": "青"
   },
   "想": {
    "d": "to believe, to wish for",
@@ -24947,12 +24949,6 @@
    "c": "一木",
    "h": "A wheat plant that has not yet borne fruit; compare 來"
   },
-  "末": {
-   "d": "end, final, last; insignificant",
-   "p": "mò",
-   "c": "木一",
-   "h": "The top 一 of a tree 木"
-  },
   "本": {
    "d": "root, origin, source; basis",
    "p": "běn",
@@ -25233,12 +25229,26 @@
    "s": "氵",
    "ph": "各"
   },
+  "清": {
+   "d": "clean, pure; clear, distinct",
+   "p": "qīng",
+   "c": "氵青",
+   "s": "氵",
+   "ph": "青"
+  },
   "港": {
    "d": "port, harbor, bay; Hong Kong",
    "p": "gǎng",
    "c": "氵巷",
    "s": "氵",
    "ph": "巷"
+  },
+  "渴": {
+   "d": "thirsty, parched; to yearn, to pine for",
+   "p": "kě",
+   "c": "氵曷",
+   "s": "氵",
+   "ph": "曷"
   },
   "漂": {
    "d": "to drift, to float; to be tossed about",
@@ -25353,7 +25363,7 @@
    "p": "yá"
   },
   "牛": {
-   "d": "ox, cow, bull",
+   "d": "cow, ox",
    "p": "niú",
    "h": "An ox's horned head"
   },
@@ -26150,7 +26160,7 @@
    "h": "A tongue sticking out of a mouth 口"
   },
   "話": {
-   "d": "talk, speech; language, dialect",
+   "d": "words, speech",
    "p": "huà",
    "c": "言舌",
    "h": "A spoken 言 tongue 舌; 舌 also provides the pronunciation"
@@ -26250,7 +26260,7 @@
    "ph": "只"
   },
   "话": {
-   "d": "talk, speech; language, dialect",
+   "d": "words, speech",
    "p": "huà",
    "c": "讠舌",
    "h": "A spoken 讠 tongue 舌; 舌 also provides the pronunciation"
@@ -26382,13 +26392,13 @@
    "h": "A pregnant woman"
   },
   "車": {
-   "d": "cart, vehicle; to move in a cart",
+   "d": "car, vehicle",
    "p": "chē",
    "c": "日",
    "h": "A cart with two wheels, seen from above"
   },
   "车": {
-   "d": "cart, vehicle; to move in a cart",
+   "d": "car, vehicle",
    "p": "chē",
    "c": "七十",
    "h": "Simplified form of 車, a cart with two wheels, seen from above"
@@ -26613,7 +26623,7 @@
    "ph": "戋"
   },
   "門": {
-   "d": "gate, door, entrance, opening",
+   "d": "door, gate",
    "p": "mén",
    "h": "An open doorway or gate"
   },
@@ -26638,14 +26648,14 @@
    "ph": "柬"
   },
   "關": {
-   "d": "frontier pass; to close, to shut",
+   "d": "to close, to turn off; pass",
    "p": "guān",
    "c": "門幺幺丱",
    "s": "門",
    "ph": "丱"
   },
   "门": {
-   "d": "gate, door, entrance, opening",
+   "d": "door, gate",
    "p": "mén",
    "c": "丶丨",
    "h": "An open doorway or gate"
@@ -30332,7 +30342,7 @@
     "script": "cn",
     "zhDisp": "话",
     "zhS": "话",
-    "en": "talk, speech; language, dialect",
+    "en": "words, speech",
     "lesson": 13,
     "single": true,
     "from": "打電話"
@@ -30731,6 +30741,18 @@
  ],
  "lookalikes": [
   {
+   "id": "ju-ke",
+   "chars": "句可",
+   "script": "both",
+   "hint": "句 has a hook 勹 wrapped around the mouth 口 from above (a sentence: 这句话). 可 has a straight line on top and the hook 亅 standing to the right of 口 (can: 可以)."
+  },
+  {
+   "id": "zai-zai",
+   "chars": "在再",
+   "script": "both",
+   "hint": "Both zài. 在 has the ground 土 inside: being somewhere (at, in). 再 is a stack of layers with a line through it: one more time (again: 再见)."
+  },
+  {
    "id": "zi-xue",
    "chars": "字学",
    "script": "cn",
@@ -30773,34 +30795,10 @@
    "hint": "日 one line inside (the sun). 目 two lines inside and taller (an eye on its side)."
   },
   {
-   "id": "ji-yi",
-   "chars": "己已",
-   "script": "both",
-   "hint": "己 open at the top-left (self). 已 half closed (already). The more closed, the more done."
-  },
-  {
-   "id": "wei-mo",
-   "chars": "未末",
-   "script": "both",
-   "hint": "未 the top line is shorter: the tree hasn't grown yet (not yet). 末 the top line is longer: the tip of the branch (end)."
-  },
-  {
-   "id": "tu-shi",
-   "chars": "土士",
-   "script": "both",
-   "hint": "土 the bottom line is longer: the ground is wide (earth). 士 the top line is longer: a scholar's broad shoulders."
-  },
-  {
    "id": "wu-niu",
    "chars": "午牛",
    "script": "both",
    "hint": "午 the middle stroke stops at the top line (noon). 牛 it pokes through like a horn (cow)."
-  },
-  {
-   "id": "wang-yu-zhu",
-   "chars": "王玉主",
-   "script": "both",
-   "hint": "王 three lines and a post (king). 玉 a dot of jade at the bottom right (jade). 主 a dot on top, the flame of a lamp (master)."
   },
   {
    "id": "wen-jian-cn",
@@ -30857,18 +30855,6 @@
    "hint": "他 has a person 亻 in front: him. 也 alone: also."
   },
   {
-   "id": "jin-ling",
-   "chars": "今令",
-   "script": "both",
-   "hint": "今 ends in a hooked フ (now, today). 令 ends in a kneeling 卩 (order, command)."
-  },
-  {
-   "id": "tian-fu",
-   "chars": "天夫",
-   "script": "both",
-   "hint": "天 the top line is wider and the person stays below it (sky). 夫 the head pokes through the top line (man, husband)."
-  },
-  {
    "id": "le-zi",
    "chars": "了子",
    "script": "both",
@@ -30881,10 +30867,64 @@
    "hint": "东 ends in a hook with a dot on each side (east). 车 ends in a cross 十 with a long base line (car)."
   },
   {
-   "id": "qian-gan",
-   "chars": "千干",
+   "id": "ta-ta-ta",
+   "chars": "他她它",
    "script": "both",
-   "hint": "千 starts with a slanting stroke ノ (thousand). 干 two flat lines (dry, do)."
+   "hint": "All tā. 他 person 亻 (he). 她 woman 女 (she). 它 roof 宀 over a curl, for things (it)."
+  },
+  {
+   "id": "ma-ma-ma-cn",
+   "chars": "吗妈马",
+   "script": "cn",
+   "hint": "All say 马 (horse) for the sound. 吗 has a mouth 口: the spoken question mark. 妈 has woman 女: mum."
+  },
+  {
+   "id": "ma-ma-ma-hk",
+   "chars": "嗎媽馬",
+   "script": "hk",
+   "hint": "All say 馬 (horse) for the sound. 嗎 has a mouth 口: the spoken question mark. 媽 has woman 女: mum."
+  },
+  {
+   "id": "men-men-cn",
+   "chars": "门们",
+   "script": "cn",
+   "hint": "门 is the door. 们 puts a person 亻 in front: people at the door, the plural ending (我们, 你们)."
+  },
+  {
+   "id": "men-men-hk",
+   "chars": "門們",
+   "script": "hk",
+   "hint": "門 is the door. 們 puts a person 亻 in front: people at the door, the plural ending (我們, 你們)."
+  },
+  {
+   "id": "shuo-hua-cn",
+   "chars": "说话",
+   "script": "cn",
+   "hint": "Both have speech 讠 on the left. 说 (say) has 兑 on the right, with two little horns on top. 话 (words) has 舌, the tongue."
+  },
+  {
+   "id": "shuo-hua-hk",
+   "chars": "說話",
+   "script": "hk",
+   "hint": "Both have speech 言 on the left. 說 (say) has 兌 on the right, with two little horns on top. 話 (words) has 舌, the tongue."
+  },
+  {
+   "id": "he-ke",
+   "chars": "喝渴",
+   "script": "both",
+   "hint": "Same right side. 喝 has a mouth 口: to drink. 渴 has water 氵: thirsty, wanting water."
+  },
+  {
+   "id": "qing-qing-qing-cn",
+   "chars": "请情清",
+   "script": "cn",
+   "hint": "Same 青 for the sound; the left part gives the meaning. 请 speech 讠: please, ask. 情 heart 忄: feeling. 清 water 氵: clear."
+  },
+  {
+   "id": "qing-qing-qing-hk",
+   "chars": "請情清",
+   "script": "hk",
+   "hint": "Same 青 for the sound; the left part gives the meaning. 請 speech 言: please, ask. 情 heart 忄: feeling. 清 water 氵: clear."
   }
  ]
 }

@@ -1,6 +1,8 @@
 {
-  "_comment": "Characters that are easy to mix up. script: both (the same in Traditional and Simplified), cn (only alike in Simplified), hk (only alike in Traditional). hint: how to tell them apart, one short line per character.",
+  "_comment": "Characters that are easy to mix up. script: both (the same in Traditional and Simplified), cn (only alike in Simplified), hk (only alike in Traditional). hint: how to tell them apart. Only frequent characters: a set earns its place when the characters come up all the time.",
   "sets": [
+    {"id": "ju-ke", "chars": "句可", "script": "both", "hint": "句 has a hook 勹 wrapped around the mouth 口 from above (a sentence: 这句话). 可 has a straight line on top and the hook 亅 standing to the right of 口 (can: 可以)."},
+    {"id": "zai-zai", "chars": "在再", "script": "both", "hint": "Both zài. 在 has the ground 土 inside: being somewhere (at, in). 再 is a stack of layers with a line through it: one more time (again: 再见)."},
     {"id": "zi-xue", "chars": "字学", "script": "cn", "hint": "字 has a roof 宀 (a child at home learning letters). 学 has three strokes ⺍ on top, like sparks of thought."},
     {"id": "er-ji", "chars": "儿几", "script": "cn", "hint": "儿 is two separate strokes with nothing on top: two legs (child). 几 has a lid joining them across the top: a little table (how many)."},
     {"id": "da-tian-tai-guan", "chars": "大天太关", "script": "cn", "hint": "大 a person with arms out (big). 天 one line above the head (sky). 太 a dot underneath (too, very). 关 two horns 丷 on top of 天 (close)."},
@@ -8,11 +10,7 @@
     {"id": "you-you", "chars": "有友", "script": "both", "hint": "有 has 月 (meat) in a hand: to have. 友 has 又 (a second hand): two hands together, a friend."},
     {"id": "ren-ru-ba", "chars": "人入八", "script": "both", "hint": "人 the left stroke is longer (a person striding). 入 the right stroke is longer (going in). 八 the strokes don't touch (splitting apart, eight)."},
     {"id": "ri-mu", "chars": "日目", "script": "both", "hint": "日 one line inside (the sun). 目 two lines inside and taller (an eye on its side)."},
-    {"id": "ji-yi", "chars": "己已", "script": "both", "hint": "己 open at the top-left (self). 已 half closed (already). The more closed, the more done."},
-    {"id": "wei-mo", "chars": "未末", "script": "both", "hint": "未 the top line is shorter: the tree hasn't grown yet (not yet). 末 the top line is longer: the tip of the branch (end)."},
-    {"id": "tu-shi", "chars": "土士", "script": "both", "hint": "土 the bottom line is longer: the ground is wide (earth). 士 the top line is longer: a scholar's broad shoulders."},
     {"id": "wu-niu", "chars": "午牛", "script": "both", "hint": "午 the middle stroke stops at the top line (noon). 牛 it pokes through like a horn (cow)."},
-    {"id": "wang-yu-zhu", "chars": "王玉主", "script": "both", "hint": "王 three lines and a post (king). 玉 a dot of jade at the bottom right (jade). 主 a dot on top, the flame of a lamp (master)."},
     {"id": "wen-jian-cn", "chars": "问间", "script": "cn", "hint": "Both sit in a door 门. 问 has a mouth 口 in it: asking at the door. 间 has the sun 日: light through the gap (between, room)."},
     {"id": "wen-jian-hk", "chars": "問間", "script": "hk", "hint": "Both sit in a door 門. 問 has a mouth 口 in it: asking at the door. 間 has the sun 日: light through the gap (between, room)."},
     {"id": "mai-mai-cn", "chars": "买卖", "script": "cn", "hint": "卖 has an extra 十 on top: you add something on top when you sell (mài). 买 without it is buy (mǎi)."},
@@ -22,10 +20,17 @@
     {"id": "jian-bei-cn", "chars": "见贝", "script": "cn", "hint": "见 the legs open out to the right (see). 贝 the legs are a small 人 under the box (shell, money)."},
     {"id": "jian-bei-hk", "chars": "見貝", "script": "hk", "hint": "見 an eye 目 on walking legs (see). 貝 the legs are two little strokes under the box (shell, money)."},
     {"id": "ta-ye", "chars": "他也", "script": "both", "hint": "他 has a person 亻 in front: him. 也 alone: also."},
-    {"id": "jin-ling", "chars": "今令", "script": "both", "hint": "今 ends in a hooked フ (now, today). 令 ends in a kneeling 卩 (order, command)."},
-    {"id": "tian-fu", "chars": "天夫", "script": "both", "hint": "天 the top line is wider and the person stays below it (sky). 夫 the head pokes through the top line (man, husband)."},
     {"id": "le-zi", "chars": "了子", "script": "both", "hint": "了 just a hook (done). 子 adds a crossbar: a baby with arms out (child)."},
     {"id": "dong-che-cn", "chars": "东车", "script": "cn", "hint": "东 ends in a hook with a dot on each side (east). 车 ends in a cross 十 with a long base line (car)."},
-    {"id": "qian-gan", "chars": "千干", "script": "both", "hint": "千 starts with a slanting stroke ノ (thousand). 干 two flat lines (dry, do)."}
+    {"id": "ta-ta-ta", "chars": "他她它", "script": "both", "hint": "All tā. 他 person 亻 (he). 她 woman 女 (she). 它 roof 宀 over a curl, for things (it)."},
+    {"id": "ma-ma-ma-cn", "chars": "吗妈马", "script": "cn", "hint": "All say 马 (horse) for the sound. 吗 has a mouth 口: the spoken question mark. 妈 has woman 女: mum."},
+    {"id": "ma-ma-ma-hk", "chars": "嗎媽馬", "script": "hk", "hint": "All say 馬 (horse) for the sound. 嗎 has a mouth 口: the spoken question mark. 媽 has woman 女: mum."},
+    {"id": "men-men-cn", "chars": "门们", "script": "cn", "hint": "门 is the door. 们 puts a person 亻 in front: people at the door, the plural ending (我们, 你们)."},
+    {"id": "men-men-hk", "chars": "門們", "script": "hk", "hint": "門 is the door. 們 puts a person 亻 in front: people at the door, the plural ending (我們, 你們)."},
+    {"id": "shuo-hua-cn", "chars": "说话", "script": "cn", "hint": "Both have speech 讠 on the left. 说 (say) has 兑 on the right, with two little horns on top. 话 (words) has 舌, the tongue."},
+    {"id": "shuo-hua-hk", "chars": "說話", "script": "hk", "hint": "Both have speech 言 on the left. 說 (say) has 兌 on the right, with two little horns on top. 話 (words) has 舌, the tongue."},
+    {"id": "he-ke", "chars": "喝渴", "script": "both", "hint": "Same right side. 喝 has a mouth 口: to drink. 渴 has water 氵: thirsty, wanting water."},
+    {"id": "qing-qing-qing-cn", "chars": "请情清", "script": "cn", "hint": "Same 青 for the sound; the left part gives the meaning. 请 speech 讠: please, ask. 情 heart 忄: feeling. 清 water 氵: clear."},
+    {"id": "qing-qing-qing-hk", "chars": "請情清", "script": "hk", "hint": "Same 青 for the sound; the left part gives the meaning. 請 speech 言: please, ask. 情 heart 忄: feeling. 清 water 氵: clear."}
   ]
 }

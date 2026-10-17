@@ -10,6 +10,7 @@
   --seal: #b8321f;
   --seal-soft: #f3ddd6;
   --seal-ink: #fff6ee;
+  --jade: #1f6e5a;
   --good: #2e7d4f;
   --t1: #c0392b;
   --t2: #c97d0a;
@@ -38,6 +39,7 @@
     --seal: #d4553f;
     --seal-soft: #3f2620;
     --seal-ink: #1b1916;
+    --jade: #3f9c83;
     --good: #5cc97c;
     --t1: #ff7a6b;
     --t2: #f0b04a;
@@ -151,6 +153,15 @@ input.field { width: 100%; margin-bottom: 4px; }
 .seal-mid { width: 76px; height: 76px; font-size: 34px; border-radius: 16px; transform: rotate(-4deg);
   box-shadow: inset 0 0 0 3px var(--seal), inset 0 0 0 5px var(--seal-ink); }
 .seal-small { width: 34px; height: 34px; font-size: 17px; border-radius: 7px; transform: rotate(8deg); flex: none; }
+.seal-flip { position: relative; width: 156px; height: 156px; perspective: 900px; background: none; border: 0; padding: 0; cursor: pointer; }
+.seal-flip .face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; transition: transform .6s cubic-bezier(.3, 1.25, .5, 1); }
+.seal-flip .face-front { transform: rotateY(0deg) rotate(-3deg); }
+.seal-flip .face-back { transform: rotateY(180deg) rotate(3deg); background: var(--jade);
+  box-shadow: inset 0 0 0 4px var(--jade), inset 0 0 0 7px var(--seal-ink), 0 12px 28px rgba(31, 110, 90, .28); }
+.seal-flip.flipped .face-front { transform: rotateY(-180deg) rotate(-3deg); }
+.seal-flip.flipped .face-back { transform: rotateY(0deg) rotate(3deg); }
+.seal-flip.instant .face { transition: none; }
+.start-btn { margin-top: 24px; min-width: 230px; font-size: 17px; }
 .stamp-in { animation: stamp .45s cubic-bezier(.2, 1.6, .4, 1) both; }
 @keyframes stamp { from { transform: scale(2.2) rotate(-20deg); opacity: 0; } to { opacity: 1; } }
 
@@ -297,7 +308,13 @@ button.note-zh.on { text-decoration-color: var(--seal); text-decoration-style: s
 .pairs-col { display: grid; gap: 8px; }
 .pair { min-height: 54px; padding: 8px 10px; border-radius: 14px; border: 1px solid var(--rule); background: var(--paper-2); color: inherit; font-family: var(--sans); font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; }
 .pair.on { border-color: var(--ink); background: var(--paper-3); }
-.pair.done { opacity: .35; border-color: var(--good); }
+.pair.done { opacity: .55; border-color: var(--good); }
+.pair-meaning.done { opacity: 1; }
+.pair-done { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.pair-zh { font-size: 24px; line-height: 1.2; color: var(--ink); }
+.pair-done small { font-size: 12px; color: var(--ink-3); }
+.big-zh .say-zh { font-size: 26px; color: var(--ink); margin-top: 2px; }
+.add-lesson { display: block; margin-top: 8px; }
 .pair.wrong { border-color: var(--seal); background: var(--seal-soft); }
 .lvl { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 7px; vertical-align: middle; flex: none; }
 .lvl-solid { background: var(--good); }

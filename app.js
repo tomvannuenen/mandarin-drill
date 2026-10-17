@@ -218,6 +218,15 @@ function renderDeckPills() {
   }
 }
 
+// The seal shows the language; turning it over switches to the other one.
+function setFlip(flipped, animate = true) {
+  const f = $('deck-flip');
+  if (f.classList.contains('flipped') === flipped) return;
+  if (!animate) f.classList.add('instant');
+  f.classList.toggle('flipped', flipped);
+  if (!animate) requestAnimationFrame(() => requestAnimationFrame(() => f.classList.remove('instant')));
+}
+
 function switchDeck() {
   const keys = Object.keys(decks);
   progress.settings.deck = keys[(keys.indexOf(deck()) + 1) % keys.length];
@@ -340,6 +349,9 @@ function renderHome() {
   $('start-block').hidden = !queue.length;
   // A round is short; once the first is done, the seal offers another one with what is left.
   $('start-cta').textContent = progress.stats.dailyDone?.[deck()] === localDate(now) ? 'Another round' : "Start today's practice";
+  setFlip(deck() === 'cantonese', false);
+  const other = Object.keys(decks).find((d) => d !== deck());
+  $('deck-flip').setAttribute('aria-label', `${LANG_NAME[deck()]}. Turn over for ${LANG_NAME[other] || 'the other language'}`);
   $('rest-block').hidden = !!queue.length;
   if (queue.length) {
     const parts = [
@@ -491,6 +503,27 @@ function renderWords(c) {
   );
 }
 
+// A related phrase in a note that you haven't learned: one tap puts it in your next lesson. A phrase that has
+// no card yet becomes a wish (made into a card on the Mac).
+function addToLessons(part, g, d) {
+  const bare = (zh) => zh.replace(/[，,。？?！!…]/g, '');
+  const item = allItems.find((i) => i.deck === d && i.kind !== 'pattern' && bare(i.zh) === bare(part));
+  if (item && progress.cards[`${item.id}:say`]) return '';
+  const wished = (progress.wishes || []).some((w) => w.text.startsWith(part));
+  const added = item ? progress.queued?.includes(item.id) : wished;
+  const b = el('button', { class: 'link small add-lesson' }, added ? 'In your next lesson ✓' : '+ Add to my lessons');
+  b.disabled = added;
+  b.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (item) progress.queued = [...new Set([...(progress.queued || []), item.id])];
+    else addWish(progress, `${part} (${g.e})`, 'From a note', d, new Date());
+    persist();
+    b.textContent = item ? 'In your next lesson ✓' : 'Added to your wishes ✓';
+    b.disabled = true;
+  });
+  return b;
+}
+
 // A note, with its Chinese tappable: a tap says it and shows its pinyin and meaning under the note.
 const NOTE_RUN = /([㐀-鿿]+(?:…[㐀-鿿]+)*)/;
 function noteNodes(text, d) {
@@ -500,7 +533,8 @@ function noteNodes(text, d) {
     for (const x of buttons) x.classList.remove('on');
     b.classList.add('on');
     out.hidden = false;
-    out.replaceChildren(el('span', { class: 'zh-inline', lang: zl(d) }, zs(part, d)), ' ', renderRoman(el('b'), g.r, g.k || d), ` = ${g.e}`);
+    out.replaceChildren(el('span', { class: 'zh-inline', lang: zl(d) }, zs(part, d)), ' ', renderRoman(el('b'), g.r, g.k || d), ` = ${g.e}`,
+      ...(g.k && g.k !== d ? [] : [addToLessons(part, g, d)]));
   };
   const nodes = text.split(NOTE_RUN).map((part, i) => {
     if (!(i % 2)) return part;
@@ -775,6 +809,7 @@ function drawCard(card, c) {
   $('a-note').replaceChildren(...(c.note ? noteNodes(c.note, c.deck) : []));
   $('a-note').hidden = !c.note;
   $('a-example').hidden = !c.example;
+  $('a-example').classList.remove('big-zh');
   $('a-example').replaceChildren(...(c.example ? [el('p', { class: 'section' }, c.example.inWord ? 'Hear it in its word' : 'Hear it in a sentence'), sayLine(c.example, c.deck)] : []));
   // Word order: the rule behind the sentence, and after a build the English words in Chinese order.
   $('a-order').replaceChildren(...(c.order ? mixedText(c.order, c.deck) : []));
@@ -1079,7 +1114,10 @@ function renderPairs(c) {
       return b;
     })),
     el('div', { class: 'pairs-col' }, ...c.meanings.map((r) => {
-      const b = el('button', { class: `pair pair-meaning${r.done ? ' done' : ''}` }, r.entry.en);
+      // Once matched, the meaning shows its characters, large.
+      const b = el('button', { class: `pair pair-meaning${r.done ? ' done' : ''}` }, r.done
+        ? el('span', { class: 'pair-done' }, el('span', { class: 'pair-zh', lang: zl(c.deck) }, zs(r.entry.zh, c.deck)), el('small', {}, r.entry.en))
+        : r.entry.en);
       b.addEventListener('click', () => {
         if (r.done || !c.picked) return;
         if (c.picked === r) {
@@ -1142,6 +1180,7 @@ function finishActivity(rating) {
   $('continue').hidden = false;
   if (c.rows) {
     $('a-example').hidden = false;
+    $('a-example').classList.add('big-zh');
     $('a-example').replaceChildren(...c.rows.map((r) => sayLine(r.entry, c.deck)));
     return;
   }
@@ -1667,6 +1706,10 @@ function wire() {
     if (e.target.closest('.deck-pill')) switchDeck();
   });
   $('start').addEventListener('click', startToday);
+  $('deck-flip').addEventListener('click', () => {
+    setFlip(!$('deck-flip').classList.contains('flipped'));
+    setTimeout(switchDeck, 420);
+  });
   $('again').addEventListener('click', startToday);
   $('more').addEventListener('click', () => { extraNew += decks[deck()]?.newPerDay || 5; startToday(); });
   $('quit').addEventListener('click', () => { session = null; show('home'); });

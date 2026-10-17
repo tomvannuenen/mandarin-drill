@@ -272,7 +272,7 @@
 },
 "了": {
 "c": "乛亅",
-"d": "clear; to finish",
+"d": "done (marks a change); to finish",
 "h": "A child swaddled in blanklets; compare 子",
 "p": "le"
 },
@@ -360,7 +360,7 @@
 "p": "qīn"
 },
 "人": {
-"d": "man, person; people",
+"d": "person, people",
 "h": "The legs of a human being",
 "p": "rén"
 },
@@ -406,7 +406,7 @@
 },
 "他": {
 "c": "亻也",
-"d": "other, another; he, she, it",
+"d": "he, him; other",
 "h": "An additional, \"also\" 也  person 亻",
 "p": "tā"
 },
@@ -429,7 +429,7 @@
 },
 "们": {
 "c": "亻门",
-"d": "plural marker for pronouns and some nouns",
+"d": "(plural ending: 我们 we)",
 "p": "men",
 "ph": "门",
 "s": "亻"
@@ -507,7 +507,7 @@
 },
 "們": {
 "c": "亻門",
-"d": "plural marker for pronouns and some nouns",
+"d": "(plural ending: 我們 we)",
 "p": "men",
 "ph": "門",
 "s": "亻"
@@ -534,7 +534,7 @@
 },
 "儿": {
 "c": "丿乚",
-"d": "son, child",
+"d": "child; son",
 "h": "Simplified form of 兒, a picture of a child; compare 人",
 "p": "ér"
 },
@@ -576,7 +576,7 @@
 },
 "兒": {
 "c": "臼儿",
-"d": "son, child",
+"d": "child; son",
 "p": "ér",
 "ph": "儿",
 "s": "儿"
@@ -622,7 +622,7 @@
 },
 "关": {
 "c": "丷天",
-"d": "frontier pass; to close, to shut",
+"d": "to close, to turn off; pass",
 "p": "guān"
 },
 "兴": {
@@ -721,7 +721,7 @@
 },
 "几": {
 "c": "丿乙",
-"d": "small table; how many",
+"d": "how many; small table",
 "h": "A small table; compare 丌",
 "p": "jǐ"
 },
@@ -1112,7 +1112,7 @@
 },
 "吗": {
 "c": "口马",
-"d": "final interrogative particle",
+"d": "(question particle: yes/no?)",
 "p": "ma",
 "ph": "马",
 "s": "口"
@@ -1277,7 +1277,7 @@
 },
 "嗎": {
 "c": "口馬",
-"d": "final interrogative particle",
+"d": "(question particle: yes/no?)",
 "p": "ma",
 "ph": "馬",
 "s": "口"
@@ -1491,12 +1491,6 @@
 "h": "A giant 大 with a normal-sized man 丶 for scale",
 "p": "tài"
 },
-"夫": {
-"c": "一大",
-"d": "man, husband; worker",
-"h": "A man 大 wearing a coming-of-age hairpin 一",
-"p": "fū"
-},
 "夬": {
 "c": "大",
 "d": "decisive, certain; parted",
@@ -1584,7 +1578,7 @@
 },
 "子": {
 "c": "了一",
-"d": "son, child; seed, egg",
+"d": "child; son",
 "h": "A child in a wrap, with outstretched arms but bundled legs",
 "p": "zi"
 },
@@ -1616,6 +1610,11 @@
 "c": "丶冖",
 "d": "roof; house",
 "p": "gài"
+},
+"它": {
+"c": "宀匕",
+"d": "it; other",
+"p": "tā"
 },
 "完": {
 "c": "宀元",
@@ -1789,10 +1788,6 @@
 "h": "A loom woven with thread",
 "p": "jǐ"
 },
-"已": {
-"d": "already; finished",
-"p": "yǐ"
-},
 "巳": {
 "c": "乚",
 "d": "the hours from 9 to 11; 6th terrestrial branch",
@@ -1861,7 +1856,7 @@
 },
 "幾": {
 "c": "幺幺戍",
-"d": "small table; how many",
+"d": "how many; small table",
 "h": "A very small 幺 table 戍",
 "p": "jǐ"
 },
@@ -2027,6 +2022,13 @@
 "d": "honorific for 'you'",
 "h": "You 你 said with affection 心",
 "p": "nín"
+},
+"情": {
+"c": "忄青",
+"d": "emotion, feeling, sentiment",
+"p": "qíng",
+"ph": "青",
+"s": "忄"
 },
 "想": {
 "c": "相心",
@@ -2410,12 +2412,6 @@
 "h": "A wheat plant that has not yet borne fruit; compare 來",
 "p": "wèi"
 },
-"末": {
-"c": "木一",
-"d": "end, final, last; insignificant",
-"h": "The top 一 of a tree 木",
-"p": "mò"
-},
 "本": {
 "c": "木一",
 "d": "root, origin, source; basis",
@@ -2696,11 +2692,25 @@
 "ph": "各",
 "s": "氵"
 },
+"清": {
+"c": "氵青",
+"d": "clean, pure; clear, distinct",
+"p": "qīng",
+"ph": "青",
+"s": "氵"
+},
 "港": {
 "c": "氵巷",
 "d": "port, harbor, bay; Hong Kong",
 "p": "gǎng",
 "ph": "巷",
+"s": "氵"
+},
+"渴": {
+"c": "氵曷",
+"d": "thirsty, parched; to yearn, to pine for",
+"p": "kě",
+"ph": "曷",
 "s": "氵"
 },
 "漂": {
@@ -2816,7 +2826,7 @@
 "p": "yá"
 },
 "牛": {
-"d": "ox, cow, bull",
+"d": "cow, ox",
 "h": "An ox's horned head",
 "p": "niú"
 },
@@ -3614,7 +3624,7 @@
 },
 "話": {
 "c": "言舌",
-"d": "talk, speech; language, dialect",
+"d": "words, speech",
 "h": "A spoken 言 tongue 舌; 舌 also provides the pronunciation",
 "p": "huà"
 },
@@ -3714,7 +3724,7 @@
 },
 "话": {
 "c": "讠舌",
-"d": "talk, speech; language, dialect",
+"d": "words, speech",
 "h": "A spoken 讠 tongue 舌; 舌 also provides the pronunciation",
 "p": "huà"
 },
@@ -3846,13 +3856,13 @@
 },
 "車": {
 "c": "日",
-"d": "cart, vehicle; to move in a cart",
+"d": "car, vehicle",
 "h": "A cart with two wheels, seen from above",
 "p": "chē"
 },
 "车": {
 "c": "七十",
-"d": "cart, vehicle; to move in a cart",
+"d": "car, vehicle",
 "h": "Simplified form of 車, a cart with two wheels, seen from above",
 "p": "chē"
 },
@@ -4076,7 +4086,7 @@
 "s": "钅"
 },
 "門": {
-"d": "gate, door, entrance, opening",
+"d": "door, gate",
 "h": "An open doorway or gate",
 "p": "mén"
 },
@@ -4102,14 +4112,14 @@
 },
 "關": {
 "c": "門幺幺丱",
-"d": "frontier pass; to close, to shut",
+"d": "to close, to turn off; pass",
 "p": "guān",
 "ph": "丱",
 "s": "門"
 },
 "门": {
 "c": "丶丨",
-"d": "gate, door, entrance, opening",
+"d": "door, gate",
 "h": "An open doorway or gate",
 "p": "mén"
 },

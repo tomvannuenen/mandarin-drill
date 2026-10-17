@@ -1,5 +1,5 @@
 {
- "version": "0d4a5ec1265e",
+ "version": "e6178371a3be",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -30745,6 +30745,18 @@
    "chars": "句可",
    "script": "both",
    "hint": "句 has a hook 勹 wrapped around the mouth 口 from above (a sentence: 这句话). 可 has a straight line on top and the hook 亅 standing to the right of 口 (can: 可以)."
+  },
+  {
+   "id": "bei-kuai-cn",
+   "chars": "杯块",
+   "script": "cn",
+   "hint": "杯 has wood 木 on the left (a wooden cup: 一杯咖啡). 块 has earth 土 (a lump of earth, a piece; with money, a dollar: 一块钱)."
+  },
+  {
+   "id": "bei-kuai-hk",
+   "chars": "杯塊",
+   "script": "hk",
+   "hint": "杯 has wood 木 on the left (a wooden cup: 一杯咖啡). 塊 has earth 土 (a lump of earth, a piece; with money, a dollar: 一塊錢)."
   },
   {
    "id": "zai-zai",

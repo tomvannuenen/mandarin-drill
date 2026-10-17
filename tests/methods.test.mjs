@@ -94,3 +94,18 @@ test('strengthOf: new, learning, hard, solid', async () => {
   p.log.push([at(1), 'a:say', 1]);
   assert.equal(strengthOf(p, 'a'), 'hard');
 });
+
+test('a tricky phrase is practised before its test, and clears when said right on a later day', async () => {
+  const { markTricky, isTricky, settleTricky } = await import('../lib/methods.js');
+  const p = defaults();
+  const day1 = new Date(2026, 9, 17, 9);
+  const day2 = new Date(2026, 9, 18, 9);
+  p.log.push([day1.getTime() - 1000, 'a:say', 3]);
+  assert.equal(needsExposure(p, 'a'), false);
+  markTricky(p, 'a', day1);
+  assert.equal(needsExposure(p, 'a'), true);
+  settleTricky(p, 'a', 3, day1);
+  assert.equal(isTricky(p, 'a'), true, 'not on the same day');
+  settleTricky(p, 'a', 3, day2);
+  assert.equal(isTricky(p, 'a'), false);
+});

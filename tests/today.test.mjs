@@ -226,3 +226,11 @@ test('withActivities: a new sentence with an unseen pattern is preceded by the p
   const again = withActivities({ queue, items, progress: p, stats: {}, deck: 'mandarin', extras: false, rand: () => 0.5 });
   assert.notEqual(again[0].type, 'frame', 'a pattern you have seen is not introduced again');
 });
+
+test('composeToday brings tricky phrases back even when they are not due', () => {
+  const p = defaults();
+  p.cards['c:say'] = future(9);
+  p.tricky = { c: { day: '2026-09-26', why: 'flag' } };
+  const { queue } = composeToday({ items: ITEMS, drills: [], chars: [], progress: p, plan: null, now: NOW, newLimit: 0, deck: 'mandarin' });
+  assert.ok(queue.some((q) => q.key === 'c:say'));
+});

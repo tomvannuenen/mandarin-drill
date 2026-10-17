@@ -3,7 +3,7 @@ import { icon, hydrateIcons } from './icons.js';
 import { grade } from './lib/srs.js';
 import { pickFill, pickVoice, nextVoice } from './lib/cards.js';
 import { buildQueue, shouldRequeue, weekQueue, orderQueue, lessonWeeks, shakyCount, adaptiveNew, mayReturn, SESSION_CAP } from './lib/session.js';
-import { ACTIVITIES, METHODS, METHOD_NAME, methodStats, methodNews, dropped, pickMethod, applicable, chainSteps, logActivity, strengthOf } from './lib/methods.js';
+import { ACTIVITIES, METHODS, METHOD_NAME, methodStats, methodNews, dropped, pickMethod, applicable, chainSteps, logActivity, strengthOf, markTricky, unmarkTricky, isTricky, settleTricky, REPLAYS_TRICKY } from './lib/methods.js';
 import { options as toneOptions, toneSeq, scoreAnswer } from './lib/tonequiz.js';
 import { load, save, exportJSON, importJSON, applyReview, localDate } from './lib/store.js';
 import { initBook, renderBook } from './book.js';
@@ -1122,6 +1122,7 @@ function renderPairs(c) {
       const b = el('button', { class: `pair pair-sound${r.done ? ' done' : ''}${c.picked === r ? ' on' : ''}` }, icon('play'), el('span', {}, String(n + 1)));
       b.addEventListener('click', () => {
         play(r.entry.audio[r.voice][0]);
+        r.plays = (r.plays || 0) + 1;
         if (r.done) return;
         c.picked = r;
         draw();
@@ -1196,10 +1197,34 @@ function finishActivity(rating) {
   if (c.rows) {
     $('a-example').hidden = false;
     $('a-example').classList.add('big-zh');
-    $('a-example').replaceChildren(...c.rows.map((r) => sayLine(r.entry, c.deck)));
+    $('a-example').replaceChildren(...c.rows.map((r) => trickyRow(r.id, r.entry, c.deck)));
     return;
   }
   playCurrent();
+}
+
+const isPhrase = (id) => !!byId[id] && !/^[wcl]\//.test(id);
+
+function showTricky(b, id) {
+  const on = isTricky(progress, id);
+  b.classList.toggle('flag-on', on);
+  b.classList.toggle('on', on);
+  b.setAttribute('aria-pressed', String(on));
+}
+
+function toggleTricky(b, id) {
+  if (isTricky(progress, id)) unmarkTricky(progress, id);
+  else markTricky(progress, id, new Date(), 'flag');
+  persist();
+  showTricky(b, id);
+}
+
+// A phrase in a summary (match the pairs, listen through), with its own tricky flag.
+function trickyRow(id, entry, d) {
+  const b = el('button', { class: 'tricky-btn', 'aria-label': "This one's tricky" }, icon('flag'), 'Tricky');
+  showTricky(b, id);
+  b.addEventListener('click', () => toggleTricky(b, id));
+  return el('div', { class: 'say-row' }, sayLine(entry, d), b);
 }
 
 function showCard() {
@@ -1225,6 +1250,10 @@ function showCard() {
   drawCard(card, c);
   if (!c.drill && card.type === 'listen') playCurrent();
 
+  // "This one's tricky": on any card about one phrase.
+  const phraseId = !c.rows && !c.char && !['look', 'frame'].includes(c.activity) && isPhrase(card.id) ? card.id : null;
+  $('tricky').hidden = !phraseId;
+  if (phraseId) showTricky($('tricky'), phraseId);
   $('rec').hidden = !canRecord();
   $('rec').replaceChildren(icon('mic'));
   $('rec').classList.remove('recording');
@@ -1314,12 +1343,15 @@ function commit(rating) {
   const { card, c } = session.current;
   const now = new Date();
   if (c.rows) {
+    // Kept replaying one of the sounds: that phrase is a struggle.
+    for (const r of c.rows) if ((r.plays || 0) - 1 >= REPLAYS_TRICKY) markTricky(progress, r.id, now, 'replays');
     for (const r of c.rows) logActivity(progress, r.id, c.activity, c.activity === 'pairs' ? (r.missed ? 1 : 3) : rating, now, c.revealMs);
     persist();
     session.pos += 1;
     session.done += 1;
     return showCard();
   }
+  if (c.replays >= REPLAYS_TRICKY && isPhrase(card.id)) markTricky(progress, card.id, now, 'replays');
   if (c.activity) {
     logActivity(progress, card.id, c.activity, rating, now, c.revealMs);
     if (c.activity === 'frame') {
@@ -1337,6 +1369,7 @@ function commit(rating) {
   applyReview(progress, card, rating, state, now, {
     ms: c.revealMs, voice: c.voice, replays: c.replays, lookups: [...c.lookups], hint: c.hint,
   });
+  if (card.type === 'say') settleTricky(progress, card.id, rating, now);
   // Reading, not speaking. "Almost" neither flags the word nor counts toward its recovery.
   if (c.char) { if (rating !== 2) markReading(progress, c.deck, c.zh, rating >= 3, now); }
   else if (rating >= 3 && !c.typing) credit(progress, c.deck, c.drill ? [{ zh: c.target }] : c.words, now);
@@ -1775,6 +1808,7 @@ function wire() {
     persist();
   });
   $('wish-save').addEventListener('click', saveWish);
+  $('tricky').addEventListener('click', () => { const id = session?.current?.card.id; if (id) toggleTricky($('tricky'), id); });
   $('rec').addEventListener('click', async () => {
     const c = session?.current?.c;
     if (!c) return;

@@ -19,7 +19,7 @@ import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pul
 import { flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
 import { weekReadiness, daysUntil, canSay } from './lib/motivation.js';
 import { composeToday, withActivities, snapshot, outcome, dueSoon, estimateMinutes } from './lib/today.js';
-import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId, reclassifyReadingFlags, displayFor, pickLookalike, markLookalike } from './lib/chars.js';
+import { charItems, knowsWord, tiles, isBuilt, markReading, readingTrouble, charId, reclassifyReadingFlags, displayFor, pickLookalike, markLookalike, sealOfTheDay } from './lib/chars.js';
 import { hskItems, hskPool, hskQueue, hskWaiting, typedMatches, hskLevel } from './lib/hsk.js';
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
@@ -223,6 +223,18 @@ const SEAL = {
   cantonese: { zh: '講', roman: 'gong2', en: 'to speak (Cantonese)' },
 };
 
+// Today's seal for a language: a character from your words, else the language's own 說 / 講.
+function sealFor(d, day) {
+  const pick = sealOfTheDay(charItems(allItems, progress, d), readingTrouble(progress, d).map((t) => t.zh), day, d);
+  if (!pick) return { ...SEAL[d], shown: SEAL[d].zh };
+  const h = hanzi[pick.ch] || {};
+  const en = (h.d || (pick.word.zh.length === 1 ? pick.word.gloss : '') || '').split(/[;,]/)[0];
+  return {
+    zh: pick.ch, shown: zs(pick.ch, d), roman: pick.roman || (d === 'mandarin' ? h.p || '' : ''), en,
+    word: [...pick.word.zh].length > 1 ? pick.word : null,
+  };
+}
+
 // The seal shows the language; turning it over switches to the other one.
 function setFlip(flipped, animate = true) {
   const f = $('deck-flip');
@@ -355,10 +367,21 @@ function renderHome() {
   // A round is short; once the first is done, the seal offers another one with what is left.
   $('start-cta').textContent = progress.stats.dailyDone?.[deck()] === localDate(now) ? 'Another round' : "Start today's practice";
   setFlip(deck() === 'cantonese', false);
-  // What the seal says (tap to hear it).
-  const seal = SEAL[deck()];
-  $('seal-name').replaceChildren(el('span', { lang: LANG_ATTR[deck()] }, seal.zh), ' ', renderRoman(el('b'), seal.roman, deck()), ` · ${seal.en}`);
-  $('seal-name').onclick = () => speakText(seal.zh, deck());
+  // The seal carries a character of the day from your own words (the hard-to-read ones first), one per
+  // language; under it, what it says and the word it comes from. Tap that line to hear the word.
+  const day = localDate(now);
+  const seals = Object.fromEntries(Object.keys(SEAL).map((d) => [d, sealFor(d, day)]));
+  document.querySelector('#deck-flip .face-front span').textContent = seals.mandarin.shown;
+  document.querySelector('#deck-flip .face-back span').textContent = seals.cantonese.shown;
+  const seal = seals[deck()];
+  $('seal-name').replaceChildren(el('span', { lang: zl(deck()) }, seal.shown), ' ', renderRoman(el('b'), seal.roman, deck()),
+    seal.en ? ` · ${seal.en}` : '', ...(seal.word ? [' · ', el('span', { lang: zl(deck()) }, zs(seal.word.zh, deck()))] : []));
+  $('seal-name').onclick = () => {
+    const zh = seal.word?.zh || seal.zh;
+    const audio = wordAudio[`${deck()}/${zh}`];
+    if (audio) play(audio[Object.keys(audio)[0]][0]);
+    else speakText(zh, deck());
+  };
   const other = Object.keys(decks).find((d) => d !== deck());
   $('deck-flip').setAttribute('aria-label', `${LANG_NAME[deck()]}. Turn over for ${LANG_NAME[other] || 'the other language'}`);
   $('rest-block').hidden = !!queue.length;

@@ -177,3 +177,19 @@ test('look-alikes: only sets for your script with a character you know; missed o
   markLookalike(p, 'you-you', '友', true);
   assert.equal(p.lookalikes['you-you'].missed, undefined);
 });
+
+test('seal of the day: a hard-to-read character when there is one, the same all day, with its own syllable', async () => {
+  const { sealOfTheDay } = await import('../lib/chars.js');
+  const words = [
+    { zh: '認識', roman: 'rèn-shi', gloss: 'to know' },
+    { zh: '咖啡', roman: 'kā-fēi', gloss: 'coffee' },
+    { zh: '嗎', roman: 'ma', gloss: '(question)' },
+  ];
+  const a = sealOfTheDay(words, ['認識'], '2026-10-17', 'mandarin');
+  assert.ok(['認', '識'].includes(a.ch));
+  assert.equal(a.roman, a.ch === '認' ? 'rèn' : 'shi');
+  assert.deepEqual(sealOfTheDay(words, ['認識'], '2026-10-17', 'mandarin'), a);
+  const any = new Set(['2026-10-01', '2026-10-02', '2026-10-03', '2026-10-04', '2026-10-05'].map((d) => sealOfTheDay(words, [], d, 'mandarin').ch));
+  assert.ok(!any.has('嗎'), 'particles never');
+  assert.equal(sealOfTheDay([], [], '2026-10-17', 'mandarin'), null);
+});

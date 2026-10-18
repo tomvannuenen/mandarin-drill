@@ -2117,6 +2117,17 @@
 "ph": "音",
 "s": "戈"
 },
+"户": {
+"c": "丶尸",
+"d": "door; family",
+"h": "Simplified form of 戶; a door swinging on its hinge",
+"p": "hù"
+},
+"扁": {
+"c": "户",
+"d": "flat; board, sign, tablet",
+"p": "biǎn"
+},
 "手": {
 "d": "hand",
 "h": "A hand with the fingers splayed",
@@ -3937,6 +3948,13 @@
 "d": "to pass through, to open, to connect",
 "p": "tōng",
 "ph": "甬",
+"s": "辶"
+},
+"遍": {
+"c": "辶扁",
+"d": "everywhere, all over, throughout",
+"p": "biàn",
+"ph": "扁",
 "s": "辶"
 },
 "過": {

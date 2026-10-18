@@ -6,10 +6,10 @@
      "items": ["keyi-gei-wo-zhege-ma", "keyi-gei-wo-yibei-kafei-ma", "keyi-yong-yingwen-jieshi-yixia-ma", "keyi-shuo-yingwen-ma", "ni-keyi-jiao-wo-ma"]},
     {"id": "gei-wo", "deck": "mandarin", "zh": "給我 + thing", "roman": "gěi wǒ …", "en": "give me …",
      "why": "給 = give. 給我 + the thing = give me the thing. Wrap it to be polite: 可以給我 … 嗎？ or 請給我 …",
-     "items": ["keyi-gei-wo-zhege-ma", "keyi-gei-wo-yibei-kafei-ma", "qing-gei-wo-x"]},
+     "items": ["keyi-gei-wo-zhege-ma", "keyi-gei-wo-yibei-kafei-ma", "qing-gei-wo-x", "gei-wo-yidian-shijian"]},
     {"id": "yong", "deck": "mandarin", "zh": "用 + tool + verb", "roman": "yòng … ", "en": "do it using …",
      "why": "用 = use. The tool or language comes before the action: 用英文解釋 = use English, explain (explain in English). 用中文說 = say it in Chinese.",
-     "items": ["keyi-yong-yingwen-jieshi-yixia-ma", "wo-yong-yingwen-shangke", "zhege-yong-zhongwen-zenme-shuo"]},
+     "items": ["keyi-yong-yingwen-jieshi-yixia-ma", "wo-yong-yingwen-shangke", "zhege-yong-zhongwen-zenme-shuo", "qing-yong-yingyu-shuo-yibian"]},
     {"id": "zenme-shuo", "deck": "mandarin", "zh": "… 怎麼說？", "roman": "… zěn-me shuō?", "en": "How do you say …?",
      "why": "怎麼 = how. 怎麼 + verb = how to do it: 怎麼說 = how (to) say. The thing you're asking about comes first.",
      "items": ["zhege-zhongwen-zenme-shuo", "zhe-ju-hua-zhongwen-zenme-shuo", "zhege-yong-zhongwen-zenme-shuo"]},
@@ -27,7 +27,7 @@
      "items": ["wo-zai-zhongda-jiaoshu", "ni-zai-nali-gongzuo", "wo-zai-zhongda-gongzuo"]},
     {"id": "zai-doing", "deck": "mandarin", "zh": "在 + verb", "roman": "zài …", "en": "be doing (right now, these days)",
      "why": "在 right before a verb = in the middle of doing it: 我在學中文 = I'm learning Chinese.",
-     "items": ["wo-zai-xue-zhongwen", "wo-zai-xue-putonghua"]},
+     "items": ["wo-zai-xue-zhongwen", "wo-zai-xue-putonghua", "wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo"]},
     {"id": "bu-verb", "deck": "mandarin", "zh": "不 + verb", "roman": "bù …", "en": "not …",
      "why": "不 sits right before the verb or adjective it cancels: 我不知道 = I not know. 不太 + adjective = not very.",
      "items": ["wo-bu-xihuan-he-x", "wo-bu-xihuan-chi-x", "wo-bu-zhidao", "wo-bu-chi-la", "wo-de-zhongwen-bu-tai-hao"]},
@@ -42,6 +42,12 @@
      "items": ["keyi-yong-yingwen-jieshi-yixia-ma", "deng-yixia"]},
     {"id": "yi-bei", "deck": "mandarin", "zh": "一 + measure word + thing", "roman": "yì bēi …", "en": "a (cup of) …",
      "why": "A number can't go straight before a noun: it needs a measure word. 一杯咖啡 = one cup coffee. 個 is the all-purpose one: 一個人.",
-     "items": ["keyi-gei-wo-yibei-kafei-ma", "wo-yao-yibei-x"]}
+     "items": ["keyi-gei-wo-yibei-kafei-ma", "wo-yao-yibei-x"]},
+    {"id": "qing-verb", "deck": "mandarin", "zh": "請 + request", "roman": "qǐng …", "en": "please …",
+     "why": "請 at the front makes any request polite: 請說慢一點 = please speak a bit slower. Nothing else in the sentence changes.",
+     "items": ["qing-shuo-man-yidian", "qing-zai-shuo-yici", "qing-gei-wo-x", "qing-man-yidian-zai-shuo-yibian", "qing-yong-yingyu-shuo-yibian"]},
+    {"id": "hai", "deck": "mandarin", "zh": "還 + …", "roman": "hái …", "en": "still, fairly",
+     "why": "還 = still. 還好 = still good (okay), 還可以 = still acceptable (not bad), 還沒 = still not (not yet), 還不太會 = still can't really.",
+     "items": ["wo-hai-hao", "hai-keyi", "wo-hai-mei-chi", "hai-mei-ne", "wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo"]}
   ]
 }

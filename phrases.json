@@ -1,5 +1,5 @@
 {
- "version": "e6178371a3be",
+ "version": "6ed97796e8c3",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -5013,7 +5013,10 @@
    "situation": "Someone is speaking too fast for you.",
    "topic": "Getting by",
    "register": "polite",
-   "order": "Verb first, then how: 說 + 慢一點"
+   "order": "Verb first, then how: 說 + 慢一點",
+   "frames": [
+    "qing-verb"
+   ]
   },
   {
    "id": "zhege-zhongwen-zenme-shuo",
@@ -5863,6 +5866,663 @@
    "order": "用 + language comes before the verb",
    "frames": [
     "yong"
+   ]
+  },
+  {
+   "id": "yibian",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "一遍",
+   "roman": "yí-biàn",
+   "en": "once (one time through)",
+   "words": [
+    {
+     "zh": "一遍",
+     "roman": "yí-biàn",
+     "gloss": "once (one time through)",
+     "script": "cn",
+     "zhDisp": "一遍"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/yibian.mp3",
+     "audio/tw-yunjhe/yibian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/yibian.mp3",
+     "audio/tw-hsiaochen/yibian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/yibian.mp3",
+     "audio/tw-hsiaoyu/yibian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/yibian.mp3",
+     "audio/cn-yunyang/yibian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/yibian.mp3",
+     "audio/cn-xiaoxiao/yibian-slow.mp3"
+    ]
+   },
+   "note": "遍 counts going through something from start to end: 說一遍 = say it once through. 一次 = one time, one occasion",
+   "wish": "chat-2026-10-18"
+  },
+  {
+   "id": "man-yidian",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "慢一點",
+   "roman": "màn yì-diǎn",
+   "en": "A bit slower",
+   "words": [
+    {
+     "zh": "慢",
+     "roman": "màn",
+     "gloss": "slow(ly)",
+     "script": "cn",
+     "zhDisp": "慢"
+    },
+    {
+     "zh": "一點",
+     "roman": "yì-diǎn",
+     "gloss": "a little",
+     "script": "cn",
+     "zhDisp": "一点",
+     "zhS": "一点"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/man-yidian.mp3",
+     "audio/tw-yunjhe/man-yidian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/man-yidian.mp3",
+     "audio/tw-hsiaochen/man-yidian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/man-yidian.mp3",
+     "audio/tw-hsiaoyu/man-yidian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/man-yidian.mp3",
+     "audio/cn-yunyang/man-yidian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/man-yidian.mp3",
+     "audio/cn-xiaoxiao/man-yidian-slow.mp3"
+    ]
+   },
+   "situation": "Someone is going too fast for you.",
+   "note": "慢 = slow; 一點 = a bit. Adjective + 一點 = a bit more (adjective)",
+   "topic": "Getting by",
+   "wish": "chat-2026-10-18",
+   "register": "everyday"
+  },
+  {
+   "id": "zai-shuo-yibian",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "再說一遍",
+   "roman": "zài shuō yí-biàn",
+   "en": "Say it once more",
+   "words": [
+    {
+     "zh": "再",
+     "roman": "zài",
+     "gloss": "again",
+     "script": "cn",
+     "zhDisp": "再"
+    },
+    {
+     "zh": "說",
+     "roman": "shuō",
+     "gloss": "to speak, say",
+     "script": "cn",
+     "zhDisp": "说",
+     "zhS": "说"
+    },
+    {
+     "zh": "一遍",
+     "roman": "yí-biàn",
+     "gloss": "once (one time through)",
+     "script": "cn",
+     "zhDisp": "一遍"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zai-shuo-yibian.mp3",
+     "audio/tw-yunjhe/zai-shuo-yibian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zai-shuo-yibian.mp3",
+     "audio/tw-hsiaochen/zai-shuo-yibian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zai-shuo-yibian.mp3",
+     "audio/tw-hsiaoyu/zai-shuo-yibian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zai-shuo-yibian.mp3",
+     "audio/cn-yunyang/zai-shuo-yibian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zai-shuo-yibian.mp3",
+     "audio/cn-xiaoxiao/zai-shuo-yibian-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/zai-shuo-yibian--1.mp3",
+    "2": "audio/chunks/zai-shuo-yibian--2.mp3"
+   },
+   "situation": "You didn't catch it and want to hear it again.",
+   "topic": "Getting by",
+   "wish": "chat-2026-10-18",
+   "register": "everyday",
+   "order": "再 (again) before the verb; how many times after it"
+  },
+  {
+   "id": "qing-man-yidian-zai-shuo-yibian",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "請慢一點，再說一遍",
+   "roman": "qǐng màn yì-diǎn, zài shuō yí-biàn",
+   "en": "Please, a bit slower, and say it once more",
+   "words": [
+    {
+     "zh": "請",
+     "roman": "qǐng",
+     "gloss": "please",
+     "script": "hk",
+     "zhS": "请"
+    },
+    {
+     "zh": "慢",
+     "roman": "màn",
+     "gloss": "slow(ly)",
+     "script": "cn",
+     "zhDisp": "慢"
+    },
+    {
+     "zh": "一點",
+     "roman": "yì-diǎn",
+     "gloss": "a little",
+     "script": "cn",
+     "zhDisp": "一点",
+     "zhS": "一点"
+    },
+    {
+     "zh": "再",
+     "roman": "zài",
+     "gloss": "again",
+     "script": "cn",
+     "zhDisp": "再"
+    },
+    {
+     "zh": "說",
+     "roman": "shuō",
+     "gloss": "to speak, say",
+     "script": "cn",
+     "zhDisp": "说",
+     "zhS": "说"
+    },
+    {
+     "zh": "一遍",
+     "roman": "yí-biàn",
+     "gloss": "once (one time through)",
+     "script": "cn",
+     "zhDisp": "一遍"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/qing-man-yidian-zai-shuo-yibian.mp3",
+     "audio/tw-yunjhe/qing-man-yidian-zai-shuo-yibian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/qing-man-yidian-zai-shuo-yibian.mp3",
+     "audio/tw-hsiaochen/qing-man-yidian-zai-shuo-yibian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/qing-man-yidian-zai-shuo-yibian.mp3",
+     "audio/tw-hsiaoyu/qing-man-yidian-zai-shuo-yibian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/qing-man-yidian-zai-shuo-yibian.mp3",
+     "audio/cn-yunyang/qing-man-yidian-zai-shuo-yibian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/qing-man-yidian-zai-shuo-yibian.mp3",
+     "audio/cn-xiaoxiao/qing-man-yidian-zai-shuo-yibian-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/qing-man-yidian-zai-shuo-yibian--1.mp3",
+    "2": "audio/chunks/qing-man-yidian-zai-shuo-yibian--2.mp3",
+    "3": "audio/chunks/qing-man-yidian-zai-shuo-yibian--3.mp3",
+    "4": "audio/chunks/qing-man-yidian-zai-shuo-yibian--4.mp3",
+    "5": "audio/chunks/qing-man-yidian-zai-shuo-yibian--5.mp3"
+   },
+   "situation": "Someone said something fast and you missed it.",
+   "note": "Two short requests in a row: 慢一點 (a bit slower), 再說一遍 (say it again). Same as 請說慢一點 + 請再說一次",
+   "topic": "Getting by",
+   "wish": "chat-2026-10-18",
+   "register": "polite",
+   "order": "再 (again) before the verb; how many times after it",
+   "frames": [
+    "qing-verb"
+   ]
+  },
+  {
+   "id": "qing-yong-yingyu-shuo-yibian",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "請用英語說一遍",
+   "roman": "qǐng yòng Yīng-yǔ shuō yí-biàn",
+   "en": "Please say it once in English",
+   "words": [
+    {
+     "zh": "請",
+     "roman": "qǐng",
+     "gloss": "please",
+     "script": "hk",
+     "zhS": "请"
+    },
+    {
+     "zh": "用",
+     "roman": "yòng",
+     "gloss": "to use; with, in (a language)",
+     "script": "cn",
+     "zhDisp": "用"
+    },
+    {
+     "zh": "英語",
+     "roman": "Yīng-yǔ",
+     "gloss": "English (language)",
+     "script": "cn",
+     "zhDisp": "英语",
+     "zhS": "英语"
+    },
+    {
+     "zh": "說",
+     "roman": "shuō",
+     "gloss": "to speak, say",
+     "script": "cn",
+     "zhDisp": "说",
+     "zhS": "说"
+    },
+    {
+     "zh": "一遍",
+     "roman": "yí-biàn",
+     "gloss": "once (one time through)",
+     "script": "cn",
+     "zhDisp": "一遍"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/qing-yong-yingyu-shuo-yibian.mp3",
+     "audio/tw-yunjhe/qing-yong-yingyu-shuo-yibian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/qing-yong-yingyu-shuo-yibian.mp3",
+     "audio/tw-hsiaochen/qing-yong-yingyu-shuo-yibian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/qing-yong-yingyu-shuo-yibian.mp3",
+     "audio/tw-hsiaoyu/qing-yong-yingyu-shuo-yibian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/qing-yong-yingyu-shuo-yibian.mp3",
+     "audio/cn-yunyang/qing-yong-yingyu-shuo-yibian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/qing-yong-yingyu-shuo-yibian.mp3",
+     "audio/cn-xiaoxiao/qing-yong-yingyu-shuo-yibian-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/qing-yong-yingyu-shuo-yibian--1.mp3",
+    "2": "audio/chunks/qing-yong-yingyu-shuo-yibian--2.mp3",
+    "3": "audio/chunks/qing-yong-yingyu-shuo-yibian--3.mp3",
+    "4": "audio/chunks/qing-yong-yingyu-shuo-yibian--4.mp3"
+   },
+   "situation": "You're lost and want to hear it in English.",
+   "note": "英語 = English (the language); 英文 means the same and is more common in Taiwan",
+   "topic": "Getting by",
+   "wish": "chat-2026-10-18",
+   "register": "polite",
+   "order": "用 + language comes before the verb",
+   "frames": [
+    "yong",
+    "qing-verb"
+   ]
+  },
+  {
+   "id": "wo-hai-hao",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "我還好",
+   "roman": "wǒ hái hǎo",
+   "en": "I'm okay / doing alright",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me",
+     "script": "cn",
+     "zhDisp": "我"
+    },
+    {
+     "zh": "還",
+     "roman": "hái",
+     "gloss": "still; fairly; yet",
+     "script": "cn",
+     "zhDisp": "还",
+     "zhS": "还"
+    },
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well",
+     "script": "cn",
+     "zhDisp": "好"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-hai-hao.mp3",
+     "audio/tw-yunjhe/wo-hai-hao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-hai-hao.mp3",
+     "audio/tw-hsiaochen/wo-hai-hao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-hai-hao.mp3",
+     "audio/tw-hsiaoyu/wo-hai-hao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-hai-hao.mp3",
+     "audio/cn-yunyang/wo-hai-hao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-hai-hao.mp3",
+     "audio/cn-xiaoxiao/wo-hai-hao-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-hai-hao--1.mp3",
+    "2": "audio/chunks/wo-hai-hao--2.mp3"
+   },
+   "situation": "Someone asks how you are, and things are just fine.",
+   "note": "More low-key than 我很好: okay, not great. 還 = still, fairly",
+   "topic": "Small talk",
+   "wish": "chat-2026-10-18",
+   "register": "everyday",
+   "frames": [
+    "hai"
+   ]
+  },
+  {
+   "id": "hai-keyi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "還可以",
+   "roman": "hái kě-yǐ",
+   "en": "Not bad / it's okay",
+   "words": [
+    {
+     "zh": "還",
+     "roman": "hái",
+     "gloss": "still; fairly; yet",
+     "script": "cn",
+     "zhDisp": "还",
+     "zhS": "还"
+    },
+    {
+     "zh": "可以",
+     "roman": "kě-yǐ",
+     "gloss": "can, may (allowed)",
+     "script": "hk"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/hai-keyi.mp3",
+     "audio/tw-yunjhe/hai-keyi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/hai-keyi.mp3",
+     "audio/tw-hsiaochen/hai-keyi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/hai-keyi.mp3",
+     "audio/tw-hsiaoyu/hai-keyi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/hai-keyi.mp3",
+     "audio/cn-yunyang/hai-keyi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/hai-keyi.mp3",
+     "audio/cn-xiaoxiao/hai-keyi-slow.mp3"
+    ]
+   },
+   "situation": "Someone asks how the food (or your day) is: it's fine.",
+   "note": "Passable, so-so in a positive way. Works for food, a class, your day",
+   "topic": "Small talk",
+   "wish": "chat-2026-10-18",
+   "register": "everyday",
+   "frames": [
+    "hai"
+   ]
+  },
+  {
+   "id": "wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "我在學中文，可是還不太會說",
+   "roman": "wǒ zài xué Zhōng-wén, kě-shì hái bú-tài huì shuō",
+   "en": "I'm learning Chinese, but I can't speak it very well yet",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me",
+     "script": "cn",
+     "zhDisp": "我"
+    },
+    {
+     "zh": "在",
+     "roman": "zài",
+     "gloss": "to be at / in",
+     "script": "cn",
+     "zhDisp": "在"
+    },
+    {
+     "zh": "學",
+     "roman": "xué",
+     "gloss": "to learn, study",
+     "script": "cn",
+     "zhDisp": "学",
+     "zhS": "学"
+    },
+    {
+     "zh": "中文",
+     "roman": "Zhōng-wén",
+     "gloss": "Chinese (language)",
+     "script": "cn",
+     "zhDisp": "中文"
+    },
+    {
+     "zh": "可是",
+     "roman": "kě-shì",
+     "gloss": "but",
+     "script": "cn",
+     "zhDisp": "可是"
+    },
+    {
+     "zh": "還",
+     "roman": "hái",
+     "gloss": "still; fairly; yet",
+     "script": "cn",
+     "zhDisp": "还",
+     "zhS": "还"
+    },
+    {
+     "zh": "不太",
+     "roman": "bú-tài",
+     "gloss": "not very, not really",
+     "script": "cn",
+     "zhDisp": "不太"
+    },
+    {
+     "zh": "會",
+     "roman": "huì",
+     "gloss": "can (a learned skill)",
+     "script": "cn",
+     "zhDisp": "会",
+     "zhS": "会"
+    },
+    {
+     "zh": "說",
+     "roman": "shuō",
+     "gloss": "to speak, say",
+     "script": "cn",
+     "zhDisp": "说",
+     "zhS": "说"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo.mp3",
+     "audio/tw-yunjhe/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo.mp3",
+     "audio/tw-hsiaochen/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo.mp3",
+     "audio/tw-hsiaoyu/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo.mp3",
+     "audio/cn-yunyang/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo.mp3",
+     "audio/cn-xiaoxiao/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo--1.mp3",
+    "2": "audio/chunks/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo--2.mp3",
+    "3": "audio/chunks/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo--3.mp3",
+    "4": "audio/chunks/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo--4.mp3",
+    "5": "audio/chunks/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo--5.mp3",
+    "6": "audio/chunks/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo--6.mp3",
+    "7": "audio/chunks/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo--7.mp3",
+    "8": "audio/chunks/wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo--8.mp3"
+   },
+   "situation": "Someone starts talking to you in fast Mandarin.",
+   "note": "可是 = but. 還 = still / yet. 不太會 = can't really (會 = know how to)",
+   "topic": "Introducing yourself",
+   "wish": "chat-2026-10-18",
+   "register": "everyday",
+   "order": "在 before a verb = doing it now",
+   "frames": [
+    "zai-doing",
+    "hai"
+   ]
+  },
+  {
+   "id": "gei-wo-yidian-shijian",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "給我一點時間",
+   "roman": "gěi wǒ yì-diǎn shí-jiān",
+   "en": "Give me a moment (some time)",
+   "words": [
+    {
+     "zh": "給",
+     "roman": "gěi",
+     "gloss": "to give",
+     "script": "cn",
+     "zhDisp": "给",
+     "zhS": "给"
+    },
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me",
+     "script": "cn",
+     "zhDisp": "我"
+    },
+    {
+     "zh": "一點",
+     "roman": "yì-diǎn",
+     "gloss": "a little",
+     "script": "cn",
+     "zhDisp": "一点",
+     "zhS": "一点"
+    },
+    {
+     "zh": "時間",
+     "roman": "shí-jiān",
+     "gloss": "time (in general, a slot)",
+     "script": "cn",
+     "zhDisp": "时间",
+     "zhS": "时间"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/gei-wo-yidian-shijian.mp3",
+     "audio/tw-yunjhe/gei-wo-yidian-shijian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/gei-wo-yidian-shijian.mp3",
+     "audio/tw-hsiaochen/gei-wo-yidian-shijian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/gei-wo-yidian-shijian.mp3",
+     "audio/tw-hsiaoyu/gei-wo-yidian-shijian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/gei-wo-yidian-shijian.mp3",
+     "audio/cn-yunyang/gei-wo-yidian-shijian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/gei-wo-yidian-shijian.mp3",
+     "audio/cn-xiaoxiao/gei-wo-yidian-shijian-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/gei-wo-yidian-shijian--1.mp3",
+    "2": "audio/chunks/gei-wo-yidian-shijian--2.mp3",
+    "3": "audio/chunks/gei-wo-yidian-shijian--3.mp3"
+   },
+   "situation": "You need a moment to think of how to say something.",
+   "note": "給我 + thing = give me …; 一點時間 = a little time",
+   "topic": "Getting by",
+   "wish": "chat-2026-10-18",
+   "register": "everyday",
+   "frames": [
+    "gei-wo"
    ]
   },
   {
@@ -8051,7 +8711,10 @@
    "note": "請 qǐng = please; 再 zài = again",
    "topic": "Getting by",
    "register": "polite",
-   "order": "再 (again) before the verb; how many times after it"
+   "order": "再 (again) before the verb; how many times after it",
+   "frames": [
+    "qing-verb"
+   ]
   },
   {
    "id": "ni-hui-shuo-yingwen-ma",
@@ -8573,7 +9236,10 @@
    },
    "situation": "It's lunchtime and someone asks if you've eaten.",
    "topic": "Food & drink",
-   "order": "還沒 (not yet) goes before the verb"
+   "order": "還沒 (not yet) goes before the verb",
+   "frames": [
+    "hai"
+   ]
   },
   {
    "id": "ni-xiang-chi-shenme",
@@ -9939,7 +10605,8 @@
    "register": "polite",
    "tier": 2,
    "frames": [
-    "gei-wo"
+    "gei-wo",
+    "qing-verb"
    ]
   },
   {
@@ -14761,7 +15428,10 @@
    "note": "還沒 alone is enough; 呢 makes it sound relaxed, \"not yet, you know\"",
    "topic": "Small talk",
    "wish": "wish-1791506177603",
-   "register": "casual"
+   "register": "casual",
+   "frames": [
+    "hai"
+   ]
   },
   {
    "id": "dui-bu-dui",
@@ -24654,6 +25324,17 @@
    "s": "戈",
    "ph": "音"
   },
+  "户": {
+   "d": "door; family",
+   "p": "hù",
+   "c": "丶尸",
+   "h": "Simplified form of 戶; a door swinging on its hinge"
+  },
+  "扁": {
+   "d": "flat; board, sign, tablet",
+   "p": "biǎn",
+   "c": "户"
+  },
   "手": {
    "d": "hand",
    "p": "shǒu",
@@ -26476,6 +27157,13 @@
    "s": "辶",
    "ph": "甬"
   },
+  "遍": {
+   "d": "everywhere, all over, throughout",
+   "p": "biàn",
+   "c": "辶扁",
+   "s": "辶",
+   "ph": "扁"
+  },
   "過": {
    "d": "pass; to go across, to pass through",
    "p": "guò",
@@ -27119,6 +27807,78 @@
     "r": "shàng-kè",
     "e": "to have class; (for a teacher) to teach a class"
    },
+   "遍": {
+    "r": "biàn",
+    "e": "a time through (measure word)"
+   },
+   "說一遍": {
+    "r": "shuō yí-biàn",
+    "e": "say it once (through)"
+   },
+   "一次": {
+    "r": "yí-cì",
+    "e": "once"
+   },
+   "慢": {
+    "r": "màn",
+    "e": "slow(ly)"
+   },
+   "一點": {
+    "r": "yì-diǎn",
+    "e": "a little"
+   },
+   "慢一點": {
+    "r": "màn yì-diǎn",
+    "e": "A bit slower"
+   },
+   "再說一遍": {
+    "r": "zài shuō yí-biàn",
+    "e": "Say it once more"
+   },
+   "請說慢一點": {
+    "r": "qǐng shuō màn yì-diǎn",
+    "e": "Please speak a bit more slowly"
+   },
+   "請再說一次": {
+    "r": "qǐng zài shuō yí-cì",
+    "e": "Please say it again"
+   },
+   "英語": {
+    "r": "Yīng-yǔ",
+    "e": "English (language)"
+   },
+   "英文": {
+    "r": "Yīng-wén",
+    "e": "English (language)"
+   },
+   "我很好": {
+    "r": "wǒ hěn hǎo",
+    "e": "I'm fine"
+   },
+   "還": {
+    "r": "hái",
+    "e": "still; fairly; yet"
+   },
+   "可是": {
+    "r": "kě-shì",
+    "e": "but"
+   },
+   "不太會": {
+    "r": "bú-tài huì",
+    "e": "can't really (do)"
+   },
+   "會": {
+    "r": "huì",
+    "e": "can (a learned skill)"
+   },
+   "給我": {
+    "r": "gěi wǒ",
+    "e": "give me"
+   },
+   "一點時間": {
+    "r": "yì-diǎn shí-jiān",
+    "e": "a little time"
+   },
    "不要": {
     "r": "bú yào",
     "e": "don't want"
@@ -27342,10 +28102,6 @@
    "我喜歡你的穿搭": {
     "r": "wǒ xǐ-huān nǐ de chuān-dā",
     "e": "I like your outfit"
-   },
-   "我很好": {
-    "r": "wǒ hěn hǎo",
-    "e": "I'm fine"
    },
    "你呢": {
     "r": "nǐ ne?",
@@ -27796,10 +28552,14 @@
    "解釋": "audio/words/mandarin/89e3-91cb.mp3",
    "一下": "audio/words/mandarin/4e00-4e0b.mp3",
    "上課": "audio/words/mandarin/4e0a-8ab2.mp3",
+   "再": "audio/words/mandarin/518d.mp3",
+   "英語": "audio/words/mandarin/82f1-8a9e.mp3",
+   "還": "audio/words/mandarin/9084.mp3",
+   "可是": "audio/words/mandarin/53ef-662f.mp3",
+   "不太": "audio/words/mandarin/4e0d-592a.mp3",
    "打": "audio/words/mandarin/6253.mp3",
    "電話": "audio/words/mandarin/96fb-8a71.mp3",
    "懂": "audio/words/mandarin/61c2.mp3",
-   "再": "audio/words/mandarin/518d.mp3",
    "一次": "audio/words/mandarin/4e00-6b21.mp3",
    "呢": "audio/words/mandarin/5462.mp3",
    "知": "audio/words/mandarin/77e5.mp3",
@@ -30554,7 +31314,8 @@
    "items": [
     "keyi-gei-wo-zhege-ma",
     "keyi-gei-wo-yibei-kafei-ma",
-    "qing-gei-wo-x"
+    "qing-gei-wo-x",
+    "gei-wo-yidian-shijian"
    ]
   },
   {
@@ -30567,7 +31328,8 @@
    "items": [
     "keyi-yong-yingwen-jieshi-yixia-ma",
     "wo-yong-yingwen-shangke",
-    "zhege-yong-zhongwen-zenme-shuo"
+    "zhege-yong-zhongwen-zenme-shuo",
+    "qing-yong-yingyu-shuo-yibian"
    ]
   },
   {
@@ -30663,7 +31425,8 @@
    "why": "在 right before a verb = in the middle of doing it: 我在學中文 = I'm learning Chinese.",
    "items": [
     "wo-zai-xue-zhongwen",
-    "wo-zai-xue-putonghua"
+    "wo-zai-xue-putonghua",
+    "wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo"
    ]
   },
   {
@@ -30736,6 +31499,36 @@
    "items": [
     "keyi-gei-wo-yibei-kafei-ma",
     "wo-yao-yibei-x"
+   ]
+  },
+  {
+   "id": "qing-verb",
+   "deck": "mandarin",
+   "zh": "請 + request",
+   "roman": "qǐng …",
+   "en": "please …",
+   "why": "請 at the front makes any request polite: 請說慢一點 = please speak a bit slower. Nothing else in the sentence changes.",
+   "items": [
+    "qing-shuo-man-yidian",
+    "qing-zai-shuo-yici",
+    "qing-gei-wo-x",
+    "qing-man-yidian-zai-shuo-yibian",
+    "qing-yong-yingyu-shuo-yibian"
+   ]
+  },
+  {
+   "id": "hai",
+   "deck": "mandarin",
+   "zh": "還 + …",
+   "roman": "hái …",
+   "en": "still, fairly",
+   "why": "還 = still. 還好 = still good (okay), 還可以 = still acceptable (not bad), 還沒 = still not (not yet), 還不太會 = still can't really.",
+   "items": [
+    "wo-hai-hao",
+    "hai-keyi",
+    "wo-hai-mei-chi",
+    "hai-mei-ne",
+    "wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo"
    ]
   }
  ],

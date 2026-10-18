@@ -1,6 +1,10 @@
 {
   "_comment": "Short meanings for words inside phrases, shown when a word is tapped. Words that have their own card use that card's English instead.",
   "mandarin": {
+    "英語": "English (language)",
+    "還": "still; fairly; yet",
+    "可是": "but",
+    "不太": "not very, not really",
     "對": "right, correct",
     "謝謝": "thank you",
     "不用": "no need",

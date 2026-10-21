@@ -1,6 +1,12 @@
 {
   "_comment": "Short meanings for words inside phrases, shown when a word is tapped. Words that have their own card use that card's English instead.",
   "mandarin": {
+    "二十五": "twenty-five",
+    "下來": "down (so it stays)",
+    "準備": "to prepare, to get ready",
+    "開始": "to start, to begin",
+    "活": "to live",
+    "一口氣": "one breath; spirit, pride",
     "英語": "English (language)",
     "還": "still; fairly; yet",
     "可是": "but",

@@ -348,6 +348,8 @@ button.note-zh.on { text-decoration-color: var(--seal); text-decoration-style: s
 .say-row .say-line { flex: 1; }
 .tricky-btn { flex: none; display: inline-flex; align-items: center; gap: 4px; font-size: 13px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--rule); background: none; color: var(--ink-3); cursor: pointer; }
 .tricky-btn svg { width: 15px; height: 15px; }
+.num-zh { font-size: 26px; display: block; }
+.num-digits { font-size: 24px; font-weight: 600; }
 .look-info { margin: 14px 0 0; font-size: 17px; color: var(--ink-2); }
 .look-info[hidden] { display: none; }
 .look-info-zh { font-size: 26px; color: var(--ink); vertical-align: -3px; margin-right: 4px; }

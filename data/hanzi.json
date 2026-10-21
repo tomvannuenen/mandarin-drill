@@ -282,6 +282,11 @@
 "h": "Two  parallel lines; compare 一 (one) and 三 (three)",
 "p": "èr"
 },
+"于": {
+"c": "二亅",
+"d": "at, in, on; to, from",
+"p": "yú"
+},
 "云": {
 "c": "二厶",
 "d": "cloud; to say, to speak",
@@ -532,6 +537,11 @@
 "ph": "亭",
 "s": "亻"
 },
+"備": {
+"c": "亻",
+"d": "to prepare; to get ready, to equip",
+"p": "bèi"
+},
 "儿": {
 "c": "丿乚",
 "d": "child; son",
@@ -712,11 +722,25 @@
 "ph": "令",
 "s": "冫"
 },
+"准": {
+"c": "冫隹",
+"d": "standard, accurate",
+"p": "zhǔn",
+"ph": "隹",
+"s": "冫"
+},
 "凍": {
 "c": "冫東",
 "d": "cold; to freeze, to congeal",
 "p": "dòng",
 "ph": "東",
+"s": "冫"
+},
+"减": {
+"c": "冫咸",
+"d": "to decrease, to subtract, to diminish",
+"p": "jiǎn",
+"ph": "咸",
 "s": "冫"
 },
 "几": {
@@ -1184,6 +1208,12 @@
 "h": "The sound a sheep 羊 makes with its mouth 口",
 "p": "miē"
 },
+"咸": {
+"c": "戊一口",
+"d": "all, together, united; salted",
+"h": "One 一 voice 口 surrounded by conflict 戈",
+"p": "xián"
+},
 "咼": {
 "c": "冎口",
 "d": "to chat, to gossip, to jaw, to talk; mouth",
@@ -1455,6 +1485,12 @@
 "d": "to go",
 "p": "zhǐ"
 },
+"备": {
+"c": "夂田",
+"d": "to prepare; to get ready, to equip",
+"h": "To go 夂 to the farm 田 to prepare for a harvest",
+"p": "bèi"
+},
 "夕": {
 "c": "勹丶",
 "d": "evening, night, dusk; slanted",
@@ -1547,6 +1583,13 @@
 "d": "mother, mama",
 "p": "mā",
 "ph": "马",
+"s": "女"
+},
+"始": {
+"c": "女台",
+"d": "to begin, to start; beginning",
+"p": "shǐ",
+"ph": "台",
 "s": "女"
 },
 "姐": {
@@ -1814,6 +1857,12 @@
 "d": "to rotate, to revolve, to make a circuit",
 "p": "zā"
 },
+"币": {
+"c": "丿巾",
+"d": "currency, coins, legal tender",
+"h": "Bills written on silk 巾",
+"p": "bì"
+},
 "师": {
 "c": "刂帀",
 "d": "teacher, professional, master",
@@ -1825,6 +1874,13 @@
 "d": "teacher, professional, master",
 "h": "To skillfully wield 帀 a knife 㠯",
 "p": "shī"
+},
+"幣": {
+"c": "敝巾",
+"d": "currency, coins, legal tender",
+"p": "bì",
+"ph": "敝",
+"s": "巾"
 },
 "干": {
 "c": "一十",
@@ -2217,6 +2273,12 @@
 "ph": "孝",
 "s": "攵"
 },
+"敝": {
+"c": "攵",
+"d": "to break, to destroy; ruined, tattered",
+"p": "bì",
+"s": "攵"
+},
 "文": {
 "c": "亠乂",
 "d": "culture, literature, writing",
@@ -2238,6 +2300,11 @@
 "c": "亠",
 "d": "square, rectangle; side",
 "p": "fāng"
+},
+"於": {
+"c": "方",
+"d": "at, in, on; to, from",
+"p": "yú"
 },
 "旡": {
 "d": "to choke on something",
@@ -2618,6 +2685,12 @@
 "h": "A mother's breasts",
 "p": "mǔ"
 },
+"民": {
+"c": "巳戈",
+"d": "citizens, subjects; a nation's people",
+"h": "An eye 巳 pierced by a dagger 戈, an old mark of slavery",
+"p": "mín"
+},
 "气": {
 "c": "亻",
 "d": "air, gas; steam, vapor",
@@ -2703,11 +2776,32 @@
 "ph": "各",
 "s": "氵"
 },
+"活": {
+"c": "氵舌",
+"d": "to exist, to live, to survive; living, working",
+"p": "huó",
+"ph": "舌",
+"s": "氵"
+},
+"淮": {
+"c": "氵隹",
+"d": "a river in Anhui province",
+"p": "huái",
+"ph": "隹",
+"s": "氵"
+},
 "清": {
 "c": "氵青",
 "d": "clean, pure; clear, distinct",
 "p": "qīng",
 "ph": "青",
+"s": "氵"
+},
+"減": {
+"c": "氵咸",
+"d": "to decrease, to subtract, to diminish",
+"p": "jiǎn",
+"ph": "咸",
 "s": "氵"
 },
 "港": {
@@ -2723,6 +2817,12 @@
 "p": "kě",
 "ph": "曷",
 "s": "氵"
+},
+"準": {
+"c": "淮十",
+"d": "standard, accurate",
+"h": "To balance 十 water 氵 in a spirit level; 隹 provides the pronunciation",
+"p": "zhǔn"
 },
 "漂": {
 "c": "氵票",

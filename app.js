@@ -14,6 +14,7 @@ import { weekSummary, checkinText, coachBrief } from './lib/checkin.js';
 import { applyPlan, planIsCurrent } from './lib/plan.js';
 import { level, hintText } from './lib/ladder.js';
 import { addWish, wishStatus } from './lib/wishes.js';
+import { numZh, sumQuestion, priceQuestion } from './lib/numbers.js';
 import { canRecord, startRecording, stopRecording, isRecording, compare, share as shareRecording } from './rec.js';
 import { loadConfig, saveConfig, testConnection, pushProgress, pullProgress, pullPlan, DEFAULT_REPO } from './lib/sync.js';
 import { flagWord, credit, troubleSpots, drillItems, drillPrompt } from './lib/weak.js';
@@ -421,6 +422,7 @@ const REGISTER_LABEL = { everyday: 'Everyday', casual: 'Casual, with friends', p
 
 function contentFor(card) {
   if (card.type === 'look') return lookContent(card);
+  if (card.type === 'numbers') return numbersContent(card);
   const item = byId[card.id];
   if (card.activity) return activityContent(card, item);
   if (card.type === 'char') {
@@ -908,6 +910,17 @@ function promptFor(card, c) {
     ];
   }
   if (c.activity === 'pairs') return renderPairs(c);
+  if (c.activity === 'numbers') {
+    const ask = () => speakText(c.q.question.zh, 'mandarin', 0.85);
+    if (!c.asked) { c.asked = true; setTimeout(ask, 350); }
+    return [
+      el('button', { class: 'icon-btn huge', 'aria-label': 'Hear it again', onclick: ask }, icon('play')),
+      el('p', { class: 'muted' }, c.q.mode === 'sum' ? 'What does it come to?' : 'How much is it?'),
+      optionButtons(c, (o) => (c.q.mode === 'sum'
+        ? [el('span', { class: 'num-zh', lang }, zs(numZh(o.n).zh, c.deck)), el('small', {}, numZh(o.n).roman)]
+        : [el('span', { class: 'num-digits' }, String(o.n))])),
+    ];
+  }
   if (c.activity === 'frame') {
     const f = c.frame;
     return [
@@ -1023,7 +1036,20 @@ function dailyQueue(base = todayPlan().queue) {
   // One look-alike character card (字 or 学?) in the day's first round, halfway through.
   const look = tiles && extras ? lookalikeCard() : null;
   if (look) out.splice(Math.round(out.length / 2), 0, look);
+  // One numbers question by ear (a sum or a price) in the day's first Mandarin round, near the end.
+  if (deck() === 'mandarin' && extras) out.splice(Math.round(out.length * 0.75), 0, numbersCard(Math.random() < 0.5 ? 'sum' : 'price'));
   return out;
+}
+
+const numbersCard = (mode) => ({ key: `n/${mode}:numbers`, id: `n/${mode}`, type: 'numbers', activity: true, deck: 'mandarin', mode });
+
+// Hear a sum ("三加四等於幾？") or a price ("二十五塊") and pick the number: made up fresh each time.
+function numbersContent(card) {
+  const q = card.mode === 'sum' ? sumQuestion() : priceQuestion();
+  return {
+    activity: 'numbers', q, zh: q.full.zh, roman: q.full.roman, en: q.full.en, words: q.words, audio: null, voice: null,
+    played: false, deck: 'mandarin', flagged: new Set(), options: q.options.map((n) => ({ n, right: n === q.answer })), ...tracking(),
+  };
 }
 
 function lookalikeCard() {
@@ -1209,7 +1235,6 @@ function optionButtons(c, label) {
   }));
 }
 
-// An activity is over: show the sentence, say it, and wait for Continue. Nothing is graded by hand.
 // Found it: first try = Got it, otherwise Didn't know. Then how to tell them apart.
 function finishLook(c) {
   if (c.result) return;
@@ -1224,6 +1249,7 @@ function finishLook(c) {
   playCurrent();
 }
 
+// An activity is over: show the sentence, say it, and wait for Continue. Nothing is graded by hand.
 function finishActivity(rating) {
   const { c } = session.current;
   if (c.result) return;
@@ -1272,7 +1298,7 @@ function showCard() {
   const c = contentFor(card);
   session.current = { card, c };
 
-  $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?', match: 'Is this what you hear?', tone: 'Which tones?', dictate: 'Rebuild it by ear', hanzi: 'Rebuild it in characters', frame: 'The pattern', look: 'Which character?', pairs: 'Match the pairs', passage: 'Listen through' }[c.activity]
+  $('card-kind').textContent = c.activity ? { echo: 'Listen and repeat', chain: 'Build it up', ear: 'What did you hear?', fill: 'Which word is missing?', match: 'Is this what you hear?', tone: 'Which tones?', dictate: 'Rebuild it by ear', hanzi: 'Rebuild it in characters', frame: 'The pattern', look: 'Which character?', numbers: 'Numbers by ear', pairs: 'Match the pairs', passage: 'Listen through' }[c.activity]
     : c.build ? 'Build the sentence'
     : c.char ? 'Read it'
     : c.typing ? 'Type it'
@@ -1499,7 +1525,9 @@ function renderDone(r) {
 
 function renderExplore() {
   const weekly = deck() === 'mandarin' ? items() : [];
-  $('explore-weeks').replaceChildren(...lessonWeeks(weekly).map((w) => {
+  const numbersRow = deck() === 'mandarin' ? [el('button', { class: 'convo-row', onclick: () => startSession(Array.from({ length: 10 }, (_, n) => numbersCard(n % 2 ? 'price' : 'sum'))) },
+    icon('target'), el('span', {}, 'Numbers by ear'), el('span', { class: 'muted' }, 'sums and prices'))] : [];
+  $('explore-weeks').replaceChildren(...numbersRow, ...lessonWeeks(weekly).map((w) => {
     const list = weekly.filter((i) => i.week === w && !i.id.startsWith('w/') && !i.id.startsWith('c/'));
     const solid = list.filter((i) => (progress.cards[`${i.id}:say`]?.stability || 0) >= 7).length;
     return el('button', { class: 'convo-row', onclick: () => startSession(weekQueue(weekly, progress, w)) },

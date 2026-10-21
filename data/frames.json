@@ -15,7 +15,7 @@
      "items": ["zhege-zhongwen-zenme-shuo", "zhe-ju-hua-zhongwen-zenme-shuo", "zhege-yong-zhongwen-zenme-shuo"]},
     {"id": "ma", "deck": "mandarin", "zh": "statement + 嗎？", "roman": "… ma?", "en": "yes/no question",
      "why": "Say it as a statement and add 嗎: 你是學生 (you are a student) → 你是學生嗎？ (are you a student?). Nothing else moves.",
-     "items": ["zuijin-hao-ma", "ni-xihuan-x-ma", "ni-shi-xuesheng-ma", "you-wenti-ma", "ni-you-kong-ma", "ni-hui-shuo-yingwen-ma", "hao-le-ma", "keyi-shuo-yingwen-ma", "ni-keyi-jiao-wo-ma"]},
+     "items": ["zuijin-hao-ma", "ni-xihuan-x-ma", "ni-shi-xuesheng-ma", "you-wenti-ma", "ni-you-kong-ma", "ni-hui-shuo-yingwen-ma", "hao-le-ma", "keyi-shuo-yingwen-ma", "ni-keyi-jiao-wo-ma", "ni-zhunbei-hao-le-ma"]},
     {"id": "wh-in-place", "deck": "mandarin", "zh": "question word where the answer goes", "roman": "shén-me · nǎ-lǐ · jǐ", "en": "what · where · how many",
      "why": "Chinese doesn't move the question word to the front. 你喜歡喝什麼？ = you like drink what? The answer takes its place: 我喜歡喝咖啡.",
      "items": ["zuijin-mang-shenme", "ni-xihuan-he-shenme", "ni-xihuan-chi-shenme", "ni-jiao-shenme-mingzi", "ni-shi-nage-xi-de", "ni-ji-nianji", "ni-du-shenme", "ni-shi-nali-ren", "ni-zai-nali-gongzuo", "ni-xiang-chi-shenme", "ni-zai-xianggang-duojiu-le"]},
@@ -45,7 +45,7 @@
      "items": ["keyi-gei-wo-yibei-kafei-ma", "wo-yao-yibei-x"]},
     {"id": "qing-verb", "deck": "mandarin", "zh": "請 + request", "roman": "qǐng …", "en": "please …",
      "why": "請 at the front makes any request polite: 請說慢一點 = please speak a bit slower. Nothing else in the sentence changes.",
-     "items": ["qing-shuo-man-yidian", "qing-zai-shuo-yici", "qing-gei-wo-x", "qing-man-yidian-zai-shuo-yibian", "qing-yong-yingyu-shuo-yibian"]},
+     "items": ["qing-shuo-man-yidian", "qing-zai-shuo-yici", "qing-gei-wo-x", "qing-man-yidian-zai-shuo-yibian", "qing-yong-yingyu-shuo-yibian", "qing-xie-xialai"]},
     {"id": "hai", "deck": "mandarin", "zh": "還 + …", "roman": "hái …", "en": "still, fairly",
      "why": "還 = still. 還好 = still good (okay), 還可以 = still acceptable (not bad), 還沒 = still not (not yet), 還不太會 = still can't really.",
      "items": ["wo-hai-hao", "hai-keyi", "wo-hai-mei-chi", "hai-mei-ne", "wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo"]}

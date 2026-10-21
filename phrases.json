@@ -1,5 +1,5 @@
 {
- "version": "6ed97796e8c3",
+ "version": "c6d5dc5fa0ba",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -6523,6 +6523,1104 @@
    "register": "everyday",
    "frames": [
     "gei-wo"
+   ]
+  },
+  {
+   "id": "jia",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "加",
+   "roman": "jiā",
+   "en": "plus; to add",
+   "words": [
+    {
+     "zh": "加",
+     "roman": "jiā",
+     "gloss": "plus; to add",
+     "script": "cn",
+     "zhDisp": "加"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/jia.mp3",
+     "audio/tw-yunjhe/jia-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/jia.mp3",
+     "audio/tw-hsiaochen/jia-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/jia.mp3",
+     "audio/tw-hsiaoyu/jia-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/jia.mp3",
+     "audio/cn-yunyang/jia-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/jia.mp3",
+     "audio/cn-xiaoxiao/jia-slow.mp3"
+    ]
+   },
+   "wish": "chat-2026-10-21"
+  },
+  {
+   "id": "jian",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "減",
+   "roman": "jiǎn",
+   "en": "minus; to subtract",
+   "words": [
+    {
+     "zh": "減",
+     "roman": "jiǎn",
+     "gloss": "minus; to subtract",
+     "script": "cn",
+     "zhDisp": "减",
+     "zhS": "减"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/jian.mp3",
+     "audio/tw-yunjhe/jian-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/jian.mp3",
+     "audio/tw-hsiaochen/jian-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/jian.mp3",
+     "audio/tw-hsiaoyu/jian-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/jian.mp3",
+     "audio/cn-yunyang/jian-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/jian.mp3",
+     "audio/cn-xiaoxiao/jian-slow.mp3"
+    ]
+   },
+   "wish": "chat-2026-10-21"
+  },
+  {
+   "id": "dengyu",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "等於",
+   "roman": "děng-yú",
+   "en": "equals",
+   "words": [
+    {
+     "zh": "等於",
+     "roman": "děng-yú",
+     "gloss": "equals",
+     "script": "cn",
+     "zhDisp": "等于",
+     "zhS": "等于"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/dengyu.mp3",
+     "audio/tw-yunjhe/dengyu-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/dengyu.mp3",
+     "audio/tw-hsiaochen/dengyu-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/dengyu.mp3",
+     "audio/tw-hsiaoyu/dengyu-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/dengyu.mp3",
+     "audio/cn-yunyang/dengyu-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/dengyu.mp3",
+     "audio/cn-xiaoxiao/dengyu-slow.mp3"
+    ]
+   },
+   "wish": "chat-2026-10-21"
+  },
+  {
+   "id": "san-jia-si-dengyu-qi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "三加四等於七",
+   "roman": "sān jiā sì děng-yú qī",
+   "en": "3 + 4 = 7",
+   "words": [
+    {
+     "zh": "三",
+     "roman": "sān",
+     "gloss": "three",
+     "script": "cn",
+     "zhDisp": "三"
+    },
+    {
+     "zh": "加",
+     "roman": "jiā",
+     "gloss": "plus; to add",
+     "script": "cn",
+     "zhDisp": "加"
+    },
+    {
+     "zh": "四",
+     "roman": "sì",
+     "gloss": "four",
+     "script": "cn",
+     "zhDisp": "四"
+    },
+    {
+     "zh": "等於",
+     "roman": "děng-yú",
+     "gloss": "equals",
+     "script": "cn",
+     "zhDisp": "等于",
+     "zhS": "等于"
+    },
+    {
+     "zh": "七",
+     "roman": "qī",
+     "gloss": "seven",
+     "script": "cn",
+     "zhDisp": "七"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/san-jia-si-dengyu-qi.mp3",
+     "audio/tw-yunjhe/san-jia-si-dengyu-qi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/san-jia-si-dengyu-qi.mp3",
+     "audio/tw-hsiaochen/san-jia-si-dengyu-qi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/san-jia-si-dengyu-qi.mp3",
+     "audio/tw-hsiaoyu/san-jia-si-dengyu-qi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/san-jia-si-dengyu-qi.mp3",
+     "audio/cn-yunyang/san-jia-si-dengyu-qi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/san-jia-si-dengyu-qi.mp3",
+     "audio/cn-xiaoxiao/san-jia-si-dengyu-qi-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/san-jia-si-dengyu-qi--1.mp3",
+    "2": "audio/chunks/san-jia-si-dengyu-qi--2.mp3",
+    "3": "audio/chunks/san-jia-si-dengyu-qi--3.mp3",
+    "4": "audio/chunks/san-jia-si-dengyu-qi--4.mp3"
+   },
+   "situation": "You check a sum out loud.",
+   "note": "加 = plus, 減 = minus, 等於 = equals. Ask with 幾: 三加四等於幾？ (3 + 4 = ?)",
+   "topic": "Numbers",
+   "wish": "chat-2026-10-21",
+   "register": "everyday"
+  },
+  {
+   "id": "jiu-jian-wu-dengyu-si",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "九減五等於四",
+   "roman": "jiǔ jiǎn wǔ děng-yú sì",
+   "en": "9 − 5 = 4",
+   "words": [
+    {
+     "zh": "九",
+     "roman": "jiǔ",
+     "gloss": "nine",
+     "script": "cn",
+     "zhDisp": "九"
+    },
+    {
+     "zh": "減",
+     "roman": "jiǎn",
+     "gloss": "minus; to subtract",
+     "script": "cn",
+     "zhDisp": "减",
+     "zhS": "减"
+    },
+    {
+     "zh": "五",
+     "roman": "wǔ",
+     "gloss": "five",
+     "script": "cn",
+     "zhDisp": "五"
+    },
+    {
+     "zh": "等於",
+     "roman": "děng-yú",
+     "gloss": "equals",
+     "script": "cn",
+     "zhDisp": "等于",
+     "zhS": "等于"
+    },
+    {
+     "zh": "四",
+     "roman": "sì",
+     "gloss": "four",
+     "script": "cn",
+     "zhDisp": "四"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/jiu-jian-wu-dengyu-si.mp3",
+     "audio/tw-yunjhe/jiu-jian-wu-dengyu-si-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/jiu-jian-wu-dengyu-si.mp3",
+     "audio/tw-hsiaochen/jiu-jian-wu-dengyu-si-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/jiu-jian-wu-dengyu-si.mp3",
+     "audio/tw-hsiaoyu/jiu-jian-wu-dengyu-si-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/jiu-jian-wu-dengyu-si.mp3",
+     "audio/cn-yunyang/jiu-jian-wu-dengyu-si-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/jiu-jian-wu-dengyu-si.mp3",
+     "audio/cn-xiaoxiao/jiu-jian-wu-dengyu-si-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/jiu-jian-wu-dengyu-si--1.mp3",
+    "2": "audio/chunks/jiu-jian-wu-dengyu-si--2.mp3",
+    "3": "audio/chunks/jiu-jian-wu-dengyu-si--3.mp3",
+    "4": "audio/chunks/jiu-jian-wu-dengyu-si--4.mp3"
+   },
+   "situation": "You check a sum out loud.",
+   "topic": "Numbers",
+   "wish": "chat-2026-10-21",
+   "register": "everyday"
+  },
+  {
+   "id": "kuai",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "塊",
+   "roman": "kuài",
+   "en": "yuan, dollar (spoken money unit)",
+   "words": [
+    {
+     "zh": "塊",
+     "roman": "kuài",
+     "gloss": "yuan, dollar (spoken money unit)",
+     "script": "cn",
+     "zhDisp": "块",
+     "zhS": "块"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/kuai.mp3",
+     "audio/tw-yunjhe/kuai-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/kuai.mp3",
+     "audio/tw-hsiaochen/kuai-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/kuai.mp3",
+     "audio/tw-hsiaoyu/kuai-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/kuai.mp3",
+     "audio/cn-yunyang/kuai-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/kuai.mp3",
+     "audio/cn-xiaoxiao/kuai-slow.mp3"
+    ]
+   },
+   "note": "Spoken: 二十五塊 = 25 dollars. For 2 say 兩塊, not 二塊",
+   "wish": "chat-2026-10-21"
+  },
+  {
+   "id": "ershiwu-kuai",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "二十五塊",
+   "roman": "èr-shí-wǔ kuài",
+   "en": "25 yuan (dollars)",
+   "words": [
+    {
+     "zh": "二十五",
+     "roman": "èr-shí-wǔ",
+     "gloss": "twenty-five",
+     "script": "cn",
+     "zhDisp": "二十五"
+    },
+    {
+     "zh": "塊",
+     "roman": "kuài",
+     "gloss": "yuan, dollar (spoken money unit)",
+     "script": "cn",
+     "zhDisp": "块",
+     "zhS": "块"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ershiwu-kuai.mp3",
+     "audio/tw-yunjhe/ershiwu-kuai-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ershiwu-kuai.mp3",
+     "audio/tw-hsiaochen/ershiwu-kuai-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ershiwu-kuai.mp3",
+     "audio/tw-hsiaoyu/ershiwu-kuai-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ershiwu-kuai.mp3",
+     "audio/cn-yunyang/ershiwu-kuai-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ershiwu-kuai.mp3",
+     "audio/cn-xiaoxiao/ershiwu-kuai-slow.mp3"
+    ]
+   },
+   "situation": "Someone asks 多少錢？ and it's 25.",
+   "note": "The answer to 多少錢？ Tens + 十 + ones: 二十五 = two-ten-five",
+   "topic": "Numbers",
+   "wish": "chat-2026-10-21",
+   "register": "everyday"
+  },
+  {
+   "id": "renminbi",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "人民幣",
+   "roman": "rén-mín-bì",
+   "en": "renminbi, Chinese yuan (RMB)",
+   "words": [
+    {
+     "zh": "人民幣",
+     "roman": "rén-mín-bì",
+     "gloss": "renminbi, Chinese yuan (RMB)",
+     "script": "cn",
+     "zhDisp": "人民币",
+     "zhS": "人民币"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/renminbi.mp3",
+     "audio/tw-yunjhe/renminbi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/renminbi.mp3",
+     "audio/tw-hsiaochen/renminbi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/renminbi.mp3",
+     "audio/tw-hsiaoyu/renminbi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/renminbi.mp3",
+     "audio/cn-yunyang/renminbi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/renminbi.mp3",
+     "audio/cn-xiaoxiao/renminbi-slow.mp3"
+    ]
+   },
+   "note": "Hong Kong uses 港幣 (Hong Kong dollars); 塊 works for both when speaking",
+   "wish": "chat-2026-10-21"
+  },
+  {
+   "id": "qing-xie-xialai",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "請寫下來",
+   "roman": "qǐng xiě xià-lái",
+   "en": "Please write it down",
+   "words": [
+    {
+     "zh": "請",
+     "roman": "qǐng",
+     "gloss": "please",
+     "script": "hk",
+     "zhS": "请"
+    },
+    {
+     "zh": "寫",
+     "roman": "xiě",
+     "gloss": "to write",
+     "script": "cn",
+     "zhDisp": "写",
+     "zhS": "写"
+    },
+    {
+     "zh": "下來",
+     "roman": "xià-lái",
+     "gloss": "down (so it stays)",
+     "script": "cn",
+     "zhDisp": "下来",
+     "zhS": "下来"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/qing-xie-xialai.mp3",
+     "audio/tw-yunjhe/qing-xie-xialai-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/qing-xie-xialai.mp3",
+     "audio/tw-hsiaochen/qing-xie-xialai-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/qing-xie-xialai.mp3",
+     "audio/tw-hsiaoyu/qing-xie-xialai-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/qing-xie-xialai.mp3",
+     "audio/cn-yunyang/qing-xie-xialai-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/qing-xie-xialai.mp3",
+     "audio/cn-xiaoxiao/qing-xie-xialai-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/qing-xie-xialai--1.mp3",
+    "2": "audio/chunks/qing-xie-xialai--2.mp3"
+   },
+   "situation": "You can't catch a word and want to see it written.",
+   "note": "寫 = write; 下來 = down (so it stays)",
+   "topic": "Getting by",
+   "wish": "chat-2026-10-21",
+   "register": "polite",
+   "frames": [
+    "qing-verb"
+   ]
+  },
+  {
+   "id": "zhongyao",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "重要",
+   "roman": "zhòng-yào",
+   "en": "important",
+   "words": [
+    {
+     "zh": "重要",
+     "roman": "zhòng-yào",
+     "gloss": "important",
+     "script": "cn",
+     "zhDisp": "重要"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhongyao.mp3",
+     "audio/tw-yunjhe/zhongyao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhongyao.mp3",
+     "audio/tw-hsiaochen/zhongyao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhongyao.mp3",
+     "audio/tw-hsiaoyu/zhongyao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhongyao.mp3",
+     "audio/cn-yunyang/zhongyao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhongyao.mp3",
+     "audio/cn-xiaoxiao/zhongyao-slow.mp3"
+    ]
+   },
+   "wish": "chat-2026-10-21"
+  },
+  {
+   "id": "ni-zhunbei-hao-le-ma",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "你準備好了嗎？",
+   "roman": "nǐ zhǔn-bèi hǎo le ma?",
+   "en": "Are you ready?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you",
+     "script": "cn",
+     "zhDisp": "你"
+    },
+    {
+     "zh": "準備",
+     "roman": "zhǔn-bèi",
+     "gloss": "to prepare, to get ready",
+     "script": "cn",
+     "zhDisp": "准备",
+     "zhS": "准备"
+    },
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well",
+     "script": "cn",
+     "zhDisp": "好"
+    },
+    {
+     "zh": "了",
+     "roman": "le",
+     "gloss": "(marks a change / completion)",
+     "script": "cn",
+     "zhDisp": "了"
+    },
+    {
+     "zh": "嗎",
+     "roman": "ma",
+     "gloss": "(question particle)",
+     "script": "cn",
+     "zhDisp": "吗",
+     "zhS": "吗"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-zhunbei-hao-le-ma.mp3",
+     "audio/tw-yunjhe/ni-zhunbei-hao-le-ma-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-zhunbei-hao-le-ma.mp3",
+     "audio/tw-hsiaochen/ni-zhunbei-hao-le-ma-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-zhunbei-hao-le-ma.mp3",
+     "audio/tw-hsiaoyu/ni-zhunbei-hao-le-ma-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-zhunbei-hao-le-ma.mp3",
+     "audio/cn-yunyang/ni-zhunbei-hao-le-ma-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-zhunbei-hao-le-ma.mp3",
+     "audio/cn-xiaoxiao/ni-zhunbei-hao-le-ma-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/ni-zhunbei-hao-le-ma--1.mp3",
+    "2": "audio/chunks/ni-zhunbei-hao-le-ma--2.mp3",
+    "3": "audio/chunks/ni-zhunbei-hao-le-ma--3.mp3",
+    "4": "audio/chunks/ni-zhunbei-hao-le-ma--4.mp3"
+   },
+   "situation": "You're about to start something together.",
+   "note": "準備 = prepare; 好了 = done, ready",
+   "topic": "Small talk",
+   "wish": "chat-2026-10-21",
+   "register": "everyday",
+   "frames": [
+    "ma"
+   ]
+  },
+  {
+   "id": "hao-le-kaishi-ba",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "好了，開始吧！",
+   "roman": "hǎo le, kāi-shǐ ba!",
+   "en": "Ready, let's start!",
+   "words": [
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well",
+     "script": "cn",
+     "zhDisp": "好"
+    },
+    {
+     "zh": "了",
+     "roman": "le",
+     "gloss": "(marks a change / completion)",
+     "script": "cn",
+     "zhDisp": "了"
+    },
+    {
+     "zh": "開始",
+     "roman": "kāi-shǐ",
+     "gloss": "to start, to begin",
+     "script": "cn",
+     "zhDisp": "开始",
+     "zhS": "开始"
+    },
+    {
+     "zh": "吧",
+     "roman": "ba",
+     "gloss": "(suggestion: let's…)",
+     "script": "cn",
+     "zhDisp": "吧"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/hao-le-kaishi-ba.mp3",
+     "audio/tw-yunjhe/hao-le-kaishi-ba-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/hao-le-kaishi-ba.mp3",
+     "audio/tw-hsiaochen/hao-le-kaishi-ba-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/hao-le-kaishi-ba.mp3",
+     "audio/tw-hsiaoyu/hao-le-kaishi-ba-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/hao-le-kaishi-ba.mp3",
+     "audio/cn-yunyang/hao-le-kaishi-ba-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/hao-le-kaishi-ba.mp3",
+     "audio/cn-xiaoxiao/hao-le-kaishi-ba-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/hao-le-kaishi-ba--1.mp3",
+    "2": "audio/chunks/hao-le-kaishi-ba--2.mp3",
+    "3": "audio/chunks/hao-le-kaishi-ba--3.mp3"
+   },
+   "situation": "Someone asks if you're ready.",
+   "note": "好了 = (I'm) ready; 開始 = start; 吧 = let's",
+   "topic": "Small talk",
+   "wish": "chat-2026-10-21",
+   "register": "everyday"
+  },
+  {
+   "id": "ren-huo-yi-kou-qi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "人活一口氣",
+   "roman": "rén huó yì-kǒu-qì",
+   "en": "A person lives for their pride (lit. lives on one breath)",
+   "words": [
+    {
+     "zh": "人",
+     "roman": "rén",
+     "gloss": "person",
+     "script": "cn",
+     "zhDisp": "人"
+    },
+    {
+     "zh": "活",
+     "roman": "huó",
+     "gloss": "to live",
+     "script": "cn",
+     "zhDisp": "活"
+    },
+    {
+     "zh": "一口氣",
+     "roman": "yì-kǒu-qì",
+     "gloss": "one breath; spirit, pride",
+     "script": "cn",
+     "zhDisp": "一口气",
+     "zhS": "一口气"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ren-huo-yi-kou-qi.mp3",
+     "audio/tw-yunjhe/ren-huo-yi-kou-qi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ren-huo-yi-kou-qi.mp3",
+     "audio/tw-hsiaochen/ren-huo-yi-kou-qi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ren-huo-yi-kou-qi.mp3",
+     "audio/tw-hsiaoyu/ren-huo-yi-kou-qi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ren-huo-yi-kou-qi.mp3",
+     "audio/cn-yunyang/ren-huo-yi-kou-qi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ren-huo-yi-kou-qi.mp3",
+     "audio/cn-xiaoxiao/ren-huo-yi-kou-qi-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/ren-huo-yi-kou-qi--1.mp3",
+    "2": "audio/chunks/ren-huo-yi-kou-qi--2.mp3"
+   },
+   "situation": "Someone won't give up or back down for the sake of their dignity.",
+   "note": "A saying: what keeps a person going is their spirit and self-respect. 活 = live; 一口氣 = one breath",
+   "topic": "Sayings",
+   "wish": "chat-2026-10-21",
+   "register": "casual",
+   "tier": 2
+  },
+  {
+   "id": "san",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "Numbers",
+   "zh": "三",
+   "roman": "sān",
+   "en": "three",
+   "words": [
+    {
+     "zh": "三",
+     "roman": "sān",
+     "gloss": "three",
+     "script": "cn",
+     "zhDisp": "三"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/san.mp3",
+     "audio/tw-yunjhe/san-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/san.mp3",
+     "audio/tw-hsiaochen/san-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/san.mp3",
+     "audio/tw-hsiaoyu/san-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/san.mp3",
+     "audio/cn-yunyang/san-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/san.mp3",
+     "audio/cn-xiaoxiao/san-slow.mp3"
+    ]
+   },
+   "cat": [
+    "digit"
+   ]
+  },
+  {
+   "id": "si",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "Numbers",
+   "zh": "四",
+   "roman": "sì",
+   "en": "four",
+   "words": [
+    {
+     "zh": "四",
+     "roman": "sì",
+     "gloss": "four",
+     "script": "cn",
+     "zhDisp": "四"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/si.mp3",
+     "audio/tw-yunjhe/si-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/si.mp3",
+     "audio/tw-hsiaochen/si-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/si.mp3",
+     "audio/tw-hsiaoyu/si-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/si.mp3",
+     "audio/cn-yunyang/si-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/si.mp3",
+     "audio/cn-xiaoxiao/si-slow.mp3"
+    ]
+   },
+   "cat": [
+    "digit"
+   ]
+  },
+  {
+   "id": "wu",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "Numbers",
+   "zh": "五",
+   "roman": "wǔ",
+   "en": "five",
+   "words": [
+    {
+     "zh": "五",
+     "roman": "wǔ",
+     "gloss": "five",
+     "script": "cn",
+     "zhDisp": "五"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wu.mp3",
+     "audio/tw-yunjhe/wu-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wu.mp3",
+     "audio/tw-hsiaochen/wu-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wu.mp3",
+     "audio/tw-hsiaoyu/wu-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wu.mp3",
+     "audio/cn-yunyang/wu-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wu.mp3",
+     "audio/cn-xiaoxiao/wu-slow.mp3"
+    ]
+   },
+   "cat": [
+    "digit"
+   ]
+  },
+  {
+   "id": "liu",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "Numbers",
+   "zh": "六",
+   "roman": "liù",
+   "en": "six",
+   "words": [
+    {
+     "zh": "六",
+     "roman": "liù",
+     "gloss": "six",
+     "script": "cn",
+     "zhDisp": "六"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/liu.mp3",
+     "audio/tw-yunjhe/liu-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/liu.mp3",
+     "audio/tw-hsiaochen/liu-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/liu.mp3",
+     "audio/tw-hsiaoyu/liu-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/liu.mp3",
+     "audio/cn-yunyang/liu-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/liu.mp3",
+     "audio/cn-xiaoxiao/liu-slow.mp3"
+    ]
+   },
+   "cat": [
+    "digit"
+   ]
+  },
+  {
+   "id": "qi",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "Numbers",
+   "zh": "七",
+   "roman": "qī",
+   "en": "seven",
+   "words": [
+    {
+     "zh": "七",
+     "roman": "qī",
+     "gloss": "seven",
+     "script": "cn",
+     "zhDisp": "七"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/qi.mp3",
+     "audio/tw-yunjhe/qi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/qi.mp3",
+     "audio/tw-hsiaochen/qi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/qi.mp3",
+     "audio/tw-hsiaoyu/qi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/qi.mp3",
+     "audio/cn-yunyang/qi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/qi.mp3",
+     "audio/cn-xiaoxiao/qi-slow.mp3"
+    ]
+   },
+   "cat": [
+    "digit"
+   ]
+  },
+  {
+   "id": "ba",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "Numbers",
+   "zh": "八",
+   "roman": "bā",
+   "en": "eight",
+   "words": [
+    {
+     "zh": "八",
+     "roman": "bā",
+     "gloss": "eight",
+     "script": "cn",
+     "zhDisp": "八"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ba.mp3",
+     "audio/tw-yunjhe/ba-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ba.mp3",
+     "audio/tw-hsiaochen/ba-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ba.mp3",
+     "audio/tw-hsiaoyu/ba-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ba.mp3",
+     "audio/cn-yunyang/ba-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ba.mp3",
+     "audio/cn-xiaoxiao/ba-slow.mp3"
+    ]
+   },
+   "cat": [
+    "digit"
+   ]
+  },
+  {
+   "id": "jiu",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "Numbers",
+   "zh": "九",
+   "roman": "jiǔ",
+   "en": "nine",
+   "words": [
+    {
+     "zh": "九",
+     "roman": "jiǔ",
+     "gloss": "nine",
+     "script": "cn",
+     "zhDisp": "九"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/jiu.mp3",
+     "audio/tw-yunjhe/jiu-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/jiu.mp3",
+     "audio/tw-hsiaochen/jiu-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/jiu.mp3",
+     "audio/tw-hsiaoyu/jiu-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/jiu.mp3",
+     "audio/cn-yunyang/jiu-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/jiu.mp3",
+     "audio/cn-xiaoxiao/jiu-slow.mp3"
+    ]
+   },
+   "cat": [
+    "digit"
+   ]
+  },
+  {
+   "id": "shi-ten",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "Numbers",
+   "zh": "十",
+   "roman": "shí",
+   "en": "ten",
+   "words": [
+    {
+     "zh": "十",
+     "roman": "shí",
+     "gloss": "ten",
+     "script": "cn",
+     "zhDisp": "十"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/shi-ten.mp3",
+     "audio/tw-yunjhe/shi-ten-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/shi-ten.mp3",
+     "audio/tw-hsiaochen/shi-ten-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/shi-ten.mp3",
+     "audio/tw-hsiaoyu/shi-ten-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/shi-ten.mp3",
+     "audio/cn-yunyang/shi-ten-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/shi-ten.mp3",
+     "audio/cn-xiaoxiao/shi-ten-slow.mp3"
+    ]
+   },
+   "cat": [
+    "digit"
    ]
   },
   {
@@ -23123,6 +24221,7 @@
   "係": "系",
   "個": "个",
   "們": "们",
+  "備": "备",
   "兒": "儿",
   "兩": "两",
   "剛": "刚",
@@ -23136,11 +24235,13 @@
   "寫": "写",
   "對": "对",
   "師": "师",
+  "幣": "币",
   "幾": "几",
   "廳": "厅",
   "後": "后",
   "從": "从",
   "愛": "爱",
+  "於": "于",
   "時": "时",
   "書": "书",
   "會": "会",
@@ -23151,6 +24252,8 @@
   "歲": "岁",
   "氣": "气",
   "沒": "没",
+  "減": "减",
+  "準": "准",
   "漢": "汉",
   "熱": "热",
   "現": "现",
@@ -23489,6 +24592,11 @@
    "c": "一一",
    "h": "Two  parallel lines; compare 一 (one) and 三 (three)"
   },
+  "于": {
+   "d": "at, in, on; to, from",
+   "p": "yú",
+   "c": "二亅"
+  },
   "云": {
    "d": "cloud; to say, to speak",
    "p": "yún",
@@ -23739,6 +24847,11 @@
    "s": "亻",
    "ph": "亭"
   },
+  "備": {
+   "d": "to prepare; to get ready, to equip",
+   "p": "bèi",
+   "c": "亻"
+  },
   "儿": {
    "d": "child; son",
    "p": "ér",
@@ -23919,12 +25032,26 @@
    "s": "冫",
    "ph": "令"
   },
+  "准": {
+   "d": "standard, accurate",
+   "p": "zhǔn",
+   "c": "冫隹",
+   "s": "冫",
+   "ph": "隹"
+  },
   "凍": {
    "d": "cold; to freeze, to congeal",
    "p": "dòng",
    "c": "冫東",
    "s": "冫",
    "ph": "東"
+  },
+  "减": {
+   "d": "to decrease, to subtract, to diminish",
+   "p": "jiǎn",
+   "c": "冫咸",
+   "s": "冫",
+   "ph": "咸"
   },
   "几": {
    "d": "how many; small table",
@@ -24391,6 +25518,12 @@
    "c": "口羊",
    "h": "The sound a sheep 羊 makes with its mouth 口"
   },
+  "咸": {
+   "d": "all, together, united; salted",
+   "p": "xián",
+   "c": "戊一口",
+   "h": "One 一 voice 口 surrounded by conflict 戈"
+  },
   "咼": {
    "d": "to chat, to gossip, to jaw, to talk; mouth",
    "p": "guō",
@@ -24662,6 +25795,12 @@
    "p": "zhǐ",
    "c": "丿又"
   },
+  "备": {
+   "d": "to prepare; to get ready, to equip",
+   "p": "bèi",
+   "c": "夂田",
+   "h": "To go 夂 to the farm 田 to prepare for a harvest"
+  },
   "夕": {
    "d": "evening, night, dusk; slanted",
    "p": "xī",
@@ -24755,6 +25894,13 @@
    "c": "女马",
    "s": "女",
    "ph": "马"
+  },
+  "始": {
+   "d": "to begin, to start; beginning",
+   "p": "shǐ",
+   "c": "女台",
+   "s": "女",
+   "ph": "台"
   },
   "姐": {
    "d": "elder sister; miss, young lady",
@@ -25021,6 +26167,12 @@
    "p": "zā",
    "c": "一巾"
   },
+  "币": {
+   "d": "currency, coins, legal tender",
+   "p": "bì",
+   "c": "丿巾",
+   "h": "Bills written on silk 巾"
+  },
   "师": {
    "d": "teacher, professional, master",
    "p": "shī",
@@ -25032,6 +26184,13 @@
    "p": "shī",
    "c": "丿㠯帀",
    "h": "To skillfully wield 帀 a knife 㠯"
+  },
+  "幣": {
+   "d": "currency, coins, legal tender",
+   "p": "bì",
+   "c": "敝巾",
+   "s": "巾",
+   "ph": "敝"
   },
   "干": {
    "d": "dry; to do (in 干杯 cheers)",
@@ -25424,6 +26583,12 @@
    "s": "攵",
    "ph": "孝"
   },
+  "敝": {
+   "d": "to break, to destroy; ruined, tattered",
+   "p": "bì",
+   "c": "攵",
+   "s": "攵"
+  },
   "文": {
    "d": "culture, literature, writing",
    "p": "wén",
@@ -25445,6 +26610,11 @@
    "d": "square, rectangle; side",
    "p": "fāng",
    "c": "亠"
+  },
+  "於": {
+   "d": "at, in, on; to, from",
+   "p": "yú",
+   "c": "方"
   },
   "旡": {
    "d": "to choke on something",
@@ -25825,6 +26995,12 @@
    "p": "mǔ",
    "h": "A mother's breasts"
   },
+  "民": {
+   "d": "citizens, subjects; a nation's people",
+   "p": "mín",
+   "c": "巳戈",
+   "h": "An eye 巳 pierced by a dagger 戈, an old mark of slavery"
+  },
   "气": {
    "d": "air, gas; steam, vapor",
    "p": "qì",
@@ -25910,12 +27086,33 @@
    "s": "氵",
    "ph": "各"
   },
+  "活": {
+   "d": "to exist, to live, to survive; living, working",
+   "p": "huó",
+   "c": "氵舌",
+   "s": "氵",
+   "ph": "舌"
+  },
+  "淮": {
+   "d": "a river in Anhui province",
+   "p": "huái",
+   "c": "氵隹",
+   "s": "氵",
+   "ph": "隹"
+  },
   "清": {
    "d": "clean, pure; clear, distinct",
    "p": "qīng",
    "c": "氵青",
    "s": "氵",
    "ph": "青"
+  },
+  "減": {
+   "d": "to decrease, to subtract, to diminish",
+   "p": "jiǎn",
+   "c": "氵咸",
+   "s": "氵",
+   "ph": "咸"
   },
   "港": {
    "d": "port, harbor, bay; Hong Kong",
@@ -25930,6 +27127,12 @@
    "c": "氵曷",
    "s": "氵",
    "ph": "曷"
+  },
+  "準": {
+   "d": "standard, accurate",
+   "p": "zhǔn",
+   "c": "淮十",
+   "h": "To balance 十 water 氵 in a spirit level; 隹 provides the pronunciation"
   },
   "漂": {
    "d": "to drift, to float; to be tossed about",
@@ -27879,6 +29082,86 @@
     "r": "yì-diǎn shí-jiān",
     "e": "a little time"
    },
+   "加": {
+    "r": "jiā",
+    "e": "plus; to add"
+   },
+   "減": {
+    "r": "jiǎn",
+    "e": "minus; to subtract"
+   },
+   "等於": {
+    "r": "děng-yú",
+    "e": "equals"
+   },
+   "幾": {
+    "r": "jǐ",
+    "e": "how many"
+   },
+   "三加四等於幾": {
+    "r": "sān jiā sì děng-yú jǐ",
+    "e": "3 + 4 = ? (how much)"
+   },
+   "二十五塊": {
+    "r": "èr-shí-wǔ kuài",
+    "e": "25 yuan (dollars)"
+   },
+   "兩塊": {
+    "r": "liǎng kuài",
+    "e": "two dollars"
+   },
+   "二塊": {
+    "r": "èr kuài",
+    "e": "(wrong) two dollars"
+   },
+   "多少錢": {
+    "r": "duō-shǎo qián?",
+    "e": "How much is it?"
+   },
+   "十": {
+    "r": "shí",
+    "e": "ten"
+   },
+   "二十五": {
+    "r": "èr-shí-wǔ",
+    "e": "twenty-five"
+   },
+   "港幣": {
+    "r": "Gǎng-bì",
+    "e": "Hong Kong dollars"
+   },
+   "塊": {
+    "r": "kuài",
+    "e": "yuan, dollar (spoken money unit)"
+   },
+   "寫": {
+    "r": "xiě",
+    "e": "to write"
+   },
+   "下來": {
+    "r": "xià-lái",
+    "e": "down (so it stays)"
+   },
+   "準備": {
+    "r": "zhǔn-bèi",
+    "e": "to prepare, to get ready"
+   },
+   "好了": {
+    "r": "hǎo le",
+    "e": "done, ready"
+   },
+   "開始": {
+    "r": "kāi-shǐ",
+    "e": "to start, to begin"
+   },
+   "活": {
+    "r": "huó",
+    "e": "to live"
+   },
+   "一口氣": {
+    "r": "yì-kǒu-qì",
+    "e": "one breath; spirit, pride"
+   },
    "不要": {
     "r": "bú yào",
     "e": "don't want"
@@ -28191,10 +29474,6 @@
     "r": "qǐng-wèn",
     "e": "Excuse me, may I ask…"
    },
-   "多少錢": {
-    "r": "duō-shǎo qián?",
-    "e": "How much is it?"
-   },
    "掰掰": {
     "r": "bāi-bāi",
     "e": "bye-bye"
@@ -28210,10 +29489,6 @@
    "我媽媽": {
     "r": "wǒ mā-ma",
     "e": "my mum"
-   },
-   "好了": {
-    "r": "hǎo le",
-    "e": "done, ready"
    },
    "還沒": {
     "r": "hái-méi",
@@ -28557,6 +29832,12 @@
    "還": "audio/words/mandarin/9084.mp3",
    "可是": "audio/words/mandarin/53ef-662f.mp3",
    "不太": "audio/words/mandarin/4e0d-592a.mp3",
+   "二十五": "audio/words/mandarin/4e8c-5341-4e94.mp3",
+   "下來": "audio/words/mandarin/4e0b-4f86.mp3",
+   "準備": "audio/words/mandarin/6e96-5099.mp3",
+   "開始": "audio/words/mandarin/958b-59cb.mp3",
+   "活": "audio/words/mandarin/6d3b.mp3",
+   "一口氣": "audio/words/mandarin/4e00-53e3-6c23.mp3",
    "打": "audio/words/mandarin/6253.mp3",
    "電話": "audio/words/mandarin/96fb-8a71.mp3",
    "懂": "audio/words/mandarin/61c2.mp3",
@@ -28591,14 +29872,6 @@
    "今年": "audio/words/mandarin/4eca-5e74.mp3",
    "多": "audio/words/mandarin/591a.mp3",
    "大": "audio/words/mandarin/5927.mp3",
-   "三": "audio/words/mandarin/4e09.mp3",
-   "四": "audio/words/mandarin/56db.mp3",
-   "五": "audio/words/mandarin/4e94.mp3",
-   "六": "audio/words/mandarin/516d.mp3",
-   "七": "audio/words/mandarin/4e03.mp3",
-   "八": "audio/words/mandarin/516b.mp3",
-   "九": "audio/words/mandarin/4e5d.mp3",
-   "十": "audio/words/mandarin/5341.mp3",
    "媽媽": "audio/words/mandarin/5abd-5abd.mp3",
    "菜": "audio/words/mandarin/83dc.mp3",
    "好吃": "audio/words/mandarin/597d-5403.mp3",
@@ -28614,7 +29887,6 @@
    "下午": "audio/words/mandarin/4e0b-5348.mp3",
    "商店": "audio/words/mandarin/5546-5e97.mp3",
    "杯子": "audio/words/mandarin/676f-5b50.mp3",
-   "塊": "audio/words/mandarin/584a.mp3",
    "小": "audio/words/mandarin/5c0f.mp3",
    "貓": "audio/words/mandarin/8c93.mp3",
    "那裡": "audio/words/mandarin/90a3-88e1.mp3",
@@ -31361,7 +32633,8 @@
     "ni-hui-shuo-yingwen-ma",
     "hao-le-ma",
     "keyi-shuo-yingwen-ma",
-    "ni-keyi-jiao-wo-ma"
+    "ni-keyi-jiao-wo-ma",
+    "ni-zhunbei-hao-le-ma"
    ]
   },
   {
@@ -31513,7 +32786,8 @@
     "qing-zai-shuo-yici",
     "qing-gei-wo-x",
     "qing-man-yidian-zai-shuo-yibian",
-    "qing-yong-yingyu-shuo-yibian"
+    "qing-yong-yingyu-shuo-yibian",
+    "qing-xie-xialai"
    ]
   },
   {

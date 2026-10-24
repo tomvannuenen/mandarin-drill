@@ -1,6 +1,17 @@
 {
   "_comment": "Chinese that appears inside notes but is not a phrase or word of the deck: [romanisation, English]. A third value \"mandarin\" marks pinyin inside a Cantonese note. The build fails when a note contains Chinese with no meaning here or in the deck.",
   "mandarin": {
+    "你從哪裡來": ["nǐ cóng nǎ-lǐ lái", "where are you from?"],
+    "兒": ["ér", "(-r ending)"],
+    "大模型": ["dà mó-xíng", "large (AI) model"],
+    "大語言模型": ["dà yǔ-yán mó-xíng", "large language model"],
+    "奶": ["nǎi", "milk"],
+    "日": ["rì", "day"],
+    "最常": ["zuì cháng", "most often"],
+    "生": ["shēng", "be born; raw; life"],
+    "菜": ["cài", "vegetable; dish"],
+    "要去": ["yào qù", "going to (go)"],
+    "那裡": ["nà-lǐ", "there"],
     "三加四等於幾": ["sān jiā sì děng-yú jǐ", "3 + 4 = ? (how much)"],
     "兩塊": ["liǎng kuài", "two dollars"],
     "二塊": ["èr kuài", "(wrong) two dollars"],

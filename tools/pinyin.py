@@ -11,6 +11,13 @@ _SEP = re.compile(r"([ \-]+)")
 _WORD = re.compile(r"^([^A-Za-zÀ-ɏ]*)([A-Za-zÀ-ɏ\u0300-\u036f]+)(.*)$")
 
 
+def foreign(token: str) -> bool:
+    """A Latin word written as-is inside the Chinese (ChatGPT, AI): it has no character and no syllable.
+    Pinyin never has two capitals or a digit in one token, so that's the test."""
+    core = _core(token)[1]
+    return bool(core) and core.isascii() and sum(c.isupper() or c.isdigit() for c in core) >= 2
+
+
 def tone_of(syl: str) -> int:
     for ch in unicodedata.normalize("NFD", syl):
         if ch in _TONE_MARKS:
@@ -32,7 +39,7 @@ def syllables(pinyin: str) -> list:
         if not tok or _SEP.fullmatch(tok):
             continue
         letters = _core(tok)[1]
-        if letters:
+        if letters and not foreign(tok):
             out.append(letters)
     return out
 
@@ -44,7 +51,7 @@ def han_chars(zh: str) -> list:
 def apply_sandhi(zh: str, pinyin: str, no_yi: bool = False) -> str:
     chars = han_chars(zh)
     parts = _SEP.split(unicodedata.normalize("NFC", pinyin))
-    idx = [i for i, p in enumerate(parts) if p and not _SEP.fullmatch(p) and _core(p)[1]]
+    idx = [i for i, p in enumerate(parts) if p and not _SEP.fullmatch(p) and _core(p)[1] and not foreign(p)]
     if len(idx) != len(chars):
         raise ValueError(f"{zh!r}: {len(chars)} characters but {len(idx)} pinyin syllables in {pinyin!r}")
     for n, (ch, i) in enumerate(zip(chars, idx)):
@@ -68,6 +75,9 @@ def word_groups(zh: str, pinyin: str) -> list:
     chars = han_chars(zh)
     groups, pos = [], 0
     for word in pinyin.split():
+        if foreign(word):
+            groups.append((_core(word)[1], word))
+            continue
         n = len(syllables(word))
         if n == 0:
             continue

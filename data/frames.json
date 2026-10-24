@@ -15,10 +15,10 @@
      "items": ["zhege-zhongwen-zenme-shuo", "zhe-ju-hua-zhongwen-zenme-shuo", "zhege-yong-zhongwen-zenme-shuo"]},
     {"id": "ma", "deck": "mandarin", "zh": "statement + 嗎？", "roman": "… ma?", "en": "yes/no question",
      "why": "Say it as a statement and add 嗎: 你是學生 (you are a student) → 你是學生嗎？ (are you a student?). Nothing else moves.",
-     "items": ["zuijin-hao-ma", "ni-xihuan-x-ma", "ni-shi-xuesheng-ma", "you-wenti-ma", "ni-you-kong-ma", "ni-hui-shuo-yingwen-ma", "hao-le-ma", "keyi-shuo-yingwen-ma", "ni-keyi-jiao-wo-ma", "ni-zhunbei-hao-le-ma"]},
+     "items": ["zuijin-hao-ma", "ni-xihuan-x-ma", "ni-shi-xuesheng-ma", "you-wenti-ma", "ni-you-kong-ma", "ni-hui-shuo-yingwen-ma", "hao-le-ma", "keyi-shuo-yingwen-ma", "ni-keyi-jiao-wo-ma", "ni-zhunbei-hao-le-ma", "nimen-yong-chatgpt-ma"]},
     {"id": "wh-in-place", "deck": "mandarin", "zh": "question word where the answer goes", "roman": "shén-me · nǎ-lǐ · jǐ", "en": "what · where · how many",
      "why": "Chinese doesn't move the question word to the front. 你喜歡喝什麼？ = you like drink what? The answer takes its place: 我喜歡喝咖啡.",
-     "items": ["zuijin-mang-shenme", "ni-xihuan-he-shenme", "ni-xihuan-chi-shenme", "ni-jiao-shenme-mingzi", "ni-shi-nage-xi-de", "ni-ji-nianji", "ni-du-shenme", "ni-shi-nali-ren", "ni-zai-nali-gongzuo", "ni-xiang-chi-shenme", "ni-zai-xianggang-duojiu-le"]},
+     "items": ["zuijin-mang-shenme", "ni-xihuan-he-shenme", "ni-xihuan-chi-shenme", "ni-jiao-shenme-mingzi", "ni-shi-nage-xi-de", "ni-ji-nianji", "ni-du-shenme", "ni-shi-nali-ren", "ni-zai-nali-gongzuo", "ni-xiang-chi-shenme", "ni-zai-xianggang-duojiu-le", "zai-xianggang-dajia-yong-naxie-da-moxing", "nimen-pingshi-zui-chang-yong-nage-da-moxing", "zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing", "ni-cong-nar-lai", "chaoshi-zai-nali"]},
     {"id": "a-not-a", "deck": "mandarin", "zh": "verb 不 verb？", "roman": "yào bu yào?", "en": "(verb) or not?",
      "why": "Say the verb, 不 (or 沒 for 有), then the verb again: 要不要 = want not want? It asks yes or no without 嗎. Answer with the verb: 要 / 不要.",
      "items": ["yao-bu-yao-la", "you-mei-you-wenti", "ni-zhi-bu-zhidao", "keyi-bu-keyi", "you-mei-you-qita-wenti", "you-mei-you-qita-shijian-shangke", "dui-bu-dui", "hao-bu-hao"]},
@@ -33,7 +33,7 @@
      "items": ["wo-bu-xihuan-he-x", "wo-bu-xihuan-chi-x", "wo-bu-zhidao", "wo-bu-chi-la", "wo-de-zhongwen-bu-tai-hao"]},
     {"id": "xiang-yao", "deck": "mandarin", "zh": "想 / 要 + …", "roman": "xiǎng / yào …", "en": "would like to / want",
      "why": "想 + verb = would like to (soft). 要 + thing = want, I'll have (direct, normal when ordering). The thing or action follows right after.",
-     "items": ["wo-xiang-qu-x", "wo-xiang-he-x", "wo-xiang-chi-x", "ni-xiang-chi-shenme", "wo-yao-x", "wo-yao-yibei-x", "wo-yao-zhege"]},
+     "items": ["wo-xiang-qu-x", "wo-xiang-he-x", "wo-xiang-chi-x", "ni-xiang-chi-shenme", "wo-yao-x", "wo-yao-yibei-x", "wo-yao-zhege", "wo-yao-qu-chaoshi"]},
     {"id": "xihuan-verb", "deck": "mandarin", "zh": "喜歡 + verb + thing", "roman": "xǐ-huān …", "en": "like doing …",
      "why": "Chinese says what you like doing with the verb in: 我喜歡喝咖啡 = I like drink coffee. Leave out 喝 and it sounds like you like coffee as a thing.",
      "items": ["wo-xihuan-he-x", "wo-xihuan-chi-x", "ni-xihuan-he-shenme", "ni-xihuan-chi-shenme", "wo-bu-xihuan-he-x", "wo-bu-xihuan-chi-x"]},
@@ -48,6 +48,9 @@
      "items": ["qing-shuo-man-yidian", "qing-zai-shuo-yici", "qing-gei-wo-x", "qing-man-yidian-zai-shuo-yibian", "qing-yong-yingyu-shuo-yibian", "qing-xie-xialai"]},
     {"id": "hai", "deck": "mandarin", "zh": "還 + …", "roman": "hái …", "en": "still, fairly",
      "why": "還 = still. 還好 = still good (okay), 還可以 = still acceptable (not bad), 還沒 = still not (not yet), 還不太會 = still can't really.",
-     "items": ["wo-hai-hao", "hai-keyi", "wo-hai-mei-chi", "hai-mei-ne", "wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo"]}
+     "items": ["wo-hai-hao", "hai-keyi", "wo-hai-mei-chi", "hai-mei-ne", "wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo"]},
+    {"id": "scene-first", "deck": "mandarin", "zh": "where / when → who → verb → what", "roman": "zài … , …", "en": "set the scene first",
+     "why": "Chinese starts with where and when: 在香港，大家用哪些大模型？ = in Hong Kong, everyone uses which large models? English puts the place last. Then who, then the verb, then the thing; a question word (哪些 which ones, 哪個 which) simply takes the thing's place.",
+     "items": ["zai-xianggang-dajia-yong-naxie-da-moxing", "nimen-pingshi-zui-chang-yong-nage-da-moxing", "zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing", "zuotian-wucan-de-shihou"]}
   ]
 }

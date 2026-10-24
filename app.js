@@ -668,6 +668,58 @@ function hintButton(c, label = 'Hint', text = () => hintText(c.roman, c.deck)) {
 function renderBuild(c) {
   const line = el('div', { class: 'build-line' });
   const pool = el('div', { class: 'build-pool' });
+  // Words you don't know (often the extra ones): drag them into the bucket. They show their meaning and go into
+  // practice: as a reading problem when the tiles are characters, as a word to say when they are pinyin.
+  c.bucket ||= [];
+  const bucket = el('div', { class: 'build-bucket' });
+  const toBucket = (t) => {
+    if (c.bucket.includes(t)) return;
+    c.bucket.push(t);
+    const now = new Date();
+    if (c.activity === 'dictate') flagWord(progress, c.deck, t.zh, now);
+    else if (c.deck === 'mandarin' || decks[c.deck]?.characters !== false) markReading(progress, c.deck, t.zh, false, now);
+    persist();
+    speakWord(t.zh, c.deck);
+    draw();
+  };
+  const over = (e) => {
+    const r = bucket.getBoundingClientRect();
+    return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+  };
+  const draggable = (b, t) => {
+    let start = null;
+    let ghost = null;
+    b.addEventListener('pointerdown', (e) => {
+      if (c.result) return;
+      start = { x: e.clientX, y: e.clientY };
+      b.setPointerCapture(e.pointerId);
+    });
+    b.addEventListener('pointermove', (e) => {
+      if (!start) return;
+      if (!ghost && Math.hypot(e.clientX - start.x, e.clientY - start.y) > 8) {
+        ghost = b.cloneNode(true);
+        ghost.classList.add('tile-ghost');
+        document.body.append(ghost);
+      }
+      if (ghost) {
+        ghost.style.left = `${e.clientX}px`;
+        ghost.style.top = `${e.clientY}px`;
+        bucket.classList.toggle('over', over(e));
+      }
+    });
+    const end = (e) => {
+      if (ghost) {
+        ghost.remove();
+        b.dataset.dragged = '1'; // not a tap
+        bucket.classList.remove('over');
+        if (e.type === 'pointerup' && over(e)) toBucket(t);
+      }
+      start = null;
+      ghost = null;
+    };
+    b.addEventListener('pointerup', end);
+    b.addEventListener('pointercancel', end);
+  };
   // Heard, not read: no English. Rebuild by ear has pinyin tiles; in characters, the tiles are characters
   // only (tapping one says it).
   const byEar = c.activity === 'dictate' || c.activity === 'hanzi';
@@ -688,7 +740,10 @@ function renderBuild(c) {
       const b = tileEl(t);
       const used = c.picked.includes(t);
       b.classList.toggle('used', used);
+      b.classList.toggle('unknown', c.bucket.includes(t));
+      if (!used) draggable(b, t);
       b.addEventListener('click', () => {
+        if (b.dataset.dragged) { delete b.dataset.dragged; return; }
         if (used || c.result) return;
         speakWord(t.zh, c.deck);
         c.picked.push(t);
@@ -697,16 +752,20 @@ function renderBuild(c) {
       });
       return b;
     }));
+    bucket.replaceChildren(...(c.bucket.length
+      ? c.bucket.map((t) => el('button', { class: 'bucket-word', onclick: () => speakWord(t.zh, c.deck) },
+        el('span', { lang: zl(c.deck) }, zs(t.zh, c.deck)), ' ', renderRoman(el('b'), t.roman, c.deck), t.gloss ? ` · ${plainGloss(t.gloss)}` : ''))
+      : [el('span', { class: 'bucket-empty' }, "Don't know a word? Drag it here")]));
   };
   draw();
   c.redraw = draw;
   if (byEar) {
     return [
       el('button', { class: 'icon-btn huge', 'aria-label': 'Play again', onclick: () => playCurrent({ next: true }) }, icon('play')),
-      el('p', { class: 'speaker' }), line, pool,
+      el('p', { class: 'speaker' }), line, pool, bucket,
     ];
   }
-  return [el('p', { class: 'prompt-en' }, c.en), line, pool];
+  return [el('p', { class: 'prompt-en' }, c.en), line, pool, bucket];
 }
 
 function checkBuild(c, line) {
@@ -950,7 +1009,7 @@ function promptFor(card, c) {
         b.addEventListener('click', () => {
           if (c.result) return explain(o.ch);
           b.classList.add(o.right ? 'right' : 'wrong');
-          if (!o.right) c.missed = true;
+          if (!o.right) { c.missed = true; (c.wrong ||= new Set()).add(o.ch); }
           if (o.right) finishLook(c);
         });
         return b;
@@ -1241,7 +1300,16 @@ function finishLook(c) {
   c.result = c.missed ? 1 : 3;
   c.revealMs = Math.round(performance.now() - c.shownAt);
   $('card-kind').textContent = c.missed ? 'Tricky pair' : 'Spot on';
-  $('a-note').replaceChildren(...mixedText(c.set.hint, 'mandarin', zl('mandarin')));
+  // Side by side: each character with its sound and meaning (the right one green, the one you mistook red; tap
+  // one to hear it), then how to tell them apart.
+  const lang = zl('mandarin');
+  const rows = [...c.set.chars].map((ch) => {
+    const h = lookInfo(ch);
+    const cls = ch === c.target ? ' right' : c.wrong?.has(ch) ? ' wrong' : '';
+    return el('button', { class: `look-row${cls}`, onclick: () => (h.audio ? play(h.audio[Object.keys(h.audio)[0]][0]) : speakText(ch, 'mandarin')) },
+      el('span', { class: 'look-row-zh', lang }, ch), renderRoman(el('span', { class: 'look-row-py' }), h.roman, 'mandarin'), el('span', { class: 'look-row-en' }, h.en));
+  });
+  $('a-note').replaceChildren(el('div', { class: 'look-compare' }, ...rows), el('p', { class: 'look-hint' }, ...mixedText(c.set.hint, 'mandarin', lang)));
   $('a-note').hidden = false;
   $('answer').hidden = false;
   $('reveal').hidden = true;

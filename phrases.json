@@ -1,5 +1,5 @@
 {
- "version": "c6d5dc5fa0ba",
+ "version": "1c07a760f84b",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -1352,6 +1352,66 @@
        "audio/cn-xiaoxiao/wo-xihuan-he-x--pijiu-slow.mp3"
       ]
      }
+    },
+    {
+     "fillId": "niunai",
+     "zh": "我喜歡喝牛奶",
+     "roman": "wǒ xǐ-huān hē niú-nǎi",
+     "en": "I like drinking milk",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me",
+       "script": "cn",
+       "zhDisp": "我"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like",
+       "script": "cn",
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
+      },
+      {
+       "zh": "喝",
+       "roman": "hē",
+       "gloss": "to drink",
+       "script": "cn",
+       "zhDisp": "喝"
+      },
+      {
+       "zh": "牛奶",
+       "roman": "niú-nǎi",
+       "gloss": "milk",
+       "script": "cn",
+       "zhDisp": "牛奶"
+      }
+     ],
+     "situation": "Someone asks what you like to drink. (milk)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xihuan-he-x--niunai.mp3",
+       "audio/tw-yunjhe/wo-xihuan-he-x--niunai-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xihuan-he-x--niunai.mp3",
+       "audio/tw-hsiaochen/wo-xihuan-he-x--niunai-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xihuan-he-x--niunai.mp3",
+       "audio/tw-hsiaoyu/wo-xihuan-he-x--niunai-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xihuan-he-x--niunai.mp3",
+       "audio/cn-yunyang/wo-xihuan-he-x--niunai-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xihuan-he-x--niunai.mp3",
+       "audio/cn-xiaoxiao/wo-xihuan-he-x--niunai-slow.mp3"
+      ]
+     }
     }
    ],
    "situation": "Someone asks what you like to drink. (___)",
@@ -1888,6 +1948,66 @@
       "cn-xiaoxiao": [
        "audio/cn-xiaoxiao/wo-xihuan-chi-x--mapo-doufu.mp3",
        "audio/cn-xiaoxiao/wo-xihuan-chi-x--mapo-doufu-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "niurou",
+     "zh": "我喜歡吃牛肉",
+     "roman": "wǒ xǐ-huān chī niú-ròu",
+     "en": "I like eating beef",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me",
+       "script": "cn",
+       "zhDisp": "我"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like",
+       "script": "cn",
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat",
+       "script": "cn",
+       "zhDisp": "吃"
+      },
+      {
+       "zh": "牛肉",
+       "roman": "niú-ròu",
+       "gloss": "beef",
+       "script": "cn",
+       "zhDisp": "牛肉"
+      }
+     ],
+     "situation": "Someone asks what food you like. (beef)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xihuan-chi-x--niurou.mp3",
+       "audio/tw-yunjhe/wo-xihuan-chi-x--niurou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--niurou.mp3",
+       "audio/tw-hsiaochen/wo-xihuan-chi-x--niurou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--niurou.mp3",
+       "audio/tw-hsiaoyu/wo-xihuan-chi-x--niurou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xihuan-chi-x--niurou.mp3",
+       "audio/cn-yunyang/wo-xihuan-chi-x--niurou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--niurou.mp3",
+       "audio/cn-xiaoxiao/wo-xihuan-chi-x--niurou-slow.mp3"
       ]
      }
     },
@@ -2826,6 +2946,73 @@
        "audio/cn-xiaoxiao/wo-bu-xihuan-he-x--pijiu-slow.mp3"
       ]
      }
+    },
+    {
+     "fillId": "niunai",
+     "zh": "我不喜歡喝牛奶",
+     "roman": "wǒ bù xǐ-huān hē niú-nǎi",
+     "en": "I don't like drinking milk",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me",
+       "script": "cn",
+       "zhDisp": "我"
+      },
+      {
+       "zh": "不",
+       "roman": "bù",
+       "gloss": "not",
+       "script": "cn",
+       "zhDisp": "不"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like",
+       "script": "cn",
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
+      },
+      {
+       "zh": "喝",
+       "roman": "hē",
+       "gloss": "to drink",
+       "script": "cn",
+       "zhDisp": "喝"
+      },
+      {
+       "zh": "牛奶",
+       "roman": "niú-nǎi",
+       "gloss": "milk",
+       "script": "cn",
+       "zhDisp": "牛奶"
+      }
+     ],
+     "situation": "Someone offers you milk, but you don't like it.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-bu-xihuan-he-x--niunai.mp3",
+       "audio/tw-yunjhe/wo-bu-xihuan-he-x--niunai-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-bu-xihuan-he-x--niunai.mp3",
+       "audio/tw-hsiaochen/wo-bu-xihuan-he-x--niunai-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-bu-xihuan-he-x--niunai.mp3",
+       "audio/tw-hsiaoyu/wo-bu-xihuan-he-x--niunai-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-bu-xihuan-he-x--niunai.mp3",
+       "audio/cn-yunyang/wo-bu-xihuan-he-x--niunai-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-bu-xihuan-he-x--niunai.mp3",
+       "audio/cn-xiaoxiao/wo-bu-xihuan-he-x--niunai-slow.mp3"
+      ]
+     }
     }
    ],
    "situation": "Someone offers you ___, but you don't like it.",
@@ -2974,6 +3161,73 @@
       "cn-xiaoxiao": [
        "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--mapo-doufu.mp3",
        "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--mapo-doufu-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "niurou",
+     "zh": "我不喜歡吃牛肉",
+     "roman": "wǒ bù xǐ-huān chī niú-ròu",
+     "en": "I don't like eating beef",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me",
+       "script": "cn",
+       "zhDisp": "我"
+      },
+      {
+       "zh": "不",
+       "roman": "bù",
+       "gloss": "not",
+       "script": "cn",
+       "zhDisp": "不"
+      },
+      {
+       "zh": "喜歡",
+       "roman": "xǐ-huān",
+       "gloss": "to like",
+       "script": "cn",
+       "zhDisp": "喜欢",
+       "zhS": "喜欢"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat",
+       "script": "cn",
+       "zhDisp": "吃"
+      },
+      {
+       "zh": "牛肉",
+       "roman": "niú-ròu",
+       "gloss": "beef",
+       "script": "cn",
+       "zhDisp": "牛肉"
+      }
+     ],
+     "situation": "Someone offers you beef, but you don't like it.",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--niurou.mp3",
+       "audio/tw-yunjhe/wo-bu-xihuan-chi-x--niurou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--niurou.mp3",
+       "audio/tw-hsiaochen/wo-bu-xihuan-chi-x--niurou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--niurou.mp3",
+       "audio/tw-hsiaoyu/wo-bu-xihuan-chi-x--niurou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--niurou.mp3",
+       "audio/cn-yunyang/wo-bu-xihuan-chi-x--niurou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--niurou.mp3",
+       "audio/cn-xiaoxiao/wo-bu-xihuan-chi-x--niurou-slow.mp3"
       ]
      }
     },
@@ -7280,6 +7534,1415 @@
    "tier": 2
   },
   {
+   "id": "niu",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "牛",
+   "roman": "niú",
+   "en": "cow, ox",
+   "words": [
+    {
+     "zh": "牛",
+     "roman": "niú",
+     "gloss": "cow, ox",
+     "script": "cn",
+     "zhDisp": "牛"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/niu.mp3",
+     "audio/tw-yunjhe/niu-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/niu.mp3",
+     "audio/tw-hsiaochen/niu-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/niu.mp3",
+     "audio/tw-hsiaoyu/niu-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/niu.mp3",
+     "audio/cn-yunyang/niu-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/niu.mp3",
+     "audio/cn-xiaoxiao/niu-slow.mp3"
+    ]
+   },
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "niurou",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "牛肉",
+   "roman": "niú-ròu",
+   "en": "beef",
+   "words": [
+    {
+     "zh": "牛肉",
+     "roman": "niú-ròu",
+     "gloss": "beef",
+     "script": "cn",
+     "zhDisp": "牛肉"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/niurou.mp3",
+     "audio/tw-yunjhe/niurou-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/niurou.mp3",
+     "audio/tw-hsiaochen/niurou-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/niurou.mp3",
+     "audio/tw-hsiaoyu/niurou-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/niurou.mp3",
+     "audio/cn-yunyang/niurou-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/niurou.mp3",
+     "audio/cn-xiaoxiao/niurou-slow.mp3"
+    ]
+   },
+   "cat": [
+    "food"
+   ],
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "niunai",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "牛奶",
+   "roman": "niú-nǎi",
+   "en": "milk",
+   "words": [
+    {
+     "zh": "牛奶",
+     "roman": "niú-nǎi",
+     "gloss": "milk",
+     "script": "cn",
+     "zhDisp": "牛奶"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/niunai.mp3",
+     "audio/tw-yunjhe/niunai-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/niunai.mp3",
+     "audio/tw-hsiaochen/niunai-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/niunai.mp3",
+     "audio/tw-hsiaoyu/niunai-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/niunai.mp3",
+     "audio/cn-yunyang/niunai-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/niunai.mp3",
+     "audio/cn-xiaoxiao/niunai-slow.mp3"
+    ]
+   },
+   "note": "牛 = cow; 奶 = milk",
+   "cat": [
+    "drink"
+   ],
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "xuesheng",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "學生",
+   "roman": "xué-shēng",
+   "en": "student",
+   "words": [
+    {
+     "zh": "學生",
+     "roman": "xué-shēng",
+     "gloss": "student",
+     "script": "hk",
+     "zhS": "学生"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/xuesheng.mp3",
+     "audio/tw-yunjhe/xuesheng-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/xuesheng.mp3",
+     "audio/tw-hsiaochen/xuesheng-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/xuesheng.mp3",
+     "audio/tw-hsiaoyu/xuesheng-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/xuesheng.mp3",
+     "audio/cn-yunyang/xuesheng-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/xuesheng.mp3",
+     "audio/cn-xiaoxiao/xuesheng-slow.mp3"
+    ]
+   },
+   "note": "生 here: someone who is learning (學 = learn)",
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "shengri",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "生日",
+   "roman": "shēng-rì",
+   "en": "birthday",
+   "words": [
+    {
+     "zh": "生日",
+     "roman": "shēng-rì",
+     "gloss": "birthday",
+     "script": "cn",
+     "zhDisp": "生日"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/shengri.mp3",
+     "audio/tw-yunjhe/shengri-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/shengri.mp3",
+     "audio/tw-hsiaochen/shengri-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/shengri.mp3",
+     "audio/tw-hsiaoyu/shengri-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/shengri.mp3",
+     "audio/cn-yunyang/shengri-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/shengri.mp3",
+     "audio/cn-xiaoxiao/shengri-slow.mp3"
+    ]
+   },
+   "note": "生 = be born; 日 = day",
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "shengcai",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "生菜",
+   "roman": "shēng-cài",
+   "en": "lettuce",
+   "words": [
+    {
+     "zh": "生菜",
+     "roman": "shēng-cài",
+     "gloss": "lettuce",
+     "script": "cn",
+     "zhDisp": "生菜"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/shengcai.mp3",
+     "audio/tw-yunjhe/shengcai-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/shengcai.mp3",
+     "audio/tw-hsiaochen/shengcai-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/shengcai.mp3",
+     "audio/tw-hsiaoyu/shengcai-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/shengcai.mp3",
+     "audio/cn-yunyang/shengcai-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/shengcai.mp3",
+     "audio/cn-xiaoxiao/shengcai-slow.mp3"
+    ]
+   },
+   "note": "Literally raw vegetable: 生 = raw, 菜 = vegetable",
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "nimen-yong-chatgpt-ma",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "你們用ChatGPT嗎？",
+   "roman": "nǐ-men yòng ChatGPT ma?",
+   "en": "Do you (all) use ChatGPT?",
+   "words": [
+    {
+     "zh": "你們",
+     "roman": "nǐ-men",
+     "gloss": "you (plural)",
+     "script": "cn",
+     "zhDisp": "你们",
+     "zhS": "你们"
+    },
+    {
+     "zh": "用",
+     "roman": "yòng",
+     "gloss": "to use; with, in (a language)",
+     "script": "cn",
+     "zhDisp": "用"
+    },
+    {
+     "zh": "ChatGPT",
+     "roman": "ChatGPT",
+     "gloss": "ChatGPT",
+     "script": "cn",
+     "zhDisp": "ChatGPT"
+    },
+    {
+     "zh": "嗎",
+     "roman": "ma",
+     "gloss": "(question particle)",
+     "script": "cn",
+     "zhDisp": "吗",
+     "zhS": "吗"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/nimen-yong-chatgpt-ma.mp3",
+     "audio/tw-yunjhe/nimen-yong-chatgpt-ma-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/nimen-yong-chatgpt-ma.mp3",
+     "audio/tw-hsiaochen/nimen-yong-chatgpt-ma-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/nimen-yong-chatgpt-ma.mp3",
+     "audio/tw-hsiaoyu/nimen-yong-chatgpt-ma-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/nimen-yong-chatgpt-ma.mp3",
+     "audio/cn-yunyang/nimen-yong-chatgpt-ma-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/nimen-yong-chatgpt-ma.mp3",
+     "audio/cn-xiaoxiao/nimen-yong-chatgpt-ma-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/nimen-yong-chatgpt-ma--1.mp3",
+    "2": "audio/chunks/nimen-yong-chatgpt-ma--2.mp3",
+    "3": "audio/chunks/nimen-yong-chatgpt-ma--3.mp3"
+   },
+   "situation": "You're chatting with colleagues about AI tools.",
+   "topic": "Work",
+   "wish": "chat-2026-10-24",
+   "register": "everyday",
+   "frames": [
+    "ma"
+   ]
+  },
+  {
+   "id": "zai-xianggang-dajia-yong-naxie-da-moxing",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "在香港，大家用哪些大模型？",
+   "roman": "zài Xiāng-gǎng, dà-jiā yòng nǎ-xiē dà mó-xíng?",
+   "en": "Which AI models do people use in Hong Kong?",
+   "words": [
+    {
+     "zh": "在",
+     "roman": "zài",
+     "gloss": "to be at / in",
+     "script": "cn",
+     "zhDisp": "在"
+    },
+    {
+     "zh": "香港",
+     "roman": "Xiāng-gǎng",
+     "gloss": "Hong Kong",
+     "script": "hk"
+    },
+    {
+     "zh": "大家",
+     "roman": "dà-jiā",
+     "gloss": "everyone",
+     "script": "cn",
+     "zhDisp": "大家"
+    },
+    {
+     "zh": "用",
+     "roman": "yòng",
+     "gloss": "to use; with, in (a language)",
+     "script": "cn",
+     "zhDisp": "用"
+    },
+    {
+     "zh": "哪些",
+     "roman": "nǎ-xiē",
+     "gloss": "which (ones)",
+     "script": "cn",
+     "zhDisp": "哪些"
+    },
+    {
+     "zh": "大",
+     "roman": "dà",
+     "gloss": "big, large",
+     "script": "cn",
+     "zhDisp": "大"
+    },
+    {
+     "zh": "模型",
+     "roman": "mó-xíng",
+     "gloss": "model",
+     "script": "cn",
+     "zhDisp": "模型"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zai-xianggang-dajia-yong-naxie-da-moxing.mp3",
+     "audio/tw-yunjhe/zai-xianggang-dajia-yong-naxie-da-moxing-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zai-xianggang-dajia-yong-naxie-da-moxing.mp3",
+     "audio/tw-hsiaochen/zai-xianggang-dajia-yong-naxie-da-moxing-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zai-xianggang-dajia-yong-naxie-da-moxing.mp3",
+     "audio/tw-hsiaoyu/zai-xianggang-dajia-yong-naxie-da-moxing-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zai-xianggang-dajia-yong-naxie-da-moxing.mp3",
+     "audio/cn-yunyang/zai-xianggang-dajia-yong-naxie-da-moxing-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zai-xianggang-dajia-yong-naxie-da-moxing.mp3",
+     "audio/cn-xiaoxiao/zai-xianggang-dajia-yong-naxie-da-moxing-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/zai-xianggang-dajia-yong-naxie-da-moxing--1.mp3",
+    "2": "audio/chunks/zai-xianggang-dajia-yong-naxie-da-moxing--2.mp3",
+    "3": "audio/chunks/zai-xianggang-dajia-yong-naxie-da-moxing--3.mp3",
+    "4": "audio/chunks/zai-xianggang-dajia-yong-naxie-da-moxing--4.mp3",
+    "5": "audio/chunks/zai-xianggang-dajia-yong-naxie-da-moxing--5.mp3",
+    "6": "audio/chunks/zai-xianggang-dajia-yong-naxie-da-moxing--6.mp3"
+   },
+   "situation": "You ask colleagues which AI models are used here.",
+   "note": "Word for word: in Hong Kong, everyone uses which large models? 大模型 = large (AI) model",
+   "topic": "Work",
+   "wish": "chat-2026-10-24",
+   "register": "everyday",
+   "order": "Where (and when) first, then who, then the verb; the question word sits where the answer goes",
+   "frames": [
+    "wh-in-place",
+    "scene-first"
+   ]
+  },
+  {
+   "id": "nimen-pingshi-zui-chang-yong-nage-da-moxing",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "你們平時最常用哪個大模型？",
+   "roman": "nǐ-men píng-shí zuì cháng yòng nǎ-ge dà mó-xíng?",
+   "en": "Which AI model do you use most?",
+   "words": [
+    {
+     "zh": "你們",
+     "roman": "nǐ-men",
+     "gloss": "you (plural)",
+     "script": "cn",
+     "zhDisp": "你们",
+     "zhS": "你们"
+    },
+    {
+     "zh": "平時",
+     "roman": "píng-shí",
+     "gloss": "normally, usually",
+     "script": "cn",
+     "zhDisp": "平时",
+     "zhS": "平时"
+    },
+    {
+     "zh": "最",
+     "roman": "zuì",
+     "gloss": "most",
+     "script": "cn",
+     "zhDisp": "最"
+    },
+    {
+     "zh": "常",
+     "roman": "cháng",
+     "gloss": "often",
+     "script": "cn",
+     "zhDisp": "常"
+    },
+    {
+     "zh": "用",
+     "roman": "yòng",
+     "gloss": "to use; with, in (a language)",
+     "script": "cn",
+     "zhDisp": "用"
+    },
+    {
+     "zh": "哪個",
+     "roman": "nǎ-ge",
+     "gloss": "which",
+     "script": "cn",
+     "zhDisp": "哪个",
+     "zhS": "哪个"
+    },
+    {
+     "zh": "大",
+     "roman": "dà",
+     "gloss": "big, large",
+     "script": "cn",
+     "zhDisp": "大"
+    },
+    {
+     "zh": "模型",
+     "roman": "mó-xíng",
+     "gloss": "model",
+     "script": "cn",
+     "zhDisp": "模型"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/nimen-pingshi-zui-chang-yong-nage-da-moxing.mp3",
+     "audio/tw-yunjhe/nimen-pingshi-zui-chang-yong-nage-da-moxing-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/nimen-pingshi-zui-chang-yong-nage-da-moxing.mp3",
+     "audio/tw-hsiaochen/nimen-pingshi-zui-chang-yong-nage-da-moxing-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/nimen-pingshi-zui-chang-yong-nage-da-moxing.mp3",
+     "audio/tw-hsiaoyu/nimen-pingshi-zui-chang-yong-nage-da-moxing-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/nimen-pingshi-zui-chang-yong-nage-da-moxing.mp3",
+     "audio/cn-yunyang/nimen-pingshi-zui-chang-yong-nage-da-moxing-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/nimen-pingshi-zui-chang-yong-nage-da-moxing.mp3",
+     "audio/cn-xiaoxiao/nimen-pingshi-zui-chang-yong-nage-da-moxing-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/nimen-pingshi-zui-chang-yong-nage-da-moxing--1.mp3",
+    "2": "audio/chunks/nimen-pingshi-zui-chang-yong-nage-da-moxing--2.mp3",
+    "3": "audio/chunks/nimen-pingshi-zui-chang-yong-nage-da-moxing--3.mp3",
+    "4": "audio/chunks/nimen-pingshi-zui-chang-yong-nage-da-moxing--4.mp3",
+    "5": "audio/chunks/nimen-pingshi-zui-chang-yong-nage-da-moxing--5.mp3",
+    "6": "audio/chunks/nimen-pingshi-zui-chang-yong-nage-da-moxing--6.mp3",
+    "7": "audio/chunks/nimen-pingshi-zui-chang-yong-nage-da-moxing--7.mp3"
+   },
+   "situation": "You want to know your students' favourite AI model.",
+   "note": "Word for word: you normally most often use which large model? 平時 = normally; 最常 = most often",
+   "topic": "Work",
+   "wish": "chat-2026-10-24",
+   "register": "everyday",
+   "order": "Where (and when) first, then who, then the verb; the question word sits where the answer goes",
+   "frames": [
+    "wh-in-place",
+    "scene-first"
+   ]
+  },
+  {
+   "id": "zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "在中國可以用哪些大語言模型？",
+   "roman": "zài Zhōng-guó kě-yǐ yòng nǎ-xiē dà yǔ-yán mó-xíng?",
+   "en": "Which large language models can you use in China?",
+   "words": [
+    {
+     "zh": "在",
+     "roman": "zài",
+     "gloss": "to be at / in",
+     "script": "cn",
+     "zhDisp": "在"
+    },
+    {
+     "zh": "中國",
+     "roman": "Zhōng-guó",
+     "gloss": "China",
+     "script": "cn",
+     "zhDisp": "中国",
+     "zhS": "中国"
+    },
+    {
+     "zh": "可以",
+     "roman": "kě-yǐ",
+     "gloss": "can, may (allowed)",
+     "script": "hk"
+    },
+    {
+     "zh": "用",
+     "roman": "yòng",
+     "gloss": "to use; with, in (a language)",
+     "script": "cn",
+     "zhDisp": "用"
+    },
+    {
+     "zh": "哪些",
+     "roman": "nǎ-xiē",
+     "gloss": "which (ones)",
+     "script": "cn",
+     "zhDisp": "哪些"
+    },
+    {
+     "zh": "大",
+     "roman": "dà",
+     "gloss": "big, large",
+     "script": "cn",
+     "zhDisp": "大"
+    },
+    {
+     "zh": "語言",
+     "roman": "yǔ-yán",
+     "gloss": "language",
+     "script": "cn",
+     "zhDisp": "语言",
+     "zhS": "语言"
+    },
+    {
+     "zh": "模型",
+     "roman": "mó-xíng",
+     "gloss": "model",
+     "script": "cn",
+     "zhDisp": "模型"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing.mp3",
+     "audio/tw-yunjhe/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing.mp3",
+     "audio/tw-hsiaochen/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing.mp3",
+     "audio/tw-hsiaoyu/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing.mp3",
+     "audio/cn-yunyang/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing.mp3",
+     "audio/cn-xiaoxiao/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing--1.mp3",
+    "2": "audio/chunks/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing--2.mp3",
+    "3": "audio/chunks/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing--3.mp3",
+    "4": "audio/chunks/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing--4.mp3",
+    "5": "audio/chunks/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing--5.mp3",
+    "6": "audio/chunks/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing--6.mp3",
+    "7": "audio/chunks/zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing--7.mp3"
+   },
+   "situation": "You ask which AI models are allowed in mainland China.",
+   "note": "Word for word: in China can use which large language models? 大語言模型 = large language model (LLM)",
+   "topic": "Work",
+   "wish": "chat-2026-10-24",
+   "register": "everyday",
+   "tier": 2,
+   "order": "Where (and when) first, then who, then the verb; the question word sits where the answer goes",
+   "frames": [
+    "wh-in-place",
+    "scene-first"
+   ]
+  },
+  {
+   "id": "xia",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "下",
+   "roman": "xià",
+   "en": "next; below, down",
+   "words": [
+    {
+     "zh": "下",
+     "roman": "xià",
+     "gloss": "next; below, down",
+     "script": "cn",
+     "zhDisp": "下"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/xia.mp3",
+     "audio/tw-yunjhe/xia-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/xia.mp3",
+     "audio/tw-hsiaochen/xia-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/xia.mp3",
+     "audio/tw-hsiaoyu/xia-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/xia.mp3",
+     "audio/cn-yunyang/xia-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/xia.mp3",
+     "audio/cn-xiaoxiao/xia-slow.mp3"
+    ]
+   },
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "zhan",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "站",
+   "roman": "zhàn",
+   "en": "station, stop",
+   "words": [
+    {
+     "zh": "站",
+     "roman": "zhàn",
+     "gloss": "station, stop",
+     "script": "cn",
+     "zhDisp": "站"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhan.mp3",
+     "audio/tw-yunjhe/zhan-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhan.mp3",
+     "audio/tw-hsiaochen/zhan-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhan.mp3",
+     "audio/tw-hsiaoyu/zhan-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhan.mp3",
+     "audio/cn-yunyang/zhan-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhan.mp3",
+     "audio/cn-xiaoxiao/zhan-slow.mp3"
+    ]
+   },
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "xia-yi-zhan",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "下一站",
+   "roman": "xià yí zhàn",
+   "en": "Next stop",
+   "words": [
+    {
+     "zh": "下",
+     "roman": "xià",
+     "gloss": "next; below, down",
+     "script": "cn",
+     "zhDisp": "下"
+    },
+    {
+     "zh": "一",
+     "roman": "yí",
+     "gloss": "one",
+     "script": "hk"
+    },
+    {
+     "zh": "站",
+     "roman": "zhàn",
+     "gloss": "station, stop",
+     "script": "cn",
+     "zhDisp": "站"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/xia-yi-zhan.mp3",
+     "audio/tw-yunjhe/xia-yi-zhan-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/xia-yi-zhan.mp3",
+     "audio/tw-hsiaochen/xia-yi-zhan-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/xia-yi-zhan.mp3",
+     "audio/tw-hsiaoyu/xia-yi-zhan-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/xia-yi-zhan.mp3",
+     "audio/cn-yunyang/xia-yi-zhan-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/xia-yi-zhan.mp3",
+     "audio/cn-xiaoxiao/xia-yi-zhan-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/xia-yi-zhan--1.mp3",
+    "2": "audio/chunks/xia-yi-zhan--2.mp3"
+   },
+   "situation": "The announcement on the MTR before every station.",
+   "note": "下 = next (also: below, down); 站 = station",
+   "topic": "Getting around",
+   "wish": "chat-2026-10-24",
+   "register": "everyday"
+  },
+  {
+   "id": "duo-he-reshui",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "多喝熱水",
+   "roman": "duō hē rè-shuǐ",
+   "en": "Drink more hot water",
+   "words": [
+    {
+     "zh": "多",
+     "roman": "duō",
+     "gloss": "more, many",
+     "script": "cn",
+     "zhDisp": "多"
+    },
+    {
+     "zh": "喝",
+     "roman": "hē",
+     "gloss": "to drink",
+     "script": "cn",
+     "zhDisp": "喝"
+    },
+    {
+     "zh": "熱水",
+     "roman": "rè-shuǐ",
+     "gloss": "hot water",
+     "script": "cn",
+     "zhDisp": "热水",
+     "zhS": "热水"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/duo-he-reshui.mp3",
+     "audio/tw-yunjhe/duo-he-reshui-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/duo-he-reshui.mp3",
+     "audio/tw-hsiaochen/duo-he-reshui-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/duo-he-reshui.mp3",
+     "audio/tw-hsiaoyu/duo-he-reshui-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/duo-he-reshui.mp3",
+     "audio/cn-yunyang/duo-he-reshui-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/duo-he-reshui.mp3",
+     "audio/cn-xiaoxiao/duo-he-reshui-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/duo-he-reshui--1.mp3",
+    "2": "audio/chunks/duo-he-reshui--2.mp3"
+   },
+   "situation": "Someone tells you they have a cold.",
+   "note": "The standard advice for any illness, and a running joke about caring but unhelpful advice",
+   "topic": "Small talk",
+   "wish": "chat-2026-10-24",
+   "register": "casual"
+  },
+  {
+   "id": "pengke-yangsheng",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "朋克養生",
+   "roman": "péng-kè yǎng-shēng",
+   "en": "Punk wellness: healthy habits while living unhealthily",
+   "words": [
+    {
+     "zh": "朋克",
+     "roman": "péng-kè",
+     "gloss": "punk",
+     "script": "cn",
+     "zhDisp": "朋克"
+    },
+    {
+     "zh": "養生",
+     "roman": "yǎng-shēng",
+     "gloss": "looking after your health",
+     "script": "cn",
+     "zhDisp": "养生",
+     "zhS": "养生"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/pengke-yangsheng.mp3",
+     "audio/tw-yunjhe/pengke-yangsheng-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/pengke-yangsheng.mp3",
+     "audio/tw-hsiaochen/pengke-yangsheng-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/pengke-yangsheng.mp3",
+     "audio/tw-hsiaoyu/pengke-yangsheng-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/pengke-yangsheng.mp3",
+     "audio/cn-yunyang/pengke-yangsheng-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/pengke-yangsheng.mp3",
+     "audio/cn-xiaoxiao/pengke-yangsheng-slow.mp3"
+    ]
+   },
+   "situation": "A friend puts goji berries in their beer.",
+   "note": "朋克 = punk; 養生 = looking after your health. Goji in beer, a face mask after an all-nighter",
+   "topic": "Small talk",
+   "wish": "chat-2026-10-24",
+   "register": "casual",
+   "tier": 2
+  },
+  {
+   "id": "baijiale",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "百家樂",
+   "roman": "bǎi-jiā-lè",
+   "en": "baccarat (casino card game)",
+   "words": [
+    {
+     "zh": "百家樂",
+     "roman": "bǎi-jiā-lè",
+     "gloss": "baccarat (casino card game)",
+     "script": "cn",
+     "zhDisp": "百家乐",
+     "zhS": "百家乐"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/baijiale.mp3",
+     "audio/tw-yunjhe/baijiale-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/baijiale.mp3",
+     "audio/tw-hsiaochen/baijiale-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/baijiale.mp3",
+     "audio/tw-hsiaoyu/baijiale-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/baijiale.mp3",
+     "audio/cn-yunyang/baijiale-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/baijiale.mp3",
+     "audio/cn-xiaoxiao/baijiale-slow.mp3"
+    ]
+   },
+   "note": "The big game in Macau's casinos",
+   "wish": "chat-2026-10-24",
+   "tier": 2
+  },
+  {
+   "id": "wei-nihao",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "喂，你好！",
+   "roman": "wèi, nǐ hǎo!",
+   "en": "Hey, hello! (to get someone's attention)",
+   "words": [
+    {
+     "zh": "喂",
+     "roman": "wèi",
+     "gloss": "hey; hello (on the phone)",
+     "script": "cn",
+     "zhDisp": "喂"
+    },
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you",
+     "script": "cn",
+     "zhDisp": "你"
+    },
+    {
+     "zh": "好",
+     "roman": "hǎo",
+     "gloss": "good; well",
+     "script": "cn",
+     "zhDisp": "好"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wei-nihao.mp3",
+     "audio/tw-yunjhe/wei-nihao-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wei-nihao.mp3",
+     "audio/tw-hsiaochen/wei-nihao-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wei-nihao.mp3",
+     "audio/tw-hsiaoyu/wei-nihao-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wei-nihao.mp3",
+     "audio/cn-yunyang/wei-nihao-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wei-nihao.mp3",
+     "audio/cn-xiaoxiao/wei-nihao-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wei-nihao--1.mp3",
+    "2": "audio/chunks/wei-nihao--2.mp3"
+   },
+   "situation": "You call out to someone across the room.",
+   "note": "Falling wèi calls out to someone; rising wéi is how you answer the phone",
+   "topic": "Small talk",
+   "wish": "chat-2026-10-24",
+   "register": "everyday"
+  },
+  {
+   "id": "nar",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "哪兒",
+   "roman": "nǎ-r",
+   "en": "where (northern)",
+   "words": [
+    {
+     "zh": "哪兒",
+     "roman": "nǎ-r",
+     "gloss": "where (northern)",
+     "script": "cn",
+     "zhDisp": "哪儿",
+     "zhS": "哪儿"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/nar.mp3",
+     "audio/tw-yunjhe/nar-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/nar.mp3",
+     "audio/tw-hsiaochen/nar-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/nar.mp3",
+     "audio/tw-hsiaoyu/nar-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/nar.mp3",
+     "audio/cn-yunyang/nar-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/nar.mp3",
+     "audio/cn-xiaoxiao/nar-slow.mp3"
+    ]
+   },
+   "note": "Northern Mandarin adds 兒 (-r). In Taiwan and the south people say 哪裡",
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "zher",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "這兒",
+   "roman": "zhè-r",
+   "en": "here (northern)",
+   "words": [
+    {
+     "zh": "這兒",
+     "roman": "zhè-r",
+     "gloss": "here (northern)",
+     "script": "cn",
+     "zhDisp": "这儿",
+     "zhS": "这儿"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zher.mp3",
+     "audio/tw-yunjhe/zher-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zher.mp3",
+     "audio/tw-hsiaochen/zher-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zher.mp3",
+     "audio/tw-hsiaoyu/zher-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zher.mp3",
+     "audio/cn-yunyang/zher-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zher.mp3",
+     "audio/cn-xiaoxiao/zher-slow.mp3"
+    ]
+   },
+   "note": "Taiwan and the south: 這裡",
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "nar-there",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "那兒",
+   "roman": "nà-r",
+   "en": "there (northern)",
+   "words": [
+    {
+     "zh": "那兒",
+     "roman": "nà-r",
+     "gloss": "there (northern)",
+     "script": "cn",
+     "zhDisp": "那儿",
+     "zhS": "那儿"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/nar-there.mp3",
+     "audio/tw-yunjhe/nar-there-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/nar-there.mp3",
+     "audio/tw-hsiaochen/nar-there-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/nar-there.mp3",
+     "audio/tw-hsiaoyu/nar-there-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/nar-there.mp3",
+     "audio/cn-yunyang/nar-there-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/nar-there.mp3",
+     "audio/cn-xiaoxiao/nar-there-slow.mp3"
+    ]
+   },
+   "note": "Taiwan and the south: 那裡",
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "ni-cong-nar-lai",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "你從哪兒來？",
+   "roman": "nǐ cóng nǎ-r lái?",
+   "en": "Where are you from?",
+   "words": [
+    {
+     "zh": "你",
+     "roman": "nǐ",
+     "gloss": "you",
+     "script": "cn",
+     "zhDisp": "你"
+    },
+    {
+     "zh": "從",
+     "roman": "cóng",
+     "gloss": "from",
+     "script": "cn",
+     "zhDisp": "从",
+     "zhS": "从"
+    },
+    {
+     "zh": "哪兒",
+     "roman": "nǎ-r",
+     "gloss": "where (northern)",
+     "script": "cn",
+     "zhDisp": "哪儿",
+     "zhS": "哪儿"
+    },
+    {
+     "zh": "來",
+     "roman": "lái",
+     "gloss": "to come",
+     "script": "cn",
+     "zhDisp": "来",
+     "zhS": "来"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/ni-cong-nar-lai.mp3",
+     "audio/tw-yunjhe/ni-cong-nar-lai-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/ni-cong-nar-lai.mp3",
+     "audio/tw-hsiaochen/ni-cong-nar-lai-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/ni-cong-nar-lai.mp3",
+     "audio/tw-hsiaoyu/ni-cong-nar-lai-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/ni-cong-nar-lai.mp3",
+     "audio/cn-yunyang/ni-cong-nar-lai-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/ni-cong-nar-lai.mp3",
+     "audio/cn-xiaoxiao/ni-cong-nar-lai-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/ni-cong-nar-lai--1.mp3",
+    "2": "audio/chunks/ni-cong-nar-lai--2.mp3",
+    "3": "audio/chunks/ni-cong-nar-lai--3.mp3"
+   },
+   "situation": "Someone in Beijing asks where you're from.",
+   "note": "從 = from. Northern way; in Taiwan or Hong Kong: 你從哪裡來？",
+   "topic": "Introducing yourself",
+   "wish": "chat-2026-10-24",
+   "register": "everyday",
+   "order": "The question word sits where the answer will go",
+   "frames": [
+    "wh-in-place"
+   ]
+  },
+  {
+   "id": "chaoshi",
+   "kind": "word",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "超市",
+   "roman": "chāo-shì",
+   "en": "supermarket",
+   "words": [
+    {
+     "zh": "超市",
+     "roman": "chāo-shì",
+     "gloss": "supermarket",
+     "script": "cn",
+     "zhDisp": "超市"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/chaoshi.mp3",
+     "audio/tw-yunjhe/chaoshi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/chaoshi.mp3",
+     "audio/tw-hsiaochen/chaoshi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/chaoshi.mp3",
+     "audio/tw-hsiaoyu/chaoshi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/chaoshi.mp3",
+     "audio/cn-yunyang/chaoshi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/chaoshi.mp3",
+     "audio/cn-xiaoxiao/chaoshi-slow.mp3"
+    ]
+   },
+   "wish": "chat-2026-10-24"
+  },
+  {
+   "id": "chaoshi-zai-nali",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "超市在哪裡？",
+   "roman": "chāo-shì zài nǎ-lǐ?",
+   "en": "Where is the supermarket?",
+   "words": [
+    {
+     "zh": "超市",
+     "roman": "chāo-shì",
+     "gloss": "supermarket",
+     "script": "cn",
+     "zhDisp": "超市"
+    },
+    {
+     "zh": "在",
+     "roman": "zài",
+     "gloss": "to be at / in",
+     "script": "cn",
+     "zhDisp": "在"
+    },
+    {
+     "zh": "哪裡",
+     "roman": "nǎ-lǐ",
+     "gloss": "where",
+     "script": "cn",
+     "zhDisp": "哪里",
+     "zhS": "哪里"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/chaoshi-zai-nali.mp3",
+     "audio/tw-yunjhe/chaoshi-zai-nali-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/chaoshi-zai-nali.mp3",
+     "audio/tw-hsiaochen/chaoshi-zai-nali-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/chaoshi-zai-nali.mp3",
+     "audio/tw-hsiaoyu/chaoshi-zai-nali-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/chaoshi-zai-nali.mp3",
+     "audio/cn-yunyang/chaoshi-zai-nali-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/chaoshi-zai-nali.mp3",
+     "audio/cn-xiaoxiao/chaoshi-zai-nali-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/chaoshi-zai-nali--1.mp3",
+    "2": "audio/chunks/chaoshi-zai-nali--2.mp3"
+   },
+   "situation": "You need groceries and ask a passer-by.",
+   "topic": "Getting around",
+   "wish": "chat-2026-10-24",
+   "register": "everyday",
+   "order": "The question word sits where the answer will go",
+   "frames": [
+    "wh-in-place"
+   ]
+  },
+  {
+   "id": "wo-yao-qu-chaoshi",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "我要去超市",
+   "roman": "wǒ yào qù chāo-shì",
+   "en": "I'm going to the supermarket",
+   "words": [
+    {
+     "zh": "我",
+     "roman": "wǒ",
+     "gloss": "I / me",
+     "script": "cn",
+     "zhDisp": "我"
+    },
+    {
+     "zh": "要",
+     "roman": "yào",
+     "gloss": "to want; will",
+     "script": "cn",
+     "zhDisp": "要"
+    },
+    {
+     "zh": "去",
+     "roman": "qù",
+     "gloss": "to go",
+     "script": "cn",
+     "zhDisp": "去"
+    },
+    {
+     "zh": "超市",
+     "roman": "chāo-shì",
+     "gloss": "supermarket",
+     "script": "cn",
+     "zhDisp": "超市"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/wo-yao-qu-chaoshi.mp3",
+     "audio/tw-yunjhe/wo-yao-qu-chaoshi-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/wo-yao-qu-chaoshi.mp3",
+     "audio/tw-hsiaochen/wo-yao-qu-chaoshi-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/wo-yao-qu-chaoshi.mp3",
+     "audio/tw-hsiaoyu/wo-yao-qu-chaoshi-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/wo-yao-qu-chaoshi.mp3",
+     "audio/cn-yunyang/wo-yao-qu-chaoshi-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/wo-yao-qu-chaoshi.mp3",
+     "audio/cn-xiaoxiao/wo-yao-qu-chaoshi-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/wo-yao-qu-chaoshi--1.mp3",
+    "2": "audio/chunks/wo-yao-qu-chaoshi--2.mp3",
+    "3": "audio/chunks/wo-yao-qu-chaoshi--3.mp3"
+   },
+   "situation": "Someone asks where you're off to.",
+   "note": "要去 = going to, about to go",
+   "topic": "Getting around",
+   "wish": "chat-2026-10-24",
+   "register": "everyday",
+   "frames": [
+    "xiang-yao"
+   ]
+  },
+  {
    "id": "san",
    "kind": "word",
    "deck": "mandarin",
@@ -9593,6 +11256,65 @@
        "audio/cn-xiaoxiao/wo-xiang-he-x--pijiu-slow.mp3"
       ]
      }
+    },
+    {
+     "fillId": "niunai",
+     "zh": "我想喝牛奶",
+     "roman": "wǒ xiǎng hē niú-nǎi",
+     "en": "I'd like to drink milk",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me",
+       "script": "cn",
+       "zhDisp": "我"
+      },
+      {
+       "zh": "想",
+       "roman": "xiǎng",
+       "gloss": "to want to; to think; to miss",
+       "script": "cn",
+       "zhDisp": "想"
+      },
+      {
+       "zh": "喝",
+       "roman": "hē",
+       "gloss": "to drink",
+       "script": "cn",
+       "zhDisp": "喝"
+      },
+      {
+       "zh": "牛奶",
+       "roman": "niú-nǎi",
+       "gloss": "milk",
+       "script": "cn",
+       "zhDisp": "牛奶"
+      }
+     ],
+     "situation": "The waiter asks what you'd like to drink. (milk)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xiang-he-x--niunai.mp3",
+       "audio/tw-yunjhe/wo-xiang-he-x--niunai-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xiang-he-x--niunai.mp3",
+       "audio/tw-hsiaochen/wo-xiang-he-x--niunai-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xiang-he-x--niunai.mp3",
+       "audio/tw-hsiaoyu/wo-xiang-he-x--niunai-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xiang-he-x--niunai.mp3",
+       "audio/cn-yunyang/wo-xiang-he-x--niunai-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xiang-he-x--niunai.mp3",
+       "audio/cn-xiaoxiao/wo-xiang-he-x--niunai-slow.mp3"
+      ]
+     }
     }
    ],
    "situation": "The waiter asks what you'd like to drink. (___)",
@@ -10535,6 +12257,65 @@
       "cn-xiaoxiao": [
        "audio/cn-xiaoxiao/wo-xiang-chi-x--mapo-doufu.mp3",
        "audio/cn-xiaoxiao/wo-xiang-chi-x--mapo-doufu-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "niurou",
+     "zh": "我想吃牛肉",
+     "roman": "wǒ xiǎng chī niú-ròu",
+     "en": "I want to eat beef",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me",
+       "script": "cn",
+       "zhDisp": "我"
+      },
+      {
+       "zh": "想",
+       "roman": "xiǎng",
+       "gloss": "to want to; to think; to miss",
+       "script": "cn",
+       "zhDisp": "想"
+      },
+      {
+       "zh": "吃",
+       "roman": "chī",
+       "gloss": "to eat",
+       "script": "cn",
+       "zhDisp": "吃"
+      },
+      {
+       "zh": "牛肉",
+       "roman": "niú-ròu",
+       "gloss": "beef",
+       "script": "cn",
+       "zhDisp": "牛肉"
+      }
+     ],
+     "situation": "A friend asks what you feel like eating. (beef)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-xiang-chi-x--niurou.mp3",
+       "audio/tw-yunjhe/wo-xiang-chi-x--niurou-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-xiang-chi-x--niurou.mp3",
+       "audio/tw-hsiaochen/wo-xiang-chi-x--niurou-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--niurou.mp3",
+       "audio/tw-hsiaoyu/wo-xiang-chi-x--niurou-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-xiang-chi-x--niurou.mp3",
+       "audio/cn-yunyang/wo-xiang-chi-x--niurou-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--niurou.mp3",
+       "audio/cn-xiaoxiao/wo-xiang-chi-x--niurou-slow.mp3"
       ]
      }
     },
@@ -12677,7 +14458,10 @@
    "situation": "You start telling a colleague what happened at lunch yesterday.",
    "note": "… 的時候 = at the time of …, when …",
    "topic": "Small talk",
-   "order": "The time comes first"
+   "order": "The time comes first",
+   "frames": [
+    "scene-first"
+   ]
   },
   {
    "id": "ni-juede-zenmeyang",
@@ -13203,7 +14987,7 @@
     {
      "zh": "下",
      "roman": "xià",
-     "gloss": "next; below (下星期 = next week)",
+     "gloss": "next; below, down",
      "script": "cn",
      "zhDisp": "下"
     },
@@ -13623,6 +15407,70 @@
       "cn-xiaoxiao": [
        "audio/cn-xiaoxiao/wo-yao-yibei-x--pijiu.mp3",
        "audio/cn-xiaoxiao/wo-yao-yibei-x--pijiu-slow.mp3"
+      ]
+     }
+    },
+    {
+     "fillId": "niunai",
+     "zh": "我要一杯牛奶",
+     "roman": "wǒ yào yì bēi niú-nǎi",
+     "en": "I'd like a cup of milk",
+     "words": [
+      {
+       "zh": "我",
+       "roman": "wǒ",
+       "gloss": "I / me",
+       "script": "cn",
+       "zhDisp": "我"
+      },
+      {
+       "zh": "要",
+       "roman": "yào",
+       "gloss": "to want; will",
+       "script": "cn",
+       "zhDisp": "要"
+      },
+      {
+       "zh": "一",
+       "roman": "yì",
+       "gloss": "one",
+       "script": "hk"
+      },
+      {
+       "zh": "杯",
+       "roman": "bēi",
+       "gloss": "cup (measure word)",
+       "script": "hk"
+      },
+      {
+       "zh": "牛奶",
+       "roman": "niú-nǎi",
+       "gloss": "milk",
+       "script": "cn",
+       "zhDisp": "牛奶"
+      }
+     ],
+     "situation": "The waiter asks what you'd like. (milk)",
+     "audio": {
+      "tw-yunjhe": [
+       "audio/tw-yunjhe/wo-yao-yibei-x--niunai.mp3",
+       "audio/tw-yunjhe/wo-yao-yibei-x--niunai-slow.mp3"
+      ],
+      "tw-hsiaochen": [
+       "audio/tw-hsiaochen/wo-yao-yibei-x--niunai.mp3",
+       "audio/tw-hsiaochen/wo-yao-yibei-x--niunai-slow.mp3"
+      ],
+      "tw-hsiaoyu": [
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--niunai.mp3",
+       "audio/tw-hsiaoyu/wo-yao-yibei-x--niunai-slow.mp3"
+      ],
+      "cn-yunyang": [
+       "audio/cn-yunyang/wo-yao-yibei-x--niunai.mp3",
+       "audio/cn-yunyang/wo-yao-yibei-x--niunai-slow.mp3"
+      ],
+      "cn-xiaoxiao": [
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--niunai.mp3",
+       "audio/cn-xiaoxiao/wo-yao-yibei-x--niunai-slow.mp3"
       ]
      }
     }
@@ -24246,6 +26094,7 @@
   "書": "书",
   "會": "会",
   "東": "东",
+  "樂": "乐",
   "樣": "样",
   "機": "机",
   "歡": "欢",
@@ -24304,6 +26153,7 @@
   "題": "题",
   "飛": "飞",
   "飯": "饭",
+  "養": "养",
   "體": "体",
   "麼": "么",
   "點": "点"
@@ -24530,6 +26380,12 @@
    "d": "first time, for the first time, suddenly",
    "p": "zhà",
    "c": "丿下一"
+  },
+  "乐": {
+   "d": "cheerful, happy, laughing; music",
+   "p": "lè",
+   "c": "丿小",
+   "h": "Simplified form of 樂, a musical instrument with wood 木, strings 幺, and a pick 白"
   },
   "乙": {
    "d": "second; 2nd heavenly stem",
@@ -24882,6 +26738,12 @@
    "c": "土儿",
    "h": "Someone stepping 止 in front of another person 儿"
   },
+  "克": {
+   "d": "to subdue, to restrain, to overcome",
+   "p": "kè",
+   "c": "十兄",
+   "h": "A weapon 十 used to subdue a beast 兄"
+  },
   "兌": {
    "d": "cash, check; to exchange",
    "p": "duì",
@@ -24954,6 +26816,13 @@
    "d": "his, her, its, their; that",
    "p": "qí",
    "c": "甘一八"
+  },
+  "养": {
+   "d": "to raise, to rear, to bring up; to support",
+   "p": "yǎng",
+   "c": "羊儿",
+   "s": "儿",
+   "ph": "羊"
   },
   "冂": {
    "d": "wide",
@@ -25103,6 +26972,12 @@
    "p": "fēn",
    "c": "八刀",
    "h": "Pieces 八 being further subdivided with a knife 刀 "
+  },
+  "刑": {
+   "d": "punishment, penalty; law",
+   "p": "xíng",
+   "c": "开刂",
+   "h": "A man 刂 in jail 开"
   },
   "刖": {
    "d": "cutting off the feet as a form of punishment",
@@ -25728,6 +27603,13 @@
    "c": "士卄",
    "h": "A tree with drooping branches"
   },
+  "型": {
+   "d": "pattern, model, type; mold",
+   "p": "xíng",
+   "c": "刑土",
+   "s": "土",
+   "ph": "刑"
+  },
   "垚": {
    "d": "mound, lump, round mass",
    "p": "yáo",
@@ -26173,6 +28055,11 @@
    "c": "丿巾",
    "h": "Bills written on silk 巾"
   },
+  "市": {
+   "d": "city, town; market, fair",
+   "p": "shì",
+   "c": "亠巾"
+  },
   "师": {
    "d": "teacher, professional, master",
    "p": "shī",
@@ -26184,6 +28071,13 @@
    "p": "shī",
    "c": "丿㠯帀",
    "h": "To skillfully wield 帀 a knife 㠯"
+  },
+  "常": {
+   "d": "common, general, normal",
+   "p": "cháng",
+   "c": "尚巾",
+   "s": "巾",
+   "ph": "尚"
   },
   "幣": {
    "d": "currency, coins, legal tender",
@@ -26644,6 +28538,13 @@
    "c": "日十",
    "h": "The first rays 十 of the sun 日"
   },
+  "旲": {
+   "d": "daylight, sunlight",
+   "p": "tái",
+   "c": "日大",
+   "s": "日",
+   "ph": "大"
+  },
   "时": {
    "d": "time, season; period, era, age",
    "p": "shí",
@@ -26896,12 +28797,25 @@
    "s": "木",
    "ph": "奇"
   },
+  "樂": {
+   "d": "cheerful, happy, laughing; music",
+   "p": "lè",
+   "c": "幺白幺木",
+   "h": "A musical instrument with wood 木, strings 幺, and a pick 白"
+  },
   "樓": {
    "d": "multi-story building; floor",
    "p": "lóu",
    "c": "木婁",
    "s": "木",
    "ph": "婁"
+  },
+  "模": {
+   "d": "model, pattern, standard; to copy, to imitate",
+   "p": "mó",
+   "c": "木莫",
+   "s": "木",
+   "ph": "莫"
   },
   "樣": {
    "d": "form, pattern, shape, style",
@@ -27528,6 +29442,13 @@
    "c": "亠丷一",
    "h": "A man standing on the ground 一"
   },
+  "站": {
+   "d": "stand, station; to halt, to stand",
+   "p": "zhàn",
+   "c": "立占",
+   "s": "立",
+   "ph": "占"
+  },
   "童": {
    "d": "child, boy; servant boy",
    "p": "tóng",
@@ -27854,6 +29775,11 @@
    "c": "艹何",
    "s": "艹",
    "ph": "何"
+  },
+  "莫": {
+   "d": "cannot; do not",
+   "p": "mò",
+   "c": "艹旲"
   },
   "菜": {
    "d": "vegetables; order, dish",
@@ -28263,6 +30189,13 @@
    "c": "走己",
    "s": "走",
    "ph": "己"
+  },
+  "超": {
+   "d": "to jump over, to leap over",
+   "p": "chāo",
+   "c": "走召",
+   "s": "走",
+   "ph": "召"
   },
   "足": {
    "d": "foot; to attain, to satisfy",
@@ -28715,6 +30648,13 @@
    "s": "飠",
    "ph": "包"
   },
+  "養": {
+   "d": "to raise, to rear, to bring up; to support",
+   "p": "yǎng",
+   "c": "羊食",
+   "s": "食",
+   "ph": "羊"
+  },
   "餐": {
    "d": "to eat, to dine; meal, food",
    "p": "cān",
@@ -29162,6 +31102,90 @@
     "r": "yì-kǒu-qì",
     "e": "one breath; spirit, pride"
    },
+   "牛": {
+    "r": "niú",
+    "e": "cow, ox"
+   },
+   "奶": {
+    "r": "nǎi",
+    "e": "milk"
+   },
+   "生": {
+    "r": "shēng",
+    "e": "be born; raw; life"
+   },
+   "學": {
+    "r": "xué",
+    "e": "to learn, study"
+   },
+   "日": {
+    "r": "rì",
+    "e": "day"
+   },
+   "菜": {
+    "r": "cài",
+    "e": "vegetable; dish"
+   },
+   "大模型": {
+    "r": "dà mó-xíng",
+    "e": "large (AI) model"
+   },
+   "平時": {
+    "r": "píng-shí",
+    "e": "normally, usually"
+   },
+   "最常": {
+    "r": "zuì cháng",
+    "e": "most often"
+   },
+   "大語言模型": {
+    "r": "dà yǔ-yán mó-xíng",
+    "e": "large language model"
+   },
+   "下": {
+    "r": "xià",
+    "e": "next; below, down"
+   },
+   "站": {
+    "r": "zhàn",
+    "e": "station, stop"
+   },
+   "朋克": {
+    "r": "péng-kè",
+    "e": "punk"
+   },
+   "養生": {
+    "r": "yǎng-shēng",
+    "e": "looking after your health"
+   },
+   "兒": {
+    "r": "ér",
+    "e": "(-r ending)"
+   },
+   "哪裡": {
+    "r": "nǎ-lǐ",
+    "e": "where"
+   },
+   "這裡": {
+    "r": "zhè-lǐ",
+    "e": "here"
+   },
+   "那裡": {
+    "r": "nà-lǐ",
+    "e": "there"
+   },
+   "從": {
+    "r": "cóng",
+    "e": "from"
+   },
+   "你從哪裡來": {
+    "r": "nǐ cóng nǎ-lǐ lái",
+    "e": "where are you from?"
+   },
+   "要去": {
+    "r": "yào qù",
+    "e": "going to (go)"
+   },
    "不要": {
     "r": "bú yào",
     "e": "don't want"
@@ -29249,10 +31273,6 @@
    "再": {
     "r": "zài",
     "e": "again"
-   },
-   "哪裡": {
-    "r": "nǎ-lǐ",
-    "e": "where"
    },
    "菠蘿油": {
     "r": "bō-luó-yóu",
@@ -29421,10 +31441,6 @@
    "是…的": {
     "r": "shì … de",
     "e": "(frames the detail you are stressing)"
-   },
-   "從": {
-    "r": "cóng",
-    "e": "from"
    },
    "來": {
     "r": "lái",
@@ -29792,7 +31808,6 @@
    "怎麼樣": "audio/words/mandarin/600e-9ebc-6a23.mp3",
    "忙": "audio/words/mandarin/5fd9.mp3",
    "名字": "audio/words/mandarin/540d-5b57.mp3",
-   "學生": "audio/words/mandarin/5b78-751f.mp3",
    "哪個": "audio/words/mandarin/54ea-500b.mp3",
    "系": "audio/words/mandarin/7cfb.mp3",
    "的": "audio/words/mandarin/7684.mp3",
@@ -29838,6 +31853,21 @@
    "開始": "audio/words/mandarin/958b-59cb.mp3",
    "活": "audio/words/mandarin/6d3b.mp3",
    "一口氣": "audio/words/mandarin/4e00-53e3-6c23.mp3",
+   "ChatGPT": "audio/words/mandarin/43-68-61-74-47-50-54.mp3",
+   "哪些": "audio/words/mandarin/54ea-4e9b.mp3",
+   "大": "audio/words/mandarin/5927.mp3",
+   "模型": "audio/words/mandarin/6a21-578b.mp3",
+   "平時": "audio/words/mandarin/5e73-6642.mp3",
+   "最": "audio/words/mandarin/6700.mp3",
+   "常": "audio/words/mandarin/5e38.mp3",
+   "中國": "audio/words/mandarin/4e2d-570b.mp3",
+   "語言": "audio/words/mandarin/8a9e-8a00.mp3",
+   "多": "audio/words/mandarin/591a.mp3",
+   "熱水": "audio/words/mandarin/71b1-6c34.mp3",
+   "朋克": "audio/words/mandarin/670b-514b.mp3",
+   "養生": "audio/words/mandarin/990a-751f.mp3",
+   "喂": "audio/words/mandarin/5582.mp3",
+   "從": "audio/words/mandarin/5f9e.mp3",
    "打": "audio/words/mandarin/6253.mp3",
    "電話": "audio/words/mandarin/96fb-8a71.mp3",
    "懂": "audio/words/mandarin/61c2.mp3",
@@ -29845,12 +31875,10 @@
    "呢": "audio/words/mandarin/5462.mp3",
    "知": "audio/words/mandarin/77e5.mp3",
    "可": "audio/words/mandarin/53ef.mp3",
-   "下": "audio/words/mandarin/4e0b.mp3",
    "見": "audio/words/mandarin/898b.mp3",
    "普通話": "audio/words/mandarin/666e-901a-8a71.mp3",
    "句": "audio/words/mandarin/53e5.mp3",
    "話": "audio/words/mandarin/8a71.mp3",
-   "從": "audio/words/mandarin/5f9e.mp3",
    "不用": "audio/words/mandarin/4e0d-7528.mp3",
    "等": "audio/words/mandarin/7b49.mp3",
    "多少": "audio/words/mandarin/591a-5c11.mp3",
@@ -29858,7 +31886,6 @@
    "你好": "audio/words/mandarin/4f60-597d.mp3",
    "您": "audio/words/mandarin/60a8.mp3",
    "謝謝你": "audio/words/mandarin/8b1d-8b1d-4f60.mp3",
-   "中國": "audio/words/mandarin/4e2d-570b.mp3",
    "美國": "audio/words/mandarin/7f8e-570b.mp3",
    "她": "audio/words/mandarin/5979.mp3",
    "誰": "audio/words/mandarin/8ab0.mp3",
@@ -29870,8 +31897,6 @@
    "女兒": "audio/words/mandarin/5973-5152.mp3",
    "歲": "audio/words/mandarin/6b72.mp3",
    "今年": "audio/words/mandarin/4eca-5e74.mp3",
-   "多": "audio/words/mandarin/591a.mp3",
-   "大": "audio/words/mandarin/5927.mp3",
    "媽媽": "audio/words/mandarin/5abd-5abd.mp3",
    "菜": "audio/words/mandarin/83dc.mp3",
    "好吃": "audio/words/mandarin/597d-5403.mp3",
@@ -29920,7 +31945,6 @@
    "身體": "audio/words/mandarin/8eab-9ad4.mp3",
    "些": "audio/words/mandarin/4e9b.mp3",
    "水果": "audio/words/mandarin/6c34-679c.mp3",
-   "喂": "audio/words/mandarin/5582.mp3",
    "學習": "audio/words/mandarin/5b78-7fd2.mp3",
    "上午": "audio/words/mandarin/4e0a-5348.mp3",
    "電視": "audio/words/mandarin/96fb-8996.mp3",
@@ -32634,7 +34658,8 @@
     "hao-le-ma",
     "keyi-shuo-yingwen-ma",
     "ni-keyi-jiao-wo-ma",
-    "ni-zhunbei-hao-le-ma"
+    "ni-zhunbei-hao-le-ma",
+    "nimen-yong-chatgpt-ma"
    ]
   },
   {
@@ -32655,7 +34680,12 @@
     "ni-shi-nali-ren",
     "ni-zai-nali-gongzuo",
     "ni-xiang-chi-shenme",
-    "ni-zai-xianggang-duojiu-le"
+    "ni-zai-xianggang-duojiu-le",
+    "zai-xianggang-dajia-yong-naxie-da-moxing",
+    "nimen-pingshi-zui-chang-yong-nage-da-moxing",
+    "zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing",
+    "ni-cong-nar-lai",
+    "chaoshi-zai-nali"
    ]
   },
   {
@@ -32731,7 +34761,8 @@
     "ni-xiang-chi-shenme",
     "wo-yao-x",
     "wo-yao-yibei-x",
-    "wo-yao-zhege"
+    "wo-yao-zhege",
+    "wo-yao-qu-chaoshi"
    ]
   },
   {
@@ -32804,6 +34835,20 @@
     "hai-mei-ne",
     "wo-zai-xue-zhongwen-hai-bu-tai-hui-shuo"
    ]
+  },
+  {
+   "id": "scene-first",
+   "deck": "mandarin",
+   "zh": "where / when → who → verb → what",
+   "roman": "zài … , …",
+   "en": "set the scene first",
+   "why": "Chinese starts with where and when: 在香港，大家用哪些大模型？ = in Hong Kong, everyone uses which large models? English puts the place last. Then who, then the verb, then the thing; a question word (哪些 which ones, 哪個 which) simply takes the thing's place.",
+   "items": [
+    "zai-xianggang-dajia-yong-naxie-da-moxing",
+    "nimen-pingshi-zui-chang-yong-nage-da-moxing",
+    "zai-zhongguo-keyi-yong-naxie-da-yuyan-moxing",
+    "zuotian-wucan-de-shihou"
+   ]
   }
  ],
  "lookalikes": [
@@ -32824,6 +34869,24 @@
    "chars": "杯塊",
    "script": "hk",
    "hint": "杯 has wood 木 on the left (a wooden cup: 一杯咖啡). 塊 has earth 土 (a lump of earth, a piece; with money, a dollar: 一塊錢)."
+  },
+  {
+   "id": "niu-sheng",
+   "chars": "牛生",
+   "script": "both",
+   "hint": "牛 the vertical stroke pokes through the top like a horn, and there are two lines (cow: 牛肉, 牛奶). 生 has a third line along the bottom, the ground a plant grows from (born, raw, student: 生日, 生菜, 學生)."
+  },
+  {
+   "id": "zhe-na-cn",
+   "chars": "这那",
+   "script": "cn",
+   "hint": "这 has walking 辶 along the bottom: this one, right here (zhè). 那 has the town 阝 on the right: that one, over there (nà)."
+  },
+  {
+   "id": "zhe-na-hk",
+   "chars": "這那",
+   "script": "hk",
+   "hint": "這 has walking 辶 along the bottom: this one, right here (zhè). 那 has the town 阝 on the right: that one, over there (nà)."
   },
   {
    "id": "zai-zai",

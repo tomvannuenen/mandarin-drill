@@ -221,6 +221,12 @@
 "d": "first time, for the first time, suddenly",
 "p": "zhà"
 },
+"乐": {
+"c": "丿小",
+"d": "cheerful, happy, laughing; music",
+"h": "Simplified form of 樂, a musical instrument with wood 木, strings 幺, and a pick 白",
+"p": "lè"
+},
 "乙": {
 "d": "second; 2nd heavenly stem",
 "h": "A swallow",
@@ -572,6 +578,12 @@
 "h": "Someone stepping 止 in front of another person 儿",
 "p": "xiān"
 },
+"克": {
+"c": "十兄",
+"d": "to subdue, to restrain, to overcome",
+"h": "A weapon 十 used to subdue a beast 兄",
+"p": "kè"
+},
 "兌": {
 "c": "八口儿",
 "d": "cash, check; to exchange",
@@ -644,6 +656,13 @@
 "c": "甘一八",
 "d": "his, her, its, their; that",
 "p": "qí"
+},
+"养": {
+"c": "羊儿",
+"d": "to raise, to rear, to bring up; to support",
+"p": "yǎng",
+"ph": "羊",
+"s": "儿"
 },
 "冂": {
 "c": "丨",
@@ -793,6 +812,12 @@
 "d": "to divide, to allocate; fraction",
 "h": "Pieces 八 being further subdivided with a knife 刀 ",
 "p": "fēn"
+},
+"刑": {
+"c": "开刂",
+"d": "punishment, penalty; law",
+"h": "A man 刂 in jail 开",
+"p": "xíng"
 },
 "刖": {
 "c": "月刂",
@@ -1418,6 +1443,13 @@
 "h": "A tree with drooping branches",
 "p": "chuí"
 },
+"型": {
+"c": "刑土",
+"d": "pattern, model, type; mold",
+"p": "xíng",
+"ph": "刑",
+"s": "土"
+},
 "垚": {
 "c": "土土土",
 "d": "mound, lump, round mass",
@@ -1863,6 +1895,11 @@
 "h": "Bills written on silk 巾",
 "p": "bì"
 },
+"市": {
+"c": "亠巾",
+"d": "city, town; market, fair",
+"p": "shì"
+},
 "师": {
 "c": "刂帀",
 "d": "teacher, professional, master",
@@ -1874,6 +1911,13 @@
 "d": "teacher, professional, master",
 "h": "To skillfully wield 帀 a knife 㠯",
 "p": "shī"
+},
+"常": {
+"c": "尚巾",
+"d": "common, general, normal",
+"p": "cháng",
+"ph": "尚",
+"s": "巾"
 },
 "幣": {
 "c": "敝巾",
@@ -2334,6 +2378,13 @@
 "h": "The first rays 十 of the sun 日",
 "p": "zǎo"
 },
+"旲": {
+"c": "日大",
+"d": "daylight, sunlight",
+"p": "tái",
+"ph": "大",
+"s": "日"
+},
 "时": {
 "c": "日寸",
 "d": "time, season; period, era, age",
@@ -2586,11 +2637,24 @@
 "ph": "奇",
 "s": "木"
 },
+"樂": {
+"c": "幺白幺木",
+"d": "cheerful, happy, laughing; music",
+"h": "A musical instrument with wood 木, strings 幺, and a pick 白",
+"p": "lè"
+},
 "樓": {
 "c": "木婁",
 "d": "multi-story building; floor",
 "p": "lóu",
 "ph": "婁",
+"s": "木"
+},
+"模": {
+"c": "木莫",
+"d": "model, pattern, standard; to copy, to imitate",
+"p": "mó",
+"ph": "莫",
 "s": "木"
 },
 "樣": {
@@ -3218,6 +3282,13 @@
 "h": "A man standing on the ground 一",
 "p": "lì"
 },
+"站": {
+"c": "立占",
+"d": "stand, station; to halt, to stand",
+"p": "zhàn",
+"ph": "占",
+"s": "立"
+},
 "童": {
 "c": "立里",
 "d": "child, boy; servant boy",
@@ -3544,6 +3615,11 @@
 "p": "hé",
 "ph": "何",
 "s": "艹"
+},
+"莫": {
+"c": "艹旲",
+"d": "cannot; do not",
+"p": "mò"
 },
 "菜": {
 "c": "艹采",
@@ -3952,6 +4028,13 @@
 "d": "to begin, to initiate; to rise, to stand up",
 "p": "qǐ",
 "ph": "己",
+"s": "走"
+},
+"超": {
+"c": "走召",
+"d": "to jump over, to leap over",
+"p": "chāo",
+"ph": "召",
 "s": "走"
 },
 "足": {
@@ -4404,6 +4487,13 @@
 "p": "bǎo",
 "ph": "包",
 "s": "飠"
+},
+"養": {
+"c": "羊食",
+"d": "to raise, to rear, to bring up; to support",
+"p": "yǎng",
+"ph": "羊",
+"s": "食"
 },
 "餐": {
 "c": "歺又食",

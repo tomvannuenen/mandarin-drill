@@ -96,7 +96,7 @@ test('a hard-to-read word already handled today does not open the next session a
 });
 
 
-test('composeToday opens on trouble words, then new phrases, focus and reviews', () => {
+test('composeToday: new phrases, focus and reviews, then trouble words at the end', () => {
   const p = defaults();
   p.cards['a:say'] = past(1);
   p.cards['b:say'] = past(2);
@@ -105,7 +105,7 @@ test('composeToday opens on trouble words, then new phrases, focus and reviews',
   const drills = [{ id: 'w/mandarin/來自', kind: 'drill', deck: 'mandarin' }];
   const plan = { date: '2026-09-27', items: ['c'] };
   const { queue, counts } = composeToday({ items: ITEMS, drills, progress: p, plan, now: NOW, newLimit: 2, deck: 'mandarin' });
-  assert.deepEqual(queue.map((q) => q.key), ['w/mandarin/來自:say', 'd:say', 'e:say', 'c:say', 'b:say', 'a:say']);
+  assert.deepEqual(queue.map((q) => q.key), ['d:say', 'e:say', 'c:say', 'b:say', 'a:say', 'w/mandarin/來自:say']);
   assert.deepEqual(counts, { focus: 1, reviews: 3, fresh: 2, chars: 0, builds: 0 });
   const stale = composeToday({ items: ITEMS, drills, progress: p, plan: { date: '2026-09-20', items: ['c'] }, now: NOW, newLimit: 0, deck: 'mandarin' });
   assert.ok(!stale.queue.some((q) => q.key === 'c:say'), 'an old plan is ignored');
@@ -132,7 +132,7 @@ test('composeToday keeps a round short: each kind to its share, a couple of new 
   });
   const { queue, counts } = composeToday({ items, drills, chars, progress: p, plan: null, now: NOW, newLimit: 14, deck: 'mandarin' });
   const n = (f) => queue.filter(f).length;
-  assert.deepEqual(queue.slice(0, MIX.drills).map((q) => q.id), ['十', '九'].map((zh) => `w/mandarin/${zh}`), 'the weakest trouble words open');
+  assert.deepEqual(queue.slice(-MIX.drills).map((q) => q.id), ['十', '九'].map((zh) => `w/mandarin/${zh}`), 'the weakest trouble words close the round');
   assert.equal(n((q) => q.id.startsWith('w/')), MIX.drills);
   assert.equal(n((q) => q.type === 'say' && !q.id.startsWith('w/')), MIX.say);
   assert.equal(n((q) => q.type === 'say' && !p.cards[q.key]), ROUND_NEW, 'a couple of the 14 new phrases; the rest wait for another round');

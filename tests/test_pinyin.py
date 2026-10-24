@@ -76,5 +76,16 @@ class WordGroups(unittest.TestCase):
             word_groups("你好", "nǐ-hǎo-ma")
 
 
+class Foreign(unittest.TestCase):
+    def test_latin_word_in_a_sentence_takes_no_character(self):
+        zh, py = "你們用ChatGPT嗎？", "nǐ-men yòng ChatGPT ma?"
+        self.assertEqual(syllables(py), ["nǐ", "men", "yòng", "ma"])
+        self.assertEqual(apply_sandhi(zh, py), py)
+        self.assertEqual(word_groups(zh, py), [("你們", "nǐ-men"), ("用", "yòng"), ("ChatGPT", "ChatGPT"), ("嗎", "ma?")])
+
+    def test_erhua_is_a_syllable_of_its_own(self):
+        self.assertEqual(word_groups("哪兒", "nǎ-r"), [("哪兒", "nǎ-r")])
+
+
 if __name__ == "__main__":
     unittest.main()

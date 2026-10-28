@@ -1564,6 +1564,12 @@
 "d": "decisive, certain; parted",
 "p": "guài"
 },
+"夭": {
+"c": "丿大",
+"d": "young, energetic; to die young",
+"h": "A person with head tilted - leaning forward, running, energetic",
+"p": "yāo"
+},
 "央": {
 "c": "冂大",
 "d": "central; to beg",
@@ -2707,6 +2713,12 @@
 "h": "A foot",
 "p": "zhǐ"
 },
+"正": {
+"c": "一止",
+"d": "straight, right, proper, correct, just, true",
+"h": "A foot 止 stopping in the right place 一",
+"p": "zhèng"
+},
 "此": {
 "c": "止匕",
 "d": "this, these; in this case, then",
@@ -3036,6 +3048,13 @@
 "h": "A man 十 bridging heaven and earth (both 一)",
 "p": "wáng"
 },
+"玩": {
+"c": "王元",
+"d": "to play with, to joke, to entertain",
+"p": "wán",
+"ph": "元",
+"s": "王"
+},
 "现": {
 "c": "王见",
 "d": "to appear, to manifest; current, now",
@@ -3294,6 +3313,12 @@
 "d": "child, boy; servant boy",
 "h": "A child standing 立 in the village 里",
 "p": "tóng"
+},
+"笑": {
+"c": "⺮夭",
+"d": "to smile, to laugh; to giggle",
+"h": "A person 夭 with a big grin ⺮",
+"p": "xiào"
 },
 "第": {
 "c": "⺮弟",

@@ -1,5 +1,5 @@
 {
- "version": "1c07a760f84b",
+ "version": "92a1571c3d7a",
  "voices": {
   "tw-yunjhe": {
    "flag": "🇹🇼",
@@ -7863,6 +7863,119 @@
    "frames": [
     "ma"
    ]
+  },
+  {
+   "id": "zhe-bu-shi-zhenzheng-de-chatgpt",
+   "kind": "phrase",
+   "deck": "mandarin",
+   "set": "My phrases",
+   "zh": "這不是真正的ChatGPT。這只是個玩笑。",
+   "roman": "zhè bú-shì zhēn-zhèng de ChatGPT. zhè zhǐ-shì ge wán-xiào.",
+   "en": "This isn't the real ChatGPT. It's just a joke.",
+   "words": [
+    {
+     "zh": "這",
+     "roman": "zhè",
+     "gloss": "this",
+     "script": "cn",
+     "zhDisp": "这",
+     "zhS": "这"
+    },
+    {
+     "zh": "不是",
+     "roman": "bú-shì",
+     "gloss": "is not, isn't",
+     "script": "cn",
+     "zhDisp": "不是"
+    },
+    {
+     "zh": "真正",
+     "roman": "zhēn-zhèng",
+     "gloss": "real, genuine",
+     "script": "cn",
+     "zhDisp": "真正"
+    },
+    {
+     "zh": "的",
+     "roman": "de",
+     "gloss": "(possessive / 'the one that…')",
+     "script": "cn",
+     "zhDisp": "的"
+    },
+    {
+     "zh": "ChatGPT",
+     "roman": "ChatGPT",
+     "gloss": "ChatGPT",
+     "script": "cn",
+     "zhDisp": "ChatGPT"
+    },
+    {
+     "zh": "這",
+     "roman": "zhè",
+     "gloss": "this",
+     "script": "cn",
+     "zhDisp": "这",
+     "zhS": "这"
+    },
+    {
+     "zh": "只是",
+     "roman": "zhǐ-shì",
+     "gloss": "only, just",
+     "script": "cn",
+     "zhDisp": "只是"
+    },
+    {
+     "zh": "個",
+     "roman": "ge",
+     "gloss": "(measure word: people, most things)",
+     "script": "hk",
+     "zhS": "个"
+    },
+    {
+     "zh": "玩笑",
+     "roman": "wán-xiào",
+     "gloss": "joke",
+     "script": "cn",
+     "zhDisp": "玩笑"
+    }
+   ],
+   "audio": {
+    "tw-yunjhe": [
+     "audio/tw-yunjhe/zhe-bu-shi-zhenzheng-de-chatgpt.mp3",
+     "audio/tw-yunjhe/zhe-bu-shi-zhenzheng-de-chatgpt-slow.mp3"
+    ],
+    "tw-hsiaochen": [
+     "audio/tw-hsiaochen/zhe-bu-shi-zhenzheng-de-chatgpt.mp3",
+     "audio/tw-hsiaochen/zhe-bu-shi-zhenzheng-de-chatgpt-slow.mp3"
+    ],
+    "tw-hsiaoyu": [
+     "audio/tw-hsiaoyu/zhe-bu-shi-zhenzheng-de-chatgpt.mp3",
+     "audio/tw-hsiaoyu/zhe-bu-shi-zhenzheng-de-chatgpt-slow.mp3"
+    ],
+    "cn-yunyang": [
+     "audio/cn-yunyang/zhe-bu-shi-zhenzheng-de-chatgpt.mp3",
+     "audio/cn-yunyang/zhe-bu-shi-zhenzheng-de-chatgpt-slow.mp3"
+    ],
+    "cn-xiaoxiao": [
+     "audio/cn-xiaoxiao/zhe-bu-shi-zhenzheng-de-chatgpt.mp3",
+     "audio/cn-xiaoxiao/zhe-bu-shi-zhenzheng-de-chatgpt-slow.mp3"
+    ]
+   },
+   "chunks": {
+    "1": "audio/chunks/zhe-bu-shi-zhenzheng-de-chatgpt--1.mp3",
+    "2": "audio/chunks/zhe-bu-shi-zhenzheng-de-chatgpt--2.mp3",
+    "3": "audio/chunks/zhe-bu-shi-zhenzheng-de-chatgpt--3.mp3",
+    "4": "audio/chunks/zhe-bu-shi-zhenzheng-de-chatgpt--4.mp3",
+    "5": "audio/chunks/zhe-bu-shi-zhenzheng-de-chatgpt--5.mp3",
+    "6": "audio/chunks/zhe-bu-shi-zhenzheng-de-chatgpt--6.mp3",
+    "7": "audio/chunks/zhe-bu-shi-zhenzheng-de-chatgpt--7.mp3",
+    "8": "audio/chunks/zhe-bu-shi-zhenzheng-de-chatgpt--8.mp3"
+   },
+   "situation": "Someone thinks your silly chatbot is the real thing.",
+   "note": "真正的 = real, genuine; 只是 = only, just; 個 is short for 一個 (a); 玩笑 = joke",
+   "topic": "Work",
+   "wish": "chat-2026-10-28",
+   "register": "everyday"
   },
   {
    "id": "zai-xianggang-dajia-yong-naxie-da-moxing",
@@ -27724,6 +27837,12 @@
    "p": "guài",
    "c": "大"
   },
+  "夭": {
+   "d": "young, energetic; to die young",
+   "p": "yāo",
+   "c": "丿大",
+   "h": "A person with head tilted - leaning forward, running, energetic"
+  },
   "央": {
    "d": "central; to beg",
    "p": "yāng",
@@ -28867,6 +28986,12 @@
    "c": "上丨",
    "h": "A foot"
   },
+  "正": {
+   "d": "straight, right, proper, correct, just, true",
+   "p": "zhèng",
+   "c": "一止",
+   "h": "A foot 止 stopping in the right place 一"
+  },
   "此": {
    "d": "this, these; in this case, then",
    "p": "cǐ",
@@ -29196,6 +29321,13 @@
    "c": "一土",
    "h": "A man 十 bridging heaven and earth (both 一)"
   },
+  "玩": {
+   "d": "to play with, to joke, to entertain",
+   "p": "wán",
+   "c": "王元",
+   "s": "王",
+   "ph": "元"
+  },
   "现": {
    "d": "to appear, to manifest; current, now",
    "p": "xiàn",
@@ -29454,6 +29586,12 @@
    "p": "tóng",
    "c": "立里",
    "h": "A child standing 立 in the village 里"
+  },
+  "笑": {
+   "d": "to smile, to laugh; to giggle",
+   "p": "xiào",
+   "c": "⺮夭",
+   "h": "A person 夭 with a big grin ⺮"
   },
   "第": {
    "d": "sequence, number; grade, degree",
@@ -31126,6 +31264,26 @@
     "r": "cài",
     "e": "vegetable; dish"
    },
+   "真正的": {
+    "r": "zhēn-zhèng de",
+    "e": "real, genuine"
+   },
+   "只是": {
+    "r": "zhǐ-shì",
+    "e": "only, just"
+   },
+   "個": {
+    "r": "gè",
+    "e": "(measure word: people, most things)"
+   },
+   "一個": {
+    "r": "yí-ge",
+    "e": "a, one (of something)"
+   },
+   "玩笑": {
+    "r": "wán-xiào",
+    "e": "joke"
+   },
    "大模型": {
     "r": "dà mó-xíng",
     "e": "large (AI) model"
@@ -31854,6 +32012,10 @@
    "活": "audio/words/mandarin/6d3b.mp3",
    "一口氣": "audio/words/mandarin/4e00-53e3-6c23.mp3",
    "ChatGPT": "audio/words/mandarin/43-68-61-74-47-50-54.mp3",
+   "不是": "audio/words/mandarin/4e0d-662f.mp3",
+   "真正": "audio/words/mandarin/771f-6b63.mp3",
+   "只是": "audio/words/mandarin/53ea-662f.mp3",
+   "玩笑": "audio/words/mandarin/73a9-7b11.mp3",
    "哪些": "audio/words/mandarin/54ea-4e9b.mp3",
    "大": "audio/words/mandarin/5927.mp3",
    "模型": "audio/words/mandarin/6a21-578b.mp3",

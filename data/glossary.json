@@ -1,6 +1,10 @@
 {
   "_comment": "Short meanings for words inside phrases, shown when a word is tapped. Words that have their own card use that card's English instead.",
   "mandarin": {
+    "不是": "is not, isn't",
+    "真正": "real, genuine",
+    "只是": "only, just",
+    "玩笑": "joke",
     "ChatGPT": "ChatGPT",
     "哪些": "which (ones)",
     "大": "big, large",

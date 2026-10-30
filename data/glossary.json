@@ -1,6 +1,7 @@
 {
   "_comment": "Short meanings for words inside phrases, shown when a word is tapped. Words that have their own card use that card's English instead.",
   "mandarin": {
+    "菜單": "menu",
     "不是": "is not, isn't",
     "真正": "real, genuine",
     "只是": "only, just",
@@ -107,6 +108,21 @@
     "上課": "to have class; (for a teacher) to teach a class"
   },
   "cantonese": {
+    "等": "to wait",
+    "幾耐": "how long",
+    "睇吓": "have a look",
+    "等陣": "in a moment, wait a bit",
+    "先": "first",
+    "蔥": "spring onion",
+    "油": "oil",
+    "加": "to add; more",
+    "對": "pair (measure word)",
+    "筷子": "chopsticks",
+    "夠": "enough",
+    "喇": "(particle: now, already)",
+    "碌卡": "swipe a card (pay by card)",
+    "分開": "separately",
+    "俾": "to give; to pay",
     "點": "how",
     "一": "one",
     "唔": "not",

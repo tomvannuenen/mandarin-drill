@@ -509,6 +509,12 @@
 "h": "Someone 亻 who connects 系 people; 系 also provides the pronunciation",
 "p": "xì"
 },
+"俾": {
+"c": "亻卑",
+"d": "so that, in order that; to cause",
+"p": "bǐ",
+"ph": "卑"
+},
 "個": {
 "c": "亻固",
 "d": "this, that; single",
@@ -833,6 +839,13 @@
 "ph": "冈",
 "s": "刂"
 },
+"剌": {
+"c": "束刂",
+"d": "to slash, to cut in two; to contradict",
+"p": "lá",
+"ph": "束",
+"s": "刂"
+},
 "前": {
 "c": "丷一刖",
 "d": "in front, forward; former, preceding",
@@ -985,6 +998,12 @@
 "d": "to divine; to observe",
 "h": "To speak 口 omens ⺊",
 "p": "zhàn"
+},
+"卡": {
+"c": "上卜",
+"d": "card, punch card; calorie",
+"h": "A card squeezed between 上 and 下",
+"p": "kǎ"
 },
 "卩": {
 "c": "丨",
@@ -1159,6 +1178,13 @@
 "d": "government official, magistrate",
 "p": "lì"
 },
+"吓": {
+"c": "口下",
+"d": "to scare, to frighten",
+"p": "xià",
+"ph": "下",
+"s": "口"
+},
 "吗": {
 "c": "口马",
 "d": "(question particle: yes/no?)",
@@ -1306,6 +1332,13 @@
 "ph": "畏",
 "s": "口"
 },
+"喇": {
+"c": "口剌",
+"d": "horn, bugle; llama",
+"p": "lǎ",
+"ph": "剌",
+"s": "口"
+},
 "喜": {
 "c": "壴口",
 "d": "to love; to enjoy, to be happy",
@@ -1378,6 +1411,12 @@
 "d": "top of the head; skull",
 "h": "A skull from above, with 乂 marking the fontanelle",
 "p": "xìn"
+},
+"囱": {
+"c": "囗夂",
+"d": "chimney",
+"h": "A fire 夂 burning and giving off smoke",
+"p": "cōng"
 },
 "固": {
 "c": "囗古",
@@ -1540,6 +1579,13 @@
 "d": "much, many, multi-; more than, over",
 "h": "Two nights 夕, suggesting many",
 "p": "duō"
+},
+"夠": {
+"c": "多句",
+"d": "enough, adequate; to reach, to attain",
+"p": "gòu",
+"ph": "多",
+"s": "句"
 },
 "大": {
 "c": "一人",
@@ -2038,6 +2084,12 @@
 "d": "snout",
 "p": "jì"
 },
+"录": {
+"c": "彐氺",
+"d": "to copy, to record, to write down",
+"h": "A brush used to record stories",
+"p": "lù"
+},
 "彗": {
 "c": "丰丰彐",
 "d": "comet; broomstick",
@@ -2110,6 +2162,12 @@
 "h": "A heart 忄 faced with death 亡; 亡 also provides the pronunciation",
 "p": "máng"
 },
+"快": {
+"c": "忄夬",
+"d": "speedy, rapid, quick; soon",
+"h": "A decisive 夬 will 忄; 夬 also provides the pronunciation",
+"p": "kuài"
+},
 "怎": {
 "c": "乍心",
 "d": "what? why? how?",
@@ -2122,6 +2180,13 @@
 "d": "to think, to ponder, to consider; final particle",
 "h": "Weighing something with your mind 囟 (altered) and heart 心",
 "p": "sī"
+},
+"悤": {
+"c": "囱心",
+"d": "agitated, hurried, restless",
+"p": "cōng",
+"ph": "囱",
+"s": "心"
 },
 "您": {
 "c": "你心",
@@ -3189,6 +3254,13 @@
 "h": "A straight 直 (that is, level) table 几",
 "p": "zhēn"
 },
+"睇": {
+"c": "目弟",
+"d": "to glance, to look, to stare",
+"p": "dì",
+"ph": "弟",
+"s": "目"
+},
 "睘": {
 "c": "罒一",
 "d": "round; to stare",
@@ -3237,6 +3309,13 @@
 "d": "to grind, to rub; to study, to research",
 "p": "yán",
 "ph": "开",
+"s": "石"
+},
+"碌": {
+"c": "石录",
+"d": "rocky, rough, uneven; mediocre",
+"p": "lù",
+"ph": "录",
 "s": "石"
 },
 "示": {
@@ -3331,6 +3410,13 @@
 "d": "rank, grade; same, equal",
 "h": "Bamboo strips ⺮ laid before a court 寺",
 "p": "děng"
+},
+"筷": {
+"c": "⺮快",
+"d": "chopsticks",
+"p": "kuài",
+"ph": "快",
+"s": "⺮"
 },
 "米": {
 "c": "丷木",
@@ -3493,6 +3579,15 @@
 "c": "耂日",
 "d": "that which; they who",
 "p": "zhě"
+},
+"而": {
+"d": "and, and then, and yet; but",
+"p": "ér"
+},
+"耐": {
+"c": "而寸",
+"d": "to resist, to bear; patient, enduring",
+"p": "nài"
 },
 "耳": {
 "c": "二",
@@ -3693,6 +3788,13 @@
 "d": "to direct, to supervise; surname",
 "p": "dǒng",
 "ph": "重",
+"s": "艹"
+},
+"蔥": {
+"c": "艹悤",
+"d": "scallions, leeks, green onions",
+"p": "cōng",
+"ph": "悤",
 "s": "艹"
 },
 "蘋": {
@@ -4380,6 +4482,12 @@
 "p": "yuàn",
 "ph": "完",
 "s": "阝"
+},
+"陣": {
+"c": "阝車",
+"d": "row, column; ranks, troop formation",
+"h": "A formation 阝of soldiers 車",
+"p": "zhèn"
 },
 "隹": {
 "c": "亻",

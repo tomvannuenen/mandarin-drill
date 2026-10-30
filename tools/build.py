@@ -59,8 +59,9 @@ REGISTERS = {"everyday", "casual", "polite", "formal"}
 TIERS = {0, 1, 2}
 ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 SLOT_RE = re.compile(r"\{(\w+)(?::(\w+))?\}")
-# Characters OpenCC "corrects" that are standard everyday Traditional in Taiwan.
-ALLOWED_TRAD_VARIANTS = set("台")
+# Characters OpenCC "corrects" that are standard everyday Traditional: 台 (Taiwan), 菜 (OpenCC turns a restaurant's
+# 菜單 into a software 選單), 吓 (Hong Kong Cantonese 睇吓, have a look).
+ALLOWED_TRAD_VARIANTS = set("台菜吓")
 
 # Words shown in Traditional for the :char recognition drill because Tom will actually see them
 # written around Hong Kong (menus, signage, campus, his own bio). Everything else in the Mandarin
